@@ -1,22 +1,10 @@
----
-lab:
-    title: 'Get started with Azure OpenAI'
----
-
-# Get started with Azure OpenAI Service
+# Lab 01: Get started with Azure OpenAI Service
 
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Studio to deploy and explore OpenAI models.
 
-This exercise takes approximately **30** minutes.
+This exercise takes approximately **40** minutes.
 
-## Before you start
-
-You'll need an Azure subscription that has been approved for access to the Azure OpenAI service.
-
-- To sign up for a free Azure subscription, visit [https://azure.microsoft.com/free](https://azure.microsoft.com/free).
-- To request access to the Azure OpenAI service, visit [https://aka.ms/oaiapply](https://aka.ms/oaiapply).
-
-## Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
@@ -29,7 +17,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Pricing tier**: Standard S0
 3. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-## Deploy a model
+## Task 2: Deploy a model
 
 Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
@@ -40,7 +28,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll start with the **Davinci** model from the **GPT-3** family of text generation models. **text-davinci-003** is a good general model for summarizing and generating natural language. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-## Explore a model in the Completions playground
+## Task 3: Explore a model in the Completions playground
 
 *Playgrounds* are useful interfaces in Azure OpenAI Studio that you can use to experiment with your deployed models without needing to develop your own client application.
 
@@ -68,7 +56,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 9. Use the **Generate** button to submit the new prompt and verify that the model summarizes the text appropriately.
 
-## Use a model to classify text
+## Task 4: Use a model to classify text
 
 So far, you've seen how to use a model to summarize text. However, the generative models in Azure OpenAI can support a range of different types of task. Let's explore a different example; *text classification*.
 
@@ -85,7 +73,7 @@ So far, you've seen how to use a model to summarize text. However, the generativ
 
 4. Use the **Generate** button to continue the dialog with the model and generate an appropriate categorization for the new news article.
 
-## Explore prompts and parameters
+## Task 5: Explore prompts and parameters
 
 Up until now, you've based your prompts on examples that are provided in Azure OpenAI Studio. Let's try something different.
 
@@ -117,7 +105,7 @@ Up until now, you've based your prompts on examples that are provided in Azure O
 4. Use the **Regenerate** button to regenerate the response. It should be similar to the previous response.
 5. Change the **Temperature** parameter value to **0.9** and then use the **Regenerate** button to regenerate the response. This time the increased degree of randomness should result in a different response. However, the questions are more likely to contain inaccuracies than the ones in the previously generated response.
 
-## Explore code-generation
+## Task 6: Explore code-generation
 
 The **text-davinci** model you deployed is a good general model that can handle most tasks well. However, in some cases it's better to choose a model that is optimized for a specific kind of task. For example, Azure openAI models can be used to generate computer code rather than natural language text, and some models have been optimized for that task.
 
@@ -140,7 +128,7 @@ The **text-davinci** model you deployed is a good general model that can handle 
 
 8. Use the **Generate** button to submit the prompt and view the code that gets generated. The prompt included an indication of the programming language to be generated (Python 3), a comment describing the desired functionality, and the first part of the function definition. The **code-davinci** model should have completed the function with appropriate Python code.
 
-## Explore models for chat
+## Task 7: Explore models for chat
 
 ChatGPT is a chatbot developed by OpenAI that can provide a wide variety of natural language responses in a conversational scenario. The model used by ChatGPT and APIs for using it are included in Azure OpenAI.
 
