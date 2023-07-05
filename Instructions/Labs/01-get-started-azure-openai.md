@@ -9,10 +9,10 @@ This exercise takes approximately **40** minutes.
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
 1. Once you are logged in to the Azure Portal, create an **Azure OpenAI** resource with the following settings:
-    - **Subscription**: An Azure subscription that has been approved for access to the Azure OpenAI service.
-    - **Resource group**: Create a new resource group with a name of your choice.
-    - **Region**: Choose any available region.
-    - **Name**: A unique name of your choice.
+    - **Subscription**: Default
+    - **Resource group**: openai-<inject key="Deployment-id"></inject>
+    - **Region**: Default - Make sure that the default region is either East US or West Europe. 
+    - **Name**: OpenAiI-Lab01-<inject key="Deployment-id"></inject>
     - **Pricing tier**: Standard S0
 2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
