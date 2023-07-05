@@ -5,7 +5,7 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-203-azure-data-engineer/prod/Instructions/Labs/00-GettingStarted.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted.md",
         "Order": 1
       },
       {
