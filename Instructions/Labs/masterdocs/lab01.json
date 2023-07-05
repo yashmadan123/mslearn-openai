@@ -1,1 +1,17 @@
-..
+[
+  {
+    "Name": "Azure OpenAI Service: Develop AI solutions with Azure OpenAI Studio",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/dp-203-azure-data-engineer",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-203-azure-data-engineer/prod/Instructions/Labs/00-GettingStarted.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-203-azure-data-engineer/prod/Instructions/Labs/01-Explore-Azure-Synapse.md",
+        "Order": 2
+      }
+    ]
+  }
+]
