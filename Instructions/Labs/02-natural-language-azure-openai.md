@@ -1,36 +1,23 @@
----
-lab:
-    title: 'Integrate Azure OpenAI into your app'
----
-
-# Integrate Azure OpenAI into your app
+# Lab 02: Integrate Azure OpenAI into your app
 
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application to summarize text.
 
-This exercise will take approximately **30** minutes.
+This exercise will take approximately **40** minutes.
 
-## Before you start
-
-You will need an Azure subscription that has been approved for access to the Azure OpenAI service.
-
-- To sign up for a free Azure subscription, visit [https://azure.microsoft.com/free](https://azure.microsoft.com/free).
-- To request access to the Azure OpenAI service, visit [https://aka.ms/oaiapply](https://aka.ms/oaiapply).
-
-## Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. Sign into the [Azure portal](https://portal.azure.com).
-2. Create an **Azure OpenAI** resource with the following settings:
-    - **Subscription**: An Azure subscription that has been approved for access to the Azure OpenAI service.
-    - **Resource group**: Create a new resource group with a name of your choice.
-    - **Region**: Choose any available region.
-    - **Name**: A unique name of your choice.
+1. Once you are logged in to the Azure Portal, create an **Azure OpenAI** resource with the following settings:
+    - **Subscription**: Default - Pre-assigned subscription.
+    - **Resource group**: openai-<inject key="Deployment-id"></inject>
+    - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
+    - **Name**: OpenAI-Lab02-<inject key="Deployment-id"></inject>
     - **Pricing tier**: Standard S0
-3. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-4. Navigate to **Keys and Endpoint** page, and save those to a text file to use later.
+2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+3. Navigate to **Keys and Endpoint** page, and save those to a text file to use later.
 
-## Deploy a model
+## Task 2: Deploy a model
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
@@ -41,7 +28,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however deployment and usage of other models you deploy will work in the same way.
 
-## Set up an application in Cloud Shell
+## Task 3: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -76,7 +63,7 @@ Open the built-in code editor, and observe the text file that you'll be summariz
 code .
 ```
 
-## Configure your application
+## Task 4: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -175,7 +162,7 @@ For this exercise, you'll complete some key parts of the application to enable u
    print("Summary: " + response.choices[0].message.content + "\n")
     ```
 
-## Run your application
+## Task 5: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
 
@@ -190,7 +177,3 @@ Now that your app has been configured, run it to send your request to your model
 1. Run the application again, and observe the output.
 
 Increasing the temperature often causes the summary to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
-
-## Clean up
-
-When you're done with your Azure OpenAI resource, remember to delete the deployment or the entire resource in the [Azure portal](https://portal.azure.com?azure-portal=true).

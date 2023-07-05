@@ -1,9 +1,4 @@
----
-lab:
-    title: 'Utilize prompt engineering in your app'
----
-
-# Utilize prompt engineering in your app
+# Lab 03: Utilize prompt engineering in your app
 
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application to summarize text.
 
@@ -11,30 +6,22 @@ When working with the Azure OpenAI Service, how developers shape their prompt gr
 
 Imagine you are trying to send out information for a new wildlife rescue, and want to get assistance from a generative AI model.
 
-This exercise will take approximately **25** minutes.
+This exercise will take approximately **30** minutes.
 
-## Before you start
-
-You will need an Azure subscription that has been approved for access to the Azure OpenAI service.
-
-- To sign up for a free Azure subscription, visit [https://azure.microsoft.com/free](https://azure.microsoft.com/free).
-- To request access to the Azure OpenAI service, visit [https://aka.ms/oaiapply](https://aka.ms/oaiapply).
-
-## Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. Sign into the [Azure portal](https://portal.azure.com).
-2. Create an **Azure OpenAI** resource with the following settings:
-    - **Subscription**: An Azure subscription that has been approved for access to the Azure OpenAI service.
-    - **Resource group**: Create a new resource group with a name of your choice.
-    - **Region**: Choose any available region.
-    - **Name**: A unique name of your choice.
+1. Once you are logged in to the Azure Portal, create an **Azure OpenAI** resource with the following settings:
+    - **Subscription**: Default - Pre-assigned subscription.
+    - **Resource group**: openai-<inject key="Deployment-id"></inject>
+    - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
+    - **Name**: OpenAI-Lab03-<inject key="Deployment-id"></inject>
     - **Pricing tier**: Standard S0
-3. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-4. Navigate to **Keys and Endpoint** page, and save those to a text file to use later.
+2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+3. Navigate to **Keys and Endpoint** page, and save those to a text file to use later.
 
-## Deploy a model
+## Task 2: Deploy a model
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
@@ -45,7 +32,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however deployment and usage of other models you deploy will work in the same way.
 
-## Apply prompt engineering in chat playground
+## Task 3: Apply prompt engineering in chat playground
 
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a python app of animals with fun names.
 
@@ -139,7 +126,7 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. This time the model should respond with an appropriate classification, even without instructions.
 
-## Set up an application in Cloud Shell
+## Task 4: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -174,7 +161,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    code .
     ```
 
-## Configure your application
+## Task 5: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -284,7 +271,7 @@ For this exercise, you'll complete some key parts of the application to enable u
    )
     ```
 
-## Run your application
+## Task 6: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
@@ -308,7 +295,3 @@ Each prompt is displayed in the console as it sends for you to see how differenc
 Increasing the temperature often causes the response to vary, even when provided the same prompt, due to the increased randomness. You can run it multiple times with different temperature or top_p values to see how that impacts the response to the same prompt.
 
 If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
-
-## Clean up
-
-When you're done with your Azure OpenAI resource, remember to delete the deployment or the entire resource in the [Azure portal](https://portal.azure.com/?azure-portal=true).
