@@ -2,7 +2,7 @@
 
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
 
-This exercise will take approximately **25** minutes.
+This exercise will take approximately **30** minutes.
 
 ## Task 1: Provision an Azure OpenAI resource
 
