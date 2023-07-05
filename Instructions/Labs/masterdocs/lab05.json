@@ -1,1 +1,17 @@
-
+[
+  {
+    "Name": "Lab 05: Generate images with a DALL-E model",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-203-azure-data-engineer/prod/Instructions/Labs/00-GettingStarted.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-203-azure-data-engineer/prod/Instructions/Labs/01-Explore-Azure-Synapse.md",
+        "Order": 2
+      }
+    ]
+  }
+]
