@@ -295,6 +295,7 @@ For this exercise, you'll complete some key parts of the application to enable u
        max_tokens=800
    )
     ```
+8. To save the changes made to the file, execute **CTRL+S**/**CMD+S**.
 
 ## Task 6: Run your application
 
