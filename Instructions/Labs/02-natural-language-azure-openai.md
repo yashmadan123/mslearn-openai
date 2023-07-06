@@ -102,14 +102,14 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 4. Navigate to the folder for your preferred language and install the necessary packages
 
-    **C#**: Program.cs
+    **C#**
 
     ```bash
    cd CSharp
    dotnet add package Azure.AI.OpenAI --prerelease
     ```
 
-    **Python**: test-openai-model.py
+    **Python**
 
     ```bash
    cd Python
@@ -119,14 +119,14 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
-    **C#**
+    **C#**: Program.cs
 
     ```csharp
    // Add Azure OpenAI package
    using Azure.AI.OpenAI;
     ```
 
-    **Python**
+    **Python**: test-openai-model.py
 
     ```python
    # Add OpenAI import
