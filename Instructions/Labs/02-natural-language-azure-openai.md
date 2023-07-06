@@ -133,9 +133,9 @@ For this exercise, you'll complete some key parts of the application to enable u
    import openai
     ```
 
-5. Open up the application code for your language and add the necessary code for building the request, which specifies the various parameters for your model such as `prompt` and `temperature`.
+6. Open up the application code for your language and add the necessary code for building the request, which specifies the various parameters for your model such as `prompt` and `temperature`.
 
-    **C#**
+    **C#**: Program.cs
 
     ```csharp
    // Initialize the Azure OpenAI client
@@ -162,7 +162,7 @@ For this exercise, you'll complete some key parts of the application to enable u
    Console.WriteLine("Summary: " + completion + "\n");
     ```
 
-    **Python**
+    **Python**: test-openai-model.py
 
     ```python
    # Set OpenAI configuration settings
