@@ -99,7 +99,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Save the file.
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by using the shortcut keys CTRL+S or CMD+S.
 
 4. Navigate to the folder for your preferred language and install the necessary packages
 
@@ -186,6 +186,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
    print("Summary: " + response.choices[0].message.content + "\n")
     ```
+7. To save the changes made to the file, execute CTRL+S or CMD+S.
 
 ## Task 5: Run your application
 
