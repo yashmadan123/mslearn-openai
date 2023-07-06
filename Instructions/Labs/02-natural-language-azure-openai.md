@@ -51,7 +51,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
 
-5. Wihtin the **Advanced settings** pane, enter the following details and then click on **Create storage**:
+5. Within the **Advanced settings** pane, enter the following details and then click on **Create storage**:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
     - **CloudShell region**: East US
     - **Resource group**: Select **Use existing**.
