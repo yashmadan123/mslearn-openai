@@ -14,6 +14,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
     - **Name**: OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
+  
+   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+
 2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
 ## Task 2: Deploy a model
@@ -21,10 +24,15 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
 1. On the **Overview** page for your Azure OpenAI resource, use the **Explore** button to open Azure OpenAI Studio in a new browser tab.
-2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
-3.  with the following settings:
+2. In **Welcome to Azure OpenAI Service** page, click on **Create a new deployment**.
+
+   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+
+3. In the **Deployments** page, click on **+ Create new deployment** with the following settings:
     - **Model name**: text-davinci-003
     - **Deployment name**: text-davinci
+  
+   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll start with the **Davinci** model from the **GPT-3** family of text generation models. **text-davinci-003** is a good general model for summarizing and generating natural language. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
