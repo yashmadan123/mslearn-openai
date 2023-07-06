@@ -24,7 +24,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
 1. On the **Overview** page for your Azure OpenAI resource, use the **Explore** button to open Azure OpenAI Studio in a new browser tab.
-2. In **Welcome to Azure OpenAI Service** page, click on **Create a new deployment**.
+2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
