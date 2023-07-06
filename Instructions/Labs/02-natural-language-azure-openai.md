@@ -14,6 +14,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
     - **Name**: OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
+  
+   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+
 2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 3. Navigate to **Keys and Endpoint** page, and save those to a text file to use later.
 
@@ -22,7 +25,11 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
 1. On the **Overview** page for your Azure OpenAI resource, use the **Explore** button to open Azure OpenAI Studio in a new browser tab.
-2. In Azure OpenAI Studio, create a new deployment with the following settings:
+2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+
+   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+
+3. In the **Deployments** page, click on **+ Create new deployment** with the following settings:
     - **Model name**: gpt-35-turbo
     - **Deployment name**: text-turbo
 
