@@ -18,6 +18,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
     - **Name**: OpenAI-Lab03-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
+  
+   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+
 2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 3. Navigate to **Keys and Endpoint** page, and save those to a text file to use later.
 
