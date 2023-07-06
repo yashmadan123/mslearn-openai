@@ -218,30 +218,30 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
-    **C#**
+    **C#**: Program.cs
 
     ```csharp
    // Add Azure OpenAI package
    using Azure.AI.OpenAI;
     ```
 
-    **Python**
+    **Python**: prompt-engineering.py
 
     ```python
    # Add OpenAI import
    import openai
     ```
 
-5. Open up the application code for your language and add the necessary code for configuring the client.
+6. Open up the application code for your language and add the necessary code for configuring the client.
 
-    **C#**
+    **C#**: Program.cs
 
     ```csharp
    // Initialize the Azure OpenAI client
    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
 
-    **Python**
+    **Python**: prompt-engineering.py
 
     ```python
    # Set OpenAI configuration settings
@@ -251,9 +251,9 @@ For this exercise, you'll complete some key parts of the application to enable u
    openai.api_key = azure_oai_key
     ```
 
-6. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
-    **C#**
+    **C#**: Program.cs
 
     ```csharp
    // Create chat completion options
@@ -278,7 +278,7 @@ For this exercise, you'll complete some key parts of the application to enable u
    string completion = completions.Choices[0].Message.Content;
     ```
 
-    **Python**
+    **Python**: prompt-engineering.py
 
     ```python
    # Build the messages array
