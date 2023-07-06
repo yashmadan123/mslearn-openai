@@ -102,14 +102,14 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 4. Navigate to the folder for your preferred language and install the necessary packages
 
-    **C#**
+    **C#**: Program.cs
 
     ```bash
    cd CSharp
    dotnet add package Azure.AI.OpenAI --prerelease
     ```
 
-    **Python**
+    **Python**: test-openai-model.py
 
     ```bash
    cd Python
