@@ -18,7 +18,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
    ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
 2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-3. Navigate to **Keys and Endpoint** page, and save those to a text file to use later.
+3. Click on **Keys and Endpoint** under the **Resource Management** section, and save the keys and endpoint value to a text file to use later.
 
 ## Task 2: Deploy a model
 
@@ -32,6 +32,8 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 3. In the **Deployments** page, click on **+ Create new deployment** with the following settings:
     - **Model name**: gpt-35-turbo
     - **Deployment name**: text-turbo
+  
+   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however deployment and usage of other models you deploy will work in the same way.
 
