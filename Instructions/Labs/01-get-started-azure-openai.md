@@ -28,7 +28,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
-3. In the **Deployments** page, click on **+ Create new deployment** with the following settings:
+3. In the **Deployments** page, click on **+ Create new deployment** with the following settings and then select **Create**:
     - **Model name**: text-davinci-003
     - **Deployment name**: text-davinci
   
