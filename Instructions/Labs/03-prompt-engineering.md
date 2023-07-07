@@ -22,7 +22,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
    ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
 2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-3. Click on **Keys and Endpoint** under the **Resource Management** section, and save the keys and endpoint value to a text file to use later.
+3. Click on **Keys and Endpoint** under the **Resource Management** section in the left navigation pane, and save the keys and endpoint value to a text file to use later.
 
 ## Task 2: Deploy a model
 
