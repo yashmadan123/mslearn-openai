@@ -39,7 +39,9 @@
 
      ![](../media/select-rg.png "Resource groups")
 
-1. Confirm you have a resource group **openai-<inject key="DeploymentID" enableCopy="false"/>** present as shown in the below screenshot. You need to use the **Challenge16-<inject key="DeploymentID" enableCopy="false"/>** resource group throughout the challenge.
+1. Confirm you have a resource group **openai-<inject key="Deployment-id" enableCopy="false"/>** present as shown in the below screenshot. You need to use the **openai-<inject key="Deployment-id" enableCopy="false"/>** resource group throughout the entire process of lab execution.
+
+     ![](../media/rg.png "Resource groups")
    
 1. Use **Next** button from lower right corner to move on to the next page.
 
