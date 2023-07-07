@@ -14,8 +14,11 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
     - **Name**: OpenAI-Lab05-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
+
+   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+
 2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-3. Navigate to **Keys and Endpoint** page. You can retrieve the unique endpoint and authentication keys for your service from here - you'll need these later!
+3. Click on **Keys and Endpoint** under the **Resource Management** section in the left navigation pane, and save the keys and endpoint value to a text file to use later.
 
 ## Task 2: Explore image-generation in the DALL-E playground
 
@@ -45,13 +48,26 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and select **Create storage**. Then wait a minute or so for the storage to be created.
+3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced settings**.
+
+   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
 
     > **Note**: If you already have a cloud shell set up in your Azure subscription, you may need to use the **Reset user settings** option in the ⚙️ menu to ensure the latest versions of Python and the .NET Framework are installed.
 
-4. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+4. Within the **Advanced settings** pane, enter the following details and then click on **Create storage**:
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
+    - **CloudShell region**: East US
+    - **Resource group**: Select **Use existing**.
+      - openai-<inject key="Deployment-id" enableCopy="false"></inject>
+    - **Storage account**: Select **Create new**.
+      - storage<inject key="Deployment-id" enableCopy="false"></inject>
+    - **File share**: Create a new file share named **none**
 
-5. Once the terminal starts, enter the following command to download the application code you are going to work with.
+   ![](../media/openai-labs_advancedsettings_config.png "Create storage advanced settings")
+
+5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+
+6. Once the terminal starts, enter the following command to download the application code you are going to work with.
 
     ```bash
    rm -r azure-openai -f
@@ -60,7 +76,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-6. Navigate to the folder for the language you want to use by running the appropriate command.
+7. Navigate to the folder for the language you want to use by running the appropriate command.
 
     **Python**
 
@@ -74,7 +90,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
    cd azure-openai/Labfiles/05-image-generation/CSharp
     ```
 
-7. Use the following command to open the built-in code editor and see the code files you will be working with.
+8. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
@@ -89,7 +105,7 @@ The application uses a configuration file to store the details needed to connect
     - C#: `appsettings.json`
     - Python: `.env`
     
-2. Update the configuration values to include the **Endpoint** and **Key1** for your Azure OpenAI service and then save the file.
+2. Update the configuration values to include the **Endpoint** and **Key1** for your Azure OpenAI service. Then save the file by using the shortcut keys CTRL+S or CMD+S.
 
     > **Tip**: You can adjust the split at the top of the cloud shell pane to see the Azure portal, and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
 
