@@ -28,11 +28,18 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
-3. In the **Deployments** page, click on **+ Create new deployment** with the following settings and then select **Create**:
+3. In the **Deployments** page, click on **+ Create new deployment**.
+
+   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
+
+4. Within the **Deploy model** pop-up, enter the following details and then click on **Advanced options (3)** scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
     - **Model name**: text-davinci-003
     - **Deployment name**: text-davinci
+    - **Tokens per Minute Rate Limit (thousands)**: 10K
   
-   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
+   ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")
+
+5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
 > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll start with the **Davinci** model from the **GPT-3** family of text generation models. **text-davinci-003** is a good general model for summarizing and generating natural language. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
