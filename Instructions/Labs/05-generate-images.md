@@ -134,7 +134,7 @@ Now you're ready to explore the code used to call the REST API and generate an i
     - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
     - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
 
-### Run the app
+## Task 4: Run the app
 
 Now that you've reviewed the code, it's time to run it and generate some images.
 
