@@ -32,7 +32,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-4. Within the **Deploy model** pop-up, enter the following details and then click on **Advanced options (3)** scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+4. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
     - **Model name**: text-davinci-003
     - **Deployment name**: text-davinci
     - **Tokens per Minute Rate Limit (thousands)**: 10K
