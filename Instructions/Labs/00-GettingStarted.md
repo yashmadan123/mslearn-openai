@@ -34,6 +34,12 @@
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+
+1. Now you will see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
+
+     ![](../media/select-rg.png "Resource groups")
+
+1. Confirm you have a resource group **openai-<inject key="DeploymentID" enableCopy="false"/>** present as shown in the below screenshot. You need to use the **Challenge16-<inject key="DeploymentID" enableCopy="false"/>** resource group throughout the challenge.
    
 1. Use **Next** button from lower right corner to move on to the next page.
 
