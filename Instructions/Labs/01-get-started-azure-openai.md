@@ -65,7 +65,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
 
-1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane on the right.
+1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 2. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
 3. Below the **System message** box, click on **Add few-shot examples**, and enter the following message and response in the designated boxes:
