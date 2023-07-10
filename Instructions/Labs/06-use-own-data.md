@@ -30,7 +30,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 3. In the **Deployments** page, click on **+ Create new deployment**.
 
-   ![](../media/openai-labs_deploy-model-4.png "Deploy model configurations")
+   ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
 
 4.  Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
     - **Model name**: gpt-35-turbo
@@ -38,7 +38,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     - **Deployment name**: 35turbo
     - **Tokens per Minute Rate Limit (thousands)**: 10K
   
-     ![](../media/openai-labs_deploy-model-4.png "Deploy model configurations
+    ![](../media/openai-labs_deploy-model-4.png "Deploy model configurations"
 
 5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
