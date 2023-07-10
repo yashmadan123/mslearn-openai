@@ -38,7 +38,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
     - **Deployment name**: my-gpt-model
     - **Tokens per Minute Rate Limit (thousands)**: 10K
   
-   ![](../media/openai-lab01_01.png "Deploy model configurations")
+   ![](../media/openai-labs_deploy-model-1.png "Deploy model configurations")
 
 5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
