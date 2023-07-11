@@ -1,4 +1,4 @@
-# Lab Scenario Preview: Develop Generative AI solutions with Azure OpenAI Service
+# Lab Scenario Preview: Build natural language solutions with Azure OpenAI Service
 
 ## Lab 02: Integrate Azure OpenAI into your app
 
