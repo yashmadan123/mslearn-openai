@@ -1,4 +1,4 @@
-# Lab Scenario Preview: Develop Generative AI solutions with Azure OpenAI Service
+# Lab Scenario Preview: Develop Generative AI solutions with Azure OpenAI Service- Getting started
 
 ## Lab 01: Get started with Azure OpenAI Service
 
