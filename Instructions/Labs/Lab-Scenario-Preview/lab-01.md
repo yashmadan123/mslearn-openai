@@ -19,4 +19,4 @@ After you complete this lab, you will be able to:
 
 ### Architecture Diagram
 
-  ![](../media/lab-01.PNG "Architecture Diagram")
+  ![](media/lab-01-ad.PNG "Architecture Diagram")
