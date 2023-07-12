@@ -10,12 +10,9 @@ The Azure OpenAI Service includes an image-generation model named DALL-E. You ca
 
 After you complete this lab, you will be able to:
 
--   Manage teams, areas, and iterations
--   Manage work items
--   Manage sprints and capacity
--   Customize Kanban boards
--   Define dashboards
--   Customize team process
+-   Provision an Azure OpenAI resource
+-   understand the concepts of image generation via the DALL-E model.
+-   Implement image-generation into your applications using this model
 
 ### Architecture Diagram
 
