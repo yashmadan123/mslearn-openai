@@ -12,12 +12,9 @@ Thus, you'll also learn how different prompts for similar content help shape the
 
 After you complete this lab, you will be able to:
 
--   Manage teams, areas, and iterations
--   Manage work items
--   Manage sprints and capacity
--   Customize Kanban boards
--   Define dashboards
--   Customize team process
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   Apply prompt engineering in your applications
 
 ### Architecture Diagram
 
