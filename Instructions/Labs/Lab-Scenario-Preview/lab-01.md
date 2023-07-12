@@ -12,12 +12,9 @@ In this exercise, you'll learn how to get started with Azure OpenAI by provision
 
 After you complete this lab, you will be able to:
 
--   Manage teams, areas, and iterations
--   Manage work items
--   Manage sprints and capacity
--   Customize Kanban boards
--   Define dashboards
--   Customize team process
+-   Provision an Azure OpenAI resource
+-   Deploy an Azure OpenAI model within the Azure OpenAI studio
+-   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
 
 ### Architecture Diagram
 
