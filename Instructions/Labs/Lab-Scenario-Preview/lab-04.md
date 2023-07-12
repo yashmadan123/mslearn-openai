@@ -4,7 +4,9 @@
 
 ### Lab overview
 
-In this lab, you will learn about the agile planning and portfolio management tools and processes provided by Azure Boards and how they can help you quickly plan, manage, and track work across your entire team. You will explore the product backlog, sprint backlog, and task boards which can be used to track the flow of work during the course of an iteration. We will also take a look at how the tools have been enhanced in this release to scale for larger teams and organizations.
+The Azure OpenAI Service models are capable of generating code, fixing bugs, providing code comments, and explaining existing code using natural language prompts. These models simplify the coding process by allowing developers to describe their intentions in plain language, and they offer suggestions and fixes for debugging. They also provide helpful comments and insights on code structure and best practices. Overall, these models enhance the coding experience by assisting developers in various aspects of code generation and understanding.
+
+In this lab, you will use these models which can explain and simplify complex code, help understanding its functionality and make improvements.
 
 ### Objectives
 
