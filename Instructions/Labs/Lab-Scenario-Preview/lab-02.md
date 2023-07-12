@@ -12,12 +12,9 @@ In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it 
 
 After you complete this lab, you will be able to:
 
--   Manage teams, areas, and iterations
--   Manage work items
--   Manage sprints and capacity
--   Customize Kanban boards
--   Define dashboards
--   Customize team process
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   Integrate Azure OpenAI models into your applications
 
 ### Architecture Diagram
 
