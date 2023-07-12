@@ -12,13 +12,10 @@ In this lab, you will use these models which can explain and simplify complex co
 
 After you complete this lab, you will be able to:
 
--   Manage teams, areas, and iterations
--   Manage work items
--   Manage sprints and capacity
--   Customize Kanban boards
--   Define dashboards
--   Customize team process
-
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
+ 
 ### Architecture Diagram
 
   ![](media/lab-04-ad.PNG "Architecture Diagram")
