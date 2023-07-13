@@ -74,6 +74,8 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Storage account name**: storage<inject key="Deployment-id" enableCopy="false"></inject>
     - **Region**: East US
     - **Redundancy**: Locally-redundant storage (LRS)
+  
+    ![](../media/openai-lab06_t4_s4.png "Create storage account")
 
 1. Once the resource is being created, come back to Azure OpenAI Studio and select **Create a new Azure Cognitive Search resource** with the following settings. Anything not specified leave as the default.
 
@@ -83,8 +85,10 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Location**: East US
     - **Pricing tier**: Basic
 
+    ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
+
 1. Wait until your search resource has been deployed, then switch back to the Azure AI Studio and refresh the page.
-1. In the **Add data**, enter the following values for your data source.
+1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
     - **Select data source**: Upload files
     - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
@@ -93,7 +97,12 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Enter the index name**: margiestravel
     - Select the check box
 
+    ![](../media/openai-lab06_t4_s7_add_data.png "Add data configurations")
+
 1. On the **Upload files** page, upload the PDFs you downloaded.
+
+    ![](../media/openai-lab06_t4_s8_uploadfiles.png "Upload files")
+
 1. Select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once complete, you'll see the data source, search resource, and index specified in the **Assistant setup** pane.
 
 ## Task 5: Chat with a model grounded in your data
