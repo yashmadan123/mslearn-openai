@@ -24,7 +24,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and use our data to ground its responses.
 
 1. On the **Overview** page for your Azure OpenAI resource, use the **Explore** button to open Azure OpenAI Studio in a new browser tab. Alternatively, navigate to [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true) directly.
-2.In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+
+2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
@@ -38,7 +39,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     - **Deployment name**: text-turbo
     - **Tokens per Minute Rate Limit (thousands)**: 10K
   
-    ![](../media/openai-labs_deploy-model-4.png "Deploy model configurations")
+    ![](../media/openai-labs_deploy-model-2&3.png "Deploy model configurations")
 
 5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
