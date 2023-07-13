@@ -35,7 +35,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 4.  Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
     - **Model name**: gpt-35-turbo
     - **Model version**: *Use the default version*
-    - **Deployment name**: 35turbo
+    - **Deployment name**: text-turbo
     - **Tokens per Minute Rate Limit (thousands)**: 10K
   
     ![](../media/openai-labs_deploy-model-4.png "Deploy model configurations")
@@ -46,10 +46,16 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
-1. Navigate to the **Chat** playground.
+1. Navigate to the **Chat** playground, and make sure the `gpt-35-turbo` model you deployed is selected in the **Configuration** pane (this should be the default, if you only have one deployed model).
 1. Enter the following prompts, and observe the output.
-    - *I'd like to take a trip to New York. Where should I stay?*
-    - *What are some facts about New York?*
+
+    ```code
+    I'd like to take a trip to New York. Where should I stay?
+    ```
+    ```code
+    What are some facts about New York?
+    ```
+    
 1. Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
 
 ## Task 4: Connect your data in the chat playground
@@ -59,13 +65,21 @@ Next, add your data in the chat playground to see how it responds with your data
 1. [Download the data](https://aka.ms/own-data-brochures) that you will use from GitHub. Extract the PDFs in the `.zip` provided.
 1. Navigate to the **Chat** playground, and select *Add your data* in the Assistant setup pane.
 1. Select **Add a data source** and choose *Upload files* from the dropdown.
-1. You'll need to create a storage account and Azure Cognitive Search resource. Under the dropdow for the storage resource, select **Create a new Azure Blob storage resource** and create the resource with a globally unique name.
-1. Once the resource is being created, come back to Azure OpenAI Studio and select **Create a new Azure Cognitive Search resource** with the following settings.
 
-    - **Subscription**: *Same subscription as your Azure OpenAI resource*
-    - **Resource group**: *Same resource group as your Azure OpenAI resource*
-    - **Service name**: *Enter globally unique name*
-    - **Location**: *Same location as your Azure OpenAI resource*
+1. You'll need to create a storage account and Azure Cognitive Search resource. Under the dropdown for the storage resource, select **Create a new Azure Blob storage resource**, and create a storage account with the following settings. Anything not specified leave as the default.
+
+    - **Subscription**: Default - Pre-assigned subscription
+    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
+    - **Storage account name**: storage<inject key="Deployment-id" enableCopy="false"></inject>
+    - **Region**: East US
+    - **Redundancy**: Locally-redundant storage (LRS)
+
+1. Once the resource is being created, come back to Azure OpenAI Studio and select **Create a new Azure Cognitive Search resource** with the following settings. Anything not specified leave as the default.
+
+    - **Subscription**: Default - Pre-assigned subscription
+    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
+    - **Service name**: cognitive-search-<inject key="Deployment-id" enableCopy="false"></inject>
+    - **Location**: East US
     - **Pricing tier**: Basic
 
 1. Wait until your search resource has been deployed, then switch back to the Azure AI Studio and refresh the page.
@@ -85,8 +99,13 @@ Next, add your data in the chat playground to see how it responds with your data
 
 Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
 
-- *I'd like to take a trip to New York. Where should I stay?*
-- *What are some facts about New York?*
+```code
+I'd like to take a trip to New York. Where should I stay?
+```
+
+```code
+What are some facts about New York?
+```
 
 You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided.
 
