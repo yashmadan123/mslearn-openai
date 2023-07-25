@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Lab Scenario Preview: AZ-400: Generate responses based on custom injested data",
+    "Name": "Lab Scenario Preview: Azure-OpenAI: Generate responses based on custom injested data",
     "Language": "English",
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai/tree/prod",
     "Files": [
