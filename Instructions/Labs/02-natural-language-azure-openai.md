@@ -22,6 +22,13 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-labs_keys&endpoints.png "Keys and Endpoints")
 
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 ## Task 2: Deploy a model
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
@@ -47,6 +54,13 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however deployment and usage of other models you deploy will work in the same way.
+
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## Task 3: Set up an application in Cloud Shell
 
@@ -97,6 +111,13 @@ Open the built-in code editor, and observe the text file that you'll be summariz
 ```bash
 code .
 ```
+
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## Task 4: Configure your application
 
