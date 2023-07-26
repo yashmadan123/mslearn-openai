@@ -19,6 +19,13 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     
 2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 ## Task 2: Deploy a model
 
 To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and use our data to ground its responses.
@@ -42,6 +49,13 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     ![](../media/openai-labs_deploy-model-2&3.png "Deploy model configurations")
 
 5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## Task 3: Observe normal chat behavior without adding your own data
 
@@ -104,6 +118,13 @@ Next, add your data in the chat playground to see how it responds with your data
     ![](../media/openai-lab06_t4_s8_uploadfiles.png "Upload files")
 
 1. Select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once complete, you'll see the data source, search resource, and index specified in the **Assistant setup** pane.
+
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## Task 5: Chat with a model grounded in your data
 
