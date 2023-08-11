@@ -19,3 +19,5 @@ After you complete this lab, you will be able to:
 ### Architecture Diagram
 
   ![](media/lab-06-ad.PNG "Architecture Diagram")
+
+Now that you know what the lab is going to be all about, you can launch next item **Hands-on Lab** which includes lab environment and lab guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/f8821d10-ec8c-4e1b-bde3-d8de68b1930d) if you want to go through detailed guide prior to launching lab environment.
