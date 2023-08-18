@@ -4,7 +4,7 @@ Azure OpenAI includes default content filters to help ensure that potentially ha
 
 In this exercise, you'll explore the affect of the default content filters in Azure OpenAI.
 
-This exercise will take approximately **30** minutes.
+### Estimated time: 30 minutes
 
 ## Task 1: Provision an Azure OpenAI resource
 
