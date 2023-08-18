@@ -109,3 +109,13 @@ Content filters are applied to prompts and completions to prevent potentially ha
 1. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot however make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
 
     > **Tip**: For more details about the categories and severity levels used in content filters, see [Content filtering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) in the Azure OpenAI service documentation.
+
+## Review
+
+In this lab, you have accomplished the following:
+-   Provision an Azure OpenAI resource.
+-   Deploy an OpenAI model within the Azure OpenAI studio.
+-   Use the power of OpenAI models to generate responses to generate natural language output.
+-   Explore content filters.
+
+### You have successfully completed the lab.
