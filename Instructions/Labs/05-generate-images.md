@@ -173,3 +173,12 @@ Now that you've reviewed the code, it's time to run it and generate some images.
 3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
 4. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
+
+## Review
+
+In this lab, you have accomplished the following:
+-   Provision an Azure OpenAI resource
+-   understand the concepts of image generation via the DALL-E model.
+-   Implement image-generation into your applications using this model
+
+### You have successfully completed the lab.
