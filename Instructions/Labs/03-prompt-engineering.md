@@ -6,7 +6,7 @@ When working with the Azure OpenAI Service, how developers shape their prompt gr
 
 Imagine you are trying to send out information for a new wildlife rescue, and want to get assistance from a generative AI model.
 
-This exercise will take approximately **30** minutes.
+### Estimated time: 30 minutes
 
 ## Task 1: Provision an Azure OpenAI resource
 
