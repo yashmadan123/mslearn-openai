@@ -234,3 +234,12 @@ Now that your app has been configured, run it to send your request to your model
 1. Run the application again, and observe the output.
 
 Increasing the temperature often causes the summary to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
+
+## Review
+
+In this lab, you have accomplished the following:
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   Integrate Azure OpenAI models into your applications
+
+### You have successfully completed the lab.
