@@ -293,3 +293,12 @@ The app for Go Fish in `sample-code` can be run, if you replace the lines with b
 It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but can't be trusted as correct and need to be verified by the developer.
 
 If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
+
+## Review
+
+In this lab, you have accomplished the following:
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
+
+### You have successfully completed the lab.
