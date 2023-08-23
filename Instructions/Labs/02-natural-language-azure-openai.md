@@ -2,7 +2,7 @@
 
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application to summarize text.
 
-This exercise will take approximately **40** minutes.
+### Estimated time: 40 minutes
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -234,3 +234,12 @@ Now that your app has been configured, run it to send your request to your model
 1. Run the application again, and observe the output.
 
 Increasing the temperature often causes the summary to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
+
+## Review
+
+In this lab, you have accomplished the following:
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   Integrate Azure OpenAI models into your applications
+
+### You have successfully completed the lab.

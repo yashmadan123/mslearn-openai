@@ -6,7 +6,7 @@ When working with the Azure OpenAI Service, how developers shape their prompt gr
 
 Imagine you are trying to send out information for a new wildlife rescue, and want to get assistance from a generative AI model.
 
-This exercise will take approximately **30** minutes.
+### Estimated time: 30 minutes
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -352,3 +352,12 @@ Each prompt is displayed in the console as it sends for you to see how differenc
 Increasing the temperature often causes the response to vary, even when provided the same prompt, due to the increased randomness. You can run it multiple times with different temperature or top_p values to see how that impacts the response to the same prompt.
 
 If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
+
+## Review
+
+In this lab, you have accomplished the following:
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   Apply prompt engineering in your applications
+
+### You have successfully completed the lab.

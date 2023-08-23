@@ -2,7 +2,7 @@
 
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
 
-This exercise will take approximately **20** minutes.
+### Estimated time: 20 minutes
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -143,3 +143,12 @@ You'll notice a very different response this time, with specifics about certain 
 Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
 > **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
+
+## Review
+
+In this lab, you have accomplished the following:
+-   Provision an Azure OpenAI resource
+-   Deploy an OpenAI model within the Azure OpenAI studio
+-   Use the power of OpenAI models to generate responses limited to a custom ingested data.
+
+### You have successfully completed the lab.
