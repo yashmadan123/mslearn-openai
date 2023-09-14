@@ -8,7 +8,16 @@ Azure OpenAI Service brings the generative AI models developed by OpenAI to the 
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. Once you are logged in to the Azure Portal, create an **Azure OpenAI** resource with the following settings:
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/openai8.png)
+
+2. On **Cognitive Services | Azure OpenAI** blade, click on **Create**.
+
+   ![](../media/openai_create.png)
+
+3. create an **Azure OpenAI** resource with the following settings:
+   
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
@@ -17,7 +26,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   
    ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
-2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -30,16 +39,27 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
-1. On the **Overview** page for your Azure OpenAI resource, use the **Explore** button to open Azure OpenAI Studio in a new browser tab.
-2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/openai8.png)
+
+2. On **Cognitive Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+
+   ![](../media/OpenAI_select.png)
+
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+
+   ![](../media/openai_studio.png)
+   
+5. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
-3. In the **Deployments** page, click on **+ Create new deployment**.
+6. In the **Deployments** page, click on **+ Create new deployment**.
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-4. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+7. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
     - **Select a Model**: gpt-35-turbo
     - **Model version**: Auto-update to default
     - **Deployment name**: my-gpt-model
@@ -47,7 +67,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
   
    ![](../media/openai-labs_deploy-model-1.png "Deploy model configurations")
 
-5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
 > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
