@@ -45,7 +45,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Cognitive Services | Azure OpenAI** blade, select **OpenAI-Lab07-<inject key="Deployment-id" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
