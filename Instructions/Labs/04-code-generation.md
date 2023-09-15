@@ -8,7 +8,16 @@ The Azure OpenAI Service models can generate code for you using natural language
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. Once you are logged in to the Azure Portal, create an **Azure OpenAI** resource with the following settings:
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/openai8.png)
+
+2. On **Cognitive Services | Azure OpenAI** blade, click on **Create**.
+
+   ![](../media/openai_create.png)
+
+3. create an **Azure OpenAI** resource with the following settings:
+
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
@@ -17,8 +26,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   
    ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
     
-2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-3. On **openai-<inject key="DeploymentID" enableCopy="false"/>** blade, select **Keys and Endpoint (1)** under **Resource Management**. Copy **Key 1 (2)** and the **Endpoint (3)** by clicking on copy to clipboard paste it in a text editor such as notepad for later use.
+4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+5. On **openai-<inject key="DeploymentID" enableCopy="false"/>** blade, select **Keys and Endpoint (1)** under **Resource Management**. Copy **Key 1 (2)** and the **Endpoint (3)** by clicking on copy to clipboard paste it in a text editor such as notepad for later use.
 
    ![](../media/openai-labs_keys&endpoints.png "Keys and Endpoints")
 
@@ -33,24 +42,35 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 To use the Azure OpenAI API for code generation, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and reference that model in our app.
 
-1. On the **Overview** page for your Azure OpenAI resource, use the **Explore** button to open Azure OpenAI Studio in a new browser tab. Alternatively, navigate to [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true) directly.
-2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/openai8.png)
+
+2. On **Cognitive Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+
+   ![](../media/OpenAI_select.png)
+
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+
+   ![](../media/openai_studio.png)
+   
+4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
-3. In the **Deployments** page, click on **+ Create new deployment**.
+5. In the **Deployments** page, click on **+ Create new deployment**.
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-4. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
-    - **Model name**: gpt-35-turbo
+6. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+    - **Select a model**: gpt-35-turbo
     - **Model version**: *Use the default version*
     - **Deployment name**: 35turbo
     - **Tokens per Minute Rate Limit (thousands)**: 10K
   
    ![](../media/openai-labs_deploy-model-4.png "Deploy model configurations")
 
-5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
