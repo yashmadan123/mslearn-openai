@@ -46,7 +46,17 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
-1. On the **Overview** page for your Azure OpenAI resource, use the **Explore** button to open Azure OpenAI Studio in a new browser tab. Alternatively, navigate to [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true) directly.
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/openai8.png)
+
+2. On **Cognitive Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-id" enableCopy="false"></inject>**
+
+   ![](../media/OpenAI_select.png)
+
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+
+   ![](../media/openai_studio.png)
    
 2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
