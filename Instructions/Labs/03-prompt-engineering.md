@@ -12,7 +12,16 @@ Imagine you are trying to send out information for a new wildlife rescue, and wa
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. Once you are logged in to the Azure Portal, create an **Azure OpenAI** resource with the following settings:
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/openai8.png)
+
+2. On **Cognitive Services | Azure OpenAI** blade, click on **Create**.
+
+   ![](../media/openai_create.png)
+
+3. create an **Azure OpenAI** resource with the following settings:
+
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
@@ -21,8 +30,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   
    ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
-2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-3. On **openai-<inject key="DeploymentID" enableCopy="false"/>** blade, select **Keys and Endpoint (1)** under **Resource Management**. Copy **Key 1 (2)** and the **Endpoint (3)** by clicking on copy to clipboard paste it in a text editor such as notepad for later use.
+4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+5. On **openai-<inject key="DeploymentID" enableCopy="false"/>** blade, select **Keys and Endpoint (1)** under **Resource Management**. Copy **Key 1 (2)** and the **Endpoint (3)** by clicking on copy to clipboard paste it in a text editor such as notepad for later use.
 
    ![](../media/openai-labs_keys&endpoints.png "Keys and Endpoints")
 
@@ -48,7 +57,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 4. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
-    - **Model name**: gpt-35-turbo
+    - **Select a Model**: gpt-35-turbo
     - **Model version**: *Use the default version*
     - **Deployment name**: text-turbo
     - **Tokens per Minute Rate Limit (thousands)**: 10K
