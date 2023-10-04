@@ -1,10 +1,21 @@
 # Lab 04: Generate and improve code with Azure OpenAI Service
 
+## Lab scenario
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
 
-### Estimated time: 30 minutes
+## Lab objectives
+In this lab, you will complete the following tasks:
 
-## Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Generate code in chat playground
+- Task 4: Set up an application in Cloud Shell
+- Task 5: Configure your application
+- Task 6: Run your application
+
+## Estimated time: 30 minutes
+
+### Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
@@ -38,7 +49,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 2: Deploy a model
+### Task 2: Deploy a model
 
 To use the Azure OpenAI API for code generation, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and reference that model in our app.
 
@@ -81,7 +92,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 3: Generate code in chat playground
+### Task 3: Generate code in chat playground
 
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
@@ -114,7 +125,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. Observe the output, which explains what the function does in natural language. Try asking the model to rewrite it in a language you are familiar with.
 
-## Task 4: Set up an application in Cloud Shell
+### Task 4: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -169,7 +180,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 5: Configure your application
+### Task 5: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -285,7 +296,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 8. To save the changes made to the file, execute CTRL+S or CMD+S.
 
-## Task 6: Run your application
+### Task 6: Run your application
 
 Now that your app has been configured, run it to try generating code for each use case. The use case is numbered in the app, and can be run in any order.
 

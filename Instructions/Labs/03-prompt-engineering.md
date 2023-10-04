@@ -1,14 +1,25 @@
 # Lab 03: Utilize prompt engineering in your app
 
+## Lab scenario
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application to summarize text.
 
 When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
 Imagine you are trying to send out information for a new wildlife rescue, and want to get assistance from a generative AI model.
 
-### Estimated time: 30 minutes
+## Lab objectives
+In this lab, you will complete the following tasks:
 
-## Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Apply prompt engineering in chat playground
+- Task 4: Set up an application in Cloud Shell
+- Task 5: Configure your application
+- Task 6: Run your application
+
+## Estimated time: 30 minutes
+
+### Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
@@ -42,7 +53,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 2: Deploy a model
+### Task 2: Deploy a model
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
@@ -85,7 +96,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 3: Apply prompt engineering in chat playground
+### Task 3: Apply prompt engineering in chat playground
 
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a python app of animals with fun names.
 
@@ -179,7 +190,7 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. This time the model should respond with an appropriate classification, even without instructions.
 
-## Task 4: Set up an application in Cloud Shell
+### Task 4: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -236,7 +247,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 5: Configure your application
+### Task 5: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -347,7 +358,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```
 8. To save the changes made to the file, execute CTRL+S or CMD+S.
 
-## Task 6: Run your application
+### Task 6: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
