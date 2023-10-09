@@ -138,15 +138,17 @@ Next, add your data in the chat playground to see how it responds with your data
         - Turn on CORS when prompted
     - **Select Azure Cognitive Search resource**: *Choose the search resource you created*
     - **Enter the index name**: margiestravel
-    - Select the check box
+    - **Add vector search to this search resource**: unchecked
+    - **I acknowledge that connecting to an Azure Cognitive Search account will incur usage to my account** : checked
 
     ![](../media/openai-lab06_t4_s7_add_data.png "Add data configurations")
 
-1. On the **Upload files** page, upload the PDFs you downloaded.
+1. 1. On the **Upload files** page, upload the PDFs you downloaded, and then select **Next**.
 
     ![](../media/openai-lab06_t4_s8_uploadfiles.png "Upload files")
 
-1. Select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once complete, you'll see the data source, search resource, and index specified in the **Assistant setup** pane.
+1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once complete, you'll see the data source, search resource, and index specified in the **Assistant setup** pane.
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
