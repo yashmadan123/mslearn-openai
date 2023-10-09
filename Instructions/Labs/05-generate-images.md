@@ -39,7 +39,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
    ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-5. On **openai-<inject key="DeploymentID" enableCopy="false"/>** blade, select **Keys and Endpoint (1)** under **Resource Management**. Copy **Key 1 (2)** and the **Endpoint (3)** by clicking on copy to clipboard paste it in a text editor such as notepad for later use.
+5. On **openai-<inject key="DeploymentID" enableCopy="false"/>** blade, select **Keys and Endpoint (1)** under **Resource Management**. Copy **Key 1 (2)** and the **Dall-e APIs (3)** endpoint by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
    ![](../media/openai_endpointnew.png "Keys and Endpoints")
 
