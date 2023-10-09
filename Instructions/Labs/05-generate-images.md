@@ -24,7 +24,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
    ![](../media/openai_create.png)
 
@@ -41,7 +41,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 5. On **openai-<inject key="DeploymentID" enableCopy="false"/>** blade, select **Keys and Endpoint (1)** under **Resource Management**. Copy **Key 1 (2)** and the **Endpoint (3)** by clicking on copy to clipboard paste it in a text editor such as notepad for later use.
 
-   ![](../media/openai-labs_keys&endpoints.png "Keys and Endpoints")
+   ![](../media/openai_endpointnew.png "Keys and Endpoints")
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
