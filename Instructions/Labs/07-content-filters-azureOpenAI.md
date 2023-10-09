@@ -23,7 +23,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
    ![](../media/openai_create.png)
 
@@ -54,7 +54,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, select **OpenAI-Lab07-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab07-<inject key="Deployment-id" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
