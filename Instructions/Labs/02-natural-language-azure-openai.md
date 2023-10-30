@@ -40,7 +40,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)**
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
