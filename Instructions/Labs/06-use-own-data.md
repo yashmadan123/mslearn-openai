@@ -93,10 +93,10 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 1. Navigate to the **Chat** playground, and make sure the `gpt-35-turbo` model you deployed is selected in the **Configuration** pane (this should be the default, if you only have one deployed model).
 1. Enter the following prompts, and observe the output.
 
-    ```code
+    ```
     I'd like to take a trip to New York. Where should I stay?
     ```
-    ```code
+    ```
     What are some facts about New York?
     ```
     
@@ -161,11 +161,11 @@ Next, add your data in the chat playground to see how it responds with your data
 
 Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
 
-```code
+```
 I'd like to take a trip to New York. Where should I stay?
 ```
 
-```code
+```
 What are some facts about New York?
 ```
 
