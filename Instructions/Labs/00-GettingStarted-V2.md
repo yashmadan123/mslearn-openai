@@ -1,6 +1,6 @@
-# **Getting Started with Your Fundamentals of Azure OpenAI Service Workshop**
+# **Getting Started with Your Develop Generative AI solutions with Azure OpenAI service Workshop**
  
-Welcome to your Fundamentals of Azure OpenAI Service workshop! We've prepared a seamless environment for you to explore and learn about connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
+Welcome to your Develop Generative AI solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
  
 ## **Accessing Your Lab Environment**
  
