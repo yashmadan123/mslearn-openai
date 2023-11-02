@@ -1,6 +1,6 @@
 # **Getting Started with Your Fundamentals of Azure OpenAI Service Workshop**
  
-Welcome to your Fundamentals of Azure OpenAI Service workshop! We've prepared a seamless environment for you to explore and learn about configuring and managing Windows Server on-premises, hybrid, and infrastructure as a service (IaaS) platform workloads. Let's begin by making the most of this experience:
+Welcome to your Fundamentals of Azure OpenAI Service workshop! We've prepared a seamless environment for you to explore and learn about connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
  
 ## **Accessing Your Lab Environment**
  
