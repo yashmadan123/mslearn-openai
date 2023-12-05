@@ -1,10 +1,20 @@
 # Lab 02: Integrate Azure OpenAI into your app
 
+## Lab scenario
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application to summarize text.
 
-### Estimated time: 40 minutes
+## Lab objectives
+In this lab, you will complete the following tasks:
 
-## Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Set up an application in Cloud Shell
+- Task 4: Configure your application
+- Task 5: Run your application
+
+## Estimated time: 40 minutes
+
+### Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
@@ -12,23 +22,28 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
    ![](../media/openai_create.png)
 
 3. create an **Azure OpenAI** resource with the following settings:
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
+    - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Name**: OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
       
    ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-5. On **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade, select **Keys and Endpoint (1)** under **Resource Management**. Copy **Key 1 (2)** and the **Endpoint (3)** by clicking on copy to clipboard paste it in a text editor such as notepad for later use.
 
-   ![](../media/openai-labs_keys&endpoints.png "Keys and Endpoints")
+5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+
+   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -37,7 +52,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 2: Deploy a model
+### Task 2: Deploy a model
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
@@ -45,7 +60,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
@@ -80,7 +95,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 3: Set up an application in Cloud Shell
+### Task 3: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -137,7 +152,7 @@ code .
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 4: Configure your application
+### Task 4: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -237,7 +252,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```
 7. To save the changes made to the file, execute CTRL+S or CMD+S.
 
-## Task 5: Run your application
+### Task 5: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
 

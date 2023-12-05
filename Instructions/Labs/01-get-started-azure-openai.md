@@ -1,10 +1,21 @@
 # Lab 01: Get started with Azure OpenAI Service
 
+## Lab scenario
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Studio to deploy and explore OpenAI models.
 
-### Estimated time: 40 minutes
+## Lab objectives
+In this lab, you will complete the following tasks:
 
-## Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Explore a model in the Completions playground
+- Task 4: Use the Chat playground
+- Task 5: Explore prompts and parameters 
+- Task 6: Explore code-generation
+
+## Estimated time: 40 minutes
+
+### Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
@@ -12,15 +23,15 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
    ![](../media/openai_create.png)
 
-3. create an **Azure OpenAI** resource with the following settings:
+3. Create an **Azure OpenAI** resource with the following settings:
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
+    - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Name**: OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
@@ -35,7 +46,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 2: Deploy a model
+### Task 2: Deploy a model
 
 Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
@@ -43,7 +54,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
@@ -78,7 +89,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 3: Explore a model in the Completions playground
+### Task 3: Explore a model in the Completions playground
 
 *Playgrounds* are useful interfaces in Azure OpenAI Studio that you can use to experiment with your deployed models without needing to develop your own client application.
 
@@ -95,7 +106,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 5. Use the **Regenerate** button to resubmit the prompt, and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-## Task 4: Use the Chat playground
+### Task 4: Use the Chat playground
 
 The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
 
@@ -119,7 +130,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 9. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-## Task 5: Explore prompts and parameters
+### Task 5: Explore prompts and parameters
 
 You can use the prompt and parameters to maximize the likelihood of generating the response you need.
 
@@ -148,7 +159,7 @@ You can use the prompt and parameters to maximize the likelihood of generating t
     - The prompt specifically states that the desired output should be three multiple choice questions.
     - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-## Task 6: Explore code-generation
+### Task 6: Explore code-generation
 
 In addition to generating natural language responses, you can use GPT models to generate code.
 

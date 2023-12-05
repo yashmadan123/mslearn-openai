@@ -1,10 +1,20 @@
 # Lab 06: Use your own data with Azure OpenAI
 
+## Lab scenario
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
 
-### Estimated time: 20 minutes
+## Lab objectives
+In this lab, you will complete the following tasks:
 
-## Task 1: Provision an Azure OpenAI resource
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Observe normal chat behavior without adding your own data
+- Task 4: Connect your data in the chat playground
+- Task 5: Chat with a model grounded in your data
+
+## Estimated time: 20 minutes
+
+### Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
@@ -20,7 +30,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Region**: Default - Make sure that the default region selected is either East US or West Europe. 
+    - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Name**: OpenAI-Lab06-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
@@ -35,7 +45,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 2: Deploy a model
+### Task 2: Deploy a model
 
 To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and use our data to ground its responses.
 
@@ -43,7 +53,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="Deployment-id" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
@@ -76,23 +86,23 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 3: Observe normal chat behavior without adding your own data
+### Task 3: Observe normal chat behavior without adding your own data
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
 1. Navigate to the **Chat** playground, and make sure the `gpt-35-turbo` model you deployed is selected in the **Configuration** pane (this should be the default, if you only have one deployed model).
 1. Enter the following prompts, and observe the output.
 
-    ```code
+    ```
     I'd like to take a trip to New York. Where should I stay?
     ```
-    ```code
+    ```
     What are some facts about New York?
     ```
     
 1. Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
 
-## Task 4: Connect your data in the chat playground
+### Task 4: Connect your data in the chat playground
 
 Next, add your data in the chat playground to see how it responds with your data as grounding
 
@@ -128,15 +138,17 @@ Next, add your data in the chat playground to see how it responds with your data
         - Turn on CORS when prompted
     - **Select Azure Cognitive Search resource**: *Choose the search resource you created*
     - **Enter the index name**: margiestravel
-    - Select the check box
+    - **Add vector search to this search resource**: unchecked
+    - **I acknowledge that connecting to an Azure Cognitive Search account will incur usage to my account** : checked
 
     ![](../media/openai-lab06_t4_s7_add_data.png "Add data configurations")
 
-1. On the **Upload files** page, upload the PDFs you downloaded.
+1. 1. On the **Upload files** page, upload the PDFs you downloaded, and then select **Next**.
 
     ![](../media/openai-lab06_t4_s8_uploadfiles.png "Upload files")
 
-1. Select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once complete, you'll see the data source, search resource, and index specified in the **Assistant setup** pane.
+1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once complete, you'll see the data source, search resource, and index specified in the **Assistant setup** pane.
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -145,15 +157,15 @@ Next, add your data in the chat playground to see how it responds with your data
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## Task 5: Chat with a model grounded in your data
+### Task 5: Chat with a model grounded in your data
 
 Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
 
-```code
+```
 I'd like to take a trip to New York. Where should I stay?
 ```
 
-```code
+```
 What are some facts about New York?
 ```
 
