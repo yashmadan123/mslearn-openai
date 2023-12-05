@@ -43,8 +43,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
@@ -55,9 +55,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-### Task 2: Explore image-generation in the DALL-E playground
+### Task 2: Explore image generation in the DALL-E playground
 
-You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with image-generation.
+You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with image generation.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
