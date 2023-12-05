@@ -106,7 +106,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a python app of animals with fun names.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-1. In the **Assistant setup** section at the top, enter `You are a helpful AI assistant` as the system message.
+1. In the **Assistant setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Save changes** and subsequently click on **Continue**.
 1. In the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
@@ -116,7 +116,7 @@ Before using your app, examine how prompt engineering improves the model respons
     ```
 
 1. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
-1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Save changes**
+1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Save changes** and subsequently click on **Continue**.
 1. Format the instructions as python comments. Send the following prompt to the model.
 
     ```code
@@ -126,7 +126,7 @@ Before using your app, examine how prompt engineering improves the model respons
     ```
 
 1. The model should correctly respond with complete python code doing what the comments requested.
-1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and save your changes. This will create a new chat session.
+1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and save your changes and subsequently click on **Continue**. This will create a new chat session.
 1. Send the following prompt to the model.
 
     ```code
@@ -181,7 +181,7 @@ Before using your app, examine how prompt engineering improves the model respons
    Entertainment
     ```
 
-1. Save those changed to the assistant setup, and send the same prompt about California drought, provided here again for convenience.
+1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
 
     ```code
    Severe drought likely in California
