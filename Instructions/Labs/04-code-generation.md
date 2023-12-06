@@ -68,7 +68,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/OpenAI_select1.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
    
@@ -81,14 +81,15 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 6. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
-    - **Select a model**: gpt-35-turbo
+    - **Select a model**: gpt-35-turbo (1)
     - **Model version**: *Use the default version*
-    - **Deployment name**: 35turbo
+    - **Deployment name**: 35turbo (2)
     - **Tokens per Minute Rate Limit (thousands)**: 10K
   
    ![](../media/openai-labs_deploy-model-4.png "Deploy model configurations")
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
