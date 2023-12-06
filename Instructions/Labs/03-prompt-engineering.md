@@ -31,7 +31,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai_create.png)
 
-3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
+3. Create an **Azure OpenAI** resource with the following settings ,click on **Next** twice and subsequently click on **Create**:
 
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
