@@ -69,7 +69,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-7. Within the **Deploy model** pop-up interface, enter the following details and then  followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo-16k (1)
     - **Model version**: Auto-update to default (2)
     - **Deployment name**: my-gpt-model (3)
