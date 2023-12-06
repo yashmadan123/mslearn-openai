@@ -196,7 +196,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by using the shortcut keys CTRL+S or CMD+S.
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -204,15 +204,15 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     ```bash
    cd CSharp
-   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.5
+   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.9
     ```
 
     **Python**
 
-    ```bash
-   cd Python
-   pip install python-dotenv
-   pip install openai
+      ```bash
+    cd Python
+    pip install python-dotenv
+    pip install openai==1.2.0
     ```
 
 5. Select the code file in this folder for your language and add the necessary libraries.
@@ -231,30 +231,33 @@ For this exercise, you'll complete some key parts of the application to enable u
     `code-generation.py`
 
     ```python
-   # Add OpenAI import
-   import openai
+    # Add OpenAI import
+    from openai import AzureOpenAI
     ```
 
 6. Add the necessary code for configuring the client.
 
     **C#**
+    `Program.cs`
 
-    ```csharp
+   ```csharp
    // Initialize the Azure OpenAI client
    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
 
     **Python**
+     `code-generation.py`
 
-    ```python
-   # Set OpenAI configuration settings
-   openai.api_type = "azure"
-   openai.api_base = azure_oai_endpoint
-   openai.api_version = "2023-05-15"
-   openai.api_key = azure_oai_key
+      ```python
+    # Set OpenAI configuration settings
+    client = AzureOpenAI(
+            azure_endpoint = azure_oai_endpoint, 
+            api_key=azure_oai_key,  
+            api_version="2023-05-15"
+            )
     ```
 
-7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+8. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
     **C#**
 
@@ -271,7 +274,7 @@ For this exercise, you'll complete some key parts of the application to enable u
         MaxTokens = 1000,
     };
 
-    // Get response from Azure OpenAI
+    // Get a response from Azure OpenAI
     Response<ChatCompletions> response = await client.GetChatCompletionsAsync(
         oaiModelName,
         chatCompletionsOptions
@@ -283,23 +286,229 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     **Python**
 
-    ```python
-   # Build the messages array
-   messages =[
-       {"role": "system", "content": system_message},
-       {"role": "user", "content": user_message},
-   ]
+     ```python
+       # Build the messages array
+       messages =[
+           {"role": "system", "content": system_message},
+           {"role": "user", "content": user_message},
+       ]
+       
+       # Call the Azure OpenAI model
+       response = client.chat.completions.create(
+           model=model,
+           messages=messages,
+           temperature=0.7,
+           max_tokens=1000
+       )
+   
+   ```
 
-   # Call the Azure OpenAI model
-   response = openai.ChatCompletion.create(
-       engine=model,
-       messages=messages,
-       temperature=0.7,
-       max_tokens=1000
-   )
-    ```
+8. The final code should look like as shown below.
 
-8. To save the changes made to the file, execute CTRL+S or CMD+S.
+   **C#**
+      ```csharp
+         // Implicit using statements are included
+      using System.Text;
+      using System.Text.Json;
+      using Microsoft.Extensions.Configuration;
+      using Microsoft.Extensions.Configuration.Json;
+      using Azure;
+      
+      // Add Azure OpenAI package
+      using Azure.AI.OpenAI;
+      
+      // Build a config object and retrieve user settings.
+      IConfiguration config = new ConfigurationBuilder()
+          .AddJsonFile("appsettings.json")
+          .Build();
+      string? oaiEndpoint = config["AzureOAIEndpoint"];
+      string? oaiKey = config["AzureOAIKey"];
+      string? oaiModelName = config["AzureOAIDeploymentName"];
+      
+      string command;
+      bool printFullResponse = false;
+      
+      do {
+          Console.WriteLine("\n1: Add comments to my function\n" +
+          "2: Write unit tests for my function\n" +
+          "3: Fix my Go Fish game\n" +
+          "\"quit\" to exit the program\n\n" + 
+          "Enter a number to select a task:");
+      
+          command = Console.ReadLine() ?? "";
+          
+          switch (command) {
+              case "1":
+                  string functionFile = System.IO.File.ReadAllText("../sample-code/function/function.cs");
+                  string commentPrompt = "Add comments to the following function. Return only the commented code.\n---\n" + functionFile;
+                  
+                  await GetResponseFromOpenAI(commentPrompt);
+                  break;
+              case "2":
+                  functionFile = System.IO.File.ReadAllText("../sample-code/function/function.cs");
+                  string unitTestPrompt = "Write four unit tests for the following function.\n---\n" + functionFile;
+                  
+                  await GetResponseFromOpenAI(unitTestPrompt);
+                  break;
+              case "3":
+                  string goFishFile = System.IO.File.ReadAllText("../sample-code/go-fish/go-fish.cs");
+                  string goFishPrompt = "Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n" + goFishFile;
+                  
+                  await GetResponseFromOpenAI(goFishPrompt);
+                  break;
+              case "quit":
+                  Console.WriteLine("Exiting program...");
+                  break;
+              default:
+                  Console.WriteLine("Invalid input. Please try again.");
+                  break;
+          }
+      } while (command != "quit");
+      
+      async Task GetResponseFromOpenAI(string prompt)  
+      {   
+          Console.WriteLine("\nCalling Azure OpenAI to generate code...\n\n");
+      
+          if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName) )
+          {
+              Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+              return;
+          }
+          
+          // Configure the Azure OpenAI client
+          // Initialize the Azure OpenAI client
+          OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+          
+          // Define chat prompts
+          string systemPrompt = "You are a helpful AI assistant that helps programmers write code.";
+          string userPrompt = prompt;
+      
+          // Format and send the request to the model
+          // Create chat completion options
+          var chatCompletionsOptions = new ChatCompletionsOptions()
+          {
+              Messages =
+              {
+                  new ChatMessage(ChatRole.System, systemPrompt),
+                  new ChatMessage(ChatRole.User, userPrompt)
+              },
+              Temperature = 0.7f,
+              MaxTokens = 1000,
+              DeploymentName = oaiModelName
+          };
+      
+          // Get response from Azure OpenAI
+          Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+      
+          ChatCompletions completions = response.Value;
+          string completion = completions.Choices[0].Message.Content;
+          
+      
+          // Write full response to console, if requested
+          if (printFullResponse)
+          {
+              Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
+          }
+      
+          // Write the file.
+          System.IO.File.WriteAllText("result/app.txt", completion);
+      
+          // Write response to console
+          Console.WriteLine($"\nResponse written to result/app.txt\n\n");
+      }  
+      ```
+  
+      
+   **Python**
+
+   ```python
+                import os
+                from dotenv import load_dotenv
+                
+                # Add Azure OpenAI package
+                # Add OpenAI import
+                from openai import AzureOpenAI
+                # Set to True to print the full response from OpenAI for each call
+                printFullResponse = False
+                
+                def main(): 
+                        
+                    try: 
+                    
+                        # Get configuration settings 
+                        load_dotenv()
+                        azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+                        azure_oai_key = os.getenv("AZURE_OAI_KEY")
+                        azure_oai_model = os.getenv("AZURE_OAI_DEPLOYMENT")
+                        
+                        # Configure the Azure OpenAI client
+                        # Set OpenAI configuration settings
+                        client = AzureOpenAI(
+                        azure_endpoint = azure_oai_endpoint, 
+                        api_key=azure_oai_key,  
+                        api_version="2023-05-15"
+                        )
+                
+                        while True:
+                            print('\n1: Add comments to my function\n' +
+                                '2: Write unit tests for my function\n' +
+                                '3: Fix my Go Fish game\n' +
+                                '\"quit\" to exit the program\n')
+                            command = input('Enter a number to select a task:')
+                            if command == '1':
+                                file = open(file="../sample-code/function/function.py", encoding="utf8").read()
+                                prompt = "Add comments to the following function. Return only the commented code.\n---\n" + file
+                                call_openai_model(prompt, model=azure_oai_model, client=client)
+                            elif command =='2':
+                                file = open(file="../sample-code/function/function.py", encoding="utf8").read()
+                                prompt = "Write four unit tests for the following function.\n---\n" + file
+                                call_openai_model(prompt, model=azure_oai_model, client=client)
+                            elif command =='3':
+                                file = open(file="../sample-code/go-fish/go-fish.py", encoding="utf8").read()
+                                prompt = "Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n" + file
+                                call_openai_model(prompt, model=azure_oai_model, client=client)
+                            elif command.lower() == 'quit':
+                                print('Exiting program...')
+                                break
+                            else :
+                                print("Invalid input. Please try again.")
+                
+                    except Exception as ex:
+                        print(ex)
+                
+                def call_openai_model(prompt, model, client):
+                    # Provide a basic user message, and use the prompt content as the user message
+                    system_message = "You are a helpful AI assistant that helps programmers write code."
+                    user_message = prompt
+                
+                    # Format and send the request to the model
+                    # Build the messages array
+                    messages =[
+                    {"role": "system", "content": system_message},
+                    {"role": "user", "content": user_message},
+                    ]
+                
+                    # Call the Azure OpenAI model
+                    response = client.chat.completions.create(
+                    model=model,
+                    messages=messages,
+                    temperature=0.7,
+                    max_tokens=1000
+                    )
+                    
+                    # Print the response to the console, if desired
+                    if printFullResponse:
+                        print(response)
+                
+                    # Write the response to a file
+                    results_file = open(file="result/app.txt", mode="w", encoding="utf8")
+                    results_file.write(response.choices[0].message.content)
+                    print("\nResponse written to result/app.txt\n\n")
+                
+                if __name__ == '__main__': 
+                    main()
+   ```
+10. To save the changes made to the file, right click on the file from the left pane, and hit **Save**
 
 ### Task 6: Run your application
 
@@ -316,13 +525,27 @@ Now that your app has been configured, run it to try generating code for each us
 
 1. Choose option **1** to add comments to your code. Note, the response might take a few seconds for each of these tasks.
 1. The results will be put into `result/app.txt`. Open that file up, and compare it to the function file in `sample-code`.
+1. To check the results paste the following code:
+   ```
+   cd result
+    ```
+1. Copy the below command to see the contents of the app.txt file.
+
+   ```
+   cat app.txt
+   ```
+1. Now you will be able to see the comments in the terminal for the function file which is located in the sample-code folder from the left pane of the code window.
+
 1. Next, choose option **2** to write unit tests for that same function.
 1. The results will replace what was in `result/app.txt`, and details four unit tests for that function.
+1. To check the results for option 2, follow step number 6 and 7 to see the content of app.txt file.
 1. Next, choose option **3** to fix bugs in an app for playing Go Fish.
 1. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
+
+1. To check the results for option 3, follow step number 6 and 7 to see the content of app.txt file.
 
 The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
