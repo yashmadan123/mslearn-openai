@@ -6,7 +6,7 @@ The Azure OpenAI Service includes an image-generation model named DALL-E. You ca
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1:  Provision an Azure OpenAI resource
+- Task 1: Provision an Azure OpenAI resource
 - Task 2: Explore image-generation in the DALL-E playground
 - Task 3: Use the REST API to generate images
 - Task 3.1: Prepare the app environment
@@ -28,7 +28,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai_create.png)
 
-3. create an **Azure OpenAI** resource with the following settings:
+3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
@@ -43,8 +43,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
@@ -55,19 +55,31 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-### Task 2: Explore image-generation in the DALL-E playground
+### Task 2: Explore image generation in the DALL-E playground
 
-You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with image-generation.
+You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with image generation.
 
-1. In the Azure portal, on the **Overview** page for your Azure OpenAI resource, use the **Explore** button to open Azure OpenAI Studio in a new browser tab. Alternatively, navigate to [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true) directly.
-2. Select the **DALL-E Playground**.
-3. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-    ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/dall-e-playground.png)
+   ![](../media/openai8.png)
 
-4. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab05-<inject key="Deployment-id" enableCopy="false"></inject>**
 
-    ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/dall-e-playground-new-image.png)
+   ![](../media/OpenAI_select.png)
+
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+
+   ![](../media/openai_studio.png)
+
+4. From the left navigation pane, select the **DALL-E Playground**.
+
+5. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
+
+    ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/e1.png)
+
+6. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
+
+    ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/e2.png)
 
 ### Task 3: Use the REST API to generate images
 
@@ -140,7 +152,7 @@ The application uses a configuration file to store the details needed to connect
     - C#: `appsettings.json`
     - Python: `.env`
     
-2. Update the configuration values to include the **Endpoint** and **Key1** for your Azure OpenAI service. Then save the file by using the shortcut keys CTRL+S or CMD+S.
+2. Update the configuration values to include the **Endpoint** and **Key1** for your Azure OpenAI service. Then save the file by right-clicking the file from the left pane.
 
     > **Tip**: You can adjust the split at the top of the cloud shell pane to see the Azure portal, and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
 

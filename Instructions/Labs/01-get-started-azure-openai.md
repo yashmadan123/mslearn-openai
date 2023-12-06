@@ -25,7 +25,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create.png)
+   ![](../media/openai_create1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
    
@@ -39,12 +39,11 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 2: Deploy a model
 
@@ -70,20 +69,22 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-7. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
-    - **Select a Model**: gpt-35-turbo
-    - **Model version**: Auto-update to default
-    - **Deployment name**: my-gpt-model
-    - **Tokens per Minute Rate Limit (thousands)**: 10K
+7. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Select a Model**: gpt-35-turbo-16k (1)
+    - **Model version**: Auto-update to default (2)
+    - **Deployment name**: my-gpt-model (3)
+    - Click on **Advanced Settings** (4)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
+    - **Enable dynamic quota**: Enabled (6)
+    - Click on **Create** (7)
   
-   ![](../media/openai-labs_deploy-model-1.png "Deploy model configurations")
+   ![](../media/mygptturbo.png "Deploy model configurations")
 
-8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+8. This will deploy a model which you will be playing around with as you proceed.
 
 > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
+  >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.

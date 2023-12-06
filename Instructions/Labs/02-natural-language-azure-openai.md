@@ -24,20 +24,24 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create.png)
+   ![](../media/openai_create1.png)
 
-3. create an **Azure OpenAI** resource with the following settings:
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
-      
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+3. Create an **Azure OpenAI** resource with the following settings 
 
-4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+    - **Subscription**: Default - Pre-assigned subscription (1).
+    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)
+    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
+    - **Name**: OpenAI-Lab04-<inject key="Deployment-id" enableCopy="false"></inject> (4)
+    - **Pricing tier**: Standard S0 (5)
+    -  Click on **Next** (6)
+  
+   ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
-5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
+4. Click on **Next** again and subsequently click on **Create** 
+
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+
+6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
@@ -45,12 +49,11 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 2: Deploy a model
 
@@ -66,7 +69,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio.png)
+   ![](../media/openai_studio1.png)
 
 4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
@@ -76,24 +79,28 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
     
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-6. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
-    - **Select a model**: gpt-35-turbo
-    - **Model version**: *Use the default version*
-    - **Deployment name**: text-turbo
-    - **Tokens per Minute Rate Limit (thousands)**: 10K
+7. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Select a Model**: gpt-35-turbo-16k (1)
+    - **Model version**: Auto-update to default (2)
+    - **Deployment name**: text-turbo (3)
+    - Click on **Advanced Settings** (4)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
+    - **Enable dynamic quota**: Enabled (6)
+    - Click on **Create** (7)
   
-   ![](../media/openai-labs_deploy-model-2&3.png "Deploy model configurations")
+   ![](../media/txtturbo.png "Deploy model configurations")
 
-7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+7. This will deploy a model that you will be playing around with as you proceed.
 
-> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however deployment and usage of other models you deploy will work in the same way.
+   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+   
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 3: Set up an application in Cloud Shell
 
@@ -105,20 +112,21 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced settings**.
+3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced Settings**.
 
    ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
 
-4. Within the **Advanced settings** pane, enter the following details and then click on **Create storage**:
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
-    - **CloudShell region**: East US
-    - **Resource group**: Select **Use existing**.
+4. Within the **Advanced settings** pane, enter the following details:
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+    - **CloudShell region**: East US (2)
+    - **Resource group**: Select **Use existing**.(3)
       - openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.
+    - **Storage account**: Select **Create new**.(4)
       - storage<inject key="Deployment-id" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none**
-  
-   ![](../media/openai-labs_advancedsettings_config.png "Create storage advanced settings")
+    - **File share**: Create a new file share named **none** (5)
+    - Click **Create Storage** (6)
+
+    ![](../media/storageaccreate1.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -145,8 +153,7 @@ Open the built-in code editor, and observe the text file that you'll be summariz
 code .
 ```
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
+  >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -163,23 +170,23 @@ For this exercise, you'll complete some key parts of the application to enable u
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by using the shortcut keys CTRL+S or CMD+S.
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
 4. Navigate to the folder for your preferred language and install the necessary packages
 
-    **C#**
+    **C#** : 
 
-    ```bash
+     ```bash
    cd CSharp
-   dotnet add package Azure.AI.OpenAI --prerelease
+   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.9
     ```
 
-    **Python**
+    **Python** : 
 
-    ```bash
-   cd Python
-   pip install python-dotenv
-   pip install openai
+   ```bash
+    cd Python
+    pip install python-dotenv
+    pip install openai==1.2.0
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
@@ -193,64 +200,187 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     **Python**: test-openai-model.py
 
-    ```python
-   # Add OpenAI import
-   import openai
-    ```
+     ```python
+       # Add OpenAI import
+       from openai import AzureOpenAI
+     ```
 
 6. Open up the application code for your language and add the necessary code for building the request, which specifies the various parameters for your model such as `prompt` and `temperature`.
 
     **C#**: Program.cs
 
-    ```csharp
-   // Initialize the Azure OpenAI client
-   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-
-   // Build completion options object
-   ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-   {
-       Messages =
-       {
-          new ChatMessage(ChatRole.System, "You are a helpful assistant. Summarize the following text in 60 words or less."),
-          new ChatMessage(ChatRole.User, text),
-       },
-       MaxTokens = 120,
-       Temperature = 0.7f,
-   };
-
-   // Send request to Azure OpenAI model
-   ChatCompletions response = client.GetChatCompletions(
-       deploymentOrModelName: oaiModelName, 
-       chatCompletionsOptions);
-   string completion = response.Choices[0].Message.Content;
-
-   Console.WriteLine("Summary: " + completion + "\n");
+     ```csharp
+    // Initialize the Azure OpenAI client
+    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+    
+    // Build completion options object
+    ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+    {
+        Messages =
+        {
+            new ChatMessage(ChatRole.System, "You are a helpful assistant."),
+            new ChatMessage(ChatRole.User, "Summarize the following text in 20 words or less:\n" + text),
+        },
+        MaxTokens = 120,
+        Temperature = 0.7f,
+        DeploymentName = oaiModelName
+    };
+    
+    // Send request to Azure OpenAI model
+    ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+    string completion = response.Choices[0].Message.Content;
+    
+    Console.WriteLine("Summary: " + completion + "\n");
     ```
+
 
     **Python**: test-openai-model.py
-
+    
     ```python
-   # Set OpenAI configuration settings
-   openai.api_type = "azure"
-   openai.api_base = azure_oai_endpoint
-   openai.api_version = "2023-03-15-preview"
-   openai.api_key = azure_oai_key
-
-   # Send request to Azure OpenAI model
-   print("Sending request for summary to Azure OpenAI endpoint...\n\n")
-   response = openai.ChatCompletion.create(
-       engine=azure_oai_model,
-       temperature=0.7,
-       max_tokens=120,
-       messages=[
-          {"role": "system", "content": "You are a helpful assistant. Summarize the following text in 60 words or less."},
-           {"role": "user", "content": text}
-       ]
-   )
-
-   print("Summary: " + response.choices[0].message.content + "\n")
+    # Initialize the Azure OpenAI client
+    client = AzureOpenAI(
+            azure_endpoint = azure_oai_endpoint, 
+            api_key=azure_oai_key,  
+            api_version="2023-05-15"
+            )
+    
+    # Send request to Azure OpenAI model
+    response = client.chat.completions.create(
+        model=azure_oai_model,
+        temperature=0.7,
+        max_tokens=120,
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": "Summarize the following text in 20 words or less:\n" + text}
+        ]
+    )
+    
+    print("Summary: " + response.choices[0].message.content + "\n")
     ```
-7. To save the changes made to the file, execute CTRL+S or CMD+S.
+    
+7. The modified code will look like as shown below:
+
+   **C#**: Program.cs
+      
+      ```csharp
+        
+          // Implicit using statements are included
+         using System.Text;
+         using System.Text.Json;
+         using Microsoft.Extensions.Configuration;
+         using Microsoft.Extensions.Configuration.Json;
+         using Azure;
+         
+         // Add Azure OpenAI package
+         using Azure.AI.OpenAI;
+         
+         
+         // Build a config object and retrieve user settings.
+         IConfiguration config = new ConfigurationBuilder()
+             .AddJsonFile("appsettings.json")
+             .Build();
+         string? oaiEndpoint = config["AzureOAIEndpoint"];
+         string? oaiKey = config["AzureOAIKey"];
+         string? oaiModelName = config["AzureOAIModelName"];
+         
+         // Read sample text file into a string
+         string textToSummarize = System.IO.File.ReadAllText(@"../text-files/sample-text.txt");
+         
+         // Generate summary from Azure OpenAI
+         GetSummaryFromOpenAI(textToSummarize);
+             
+         void GetSummaryFromOpenAI(string text)  
+         {   
+             Console.WriteLine("\nSending request for summary to Azure OpenAI endpoint...\n\n");
+         
+             if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName) )
+             {
+                 Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+                 return;
+             }
+         
+             // Add code to build request...
+             // Initialize the Azure OpenAI client
+             OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+         
+             // Build completion options object
+             ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+             {
+                 Messages =
+                 {
+                     new ChatMessage(ChatRole.System, "You are a helpful assistant."),
+                     new ChatMessage(ChatRole.User, "Summarize the following text in 20 words or less:\n" + text),
+                 },
+                 MaxTokens = 120,
+                 Temperature = 0.7f,
+                 DeploymentName = oaiModelName
+             };
+         
+             // Send request to Azure OpenAI model
+             ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+             string completion = response.Choices[0].Message.Content;
+         
+             Console.WriteLine("Summary: " + completion + "\n");
+             }  
+        
+      ```
+
+      **Python**: test-openai-model.py
+   
+      ```python
+      import os
+      from dotenv import load_dotenv
+      
+      # Add Azure OpenAI package
+      # Add OpenAI import
+      from openai import AzureOpenAI
+      
+      
+      def main(): 
+              
+          try: 
+          
+              # Get configuration settings 
+              load_dotenv()
+              azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+              azure_oai_key = os.getenv("AZURE_OAI_KEY")
+              azure_oai_model = os.getenv("AZURE_OAI_MODEL")
+              
+              # Read text from file
+              text = open(file="../text-files/sample-text.txt", encoding="utf8").read()
+              
+              print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
+              
+              # Add code to build request...
+              # Initialize the Azure OpenAI client
+              client = AzureOpenAI(
+                      azure_endpoint = azure_oai_endpoint, 
+                      api_key=azure_oai_key,  
+                      api_version="2023-05-15"
+                      )
+      
+              # Send request to Azure OpenAI model
+              response = client.chat.completions.create(
+                  model=azure_oai_model,
+                  temperature=0.7,
+                  max_tokens=120,
+                  messages=[
+                      {"role": "system", "content": "You are a helpful assistant."},
+                      {"role": "user", "content": "Summarize the following text in 20 words or less:\n" + text}
+                  ]
+              )
+      
+              print("Summary: " + response.choices[0].message.content + "\n")
+                      
+      
+          except Exception as ex:
+              print(ex)
+      
+      if __name__ == '__main__': 
+          main()
+      ``` 
+
+7. To save the changes made to the file, right click on the file from the left pane in the code window and hit **Save**
 
 ### Task 5: Run your application
 
