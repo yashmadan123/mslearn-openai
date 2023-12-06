@@ -508,7 +508,7 @@ For this exercise, you'll complete some key parts of the application to enable u
                 if __name__ == '__main__': 
                     main()
    ```
-10. To save the changes made to the file, right click on the file from the left pane, and hit **Save**
+10. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
 ### Task 6: Run your application
 
