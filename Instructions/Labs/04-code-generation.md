@@ -102,7 +102,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-1. In the **Assistant setup** section at the top, select the **Default** system message template.
+1. In the **Assistant setup** section at the top, select the **Default** system message template and click on continue.
 1. In the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
