@@ -93,7 +93,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
-1. Navigate to the **Chat** playground, and make sure the `gpt-35-turbo` model you deployed is selected in the **Configuration** pane (this should be the default, if you only have one deployed model).
+1. Navigate to the **Chat** playground, and make sure the `gpt-35-turbo-16k` model you deployed is selected in the **Configuration** pane (this should be the default, if you only have one deployed model).
 1. Enter the following prompts, and observe the output.
 
     ```
