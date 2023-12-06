@@ -54,11 +54,11 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-  >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 2: Deploy a model
 
@@ -74,7 +74,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio.png)
+   ![](../media/openai_studio1.png)
    
 2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
@@ -98,12 +98,11 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 3: Apply prompt engineering in chat playground
 
@@ -251,12 +250,11 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    code .
     ```
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 5: Configure your application
 
@@ -367,7 +365,9 @@ For this exercise, you'll complete some key parts of the application to enable u
     )
     ```
 
-**C#**
+9. The code should look like as shown below:
+
+    **C#**
       
       ```csharp
         
@@ -481,96 +481,96 @@ For this exercise, you'll complete some key parts of the application to enable u
 
   **Python**
 
-   ```python
-
-        import os
-from dotenv import load_dotenv
-
-# Add Azure OpenAI package
-# Add OpenAI import
-from openai import AzureOpenAI
-
-# Set to True to print the full response from OpenAI for each call
-printFullResponse = False
-
-def main(): 
-        
-    try: 
-    
-        # Get configuration settings 
-        load_dotenv()
-        azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
-        azure_oai_key = os.getenv("AZURE_OAI_KEY")
-        azure_oai_model = os.getenv("AZURE_OAI_MODEL")
-        
-        # Configure the Azure OpenAI client
-        # Initialize the Azure OpenAI client
-        client = AzureOpenAI(
-                azure_endpoint = azure_oai_endpoint, 
-                api_key=azure_oai_key,  
-                api_version="2023-05-15"
-                )        
-
-        while True:
-            print('1: Basic prompt (no prompt engineering)\n' +
-                  '2: Prompt with email formatting and basic system message\n' +
-                  '3: Prompt with formatting and specifying content\n' +
-                  '4: Prompt adjusting system message to be light and use jokes\n' +
-                  '\'quit\' to exit the program\n')
-            command = input('Enter a number:')
-            if command == '1':
-                call_openai_model(messages="../prompts/basic.txt", model=azure_oai_model, client=client)
-            elif command =='2':
-                call_openai_model(messages="../prompts/email-format.txt", model=azure_oai_model, client=client)
-            elif command =='3':
-                call_openai_model(messages="../prompts/specify-content.txt", model=azure_oai_model, client=client)
-            elif command =='4':
-                call_openai_model(messages="../prompts/specify-tone.txt", model=azure_oai_model, client=client)
-            elif command.lower() == 'quit':
-                print('Exiting program...')
-                break
-            else :
-                print("Invalid input. Please try again.")
-
-    except Exception as ex:
-        print(ex)
-
-def call_openai_model(messages, model, client):
-    # In this sample, each file contains both the system and user messages
-    # First, read them into variables, strip whitespace, then build the messages array
-    file = open(file=messages, encoding="utf8")
-    system_message = file.readline().split(':', 1)[1].strip()
-    user_message = file.readline().split(':', 1)[1].strip()
-
-    # Print the messages to the console
-    print("System message: " + system_message)
-    print("User message: " + user_message)
-
-    # Format and send the request to the model
-     # Build the messages array
-    messages =[
-        {"role": "system", "content": system_message},
-        {"role": "user", "content": user_message},
-    ]
-
-    # Call the Azure OpenAI model
-    response = client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=0.7,
-        max_tokens=800
-    )
-    
-
-
-    if printFullResponse:
-        print(response)
-
-    print("Completion: \n\n" + response.choices[0].message.content + "\n")
-
-if __name__ == '__main__': 
-    main()
-  ```
+         ```python
+      
+      import os
+      from dotenv import load_dotenv
+      
+      # Add Azure OpenAI package
+      # Add OpenAI import
+      from openai import AzureOpenAI
+      
+      # Set to True to print the full response from OpenAI for each call
+      printFullResponse = False
+      
+      def main(): 
+              
+          try: 
+          
+              # Get configuration settings 
+              load_dotenv()
+              azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+              azure_oai_key = os.getenv("AZURE_OAI_KEY")
+              azure_oai_model = os.getenv("AZURE_OAI_MODEL")
+              
+              # Configure the Azure OpenAI client
+              # Initialize the Azure OpenAI client
+              client = AzureOpenAI(
+                      azure_endpoint = azure_oai_endpoint, 
+                      api_key=azure_oai_key,  
+                      api_version="2023-05-15"
+                      )        
+      
+              while True:
+                  print('1: Basic prompt (no prompt engineering)\n' +
+                        '2: Prompt with email formatting and basic system message\n' +
+                        '3: Prompt with formatting and specifying content\n' +
+                        '4: Prompt adjusting system message to be light and use jokes\n' +
+                        '\'quit\' to exit the program\n')
+                  command = input('Enter a number:')
+                  if command == '1':
+                      call_openai_model(messages="../prompts/basic.txt", model=azure_oai_model, client=client)
+                  elif command =='2':
+                      call_openai_model(messages="../prompts/email-format.txt", model=azure_oai_model, client=client)
+                  elif command =='3':
+                      call_openai_model(messages="../prompts/specify-content.txt", model=azure_oai_model, client=client)
+                  elif command =='4':
+                      call_openai_model(messages="../prompts/specify-tone.txt", model=azure_oai_model, client=client)
+                  elif command.lower() == 'quit':
+                      print('Exiting program...')
+                      break
+                  else :
+                      print("Invalid input. Please try again.")
+      
+          except Exception as ex:
+              print(ex)
+      
+      def call_openai_model(messages, model, client):
+          # In this sample, each file contains both the system and user messages
+          # First, read them into variables, strip whitespace, then build the messages array
+          file = open(file=messages, encoding="utf8")
+          system_message = file.readline().split(':', 1)[1].strip()
+          user_message = file.readline().split(':', 1)[1].strip()
+      
+          # Print the messages to the console
+          print("System message: " + system_message)
+          print("User message: " + user_message)
+      
+          # Format and send the request to the model
+           # Build the messages array
+          messages =[
+              {"role": "system", "content": system_message},
+              {"role": "user", "content": user_message},
+          ]
+      
+          # Call the Azure OpenAI model
+          response = client.chat.completions.create(
+              model=model,
+              messages=messages,
+              temperature=0.7,
+              max_tokens=800
+          )
+          
+      
+      
+          if printFullResponse:
+              print(response)
+      
+          print("Completion: \n\n" + response.choices[0].message.content + "\n")
+      
+      if __name__ == '__main__': 
+          main()
+        ```
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
