@@ -103,7 +103,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
 1. In the **Assistant setup** section at the top, select the **Default** system message template and click on continue.
-1. In the **Chat session** section, enter the following prompt and press *Enter*.
+1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
