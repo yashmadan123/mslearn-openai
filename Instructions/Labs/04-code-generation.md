@@ -525,11 +525,11 @@ Now that your app has been configured, run it to try generating code for each us
 
 1. Choose option **1** to add comments to your code. Note, the response might take a few seconds for each of these tasks.
 1. The results will be put into `result/app.txt`. Open that file up, and compare it to the function file in `sample-code`.
-1. To check the results paste the following code:
+1. To check the results paste the following code in the terminal:
    ```
    cd result
     ```
-1. Copy the below command to see the contents of the app.txt file.
+1. Copy the below command in the terminal to see the contents of the app.txt file.
 
    ```
    cat app.txt
