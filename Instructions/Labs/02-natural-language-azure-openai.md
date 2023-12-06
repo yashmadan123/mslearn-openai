@@ -26,18 +26,22 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai_create.png)
 
-3. create an **Azure OpenAI** resource with the following settings:
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
-      
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+3. Create an **Azure OpenAI** resource with the following settings 
 
-4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+    - **Subscription**: Default - Pre-assigned subscription (1).
+    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)
+    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
+    - **Name**: OpenAI-Lab04-<inject key="Deployment-id" enableCopy="false"></inject> (4)
+    - **Pricing tier**: Standard S0 (5)
+    -  Click on **Next** (6)
+  
+   ![](../media/azopenai13.png "Create Azure OpenAI resource")
 
-5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
+4. Click on **Next** again and subsequently click on **Create** 
+
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+
+6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
@@ -76,11 +80,12 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
     
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-6. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
-    - **Select a model**: gpt-35-turbo
+6. Within the **Deploy model** pop-up interface, enter the following details and then  followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+    - **Select a model**: gpt-35-turbo (1)
     - **Model version**: *Use the default version*
-    - **Deployment name**: text-turbo
-    - **Tokens per Minute Rate Limit (thousands)**: 10K
+    - **Deployment name**: text-turbo (2)
+    - Click on **Advanced options** (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
   
    ![](../media/openai-labs_deploy-model-2&3.png "Deploy model configurations")
 
