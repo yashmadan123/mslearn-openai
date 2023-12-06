@@ -27,19 +27,22 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai_create.png)
 
-3. create an **Azure OpenAI** resource with the following settings:
+3. Create an **Azure OpenAI** resource with the following settings 
 
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab04-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+    - **Subscription**: Default - Pre-assigned subscription (1).
+    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)
+    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
+    - **Name**: OpenAI-Lab04-<inject key="Deployment-id" enableCopy="false"></inject> (4)
+    - **Pricing tier**: Standard S0 (5)
+    -  Click on **Next** (6)
   
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
-    
-4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+   ![](../media/azopenai.png "Create Azure OpenAI resource")
 
-5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
+4. Click on **Next** again and subsequently click on **Create** 
+
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+
+6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
@@ -47,12 +50,11 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 2: Deploy a model
 
@@ -88,14 +90,13 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
-> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 3: Generate code in chat playground
 
@@ -144,16 +145,17 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
 
-4. Within the **Advanced settings** pane, enter the following details and then click on **Create storage**:
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
-    - **CloudShell region**: East US
-    - **Resource group**: Select **Use existing**.
+4. Within the **Advanced settings** pane, enter the following details:
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+    - **CloudShell region**: East US (2)
+    - **Resource group**: Select **Use existing**.(3)
       - openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.
+    - **Storage account**: Select **Create new**.(4)
       - storage<inject key="Deployment-id" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none**
+    - **File share**: Create a new file share named **none** (5)
+    - Click **Create Storage** (6)
 
-   ![](../media/openai-labs_advancedsettings_config.png "Create storage advanced settings")
+   ![](../media/storageacc.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
