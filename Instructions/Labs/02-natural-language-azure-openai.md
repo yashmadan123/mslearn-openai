@@ -91,10 +91,11 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
-> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however deployment and usage of other models you deploy will work in the same way.
+   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+   
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however deployment and usage of other models you deploy will work in the same way.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -114,16 +115,17 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
 
-4. Within the **Advanced settings** pane, enter the following details and then click on **Create storage**:
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
-    - **CloudShell region**: East US
-    - **Resource group**: Select **Use existing**.
+4. Within the **Advanced settings** pane, enter the following details:
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+    - **CloudShell region**: East US (2)
+    - **Resource group**: Select **Use existing**.(3)
       - openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.
+    - **Storage account**: Select **Create new**.(4)
       - storage<inject key="Deployment-id" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none**
-  
-   ![](../media/openai-labs_advancedsettings_config.png "Create storage advanced settings")
+    - **File share**: Create a new file share named **none** (5)
+    - Click **Create Storage** (6)
+
+    ![](../media/storageaccreate1.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -168,15 +170,15 @@ For this exercise, you'll complete some key parts of the application to enable u
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by using the shortcut keys CTRL+S or CMD+S.
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
 4. Navigate to the folder for your preferred language and install the necessary packages
 
     **C#**
 
-    ```bash
+     ```bash
    cd CSharp
-   dotnet add package Azure.AI.OpenAI --prerelease
+   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.9
     ```
 
     **Python**
@@ -207,30 +209,30 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     **C#**: Program.cs
 
-    ```csharp
-   // Initialize the Azure OpenAI client
-   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-
-   // Build completion options object
-   ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-   {
-       Messages =
-       {
-          new ChatMessage(ChatRole.System, "You are a helpful assistant. Summarize the following text in 60 words or less."),
-          new ChatMessage(ChatRole.User, text),
-       },
-       MaxTokens = 120,
-       Temperature = 0.7f,
-   };
-
-   // Send request to Azure OpenAI model
-   ChatCompletions response = client.GetChatCompletions(
-       deploymentOrModelName: oaiModelName, 
-       chatCompletionsOptions);
-   string completion = response.Choices[0].Message.Content;
-
-   Console.WriteLine("Summary: " + completion + "\n");
+     ```csharp
+    // Initialize the Azure OpenAI client
+    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+    
+    // Build completion options object
+    ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+    {
+        Messages =
+        {
+            new ChatMessage(ChatRole.System, "You are a helpful assistant."),
+            new ChatMessage(ChatRole.User, "Summarize the following text in 20 words or less:\n" + text),
+        },
+        MaxTokens = 120,
+        Temperature = 0.7f,
+        DeploymentName = oaiModelName
+    };
+    
+    // Send request to Azure OpenAI model
+    ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+    string completion = response.Choices[0].Message.Content;
+    
+    Console.WriteLine("Summary: " + completion + "\n");
     ```
+
 
     **Python**: test-openai-model.py
 
@@ -255,6 +257,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
    print("Summary: " + response.choices[0].message.content + "\n")
     ```
+  
 7. To save the changes made to the file, execute CTRL+S or CMD+S.
 
 ### Task 5: Run your application
