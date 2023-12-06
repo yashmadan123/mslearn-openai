@@ -29,7 +29,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create.png)
+   ![](../media/openai_create1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -366,7 +366,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     )
     ```
 
-9. The code should look like as shown below:
+9. The  modified code should look like as shown below:
 
     **C#**
       
