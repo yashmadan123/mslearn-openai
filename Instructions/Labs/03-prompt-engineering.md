@@ -84,11 +84,12 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-4. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
-    - **Select a Model**: gpt-35-turbo
+4. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Select a Model**: gpt-35-turbo (1)
     - **Model version**: *Use the default version*
-    - **Deployment name**: text-turbo
-    - **Tokens per Minute Rate Limit (thousands)**: 10K
+    - **Deployment name**: text-turbo (2)
+    -  Click on **Advanced options** (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
   
    ![](../media/openai-labs_deploy-model-2&3.png "Deploy model configurations")
 
