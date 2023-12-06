@@ -40,7 +40,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
   
-   ![](../media/azopenai13.png "Create Azure OpenAI resource")
+   ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
 4. Click on **Next** again and subsequently click on **Create** 
 
