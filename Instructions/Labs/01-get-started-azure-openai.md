@@ -82,6 +82,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
+> **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
 > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
   >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -104,8 +105,10 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
     The response consists of a quiz based on the example in the prompt.
 
-5. Use the **Regenerate** button to resubmit the prompt, and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
-6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary 
+    from the original one. A generative AI model can produce new language each time it's called.
+
+5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
 ### Task 4: Use the Chat playground
 
