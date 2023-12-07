@@ -22,7 +22,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Cognitive Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure OpenAI services | Azure OpenAI** blade, click on **Create**.
 
    ![](../media/openai_create.png)
 
@@ -94,7 +94,8 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
 1. Navigate to the **Chat** playground, and make sure the `gpt-35-turbo-16k` model you deployed is selected in the **Configuration** pane (this should be the default, if you only have one deployed model).
-1. Enter the following prompts, and observe the output.
+
+1. In the Chat session enter the following prompts, and observe the output.
 
     ```
     I'd like to take a trip to New York. Where should I stay?
@@ -111,7 +112,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. [Download the data](https://aka.ms/own-data-brochures) that you will use from GitHub. Extract the PDFs in the `.zip` provided.
 1. Navigate to the **Chat** playground, and select *Add your data* in the Assistant setup pane.
-1. Select **Add a data source** and choose *Upload files* from the dropdown.
+1. Select **+ Add a data source** and choose *Upload files* from the dropdown.
 
 1. You'll need to create a storage account and Azure Cognitive Search resource. Under the dropdown for the storage resource, select **Create a new Azure Blob storage resource**, and create a storage account with the following settings. Anything not specified leave as the default.
 
@@ -139,15 +140,16 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Select data source**: Upload files
     - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
         - Turn on CORS when prompted
-    - **Select Azure Cognitive Search resource**: *Choose the search resource you created*
+    - **Select Azure AI Search resource**: *Choose the search resource you created*
     - **Enter the index name**: margiestravel
     - **Add vector search to this search resource**: unchecked
     - **I acknowledge that connecting to an Azure Cognitive Search account will incur usage to my account** : checked
 
     ![](../media/openai-lab06_t4_s7_add_data.png "Add data configurations")
 
-1. 1. On the **Upload files** page, upload the PDFs you downloaded, and then select **Next**.
-
+1. On the **Upload files** page, select **Browse for a file** and upload the PDFs you downloaded, and then select **Upload files** and 
+    **Next**.
+      
     ![](../media/openai-lab06_t4_s8_uploadfiles.png "Upload files")
 
 1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
