@@ -61,15 +61,15 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/openai_studio.png)
    
-5. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
-6. In the **Deployments** page, click on **+ Create new deployment**.
+5. In the **Deployments** page, click on **+ Create new deployment**.
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
+6. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo-16k (1)
     - **Model version**: Auto-update to default (2)
     - **Deployment name**: my-gpt-model (3)
@@ -80,7 +80,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
   
    ![](../media/mygptturbo.png "Deploy model configurations")
 
-8. This will deploy a model which you will be playing around with as you proceed.
+7. This will deploy a model which you will be playing around with as you proceed.
 
 > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
 > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
