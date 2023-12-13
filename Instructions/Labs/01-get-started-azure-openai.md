@@ -70,7 +70,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
+    - **Select a Model**: gpt-35-turbo-16k (if the 16k model isn't available, choose **gpt-35-turbo**) (1)
     - **Model version**: Auto-update to default (2)
     - **Deployment name**: my-gpt-model (3)
     - Click on **Advanced Settings** (4)
@@ -138,11 +138,11 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 You can use the prompt and parameters to maximize the likelihood of generating the response you need.
 
-1. In the **Parameters** pane, set the following parameter values:
+1. In the **Configuration** pane select **Parameter** , set the following parameter values:
     - **Temperature**: 0
     - **Max response (Max number of tokens)**: 500
 
-2. Submit the following message
+2. Submit the following message in chat session 
 
     ```
     Write three multiple choice questions based on the following text.
