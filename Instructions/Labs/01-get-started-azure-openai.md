@@ -70,7 +70,10 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1) <br> >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
+    - **Select a Model**: gpt-35-turbo-16k (1)
+      
+        >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
+     
     - **Model version**: Auto-update to default (2)<br>
     - **Deployment name**: my-gpt-model (3)
     - Click on **Advanced Settings** (4)
