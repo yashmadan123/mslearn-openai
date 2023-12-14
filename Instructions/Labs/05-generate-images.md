@@ -103,7 +103,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
 4. Within the **Advanced settings** pane, enter the following details and then click on **Create storage**:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
-    - **CloudShell region**: East US
+    - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
     - **Resource group**: Select **Use existing**.
       - openai-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Storage account**: Select **Create new**.
