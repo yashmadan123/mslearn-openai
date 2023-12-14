@@ -71,6 +71,9 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 6. 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo-16k (1)
+      
+      > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
+      
     - **Model version**: Auto-update to default (2)
     - **Deployment name**: text-turbo (3)
     - Click on **Advanced Settings** (4)
@@ -119,7 +122,7 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Storage account name**: storage<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Region**: East US
+    - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
   
     ![](../media/openai-lab06_t4_s4.png "Create storage account")
@@ -129,7 +132,7 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Service name**: cognitive-search-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Location**: East US
+    - **Location**:Select <inject key="Region" enableCopy="false" />
     - **Pricing tier**: Basic
 
     ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
