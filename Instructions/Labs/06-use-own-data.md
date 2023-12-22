@@ -83,7 +83,9 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
   
    ![](../media/txtturbo.png "Deploy model configurations")
 
-7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+   >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
+
+8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
