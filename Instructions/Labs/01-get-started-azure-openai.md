@@ -37,7 +37,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   
    ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
-4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+4. Click on **Next** twice and click on **Create**.
+
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
      >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
