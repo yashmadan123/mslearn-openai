@@ -78,9 +78,9 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
      
     - **Model version**: Auto-update to default (2)<br>
     - **Deployment name**: my-gpt-model (3)
-    - Click on **Advanced Settings** (4)
+    - Click on **Advanced options** (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
+    - **Enable dynamic Quota**: Enabled (6)
     - Click on **Create** (7)
   
    ![](../media/mygptturbo.png "Deploy model configurations")
