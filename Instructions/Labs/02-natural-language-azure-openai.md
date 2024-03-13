@@ -1,7 +1,7 @@
 # Lab 02: Integrate Azure OpenAI into your app
 
 ## Lab scenario
-With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application to summarize text.
+With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your application to summarize text.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -22,7 +22,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/openai_create1.png)
 
@@ -44,8 +44,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
@@ -67,7 +67,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
 
@@ -133,7 +133,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
 7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -173,7 +173,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
 4. Navigate to the folder for your preferred language and install the necessary packages
 
@@ -384,7 +384,7 @@ For this exercise, you'll complete some key parts of the application to enable u
           main()
       ``` 
 
-7. To save the changes made to the file, right click on the file from the left pane in the code window and hit **Save**
+7. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**.
 
 ### Task 5: Run your application
 
@@ -400,7 +400,7 @@ Now that your app has been configured, run it to send your request to your model
 1. Navigate to your code file for your preferred language, and change the *temperature* value to `1`. Save the file.
 1. Run the application again, and observe the output.
 
-Increasing the temperature often causes the summary to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
+Increasing the temperature often causes the summary to vary, even when provided with the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
 
 ## Review
 
