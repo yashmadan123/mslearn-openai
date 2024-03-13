@@ -23,7 +23,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI services | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/openai_create1.png)
 
@@ -59,7 +59,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio.png)
    
@@ -87,7 +87,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 7. This will deploy a model which you will be playing around with as you proceed.
 
-> **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
+> **Note**: You can ignore any error related to the assignment of roles to view the quota limits. 
 > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
   >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -103,15 +103,15 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
 2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected and then in the **Examples** list, select **Generate a quiz**.
 
-    The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
+    The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
-3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
+3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response.
 
     The response consists of a quiz based on the example in the prompt.
 
     >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary 
-    from the original one. A generative AI model can produce new language each time it's called.
+    from the original one. A generative AI model can produce a new language each time it's called.
 
 5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
@@ -127,9 +127,9 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
     - **User**: `What are different types of artificial intelligence?`
     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-    > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+    > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its responses.
 
-4. Save the changes to start a new session and set the behavioral context of the chat system.
+4. Save the changes to start a new session and set the behavioural context of the chat system.
 5. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`
 6. Use the **Send** button to submit the message and view the response.
 
@@ -147,7 +147,7 @@ You can use the prompt and parameters to maximize the likelihood of generating t
     - **Temperature**: 0
     - **Max response (Max number of tokens)**: 500
 
-2. Submit the following message in chat session 
+2. Submit the following message in a chat session 
 
     ```
     Write three multiple choice questions based on the following text.
@@ -156,9 +156,9 @@ You can use the prompt and parameters to maximize the likelihood of generating t
 
     - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
 
-    - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
+    - Object detection machine learning models are trained to classify individual objects within an image and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicles.*
 
-    - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
+    - Semantic segmentation is an advanced machine-learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colours.
     ```
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
@@ -188,6 +188,6 @@ In addition to generating natural language responses, you can use GPT models to 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
 -   Deploy an Azure OpenAI model within the Azure OpenAI studio
--   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
+-   Use the chat playground to utilize the functionalities of prompts, parameters and code generation
 
 ### You have successfully completed the lab.
