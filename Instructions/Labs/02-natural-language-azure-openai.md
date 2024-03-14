@@ -22,7 +22,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/why1.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
+2. On **Azure AI services | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/openai_create1.png)
 
@@ -46,7 +46,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
+6. To capture the Keys and Endpoint values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
       
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       
@@ -89,21 +89,21 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo
+    - **Select a Model (1)**: gpt-35-turbo
     
-    - **Model version**: Auto-update to default
+    - **Model version (2)**: Auto-update to default
     
-    - **Deployment name**: text-turbo
+    - **Deployment name (3)**: text-turbo
     
-    - Click on **Advanced Settings**
+    - Click on **Advanced options (4)**
     
-    - **Tokens per Minute Rate Limit (thousands)**: 10K
+    - **Tokens per Minute Rate Limit (thousands) (5)**: 10K
     
-    - **Enable dynamic quota**: Enabled
+    - **Enable dynamic quota (6)**: Enabled
     
-    - Click on **Create**
+    - Click on **Create (7)**
   
-      ![](../media/txtturbo.png "Deploy model configurations")
+      ![](../media/why3.png "Deploy model configurations")
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -257,29 +257,29 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```
 
 
-    **Python**: test-openai-model.py
-    
-    ```python
-    # Initialize the Azure OpenAI client
-    client = AzureOpenAI(
-            azure_endpoint = azure_oai_endpoint, 
-            api_key=azure_oai_key,  
-            api_version="2023-05-15"
-            )
-    
-    # Send request to Azure OpenAI model
-    response = client.chat.completions.create(
-        model=azure_oai_model,
-        temperature=0.7,
-        max_tokens=120,
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": "Summarize the following text in 20 words or less:\n" + text}
-        ]
-    )
-    
-    print("Summary: " + response.choices[0].message.content + "\n")
-    ```
+      **Python**: test-openai-model.py
+      
+      ```python
+      # Initialize the Azure OpenAI client
+      client = AzureOpenAI(
+              azure_endpoint = azure_oai_endpoint, 
+              api_key=azure_oai_key,  
+              api_version="2023-05-15"
+              )
+      
+      # Send request to Azure OpenAI model
+      response = client.chat.completions.create(
+          model=azure_oai_model,
+          temperature=0.7,
+          max_tokens=120,
+          messages=[
+              {"role": "system", "content": "You are a helpful assistant."},
+              {"role": "user", "content": "Summarize the following text in 20 words or less:\n" + text}
+          ]
+      )
+      
+      print("Summary: " + response.choices[0].message.content + "\n")
+      ```
     
 7. The modified code will look like as shown below:
 
