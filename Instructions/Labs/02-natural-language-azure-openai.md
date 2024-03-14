@@ -256,8 +256,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     
     Console.WriteLine("Summary: " + completion + "\n");
     ```
-
-
+    
     **Python**: test-openai-model.py
 
     ```Python
