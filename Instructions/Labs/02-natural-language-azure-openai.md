@@ -293,7 +293,6 @@ For this exercise, you'll complete some key parts of the application to enable u
     using Microsoft.Extensions.Configuration.Json;
     using Azure;
 
-
     // Add Azure OpenAI package
     using Azure.AI.OpenAI;
 
