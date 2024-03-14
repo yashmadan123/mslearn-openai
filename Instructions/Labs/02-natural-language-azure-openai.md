@@ -157,24 +157,24 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
-    ```bash
+   ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-    ```
+   ```
   
 8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
-    ```bash
+   ```bash
    cd azure-openai/Labfiles/02-nlp-azure-openai
-    ```
+   ```
 
 Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
 Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
 
-```bash
-code .
-```
+   ```bash
+   code .
+   ```
 
   >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
@@ -200,33 +200,33 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     **C#** : 
 
-     ```bash
-   cd CSharp
-   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.9
-    ```
+      ```bash
+      cd CSharp
+      dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.9
+      ```
 
     **Python** : 
 
-   ```bash
-    cd Python
-    pip install python-dotenv
-    pip install openai==1.2.0
-    ```
+      ```bash
+      cd Python
+      pip install python-dotenv
+      pip install openai==1.2.0
+      ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#**: Program.cs
 
     ```csharp
-   // Add Azure OpenAI package
-   using Azure.AI.OpenAI;
+    // Add Azure OpenAI package
+    using Azure.AI.OpenAI;
     ```
 
     **Python**: test-openai-model.py
 
      ```python
-       # Add OpenAI import
-       from openai import AzureOpenAI
+     # Add OpenAI import
+     from openai import AzureOpenAI
      ```
 
 6. Open up the application code for your language and add the necessary code for building the request, which specifies the various parameters for your model such as `prompt` and `temperature`.
@@ -257,7 +257,7 @@ For this exercise, you'll complete some key parts of the application to enable u
    Console.WriteLine("Summary: " + completion + "\n");
    ```
     
-    **Python**: test-openai-model.py
+   **Python**: test-openai-model.py
 
     ```Python
     # Initialize the Azure OpenAI client
@@ -320,12 +320,12 @@ For this exercise, you'll complete some key parts of the application to enable u
         return;
      }
 
-   // Initialize the Azure OpenAI client
-   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+    // Initialize the Azure OpenAI client
+    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
 
-   // Build completion options object
-   ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-   {
+    // Build completion options object
+    ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+    {
         Messages =
         {
             new ChatMessage(ChatRole.System, "You are a helpful assistant."),
@@ -334,15 +334,16 @@ For this exercise, you'll complete some key parts of the application to enable u
         MaxTokens = 120,
         Temperature = 0.7f,
         DeploymentName = oaiDeploymentName
-   };
+    };
 
-   // Send request to Azure OpenAI model
-   ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
-   string completion = response.Choices[0].Message.Content;
+    // Send request to Azure OpenAI model
+    ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+    string completion = response.Choices[0].Message.Content;
 
-   Console.WriteLine("Summary: " + completion + "\n");     ```
+    Console.WriteLine("Summary: " + completion + "\n");
+    ```
 
-   **Python**: test-openai-model.py
+    **Python**: test-openai-model.py
    
       ```python
       import os
@@ -393,7 +394,7 @@ For this exercise, you'll complete some key parts of the application to enable u
           except Exception as ex:
               print(ex)
       
-      if __name__ == '__main__': 
+       if __name__ == '__main__': 
           main()
       ``` 
 
