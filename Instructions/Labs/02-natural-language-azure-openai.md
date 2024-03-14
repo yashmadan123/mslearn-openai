@@ -267,7 +267,7 @@ For this exercise, you'll complete some key parts of the application to enable u
             api_key=azure_oai_key,  
             api_version="2023-05-15"
             )
-      
+        
     # Send request to Azure OpenAI model
     response = client.chat.completions.create(
         model=azure_oai_model,
@@ -278,7 +278,7 @@ For this exercise, you'll complete some key parts of the application to enable u
             {"role": "user", "content": "Summarize the following text in 20 words or less:\n" + text}
         ]
     )
-      
+        
     print("Summary: " + response.choices[0].message.content + "\n")
     ```
     
