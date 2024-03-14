@@ -258,9 +258,9 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```
 
 
-   **Python**: test-openai-model.py
+    **Python**: test-openai-model.py
 
-    ```Python
+     ```Python
     # Initialize the Azure OpenAI client
     client = AzureOpenAI(
             azure_endpoint = azure_oai_endpoint, 
@@ -297,8 +297,7 @@ For this exercise, you'll complete some key parts of the application to enable u
        // Add Azure OpenAI package
          using Azure.AI.OpenAI;
 
-
-      // Build a config object and retrieve user settings.
+       // Build a config object and retrieve user settings.
         IConfiguration config = new ConfigurationBuilder()
         .AddJsonFile("appsettings.json")
         .Build();
