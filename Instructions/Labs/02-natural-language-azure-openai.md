@@ -233,13 +233,13 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     **C#**: Program.cs
 
-    ```csharp
-    // Initialize the Azure OpenAI client
-    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-    
-    // Build completion options object
-    ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-    {
+   ```csharp
+   // Initialize the Azure OpenAI client
+   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+
+   // Build completion options object
+   ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+   {
         Messages =
         {
             new ChatMessage(ChatRole.System, "You are a helpful assistant."),
@@ -247,15 +247,15 @@ For this exercise, you'll complete some key parts of the application to enable u
         },
         MaxTokens = 120,
         Temperature = 0.7f,
-        DeploymentName = oaiModelName
-    };
-    
-    // Send request to Azure OpenAI model
-    ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
-    string completion = response.Choices[0].Message.Content;
-    
-    Console.WriteLine("Summary: " + completion + "\n");
-    ```
+        DeploymentName = oaiDeploymentName
+   };
+
+   // Send request to Azure OpenAI model
+   ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+   string completion = response.Choices[0].Message.Content;
+
+   Console.WriteLine("Summary: " + completion + "\n");
+   ```
     
     **Python**: test-openai-model.py
 
@@ -320,30 +320,27 @@ For this exercise, you'll complete some key parts of the application to enable u
         return;
      }
 
-    // Add code to build request...
-    // Initialize the Azure OpenAI client
-      OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
- 
-    // Build completion options object
-       ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-     {
+   // Initialize the Azure OpenAI client
+   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+
+   // Build completion options object
+   ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+   {
         Messages =
-      {
-          new ChatMessage(ChatRole.System, "You are a helpful assistant."),
-          new ChatMessage(ChatRole.User, "Summarize the following text in 20 words or less:\n" + text),
-       },
-    MaxTokens = 120,
-    Temperature = 0.7f,
-    DeploymentName = oaiModelName
-     };
- 
-     // Send request to Azure OpenAI model
-     ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
-     string completion = response.Choices[0].Message.Content;
- 
-     Console.WriteLine("Summary: " + completion + "\n");
-     }    
-     ```
+        {
+            new ChatMessage(ChatRole.System, "You are a helpful assistant."),
+            new ChatMessage(ChatRole.User, "Summarize the following text in 20 words or less:\n" + text),
+        },
+        MaxTokens = 120,
+        Temperature = 0.7f,
+        DeploymentName = oaiDeploymentName
+   };
+
+   // Send request to Azure OpenAI model
+   ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+   string completion = response.Choices[0].Message.Content;
+
+   Console.WriteLine("Summary: " + completion + "\n");     ```
 
    **Python**: test-openai-model.py
    
