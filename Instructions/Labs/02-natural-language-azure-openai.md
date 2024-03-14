@@ -259,35 +259,34 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 
    **Python**: test-openai-model.py
-   
-      ```Python
-      # Initialize the Azure OpenAI client
-      client = AzureOpenAI(
-              azure_endpoint = azure_oai_endpoint, 
-              api_key=azure_oai_key,  
-              api_version="2023-05-15"
-              )
+
+    ```Python
+    # Initialize the Azure OpenAI client
+    client = AzureOpenAI(
+            azure_endpoint = azure_oai_endpoint, 
+            api_key=azure_oai_key,  
+            api_version="2023-05-15"
+            )
       
-      # Send request to Azure OpenAI model
-      response = client.chat.completions.create(
-          model=azure_oai_model,
-          temperature=0.7,
-          max_tokens=120,
-          messages=[
-              {"role": "system", "content": "You are a helpful assistant."},
-              {"role": "user", "content": "Summarize the following text in 20 words or less:\n" + text}
-          ]
-      )
+    # Send request to Azure OpenAI model
+    response = client.chat.completions.create(
+        model=azure_oai_model,
+        temperature=0.7,
+        max_tokens=120,
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": "Summarize the following text in 20 words or less:\n" + text}
+        ]
+    )
       
-      print("Summary: " + response.choices[0].message.content + "\n")
-      ```
+    print("Summary: " + response.choices[0].message.content + "\n")
+    ```
     
 7. The modified code will look like as shown below:
 
    **C#**: Program.cs
       
       ```csharp
-      
        // Implicit using statements are included
          using System.Text;
          using System.Text.Json;
