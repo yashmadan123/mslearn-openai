@@ -18,9 +18,9 @@ In this lab, you will complete the following tasks:
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/openai8.png)
+   ![](../media/why1.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
 
@@ -28,26 +28,35 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject> (2)
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
-    - **Name**: OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
+    - **Subscription (1)**: Default Pre-assigned subscription.
+    
+    - **Resource group (2)**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
+    
+    - **Region (3)**: Select <inject key="Region" enableCopy="false" />
+    
+    - **Name (4)**: OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>
+    
+    - **Pricing tier (5)**: Standard S0
+    
+    -  Click on **Next (6)**
   
-   ![](../media/azopenai123.png "Create Azure OpenAI resource")
+       ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
 4. Click on **Next** again and subsequently click on **Create** 
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
 6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
+      
       - Select **Keys and Endpoint (1)** under **Resource Management**.
+      
       - Click on **Show Keys (2)**.
+      
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
      >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
@@ -59,9 +68,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/openai8.png)
+   ![](../media/why1.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>**
 
@@ -71,7 +80,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai_studio1.png)
 
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. In **Welcome to Azure OpenAI service** page, click on **Create new deployment**.
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
@@ -80,18 +89,21 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
-      
-       >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
-       
-    - **Model version**: Auto-update to default (2)
-    - **Deployment name**: text-turbo (3)
-    - Click on **Advanced Settings** (4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Create** (7)
+    - **Select a Model**: gpt-35-turbo
+    
+    - **Model version**: Auto-update to default
+    
+    - **Deployment name**: text-turbo
+    
+    - Click on **Advanced Settings**
+    
+    - **Tokens per Minute Rate Limit (thousands)**: 10K
+    
+    - **Enable dynamic quota**: Enabled
+    
+    - Click on **Create**
   
-   ![](../media/txtturbo.png "Deploy model configurations")
+      ![](../media/txtturbo.png "Deploy model configurations")
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -120,16 +132,23 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
 
 4. Within the **Advanced settings** pane, enter the following details:
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="Deployment-id" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - **Subscription (1)**: Default- Choose the only existing subscription assigned for this lab.
 
-    ![](../media/storageaccreate1.png "Create storage advanced settings")
+    - **CloudShell region (2)**: <inject key="Region" enableCopy="false" />
+    
+    - **Resource group (3)**: Select **Use existing**
+      
+      - openai-<inject key="Deployment-id" enableCopy="false"></inject>
+    
+    - **Storage account (4)**: Select **Create new**
+      
+      - storage<inject key="Deployment-id" enableCopy="false"></inject>
+    
+    - **File share (5)**: Create a new file share named **none**
+    
+    - Click **Create Storage (6)**
+
+      ![](../media/storageaccreate1.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -171,6 +190,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 2. Open the configuration file for your language
 
     - C#: `appsettings.json`
+    
     - Python: `.env`
     
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
@@ -391,13 +411,17 @@ For this exercise, you'll complete some key parts of the application to enable u
 Now that your app has been configured, run it to send your request to your model and observe the response.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
 1. Run the application.
 
     - **C#**: `dotnet run`
+    
     - **Python**: `python test-openai-model.py`
 
 1. Observe the summarization of the sample text file.
+
 1. Navigate to your code file for your preferred language, and change the *temperature* value to `1`. Save the file.
+
 1. Run the application again, and observe the output.
 
 Increasing the temperature often causes the summary to vary, even when provided with the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
@@ -405,8 +429,8 @@ Increasing the temperature often causes the summary to vary, even when provided 
 ## Review
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
--   Integrate Azure OpenAI models into your applications
+- Provision an Azure OpenAI resource
+- Deploy an OpenAI model within the Azure OpenAI studio
+- Integrate Azure OpenAI models into your applications
 
 ### You have successfully completed the lab.
