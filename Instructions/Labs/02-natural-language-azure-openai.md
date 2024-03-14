@@ -344,12 +344,10 @@ For this exercise, you'll complete some key parts of the application to enable u
          string completion = response.Choices[0].Message.Content;
  
         Console.WriteLine("Summary: " + completion + "\n");
-         }  
-
-        
+         }    
       ```
 
-      **Python**: test-openai-model.py
+    **Python**: test-openai-model.py
    
       ```python
       import os
