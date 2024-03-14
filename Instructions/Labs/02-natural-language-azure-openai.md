@@ -226,7 +226,7 @@ For this exercise, you'll complete some key parts of the application to enable u
         },
         MaxTokens = 120,
         Temperature = 0.7f,
-        DeploymentName = oaiModelName
+        DeploymentName = oaiDeploymentName
     };
     
     // Send request to Azure OpenAI model
@@ -316,7 +316,7 @@ For this exercise, you'll complete some key parts of the application to enable u
        },
      MaxTokens = 120,
      Temperature = 0.7f,
-    DeploymentName = oaiModelName
+    DeploymentName = oaiDeploymentName
       };
  
       // Send request to Azure OpenAI model
