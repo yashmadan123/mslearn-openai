@@ -259,6 +259,8 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     print("Summary: " + response.choices[0].message.content + "\n")
     ```
+
+   >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
 7. The modified code will look like as shown below:
 
