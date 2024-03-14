@@ -89,6 +89,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
+
     - **Select a Model (1)**: gpt-35-turbo
     
     - **Model version (2)**: Auto-update to default
@@ -99,7 +100,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
     
     - **Tokens per Minute Rate Limit (thousands) (5)**: 10K
     
-    - **Enable dynamic quota (6)**: Enabled
+    - **Enable dynamic Quota (6)**: Enabled
     
     - Click on **Create (7)**
   
@@ -257,9 +258,9 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```
 
 
-      **Python**: test-openai-model.py
-      
-      ```python
+   **Python**: test-openai-model.py
+   
+      ```Python
       # Initialize the Azure OpenAI client
       client = AzureOpenAI(
               azure_endpoint = azure_oai_endpoint, 
@@ -347,7 +348,7 @@ For this exercise, you'll complete some key parts of the application to enable u
          }    
       ```
 
-    **Python**: test-openai-model.py
+   **Python**: test-openai-model.py
    
       ```python
       import os
