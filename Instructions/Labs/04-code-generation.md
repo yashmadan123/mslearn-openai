@@ -280,7 +280,7 @@ For this exercise, you'll complete some key parts of the application to enable u
         },
         Temperature = 0.7f,
         MaxTokens = 1000,
-        DeploymentName = oaiModelName
+        DeploymentName = oaiDeploymentName
     };
 
     // Get response from Azure OpenAI
@@ -329,7 +329,7 @@ For this exercise, you'll complete some key parts of the application to enable u
           .Build();
       string? oaiEndpoint = config["AzureOAIEndpoint"];
       string? oaiKey = config["AzureOAIKey"];
-      string? oaiModelName = config["AzureOAIDeploymentName"];
+      string? oaiDeploymentName = config["AzureOAIDeploymentName"];
       
       string command;
       bool printFullResponse = false;
@@ -375,7 +375,7 @@ For this exercise, you'll complete some key parts of the application to enable u
       {   
           Console.WriteLine("\nCalling Azure OpenAI to generate code...\n\n");
       
-          if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName) )
+          if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
           {
               Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
               return;
@@ -400,7 +400,7 @@ For this exercise, you'll complete some key parts of the application to enable u
               },
               Temperature = 0.7f,
               MaxTokens = 1000,
-              DeploymentName = oaiModelName
+              DeploymentName = oaiDeploymentName
           };
       
           // Get response from Azure OpenAI
