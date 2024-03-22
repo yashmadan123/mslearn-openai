@@ -265,7 +265,7 @@ For this exercise, you'll complete some key parts of the application to enable u
             )
     ```
 
-8. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
     **C#**
 
@@ -313,7 +313,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
    **C#**
       ```csharp
-         // Implicit using statements are included
+      // Implicit using statements are included
       using System.Text;
       using System.Text.Json;
       using Microsoft.Extensions.Configuration;
