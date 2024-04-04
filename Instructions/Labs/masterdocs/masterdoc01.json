@@ -5,12 +5,16 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai/tree/prod",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/Lab-Scenario-Preview/lab-06.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted-v2.md",
         "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/Lab-Scenario-Preview/lab-06.md",
+        "Order": 2
       },
         {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/Lab-Scenario-Preview/lab-07.md",
-        "Order": 2
+        "Order": 3
       }
     ]
   }
