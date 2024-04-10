@@ -8,47 +8,16 @@ In this exercise, you'll explore the affect of the default content filters in Az
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Generate natural language output
-- Task 4: Explore content filters
+- Task 1: Deploy a OpenAI model
+- Task 2: Generate natural language output
+- Task 3: Explore content filters
 
 ## Estimated time: 30 minutes
 
-### Task 1: Provision an Azure OpenAI resource
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+### Task 1: Deploy a OpenAI model
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/openai8.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
-
-   ![](../media/openai_create.png)
-
-3. create an **Azure OpenAI** resource with the following settings:
-   
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab07-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
-
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
-
-2. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
-### Task 2: Deploy a model
-
-Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. Once deployed, you will use the model to generate natural language content.
+As you have already deployed OpenAI services in the previous exercise, you're ready to deploy a model to use through the **Azure OpenAI Studio**. Once deployed, you will use the model to generate natural language content.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -89,7 +58,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-### Task 3: Generate natural language output
+### Task 2: Generate natural language output
 
 Let's see how the model behaves in a conversational interaction.
 
@@ -118,7 +87,7 @@ Let's see how the model behaves in a conversational interaction.
 
 1. Observe the output, which should hopefully indicate that the request to be racist and derogative is not supported. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
 
-### Task 4: Explore content filters
+### Task 3: Explore content filters
 
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
