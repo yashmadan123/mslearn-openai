@@ -167,7 +167,7 @@ Next, add your data in the chat playground to see how it responds with your data
    
 1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
-   ![](../media/data management.png "Add data configurations")
+   ![](../media/datamanagement.png "Add data")
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
    
