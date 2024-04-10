@@ -9,11 +9,11 @@
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/Lab-Scenario-Preview/lab-06.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/Lab-Scenario-Preview/lab-06.1.md",
         "Order": 2
       },
         {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/Lab-Scenario-Preview/lab-07.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/Lab-Scenario-Preview/lab-07.1.md",
         "Order": 3
       }
     ]
