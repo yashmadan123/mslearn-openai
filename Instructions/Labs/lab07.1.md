@@ -51,13 +51,8 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
+  **Congratulations** on completing the task! 
+  
 ### Task 2: Generate natural language output
 
 Let's see how the model behaves in a conversational interaction.
