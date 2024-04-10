@@ -115,10 +115,11 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
 Next, add your data in the chat playground to see how it responds with your data as grounding
 
-1. [Download the data](https://aka.ms/own-data-brochures) that you will use from GitHub. Extract the PDFs in the `.zip` provided.
-1. Navigate to the **Chat** playground, and select *Add your data* in the Assistant setup pane.
-1. Select **+ Add a data source** and choose *Upload files* from the dropdown.
+1. Copy the URL (https://aka.ms/own-data-brochures) and paste it in the browser. Extract the PDFs in the `.zip` that get downloaded.
+2. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
+![](../media/image4.2.png "Add your data in setup pane")
+   
 1. You'll need to create a storage account and Azure Cognitive Search resource. Under the dropdown for the storage resource, select **Create a new Azure Blob storage resource**, and create a storage account with the following settings. Anything not specified leave as the default.
 
     - **Subscription**: Default - Pre-assigned subscription
@@ -129,7 +130,19 @@ Next, add your data in the chat playground to see how it responds with your data
   
     ![](../media/openai-lab06_t4_s4.png "Create storage account")
 
-1. Once the resource is being created, come back to Azure OpenAI Studio and select **Create a new Azure Cognitive Search resource** with the following settings. Anything not specified leave as the default.
+   - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section.
+
+     ![](../media/image4.5.png "allow blob access")
+
+     - After the complete deployment of storage account, create a container with the name "openaidatasource" and enable Anonymous access level for container.
+
+       ![](../media/image4.6.png "create container")
+
+     - Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+
+        ![](../media/image4.7.png "upload files")
+
+1. Once the resource is being created, come back to Azure OpenAI Studio and select Azure Blob Storage(Preview) under "Select data source" and **Create a new Azure Cognitive Search resource** with the following settings. Anything not specified leave as the default.
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
@@ -142,22 +155,20 @@ Next, add your data in the chat playground to see how it responds with your data
 1. Wait until your search resource has been deployed, then switch back to the Azure AI Studio and refresh the page.
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
-    - **Select data source**: Upload files
+    - **Select data source**: Azure Blob Storage
     - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
-        - Turn on CORS when prompted
     - **Select Azure AI Search resource**: *Choose the search resource you created*
     - **Enter the index name**: margiestravel
-    - **Add vector search to this search resource**: unchecked
-    - **I acknowledge that connecting to an Azure Cognitive Search account will incur usage to my account** : checked
+    - **Indexer schedule**: Once
 
-    ![](../media/openai-lab06_t4_s7_add_data.png "Add data configurations")
+1. Click on next to proceed with "Data Management"
 
-1. On the **Upload files** page, select **Browse for a file** and upload the PDFs you downloaded, and then select **Upload files** and 
-    **Next**.
-      
-    ![](../media/openai-lab06_t4_s8_uploadfiles.png "Upload files")
-
+    ![](../media/image4.8.png "Add data configurations")
+   
 1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+
+   ![](../media/datamanagement.png "Add data")
+   
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
    
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
