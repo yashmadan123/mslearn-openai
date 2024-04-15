@@ -116,9 +116,6 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 Next, add your data in the chat playground to see how it responds with your data as grounding
 
 1. Copy the URL (https://aka.ms/own-data-brochures) and paste it in the browser. Extract the PDFs in the `.zip` that get downloaded.
-2. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
-
-   ![](../media/image4.2.png "Add your data in setup pane")
    
 1. In the **Azure portal**, search for **Storage Account** and select **Storage Account**.
 
@@ -165,7 +162,7 @@ Next, add your data in the chat playground to see how it responds with your data
 2.  On **Azure Ai services | AI search** blade, click on **Create**.
 
      ![](../media/5.png "upload files")
-     
+
 3. Create an **AI Search** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
@@ -177,6 +174,11 @@ Next, add your data in the chat playground to see how it responds with your data
       ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
 
 1. Wait until your search resource has been deployed, then switch back to the Azure AI Studio and refresh the page.
+
+1. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+
+   ![](../media/image4.2.png "Add your data in setup pane")
+   
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
     - **Select data source**: Azure Blob Storage
