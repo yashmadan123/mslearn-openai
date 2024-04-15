@@ -165,7 +165,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
    ```bash
-   cd azure-openai/Labfiles/02-nlp-azure-openai
+   cd azure-openai/Labfiles/02-azure-openai-api
    ```
 
 Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
