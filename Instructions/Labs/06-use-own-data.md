@@ -26,7 +26,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai_create.png)
 
-3. create an **Azure OpenAI** resource with the following settings:
+3. Create an **Azure OpenAI** resource with the following settings:
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
@@ -34,7 +34,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Name**: OpenAI-Lab06-<inject key="Deployment-id" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
     
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -69,7 +69,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
 
-6. 7. Within the **Deploy model** pop-up interface, enter the following details:
+6. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo-16k (1)
       
       > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
@@ -81,7 +81,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     - **Enable dynamic quota**: Enabled (6)
     - Click on **Create** (7)
   
-   ![](../media/txtturbo.png "Deploy model configurations")
+      ![](../media/txtturbo.png "Deploy model configurations")
 
    >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
@@ -118,9 +118,17 @@ Next, add your data in the chat playground to see how it responds with your data
 1. Copy the URL (https://aka.ms/own-data-brochures) and paste it in the browser. Extract the PDFs in the `.zip` that get downloaded.
 2. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
-![](../media/image4.2.png "Add your data in setup pane")
+   ![](../media/image4.2.png "Add your data in setup pane")
    
-1. You'll need to create a storage account and Azure Cognitive Search resource. Under the dropdown for the storage resource, select **Create a new Azure Blob storage resource**, and create a storage account with the following settings. Anything not specified leave as the default.
+1. In the **Azure portal**, search for **Storage Account** and select **Storage Account**.
+
+   ![](../media/1.png)
+
+2. On **Storage Account** page, click on **Create**.
+
+   ![](../media/2.png)
+
+3. Create a **Storage Account** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
@@ -128,21 +136,37 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
   
-    ![](../media/openai-lab06_t4_s4.png "Create storage account")
+      ![](../media/openai-lab06_t4_s4.png "Create storage account")
 
-   - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section.
+    - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section.
 
-     ![](../media/image4.5.png "allow blob access")
+      ![](../media/image4.5.png "allow blob access")
 
-     - After the complete deployment of storage account, create a container with the name "openaidatasource" and enable Anonymous access level for container.
+1. Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
-       ![](../media/image4.6.png "create container")
+1. On the deployment blade, click Go to resource.
 
-     - Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+    ![](../media/3.png "upload files")
 
-        ![](../media/image4.7.png "upload files")
+1. On **Storage Account | Container** blade, click on **Create**.
 
-1. Once the resource is being created, come back to Azure OpenAI Studio and select Azure Blob Storage(Preview) under "Select data source" and **Create a new Azure Cognitive Search resource** with the following settings. Anything not specified leave as the default.
+     ![](../media/4.png "upload files")
+
+1. Create a container with the name "openaidatasource" and enable Anonymous access level for container.
+
+      ![](../media/image4.6.png "create container")
+
+1. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+
+      ![](../media/image4.7.png "upload files")
+
+1. In the **Azure portal**, search for **Azure Ai search** and select **Azure Ai search**.
+
+2.  On **Azure Ai services | AI search** blade, click on **Create**.
+
+     ![](../media/5.png "upload files")
+     
+3. Create an **AI Search** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
@@ -150,7 +174,7 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Location**:Select <inject key="Region" enableCopy="false" />
     - **Pricing tier**: Basic
 
-    ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
+      ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
 
 1. Wait until your search resource has been deployed, then switch back to the Azure AI Studio and refresh the page.
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
@@ -182,13 +206,13 @@ Next, add your data in the chat playground to see how it responds with your data
 
 Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
 
-```
-I'd like to take a trip to New York. Where should I stay?
-```
+   ```
+   I'd like to take a trip to New York. Where should I stay?
+   ```
 
-```
-What are some facts about New York?
-```
+   ```
+   What are some facts about New York?
+   ```
 
 You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided.
 
