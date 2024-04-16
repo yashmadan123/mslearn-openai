@@ -12,7 +12,8 @@ In this lab, you will complete the following tasks:
 - Task 2: Deploy a model
 - Task 3: Set up an application in Cloud Shell
 - Task 4: Configure your application
-- Task 5: Run your application
+- Task 5: Test your application
+- Task 6: Maintain conversation history
 
 ## Estimated time: 40 minutes
 
@@ -43,7 +44,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
+6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
@@ -65,11 +66,11 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
 
@@ -125,9 +126,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="Deployment-id" enableCopy="false"></inject>
+      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="Deployment-id" enableCopy="false"></inject>
+      - storage<inject key="DeploymentID" enableCopy="false"></inject>
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
@@ -183,7 +184,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     ```bash
     cd CSharp
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.9
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
     **Python** : 
@@ -191,7 +192,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.2.0
+    pip install openai==1.13.3
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
@@ -210,193 +211,198 @@ For this exercise, you'll complete some key parts of the application to enable u
     from openai import AzureOpenAI
     ```
 
-6. Open up the application code for your language and add the necessary code for building the request, which specifies the various parameters for your model such as `prompt` and `temperature`.
+6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
 
     **C#**: Program.cs
 
-     ```csharp
+    ```csharp
     // Initialize the Azure OpenAI client
     OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     
-    // Build completion options object
-    ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-    {
-        Messages =
-        {
-            new ChatMessage(ChatRole.System, "You are a helpful assistant."),
-            new ChatMessage(ChatRole.User, "Summarize the following text in 20 words or less:\n" + text),
-        },
-        MaxTokens = 120,
-        Temperature = 0.7f,
-        DeploymentName = oaiDeploymentName
-    };
-    
-    // Send request to Azure OpenAI model
-    ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
-    string completion = response.Choices[0].Message.Content;
-    
-    Console.WriteLine("Summary: " + completion + "\n");
+    // System message to provide context to the model
+    string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
     ```
 
     **Python**: test-openai-model.py
-    
+
     ```python
     # Initialize the Azure OpenAI client
     client = AzureOpenAI(
             azure_endpoint = azure_oai_endpoint, 
             api_key=azure_oai_key,  
-            api_version="2023-05-15"
+            api_version="2024-02-15-preview"
             )
-
-    # Send request to Azure OpenAI model
-    response = client.chat.completions.create(
-        model=azure_oai_deployment,
-        temperature=0.7,
-        max_tokens=120,
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": "Summarize the following text in 20 words or less:\n" + text}
-        ]
-    )
-
-    print("Summary: " + response.choices[0].message.content + "\n")
+    
+    # Create a system message
+    system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
+        If no area is specified, I will default to near Rainier National Park. 
+        I will then provide three suggestions for nearby hikes that vary in length. 
+        I will also share an interesting fact about the local nature on the hikes when making a recommendation.
+        """
     ```
 
    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
-7. The modified code will look like as shown below:
+7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
-   **C#**: Program.cs
-      
-   ```csharp
-   // Implicit using statements are included
-   using System.Text;
-   using System.Text.Json;
-   using Microsoft.Extensions.Configuration;
-   using Microsoft.Extensions.Configuration.Json;
-   using Azure;
-   
-   // Add Azure OpenAI package
-   using Azure.AI.OpenAI;
-   
-   // Build a config object and retrieve user settings.
-   IConfiguration config = new ConfigurationBuilder()
-       .AddJsonFile("appsettings.json")
-       .Build();
-   string? oaiEndpoint = config["AzureOAIEndpoint"];
-   string? oaiKey = config["AzureOAIKey"];
-   string? oaiDeploymentName = config["AzureOAIDeploymentName"];
-   
-   // Read sample text file into a string
-   string textToSummarize = System.IO.File.ReadAllText(@"../text-files/sample-text.txt");
-   
-   // Generate summary from Azure OpenAI
-   GetSummaryFromOpenAI(textToSummarize);
-       
-   void GetSummaryFromOpenAI(string text)  
-   {   
-       Console.WriteLine("\nSending request for summary to Azure OpenAI endpoint...\n\n");
-   
-       if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
-       {
-           Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
-           return;
-       }
-   
-       // Add code to build request...
-       // Initialize the Azure OpenAI client
-       OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-   
-       // Build completion options object
-       ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-       {
-       Messages =
-       {
-           new ChatMessage(ChatRole.System, "You are a helpful assistant."),
-           new ChatMessage(ChatRole.User, "Summarize the following text in 20 words or less:\n" + text),
-       },
-       MaxTokens = 120,
-       Temperature = 0.7f,
-       DeploymentName = oaiDeploymentName
-       };
-   
-       // Send request to Azure OpenAI model
-       ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
-       string completion = response.Choices[0].Message.Content;
-   
-       Console.WriteLine("Summary: " + completion + "\n");
-       }  
-   ```
+    **C#**: Program.cs
 
-   **Python**: test-openai-model.py
-   
-   ```python
-   import os
-   from dotenv import load_dotenv
-   
-   # Add Azure OpenAI package
-   from openai import AzureOpenAI
-   
-   def main(): 
-           
-       try: 
-       
-           # Get configuration settings 
-           load_dotenv()
-           azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
-           azure_oai_key = os.getenv("AZURE_OAI_KEY")
-           azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
-           
-           # Read text from file
-           text = open(file="../text-files/sample-text.txt", encoding="utf8").read()
-           
-           print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
-           
-           # Add code to build request...
-           # Initialize the Azure OpenAI client
-           client = AzureOpenAI(
-                   azure_endpoint = azure_oai_endpoint, 
-                   api_key=azure_oai_key,  
-                   api_version="2023-05-15"
-                   )
-   
-           # Send request to Azure OpenAI model
-           response = client.chat.completions.create(
-               model=azure_oai_deployment,
-               temperature=0.7,
-               max_tokens=120,
-               messages=[
-                   {"role": "system", "content": "You are a helpful assistant."},
-                   {"role": "user", "content": "Summarize the following text in 20 words or less:\n" + text}
-               ]
-           )
-   
-           print("Summary: " + response.choices[0].message.content + "\n")
-   
-       except Exception as ex:
-           print(ex)
-   
-   if __name__ == '__main__': 
-       main()  
-   ``` 
+    ```csharp
+    // Add code to send request...
+    // Build completion options object
+    ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+    {
+        Messages =
+        {
+            new ChatRequestSystemMessage(systemMessage),
+            new ChatRequestUserMessage(inputText),
+        },
+        MaxTokens = 400,
+        Temperature = 0.7f,
+        DeploymentName = oaiDeploymentName
+    };
 
-7. To save the changes made to the file, right click on the file from the left pane in the code window and hit **Save**
+    // Send request to Azure OpenAI model
+    ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
 
-### Task 5: Run your application
+    // Print the response
+    string completion = response.Choices[0].Message.Content;
+    Console.WriteLine("Response: " + completion + "\n");
+    ```
+
+    **Python**: test-openai-model.py
+
+    ```python
+    # Add code to send request...
+    # Send request to Azure OpenAI model
+    response = client.chat.completions.create(
+        model=azure_oai_deployment,
+        temperature=0.7,
+        max_tokens=400,
+        messages=[
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": input_text}
+        ]
+    )
+    generated_text = response.choices[0].message.content
+
+    # Print the response
+    print("Response: " + generated_text + "\n")
+    ```
+
+7. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+
+### Task 5: Test your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
 
-1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-1. Run the application.
+1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python test-openai-model.py`
 
-1. Observe the summarization of the sample text file.
-1. Navigate to your code file for your preferred language, and change the *temperature* value to `1`. Save the file.
-1. Run the application again, and observe the output.
+    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-Increasing the temperature often causes the summary to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
+1. When prompted, enter the text `What hike should I do near Rainier?`.
+1. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
+1. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
+1. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
+1. Run the application again using the prompts above, and observe the output.
+
+Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
+
+### Task 6: Maintain conversation history
+
+In most real-world applications, the ability to reference previous parts of the conversation allows for a more realistic interaction with an AI agent. The Azure OpenAI API is stateless by design, but by providing a history of the conversation in your prompt you enable the AI model to reference past messages.
+
+1. Run the app again and provide the prompt `Where is a good hike near Boise?`.
+1. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
+1. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have the past conversation messages for reference.
+1. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
+
+    **C#**: Program.cs
+
+    ```csharp
+    // Initialize messages list
+    var messagesList = new List<ChatRequestMessage>()
+    {
+        new ChatRequestSystemMessage(systemMessage),
+    };
+    ```
+
+    **Python**: test-openai-model.py
+
+    ```python
+    # Initialize messages array
+    messages_array = [{"role": "system", "content": system_message}]
+    ```
+
+1. Under the comment ***Add code to send request...***, replace all the code from the comment to the end of the **while** loop with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
+
+    **C#**: Program.cs
+
+    ```csharp
+    // Add code to send request...
+    // Build completion options object
+    messagesList.Add(new ChatRequestUserMessage(inputText));
+
+    ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+    {
+        MaxTokens = 1200,
+        Temperature = 0.7f,
+        DeploymentName = oaiDeploymentName
+    };
+
+    // Add messages to the completion options
+    foreach (ChatRequestMessage chatMessage in messagesList)
+    {
+        chatCompletionsOptions.Messages.Add(chatMessage);
+    }
+
+    // Send request to Azure OpenAI model
+    ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+
+    // Return the response
+    string completion = response.Choices[0].Message.Content;
+
+    // Add generated text to messages list
+    messagesList.Add(new ChatRequestAssistantMessage(completion));
+
+    Console.WriteLine("Response: " + completion + "\n");
+    ```
+
+    **Python**: test-openai-model.py
+
+    ```python
+    # Add code to send request...
+    # Send request to Azure OpenAI model
+    messages_array.append({"role": "user", "content": input_text})
+
+    response = client.chat.completions.create(
+        model=azure_oai_deployment,
+        temperature=0.7,
+        max_tokens=1200,
+        messages=messages_array
+    )
+    generated_text = response.choices[0].message.content
+    # Add generated text to messages array
+    messages_array.append({"role": "system", "content": generated_text})
+
+    # Print generated text
+    print("Summary: " + generated_text + "\n")
+    ```
+
+1. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
+1. In the terminal pane, enter the following command to run the application.
+
+    - **C#**: `dotnet run`
+    - **Python**: `python test-openai-model.py`
+
+1. Run the app again and provide the prompt `Where is a good hike near Boise?`.
+1. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
+1. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow up questions referencing previous answers, and each time the history provides context for the model to answer.
+
+    > **Tip**: The token count is only set to 1200, so if the conversation continues too long the application will run out of available tokens, resulting in an incomplete prompt. In production uses, limiting the length of the history to the most recent inputs and responses will help control the number of required tokens.
 
 ## Review
 
