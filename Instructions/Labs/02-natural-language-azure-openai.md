@@ -207,7 +207,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     **Python**: test-openai-model.py
 
     ```python
-    # Add OpenAI import
+    # Add Azure OpenAI package
     from openai import AzureOpenAI
     ```
 
@@ -241,7 +241,7 @@ For this exercise, you'll complete some key parts of the application to enable u
         """
     ```
 
-   >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+      >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
 7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
@@ -292,6 +292,8 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 7. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
+   >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+
 ### Task 5: Test your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
@@ -337,7 +339,7 @@ In most real-world applications, the ability to reference previous parts of the 
     messages_array = [{"role": "system", "content": system_message}]
     ```
 
-1. Under the comment ***Add code to send request...***, replace all the code from the comment to the end of the **while** loop with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
+1. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in python with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
 
     **C#**: Program.cs
 
@@ -391,6 +393,168 @@ In most real-world applications, the ability to reference previous parts of the 
     # Print generated text
     print("Summary: " + generated_text + "\n")
     ```
+
+1. The final code should look like as shown below:
+
+   **C#**: Program.cs
+
+   ```csharp
+   // Implicit using statements are included
+      using System.Text;
+      using System.Text.Json;
+      using Microsoft.Extensions.Configuration;
+      using Microsoft.Extensions.Configuration.Json;
+      using Azure;
+      
+      // Add Azure OpenAI package
+      using Azure.AI.OpenAI;
+      
+      // Build a config object and retrieve user settings.
+      IConfiguration config = new ConfigurationBuilder()
+          .AddJsonFile("appsettings.json")
+          .Build();
+      string? oaiEndpoint = config["AzureOAIEndpoint"];
+      string? oaiKey = config["AzureOAIKey"];
+      string? oaiDeploymentName = config["AzureOAIDeploymentName"];
+      
+      if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
+      {
+          Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+          return;
+      }
+      
+      // Initialize the Azure OpenAI client...
+      // Initialize the Azure OpenAI client
+         OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+      
+      // System message to provide context to the model
+      string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
+      
+      // Initialize messages list
+      var messagesList = new List<ChatRequestMessage>()
+      {
+          new ChatRequestSystemMessage(systemMessage),
+      };
+      
+      
+      do {
+          Console.WriteLine("Enter your prompt text (or type 'quit' to exit): ");
+          string? inputText = Console.ReadLine();
+          if (inputText == "quit") break;
+      
+          // Generate summary from Azure OpenAI
+          if (inputText == null) {
+              Console.WriteLine("Please enter a prompt.");
+              continue;
+          }
+          
+          Console.WriteLine("\nSending request for summary to Azure OpenAI endpoint...\n\n");
+      
+          // Add code to send request...
+         // Add code to send request...
+          // Build completion options object
+          messagesList.Add(new ChatRequestUserMessage(inputText));
+      
+          ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+          {
+              MaxTokens = 1200,
+              Temperature = 0.7f,
+              DeploymentName = oaiDeploymentName
+          };
+      
+          // Add messages to the completion options
+          foreach (ChatRequestMessage chatMessage in messagesList)
+          {
+              chatCompletionsOptions.Messages.Add(chatMessage);
+          }
+      
+          // Send request to Azure OpenAI model
+          ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+      
+          // Return the response
+          string completion = response.Choices[0].Message.Content;
+      
+          // Add generated text to messages list
+          messagesList.Add(new ChatRequestAssistantMessage(completion));
+      
+          Console.WriteLine("Response: " + completion + "\n");
+      
+      
+      } while (true);
+      ```
+
+    **Python**: test-openai-model.py
+
+   ```python
+    import os
+    from dotenv import load_dotenv
+   
+   # Add Azure OpenAI package
+   from openai import AzureOpenAI
+   
+   def main(): 
+           
+       try: 
+       
+           # Get configuration settings 
+           load_dotenv()
+           azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+           azure_oai_key = os.getenv("AZURE_OAI_KEY")
+           azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
+           
+           # Initialize the Azure OpenAI client...
+           # Initialize the Azure OpenAI client
+           client = AzureOpenAI(
+               azure_endpoint=azure_oai_endpoint, 
+               api_key=azure_oai_key,  
+               api_version="2024-02-15-preview"
+           )
+       
+           # Create a system message
+           system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
+           If no area is specified, I will default to near Rainier National Park. 
+           I will then provide three suggestions for nearby hikes that vary in length. 
+           I will also share an interesting fact about the local nature on the hikes when making a recommendation.
+           """
+           # Initialize messages array
+           messages_array = [{"role": "system", "content": system_message}]
+           
+           while True:
+               # Get input text
+               input_text = input("Enter the prompt (or type 'quit' to exit): ")
+               if input_text.lower() == "quit":
+                   break
+               if len(input_text) == 0:
+                   print("Please enter a prompt.")
+                   continue
+   
+               print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
+               
+               # Add code to send request...
+               # Add code to send request...
+               # Send request to Azure OpenAI model
+               messages_array.append({"role": "user", "content": input_text})
+   
+               response = client.chat.completions.create(
+                   model=azure_oai_deployment,
+                   temperature=0.7,
+                   max_tokens=1200,
+                   messages=messages_array
+               )
+               generated_text = response.choices[0].message.content
+               # Add generated text to messages array
+               messages_array.append({"role": "system", "content": generated_text})
+   
+               # Print generated text
+               print("Summary: " + generated_text + "\n")
+               
+   
+       except Exception as ex:
+           print(ex)
+   
+   if __name__ == '__main__': 
+       main()
+   ```
 
 1. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
 1. In the terminal pane, enter the following command to run the application.
