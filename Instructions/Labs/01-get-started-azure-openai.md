@@ -87,14 +87,14 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 7. This will deploy a model which you will be playing around with as you proceed.
 
-> **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
-> **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+   > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
+   > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-  >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+   >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 3: Explore a model in the Completions playground
 
@@ -120,7 +120,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
-2. In the **Assistant setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
 3. Below the **System message** box, click on **Add an example**, and enter the following message and response in the designated boxes:
 
@@ -129,7 +129,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
     > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-4. Save the changes to start a new session and set the behavioral context of the chat system.
+4. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 5. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`
 6. Use the **Send** button to submit the message and view the response.
 
@@ -172,7 +172,7 @@ You can use the prompt and parameters to maximize the likelihood of generating t
 
 In addition to generating natural language responses, you can use GPT models to generate code.
 
-1. In the **Assistant setup** pane, select the **Empty Example** template to reset the system message.
+1. In the **Setup** pane, select the **Empty Example** template to reset the system message.
 2. Enter the system message: `You are a Python developer.` and save the changes.
 3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 4. Submit the following user message:
