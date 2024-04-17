@@ -595,8 +595,6 @@ Now that your app has been configured, run it to send your request to your model
     ```prompt
     You are an AI assistant helping to write emails
     ```
-
-
     **User message:**
 
     ```prompt
