@@ -51,7 +51,6 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
      >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
      > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
@@ -102,10 +101,11 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
      >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
      > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+     <validation step="0fa0071a-87c2-4194-9374-639c1b9700ac" />
 
 ### Task 3: Generate code in chat playground
 
@@ -194,10 +194,12 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```
 
      >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
      > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+     <validation step="487047fe-1679-4902-9b43-ef466a2b8280" />
+
 
 ### Task 5: Configure your application
 
