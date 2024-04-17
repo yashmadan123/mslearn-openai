@@ -56,6 +56,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
      > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+     <validation step="61935caf-9a97-4d19-b393-273fb942feef" />
+
 ### Task 2: Deploy a model
 
 To use the Azure OpenAI API for code generation, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and reference that model in our app.
