@@ -1,11 +1,10 @@
 # Lab 03: Utilize prompt engineering in your app
 
 ## Lab scenario
-With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application to summarize text.
 
-When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
+When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
-Imagine you are trying to send out information for a new wildlife rescue, and want to get assistance from a generative AI model.
+In scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -115,7 +114,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a Python app of animals with fun names.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-1. In the **Assistant setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
+1. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
@@ -150,7 +149,7 @@ Before using your app, examine how prompt engineering improves the model respons
     ```
 
 1. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
-1. In the **Assistant setup** section near the system message, select the **Add an example** button. Add the following example.
+1. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
 
     **User:**
 
