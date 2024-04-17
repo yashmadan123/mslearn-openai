@@ -675,8 +675,7 @@ Now that your app has been configured, run it to send your request to your model
     What animal is the favorite of children at Contoso?
     ```
 
-> **Tip**: If you would like to see the full response from Azure OpenAI, you can set the **printFullResponse** variable to `True`, and rerun the app.
-
+   
 ## Review
 
 In this lab, you have accomplished the following:
