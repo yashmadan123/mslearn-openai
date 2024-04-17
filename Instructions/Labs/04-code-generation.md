@@ -305,11 +305,12 @@ Now that your app has been configured, run it to try generating code for each us
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
 
-
 1. To check the results paste the following code in the terminal:
-   ```
+
+    ```
    cd result
     ```
+
 1. Copy the below command in the terminal to see the contents of the app.txt file.
 
    ```
