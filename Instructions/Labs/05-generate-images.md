@@ -48,12 +48,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+#### Validation
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+<validation step="e1ebb903-af0c-41e8-90a8-20112e3fdc21" />
 
 ### Task 2: Explore image generation in the DALL-E playground
 
@@ -184,13 +181,9 @@ Now you're ready to explore the code used to call the REST API and generate an i
     - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
     - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
    
+#### Validation
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+<validation step="168ce7b9-ec18-408b-b640-82c95eb835e0" />
 
 ### Task 4: Run the app
 
