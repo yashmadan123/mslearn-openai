@@ -110,7 +110,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-1. In the **Assistant setup** section at the top, select the **Default** system message template and click on continue.
+1. In the **Setup** section at the top, select the **Default** system message template and click on continue.
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
@@ -136,8 +136,12 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
     end
     ```
 
-1. Observe the output, which explains what the function does in natural language. Try asking the model to rewrite it in a language you are familiar with.
+1. Observe the output, which explains what the function does in natural language.
 
+1. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
+
+1. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
+    
 ### Task 4: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
