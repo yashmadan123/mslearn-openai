@@ -53,13 +53,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-    <validation step="26d62b19-ac79-4900-8ee7-3cccec7288f9" />
+#### Validation
 
-     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+<validation step="5d0cce3e-fe95-4f49-aa59-ce5adfa1e720" />
 
 ### Task 2: Deploy a model
 
@@ -105,13 +101,9 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
    
-     <validation step="7e110ef6-8a1d-4bbd-b1e4-20c09d85fd56" />  
+#### Validation
 
-     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+<validation step="a5878c89-0f48-4031-a00c-b2a58634a1bc" />
 
 ### Task 3: Apply prompt engineering in chat playground
 
@@ -258,15 +250,10 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```bash
    code .
     ```
-     
 
-     >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+#### Validation
 
-<validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
+<validation step="8d8ff0c0-3741-4dcf-a3b1-e8a6d50245aa" />
 
 ### Task 5: Configure your application
 
