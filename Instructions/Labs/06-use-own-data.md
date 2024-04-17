@@ -38,12 +38,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+#### Validation
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+<validation step="45a7b4e3-befa-4298-adc9-b5af087cc8b5" />
 
 ### Task 2: Deploy a model
 
@@ -87,12 +84,9 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+#### Validation
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+<validation step="942d7709-37da-4b73-a244-0646ba9517d0" />
 
 ### Task 3: Observe normal chat behavior without adding your own data
 
@@ -197,12 +191,9 @@ Next, add your data in the chat playground to see how it responds with your data
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
    
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+#### Validation
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+<validation step="3bde5b69-3343-474f-8c1a-c947b3b3c020" />
 
 ### Task 5: Chat with a model grounded in your data
 
