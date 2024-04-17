@@ -263,9 +263,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 ### Task 5: Configure your application
 
-For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
+Applications for both C# and Python have been provided, and both apps feature the same functionality. First, you'll complete some key parts of the application to enable using your Azure OpenAI resource with asynchronous API calls.
 
-1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
+1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
 
 2. Open the configuration file for your language.
 
@@ -280,7 +280,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     ```bash
    cd CSharp
-   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.9
+   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
     **Python**
@@ -332,24 +332,21 @@ For this exercise, you'll complete some key parts of the application to enable u
     **C#**: Program.cs
 
     ```csharp
-            // Create chat completion options
+           // Format and send the request to the model
          var chatCompletionsOptions = new ChatCompletionsOptions()
          {
              Messages =
              {
-                 new ChatMessage(ChatRole.System, systemPrompt),
-                 new ChatMessage(ChatRole.User, userPrompt)
+                 new ChatRequestSystemMessage(systemMessage),
+                 new ChatRequestUserMessage(userMessage)
              },
              Temperature = 0.7f,
              MaxTokens = 800,
-             DeploymentName = oaiModelName
+             DeploymentName = oaiDeploymentName
          };
          
          // Get response from Azure OpenAI
          Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-         
-         ChatCompletions completions = response.Value;
-         string completion = completions.Choices[0].Message.Content;
     ```
 
     **Python**: prompt-engineering.py
@@ -375,113 +372,99 @@ For this exercise, you'll complete some key parts of the application to enable u
     **C#**
       
       ```csharp
-        
-           // Implicit using statements are included
-            using System.Text;
-            using System.Text.Json;
-            using Microsoft.Extensions.Configuration;
-            using Microsoft.Extensions.Configuration.Json;
-            using Azure;
+        // Implicit using statements are included
+         using System.Text;
+         using System.Text.Json;
+         using Microsoft.Extensions.Configuration;
+         using Microsoft.Extensions.Configuration.Json;
+         using Azure;
+         
+         // Add Azure OpenAI package
+         // Add Azure OpenAI package
+         using Azure.AI.OpenAI;
+         
+         // Build a config object and retrieve user settings.
+         IConfiguration config = new ConfigurationBuilder()
+             .AddJsonFile("appsettings.json")
+             .Build();
+         string? oaiEndpoint = config["AzureOAIEndpoint"];
+         string? oaiKey = config["AzureOAIKey"];
+         string? oaiDeploymentName = config["AzureOAIDeploymentName"];
+         
+         bool printFullResponse = false;
+         
+         do {
+             // Pause for system message update
+             Console.WriteLine("-----------\nPausing the app to allow you to change the system prompt.\nPress any key to continue...");
+             Console.ReadKey();
+             
+             Console.WriteLine("\nUsing system message from system.txt");
+             string systemMessage = System.IO.File.ReadAllText("system.txt"); 
+             systemMessage = systemMessage.Trim();
+         
+             Console.WriteLine("\nEnter user message or type 'quit' to exit:");
+             string userMessage = Console.ReadLine() ?? "";
+             userMessage = userMessage.Trim();
+             
+             if (systemMessage.ToLower() == "quit" || userMessage.ToLower() == "quit")
+             {
+                 break;
+             }
+             else if (string.IsNullOrEmpty(systemMessage) || string.IsNullOrEmpty(userMessage))
+             {
+                 Console.WriteLine("Please enter a system and user message.");
+                 continue;
+             }
+             else
+             {
+                 await GetResponseFromOpenAI(systemMessage, userMessage);
+             }
+         } while (true);
+         
+         async Task GetResponseFromOpenAI(string systemMessage, string userMessage)  
+         {   
+             Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
+         
+             if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
+             {
+                 Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+                 return;
+             }
+             
+             // Configure the Azure OpenAI client
+             // Initialize the Azure OpenAI client
+             OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+         
+             // Format and send the request to the model
+             // Format and send the request to the model
+             var chatCompletionsOptions = new ChatCompletionsOptions()
+             {
+                 Messages =
+                 {
+                     new ChatRequestSystemMessage(systemMessage),
+                     new ChatRequestUserMessage(userMessage)
+                 },
+                 Temperature = 0.7f,
+                 MaxTokens = 800,
+                 DeploymentName = oaiDeploymentName
+             };
+         
+         // Get response from Azure OpenAI
+         Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+             
+             ChatCompletions completions = response.Value;
+             string completion = completions.Choices[0].Message.Content;
+             
+             // Write response full response to console, if requested
+             if (printFullResponse)
+             {
+                 Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
+             }
+         
+             // Write response to console
+             Console.WriteLine($"\nResponse:\n{completion}\n\n");
+         }  
             
-            // Add Azure OpenAI package
-            using Azure.AI.OpenAI;
-            // Build a config object and retrieve user settings.
-            IConfiguration config = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .Build();
-            string? oaiEndpoint = config["AzureOAIEndpoint"];
-            string? oaiKey = config["AzureOAIKey"];
-            string? oaiModelName = config["AzureOAIModelName"];
-            
-            string command;
-            bool printFullResponse = false;
-            
-            do {
-                Console.WriteLine("\n1: Basic prompt (no prompt engineering)\n" +
-                "2: Prompt with email formatting and basic system message\n" +
-                "3: Prompt with formatting and specifying content\n" +
-                "4: Prompt adjusting system message to be light and use jokes\n" +
-                "\"quit\" to exit the program\n\n" + 
-                "Enter a number to select a prompt:");
-            
-                command = Console.ReadLine() ?? "";
-                
-                switch (command) {
-                    case "1":
-                        await GetResponseFromOpenAI("../prompts/basic.txt");
-                        break;
-                    case "2":
-                        await GetResponseFromOpenAI("../prompts/email-format.txt");
-                        break;
-                    case "3":
-                        await GetResponseFromOpenAI("../prompts/specify-content.txt");
-                        break;
-                    case "4":
-                        await GetResponseFromOpenAI("../prompts/specify-tone.txt");
-                        break;
-                    case "quit":
-                        Console.WriteLine("Exiting program...");
-                        break;
-                    default:
-                        Console.WriteLine("Invalid input. Please try again.");
-                        break;
-                }
-            } while (command != "quit");
-            
-            async Task GetResponseFromOpenAI(string fileText)  
-            {   
-                Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
-            
-                if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName) )
-                {
-                    Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
-                    return;
-                }
-                
-                // Configure the Azure OpenAI client
-                // Initialize the Azure OpenAI client
-                OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-                
-                // Read text file into system and user prompts
-                string[] prompts = System.IO.File.ReadAllLines(fileText);
-                string systemPrompt = prompts[0].Split(":", 2)[1].Trim();
-                string userPrompt = prompts[1].Split(":", 2)[1].Trim();
-            
-                // Write prompts to console
-                Console.WriteLine("System prompt: " + systemPrompt);
-                Console.WriteLine("User prompt: " + userPrompt);
-                
-                // Format and send the request to the model
-                // Create chat completion options
-                var chatCompletionsOptions = new ChatCompletionsOptions()
-                {
-                    Messages =
-                    {
-                        new ChatMessage(ChatRole.System, systemPrompt),
-                        new ChatMessage(ChatRole.User, userPrompt)
-                    },
-                    Temperature = 0.7f,
-                    MaxTokens = 800,
-                    DeploymentName = oaiModelName
-                };
-            
-                // Get response from Azure OpenAI
-                Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-            
-                ChatCompletions completions = response.Value;
-                string completion = completions.Choices[0].Message.Content;
-            
-                
-                // Write response full response to console, if requested
-                if (printFullResponse)
-                {
-                    Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
-                }
-            
-                // Write response to console
-                Console.WriteLine($"\nResponse: {completion}\n\n");
-            }  
-        
       ```
    
      **Python**
