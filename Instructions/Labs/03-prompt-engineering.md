@@ -556,26 +556,125 @@ Applications for both C# and Python have been provided, and both apps feature th
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
-Each prompt is displayed in the console as it sends for you to see how differences in prompts produce different responses.
-
-1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-1. Run the application, and expand the terminal to take up most of your browser window.
+1. In the folder of your preferred language, open `system.txt` in Visual Studio Code. For each of the interations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
+1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python prompt-engineering.py`
 
-1. Choose option **1** for the most basic prompt.
-1. Observe the prompt input, and generated output. The AI model will likely produce a good generic introduction to a wildlife rescue.
-1. Next, choose option **2** to give it a prompt asking for an intro email, along with some details about the wildlife rescue.
-1. Observe the prompt input, and generated output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
-1. Next, choose option **3** to ask for an email similar to above, but with a formatted table with additional animals included.
-1. Observe the prompt input, and generated output. This time, you'll likely see a similar email with text formatted in a specific way (in this case, a table near the end) demonstrating how the generative AI models can format output when requested.
-1. Next, choose option **4** to ask for a similar email, but this time specifying different tone in the system message.
-1. Observe the prompt input, and generated output. This time you'll likely see the email in a similar format, but with a much less informal tone. You'll likely even see jokes included!
+    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-Increasing the temperature often causes the response to vary, even when provided the same prompt, due to the increased randomness. You can run it multiple times with different temperature or top_p values to see how that impacts the response to the same prompt.
+1. For the first iteration, enter the following prompts:
 
-If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
+    **System message**
+
+    ```prompt
+    You are an AI assistant
+    ```
+     ![](../media/x232.png)
+
+    **User message:**
+
+    ```prompt
+    Write an intro for a new wildlife Rescue
+    ```
+
+1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
+1. Next, enter the following prompts which specify a format for the response:
+
+    **System message**
+
+    ```prompt
+    You are an AI assistant helping to write emails
+    ```
+
+
+    **User message:**
+
+    ```prompt
+    Write a promotional email for a new wildlife rescue, including the following: 
+    - Rescue name is Contoso 
+    - It specializes in elephants 
+    - Call for donations to be given at our website
+    ```
+
+1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
+1. Next, enter the following prompts that additionally specify the content:
+
+    **System message**
+
+    ```prompt
+    You are an AI assistant helping to write emails
+    ```
+
+    **User message:**
+
+    ```prompt
+    Write a promotional email for a new wildlife rescue, including the following: 
+    - Rescue name is Contoso 
+    - It specializes in elephants, as well as zebras and giraffes 
+    - Call for donations to be given at our website 
+    \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
+    ```
+
+1. Observe the output, and see how the email has changed based on your clear instructions.
+1. Next, enter the following prompts where we add details about tone to the system message:
+
+    **System message**
+
+    ```prompt
+    You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.
+    ```
+
+    **User message:**
+
+    ```prompt
+    Write a promotional email for a new wildlife rescue, including the following: 
+    - Rescue name is Contoso 
+    - It specializes in elephants, as well as zebras and giraffes 
+    - Call for donations to be given at our website 
+    \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
+    ```
+
+1. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
+1. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
+1. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
+1. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+
+    **C#**: Program.cs
+
+    ```csharp
+    // Format and send the request to the model
+    Console.WriteLine("\nAdding grounding context from grounding.txt");
+    string groundingText = System.IO.File.ReadAllText("grounding.txt");
+    userMessage = groundingText + userMessage;
+    ```
+
+    **Python**: prompt-engineering.py
+
+    ```python
+    # Format and send the request to the model
+    print("\nAdding grounding context from grounding.txt")
+    grounding_text = open(file="grounding.txt", encoding="utf8").read().strip()
+    user_message = grounding_text + user_message
+    ```
+
+1. Save the file and rerun your app.
+1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
+
+    **System message**
+
+    ```prompt
+    You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
+    ```
+
+    **User message:**
+
+    ```prompt
+    What animal is the favorite of children at Contoso?
+    ```
+
+> **Tip**: If you would like to see the full response from Azure OpenAI, you can set the **printFullResponse** variable to `True`, and rerun the app.
 
 ## Review
 
