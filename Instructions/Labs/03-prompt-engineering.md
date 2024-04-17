@@ -578,6 +578,7 @@ Now that your app has been configured, run it to send your request to your model
     ```prompt
     Write an intro for a new wildlife Rescue
     ```
+     ![](../media/x233.png)
 
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 1. Next, enter the following prompts which specify a format for the response:
