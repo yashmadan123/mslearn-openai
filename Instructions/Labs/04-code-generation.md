@@ -289,17 +289,6 @@ Now that your app has been configured, run it to try generating code for each us
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
-1. The results will be put into `result/app.txt`. Open that file up, and compare it to the function file in `sample-code`.
-
-1. To check the results paste the following code in the terminal:
-   ```
-   cd result
-    ```
-1. Copy the below command in the terminal to see the contents of the app.txt file.
-
-   ```
-   cat app.txt
-   ```
 1. Now you will be able to see the comments in the terminal for the function file which is located in the sample-code folder from the left pane of the code window.
 
 1. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
@@ -307,10 +296,6 @@ Now that your app has been configured, run it to try generating code for each us
     ```prompt
     Write four unit tests for the following function.\n---\n
     ```
-
-1. The results will replace what was in `result/app.txt`, and details four unit tests for that function.
-
-1. To check the results for option 2, follow step number 6 and 7 to see the content of app.txt file.
 
 1. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
@@ -322,7 +307,16 @@ Now that your app has been configured, run it to try generating code for each us
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
 
-1. To check the results for option 3, follow step number 6 and 7 to see the content of app.txt file.
+
+1. To check the results paste the following code in the terminal:
+   ```
+   cd result
+    ```
+1. Copy the below command in the terminal to see the contents of the app.txt file.
+
+   ```
+   cat app.txt
+   ```
 
 The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
