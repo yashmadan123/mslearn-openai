@@ -289,8 +289,6 @@ Now that your app has been configured, run it to try generating code for each us
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
-1. Now you will be able to see the comments in the terminal for the function file which is located in the sample-code folder from the left pane of the code window.
-
 1. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
     ```prompt
