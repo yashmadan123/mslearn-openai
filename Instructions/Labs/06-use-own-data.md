@@ -223,6 +223,107 @@ Try asking it about other cities included in the grounding data, which are Dubai
 
 > **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
+### Task 6: Set up an application in Cloud Shell
+
+To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
+
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+
+3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced settings**.
+
+   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
+
+4. Within the **Advanced settings** pane, enter the following details:
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+    - **CloudShell region**: East US (2)
+    - **Resource group**: Select **Use existing**.(3)
+      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Storage account**: Select **Create new**.(4)
+      - storage<inject key="DeploymentID" enableCopy="false"></inject>
+    - **File share**: Create a new file share named **none** (5)
+    - Click **Create Storage** (6)
+
+    ![](../media/storageaccreate1.png "Create storage advanced settings")
+
+5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+
+6. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+
+    ```bash
+   rm -r azure-openai -f
+   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+    ```
+
+7. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+
+    ```bash
+   cd azure-openai/Labfiles/06-use-own-data/CSharp
+    ```
+
+    Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
+
+8. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+
+    ```bash
+   code .
+    ```
+
+### Task 7: Configure your application
+
+For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
+
+1. In the code editor, expand the language folder for your preferred language.
+
+2. Open the configuration file for your language.
+
+    - **C#**: `appsettings.json`
+    - **Python**: `.env`
+
+3. Navigate to the folder for your preferred language and install the necessary packages.
+
+     **C#**:
+
+    ```
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+    ```
+
+    **Python**:
+
+    ```
+    pip install openai==1.13.3
+    ```
+
+4. In the code editor from the left navigation pane, in the **CSharp** or **Python** folder, open the configuration file for your preferred language
+
+    - **C#**: appsettings.json
+    - **Python**: .env
+
+5. Update the configuration values to include:
+    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
+    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure OpenAI Studio that is **text-turbo**).
+    - The endpoint for your search service (the **Url** value on the overview page for your AI search resource in the Azure portal).
+    - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
+    - The name of the search index (which should be `margiestravel`).
+
+      ![](../media/x676.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Review
 
 In this lab, you have accomplished the following:
