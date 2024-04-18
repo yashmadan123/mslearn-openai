@@ -75,13 +75,14 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
         >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
      
     - **Model version**: Auto-update to default (2)<br>
-    - **Deployment name**: my-gpt-model (3)
-    - Click on **Advanced Settings** (4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Create** (7)
+    - **Deployment type**: Standard (3)
+    - **Deployment name**: my-gpt-model (4)
+    - Click on **Advanced Settings** (5)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
+    - **Enable dynamic quota**: Enabled (7)
+    - Click on **Create** (8)
   
-   ![](../media/mygptturbo.png "Deploy model configurations")
+     ![](../media/x991.png)
 
 7. This will deploy a model which you will be playing around with as you proceed.
 
