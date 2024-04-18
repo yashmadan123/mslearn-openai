@@ -296,6 +296,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     ```
     cd Python
+    pip install python-dotenv
     pip install openai==1.13.3
     ```
 
