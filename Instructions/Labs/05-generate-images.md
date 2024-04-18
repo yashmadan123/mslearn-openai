@@ -124,7 +124,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-7. Navigate to the folder for the language you want to use by running the appropriate command.
+7. Navigate to the folder for the language of your preference  by running the appropriate command.
 
     **Python**
 
@@ -198,6 +198,7 @@ Now that you've reviewed the code, it's time to run it and generate some images.
     **Python**
 
     ```bash
+   pip install requests
    python generate-image.py
     ```
 
