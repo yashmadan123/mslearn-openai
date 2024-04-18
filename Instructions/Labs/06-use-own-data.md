@@ -92,18 +92,26 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
-1. Navigate to the **Chat** playground, and make sure the `gpt-35-turbo-16k` model you deployed is selected in the **Configuration** pane (this should be the default, if you only have one deployed model).
+1. In the **Playground** section, select the **Chat** page. The **Chat** playground page consists of three main sections:
 
-1. In the Chat session enter the following prompts, and observe the output.
+     - **Setup** - used to set the context for the model's responses.
+    - **Chat session** - used to submit chat messages and view responses.
+    - **Configuration** - used to configure settings for the model deployment.
+
+3. In the **Configuration** section, ensure that your model deployment `gpt-35-turbo-16k` is selected.
+4. In the **Setup** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
+5. In the **Chat session**, submit the following queries, and review the responses:
 
     ```
     I'd like to take a trip to New York. Where should I stay?
     ```
+
     ```
     What are some facts about New York?
     ```
-    
-1. Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
+
+    Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
+
 
 ### Task 4: Connect your data in the chat playground
 
