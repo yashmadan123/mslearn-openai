@@ -186,7 +186,15 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
 
-1. Wait until your search resource has been deployed, then switch back to the Azure AI Studio and refresh the page.
+1. Wait until your search resource has been deployed.
+
+1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
+
+   ![](../media/x689.png)
+
+1. From the left navigation pane,click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
+
+   ![](../media/x690.png)
 
 1. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
@@ -370,18 +378,6 @@ Now that your app has been configured, run it to send your request to your model
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 2. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
-
-   
-
-
-
-
-
-
-
-
-
-
 
 ## Review
 
