@@ -83,15 +83,16 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
       > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
       
     - **Model version**: Auto-update to default (2)
-    - **Deployment name**: text-turbo (3)
-    - Click on **Advanced Settings** (4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Create** (7)
+    - **Deployment type**: Standard (3)
+    - **Deployment name**: text-turbo (4)
+    - Click on **Advanced Settings** (5)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
+    - **Enable dynamic quota**: Enabled (7)
+    - Click on **Create** (8)
   
-      ![](../media/txtturbo.png "Deploy model configurations")
+      ![](../media/x991.png)
 
-   >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
+      >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
 8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
