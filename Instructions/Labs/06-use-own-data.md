@@ -12,7 +12,7 @@ In this lab, you will complete the following tasks:
 - Task 4: Connect your data in the chat playground
 - Task 5: Chat with a model grounded in your data
 
-## Estimated time: 20 minutes
+## Estimated time: 45 minutes
 
 ### Task 1: Provision an Azure OpenAI resource
 
