@@ -42,7 +42,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 #### Validation
 
-<validation step="45a7b4e3-befa-4298-adc9-b5af087cc8b5" />
+<validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
 
 ### Task 2: Deploy a model
 
@@ -88,7 +88,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 #### Validation
 
-<validation step="942d7709-37da-4b73-a244-0646ba9517d0" />
+<validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
 ### Task 3: Observe normal chat behavior without adding your own data
 
@@ -203,7 +203,7 @@ Next, add your data in the chat playground to see how it responds with your data
    
 #### Validation
 
-<validation step="3bde5b69-3343-474f-8c1a-c947b3b3c020" />
+<validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
 
 ### Task 5: Chat with a model grounded in your data
 
