@@ -261,7 +261,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 7. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/06-use-own-data/CSharp
+   cd azure-openai/Labfiles/06-use-own-data
     ```
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
@@ -288,12 +288,14 @@ For this exercise, you'll complete some key parts of the application to enable u
      **C#**:
 
     ```
+    cd CSharp
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
     **Python**:
 
     ```
+    cd Python
     pip install openai==1.13.3
     ```
 
