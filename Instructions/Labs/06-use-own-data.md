@@ -139,11 +139,11 @@ Next, add your data in the chat playground to see how it responds with your data
   
       ![](../media/openai-lab06_t4_s4.png "Create storage account")
 
-    - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section.
+    - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section. Click on **Review + Create**  and subsequently click on **Create**
 
       ![](../media/image4.5.png "allow blob access")
 
-1. Wait until the web app is created before you proceed to the next task. This should take about a minute.
+1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
 1. On the deployment blade, click Go to resource.
 
@@ -161,13 +161,13 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/image4.7.png "upload files")
 
-1. In the **Azure portal**, search for **Azure Ai search** and select **Azure Ai search**.
+1. In the **Azure portal**, search for **Azure AI search** and select **Azure Ai search**.
 
-2.  On **Azure Ai services | AI search** blade, click on **Create**.
+2.  On **Azure AI services | AI search** blade, click on **Create**.
 
      ![](../media/5.png "upload files")
 
-3. Create an **AI Search** resource with the following settings:
+3. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
