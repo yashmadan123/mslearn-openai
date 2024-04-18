@@ -29,14 +29,16 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 3. Create an **Azure OpenAI** resource with the following settings:
    
     - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab06-<inject key="Deployment-id" enableCopy="false"></inject>
+    - **Name**: OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
       ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
     
-4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+4. Click on **Next** twice and click on **Create**.
+
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
 #### Validation
 
@@ -50,7 +52,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
@@ -130,8 +132,8 @@ Next, add your data in the chat playground to see how it responds with your data
 3. Create a **Storage Account** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="Deployment-id" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Storage account name**: storage<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
   
@@ -168,8 +170,8 @@ Next, add your data in the chat playground to see how it responds with your data
 3. Create an **AI Search** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="Deployment-id" enableCopy="false"></inject>
-    - **Service name**: cognitive-search-<inject key="Deployment-id" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Service name**: cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Location**:Select <inject key="Region" enableCopy="false" />
     - **Pricing tier**: Basic
 
