@@ -50,7 +50,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 #### Validation
 
-<validation step="e1ebb903-af0c-41e8-90a8-20112e3fdc21" />
+<validation step="a89125fa-fad8-4a69-8048-14fc0efa9e7b" />
 
 ### Task 2: Explore image generation in the DALL-E playground
 
