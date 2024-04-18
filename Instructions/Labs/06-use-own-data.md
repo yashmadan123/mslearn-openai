@@ -11,6 +11,9 @@ In this lab, you will complete the following tasks:
 - Task 3: Observe normal chat behavior without adding your own data
 - Task 4: Connect your data in the chat playground
 - Task 5: Chat with a model grounded in your data
+- Task 6: Set up an application in Cloud Shell
+- Task 7: Configure your application
+- Task 8: Run your application
 
 ## Estimated time: 45 minutes
 
@@ -383,8 +386,8 @@ Now that your app has been configured, run it to send your request to your model
 ## Review
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
--   Use the power of OpenAI models to generate responses limited to a custom ingested data.
+-   Provisioned an Azure OpenAI resource
+-   Deployed an OpenAI model within the Azure OpenAI studio
+-   Used the power of OpenAI models to generate responses limited to a custom ingested data.
 
 ### You have successfully completed the lab.
