@@ -183,7 +183,7 @@ Now you're ready to explore the code used to call the REST API and generate an i
    
 #### Validation
 
-<validation step="168ce7b9-ec18-408b-b640-82c95eb835e0" />
+<validation step="f11f8446-e574-4959-ac0d-7c42d2c48345" />
 
 ### Task 4: Run the app
 
