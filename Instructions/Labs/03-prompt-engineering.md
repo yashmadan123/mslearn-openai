@@ -55,7 +55,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 #### Validation
 
-<validation step="5d0cce3e-fe95-4f49-aa59-ce5adfa1e720" />
+<validation step="26d62b19-ac79-4900-8ee7-3cccec7288f9" />
 
 ### Task 2: Deploy a model
 
@@ -104,7 +104,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
 #### Validation
 
-<validation step="a5878c89-0f48-4031-a00c-b2a58634a1bc" />
+<validation step="7e110ef6-8a1d-4bbd-b1e4-20c09d85fd56" />
 
 ### Task 3: Apply prompt engineering in chat playground
 
@@ -254,7 +254,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 #### Validation
 
-<validation step="8d8ff0c0-3741-4dcf-a3b1-e8a6d50245aa" />
+<validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
 
 ### Task 5: Configure your application
 
