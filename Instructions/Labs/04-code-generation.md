@@ -53,7 +53,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 #### Validation
 
-<validation step="99c15522-ab36-45df-af68-fc66ce0af25c" />
+<validation step="61935caf-9a97-4d19-b393-273fb942feef" />
 
 ### Task 2: Deploy a model
 
@@ -101,7 +101,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 #### Validation
 
-<validation step="ebb2b761-b84d-42a6-a7a0-7a999ef63d74" />
+<validation step="0fa0071a-87c2-4194-9374-639c1b9700ac" />
 
 ### Task 3: Generate code in chat playground
 
@@ -191,7 +191,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 #### Validation
 
-<validation step="69f152a9-cdbe-4c8a-84d1-291bc8cc4c17" />
+<validation step="487047fe-1679-4902-9b43-ef466a2b8280" />
 
 
 ### Task 5: Configure your application
