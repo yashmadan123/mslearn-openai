@@ -75,7 +75,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
       
     - **Model version**: Auto-update to default (2)
     - **Deployment type**: Standard (3)
-    - **Deployment name**: gpt-35-turbo (4)
+    - **Deployment name**: 35turbo (4)
     - Click on **Advanced Settings** (5)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
     - **Enable dynamic quota**: Enabled (7)
