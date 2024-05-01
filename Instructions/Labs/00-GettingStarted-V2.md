@@ -54,13 +54,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
    ![Manage Your Virtual Machine](../media/gext2.png)
 
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed. 
+3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
 
 ## Let's Get Started with Azure Portal
 
 1. On your virtual machine, click on the Azure Portal icon as shown below:
 
-    ![Launch Azure Portal](../media/sc900-image(1).png)
+   ![Launch Azure Portal](../media/sc900-image(1).png)
    
 1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
