@@ -80,7 +80,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
+    - **Select a Model**: gpt-35-turbo (1)
       
         > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
         
@@ -92,7 +92,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
     - **Enable dynamic quota**: Enabled (7)
     - Click on **Create** (8)
   
-      ![](../media/x991.png)
+      ![](../media/x993.png)
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
@@ -108,7 +108,11 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-1. In the **Setup** section at the top, select the **Default** system message template and click on continue.
+   
+1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
+
+   ![](../media/default1.png)
+   
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
@@ -116,8 +120,11 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
     ```
 
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
+   
 1. Next, send the prompt `Do the same thing, but this time write it in C#`.
+   
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
+   
 1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
 
     ```code
@@ -156,7 +163,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 4. Within the **Advanced settings** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: East US (2)
+    - **CloudShell region**: Select <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing**.(3)
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Storage account**: Select **Create new**.(4)
@@ -164,7 +171,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
-    ![](../media/storageaccreate1.png "Create storage advanced settings")
+    ![](../media/storageaccreate2.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
