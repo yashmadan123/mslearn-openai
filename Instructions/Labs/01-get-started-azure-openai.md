@@ -82,7 +82,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
     - **Enable dynamic quota**: Enabled (7)
     - Click on **Create** (8)
   
-      ![](../media/x991.png)
+      ![](../media/x992.png)
 
 7. This will deploy a model which you will be playing around with as you proceed.
 
