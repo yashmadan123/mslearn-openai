@@ -144,9 +144,9 @@ You can use the prompt and parameters to maximize the likelihood of generating t
     - **Temperature**: 0
     - **Max response (Max number of tokens)**: 500
 
-2. Submit the following message in chat session 
+2. Submit the following message in chat session
 
-    ```
+   ```
     Write three multiple choice questions based on the following text.
 
     Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
@@ -156,7 +156,8 @@ You can use the prompt and parameters to maximize the likelihood of generating t
     - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
 
     - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
-    ```
+   
+   ```
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
