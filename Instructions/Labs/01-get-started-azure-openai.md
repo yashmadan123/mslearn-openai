@@ -119,7 +119,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **System message** box, click on **Add an example**, and enter the following message and response in the designated boxes:
+3. Below the **System message** box, click on **+Add**, and enter the following message and response in the designated boxes:
 
     - **User**: `What are different types of artificial intelligence?`
     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
@@ -171,7 +171,7 @@ You can use the prompt and parameters to maximize the likelihood of generating t
 In addition to generating natural language responses, you can use GPT models to generate code.
 
 1. In the **Setup** pane, select the **Empty Example** template to reset the system message.
-2. Enter the system message: `You are a Python developer.` and save the changes.
+2. Enter the system message: `You are a Python developer.` and save the changes by clicking on Apply Changes.
 3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 4. Submit the following user message:
 
