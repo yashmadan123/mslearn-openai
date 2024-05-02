@@ -9,11 +9,11 @@
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/lab06.1.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/hol-use-your-own-data-lab1.md",
         "Order": 2
       },
         {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/lab07.1.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/hol-content-filters-lab2.md",
         "Order": 3
       }
     ]
