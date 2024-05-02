@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "Lab Scenario Preview: Use Your Own Data and Explore Content Filter with Azure OpenAI Services",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai/tree/prod",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/hol-get-started-with-openai-lab1.md",
+        "Order": 2
+      },
+        {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/hol-integrate-openai-with-app-lab2.md",
+        "Order": 3
+      }
+    ]
+  }
+]
