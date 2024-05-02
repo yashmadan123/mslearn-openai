@@ -1,4 +1,4 @@
-# Lab: Explore content filters in Azure OpenAI
+# Lab 2: Explore content filters in Azure OpenAI
 
 ## Lab scenario
 Azure OpenAI includes default content filters to help ensure that potentially harmful prompts and completions are identified and removed from interactions with the service. Additionally, you can apply for permission to define custom content filters for your specific needs to ensure your model deployments enforce the appropriate responsible AI principals for your generative AI scenario. Content filtering is one element of an effective approach to responsible AI when working with generative AI models.
@@ -7,12 +7,51 @@ In this exercise, you'll explore the affect of the default content filters in Az
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
- - Task 1: Generate natural language output
- - Task 2: Explore content filters
+ - Task 1: Deploy a OpenAI model
+ - Task 2: Generate natural language output
+ - Task 3: Explore content filters
 
 ## Estimated time: 30 minutes
 
-### Task 1: Generate natural language output
+### Task 1: Deploy a OpenAI model
+
+As you have already deployed OpenAI services in the previous exercise, you're ready to deploy a model to use through the **Azure OpenAI Studio**. Once deployed, you will use the model to generate natural language content.
+
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/openai8.png)
+
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab07-<inject key="Deployment-id" enableCopy="false"></inject>**
+
+   ![](../media/OpenAI_select.png)
+
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+
+   ![](../media/openai_studio.png)
+
+4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+
+   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+
+5. In the **Deployments** page, click on **+ Create new deployment**.
+
+   ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")
+
+6. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options (3)** followed by scaling down the **Tokens per Minute Rate Limit (thousands) (4)**:
+    - **Select a model**: gpt-35-turbo
+    - **Model version**: *Use the default version*
+    - **Deployment name**: 35turbo
+    - **Tokens per Minute Rate Limit (thousands)**: 10K
+  
+   ![](../media/openai-labs_deploy-model-4.png "Deploy model configurations")
+
+7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+
+> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
+
+  **Congratulations** on completing the task! 
+
+### Task 2: Generate natural language output
 
 Let's see how the model behaves in a conversational interaction.
 
@@ -42,7 +81,7 @@ Let's see how the model behaves in a conversational interaction.
 
 1. Observe the output, which should hopefully indicate that the request to be racist and derogative is not supported. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
 
-### Task 2: Explore content filters
+### Task 3: Explore content filters
 
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
