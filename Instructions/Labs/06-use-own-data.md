@@ -49,7 +49,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+        ![](../media/keysendpoint.png "Keys and Endpoints")
 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -72,7 +72,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio.png)
+   ![](../media/gotoresources.png)
 
 4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
@@ -153,6 +153,8 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Storage account name**: storage<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
+
+    - Select **Next**
   
       ![](../media/openai-lab06_t4_s4.png "Create storage account")
 
@@ -162,47 +164,51 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
-1. On the deployment blade, click Go to resource.
+1. On the deployment blade, click **Go to resource**.
 
     ![](../media/3.png "upload files")
 
-1. On **Storage Account | Container** blade, click on **Create**.
+1. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
 
-     ![](../media/4.png "upload files")
+1. On **Storage Account | Containers** blade, click on **+ Containers (2)**.
 
-1. Create a container with the name "openaidatasource" and enable Anonymous access level for container.
+     ![](../media/storage-container.png "upload files")
+
+1. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
 
       ![](../media/image4.6.png "create container")
+
+1. Select the **openaidatasource** container, and select **Upload**.
 
 1. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
       ![](../media/image4.7.png "upload files")
 
-1. In the **Azure portal**, search for **Azure AI search** and select **Azure Ai search**.
+1. In the **Azure portal**, search for **AI search** and select **AI search**.
 
 2.  On **Azure AI services | AI search** blade, click on **Create**.
 
      ![](../media/5.png "upload files")
 
-3. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
+3. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Service name**: cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Location**:Select <inject key="Region" enableCopy="false" />
+    - **Resource group**: **openai-<inject key="DeploymentID	" enableCopy="false"></inject>**
+    - **Service name**: **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>**
+    - **Location**: Select **<inject key="Region" enableCopy="false" />**
     - **Pricing tier**: Basic
 
       ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
 
-1. Wait until your search resource has been deployed.
+1. Wait until your search resource has been deployed. Select **Go to resources**.
 
 1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
    ![](../media/x689.png)
 
-1. From the left navigation pane,click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
+1. From the left navigation pane, under **Settings**, click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
 
-   ![](../media/x690.png)
+   ![](../media/keys-cognitive.png)
 
 1. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
@@ -210,13 +216,14 @@ Next, add your data in the chat playground to see how it responds with your data
    
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
-    - **Select data source**: Azure Blob Storage
-    - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
-    - **Select Azure AI Search resource**: *Choose the search resource you created*
-    - **Enter the index name**: margiestravel
-    - **Indexer schedule**: Once
+    - **Select data source (1)**: Azure Blob Storage
+    - **Select Azure Blob storage resouce (2)**: *Choose the storage resource you created*
+    - **Select storage container (3)**: *Choose the storage container you created*
+    - **Select Azure AI Search resource (4)**: *Choose the search resource you created*
+    - **Enter the index name (5)**: margiestravel
+    - **Indexer schedule (6)**: Once
 
-1. Click on next to proceed with "Data Management"
+1. Click on **Next (7)** to proceed with "**Data Management**".
 
     ![](../media/image4.8.png "Add data configurations")
    
@@ -256,11 +263,11 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced settings**.
+3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Show advanced settings**.
 
    ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
 
@@ -272,9 +279,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **Storage account**: Select **Create new**.(4)
       - str<inject key="DeploymentID" enableCopy="false"></inject>
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create storage** (6)
 
-    ![](../media/storageaccreate1.png "Create storage advanced settings")
+        ![](../media/storageaccreate1.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -334,16 +341,21 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 5. Update the configuration values to include:
     - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
+    
     - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure OpenAI Studio that is **text-turbo**).
+    
     - The endpoint for your AI search service (Which you copied in the previous task alternatively it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
+    
     - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
     - The name of the search index (which should be `margiestravel`).
+
+    - Press **Ctrl + S** on your keyboard to save the file.
 
       ![](../media/x676.png)
 
 6. Open the code file for your preferred language, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
 
-    **C#**: ownData.cs
+    **C#**: OwnData.cs
 
     ```csharp
     // Configure your data source
@@ -373,7 +385,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 7. Review the rest of the code, noting the use of the *extensions* in the request body that is used to provide information about the data source settings.
 
-8. Save the changes to the code file.
+8. Press **Ctrl + S** on your keyboard to save the file.
 
 
 ## Task 8: Run your application

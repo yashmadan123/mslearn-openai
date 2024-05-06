@@ -23,7 +23,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/openai_create1.png)
 
@@ -35,15 +35,27 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
 4. Click on **Next** twice and click on **Create**.
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-#### Validation
+6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-<validation step="4b6b5a36-2650-4f80-a408-879c57cf61a2" />
+        ![](../media/keysendpoint.png "Keys and Endpoints")
+
+   <validation step="4b6b5a36-2650-4f80-a408-879c57cf61a2" />
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+       
+      - If you receive a success message, you can proceed to the next task.
+      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Deploy a model
 
@@ -53,13 +65,13 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio.png)
+   ![](../media/gotoresources.png)
    
 4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
@@ -87,25 +99,30 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 7. This will deploy a model which you will be playing around with as you proceed.
 
    > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
+   
    > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-#### Validation
+   <validation step="d9a504d6-e0be-4fa9-a4ed-6ead18a10e03" />
 
-<validation step="d9a504d6-e0be-4fa9-a4ed-6ead18a10e03" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+       
+      - If you receive a success message, you can proceed to the next task.
+      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Explore a model in the Completions playground
 
 *Playgrounds* are useful interfaces in Azure OpenAI Studio that you can use to experiment with your deployed models without needing to develop your own client application.
 
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
+
 2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected and then in the **Examples** list, select **Generate a quiz**.
 
-    The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
+   >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
 3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
-4. Use the **Generate** button to submit the prompt to the model and retrieve a response.
 
-    The response consists of a quiz based on the example in the prompt.
+4. Use the **Generate** button to submit the prompt to the model and retrieve a response. The response consists of a quiz based on the example in the prompt.
 
     >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary 
     from the original one. A generative AI model can produce new language each time it's called.
@@ -117,17 +134,21 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
+
 2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **System message** box, click on **+Add**, and enter the following message and response in the designated boxes:
+3. Below the **System message** box, click on **+ Add**, and enter the following message and response in the designated boxes:
 
     - **User**: `What are different types of artificial intelligence?`
+    
     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-    > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+      >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 4. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+
 5. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`
+
 6. Use the **Send** button to submit the message and view the response.
 
     > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
@@ -170,9 +191,12 @@ You can use the prompt and parameters to maximize the likelihood of generating t
 
 In addition to generating natural language responses, you can use GPT models to generate code.
 
-1. In the **Setup** pane, select the **Empty Example** template to reset the system message.
-2. Enter the system message: `You are a Python developer.` and save the changes by clicking on Apply Changes.
+1. In the **Setup** pane, select the **Empty Example** template to reset the system message, and select **Continue**.
+
+2. Enter the system message: `You are a Python developer.` save the changes by clicking on Apply Changes, and click on **Continue**.
+
 3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
+
 4. Submit the following user message:
 
     ```
