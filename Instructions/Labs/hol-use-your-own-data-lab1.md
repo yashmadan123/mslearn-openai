@@ -102,13 +102,13 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
-   <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
+<validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-       
-      - If you receive a success message, you can proceed to the next task.
-      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Observe normal chat behavior without adding your own data
 
@@ -126,15 +126,15 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
 5. In the **Chat session**, submit the following queries, and review the responses:
 
-       ```
-       I'd like to take a trip to New York. Where should I stay?
-       ```
-   
-       ```
-       What are some facts about New York?
-       ```
+      ```
+      I'd like to take a trip to New York. Where should I stay?
+      ```
 
-       >**Note:** Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
+      ```
+      What are some facts about New York?
+      ```
+
+      >**Note:** Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
 
 
 ### Task 4: Connect your data in the chat playground
@@ -171,29 +171,29 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. On the deployment blade, click **Go to resource**.
 
-       ![](../media/3.png "upload files")
+      ![](../media/3.png "upload files")
 
 1. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
 
 1. On **Storage Account | Containers** blade, click on **+ Containers (2)**.
 
-        ![](../media/storage-container.png "upload files")
+      ![](../media/storage-container.png "upload files")
 
 1. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
 
-         ![](../media/image4.6.png "create container")
+      ![](../media/image4.6.png "create container")
 
 1. Select the **openaidatasource** container, and select **Upload**.
 
 1. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
-         ![](../media/image4.7.png "upload files")
+      ![](../media/image4.7.png "upload files")
 
 1. In the **Azure portal**, search for **AI search** and select **AI search**.
 
 2.  On **Azure AI services | AI search** blade, click on **Create**.
 
-        ![](../media/5.png "upload files")
+      ![](../media/5.png "upload files")
 
 3. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
 
@@ -203,7 +203,7 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Location**: Select **<inject key="Region" enableCopy="false" />**
     - **Pricing tier**: Basic
 
-         ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
+      ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
 
 1. Wait until your search resource has been deployed. Select **Go to resources**.
 
@@ -238,13 +238,13 @@ Next, add your data in the chat playground to see how it responds with your data
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
    
-   <validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
+<validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-       
-      - If you receive a success message, you can proceed to the next task.
-      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 5: Chat with a model grounded in your data
 
