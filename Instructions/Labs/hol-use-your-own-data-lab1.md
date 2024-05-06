@@ -65,23 +65,23 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+      ![](../media/openai8.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/azureaiservices.png)
+      ![](../media/azureaiservices.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/gotoresources.png)
+      ![](../media/gotoresources.png)
 
 4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+      ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
 5. In the **Deployments** page, click on **+ Create new deployment**.
 
-   ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
+      ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo (1)
@@ -96,13 +96,11 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     - **Enable dynamic quota**: Enabled (7)
     - Click on **Create** (8)
   
-      ![](../media/x11.png)
+         ![](../media/x11.png)
 
-      >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
+         >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
 8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
-
-#### Validation
 
    <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
@@ -123,18 +121,20 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
     - **Configuration** - used to configure settings for the model deployment.
 
 3. In the **Configuration** section, ensure that your model deployment `text-turbo` is selected.
+
 4. In the **Setup** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
+
 5. In the **Chat session**, submit the following queries, and review the responses:
 
-    ```
-    I'd like to take a trip to New York. Where should I stay?
-    ```
+       ```
+       I'd like to take a trip to New York. Where should I stay?
+       ```
+   
+       ```
+       What are some facts about New York?
+       ```
 
-    ```
-    What are some facts about New York?
-    ```
-
-    Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
+       >**Note:** Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
 
 
 ### Task 4: Connect your data in the chat playground
@@ -145,11 +145,11 @@ Next, add your data in the chat playground to see how it responds with your data
    
 1. In the **Azure portal**, search for **Storage Account** and select **Storage Account**.
 
-   ![](../media/1.png)
+      ![](../media/1.png)
 
 2. On **Storage Account** page, click on **Create**.
 
-   ![](../media/2.png)
+      ![](../media/2.png)
 
 3. Create a **Storage Account** resource with the following settings:
 
@@ -161,39 +161,39 @@ Next, add your data in the chat playground to see how it responds with your data
 
     - Select **Next**
   
-      ![](../media/openai-lab06_t4_s4.png "Create storage account")
+         ![](../media/openai-lab06_t4_s4.png "Create storage account")
 
     - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section. Click on **Review + Create**  and subsequently click on **Create**
 
-      ![](../media/image4.5.png "allow blob access")
+         ![](../media/image4.5.png "allow blob access")
 
 1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
 1. On the deployment blade, click **Go to resource**.
 
-    ![](../media/3.png "upload files")
+       ![](../media/3.png "upload files")
 
 1. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
 
 1. On **Storage Account | Containers** blade, click on **+ Containers (2)**.
 
-     ![](../media/storage-container.png "upload files")
+        ![](../media/storage-container.png "upload files")
 
 1. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
 
-      ![](../media/image4.6.png "create container")
+         ![](../media/image4.6.png "create container")
 
 1. Select the **openaidatasource** container, and select **Upload**.
 
 1. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
-      ![](../media/image4.7.png "upload files")
+         ![](../media/image4.7.png "upload files")
 
 1. In the **Azure portal**, search for **AI search** and select **AI search**.
 
 2.  On **Azure AI services | AI search** blade, click on **Create**.
 
-     ![](../media/5.png "upload files")
+        ![](../media/5.png "upload files")
 
 3. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
 
@@ -203,21 +203,21 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Location**: Select **<inject key="Region" enableCopy="false" />**
     - **Pricing tier**: Basic
 
-      ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
+         ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
 
 1. Wait until your search resource has been deployed. Select **Go to resources**.
 
 1. Navigate to the **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
-   ![](../media/x689.png)
+      ![](../media/x689.png)
 
 1. From the left navigation pane, under **Settings**, click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
 
-   ![](../media/keys-cognitive.png)
+      ![](../media/keys-cognitive.png)
 
 1. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
-   ![](../media/image4.2.png "Add your data in setup pane")
+      ![](../media/image4.2.png "Add your data in setup pane")
    
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
@@ -230,11 +230,11 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. Click on **Next (7)** to proceed with "**Data Management**".
 
-    ![](../media/image4.8.png "Add data configurations")
+       ![](../media/image4.8.png "Add data configurations")
    
 1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
-   ![](../media/datamanagement.png "Add data")
+      ![](../media/datamanagement.png "Add data")
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
    
@@ -258,11 +258,11 @@ Next, add your data in the chat playground to see how it responds with your data
    What are some facts about New York?
    ```
 
-    >**Note:** You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided.
+      >**Note:** You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided.
 
 1. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
-    > **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
+      >**Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
 ### Task 6: Set up an application in Cloud Shell
 
@@ -270,7 +270,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
+   ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
@@ -288,7 +288,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **File share**: Create a new file share named **none** (5)
     - Click **Create storage** (6)
 
-        ![](../media/storageaccreate1.png "Create storage advanced settings")
+      ![](../media/storageaccreate1.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
