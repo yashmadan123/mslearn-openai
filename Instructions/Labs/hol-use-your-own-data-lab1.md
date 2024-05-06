@@ -32,9 +32,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 3. Create an **Azure OpenAI** resource with the following settings:
    
     - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Name**: OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
       ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
@@ -67,7 +67,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/azureaiservices.png)
 
@@ -152,8 +152,8 @@ Next, add your data in the chat playground to see how it responds with your data
 3. Create a **Storage Account** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Storage account name**: storage<inject key="DeploymentID" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
 
@@ -196,8 +196,8 @@ Next, add your data in the chat playground to see how it responds with your data
 3. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: **openai-<inject key="DeploymentID	" enableCopy="false"></inject>**
-    - **Service name**: **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>**
+    - **Resource group**: **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
+    - **Service name**: **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>**
     - **Location**: Select **<inject key="Region" enableCopy="false" />**
     - **Pricing tier**: Basic
 
@@ -205,7 +205,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. Wait until your search resource has been deployed. Select **Go to resources**.
 
-1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
+1. Navigate to the **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
    ![](../media/x689.png)
 
@@ -402,7 +402,7 @@ Now that your app has been configured, run it to send your request to your model
     - **C#**: `dotnet run`
     - **Python**: `python ownData.py`
 
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+        > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 2. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 

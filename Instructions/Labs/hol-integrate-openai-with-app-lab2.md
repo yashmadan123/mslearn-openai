@@ -20,25 +20,21 @@ In this lab, you will complete the following tasks:
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. Open a new tab, and navigate to the **Azure portal** by using **https://portal.azure.com/#home**, search for **OpenAI** and select **Azure OpenAI**.
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](../media/azureaiservices.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/gotoresources.png)
 
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
-
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
-
-5. In the **Deployments** page, click on **+ Create new deployment**.
+5. In the **Deployments (1)** page, click on **+ Create new deployment (2)**.
     
-   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
+   ![](../media/createanewdeployment.png "Create a new deployment")
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo-16k (1)
@@ -46,12 +42,17 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
        >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
        
     - **Model version**: Auto-update to default (2)
+    
     - **Deployment type**: Standard (3)
+    
     - **Deployment name**: text-turbo (4)
+    
     - Click on **Advanced Settings** (5)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
+    
     - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (7)
+    
+    - Click on **Create** (8)
   
       ![](../media/x991.png)
 
@@ -61,35 +62,44 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
-#### Validation
+    <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
 
-<validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+       
+      - If you receive a success message, you can proceed to the next task.
+      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. Open a new tab, and navigate to the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced Settings**.
+3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Show advanced Settings**.
 
    ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
 
 4. Within the **Advanced settings** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+    
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
+    
     - **Resource group**: Select **Use existing**.(3)
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    
     - **Storage account**: Select **Create new**.(4)
       - storage<inject key="DeploymentID" enableCopy="false"></inject>
+    
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    
+    - Click **Create storage** (6)
 
-    ![](../media/storageaccreate2.png "Create storage advanced settings")
+        ![](../media/storageaccreate2.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -108,17 +118,21 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    cd azure-openai/Labfiles/02-azure-openai-api
     ```
 
-Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
+    >**Note:** Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
-Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
+9. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
 
-```bash
-code .
-```
+    ```bash
+    code .
+    ```
 
-#### Validation
+    <validation step="2e8dadd1-f827-4597-8d99-c814ec85fbab" />
 
-<validation step="2e8dadd1-f827-4597-8d99-c814ec85fbab" />
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+       
+      - If you receive a success message, you can proceed to the next task.
+      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Configure your application
 
@@ -126,14 +140,21 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
-2. Open the configuration file for your language
+1. Open the configuration file for your language
 
     - C#: `appsettings.json`
     - Python: `.env`
-    
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
-4. Navigate to the folder for your preferred language and install the necessary packages
+1. Update the configuration values to include:
+    
+    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
+    
+    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure OpenAI Studio that is **text-turbo**).
+
+    - Press **Ctrl + S** on your keyboard to save the file.
+
+
+1. Navigate to the folder for your preferred language and install the necessary packages
 
     **C#** : 
 
@@ -150,7 +171,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     pip install openai==1.13.3
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+1. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -166,7 +187,9 @@ For this exercise, you'll complete some key parts of the application to enable u
     from openai import AzureOpenAI
     ```
 
-6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+1. Press **Ctrl + S** on your keyboard to save the file.
+
+1.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
 
     **C#**: Program.cs
 
@@ -197,8 +220,10 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```
 
       >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+
+1. Press **Ctrl + S** on your keyboard to save the file.
     
-7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
+1. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
     **C#**: Program.cs
 
@@ -245,7 +270,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     print("Response: " + generated_text + "\n")
     ```
 
-7. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+1. Press **Ctrl + S** on your keyboard to save the file.
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
