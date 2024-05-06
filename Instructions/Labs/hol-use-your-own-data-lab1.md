@@ -102,6 +102,8 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
+#### Validation
+
    <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
