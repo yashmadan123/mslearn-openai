@@ -246,7 +246,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 ### Task 5: Chat with a model grounded in your data
 
-Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
+1. Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
 
    ```
    I'd like to take a trip to New York. Where should I stay?
@@ -256,11 +256,11 @@ Now that you've added your data, ask the same questions as you did previously, a
    What are some facts about New York?
    ```
 
-You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided.
+    >**Note:** You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided.
 
-Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
+1. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
-> **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
+    > **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
 ### Task 6: Set up an application in Cloud Shell
 
