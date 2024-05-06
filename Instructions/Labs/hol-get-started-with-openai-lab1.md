@@ -49,13 +49,13 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
         ![](../media/keysendpoint.png "Keys and Endpoints")
 
-   <validation step="4b6b5a36-2650-4f80-a408-879c57cf61a2" />
+<validation step="4b6b5a36-2650-4f80-a408-879c57cf61a2" />
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-       
-      - If you receive a success message, you can proceed to the next task.
-      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Deploy a model
 
@@ -102,15 +102,13 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
    
    > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-#### Validation
+<validation step="d9a504d6-e0be-4fa9-a4ed-6ead18a10e03" />
 
-   <validation step="d9a504d6-e0be-4fa9-a4ed-6ead18a10e03" />
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-       
-      - If you receive a success message, you can proceed to the next task.
-      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Explore a model in the Completions playground
 
