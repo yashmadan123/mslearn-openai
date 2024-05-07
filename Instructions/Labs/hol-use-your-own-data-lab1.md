@@ -230,7 +230,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. Click on **Next (7)** to proceed with "**Data Management**".
 
-       ![](../media/image4.8.png "Add data configurations")
+      ![](../media/image4.8.png "Add data configurations")
    
 1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
