@@ -120,12 +120,10 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
     - **User**: `What are different types of artificial intelligence?`
     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
+      ![](../media/chatpt1.png)
+
     > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
-
-
-      
-    ![](../media/chatpt1.png)
-
+  
 4. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
       ![](../media/chatpt2.png)
