@@ -123,7 +123,8 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
     > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 
-      ![](../media/chatpt1.png)
+      
+    ![](../media/chatpt1.png)
 
 4. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
