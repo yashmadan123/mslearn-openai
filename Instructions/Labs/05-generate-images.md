@@ -96,13 +96,17 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced settings**.
+3. If you're prompted as Getting Started click on mount storage account and click on apply.
 
-   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
+   ![](../media/cloudshell_image1.png "Create storage advanced settings")
 
     > **Note**: If you already have a cloud shell set up in your Azure subscription, you may need to use the **Reset user settings** option in the ⚙️ menu to ensure the latest versions of Python and the .NET Framework are installed.
 
-4. Within the **Advanced settings** pane, enter the following details and then click on **Create storage**:
+4. Select i want to create a storage account and click on apply.
+
+   ![](../media/cloudshell_image2.png "Create storage advanced settings")
+
+4. Within the **Create storage account** pane, enter the following details and then click on **Create**:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
     - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
     - **Resource group**: Select **Use existing**.
@@ -111,7 +115,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
       - storage<inject key="DeploymentID" enableCopy="false"></inject>
     - **File share**: Create a new file share named **none**
 
-   ![](../media/openai-labs_advancedsettings_config.png "Create storage advanced settings")
+   ![](../media/cloudshell_image3.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
