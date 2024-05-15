@@ -123,7 +123,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-3. If you're prompted as Getting Started click on mount storage account and click on apply.
+3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
    ![](../media/cloudshell_image1.png "Create storage advanced settings")
 
@@ -157,12 +157,12 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 10. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/02-azure-openai-api
+    cd azure-openai/Labfiles/02-azure-openai-api
     ```
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
    
-   Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
+   Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
    
    ```bash
    code .

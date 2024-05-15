@@ -218,7 +218,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted as Getting Started click on mount storage account and click on apply.
+3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
    ![](../media/cloudshell_image1.png "Create storage advanced settings")
 
