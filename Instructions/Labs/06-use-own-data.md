@@ -285,7 +285,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![](../media/lab04-1.png "Create storage advanced settings")
 
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash*.
 
 7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
