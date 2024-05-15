@@ -25,7 +25,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Azure OpenAI services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure OpenAI services | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/openai_create.png)
 
