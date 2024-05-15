@@ -76,11 +76,11 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 5. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
 
-    ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/e1.png)
+    ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/elephant_first_image.png)
 
 6. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
-    ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/e2.png)
+    ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/elephant_first_image_2.png)
 
 ### Task 3: Use the REST API to generate images
 
