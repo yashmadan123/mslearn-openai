@@ -161,11 +161,15 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced settings**.
+3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
-   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
+   ![](../media/cloudshell_image1.png "Create storage advanced settings")
 
-4. Within the **Advanced settings** pane, enter the following details:
+4. Select i want to create a storage account and click on apply.
+
+   ![](../media/cloudshell_image2.png "Create storage advanced settings")
+
+5. Within the **Create storage account** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: Select <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing**.(3)
@@ -177,16 +181,16 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![](../media/storageaccreate2.png "Create storage advanced settings")
 
-5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-6. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-7. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/04-code-generation
@@ -199,6 +203,8 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```bash
    code .
     ```
+
+   > **Note**: If you get a popup on **Switch to Classic Cloud Shell** while running **code .** command click on **Confirm** and make sure you are in the correct project path.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
