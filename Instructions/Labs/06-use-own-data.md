@@ -25,7 +25,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai8.png)
 
-2. On **Azure OpenAI services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure OpenAI services | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/openai_create.png)
 
@@ -39,7 +39,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   
       ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
     
-4. Click on **Next** twice and click on **Create**.
+4. Click on **Next** thrice and click on **Create**.
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -51,6 +51,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
         ![](../media/keysendpoint.png "Keys and Endpoints")
 
+   <validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -99,7 +100,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
-8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+   <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -170,7 +171,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
 
-1. On **Storage Account | Containers** blade, click on **+ Containers (2)**.
+1. On **Storage Account | Containers** blade, click on **+ Container (2)**.
 
      ![](../media/storage-container.png "upload files")
 
@@ -186,7 +187,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. In the **Azure portal**, search for **AI search** and select **AI search**.
 
-2.  On **Azure AI services | AI search** blade, click on **Create**.
+2.  On **Azure AI services | AI search** blade, click on **+ Create**.
 
      ![](../media/5.png "upload files")
 
@@ -198,7 +199,7 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Location**: Select **<inject key="Region" enableCopy="false" />**
     - **Pricing tier**: Basic
 
-      ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
+      ![](../media/lab06-1.png "Create cognitive search resource")
 
 1. Wait until your search resource has been deployed. Select **Go to resources**.
 
@@ -206,7 +207,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
    ![](../media/x689.png)
 
-1. From the left navigation pane, under **Settings**, click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
+1. From the left navigation pane, under **Settings**, click on **Keys** and copy the primary admin key or secondary admin key and paste it in a notepad file for later use.
 
    ![](../media/keys-cognitive.png)
 
@@ -216,7 +217,7 @@ Next, add your data in the chat playground to see how it responds with your data
    
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
-    - **Select data source (1)**: Azure Blob Storage
+    - **Select data source (1)**: Azure Blob Storage (preview)
     - **Select Azure Blob storage resouce (2)**: *Choose the storage resource you created*
     - **Select storage container (3)**: *Choose the storage container you created*
     - **Select Azure AI Search resource (4)**: *Choose the search resource you created*
@@ -231,7 +232,9 @@ Next, add your data in the chat playground to see how it responds with your data
 
    ![](../media/datamanagement.png "Add data")
    
-1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
+1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Setup** pane.
+
+   <validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -267,25 +270,29 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Show advanced settings**.
+3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
-   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
+   ![](../media/cloudshell_image1.png "Create storage advanced settings")
 
-4. Within the **Advanced settings** pane, enter the following details:
+4. Select I want to create a storage account and click on **Next**.
+
+   ![](../media/cloudshell_image2.png "Create storage advanced settings")
+
+5. Within the **Create storage account** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: East US (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - str<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
+    - **Resource group**: 
+      - openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
+    - **Storage account name**:
+      - str<inject key="DeploymentID" enableCopy="false"></inject> (4)
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create storage** (6)
+    - Click **Create** (6)
 
-        ![](../media/storageaccreate1.png "Create storage advanced settings")
+    ![](../media/lab04-1.png "Create storage advanced settings")
 
-5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash*.
 
-6. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
