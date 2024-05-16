@@ -218,15 +218,18 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
+   ![](../media/cloudshell-bash.png)
 
-   ![](../media/cloudshell_image1.png "Create storage advanced settings")
+3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-4. Select i want to create a storage account and click on apply.
+   ![](../media/cloudshell-getting-started.png)
 
-   ![](../media/cloudshell_image2.png "Create storage advanced settings")
+4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
 
-6. Within the **Create storage account** pane, enter the following details and then click on **Create**:
+   ![](../media/cloudshell-mount-strg-account.png)
+
+5. Within the **Advanced settings** pane, enter the following details:
+
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing**.(3)
@@ -236,20 +239,20 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
-    ![](../media/cloudshell_image3.png "Create storage advanced settings")
+    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
-5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+7. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/03-prompt-engineering
@@ -262,15 +265,12 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```bash
    code .
     ```
-    
-   > **Note**: If you get a popup on **Switch to Classic Cloud Shell** while running **code .** command click on **Confirm** and make sure you are in the correct project path.
+
+   > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+
+   ![](../media/classic-cloudshell-prompt.png)
 
    <validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 5: Configure your application
 
