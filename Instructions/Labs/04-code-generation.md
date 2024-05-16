@@ -209,11 +209,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```bash
    code .
     ```
-   > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+   > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png)  
-
-   > **Note**: If you get a popup on **Switch to Classic Cloud Shell** while running **code .** command click on **Confirm** and make sure you are in the correct project path.
 
    <validation step="487047fe-1679-4902-9b43-ef466a2b8280" />
 
@@ -254,7 +252,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     pip install openai==1.13.3
     ```
 
-6. Add the necessary code for configuring the client.
+6. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
 
     **C#**
     `Program.cs`
