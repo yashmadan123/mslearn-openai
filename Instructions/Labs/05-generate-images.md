@@ -42,6 +42,10 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
 
+  * Under "Network" select the type as "default vaule"
+  * Under "Tags" dont select any values
+  * Under "Review+submit" review the values and click on create.
+
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
 5. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
