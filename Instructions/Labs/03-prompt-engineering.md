@@ -53,8 +53,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
+   <validation step="26d62b19-ac79-4900-8ee7-3cccec7288f9" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -103,9 +104,11 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
-   
+
+
+   <validation step="7e110ef6-8a1d-4bbd-b1e4-20c09d85fd56" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -226,8 +229,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    ![](../media/cloudshell-mount-strg-account.png)
 
 5. Within the **Advanced settings** pane, enter the following details:
+
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**:Select <inject key="Region" enableCopy="false" /> (2)
+    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing**.(3)
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Storage account**: Select **Create new**.(4)
@@ -261,15 +265,12 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```bash
    code .
     ```
+
    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
 
    ![](../media/classic-cloudshell-prompt.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
 
 ### Task 5: Configure your application
 

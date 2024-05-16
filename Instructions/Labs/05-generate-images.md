@@ -52,6 +52,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
+## Validation
+<validation step="a89125fa-fad8-4a69-8048-14fc0efa9e7b" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -193,6 +196,10 @@ Now you're ready to explore the code used to call the REST API and generate an i
         - The resolution (size) of the image to be generated.
     - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
     - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
+
+## Validation
+
+<validation step="f11f8446-e574-4959-ac0d-7c42d2c48345" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.

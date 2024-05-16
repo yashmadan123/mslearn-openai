@@ -52,8 +52,10 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
+   <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
+
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -103,8 +105,9 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
+   <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
+   
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -118,9 +121,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
-
-   ![](../media/cloudshell-bash.png)
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
 3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
@@ -131,6 +132,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    ![](../media/cloudshell-mount-strg-account.png)
 
 5. Within the **Advanced settings** pane, enter the following details:
+
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing**.(3)
@@ -152,29 +154,26 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
-  
+
 9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/02-azure-openai-api
+    cd azure-openai/Labfiles/02-azure-openai-api
     ```
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
    
-   Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
+   Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
    
    ```bash
    code .
    ```
-   > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+
+  > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
 
    ![](../media/classic-cloudshell-prompt.png) 
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="2e8dadd1-f827-4597-8d99-c814ec85fbab" />
 
 ### Task 4: Configure your application
 
