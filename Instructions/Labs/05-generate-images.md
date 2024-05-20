@@ -42,15 +42,15 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
 
-  * Under "Network" select the type as "default vaule"
+  * Under **Network** select the type as "default vaule"
     
     ![](../media/Network.png)
           
-  * Under "Tags" dont select any values
+  * Under **Tags** dont select any values
     
     ![](../media/Tags.png)
     
-  * Under "Review+submit" review the values and click on create.
+  * Under **Review+submit** review the values and click on create.
 
     ![](../media/Review+create.png)
     
