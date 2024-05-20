@@ -270,15 +270,19 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
-   ![](../media/cloudshell_image1.png "Create storage advanced settings")
+   ![](../media/cloudshell-bash.png)
 
-4. Select I want to create a storage account and click on **Next**.
+3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-   ![](../media/cloudshell_image2.png "Create storage advanced settings")
+   ![](../media/cloudshell-getting-started.png)
 
-5. Within the **Create storage account** pane, enter the following details:
+4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+
+   ![](../media/cloudshell-mount-strg-account.png)
+
+5. Within the **Advanced settings** pane, enter the following details:
+
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: 
@@ -288,9 +292,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
-    ![](../media/lab04-1.png "Create storage advanced settings")
+        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash*.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
 7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -299,7 +303,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-7. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/06-use-own-data
@@ -307,11 +311,14 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-8. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+9. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
     ```
+   > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+
+   ![](../media/classic-cloudshell-prompt.png) 
 
 ### Task 7: Configure your application
 
