@@ -122,7 +122,9 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
 3. In the **Configuration** section, ensure that your model deployment `text-turbo` is selected.
 
-4. In the **Setup** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
+4. In the **Setup** area, select the **Default** system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
+
+      >**Note:** On the **Update system message?** pop-up, select **Continue**.
 
 5. In the **Chat session**, submit the following queries, and review the responses:
 
@@ -147,7 +149,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/1.png)
 
-2. On **Storage Account** page, click on **Create**.
+2. On **Storage Account** page, click on **+ Create**.
 
       ![](../media/2.png)
 
@@ -179,7 +181,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/storage-container.png "upload files")
 
-1. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
+1. Create a container with the name "**openaidatasource**", and under **Anonymous access level** select **Container**. Select **Create**.
 
       ![](../media/image4.6.png "create container")
 
