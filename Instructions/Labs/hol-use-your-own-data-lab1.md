@@ -261,6 +261,8 @@ Next, add your data in the chat playground to see how it responds with your data
    ```
 
       >**Note:** You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided.
+      
+      >**Note:** If you encounter any errors, try refreshing the browser and repeating the process from step 1.
 
 1. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
