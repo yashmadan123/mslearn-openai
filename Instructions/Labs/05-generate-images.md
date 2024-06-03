@@ -44,15 +44,15 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
   * Under **Network** select the type as "default vaule"
     
-    ![](../media/Network.png)
+    ![](../media/Network_1.png)
           
   * Under **Tags** dont select any values
     
-    ![](../media/Tags.png)
+    ![](../media/Tags_1.png)
     
   * Under **Review+submit** review the values and click on create.
 
-    ![](../media/Review+create.png)
+    ![](../media/Review+create_1.png)
     
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
