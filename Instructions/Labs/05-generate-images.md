@@ -24,13 +24,13 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/Azure_OpenAI.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+   ![](../media/openai8.png)
+   
+3. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
    ![](../media/openai_create.png)
 
-3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
+4. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
@@ -79,7 +79,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/Azure_OpenAI.png)
+   ![](../media/openai8.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab05-<inject key="DeploymentID" enableCopy="false"></inject>**
 
