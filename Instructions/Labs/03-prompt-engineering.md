@@ -160,56 +160,56 @@ Before using your app, examine how prompt engineering improves the model respons
 10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 11. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
 
-    **User:**
+ **User:**
 
-    ```code
-   New York Baseballers Wins Big Against Chicago
-   
-   New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
-   
-   Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
-   
-   The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
-    ```
+ ```code
+New York Baseballers Wins Big Against Chicago
 
-    **Assistant:**
+New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
 
-    ```code
-   Sports
-    ```
+Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
+
+The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
+ ```
+
+ **Assistant:**
+
+ ```code
+Sports
+ ```
 
 12. Add another example with the following text.
 
-    **User:**
+ **User:**
 
-    ```code
-   Joyous moments at the Oscars
+ ```code
+Joyous moments at the Oscars
 
-   The Oscars this past week where quite something!
-   
-   Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
-   These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
-   
-   From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
-    ```
+The Oscars this past week where quite something!
 
-    **Assistant:**
+Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
+These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
 
-    ```code
-   Entertainment
-    ```
+From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
+ ```
+
+ **Assistant:**
+
+ ```code
+Entertainment
+ ```
 
 13. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
 
-    ```code
-   Severe drought likely in California
+ ```code
+Severe drought likely in California
 
-   Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
-   
-   In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
-   
-   Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-    ```
+Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+
+In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+
+Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+ ```
 
 14. This time the model should respond with an appropriate classification, even without instructions.
 
