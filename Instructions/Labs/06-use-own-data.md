@@ -103,16 +103,16 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
-8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
 #### Validation
 
 <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Observe normal chat behavior without adding your own data
 
@@ -124,9 +124,9 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
     - **Chat session** - used to submit chat messages and view responses.
     - **Configuration** - used to configure settings for the model deployment.
 
-3. In the **Configuration** section, ensure that your model deployment `text-turbo` is selected.
-4. In the **Setup** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
-5. In the **Chat session**, submit the following queries, and review the responses:
+2. In the **Configuration** section, ensure that your model deployment `text-turbo` is selected.
+3. In the **Setup** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
+4. In the **Chat session**, submit the following queries, and review the responses:
 
     ```
     I'd like to take a trip to New York. Where should I stay?
@@ -167,31 +167,31 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/image4.5.png "allow blob access")
 
-1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
+4. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
-1. On the deployment blade, click Go to resource.
+5. On the deployment blade, click Go to resource.
 
     ![](../media/3.png "upload files")
 
-1. On **Storage Account | Container** blade, click on **Create**.
+6. On **Storage Account | Container** blade, click on **Create**.
 
      ![](../media/4.png "upload files")
 
-1. Create a container with the name "openaidatasource" and enable Anonymous access level for container.
+7. Create a container with the name "openaidatasource" and enable Anonymous access level for container.
 
       ![](../media/image4.6.png "create container")
 
-1. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+8. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
       ![](../media/image4.7.png "upload files")
 
-1. In the **Azure portal**, search for **Azure AI search** and select **Azure Ai search**.
+9. In the **Azure portal**, search for **Azure AI search** and select **Azure Ai search**.
 
-2.  On **Azure AI services | AI search** blade, click on **Create**.
+10.  On **Azure AI services | AI search** blade, click on **Create**.
 
      ![](../media/5.png "upload files")
 
-3. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
+11. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
@@ -201,21 +201,21 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
 
-1. Wait until your search resource has been deployed.
+12. Wait until your search resource has been deployed.
 
-1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
+13. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
    ![](../media/x689.png)
 
-1. From the left navigation pane,click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
+14. From the left navigation pane,click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
 
    ![](../media/x690.png)
 
-1. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+15. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
    ![](../media/image4.2.png "Add your data in setup pane")
    
-1. In the **Add data**, enter the following values for your data source and then click on **Next**.
+16. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
     - **Select data source**: Azure Blob Storage
     - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
@@ -223,24 +223,24 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Enter the index name**: margiestravel
     - **Indexer schedule**: Once
 
-1. Click on next to proceed with "Data Management"
+17. Click on next to proceed with "Data Management"
 
     ![](../media/image4.8.png "Add data configurations")
    
-1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+18. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
    ![](../media/datamanagement.png "Add data")
    
-1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
+19. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
    
 #### Validation
 
 <validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 5: Chat with a model grounded in your data
 
