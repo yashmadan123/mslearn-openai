@@ -232,6 +232,12 @@ Next, add your data in the chat playground to see how it responds with your data
 
 <validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ### Task 5: Chat with a model grounded in your data
 
 Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
