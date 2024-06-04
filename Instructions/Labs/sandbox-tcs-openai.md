@@ -19,53 +19,31 @@ In this lab, you will complete the following tasks:
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Resource groups (1)** and select **Resource groups (2)**.
 
-   ![](../media/openai8.png)
+   ![](../media/cloudlabs-rg.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+1. Select the **CloudLabs-Azure-OpenAI (1)** resource group from the list and verify whether the **CloudLabs-AzureOpenAI (2)** resource is created. After verifying, select the **CloudLabs-AzureOpenAI** resource.
 
-   ![](../media/openai_create1.png)
-
-3. Create an **Azure OpenAI** resource with the following settings:
-   
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
-  
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
-
-4. Click on **Next** twice and click on **Create**.
-
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+   ![](../media/openai-rg.png)
 
 ### Task 2: Verify the Model Deployments in Azure OpenAI Studio
 
 Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/openai8.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
-
-   ![](../media/OpenAI_select.png)
-
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
-
-   ![](../media/openai_studio.png)
+   ![](../media/gotoazureportal.png)
    
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+1. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+1. In the **Deployments** page, click on **+ Create new deployment**.
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
+1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo (1)
       
         >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
@@ -85,6 +63,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 *Playgrounds* are useful interfaces in Azure OpenAI Studio that you can use to experiment with your deployed models without needing to develop your own client application.
 
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
+
 2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected and then in the **Examples** list, select **Generate a quiz**.
 
     The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
