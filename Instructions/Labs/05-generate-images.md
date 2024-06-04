@@ -24,13 +24,13 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/Azure_OpenAI.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+   ![](../media/openai8.png)
+   
+3. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
    ![](../media/openai_create.png)
 
-3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
+4. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
@@ -44,15 +44,15 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
   * Under **Network** select the type as "default vaule"
     
-    ![](../media/Network.png)
+    ![](../media/Network_1.png)
           
   * Under **Tags** dont select any values
     
-    ![](../media/Tags.png)
+    ![](../media/Tags_1.png)
     
   * Under **Review+submit** review the values and click on create.
 
-    ![](../media/Review+create.png)
+    ![](../media/Review+create_1.png)
     
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -65,13 +65,13 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
 ## Validation
+
 <validation step="a89125fa-fad8-4a69-8048-14fc0efa9e7b" />
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Explore image generation in the DALL-E playground
 
@@ -79,7 +79,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/Azure_OpenAI.png)
+   ![](../media/openai8.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab05-<inject key="DeploymentID" enableCopy="false"></inject>**
 
@@ -107,32 +107,36 @@ The Azure OpenAI service provides a REST API that you can use to submit prompts 
 
 In this exercise, you'll use a simple Python or Microsoft C# app to generate images by calling the REST API. You'll run the code in the cloud shell console interface in the Azure portal.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal. 
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced settings**.
+3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
+   ![](../media/cloudshell-getting-started.png)
 
-    > **Note**: If you already have a cloud shell set up in your Azure subscription, you may need to use the **Reset user settings** option in the ⚙️ menu to ensure the latest versions of Python and the .NET Framework are installed.
+4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
 
-4. Within the **Advanced settings** pane, enter the following details and then click on **Create storage**:
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
-    - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
-    - **Resource group**: Select **Use existing**.
+   ![](../media/cloudshell-mount-strg-account.png)
+
+5. Within the **Advanced settings** pane, enter the following details:
+
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
+    - **Resource group**: Select **Use existing**.(3)
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.
+    - **Storage account**: Select **Create new**.(4)
       - storage<inject key="DeploymentID" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none**
+    - **File share**: Create a new file share named **none** (5)
+    - Click **Create Storage** (6)
 
-   ![](../media/openai-labs_advancedsettings_config.png "Create storage advanced settings")
+    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
-5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-6. Once the terminal starts, enter the following command to download the application code you are going to work with.
+7. Once the terminal starts, enter the following command to download the application code you are going to work with.
 
     ```bash
    rm -r azure-openai -f
@@ -205,12 +209,11 @@ Now you're ready to explore the code used to call the REST API and generate an i
 ## Validation
 
 <validation step="f11f8446-e574-4959-ac0d-7c42d2c48345" />
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Run the app
 
