@@ -114,23 +114,23 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
    
-1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
+2. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
    ![](../media/default1.png)
    
-1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
 
-1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
+4. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
-1. Next, send the prompt `Do the same thing, but this time write it in C#`.
+5. Next, send the prompt `Do the same thing, but this time write it in C#`.
    
-1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
+6. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
    
-1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
+7. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
 
     ```code
     What does the following function do?  
@@ -146,11 +146,11 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
     end
     ```
 
-1. Observe the output, which explains what the function does in natural language.
+8. Observe the output, which explains what the function does in natural language.
 
-1. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
+9. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
 
-1. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
+10. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
     
 ### Task 4: Set up an application in Cloud Shell
 
@@ -249,7 +249,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     pip install openai==1.13.3
     ```
 
-6. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
+5. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
 
     **C#**
     `Program.cs`
@@ -294,7 +294,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     )
     ```
 
-10. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
+6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
 ### Task 6: Run your application
 
@@ -303,41 +303,41 @@ Now that your app has been configured, run it to try generating code for each us
 > **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
-1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-1. Run the application.
+2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+3. Run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
 
-1. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
+4. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
-1. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
+5. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
     ```prompt
     Write four unit tests for the following function.\n---\n
     ```
 
-1. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
+6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
-1. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
+7. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
 
-1. To check the results paste the following code in the terminal:
+8. To check the results paste the following code in the terminal:
 
     ```
    cd result
     ```
 
-1. Copy the below command in the terminal to see the contents of the app.txt file.
+9. Copy the below command in the terminal to see the contents of the app.txt file.
 
    ```
    cat app.txt
