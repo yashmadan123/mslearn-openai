@@ -93,7 +93,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     - **Enable dynamic quota**: Enabled (7)
     - Click on **Create** (8)
       
-      ![](../media/x991.png)
+      ![](../media/demoss.png)
 
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
@@ -272,7 +272,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 4. Within the **Advanced settings** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: East US (2)
+    - **CloudShell region**: Select <inject key="Region" enableCopy="false" />(2)
     - **Resource group**: Select **Use existing**.(3)
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Storage account**: Select **Create new**.(4)
