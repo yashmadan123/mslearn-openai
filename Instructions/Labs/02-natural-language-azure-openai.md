@@ -124,13 +124,18 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced Settings**.
+3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
+   ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Advanced settings** pane, enter the following details:
+4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+
+   ![](../media/cloudshell-mount-strg-account.png)
+
+5. Within the **Advanced settings** pane, enter the following details:
+
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing**.(3)
@@ -140,9 +145,8 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
-    ![](../media/storageaccreate1.png "Create storage advanced settings")
+    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
-5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
