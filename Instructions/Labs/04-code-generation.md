@@ -50,14 +50,16 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+   
 #### Validation
 
 <validation step="61935caf-9a97-4d19-b393-273fb942feef" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ### Task 2: Deploy a model
 
@@ -103,31 +105,36 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 #### Validation
 
 <validation step="0fa0071a-87c2-4194-9374-639c1b9700ac" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ### Task 3: Generate code in chat playground
 
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-1. In the **Setup** section at the top, select the **Default** system message template and click on continue.
-1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+   
+2. In the **Setup** section at the top, select the **Default** system message template and click on continue.
+
+   ![](../media/default1.png)
+   
+3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
 
-1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
-1. Next, send the prompt `Do the same thing, but this time write it in C#`.
-1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
-1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
+4. The model will likely respond with a function, with some explanation of what the function does and how to call it.
+5. Next, send the prompt `Do the same thing, but this time write it in C#`.
+6. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
+7. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
 
     ```code
     What does the following function do?  
@@ -143,11 +150,11 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
     end
     ```
 
-1. Observe the output, which explains what the function does in natural language.
+8. Observe the output, which explains what the function does in natural language.
 
-1. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
+9. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
 
-1. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
+10. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
     
 ### Task 4: Set up an application in Cloud Shell
 
@@ -167,7 +174,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/cloudshell_image2.png "Create storage advanced settings")
 
-4. Within the **Create storage account** pane, enter the following details:
+5. Within the **Create storage account** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: East US (2)
     - **Resource group**: Select **Use existing**.(3)
@@ -179,16 +186,16 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![](../media/lab04-1.png "Create storage advanced settings")
 
-5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-6. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-7. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/04-code-generation
@@ -204,14 +211,19 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    > **Note**: If you get a popup on **Switch to Classic Cloud Shell** while running **code .** command click on **Confirm** and make sure you are in the correct project path.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   ![](../media/classic-cloudshell-prompt.png)
 
+
+   
 #### Validation
 
 <validation step="487047fe-1679-4902-9b43-ef466a2b8280" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 
 ### Task 5: Configure your application
@@ -244,7 +256,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     pip install openai==1.13.3
     ```
 
-6. Add the necessary code for configuring the client.
+5. Add the necessary code for configuring the client.
 
     **C#**
     `Program.cs`
@@ -289,7 +301,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     )
     ```
 
-10. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
+6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
 ### Task 6: Run your application
 
@@ -298,41 +310,41 @@ Now that your app has been configured, run it to try generating code for each us
 > **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
-1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-1. Run the application.
+2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+3. Run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
 
-1. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
+4. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
-1. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
+5. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
     ```prompt
     Write four unit tests for the following function.\n---\n
     ```
 
-1. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
+6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
-1. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
+7. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
 
-1. To check the results paste the following code in the terminal:
+8. To check the results paste the following code in the terminal:
 
     ```
    cd result
     ```
 
-1. Copy the below command in the terminal to see the contents of the app.txt file.
+9. Copy the below command in the terminal to see the contents of the app.txt file.
 
    ```
    cat app.txt

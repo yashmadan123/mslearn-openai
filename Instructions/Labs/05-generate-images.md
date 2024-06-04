@@ -56,6 +56,12 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 <validation step="a89125fa-fad8-4a69-8048-14fc0efa9e7b" />
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ### Task 2: Explore image generation in the DALL-E playground
 
 You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with image generation.
@@ -106,7 +112,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
    ![](../media/cloudshell_image2.png "Create storage advanced settings")
 
-4. Within the **Create storage account** pane, enter the following details and then click on **Create**:
+5. Within the **Create storage account** pane, enter the following details and then click on **Create**:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
     - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
     - **Resource group**: Select **Use existing**.
@@ -117,9 +123,9 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
    ![](../media/cloudshell_image3.png "Create storage advanced settings")
 
-5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-6. Once the terminal starts, enter the following command to download the application code you are going to work with.
+7. Once the terminal starts, enter the following command to download the application code you are going to work with.
 
     ```bash
    rm -r azure-openai -f
@@ -128,7 +134,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-7. Navigate to the folder for the language of your preference  by running the appropriate command.
+8. Navigate to the folder for the language of your preference  by running the appropriate command.
 
     **Python**
 
@@ -142,7 +148,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
    cd azure-openai/Labfiles/05-image-generation/CSharp
     ```
 
-8. Use the following command to open the built-in code editor and see the code files you will be working with.
+9. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
@@ -192,6 +198,11 @@ Now you're ready to explore the code used to call the REST API and generate an i
 #### Validation
 
 <validation step="f11f8446-e574-4959-ac0d-7c42d2c48345" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Run the app
 

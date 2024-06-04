@@ -57,6 +57,12 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 <validation step="26d62b19-ac79-4900-8ee7-3cccec7288f9" />
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ### Task 2: Deploy a model
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
@@ -81,7 +87,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
+4. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo-16k (1)
    
       > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
@@ -106,13 +112,19 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 <validation step="7e110ef6-8a1d-4bbd-b1e4-20c09d85fd56" />
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ### Task 3: Apply prompt engineering in chat playground
 
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a Python app of animals with fun names.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-1. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
-1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
+3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
    1. Create a list of animals
@@ -121,9 +133,9 @@ Before using your app, examine how prompt engineering improves the model respons
     ```
     >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
 
-1. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
-1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
-1. Format the instructions as python comments. Send the following prompt to the model.
+4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
+5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
+6. Format the instructions as python comments. Send the following prompt to the model.
 
     ```code
    # 1. Create a list of animals
@@ -131,9 +143,9 @@ Before using your app, examine how prompt engineering improves the model respons
    # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
 
-1. The model should correctly respond with complete python code doing what the comments requested.
-1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
-1. Send the following prompt to the model.
+7. The model should correctly respond with complete python code doing what the comments requested.
+8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
+9. Send the following prompt to the model.
 
     ```code
    Severe drought likely in California
@@ -145,61 +157,61 @@ Before using your app, examine how prompt engineering improves the model respons
    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-1. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
-1. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
+10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
+11. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
 
-    **User:**
+ **User:**
 
-    ```code
-   New York Baseballers Wins Big Against Chicago
-   
-   New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
-   
-   Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
-   
-   The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
-    ```
+ ```code
+New York Baseballers Wins Big Against Chicago
 
-    **Assistant:**
+New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
 
-    ```code
-   Sports
-    ```
+Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
 
-1. Add another example with the following text.
+The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
+ ```
 
-    **User:**
+ **Assistant:**
 
-    ```code
-   Joyous moments at the Oscars
+ ```code
+Sports
+ ```
 
-   The Oscars this past week where quite something!
-   
-   Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
-   These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
-   
-   From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
-    ```
+12. Add another example with the following text.
 
-    **Assistant:**
+ **User:**
 
-    ```code
-   Entertainment
-    ```
+ ```code
+Joyous moments at the Oscars
 
-1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+The Oscars this past week where quite something!
 
-    ```code
-   Severe drought likely in California
+Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
+These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
 
-   Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
-   
-   In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
-   
-   Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-    ```
+From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
+ ```
 
-1. This time the model should respond with an appropriate classification, even without instructions.
+ **Assistant:**
+
+ ```code
+Entertainment
+ ```
+
+13. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+
+ ```code
+Severe drought likely in California
+
+Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+
+In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+
+Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+ ```
+
+14. This time the model should respond with an appropriate classification, even without instructions.
 
 ### Task 4: Set up an application in Cloud Shell
 
@@ -211,13 +223,20 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced settings**.
+   ![](../media/cloudshell-bash.png)
 
-   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
+3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-4. Within the **Advanced settings** pane, enter the following details:
+   ![](../media/cloudshell-getting-started.png)
+
+4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+
+   ![](../media/cloudshell-mount-strg-account.png)
+
+5. Within the **Advanced settings** pane, enter the following details:
+
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**:Select <inject key="Region" enableCopy="false" /> (2)
+    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing**.(3)
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Storage account**: Select **Create new**.(4)
@@ -225,8 +244,8 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
-    ![](../media/storageaccreate1.png "Create storage advanced settings")
-
+    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+   
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
@@ -255,6 +274,16 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 #### Validation
 
 <validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+
+   ![](../media/classic-cloudshell-prompt.png)
+
 
 ### Task 5: Configure your application
 
@@ -286,7 +315,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     pip install openai==1.13.3
     ```
 
-6. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -302,7 +331,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     from openai import AsyncAzureOpenAI
     ```
 
-7. Open up the application code for your language and add the necessary code for configuring the client.
+6. Open up the application code for your language and add the necessary code for configuring the client.
 
     **C#**: Program.cs
 
@@ -322,7 +351,7 @@ Applications for both C# and Python have been provided, and both apps feature th
         )
     ```
 
-8. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
     **C#**: Program.cs
 
@@ -364,7 +393,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     )
     ```
 
-9. The  modified code should look like as shown below:
+8. The  modified code should look like as shown below:
 
     **C#**
       
@@ -552,14 +581,14 @@ Applications for both C# and Python have been provided, and both apps feature th
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
 1. In the folder of your preferred language, open `system.txt` in Visual Studio Code. For each of the interations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
-1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+2. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python prompt-engineering.py`
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-1. For the first iteration, enter the following prompts:
+3. For the first iteration, enter the following prompts:
 
     **System message**
 
@@ -575,8 +604,8 @@ Now that your app has been configured, run it to send your request to your model
     ```
      ![](../media/x233.png)
 
-1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
-1. Next, enter the following prompts which specify a format for the response:
+4. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
+5. Next, enter the following prompts which specify a format for the response:
 
     **System message**
 
@@ -591,8 +620,8 @@ Now that your app has been configured, run it to send your request to your model
        - It specializes in elephants 
        - Call for donations to be given at our website
     ```
-1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
-1. Next, enter the following prompts that additionally specify the content:
+6. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
+7. Next, enter the following prompts that additionally specify the content:
 
     **System message**
 
@@ -610,8 +639,8 @@ Now that your app has been configured, run it to send your request to your model
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
 
-1. Observe the output, and see how the email has changed based on your clear instructions.
-1. Next, enter the following prompts where we add details about tone to the system message:
+8. Observe the output, and see how the email has changed based on your clear instructions.
+9. Next, enter the following prompts where we add details about tone to the system message:
 
     **System message**
 
@@ -629,10 +658,10 @@ Now that your app has been configured, run it to send your request to your model
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
 
-1. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
-1. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
-1. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
-1. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+10. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
+11. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
+12. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
+13. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
 
     **C#**: Program.cs
 
@@ -652,8 +681,8 @@ Now that your app has been configured, run it to send your request to your model
     user_message = grounding_text + user_message
     ```
 
-1. Save the file and rerun your app.
-1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
+14. Save the file and rerun your app.
+15. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
 
     **System message**
 
