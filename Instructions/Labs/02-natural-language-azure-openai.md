@@ -170,7 +170,10 @@ Open the built-in code editor, and observe the text file that you'll be summariz
 ```bash
 code .
 ```
+ > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
 
+   ![](../media/classic-cloudshell-prompt.png) 
+   
 #### Validation
 
 <validation step="2e8dadd1-f827-4597-8d99-c814ec85fbab" />
@@ -306,7 +309,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     print("Response: " + generated_text + "\n")
     ```
 
-7. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
