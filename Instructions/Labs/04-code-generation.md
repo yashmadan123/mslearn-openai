@@ -50,6 +50,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
+   #### Validation
+
    <validation step="61935caf-9a97-4d19-b393-273fb942feef" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -100,6 +102,8 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
+
+#### Validation   
 
 <validation step="0fa0071a-87c2-4194-9374-639c1b9700ac" />
 
@@ -172,7 +176,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Advanced settings** pane, enter the following details:
+5. Within the **Create storage account** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
@@ -209,7 +213,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```
    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
 
-   ![](../media/classic-cloudshell-prompt.png)  
+   ![](../media/classic-cloudshell-prompt.png)
+
+#### Validation
 
 <validation step="487047fe-1679-4902-9b43-ef466a2b8280" />
 
