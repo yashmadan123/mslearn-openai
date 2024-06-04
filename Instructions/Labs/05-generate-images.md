@@ -204,9 +204,6 @@ Now you're ready to explore the code used to call the REST API and generate an i
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 2: Explore image generation in the DALL-E playground
-
-
 ### Task 4: Run the app
 
 Now that you've reviewed the code, it's time to run it and generate some images.
