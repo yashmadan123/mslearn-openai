@@ -53,6 +53,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
+#### Validation
+
    <validation step="26d62b19-ac79-4900-8ee7-3cccec7288f9" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
