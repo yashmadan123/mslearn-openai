@@ -81,18 +81,18 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
    ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
+    - **Select a Model**: gpt-4 (1)
       
-      > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
+      > **Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
       
-    - **Model version**: Auto-update to default (2)
+    - **Model version**: 1106-Preview (2)
     - **Deployment type**: Standard (3)
     - **Deployment name**: text-turbo (4)
     - Click on **Advanced Settings** (5)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
     - **Enable dynamic quota**: Enabled (7)
     - Click on **Create** (8)
-  
+      
       ![](../media/x991.png)
 
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
@@ -102,6 +102,12 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 #### Validation
 
 <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Observe normal chat behavior without adding your own data
 
