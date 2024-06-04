@@ -262,36 +262,44 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Advanced settings**.
 
-   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
+   ![](../media/cloudshell-bash.png)
 
-4. Within the **Advanced settings** pane, enter the following details:
+3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+
+   ![](../media/cloudshell-getting-started.png)
+
+4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+
+   ![](../media/cloudshell-mount-strg-account.png)
+
+5. Within the **Advanced settings** pane, enter the following details:
+
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: Select <inject key="Region" enableCopy="false" />(2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - str<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
+    - **Resource group**: 
+      - openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
+    - **Storage account name**:
+      - str<inject key="DeploymentID" enableCopy="false"></inject> (4)
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create** (6)
 
-    ![](../media/storageaccreate1.png "Create storage advanced settings")
+        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
-5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-6. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-7. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/06-use-own-data
@@ -299,7 +307,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-8. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+9. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
