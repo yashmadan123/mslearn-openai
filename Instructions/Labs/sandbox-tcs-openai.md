@@ -34,29 +34,10 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
    ![](../media/gotoazureportal.png)
-   
-1. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+1. In the *Azure OpenAI Studio*, and verify the deployments that are listed.
 
-1. In the **Deployments** page, click on **+ Create new deployment**.
-
-   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
-
-1. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo (1)
-      
-        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-     
-    - **Model version**: Auto-update to default (2)<br>
-    - **Deployment type**: Standard (3)
-    - **Deployment name**: my-gpt-model (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
-  
-      ![](../media/x992.png)
+   ![](../media/azureopenaistudio.png)
 
 ### Task 3: Explore a model in the Completions playground
 
