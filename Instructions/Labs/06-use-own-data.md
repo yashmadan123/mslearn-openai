@@ -56,6 +56,12 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 <validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ### Task 2: Deploy a model
 
 To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and use our data to ground its responses.
