@@ -6,8 +6,8 @@ Azure OpenAI Service brings the generative AI models developed by OpenAI to the 
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
+- Task 1: Review the Azure OpenAI Resource
+- Task 2: Verify the Model Deployments in Azure OpenAI Studio
 - Task 3: Explore a model in the Completions playground
 - Task 4: Use the Chat playground
 - Task 5: Explore prompts and parameters 
@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 40 minutes
 
-### Task 1: Provision an Azure OpenAI resource
+### Task 1: Review the Azure OpenAI Resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
@@ -41,17 +41,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-## Validation
-
-<validation step="4b6b5a36-2650-4f80-a408-879c57cf61a2" />
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-### Task 2: Deploy a model
+### Task 2: Verify the Model Deployments in Azure OpenAI Studio
 
 Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
@@ -89,21 +79,6 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
     - Click on **Create** (8)
   
       ![](../media/x992.png)
-
-7. This will deploy a model which you will be playing around with as you proceed.
-
-   > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
-   > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
-
-## Validation
-
-<validation step="d9a504d6-e0be-4fa9-a4ed-6ead18a10e03" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Explore a model in the Completions playground
 
