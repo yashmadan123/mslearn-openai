@@ -317,6 +317,10 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    code .
     ```
 
+ > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+
+   ![](../media/classic-cloudshell-prompt.png) 
+
 ### Task 7: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
