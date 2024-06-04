@@ -51,6 +51,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
         ![](../media/keysendpoint.png "Keys and Endpoints")
 
+#### Validation
+
 <validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -98,6 +100,8 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
       ![](../media/demoss.png)
 
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
+
+#### Validation
       
 <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
@@ -232,6 +236,8 @@ Next, add your data in the chat playground to see how it responds with your data
    ![](../media/datamanagement.png "Add data")
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Setup** pane.
+
+#### Validation
 
 <validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
    

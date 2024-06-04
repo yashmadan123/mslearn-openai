@@ -92,6 +92,8 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
 
+#### Validation
+
 <validation step="41a01133-42f4-4a98-80fb-444c2038db61" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:

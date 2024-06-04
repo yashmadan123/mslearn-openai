@@ -53,6 +53,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
+#### Validation
+
    <validation step="26d62b19-ac79-4900-8ee7-3cccec7288f9" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -105,6 +107,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
+#### Validation
 
    <validation step="7e110ef6-8a1d-4bbd-b1e4-20c09d85fd56" />
 

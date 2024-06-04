@@ -52,8 +52,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-   <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
+   #### Validation
 
+   <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -84,7 +85,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
     
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
+6. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo-16k (1)
       
        >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
@@ -104,6 +105,8 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+
+   #### Validation
 
    <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
    
@@ -173,7 +176,14 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png) 
 
+ #### Validation
+ 
    <validation step="2e8dadd1-f827-4597-8d99-c814ec85fbab" />
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Configure your application
 
@@ -300,7 +310,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     print("Response: " + generated_text + "\n")
     ```
 
-7. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
@@ -315,11 +325,11 @@ Now that your app has been configured, run it to send your request to your model
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-1. When prompted, enter the text `What hike should I do near Rainier?`.
-1. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
-1. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
-1. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
-1. Run the application again using the prompts above, and observe the output.
+2. When prompted, enter the text `What hike should I do near Rainier?`.
+3. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
+4. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
+5. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
+6. Run the application again using the prompts above, and observe the output.
 
 Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
 
@@ -328,9 +338,9 @@ Increasing the temperature often causes the response to vary, even when provided
 In most real-world applications, the ability to reference previous parts of the conversation allows for a more realistic interaction with an AI agent. The Azure OpenAI API is stateless by design, but by providing a history of the conversation in your prompt you enable the AI model to reference past messages.
 
 1. Run the app again and provide the prompt `Where is a good hike near Boise?`.
-1. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
-1. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have the past conversation messages for reference.
-1. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
+2. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
+3. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have the past conversation messages for reference.
+4. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
 
     **C#**: Program.cs
 
@@ -349,7 +359,7 @@ In most real-world applications, the ability to reference previous parts of the 
     messages_array = [{"role": "system", "content": system_message}]
     ```
 
-1. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in python with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
+5. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in python with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
 
     **C#**: Program.cs
 
@@ -404,7 +414,7 @@ In most real-world applications, the ability to reference previous parts of the 
     print("Summary: " + generated_text + "\n")
     ```
 
-1. The final code should look like as shown below:
+6. The final code should look like as shown below:
 
    **C#**: Program.cs
 
@@ -566,15 +576,15 @@ In most real-world applications, the ability to reference previous parts of the 
        main()
    ```
 
-1. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
-1. In the terminal pane, enter the following command to run the application.
+7. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
+8. In the terminal pane, enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python test-openai-model.py`
 
-1. Run the app again and provide the prompt `Where is a good hike near Boise?`.
-1. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
-1. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow up questions referencing previous answers, and each time the history provides context for the model to answer.
+9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
+10. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
+11. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow up questions referencing previous answers, and each time the history provides context for the model to answer.
 
     > **Tip**: The token count is only set to 1200, so if the conversation continues too long the application will run out of available tokens, resulting in an incomplete prompt. In production uses, limiting the length of the history to the most recent inputs and responses will help control the number of required tokens.
 

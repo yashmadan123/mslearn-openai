@@ -121,7 +121,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Advanced settings** pane, enter the following details:
+5. Within the **Create storage account** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
