@@ -16,6 +16,70 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 30 minutes
 
+### Task 1: Deploy a model
+
+To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
+
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/openai8.png)
+
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject>**
+
+   ![](../media/OpenAI_select.png)
+
+3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
+      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+
+   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+
+4. In the **Overview** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+
+   ![](../media/openai_studio1.png)
+   
+5. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+
+   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+
+6. In the **Deployments** page, click on **+ Create new deployment**.
+
+   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
+
+7. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Select a Model**: gpt-35-turbo-16k (1)
+   
+      > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
+      
+    - **Model version**: Auto-update to default (2)
+    - - **Deployment type**: Standard (3)
+    - **Deployment name**: text-turbo (4)
+    - Click on **Advanced Settings** (5)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
+    - **Enable dynamic quota**: Enabled (7)
+    - Click on **Create** (8)
+  
+      ![](../media/x991.png)
+
+8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+
+   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+   
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+   
+#### Validation
+
+<validation step="7e110ef6-8a1d-4bbd-b1e4-20c09d85fd56" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
+
 ### Task 1: Apply prompt engineering in chat playground
 
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a Python app of animals with fun names.
