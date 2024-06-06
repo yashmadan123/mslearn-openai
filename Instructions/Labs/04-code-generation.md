@@ -38,43 +38,9 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/openai_studio1.png)
    
-5. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
-
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
-
-6. In the **Deployments** page, click on **+ Create new deployment**.
-
-   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
-
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
-      
-        > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
-        
-    - **Model version**: Auto-update to default (2)
-    - **Deployment type**: Standard (3)
-    - **Deployment name**: 35turbo (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
-  
-      ![](../media/x991.png)
-
-8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
-   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
-
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
-
-#### Validation
-
-<validation step="0fa0071a-87c2-4194-9374-639c1b9700ac" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+5. In **Welcome to Azure OpenAI Service** page, Choose **Deployments**, Select the existing deployment **text-turbo** (i.e gpt 35 turbo-16K ).
+   
+   ![](../media/text-turbo-1.png "Create a new deployment")
 
 ### Task 2: Generate code in chat playground
 
