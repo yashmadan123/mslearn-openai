@@ -8,9 +8,8 @@ In this exercise, you'll use a DALL-E version 3 model to generate images based o
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Explore image-generation in the DALL-E playground
-- Task 3: Use the REST API to generate images
+- Task 1: Explore image-generation in the DALL-E playground
+- Task 2: Use the REST API to generate images
 - Task 3.1: Prepare the app environment
 - Task 3.2: Configure your application
 - Task 3.3: View application code
@@ -18,62 +17,7 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 30 minutes
 
-### Task 1:  Provision an Azure OpenAI resource
-
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/openai8.png)
-   
-3. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
-
-   ![](../media/openai_create.png)
-
-4. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
-   
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab05-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
-
-   ![](../media/openai-lab01_01.png)
-
-   >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
-
-  * Under **Network** select the type as "default vaule"
-    
-    ![](../media/Network_1.png)
-          
-  * Under **Tags** dont select any values
-    
-    ![](../media/Tags_1.png)
-    
-  * Under **Review+submit** review the values and click on create.
-
-    ![](../media/Review+create_1.png)
-    
-4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-5. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
-      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
-
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
-
-## Validation
-
-<validation step="a89125fa-fad8-4a69-8048-14fc0efa9e7b" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-### Task 2: Explore image generation in the DALL-E playground
+### Task 1: Explore image generation in the DALL-E playground
 
 You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with image generation.
 
@@ -81,29 +25,37 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab05-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+
+   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+
+4. In the **Overiew** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio.png)
 
-4. From the left navigation pane, select the **DALL-E Playground**.
+5. From the left navigation pane, select the **DALL-E Playground**.
 
-5. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
+6. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
 
     ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/e1.png)
 
-6. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
+7. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
     ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/e2.png)
 
-### Task 3: Use the REST API to generate images
+### Task 2: Use the REST API to generate images
 
 The Azure OpenAI service provides a REST API that you can use to submit prompts for content generation - including images generated by a DALL-E model.
 
-#### Task 3.1: Prepare the app environment
+#### Task 2.1: Prepare the app environment
 
 In this exercise, you'll use a simple Python or Microsoft C# app to generate images by calling the REST API. You'll run the code in the cloud shell console interface in the Azure portal.
 
@@ -165,7 +117,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
    code .
     ```
 
-#### Task 3.2: Configure your application
+#### Task 2.2: Configure your application
 
 The application uses a configuration file to store the details needed to connect to your Azure OpenAI service account.
 
@@ -184,7 +136,7 @@ The application uses a configuration file to store the details needed to connect
    pip install python-dotenv
     ```
 
-#### Task 3.3: View application code
+#### Task 2.3: View application code
 
 Now you're ready to explore the code used to call the REST API and generate an image.
 
@@ -215,7 +167,7 @@ Now you're ready to explore the code used to call the REST API and generate an i
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 4: Run the app
+### Task 3: Run the app
 
 Now that you've reviewed the code, it's time to run it and generate some images.
 

@@ -9,60 +9,15 @@ In scenario for this exercise, you will perform the role of a software developer
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Apply prompt engineering in chat playground
-- Task 4: Set up an application in Cloud Shell
-- Task 5: Configure your application
-- Task 6: Run your application
+- Task 1 : Deploy a model
+- Task 2: Apply prompt engineering in chat playground
+- Task 3: Set up an application in Cloud Shell
+- Task 4: Configure your application
+- Task 5: Run your application
 
 ## Estimated time: 30 minutes
 
-### Task 1: Provision an Azure OpenAI resource
-
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/openai8.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
-
-   ![](../media/openai_create1.png)
-
-3. Create an **Azure OpenAI** resource with the following settings 
-
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
-    - **Name**: OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
-  
-   ![](../media/azopenai123.png "Create Azure OpenAI resource")
-
-4. Click on **Next** again and subsequently click on **Create** 
-
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
-
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
-
-#### Validation
-
-   <validation step="26d62b19-ac79-4900-8ee7-3cccec7288f9" />
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-### Task 2: Deploy a model
+### Task 1: Deploy a model
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
@@ -70,53 +25,28 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
+      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+
+   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+
+4. In the **Overview** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
    
-2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
-
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
-
-3. In the **Deployments** page, click on **+ Create new deployment**.
-
-   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
-
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
+5. In **Welcome to Azure OpenAI Service** page, Choose **Deployments**, Select the existing deployment **text-turbo** (i.e gpt 35 turbo-16K ).
    
-      > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
-      
-    - **Model version**: Auto-update to default (2)
-    - - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
-  
-      ![](../media/x991.png)
+   ![](../media/text-turbo-1.png "Create a new deployment")
 
-5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
-   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
-   
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
-
-#### Validation
-
-   <validation step="7e110ef6-8a1d-4bbd-b1e4-20c09d85fd56" />
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-### Task 3: Apply prompt engineering in chat playground
+### Task 2: Apply prompt engineering in chat playground
 
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a Python app of animals with fun names.
 
@@ -211,7 +141,7 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. This time the model should respond with an appropriate classification, even without instructions.
 
-### Task 4: Set up an application in Cloud Shell
+### Task 3: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -275,7 +205,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    <validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
 
-### Task 5: Configure your application
+### Task 4: Configure your application
 
 Applications for both C# and Python have been provided, and both apps feature the same functionality. First, you'll complete some key parts of the application to enable using your Azure OpenAI resource with asynchronous API calls.
 
@@ -566,7 +496,7 @@ Applications for both C# and Python have been provided, and both apps feature th
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
-### Task 6: Run your application
+### Task 5: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 

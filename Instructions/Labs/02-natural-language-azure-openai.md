@@ -8,60 +8,15 @@ In the scenario for this exercise, you will perform the role of a software devel
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Set up an application in Cloud Shell
-- Task 4: Configure your application
-- Task 5: Test your application
-- Task 6: Maintain conversation history
+- Task 1: Deploy a model
+- Task 2: Set up an application in Cloud Shell
+- Task 3: Configure your application
+- Task 4: Test your application
+- Task 5: Maintain conversation history
 
 ## Estimated time: 40 minutes
 
-### Task 1: Provision an Azure OpenAI resource
-
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/openai8.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
-
-   ![](../media/openai_create1.png)
-
-3. Create an **Azure OpenAI** resource with the following settings 
-
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
-    - **Name**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
-  
-   ![](../media/azopenai123.png "Create Azure OpenAI resource")
-
-4. Click on **Next** again and subsequently click on **Create** 
-
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
-
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
-
-   #### Validation
-
-   <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-### Task 2: Deploy a model
+### Task 1: Deploy a model
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
@@ -69,23 +24,31 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+
+   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+
+4. In the **Overview** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
 
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+5. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+6. In the **Deployments** page, click on **+ Create new deployment**.
     
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
+7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-35-turbo-16k (1)
       
        >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
@@ -106,17 +69,17 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
-   #### Validation
+#### Validation
 
-   <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   
+<validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
 
-### Task 3: Set up an application in Cloud Shell
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
+### Task 2: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -185,7 +148,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 4: Configure your application
+### Task 3: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -314,7 +277,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-### Task 5: Test your application
+### Task 4: Test your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
 
@@ -333,7 +296,7 @@ Now that your app has been configured, run it to send your request to your model
 
 Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
 
-### Task 6: Maintain conversation history
+### Task 5: Maintain conversation history
 
 In most real-world applications, the ability to reference previous parts of the conversation allows for a more realistic interaction with an AI agent. The Azure OpenAI API is stateless by design, but by providing a history of the conversation in your prompt you enable the AI model to reference past messages.
 
