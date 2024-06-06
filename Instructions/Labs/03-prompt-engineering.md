@@ -41,9 +41,9 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai_studio1.png)
    
-5. In **Welcome to Azure OpenAI Service** page, Choose the exisiting Deployment **text-turbo** (i.e gpt 35 turbo-16K ).
+5. In **Welcome to Azure OpenAI Service** page, Choose **Deployments**, Select the existing deployment **text-turbo** (i.e gpt 35 turbo-16K ).
    
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+   ![](../media/text-turbo-1.png "Create a new deployment")
 
 
 ### Task 2: Apply prompt engineering in chat playground
