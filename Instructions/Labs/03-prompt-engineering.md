@@ -9,10 +9,11 @@ In scenario for this exercise, you will perform the role of a software developer
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Apply prompt engineering in chat playground
-- Task 2: Set up an application in Cloud Shell
-- Task 3: Configure your application
-- Task 4: Run your application
+- Task 1 : Deploy a model
+- Task 2: Apply prompt engineering in chat playground
+- Task 3: Set up an application in Cloud Shell
+- Task 4: Configure your application
+- Task 5: Run your application
 
 ## Estimated time: 30 minutes
 
@@ -80,7 +81,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 
 
-### Task 1: Apply prompt engineering in chat playground
+### Task 2: Apply prompt engineering in chat playground
 
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a Python app of animals with fun names.
 
@@ -175,7 +176,7 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. This time the model should respond with an appropriate classification, even without instructions.
 
-### Task 2: Set up an application in Cloud Shell
+### Task 3: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -239,7 +240,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    <validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
 
-### Task 3: Configure your application
+### Task 4: Configure your application
 
 Applications for both C# and Python have been provided, and both apps feature the same functionality. First, you'll complete some key parts of the application to enable using your Azure OpenAI resource with asynchronous API calls.
 
@@ -530,7 +531,7 @@ Applications for both C# and Python have been provided, and both apps feature th
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
-### Task 4: Run your application
+### Task 5: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
