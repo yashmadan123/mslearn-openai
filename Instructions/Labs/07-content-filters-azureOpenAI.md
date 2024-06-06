@@ -9,8 +9,8 @@ In this exercise, you'll explore the affect of the default content filters in Az
 In this lab, you will complete the following tasks:
 
 - Task 1: Deploy a model
-- Task 3: Generate natural language output
-- Task 4: Explore content filters
+- Task 2: Generate natural language output
+- Task 3: Explore content filters
 
 ## Estimated time: 30 minutes
 
