@@ -6,77 +6,16 @@ The Azure OpenAI Service enables you to use your own data with the intelligence 
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Deploy a model
-- Task 2: Observe normal chat behavior without adding your own data
-- Task 3: Connect your data in the chat playground
-- Task 4: Chat with a model grounded in your data
-- Task 5: Set up an application in Cloud Shell
-- Task 6: Configure your application
-- Task 7: Run your application
+- Task 1: Observe normal chat behavior without adding your own data
+- Task 2: Connect your data in the chat playground
+- Task 3: Chat with a model grounded in your data
+- Task 4: Set up an application in Cloud Shell
+- Task 5: Configure your application
+- Task 6: Run your application
 
 ## Estimated time: 45 minutes
 
-### Task 1: Deploy a model
-
-To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and use our data to ground its responses.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/openai8.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>**
-
-   ![](../media/OpenAI_select.png)
-
-3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
-
-        ![](../media/keysendpoint.png "Keys and Endpoints")
-
-
-4. In the **Overiew** pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
-
-   ![](../media/gotoresources.png)
-
-5. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
-
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
-
-6. In the **Deployments** page, click on **+ Create new deployment**.
-
-   ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
-
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-4 (1)
-      
-      > **Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-      
-    - **Model version**: 1106-Preview (2)
-    - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
-  
-      ![](../media/demoss.png)
-
-      >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
-
-#### Validation
-      
-<validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-### Task 2: Observe normal chat behavior without adding your own data
+### Task 1: Observe normal chat behavior without adding your own data
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
@@ -101,7 +40,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
 
 
-### Task 3: Connect your data in the chat playground
+### Task 2: Connect your data in the chat playground
 
 Next, add your data in the chat playground to see how it responds with your data as grounding
 
@@ -212,7 +151,7 @@ Next, add your data in the chat playground to see how it responds with your data
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 4: Chat with a model grounded in your data
+### Task 3: Chat with a model grounded in your data
 
 Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
 
@@ -230,7 +169,7 @@ Try asking it about other cities included in the grounding data, which are Dubai
 
 > **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
-### Task 5: Set up an application in Cloud Shell
+### Task 4: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -290,7 +229,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png) 
 
-### Task 6: Configure your application
+### Task 5: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -372,7 +311,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 8. Press **Ctrl + S** on your keyboard to save the file.
 
 
-## Task 7: Run your application
+## Task 6: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
