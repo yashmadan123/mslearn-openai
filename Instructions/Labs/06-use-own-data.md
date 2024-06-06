@@ -6,61 +6,17 @@ The Azure OpenAI Service enables you to use your own data with the intelligence 
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Observe normal chat behavior without adding your own data
-- Task 4: Connect your data in the chat playground
-- Task 5: Chat with a model grounded in your data
-- Task 6: Set up an application in Cloud Shell
-- Task 7: Configure your application
-- Task 8: Run your application
+- Task 1: Deploy a model
+- Task 2: Observe normal chat behavior without adding your own data
+- Task 3: Connect your data in the chat playground
+- Task 4: Chat with a model grounded in your data
+- Task 5: Set up an application in Cloud Shell
+- Task 6: Configure your application
+- Task 7: Run your application
 
 ## Estimated time: 45 minutes
 
-### Task 1: Provision an Azure OpenAI resource
-
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/openai8.png)
-
-2. On **Azure OpenAI services | Azure OpenAI** blade, click on **+ Create**.
-
-   ![](../media/openai_create.png)
-
-3. Create an **Azure OpenAI** resource with the following settings:
-   
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
-  
-      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
-    
-4. Click on **Next** thrice and click on **Create**.
-
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
-
-        ![](../media/keysendpoint.png "Keys and Endpoints")
-
-#### Validation
-
-<validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-### Task 2: Deploy a model
+### Task 1: Deploy a model
 
 To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and use our data to ground its responses.
 
@@ -72,19 +28,28 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+
+        ![](../media/keysendpoint.png "Keys and Endpoints")
+
+
+4. In the **Overiew** pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
    ![](../media/gotoresources.png)
 
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+5. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
 
    ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+6. In the **Deployments** page, click on **+ Create new deployment**.
 
    ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
+7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-4 (1)
       
       > **Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
@@ -111,7 +76,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 3: Observe normal chat behavior without adding your own data
+### Task 2: Observe normal chat behavior without adding your own data
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
@@ -136,7 +101,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
     Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
 
 
-### Task 4: Connect your data in the chat playground
+### Task 3: Connect your data in the chat playground
 
 Next, add your data in the chat playground to see how it responds with your data as grounding
 
@@ -247,7 +212,7 @@ Next, add your data in the chat playground to see how it responds with your data
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 5: Chat with a model grounded in your data
+### Task 4: Chat with a model grounded in your data
 
 Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
 
@@ -265,7 +230,7 @@ Try asking it about other cities included in the grounding data, which are Dubai
 
 > **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
-### Task 6: Set up an application in Cloud Shell
+### Task 5: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -325,7 +290,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png) 
 
-### Task 7: Configure your application
+### Task 6: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -407,7 +372,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 8. Press **Ctrl + S** on your keyboard to save the file.
 
 
-## Task 8: Run your application
+## Task 7: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
