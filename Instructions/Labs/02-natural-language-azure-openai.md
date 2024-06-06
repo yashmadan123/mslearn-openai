@@ -79,7 +79,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-### Task 1: Set up an application in Cloud Shell
+### Task 2: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -148,7 +148,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 2: Configure your application
+### Task 3: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -277,7 +277,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-### Task 3: Test your application
+### Task 4: Test your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
 
@@ -296,7 +296,7 @@ Now that your app has been configured, run it to send your request to your model
 
 Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
 
-### Task 4: Maintain conversation history
+### Task 5: Maintain conversation history
 
 In most real-world applications, the ability to reference previous parts of the conversation allows for a more realistic interaction with an AI agent. The Azure OpenAI API is stateless by design, but by providing a history of the conversation in your prompt you enable the AI model to reference past messages.
 
