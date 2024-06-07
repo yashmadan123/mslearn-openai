@@ -64,23 +64,33 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
    
 6. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
    
-7. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
+7. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
 
     ```code
     What does the following function do?  
     ---  
-    def random_func(n)
-      start = [0, 1]
-      (n - 2).times do
-        start << start[-1] + start[-2]
-      end
-      start.shuffle.each do |num|
-        puts num
-      end
-    end
+    def multiply(a, b):  
+    result = 0  
+    negative = False  
+    if a < 0 and b > 0:  
+        a = -a  
+        negative = True  
+    elif a > 0 and b < 0:  
+        b = -b  
+        negative = True  
+    elif a < 0 and b < 0:  
+        a = -a  
+        b = -b  
+    while b > 0:  
+        result += a  
+        b -= 1      
+    if negative:  
+        return -result  
+    else:  
+        return result
     ```
 
-8. Observe the output, which explains what the function does in natural language.
+8. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
 
 9. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
 
