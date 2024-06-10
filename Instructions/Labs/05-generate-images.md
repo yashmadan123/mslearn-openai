@@ -63,32 +63,9 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
-
-   ![](../media/cloudshell-getting-started.png)
-
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
-
-   ![](../media/cloudshell-mount-strg-account.png)
-
-5. Within the **Create storage account** pane, enter the following details:
-
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="DeploymentID" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
-
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
-
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
-
-7. Once the terminal starts, enter the following command to download the application code you are going to work with.
+3. Once the terminal starts, enter the following command to download the application code you are going to work with.
 
     ```bash
    rm -r azure-openai -f
@@ -97,7 +74,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-7. Navigate to the folder for the language of your preference  by running the appropriate command.
+4. Navigate to the folder for the language of your preference  by running the appropriate command.
 
     **Python**
 
@@ -111,7 +88,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
    cd azure-openai/Labfiles/05-image-generation/CSharp
     ```
 
-8. Use the following command to open the built-in code editor and see the code files you will be working with.
+5. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
