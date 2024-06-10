@@ -41,6 +41,14 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
+   <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ### Task 2: Deploy a model
 
 Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
@@ -87,9 +95,9 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 ## Validation
 
-<validation step="d9a504d6-e0be-4fa9-a4ed-6ead18a10e03" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+   <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
