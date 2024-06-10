@@ -63,32 +63,9 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
-
-   ![](../media/cloudshell-getting-started.png)
-
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
-
-   ![](../media/cloudshell-mount-strg-account.png)
-
-5. Within the **Create storage account** pane, enter the following details:
-
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="DeploymentID" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
-
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
-
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
-
-7. Once the terminal starts, enter the following command to download the application code you are going to work with.
+3. Once the terminal starts, enter the following command to download the application code you are going to work with.
 
     ```bash
    rm -r azure-openai -f
@@ -97,7 +74,9 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-7. Navigate to the folder for the language of your preference  by running the appropriate command.
+> **NOTE:** if you get Message saying already cloned , please move the next step
+
+5. Navigate to the folder for the language of your preference  by running the appropriate command.
 
     **Python**
 
@@ -111,7 +90,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
    cd azure-openai/Labfiles/05-image-generation/CSharp
     ```
 
-8. Use the following command to open the built-in code editor and see the code files you will be working with.
+6. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
@@ -158,14 +137,14 @@ Now you're ready to explore the code used to call the REST API and generate an i
     - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
     - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
 
-## Validation
+#### Validation
 
-<validation step="f11f8446-e574-4959-ac0d-7c42d2c48345" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="0ee48188-10fe-43f5-b696-a2d993d7d714" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Run the app
 

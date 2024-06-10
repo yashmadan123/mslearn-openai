@@ -7,10 +7,10 @@ The Azure OpenAI Service models can generate code for you using natural language
 In this lab, you will complete the following tasks:
 
 - Task 1: Deploy a model
-- Task 1: Generate code in chat playground
-- Task 2: Set up an application in Cloud Shell
-- Task 3: Configure your application
-- Task 4: Run your application
+- Task 2: Generate code in chat playground
+- Task 3: Set up an application in Cloud Shell
+- Task 4: Configure your application
+- Task 5: Run your application
 
 ## Estimated time: 30 minutes
 
@@ -22,25 +22,51 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select1.png)
 
-3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
-
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
-
-4. In the **Overview** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
    
-5. In **Welcome to Azure OpenAI Service** page, Choose **Deployments**, Select the existing deployment **text-turbo** (i.e gpt 35 turbo-16K ).
+4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+
+   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+
+5. In the **Deployments** page, click on **+ Create new deployment**.
+
+   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
+
+6. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Select a Model**: gpt-35-turbo-16k (1)
+      
+        > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
+        
+    - **Model version**: Auto-update to default (2)
+    - **Deployment type**: Standard (3)
+    - **Deployment name**: 35turbo (4)
+    - Click on **Advanced Settings** (5)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
+    - **Enable dynamic quota**: Enabled (7)
+    - Click on **Create** (8)
+  
+      ![](../media/x991.png)
+
+7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
+
+#### Validation
+
+   <validation step="6b5dfe99-465f-46ee-87f2-cd43ea009266" />
    
-   ![](../media/text-turbo-1.png "Create a new deployment")
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ### Task 2: Generate code in chat playground
 
@@ -104,41 +130,18 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-   ![](../media/cloudshell-bash.png)
-
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
-
-   ![](../media/cloudshell-getting-started.png)
-
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
-
-   ![](../media/cloudshell-mount-strg-account.png)
-
-5. Within the **Create storage account** pane, enter the following details:
-
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: 
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
-    - **Storage account name**:
-      - storage<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create** (6)
-
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
-
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
-
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+    > **NOTE:** if you get Message saying already cloned , please move the next step.
+
+4. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/04-code-generation
@@ -157,12 +160,12 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 #### Validation
 
-<validation step="487047fe-1679-4902-9b43-ef466a2b8280" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="2a8f35b8-234c-4548-9951-579dc22af97f" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 4: Configure your application

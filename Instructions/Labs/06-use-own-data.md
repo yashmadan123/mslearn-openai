@@ -54,7 +54,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
       
     - **Model version**: 1106-Preview (2)
     - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo (4)
+    - **Deployment name**: text-turbo-1 (4)
     - Click on **Advanced Settings** (5)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
     - **Enable dynamic quota**: Enabled (7)
@@ -68,12 +68,12 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 #### Validation
 
-<validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="2260bf34-007f-488b-99e5-6138f7cece20" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 2: Observe normal chat behavior without adding your own data
@@ -119,7 +119,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Storage account name**: storage1<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
 
@@ -187,7 +187,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
     - **Select data source (1)**: Azure Blob Storage (preview)
     - **Select Azure Blob storage resouce (2)**: *Choose the storage resource you created*
-    - **Select storage container (3)**: *Choose the storage container you created*
+    - **Select storage container (3)**: storage1<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Select Azure AI Search resource (4)**: *Choose the search resource you created*
     - **Enter the index name (5)**: margiestravel
     - **Indexer schedule (6)**: Once
@@ -199,18 +199,21 @@ Next, add your data in the chat playground to see how it responds with your data
 1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
    ![](../media/datamanagement.png "Add data")
+
+1. On the **Data Connection** page select the **API key** , and then select **Next**.
+
+   ![](../media/API_key_1.png "Add data")
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Setup** pane.
 
 #### Validation
 
-<validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
-   
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="3c975bfb-3c4f-421d-aadb-dd85292aad6f" />
+      
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Chat with a model grounded in your data
 
@@ -238,42 +241,17 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
+2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-
-   ![](../media/cloudshell-bash.png)
-
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
-
-   ![](../media/cloudshell-getting-started.png)
-
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
-
-   ![](../media/cloudshell-mount-strg-account.png)
-
-5. Within the **Advanced settings** pane, enter the following details:
-
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: 
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
-    - **Storage account name**:
-      - str<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create** (6)
-
-        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
-
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
-
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
+> **NOTE:** if you get Message saying already cloned , please move the next step.
 
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+4. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/06-use-own-data
@@ -281,7 +259,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-9. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+5. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
