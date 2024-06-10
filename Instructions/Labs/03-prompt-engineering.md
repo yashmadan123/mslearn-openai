@@ -45,6 +45,15 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
    ![](../media/text-turbo-1.png "Create a new deployment")
 
+#### Validation
+
+   <validation step="c2fef447-da3e-445d-b962-36f0d8c80d5a" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ### Task 2: Apply prompt engineering in chat playground
 
@@ -141,6 +150,8 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. This time the model should respond with an appropriate classification, even without instructions.
 
+
+
 ### Task 3: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
@@ -203,7 +214,14 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png)
 
-   <validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
+#### Validation
+
+   <validation step="eb8dcedf-f127-44f8-afe2-0ae019c6b7c5" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Configure your application
 
