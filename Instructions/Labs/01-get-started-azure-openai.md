@@ -6,15 +6,42 @@ Azure OpenAI Service brings the generative AI models developed by OpenAI to the 
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Deploy a model
-- Task 2: Explore a model in the Completions playground
-- Task 3: Use the Chat playground
-- Task 4: Explore prompts and parameters 
-- Task 5: Explore code-generation
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Explore a model in the Completions playground
+- Task 4: Use the Chat playground
+- Task 5: Explore prompts and parameters 
+- Task 6: Explore code-generation
 
 ## Estimated time: 40 minutes
 
-### Task 1: Deploy a model
+### Task 1: Provision an Azure OpenAI resource
+
+Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/openai8.png)
+
+2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+
+   ![](../media/openai_create1.png)
+
+3. Create an **Azure OpenAI** resource with the following settings:
+   
+    - **Subscription**: Default - Pre-assigned subscription.
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Region**: Select <inject key="Region" enableCopy="false" />
+    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Pricing tier**: Standard S0
+  
+   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+
+4. Click on **Next** thrice and click on **Create**.
+
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+
+### Task 2: Deploy a model
 
 Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
@@ -67,7 +94,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 2: Explore a model in the Completions playground
+### Task 3: Explore a model in the Completions playground
 
 *Playgrounds* are useful interfaces in Azure OpenAI Studio that you can use to experiment with your deployed models without needing to develop your own client application.
 
@@ -86,7 +113,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-### Task 3: Use the Chat playground
+### Task 4: Use the Chat playground
 
 The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
 
@@ -110,7 +137,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 9. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-### Task 4: Explore prompts and parameters
+### Task 5: Explore prompts and parameters
 
 You can use the prompt and parameters to maximize the likelihood of generating the response you need.
 
@@ -140,7 +167,7 @@ You can use the prompt and parameters to maximize the likelihood of generating t
     - The prompt specifically states that the desired output should be three multiple choice questions.
     - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-### Task 5: Explore code-generation
+### Task 6: Explore code-generation
 
 In addition to generating natural language responses, you can use GPT models to generate code.
 
