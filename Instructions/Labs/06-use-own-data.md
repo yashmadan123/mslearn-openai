@@ -54,7 +54,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
       
     - **Model version**: 1106-Preview (2)
     - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo (4)
+    - **Deployment name**: text-turbo-1 (4)
     - Click on **Advanced Settings** (5)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
     - **Enable dynamic quota**: Enabled (7)
@@ -119,7 +119,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Storage account name**: storage1<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
 
@@ -143,11 +143,11 @@ Next, add your data in the chat playground to see how it responds with your data
 
      ![](../media/storage-container.png "upload files")
 
-1. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
+1. Create a container with the name "**openaidatasource1**" and enable Anonymous access level for container.
 
       ![](../media/image4.6.png "create container")
 
-1. Select the **openaidatasource** container, and select **Upload**.
+1. Select the **openaidatasource1** container, and select **Upload**.
 
 1. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
