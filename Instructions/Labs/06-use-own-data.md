@@ -370,4 +370,4 @@ In this lab, you have accomplished the following:
 -   Deployed an OpenAI model within the Azure OpenAI studio
 -   Used the power of OpenAI models to generate responses limited to a custom ingested data.
 
-### You have successfully completed the lab.
+## Proceed with next lab.

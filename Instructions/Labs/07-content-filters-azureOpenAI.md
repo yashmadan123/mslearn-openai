@@ -125,4 +125,4 @@ In this lab, you have accomplished the following:
 -   Use the power of OpenAI models to generate responses to generate natural language output.
 -   Explore content filters.
 
-### You have successfully completed the lab.
+## You have successfully completed the lab.
