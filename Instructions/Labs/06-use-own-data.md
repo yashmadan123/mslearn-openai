@@ -143,11 +143,11 @@ Next, add your data in the chat playground to see how it responds with your data
 
      ![](../media/storage-container.png "upload files")
 
-1. Create a container with the name "**openaidatasource1**" and enable Anonymous access level for container.
+1. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
 
       ![](../media/image4.6.png "create container")
 
-1. Select the **openaidatasource1** container, and select **Upload**.
+1. Select the **openaidatasource** container, and select **Upload**.
 
 1. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
