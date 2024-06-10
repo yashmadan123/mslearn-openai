@@ -187,7 +187,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
     - **Select data source (1)**: Azure Blob Storage (preview)
     - **Select Azure Blob storage resouce (2)**: *Choose the storage resource you created*
-    - **Select storage container (3)**: *Choose the storage container you created*
+    - **Select storage container (3)**: storage1<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Select Azure AI Search resource (4)**: *Choose the search resource you created*
     - **Enter the index name (5)**: margiestravel
     - **Indexer schedule (6)**: Once
