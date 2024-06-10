@@ -74,7 +74,9 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-4. Navigate to the folder for the language of your preference  by running the appropriate command.
+> **NOTE:** if you get Message saying already cloned , please move the next step
+
+5. Navigate to the folder for the language of your preference  by running the appropriate command.
 
     **Python**
 
@@ -88,7 +90,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
    cd azure-openai/Labfiles/05-image-generation/CSharp
     ```
 
-5. Use the following command to open the built-in code editor and see the code files you will be working with.
+6. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
