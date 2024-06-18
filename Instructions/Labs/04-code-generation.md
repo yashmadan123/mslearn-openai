@@ -12,7 +12,7 @@ In this lab, you will complete the following tasks:
 - Task 4: Configure your application
 - Task 5: Run your application
 
-## Estimated time: 30 minutes
+## Estimated time: 50 minutes
 
 ### Task 1: Deploy a model
 
