@@ -23,27 +23,31 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+    ![](../media/openai8.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+    ![](../media/OpenAI_select.png)
 
 3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+      
       - Select **Keys and Endpoint (1)** under **Resource Management**.
+      
       - Click on **Show Keys (2)**.
+      
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
+      
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
 4. In the **Overview** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+    ![](../media/openai_studio1.png)
    
-5. In **Welcome to Azure OpenAI Service** page, Choose **Deployments**, Select the existing deployment **text-turbo** (i.e gpt 35 turbo-16K ).
+5. In **Welcome to Azure OpenAI Service** page, Choose **Deployments (1)**, Select the existing deployment **text-turbo (2)** (i.e gpt 35 turbo-16K ).
    
-   ![](../media/text-turbo-1.png "Create a new deployment")
+    ![](../media/text-turbo(1).png "Create a new deployment")
 
 #### Validation
 
@@ -60,38 +64,51 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a Python app of animals with fun names.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
+
 1. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
+
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
-   1. Create a list of animals
-   2. Create a list of whimsical names for those animals
-   3. Combine them randomly into a list of 25 animal and name pairs
+    1. Create a list of animals
+    
+    2. Create a list of whimsical names for those animals
+    
+    3. Combine them randomly into a list of 25 animal and name pairs
     ```
     >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
 
 1. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
+
 1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
+
 1. Format the instructions as python comments. Send the following prompt to the model.
 
     ```code
-   # 1. Create a list of animals
-   # 2. Create a list of whimsical names for those animals
-   # 3. Combine them randomly into a list of 25 animal and name pairs
+   
+    # 1. Create a list of animals
+   
+    # 2. Create a list of whimsical names for those animals
+   
+    # 3. Combine them randomly into a list of 25 animal and name pairs
+   
     ```
 
 1. The model should correctly respond with complete python code doing what the comments requested.
+
 1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
+
 1. Send the following prompt to the model.
 
     ```code
-   Severe drought likely in California
+    Severe drought likely in California
 
-   Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
    
-   In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
    
-   Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+    
     ```
 
 1. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
@@ -100,57 +117,57 @@ Before using your app, examine how prompt engineering improves the model respons
     **User:**
 
     ```code
-   New York Baseballers Wins Big Against Chicago
    
-   New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
+    New York Baseballers Wins Big Against Chicago
    
-   Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
+    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
    
-   The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
+    Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
+   
+    The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
+    
     ```
 
     **Assistant:**
 
-    ```code
-   Sports
-    ```
+     ```code
+    Sports
+     ```
 
 1. Add another example with the following text.
 
     **User:**
 
-    ```code
-   Joyous moments at the Oscars
+     ```code
+    Joyous moments at the Oscars
 
-   The Oscars this past week where quite something!
+    The Oscars this past week where quite something!
    
-   Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
-   These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
+    Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
+    These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
    
-   From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
-    ```
+    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
+     ```
 
     **Assistant:**
 
-    ```code
-   Entertainment
-    ```
+     ```code
+    Entertainment
+     ```
 
 1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
 
-    ```code
-   Severe drought likely in California
+     ```code
+    Severe drought likely in California
 
-   Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
    
-   In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
    
-   Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-    ```
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+     ```
 
 1. This time the model should respond with an appropriate classification, even without instructions.
-
-
 
 ### Task 3: Set up an application in Cloud Shell
 
@@ -166,12 +183,12 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
-    ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-    ```
+     ```bash
+    rm -r azure-openai -f
+    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+     ```
 
- > **NOTE:** if you get Message saying already cloned , please move the next step.
+    > **Note:** if you get Message saying already cloned , please move the next step.
 
 5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
