@@ -42,11 +42,11 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   
        ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
-4. Click on **Next** again and subsequently click on **Create** 
+4. Click on **Next** twice and subsequently click on **Create** 
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoint values, on **openai-<inject key="Deployment-id" enableCopy="false"></inject>** blade:
+6. To capture the Keys and Endpoint values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       
@@ -72,7 +72,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/why1.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
@@ -145,7 +145,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **Storage account**: Select **Create new**.(4)
       - storage<inject key="DeploymentID" enableCopy="false"></inject>
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create** (6)
 
     ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
@@ -166,11 +166,13 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
-Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
+9. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
 
    ```bash
    code .
    ```
+
+   > **Note**:If you get the prompt **Switch to Classic Cloud Shell** then click on **Confirm** and perform step 8 and 9 again.
 
   >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
