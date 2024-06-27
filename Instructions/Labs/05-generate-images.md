@@ -40,8 +40,6 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai-lab01_01.png)
 
-   >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
-
   * Under **Network** select the type as "default vaule"
     
     ![](../media/Network_1.png)
