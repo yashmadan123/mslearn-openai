@@ -37,7 +37,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
   
-   ![](../media/azopenai123.png "Create Azure OpenAI resource")
+        ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
 4. Click on **Next** twice and subsequently click on **Create** 
 
@@ -49,7 +49,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
 #### Validation
 
@@ -145,7 +145,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
@@ -162,14 +162,14 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    cd azure-openai/Labfiles/02-azure-openai-api
     ```
 
-Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
+    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
 9. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
 
-```bash
-code .
-```
- > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and perform step 8 and 9 again.
+    ```bash
+    code .
+    ```
+    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and perform step 8 and 9 again.
 
    ![](../media/classic-cloudshell-prompt.png) 
    
@@ -191,6 +191,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 2. Open the configuration file for your language
 
     - C#: `appsettings.json`
+    
     - Python: `.env`
     
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
@@ -318,6 +319,7 @@ Now that your app has been configured, run it to send your request to your model
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
+    
     - **Python**: `python test-openai-model.py`
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
@@ -337,8 +339,8 @@ Increasing the temperature often causes the response to vary, even when provided
 ## Review
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
--   Integrate Azure OpenAI models into your applications
+- Provision an Azure OpenAI resource
+- Deploy an OpenAI model within the Azure OpenAI studio
+- Integrate Azure OpenAI models into your applications
 
 ### You have successfully completed the lab.
