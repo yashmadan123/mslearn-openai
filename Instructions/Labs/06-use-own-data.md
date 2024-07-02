@@ -237,7 +237,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. On the **Data Connection** page select **API key** and then click on **Next**.
    
-   ![](../media/Screenshot_2.png)
+   ![](../media/Screenshot_3.png)
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Setup** pane.
 
