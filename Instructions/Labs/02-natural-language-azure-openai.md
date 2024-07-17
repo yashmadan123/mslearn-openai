@@ -309,153 +309,143 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 8. Before saving the file , please ensure your code looks similar to the code provided below.
 
-    - **C#**: Program.cs
+    **C#**: Program.cs
+      
+      ```CSharp
+      // Implicit using statements are included
+      using System.Text;
+      using System.Text.Json;
+      using Microsoft.Extensions.Configuration;
+      using Microsoft.Extensions.Configuration.Json;
+      using Azure;
+      
+      // Add Azure OpenAI package
+      using Azure.AI.OpenAI;
+      
+      // Build a config object and retrieve user settings.
+      IConfiguration config = new ConfigurationBuilder()
+          .AddJsonFile("appsettings.json")
+          .Build();
+      string? oaiEndpoint = config["AzureOAIEndpoint"];
+      string? oaiKey = config["AzureOAIKey"];
+      string? oaiDeploymentName = config["AzureOAIDeploymentName"];
+      
+      if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
+      {
+          Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+          return;
+      }
+      
+      // Initialize the Azure OpenAI client...
+      OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+      
+      // System message to provide context to the model
+      string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
+      
+      do {
+          Console.WriteLine("Enter your prompt text (or type 'quit' to exit): ");
+          string? inputText = Console.ReadLine();
+          if (inputText == "quit") break;
+      
+          // Generate summary from Azure OpenAI
+          if (inputText == null) {
+              Console.WriteLine("Please enter a prompt.");
+              continue;
+          }
+          
+          Console.WriteLine("\nSending request for summary to Azure OpenAI endpoint...\n\n");
+      
+          // Add code to send request...
+          // Build completion options object
+          ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+          {
+              Messages =
+              {
+                  new ChatRequestSystemMessage(systemMessage),
+                  new ChatRequestUserMessage(inputText),
+              },
+              MaxTokens = 400,
+              Temperature = 0.7f,
+              DeploymentName = oaiDeploymentName
+          };
+      
+          // Send request to Azure OpenAI model
+          ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+      
+          // Print the response
+          string completion = response.Choices[0].Message.Content;
+          Console.WriteLine("Response: " + completion + "\n");
+      
+      } while (true);
+      ```
+    
+   **Python**: test-openai-model.py
 
-    ```CSharp
-    // Implicit using statements are included
-        using System.Text;
-        using System.Text.Json;
-        using Microsoft.Extensions.Configuration;
-        using Microsoft.Extensions.Configuration.Json;
-        using Azure;
-
-        // Add Azure OpenAI package
-        using Azure.AI.OpenAI;
-
-        // Build a config object and retrieve user settings.
-        IConfiguration config = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json")
-            .Build();
-        string? oaiEndpoint = config["AzureOAIEndpoint"];
-        string? oaiKey = config["AzureOAIKey"];
-        string? oaiDeploymentName = config["AzureOAIDeploymentName"];
-
-        if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
-        {
-            Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
-            return;
-        }
-
-        // Initialize the Azure OpenAI client...
-        OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-
-        // System message to provide context to the model
-        string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
-
-
-
-        do {
-            Console.WriteLine("Enter your prompt text (or type 'quit' to exit): ");
-            string? inputText = Console.ReadLine();
-            if (inputText == "quit") break;
-
-            // Generate summary from Azure OpenAI
-            if (inputText == null) {
-                Console.WriteLine("Please enter a prompt.");
-                continue;
-            }
-            
-            Console.WriteLine("\nSending request for summary to Azure OpenAI endpoint...\n\n");
-
-            // Add code to send request...
-            // Build completion options object
-            ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-            {
-                Messages =
-                {
-                    new ChatRequestSystemMessage(systemMessage),
-                    new ChatRequestUserMessage(inputText),
-                },
-                MaxTokens = 400,
-                Temperature = 0.7f,
-                DeploymentName = oaiDeploymentName
-            };
-
-            // Send request to Azure OpenAI model
-            ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
-
-            // Print the response
-            string completion = response.Choices[0].Message.Content;
-            Console.WriteLine("Response: " + completion + "\n");
-
-
-
-        } while (true);
-
-    ```
-    - **Python**: test-openai-model.py
-
-    ```Python
-    import os
-    from dotenv import load_dotenv
-
-    # Add Azure OpenAI package
-    from openai import AzureOpenAI
-
-    def main(): 
-            
-        try: 
-        
-            # Get configuration settings 
-            load_dotenv()
-            azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
-            azure_oai_key = os.getenv("AZURE_OAI_KEY")
-            azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
-            
-            # Initialize the Azure OpenAI client...
-            client = AzureOpenAI(
-                    azure_endpoint = azure_oai_endpoint, 
-                    api_key=azure_oai_key,  
-                    api_version="2024-02-15-preview"
-                    )
-            
-            # Create a system message
-            system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
-                If no area is specified, I will default to near Rainier National Park. 
-                I will then provide three suggestions for nearby hikes that vary in length. 
-                I will also share an interesting fact about the local nature on the hikes when making a recommendation.
-                """
-            
-
-
-            while True:
-                # Get input text
-                input_text = input("Enter the prompt (or type 'quit' to exit): ")
-                if input_text.lower() == "quit":
-                    break
-                if len(input_text) == 0:
-                    print("Please enter a prompt.")
-                    continue
-
-                print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
-                
-                
-                # Add code to send request...
-                # Send request to Azure OpenAI model
-                response = client.chat.completions.create(
-                    model=azure_oai_deployment,
-                    temperature=0.7,
-                    max_tokens=400,
-                    messages=[
-                        {"role": "system", "content": system_message},
-                        {"role": "user", "content": input_text}
-                    ]
-                )
-                generated_text = response.choices[0].message.content
-
-                # Print the response
-                print("Response: " + generated_text + "\n")
-                
-                
-                
-
-        except Exception as ex:
-            print(ex)
-
-    if __name__ == '__main__': 
-    main()
-    ```
-
+      ```Python
+      import os
+      from dotenv import load_dotenv
+      
+      # Add Azure OpenAI package
+      from openai import AzureOpenAI
+      
+      def main(): 
+              
+          try: 
+          
+              # Get configuration settings 
+              load_dotenv()
+              azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+              azure_oai_key = os.getenv("AZURE_OAI_KEY")
+              azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
+              
+              # Initialize the Azure OpenAI client...
+              client = AzureOpenAI(
+                      azure_endpoint = azure_oai_endpoint, 
+                      api_key=azure_oai_key,  
+                      api_version="2024-02-15-preview"
+                      )
+              
+              # Create a system message
+              system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
+                  If no area is specified, I will default to near Rainier National Park. 
+                  I will then provide three suggestions for nearby hikes that vary in length. 
+                  I will also share an interesting fact about the local nature on the hikes when making a recommendation.
+                  """
+                    
+              while True:
+                  # Get input text
+                  input_text = input("Enter the prompt (or type 'quit' to exit): ")
+                  if input_text.lower() == "quit":
+                      break
+                  if len(input_text) == 0:
+                      print("Please enter a prompt.")
+                      continue
+      
+                  print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
+                                    
+                  # Add code to send request...
+                  # Send request to Azure OpenAI model
+                  response = client.chat.completions.create(
+                      model=azure_oai_deployment,
+                      temperature=0.7,
+                      max_tokens=400,
+                      messages=[
+                          {"role": "system", "content": system_message},
+                          {"role": "user", "content": input_text}
+                      ]
+                  )
+                  generated_text = response.choices[0].message.content
+      
+                  # Print the response
+                  print("Response: " + generated_text + "\n")
+                        
+          except Exception as ex:
+              print(ex)
+      
+      if __name__ == '__main__': 
+          main()
+      ```
+    
 9. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
