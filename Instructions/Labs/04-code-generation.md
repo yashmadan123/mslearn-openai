@@ -298,7 +298,7 @@ It's important to note that even though the code for this Go Fish app was correc
 
 If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
 
-## Review
+## Summary
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
