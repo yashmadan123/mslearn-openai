@@ -1,5 +1,17 @@
-# Getting Started with Lab
+# Develop Generative AI solutions with Azure OpenAI Service
 
+### Estimated Duration : 10 minutes
+## Lab Overview
+
+   - Lab 01: Get started with Azure OpenAI Service.
+   - Lab 02: Use Azure OpenAI SDKs in your app.
+   - Lab 03: Utilize prompt engineering in your app.
+   - Lab 04: Generate and improve code with Azure OpenAI Service.
+   - Lab 05: Generate images with a DALL-E model.
+   - Lab 06: Use your own data with Azure OpenAI.
+   - Lab 07: Explore content filters in Azure OpenAI.
+
+###  Getting Started with Lab
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
    ![](../media/getting-started1.png "Lab Environment")
