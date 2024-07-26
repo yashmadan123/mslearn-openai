@@ -6,18 +6,31 @@ Welcome to your Develop Generative AI Solutions with Azure OpenAI service worksh
 
 ## Overview
 
+Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling the development of powerful AI solutions with the security, scalability, and integration of Azure's cloud services. In this lab, you'll learn to provision Azure OpenAI as a resource and use Azure OpenAI Studio to deploy and explore OpenAI models. With Azure OpenAI, developers can create applications like chatbots and language models that excel in understanding natural human language. The service provides access to pre-trained AI models and a suite of APIs and tools for customizing and fine-tuning these models to meet specific application requirements. In this scenario, you'll assume the role of a software developer tasked with implementing an app to provide hiking recommendations using generative AI, demonstrating techniques applicable to any app utilizing Azure OpenAI APIs.
+
 ## Objective
 
 By the end of this lab, you will be able to:
 
+- **Get started with Azure OpenAI Servic**e: This hands-on exercise aims to provision an Azure OpenAI resource and deploying a model. Explore the model's capabilities in the Completions playground, then interact with it using the Chat playground. Fine-tune responses by adjusting prompts and parameters, and leverage code-generation to automate tasks.
+- **Use Azure OpenAI SDKs in your app**: This hands-on exercise aims to provision an Azure OpenAI resource, deploy a model, set up and configure an application in Cloud Shell, and then run the application, demonstrating the full lifecycle from resource creation to application deployment and execution.
 
 ## Pre-requisites
 
+- Familiarity with Azure OpenAI Service, Azure CLI, and REST APIs
+- Basic understanding of AI and machine learning concepts
+
 ## Architecture
+
+The architecture flow for this task begins with provisioning an Azure OpenAI resource within your Azure subscription and deploying a pre-trained model using Azure OpenAI Studio. Next, you'll explore the model's capabilities in the Completions playground and test its conversational abilities in the Chat playground, experimenting with different prompts and parameters to customize responses. You'll also investigate the model's code-generation capabilities. In the application development phase, you'll set up your application environment in Azure Cloud Shell, configure the application to integrate with the deployed OpenAI model, and finally, run the application to provide hiking recommendations using generative AI.
 
 ## Architecture Diagram
 
+ ![Access Your VM and Lab Guide](../media/arch20.png)
+
 ## Explanation of Components
+
+
  
 ## Accessing Your Lab Environment
  
