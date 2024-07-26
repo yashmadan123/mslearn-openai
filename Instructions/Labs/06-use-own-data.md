@@ -411,7 +411,7 @@ Now that your app has been configured, run it to send your request to your model
 
 2. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
-## Review
+## Summary
 
 In this lab, you have accomplished the following:
 -   Provisioned an Azure OpenAI resource
