@@ -1,6 +1,22 @@
-# Getting Started with Your Develop Generative AI Solutions with Azure OpenAI Service Workshop
- 
-Welcome to your Develop Generative AI Solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
+# Use your own data and explore content filter with Azure OpenAI services
+
+### Overall Estimated Duration: 4 Hours
+
+## Overview
+
+## Objective
+
+By the end of this lab, you will be able to:
+
+## Pre-requisites
+
+## Architecture
+
+## Architecture Diagram
+
+## Explanation of Components
+
+## Getting Started with the Lab
  
 ## Accessing Your Lab Environment
  
@@ -8,7 +24,7 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
 
    ![](../media/labguide-1.png)
 
-### Virtual Machine & Lab Guide
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
