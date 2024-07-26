@@ -34,9 +34,18 @@ Participants should have:
 
 These labs leverage the Azure OpenAI Service API for interacting with models, Azure SDKs for application integration, and Azure storage solutions for managing data and results. You'll also apply prompt engineering and content filters to refine and secure the outputs.
 
- ![](../media/blank_diagram_1.JPG "Lab Environment")
+### Architecture Diagram
 
- 
+![](../media/blank_diagram_1.JPG "Lab Environment")
+
+### Explanation of Components
+
+ 1.**Azure OpenAI**: Integrates your data with large language models, enabling customized and secure interactions.
+ 2.**Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.
+ 3.**Azure CloudShell**: Provides an online, browser-based shell for managing Azure resources and running scripts.
+ 4.**DALL-e**: DALL-E generates images from textual descriptions using AI technology.
+ 5.**Prompt Engeneering**: Prompt engineering refines input prompts to improve AI model responses.
+
 ## Getting Started with Lab
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
