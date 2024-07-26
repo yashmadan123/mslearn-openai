@@ -24,8 +24,15 @@ The architecture flow involves using the Azure OpenAI Service to integrate your 
 
 ## Architecture Diagram
 
+  ![](../media/arch15.PNG)
+
 ## Explanation of Components
 
+1. **Azure OpenAI**: Integrates your data with large language models, enabling customized and secure interactions.
+1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.
+1. **Storage Account**: Manages and stores data, providing scalable and secure cloud storage solutions.
+1. **Azure CloudShell**: Provides an online, browser-based shell for managing Azure resources and running scripts.
+1. **Content Filter**: Detects and removes harmful content to ensure safe and responsible AI interactions.
 
 ## Getting Started with the Lab
  
