@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 - Task 5: Configure your application
 - Task 6: Run your application
 
-## Estimated time: 30 minutes
+## Estimated time: 60 minutes
 
 ### Task 1: Provision an Azure OpenAI resource
 
