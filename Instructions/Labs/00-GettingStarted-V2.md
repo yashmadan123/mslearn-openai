@@ -1,10 +1,23 @@
 # Get Started With OpenAI And Build Natural Language Solution
 
-### Overall Estimated Duration: 8 Hours
+Welcome to your Develop Generative AI Solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience.
+
+### Overall Estimated Duration: 4 Hours
 
 ## Overview
- 
-Welcome to your Develop Generative AI Solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
+
+## Objective
+
+By the end of this lab, you will be able to:
+
+
+## Pre-requisites
+
+## Architecture
+
+## Architecture Diagram
+
+## Explanation of Components
  
 ## Accessing Your Lab Environment
  
