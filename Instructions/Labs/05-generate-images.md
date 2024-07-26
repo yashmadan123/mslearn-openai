@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 - Task 3.3: View application code
 - Task 4: Run the app
 
-## Estimated time: 30 minutes
+## Estimated time: 60 minutes
 
 ### Task 1:  Provision an Azure OpenAI resource
 
