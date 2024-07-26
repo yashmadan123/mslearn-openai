@@ -697,7 +697,7 @@ Now that your app has been configured, run it to send your request to your model
     ```
 
    
-## Review
+## Summary
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
