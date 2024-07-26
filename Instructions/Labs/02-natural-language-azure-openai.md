@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 - Task 5: Test your application
 - Task 6: Maintain conversation history
 
-## Estimated time: 40 minutes
+## Estimated time: 60 minutes
 
 ### Task 1: Provision an Azure OpenAI resource
 
