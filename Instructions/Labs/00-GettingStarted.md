@@ -2,37 +2,38 @@
 ### Overall Estimated Duration: 8 Hours
 ### Overview
 
-These hands on lab provide a comprehensive introduction to Azure OpenAI Service. You’ll begin by setting up the service and then integrate Azure OpenAI SDKs into your application. Techniques in prompt engineering will help refine interactions, while you’ll also learn to generate and enhance code. The DALL-E model will be used for image generation, and you'll explore adding your data for retrieval-augmented generation (RAG). Lastly, you’ll delve into content filtering to manage and control generated outputs.
+These hands-on labs provide a full introduction to the Azure OpenAI Service. You'll start by configuring the service, then incorporate the Azure OpenAI SDKs into your application. Prompt engineering techniques will help you refine interactions while also teaching you how to generate and enhance code. The DALL-E model will be used to generate images, and you will experiment with adding your own data for retrieval-augmented generation (RAG). Finally, you'll learn about content filtering, which allows you to govern and regulate generated outputs.
 
 ## Objective 
 
-This lab is designed to equip participants with hands-on experience in Azure OpenAI resource, deploy and explore models using the Completions and Chat playgrounds, and experiment with prompts, parameters, and code generation By completing this lab, participants will learn to:
+This lab is aimed to give learners hands-on experience with Azure OpenAI resources, deploy and explore models using the Completions and Chat playgrounds, and experiment with prompts, parameters, and code generation. By completing
 
-1. **Get started with Azure OpenAI Service**:  This hands-on exercise aims to Explore the basics of leveraging Azure OpenAI Service for integrating advanced AI models into your applications. Participants will Set up and begin using Azure OpenAI Service to implement AI models in your projects.
+In this lab, participants will learn:
 
-2. **Use Azure OpenAI SDKs in your app**: This hands-on exercise aims how to integrate Azure OpenAI SDKs into your application for enhanced AI capabilities. Participants will integrate and utilize Azure OpenAI SDKs within the application.
+1. **Get started with the Azure OpenAI Service**: This hands-on exercise aims to teach you the fundamentals of using Azure OpenAI Service to integrate advanced AI models into your apps. Participants will set up and begin utilizing the Azure OpenAI Service to integrate AI models into their applications.
 
-3. **Utilize prompt engineering in your app**:This hands-on exercise aims how to apply prompt engineering techniques to optimize AI interactions in your application. Participants will effectively apply prompt engineering techniques to improve the performance and relevance of AI responses in the application.
+2. **Use Azure OpenAI SDKs in your app**: This hands-on exercise demonstrates how to integrate Azure OpenAI SDKs into your application to improve AI capabilities. Participants will integrate and use Azure OpenAI SDKs within their application.
 
-4. **Generate and improve code with Azure OpenAI Service**:This hands-on exercise aims to use Azure OpenAI Service to generate and refine code effectively. Participants will Enhance their ability to generate and refine code using Azure OpenAI Service tools and techniques.
+3. **Utilize prompt engineering in your app**: This hands-on exercise demonstrates how to use prompt engineering methods to improve AI interactions in your application. Participants will use prompt engineering strategies to enhance the performance and relevance of AI.
 
-5. **Generate images with a DALL-E model**:This hands-on exercise aims to create and manipulate images using the DALL-E model. Participants will create and customize images using the DALL-E model to achieve desired visual outcomes.
+4. **Generate and improve code with Azure OpenAI Service**: The goal of this hands-on exercise is to demonstrate how to effectively generate and refine code using Azure OpenAI. Participants will improve their abilities to create and refine code with Azure OpenAI Service tools and approaches.
 
-6. **Add your data for RAG with Azure OpenAI Service**:This hands-on exercise aims to Integrate your data with Azure OpenAI Service for Retrieval-Augmented Generation (RAG) to enhance AI responses. Participants will integrate data into Azure OpenAI Service for improved AI-driven retrieval and generation.
+5. **Generate images with a DALL-E model**: The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, participants will develop and alter images using the DALL-E model.
 
-7. **Explore content filters in Azure OpenAI**:This hands-on exercise aims to implement and manage content filters in Azure OpenAI to control and refine generated outputs. Participants will Understand and implement content filters in Azure OpenAI to manage and refine the generated content.
+6. **Add your data for RAG using Azure OpenAI Service**: This hands-on exercise will help you integrate your data with the Azure OpenAI Service for Retrieval-Augmented Generation (RAG) to improve AI responses. Participants will integrate data into the Azure OpenAI Service to boost AI-powered retrieval and generation.
+
+7. **Explore content filters in Azure OpenAI**: This hands-on exercise demonstrates how to construct and maintain content filters in Azure OpenAI to control and refine generated outputs. Participants will learn about and implement content filters in Azure OpenAI to control and refine created material.
 
 ### Prerequisites
-
 Participants should have:
 
-1. **Development Skills:** Basic programming knowledge and familiarity with APIs and SDKs.
-2. **AI Concepts:** Understanding of prompt engineering, code generation, and image generation with models like DALL-E.
-3. **Content Management:** Knowledge of data integration for RAG and content filtering techniques.
-
+1. **Development Skills**: Basic programming knowledge and experience with APIs and SDKs.
+2. **AI Concepts**: Understanding prompt engineering, code development, and image generation using models such as DALL-E.
+3. **Content Management**: Understanding data integration for RAG and content filtering techniques.
+   
 ### Architecture
 
-These labs leverage the Azure OpenAI Service API for interacting with models, Azure SDKs for application integration, and Azure storage solutions for managing data and results. You'll also apply prompt engineering and content filters to refine and secure the outputs.
+These laboratories use the Azure OpenAI Service API to interface with models, Azure SDKs for application integration, and Azure Storage solutions to manage data and outcomes. You will also use prompt engineering and content filters to refine and safeguard the results.
 
 ### Architecture Diagram
 
@@ -40,11 +41,11 @@ These labs leverage the Azure OpenAI Service API for interacting with models, Az
 
 ### Explanation of Components
 
- 1.**Azure OpenAI**: Integrates your data with large language models, enabling customized and secure interactions.
- 2.**Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.
- 3.**Azure CloudShell**: Provides an online, browser-based shell for managing Azure resources and running scripts.
- 4.**DALL-e**: DALL-E generates images from textual descriptions using AI technology.
- 5.**Prompt Engeneering**: Prompt engineering refines input prompts to improve AI model responses.
+ 1.**Azure OpenAI**: Integrates your data with large language models, enabling customized and secure interactions.<br>
+ 2.**Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.<br>
+ 3.**Azure CloudShell**: Provides an online, browser-based shell for managing Azure resources and running scripts.<br>
+ 4.**DALL-e**: DALL-E generates images from textual descriptions using AI technology.<br>
+ 5.**Prompt Engeneering**: Prompt engineering refines input prompts to improve AI model responses.<br>
 
 ## Getting Started with Lab
 
