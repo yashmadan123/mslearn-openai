@@ -13,7 +13,7 @@ In this lab, you will complete the following tasks:
 - Task 3: Generate natural language output
 - Task 4: Explore content filters
 
-## Estimated time: 30 minutes
+## Estimated time: 60 minutes
 
 ### Task 1: Provision an Azure OpenAI resource
 
