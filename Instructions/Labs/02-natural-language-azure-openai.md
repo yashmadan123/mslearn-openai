@@ -1,5 +1,7 @@
 # Lab 02: Use Azure OpenAI SDKs in your app
 
+### Estimated Duration: 40 minutes
+
 ## Lab scenario
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application.
 
@@ -13,8 +15,6 @@ In this lab, you will complete the following tasks:
 - Task 3: Set up an application in Cloud Shell
 - Task 4: Configure your application
 - Task 5: Run your application
-
-## Estimated time: 40 minutes
 
 ### Task 1: Provision an Azure OpenAI resource
 
