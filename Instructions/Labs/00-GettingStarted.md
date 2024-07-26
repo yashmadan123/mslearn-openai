@@ -34,6 +34,9 @@ Participants should have:
 
 These labs leverage the Azure OpenAI Service API for interacting with models, Azure SDKs for application integration, and Azure storage solutions for managing data and results. You'll also apply prompt engineering and content filters to refine and secure the outputs.
 
+ ![](../media/blank_diagram_1.JPG "Lab Environment")
+
+ 
 ## Getting Started with Lab
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
