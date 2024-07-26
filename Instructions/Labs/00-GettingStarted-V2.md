@@ -30,7 +30,11 @@ The architecture flow for this task begins with provisioning an Azure OpenAI res
 
 ## Explanation of Components
 
+1. **Azure OpenAI**: Integrates your data with large language models, enabling customized and secure interactions.
+1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.
+1. **Azure CloudShell**: Provides an online, browser-based shell for managing Azure resources and running scripts.
 
+## Getting Started with the Lab
  
 ## Accessing Your Lab Environment
  
@@ -100,4 +104,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
      ![Start Your Azure Journey](../media/sc900-image(3).png)
  
-Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
+This lab will equip you with the skills to deploy and customize Azure OpenAI models, enabling you to create advanced AI applications like chatbots and recommendation systems.
+
+## Happy Learning!!
