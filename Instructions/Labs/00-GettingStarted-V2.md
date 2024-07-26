@@ -20,9 +20,12 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
+The architecture flow involves using the Azure OpenAI Service to integrate your data with a large language model (LLM), allowing you to manage how the model interacts with your information by focusing on specific topics or blending it with pre-trained results. The service employs default content filters to detect and remove harmful content, and you can also apply custom filters tailored to your needs. This approach ensures that content filtering is effectively used to uphold responsible AI practices, providing insights into its role in maintaining secure and safe interactions.
+
 ## Architecture Diagram
 
 ## Explanation of Components
+
 
 ## Getting Started with the Lab
  
