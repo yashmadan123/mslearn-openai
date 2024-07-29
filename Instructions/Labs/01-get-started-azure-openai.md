@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Open AI**, and then select **Azure OpenAI** under services.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Open AI (1)**, and then select **Azure OpenAI (2)** under services.
 
    ![](../media/openai-1.png)
 
@@ -27,7 +27,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai_create1.png)
 
-3. Create an **Azure OpenAI** resource with the following settings:
+3. Create an **Azure OpenAI** resource with the following settings and click on **Next**
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
@@ -35,9 +35,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
-      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+      ![](../media/openai-2.png)
 
-4. Click on **Next** thrice and click on **Create**.
+4. Click on **Next** twice and click on **Create**.
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
