@@ -153,6 +153,17 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    ```bash
    code .
    ```
+
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+
+    ```bash
+     cd azure-openai/Labfiles/02-azure-openai-api
+    ```
+1. Open the built-in code editor
+
+   ```bash
+   code .
+   ```
    
  #### Validation
  
