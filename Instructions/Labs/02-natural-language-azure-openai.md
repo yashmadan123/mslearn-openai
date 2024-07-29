@@ -104,8 +104,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
-    ![](../media/openai-21.png)
-
+   
 1. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
@@ -119,7 +118,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     
     - Click **Create** (6)
 
-        ![](../media/openai-22.png)
+        ![](../media/openai-21.png)
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
