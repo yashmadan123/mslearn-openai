@@ -202,9 +202,9 @@ You can use the prompt and parameters to maximize the likelihood of generating t
 
 In addition to generating natural language responses, you can use GPT models to generate code.
 
-1. In the **Setup** pane, select the **Empty Example** template to reset the system message.
+1. In the **Setup** pane, select the **Empty Example** template to reset the system message if prompted click on **Continue**.
 
-2. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes**.
+2. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
       ![](../media/chatpt.png)
 
