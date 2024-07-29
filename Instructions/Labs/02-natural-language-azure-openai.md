@@ -22,9 +22,9 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 1. Navigate back to the **Azure Portal**.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Open AI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/openai8.png)
+   ![](../media/openai-1.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
