@@ -97,7 +97,8 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. The model should correctly respond with complete python code doing what the comments requested.
 
-1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
+1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click 
+   on **Continue**. This will create a new chat session.
 
 1. Send the following prompt to the model.
 
