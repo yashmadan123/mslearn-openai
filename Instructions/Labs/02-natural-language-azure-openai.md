@@ -40,7 +40,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
       
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+    ![](../media/openai-16.png)
 
 1. From the left menu click on **Overview**, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
