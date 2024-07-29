@@ -143,27 +143,38 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **System message** box, click on **+ Add**, and enter the following message and response in the designated boxes:
+3. Below the **Examples > Using examples** box, click on **+ Add**. enter the following message and response in the designated boxes:
 
-    - **User**: `What are different types of artificial intelligence?`
+    ![](../media/openai-10.png)
+
+4.  Enter the following message and response in the designated boxes:
+
+     - **User**: `What are different types of artificial intelligence?`
     
-    - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
+     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI 
+        designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
+        perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-      > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+         ![](../media/openai-15.png)
+   
+         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own 
+           responses.
 
-4. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
-5. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`
+     ![](../media/openai-11.png)
+   
+7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-6. Use the **Send** button to submit the message and view the response.
-
+    ![](../media/openai-12.png)
+   
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-7. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
+8. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
-8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+9. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-9. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
 ### Task 5: Explore prompts and parameters
 
@@ -202,21 +213,21 @@ You can use the prompt and parameters to maximize the likelihood of generating t
 
 In addition to generating natural language responses, you can use GPT models to generate code.
 
-1. In the **Setup** pane, select the **Empty Example** template to reset the system message if prompted click on **Continue**.
+1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-2. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+      ![](../media/openai-13.png)
 
-      ![](../media/chatpt.png)
+2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
-3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
+    ![](../media/openai-14.png)
 
-4. Submit the following user message:
+3. Submit the following user message:
 
       ```
       Write a Python function named Multiply that multiplies two numeric parameters.
       ```
 
-5. Review the response, which should include sample Python code that meets the requirement in the prompt.
+4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
 ## Summary
 
