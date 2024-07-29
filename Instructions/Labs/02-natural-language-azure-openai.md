@@ -51,25 +51,23 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    ![](../media/deployments.png "Create a new deployment")
 
 1. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
+    - **Deployment name**: text-turbo (1)
+
+    - **Select a Model**: gpt-35-turbo-16k (2)
       
        >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
        
-    - **Model version**: Auto-update to default (2)
+    - **Model version**: Auto-update to default (3)
     
-    - **Deployment type**: Standard (3)
+    - **Deployment type**: Standard (4)
+        
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
     
-    - **Deployment name**: text-turbo (4)
-    
-    - Click on **Advanced options** (5)
-    
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    
-    - **Enable dynamic quota**: Enabled (7)
+    - **Enable dynamic quota**: Enabled (6)
     
     - Click on **Create** (7)
   
-      ![](../media/x991.png)
+      ![](../media/x991-1.png)
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -285,7 +283,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
-     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 ### Task 4: Test your application
 
