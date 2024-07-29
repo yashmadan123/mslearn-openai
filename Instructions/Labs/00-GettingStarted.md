@@ -2,13 +2,13 @@
 ### Overall Estimated Duration: 8 Hours
 ### Overview
 
-These hands-on labs provide a full introduction to the Azure OpenAI Service. You'll start by configuring the service, then incorporate the Azure OpenAI SDKs into your application. Prompt engineering techniques will help you refine interactions while also teaching you how to generate and enhance code. The DALL-E model will be used to generate images, and you will experiment with adding your own data for retrieval-augmented generation (RAG). Finally, you'll learn about content filtering, which allows you to govern and regulate generated outputs.
+This hands-on labs provide introduction to the Azure OpenAI Service. You'll start by configuring the service, then incorporate the Azure OpenAI SDKs into your application. Prompt engineering techniques will help you refine interactions while also teaching you how to generate and enhance code. The DALL-E model will be used to generate images, and you will experiment with adding your own data for retrieval-augmented generation (RAG). Finally, you'll learn about content filtering, which allows you to govern and regulate generated outputs.You'll receive hands-on experience with real-world AI applications, which will help you design more intelligent solutions. You will also learn about best methods for implementing and scaling these services in a production setting. By the end of the labs, You will also learn how to combine various Azure services to build AI-powered apps that are resilient, scalable, and secure.
 
 ## Objective 
 
-This lab is aimed to give learners hands-on experience with Azure OpenAI resources, deploy and explore models using the Completions and Chat playgrounds, and experiment with prompts, parameters, and code generation. By completing
+This lab is aimed to give learners hands-on experience with Azure OpenAI resources, deploy and explore models using the Completions and Chat playgrounds, and experiment with prompts, parameters, and code generation. By completing this lab
 
-In this lab, participants will learn:
+Participants will learn:
 
 1. **Get started with the Azure OpenAI Service**: This hands-on exercise aims to teach you the fundamentals of using Azure OpenAI Service to integrate advanced AI models into your apps. Participants will set up and begin utilizing the Azure OpenAI Service to integrate AI models into their applications.
 
@@ -33,7 +33,7 @@ Participants should have:
    
 ### Architecture
 
-These laboratories use the Azure OpenAI Service API to interface with models, Azure SDKs for application integration, and Azure Storage solutions to manage data and outcomes. You will also use prompt engineering and content filters to refine and safeguard the results.
+This lab provides robust functionalities for leveraging AI within Azure. Azure OpenAI integrates your data with large language models, enabling customized and secure interactions tailored to your needs. Azure OpenAI Models offer pre-trained and customizable models for various applications, such as text generation and language translation. Azure CloudShell provides an online, browser-based shell for managing Azure resources and running scripts, streamlining cloud management. DALL-E generates images from textual descriptions using advanced AI technology, enhancing creative capabilities. Finally, prompt engineering refines input prompts to optimize AI model responses, ensuring accuracy and relevance in outputs.
 
 ### Architecture Diagram
 
@@ -41,11 +41,12 @@ These laboratories use the Azure OpenAI Service API to interface with models, Az
 
 ### Explanation of Components
 
- 1.**Azure OpenAI**: Integrates your data with large language models, enabling customized and secure interactions.<br>
- 2.**Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.<br>
- 3.**Azure CloudShell**: Provides an online, browser-based shell for managing Azure resources and running scripts.<br>
- 4.**DALL-e**: DALL-E generates images from textual descriptions using AI technology.<br>
- 5.**Prompt Engeneering**: Prompt engineering refines input prompts to improve AI model responses.<br>
+- **Azure OpenAI**: Integrates your data with massive language models, allowing for personalized and secure interactions.Allows for fine-tuning of AI models with your own datasets, resulting in specialized and relevant outputs for your business needs.
+- **Azure OpenAI Models**: Provides pre-trained and customisable big language models for a variety of AI applications, including text generation, sentiment analysis, and language translation, with the option to tailor models to specific use cases.
+- **Azure CloudShell**: Offers an online, browser-based shell for managing Azure resources and running scripts.Allows you to deploy, manage, and automate Azure services directly from your web browser, eliminating the need for local installations.
+- **DALL-e**: DALL-E uses artificial intelligence technology to generate visuals from written descriptions.Enhances creativity by translating word inputs into distinct and coherent pictures.
+- **Prompt Engineering**: Prompt engineering fine-tunes input prompts to improve AI model replies, ensuring accurate and relevant outputs by optimizing how prompts are produced and delivered to AI models.
+- **AI chat**: AI chat, also known as an AI chatbot or conversational AI, is a technology that uses artificial intelligence to facilitate automated, human-like conversations between machines and users. These systems are designed to understand and interpret natural language inputs, enabling them to respond in a way that simulates a real conversation.
 
 ## Getting Started with Lab
 
