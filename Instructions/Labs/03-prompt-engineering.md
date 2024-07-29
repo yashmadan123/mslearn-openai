@@ -69,14 +69,15 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
-    ```code
-    1. Create a list of animals
-    
-    2. Create a list of whimsical names for those animals
-    
-    3. Combine them randomly into a list of 25 animal and name pairs
-    ```
-    >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
+        ```code
+        1. Create a list of animals
+        
+        2. Create a list of whimsical names for those animals
+        
+        3. Combine them randomly into a list of 25 animal and name pairs
+        ```
+
+     >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
 
 1. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
@@ -141,7 +142,7 @@ Before using your app, examine how prompt engineering improves the model respons
 
     **User:**
 
-     ```code
+    ```code
     Joyous moments at the Oscars
 
     The Oscars this past week where quite something!
@@ -150,7 +151,7 @@ Before using your app, examine how prompt engineering improves the model respons
     These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
    
     From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
-     ```
+    ```
 
     **Assistant:**
 
@@ -160,7 +161,7 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
 
-     ```code
+    ```code
     Severe drought likely in California
 
     Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
@@ -168,7 +169,7 @@ Before using your app, examine how prompt engineering improves the model respons
     In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
    
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-     ```
+    ```
 
 1. This time the model should respond with an appropriate classification, even without instructions.
 
