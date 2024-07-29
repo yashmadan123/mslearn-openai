@@ -37,7 +37,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
   
       ![](../media/openai-2.png)
 
-4. Click on **Next** twice and click on **Create**.
+4. Click on **Next** twice and click **Create** on **Review + sumbit** tab.
+
+    ![](../media/openai-3.png)
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
