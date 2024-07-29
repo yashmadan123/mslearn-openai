@@ -114,6 +114,7 @@ Before using your app, examine how prompt engineering improves the model respons
     ```
 
 1. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
+
 1. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
 
     **User:**
