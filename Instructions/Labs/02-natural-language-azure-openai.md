@@ -148,6 +148,12 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png) 
 
+1. If you're not navigated to code editor re-run the following command:
+
+   ```bash
+   code .
+   ```
+   
  #### Validation
  
    <validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
@@ -162,7 +168,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
-
+   
 2. Open the configuration file for your language
 
     - C#: `appsettings.json`
