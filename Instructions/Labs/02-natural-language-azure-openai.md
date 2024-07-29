@@ -48,7 +48,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 1. From the left navigation pane, under **Management** select **Deployments (1)**, click on **+ Create new deployment (2)**.
     
-   ![](../media/deployments.png "Create a new deployment")
+   ![](../media/openai-17.png)
 
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
