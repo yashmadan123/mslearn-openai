@@ -69,13 +69,13 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
-        ```code
+    ```code
         1. Create a list of animals
         
         2. Create a list of whimsical names for those animals
         
         3. Combine them randomly into a list of 25 animal and name pairs
-        ```
+    ```
 
      >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
 
