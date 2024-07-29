@@ -80,7 +80,8 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
-1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
+1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on 
+   **Continue**.
 
 1. Format the instructions as python comments. Send the following prompt to the model.
 
