@@ -30,7 +30,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
     ![](../media/OpenAI_select.png)
 
-1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       
