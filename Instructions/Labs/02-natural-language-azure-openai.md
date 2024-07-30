@@ -22,15 +22,15 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 1. Navigate back to the **Azure Portal**.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Open AI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/openai8.png)
+   ![](../media/openai-1.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
     ![](../media/OpenAI_select.png)
 
-1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       
@@ -40,15 +40,15 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
       
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+    ![](../media/openai-16.png)
 
-1. In the **Overview** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. From the left menu click on **Overview**, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
 
 1. From the left navigation pane, under **Management** select **Deployments (1)**, click on **+ Create new deployment (2)**.
     
-   ![](../media/deployments.png "Create a new deployment")
+   ![](../media/openai-17.png)
 
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
@@ -89,20 +89,22 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
-1. Navigate back to the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. Navigate back to the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at 
+   the bottom of the portal.
 
-     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![](../media/openai-18.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
+   ![](../media/openai-19.png)
+
 1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
-    ![](../media/cloudshell-getting-started.png)
+    ![](../media/openai-20.png)
 
 1. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
-    ![](../media/cloudshell-mount-strg-account.png)
-
+   
 1. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
@@ -116,7 +118,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     
     - Click **Create** (6)
 
-        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+        ![](../media/openai-21.png)
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -147,6 +149,23 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png) 
 
+1. If you're not navigated to code editor re-run the following command:
+
+   ```bash
+   code .
+   ```
+
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+
+    ```bash
+     cd azure-openai/Labfiles/02-azure-openai-api
+    ```
+1. Open the built-in code editor
+
+   ```bash
+   code .
+   ```
+   
  #### Validation
  
    <validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
@@ -161,7 +180,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
-
+   
 2. Open the configuration file for your language
 
     - C#: `appsettings.json`
