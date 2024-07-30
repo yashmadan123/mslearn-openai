@@ -37,7 +37,7 @@ The architecture flow for utilizing Azure OpenAI Service begins with provisionin
 1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.
 1. **Azure CloudShell**: Provides an online, browser-based shell for managing Azure resources and running scripts.
 1. **Prompt Engineering**: Use prompt engineering to craft clear prompts that guide Azure OpenAI models, ensuring they deliver accurate and relevant responses tailored to your app's needs.
-1.**Generate Code**: Azure OpenAI Service can generate and debug code using natural language prompts, as well as simplify and improve existing code.
+1. **Generate Code**: Azure OpenAI Service can generate and debug code using natural language prompts, as well as simplify and improve existing code.
 
 ## Getting Started with the Lab
  
