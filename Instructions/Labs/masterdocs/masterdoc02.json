@@ -15,6 +15,14 @@
         {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/hol-integrate-openai-with-app-lab2.md",
         "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/hol-prompt-engineering-lab3.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/hol-code-generation-lab4.md",
+        "Order": 5
       }
     ]
   }
