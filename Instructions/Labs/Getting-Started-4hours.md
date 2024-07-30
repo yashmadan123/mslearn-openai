@@ -4,7 +4,7 @@
 
 ## Overview
 
-Azure OpenAI Service brings OpenAI's generative AI models to the Azure platform, enabling powerful AI solutions with Azure's security and scalability. In this lab, you'll learn to provision Azure OpenAI, deploy models using Azure OpenAI Studio, and create applications like chatbots and language models. You'll act as a developer implementing an app for hiking recommendations, learning how prompt engineering shapes AI responses. Additionally, you'll explore how the service can generate, debug, comment, and simplify code using natural language prompts.
+Azure OpenAI Service brings OpenAI's generative AI models to the Azure platform, enabling powerful AI solutions with Azure's security and scalability. In this lab, you'll learn to provision Azure OpenAI, deploy models using Azure OpenAI Studio, and create applications like chatbots and language models. You'll act as a developer implementing an app, learning how prompt engineering shapes AI responses. Additionally, you'll explore how the service can generate, debug, comment, and simplify code using natural language prompts.
 
 ## Objective
 
@@ -25,7 +25,7 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
-The architecture flow for utilizing Azure OpenAI Service begins with provisioning the Azure OpenAI resource. Using Azure OpenAI Studio, you'll deploy and explore OpenAI models. As a developer, you'll create an app for hiking recommendations, interacting with Azure OpenAI APIs to process natural language prompts. This involves customizing and fine-tuning pre-trained models to meet specific needs. The models can also generate, debug, comment, and simplify code using natural language prompts, streamlining development and enhancing code quality. This flow covers provisioning resources, deploying models, and integrating them into practical applications.
+The architecture flow for utilizing Azure OpenAI Service begins with provisioning the Azure OpenAI resource. Using Azure OpenAI Studio, you'll deploy and explore OpenAI models. As a developer, you'll create an app, interacting with Azure OpenAI APIs to process natural language prompts. This involves customizing and fine-tuning pre-trained models to meet specific needs. The models can also generate, debug, comment, and simplify code using natural language prompts, streamlining development and enhancing code quality. This flow covers provisioning resources, deploying models, and integrating them into practical applications.
 
 ## Architecture Diagram
 
