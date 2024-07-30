@@ -29,7 +29,7 @@ The architecture flow for utilizing Azure OpenAI Service begins with provisionin
 
 ## Architecture Diagram
 
- 
+   ![](../media/ARCH.PNG)
 
 ## Explanation of Components
 
@@ -125,5 +125,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    ![Launch Azure Portal](../media/sc900-image(3).png)
 
+This hands-on-lab will help you with deploying models using Azure OpenAI Service, focusing on prompt engineering and exploring how the service simplifies code generation and debugging.
 
 ## Happy Learning!!
