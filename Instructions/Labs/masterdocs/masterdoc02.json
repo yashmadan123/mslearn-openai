@@ -5,7 +5,7 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai/tree/prod",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted-V2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/Getting-Started-4hours.md",
         "Order": 1
       },
       {
