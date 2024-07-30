@@ -239,6 +239,8 @@ Applications for both C# and Python have been provided, and both apps feature th
 
     **C#**: Program.cs
 
+   At line number 9
+
     ```csharp
    // Add Azure OpenAI package
    using Azure.AI.OpenAI;
@@ -246,15 +248,17 @@ Applications for both C# and Python have been provided, and both apps feature th
 
     **Python**: prompt-engineering.py
 
+   At line number 6
     ```python
     # Add Azure OpenAI package
     from openai import AsyncAzureOpenAI
     ```
 
-7. Open up the application code for your language and add the necessary code for configuring the client.
+8. Open up the application code for your language and add the necessary code for configuring the client.
 
     **C#**: Program.cs
 
+   At line number 61
     ```csharp
    // Initialize the Azure OpenAI client
    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
@@ -262,6 +266,7 @@ Applications for both C# and Python have been provided, and both apps feature th
 
     **Python**: prompt-engineering.py
 
+   At line number 23
    ```python
     # Configure the Azure OpenAI client
     client = AsyncAzureOpenAI(
@@ -271,10 +276,11 @@ Applications for both C# and Python have been provided, and both apps feature th
         )
     ```
 
-8. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+9. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
     **C#**: Program.cs
 
+   At line number 65
     ```csharp
            // Format and send the request to the model
          var chatCompletionsOptions = new ChatCompletionsOptions()
@@ -295,6 +301,7 @@ Applications for both C# and Python have been provided, and both apps feature th
 
     **Python**: prompt-engineering.py
 
+   At line number 53
    ```python
     # Format and send the request to the model
     messages =[
@@ -313,7 +320,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     )
     ```
 
-9. The  modified code should look like as shown below:
+10. The  modified code should look like as shown below:
 
     **C#**
       
@@ -414,11 +421,11 @@ Applications for both C# and Python have been provided, and both apps feature th
       ```
    
      **Python**
-   
-      ```python
+
+       ```python
     import os
-   import asyncio
-   from dotenv import load_dotenv
+       import asyncio
+       from dotenv import load_dotenv
    
    # Add Azure OpenAI package
    # Add Azure OpenAI package
@@ -492,7 +499,7 @@ Applications for both C# and Python have been provided, and both apps feature th
    
    if __name__ == '__main__': 
        asyncio.run(main())
-      ```
+    ```
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
