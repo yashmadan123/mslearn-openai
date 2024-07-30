@@ -86,7 +86,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
     - **Chat session** - used to submit chat messages and view responses.
     - **Configuration** - used to configure settings for the model deployment.
 
-3. In the **Configuration** section, ensure that your model deployment `text-turbo` is selected.
+3. In the **Configuration** section, ensure that your model deployment `text-turbo-1` is selected.
 4. In the **Setup** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
 5. In the **Chat session**, submit the following queries, and review the responses:
 
