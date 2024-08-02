@@ -34,6 +34,7 @@ In this hands-on lab, you'll delve into prompt engineering by first grasping the
 
 1. **Azure OpenAI**: Integrates your data with large language models, enabling customized and secure interactions.
 1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.
+1. **Azure CloudShell**: Provides an online, browser-based shell for managing Azure resources and running scripts.
 
 ## Getting Started with the Lab
  
