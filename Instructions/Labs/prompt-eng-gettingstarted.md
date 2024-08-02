@@ -4,19 +4,27 @@
 
 ## Overview
 
+In this hands-on-lab, you will explore the concept of prompt engineering, learning how to craft effective prompts for AI models. You'll get hands-on experience with Azure OpenAI Playground, experimenting with different types of prompts and understanding their elements and design tips. The way developers shape their prompts significantly impacts the generative AI model's responses, allowing for tailored and formatted content when requested clearly and concisely. You'll learn how different prompts for similar content can shape the AI model's response to better satisfy your requirements.
+
+You will explore how to use generative AI to improve advertising emails and categorize articles for your team. The prompt engineering techniques used in the exercise are applicable to various use cases. Tuning prompts to achieve the desired results is the core idea behind prompt engineering.
 
 ## Objective
 
 By the end of this lab, you will be able to:
 
-
+- **Introduction to Prompt Engineering & Azure OpenAI Studio**: earn to craft effective prompts for AI models using Azure OpenAI Playground, experimenting with different types and design tips.
+- **Lab-01: Utilize prompt engineering in your app**: provision an Azure OpenAI resource, deploy a model, apply prompt engineering in the chat playground, set up and configure an application in Cloud Shell, and run your application to see the results.
+- **Lab-02: Advanced Concepts (Read-Only)**: master tuning prompts to get desired results and explore advanced techniques for refining outputs without fine-tuning GPT models.
+- **Lab-03: Fine Tuning (Read-Only)**: Master prompt engineering with Azure OpenAI Playground, improving AI responses for tasks like emails and article categorization.
+  
 ## Pre-requisites
 
 - Familiarity with Azure OpenAI Service.
+- Prompt Engineering Basics
 
 ## Architecture
 
-
+In this hands-on lab, you'll delve into prompt engineering by first grasping the basics and its impact on AI responses. You'll then gain practical experience using Azure OpenAI Playground, experimenting with various types of prompts and learning their design elements and tips. As you explore how to tailor prompts for improving advertising emails and categorizing articles, you'll see how effective prompt engineering can shape AI model outputs to meet specific requirements. The lab emphasizes how tuning prompts is crucial for optimizing AI responses across different use cases.
 
 ## Architecture Diagram
 
@@ -26,7 +34,6 @@ By the end of this lab, you will be able to:
 
 1. **Azure OpenAI**: Integrates your data with large language models, enabling customized and secure interactions.
 1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.
-
 
 ## Getting Started with the Lab
  
