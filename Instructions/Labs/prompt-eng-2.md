@@ -1,5 +1,6 @@
-
 # Lab-01: Utilize prompt engineering in your app
+
+### Estimated Duration: 60 minutes
 
 ## Lab scenario
 
@@ -16,8 +17,6 @@ In this lab, you will complete the following tasks:
 - Task 4: Set up an application in Cloud Shell
 - Task 5: Configure your application
 - Task 6: Run your application
-
-## Estimated time: 60 minutes
 
 ### Task 1: Provision an Azure OpenAI resource
 
@@ -673,9 +672,8 @@ Now that your app has been configured, run it to send your request to your model
     ```prompt
     What animal is the favorite of children at Contoso?
     ```
-
    
-## Review
+## Summary
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
