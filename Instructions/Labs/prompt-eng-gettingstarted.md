@@ -122,7 +122,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    ![Launch Azure Portal](../media/sc900-image(3).png)
 
-This hands-on-lab will help you to gain insights on how Azure OpenAI’s content filtering mechanisms contribute to responsible AI deployment, and how you can leverage these filters to ensure that your AI models adhere to appropriate content standards.
+This hands-on-lab will help you to master prompt engineering by crafting effective prompts with Azure OpenAI Playground to shape AI responses. You'll apply these techniques to enhance advertising emails and categorize articles, learning to optimize AI outputs for various use cases.
 
 ## Support Contact
 
