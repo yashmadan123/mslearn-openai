@@ -12,10 +12,10 @@ You will explore how to use generative AI to improve advertising emails and cate
 
 By the end of this lab, you will be able to:
 
-- **Introduction to Prompt Engineering & Azure OpenAI Studio**: Learn to craft effective prompts for AI models using Azure OpenAI Playground, experimenting with different types and design tips.
+- **Introduction to Prompt Engineering & Azure OpenAI Studio**: Learn to craft effective prompts for AI models using Azure OpenAI Playground, experimenting with different types and design tips. This hands-on experience will help you understand how different prompt styles influence AI responses and improve your results.
 - **Utilize prompt engineering in your app**: Provision an Azure OpenAI resource, deploy a model, apply prompt engineering in the chat playground, set up and configure an application in Cloud Shell, and run your application to see the results.
-- **Advanced Concepts (Read-Only)**: Master tuning prompts to get desired results and explore advanced techniques for refining outputs without fine-tuning GPT models.
-- **Fine Tuning (Read-Only)**: Master prompt engineering with Azure OpenAI Playground, improving AI responses for tasks like emails and article categorization.
+- **Advanced Concepts (Read-Only)**: Master the art of tuning prompts to achieve specific outcomes and explore advanced methods for refining AI outputs, all without the need for fine-tuning GPT models. Learn how to leverage prompt adjustments and design techniques to enhance model responses effectively.
+- **Fine Tuning (Read-Only)**: Master prompt engineering using Azure OpenAI Playground to refine AI responses, tailoring outputs for specific tasks such as enhancing advertising emails and categorizing articles.
   
 ## Pre-requisites
 
