@@ -1,4 +1,4 @@
-# Utilize prompt engineering in your app
+# Build Prompt Engineering with Azure OpenAI Service
 
 ### Overall Estimated Duration: 4 Hours
 
