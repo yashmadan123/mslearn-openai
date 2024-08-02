@@ -28,7 +28,7 @@ In this hands-on lab, you'll delve into prompt engineering by first grasping the
 
 ## Architecture Diagram
 
-   ![](../,,/Lab-Scenario-Preview/media/lab-03-ad.PNG)
+   ![](./Lab-Scenario-Preview/media/lab-03-ad.PNG)
 
 ## Explanation of Components
 
