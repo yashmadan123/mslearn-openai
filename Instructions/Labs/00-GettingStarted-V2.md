@@ -28,10 +28,10 @@ The architecture flow involves using the Azure OpenAI Service to integrate your 
 
 ## Explanation of Components
 
-1. **Azure OpenAI**: Integrates your data with large language models, enabling customized and secure interactions.
-1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications.
+1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models and these models integrates with your data, enabling customized and secure interactions.
+1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
+1. **Azure CloudShell**: Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
 1. **Storage Account**: Manages and stores data, providing scalable and secure cloud storage solutions.
-1. **Azure CloudShell**: Provides an online, browser-based shell for managing Azure resources and running scripts.
 1. **Content Filter**: Detects and removes harmful content to ensure safe and responsible AI interactions.
 
 ## Getting Started with the Lab
