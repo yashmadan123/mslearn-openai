@@ -1,5 +1,7 @@
 # Lab 1: Get started with Azure OpenAI Service
 
+### Estimated Duration: 40 minutes
+
 ## Lab scenario
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Studio to deploy and explore OpenAI models.
 
@@ -12,9 +14,7 @@ In this lab, you will complete the following tasks:
 - Task 4: Use the Chat playground
 - Task 5: Explore prompts and parameters 
 - Task 6: Explore code-generation
-
-## Estimated time: 40 minutes
-
+  
 ### Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
@@ -73,31 +73,31 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
    ![](../media/gotoresources.png)
    
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. After navigating to Azure AI Studio, click on **Explore the new experience** pop-up on the top.
 
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+   ![](../media/explore_new-exp.jpg)
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 
-   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
+   ![](../media/deploy-1.jpg)
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo (1)
-      
-        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-     
-    - **Model version**: Auto-update to default (2)<br>
+6. In the **Select a model** window, select **gpt-35-turbo (1)** and click on **Confirm (2)**.
+
+   ![](../media/mew5.png)
+
+7. Within the **Deploy model** pop-up interface, enter the following details:
+    
+    - **Deployment name**: my-gpt-model (1) 
+    - **Model version**: 0613 (2)
     - **Deployment type**: Standard (3)
-    - **Deployment name**: my-gpt-model (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
   
-      ![](../media/x992.png)
+      ![](../media/new3.png)
 
-7. This will deploy a model which you will be playing around with as you proceed.
-
+8. This will deploy a model which you will be playing around with as you proceed.
+   
    > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
    
    > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
@@ -205,7 +205,7 @@ In addition to generating natural language responses, you can use GPT models to 
 
 5. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-## Review
+## Summary
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
