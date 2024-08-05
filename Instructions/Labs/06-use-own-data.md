@@ -148,7 +148,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
 
-1. On **Storage Account | Containers** blade, click on **+ Container (2)**.
+1. On **Storage Account | Containers** blade, click on **+ Container (2)**
 
      ![](../media/storage-container.png "upload files")
 
