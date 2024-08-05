@@ -203,7 +203,7 @@ In addition to generating natural language responses, you can use GPT models to 
 
 5. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-## Review
+## Summary
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
