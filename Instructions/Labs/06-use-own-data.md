@@ -39,15 +39,24 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/openai_studio.png)
 
-5. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+5. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+   ![](../media/openai_studio1.png)
 
-6. In the **Deployments** page, click on **+ Create new deployment**.
+6. In the prompt select **Explore the new experience** 
 
-   ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
+      ![](../media/explore_new-exp.jpg "Create a new deployment")
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
+7. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+
+      ![](../media/deploy-1.jpg "Create a new deployment")
+   
+8. Search for **GPT-4**, click on **Confirm**
+
+      ![](../media/gpt-4.jpg)
+  
+
+9. Within the **Deploy model** pop-up interface, enter the following details:
     - **Select a Model**: gpt-4 (1)
       
       > **Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
@@ -64,7 +73,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
-8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+10. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
 #### Validation
 
