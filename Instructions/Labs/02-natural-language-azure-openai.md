@@ -53,12 +53,12 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 #### Validation
 
-<validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
 
 ### Task 2: Deploy a model
 
@@ -76,30 +76,30 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai_studio1.png)
 
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. After navigating to Azure AI Studio, click on **Explore the new experience** pop-up on the top.
 
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+   ![](../media/explore_new-exp.jpg)
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
-    
-   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
+5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
+
+   ![](../media/deploy-1.jpg)
+
+6. In the **Select a model** window, select **gpt-35-turbo-16k (1)** and click on **Confirm (2)**.
+
+   ![](../media/new4.png)
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     
-    - **Deployment type**: Standard (1)
-    - **Select a Model**: gpt-35-turbo-16k (2)
-      
-       >**Note**: if the 16k model isn't available, choose **gpt-35-turbo**
-       
-    - **Model version**: Auto-update to default (3)
-    - **Deployment type**: Standard (4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Create** (7)
+    - **Deployment name**: text-turbo (1) 
+    - **Model version**: 0613(Default) (2)
+    - **Deployment type**: Standard (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
   
-      ![](../media/x991-1.png)
+      ![](../media/new2.png)
 
-7. This will deploy a model that you will be playing around with as you proceed.
+8. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
@@ -107,13 +107,12 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 #### Validation
 
-<validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+   <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
 
 ### Task 3: Set up an application in Cloud Shell
 
