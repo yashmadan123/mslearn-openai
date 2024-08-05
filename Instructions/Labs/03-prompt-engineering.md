@@ -101,6 +101,8 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
   
       ![](../media/new2.png)
 
+8. This will deploy a model that you will be playing around with as you proceed.
+   
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
