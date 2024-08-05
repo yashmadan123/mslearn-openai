@@ -30,29 +30,32 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
    ![](../media/openai_studio.png)
 
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. In the prompt select **Explore the new experience** 
 
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+      ![](../media/explore_new-exp.jpg "Create a new deployment")
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-   ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")
+      ![](../media/deploy-1.jpg "Create a new deployment")
 
-6. Within the **Deploy model** pop-up interface, enter the following details 
-  
-   - **Select a Model**: gpt-35-turbo (1)
+6. Search for **GPT-35-TURBO**, click on **Confirm**
+
+      ![](../media/pg-09.jpg)
+
+   
+7. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Deployment name**: 35turbo (1)
+    - **Select a Model**: gpt-35-turbo (2)
       
-      > **Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-      
-    - **Model version**: Auto-update to default (2)
-    - **Deployment type**: Standard (3)
-    - **Deployment name**: 35turbo (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
+        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+     
+    - **Model version**: Auto-update to default (3)<br>
+    - **Deployment type**: Standard (4)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
+    - **Enable dynamic quota**: Enabled (6)
+    - Click on **Create** (7)
   
-      ![](../media/x10.png)
+         ![](../media/deploy-16-K.jpg)
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
