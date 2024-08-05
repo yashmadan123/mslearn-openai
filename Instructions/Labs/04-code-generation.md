@@ -38,22 +38,32 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
-      
-        > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
-        
-    - **Model version**: Auto-update to default (2)
-    - **Deployment type**: Standard (3)
-    - **Deployment name**: 35turbo (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
-  
-      ![](../media/x991.png)
+1. In the prompt select **Explore the new experience** 
 
-7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+      ![](../media/explore_new-exp.jpg "Create a new deployment")
+
+1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+
+      ![](../media/deploy-1.jpg "Create a new deployment")
+
+1. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+
+      ![](../media/gpt-35-16k.jpg)
+
+   
+1. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Deployment name**: 35-turbo (1)
+    - **Select a Model**: gpt-35-turbo-16k (2)
+      
+        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.<br>
+    - **Deployment type**: Standard (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Create** (6)
+  
+         ![](../media/deploy-16.jpg)
+      
+1. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
