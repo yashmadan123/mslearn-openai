@@ -75,9 +75,9 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
       ![](../media/deploy-1.jpg "Create a new deployment")
 
-6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+6. Search for **GPT-35-TURBO**, click on **Confirm**
 
-      ![](../media/gpt-35-16k.jpg)
+      ![](../media/pg-09.jpg)
 
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
@@ -92,7 +92,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
     - **Enable dynamic quota**: Enabled (6)
     - Click on **Create** (7)
   
-         ![](../media/deploy-gpt35.jpg)
+         ![](../media/deploy-16-K.jpg)
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
