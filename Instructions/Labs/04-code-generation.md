@@ -30,7 +30,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/openai_studio1.png)
 
-1. In the prompt select **Explore the new experience** 
+1. In the prompt select **Explore the new experience** .
 
       ![](../media/explore_new-exp.jpg "Create a new deployment")
 
