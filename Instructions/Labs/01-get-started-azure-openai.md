@@ -63,19 +63,24 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
       ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
       ![](../media/openai_studio.png)
    
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. In the prompt select **Explore the new experience** 
 
-      ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+      ![](../media/explore_new-exp.jpg "Create a new deployment")
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
+      ![](../media/deploy-1.jpg "Create a new deployment")
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
+6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+
+      ![](../media/gpt-35-16k.jpg)
+
+   
+7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: my-gpt-model (1)
     - **Select a Model**: gpt-35-turbo (2)
       
@@ -87,9 +92,9 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
     - **Enable dynamic quota**: Enabled (6)
     - Click on **Create** (7)
   
-         ![](../media/x992-1.png)
+         ![](../media/deploy-gpt35.jpg)
 
-7. This will deploy a model which you will be playing around with as you proceed.
+8. This will deploy a model which you will be playing around with as you proceed.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
    
