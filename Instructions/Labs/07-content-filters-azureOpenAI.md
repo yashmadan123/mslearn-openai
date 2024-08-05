@@ -30,7 +30,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
    ![](../media/openai_studio.png)
 
-4. In the prompt select **Explore the new experience** 
+4. In the prompt select **Explore the new experience**.
 
       ![](../media/explore_new-exp.jpg "Create a new deployment")
 
