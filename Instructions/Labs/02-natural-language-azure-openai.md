@@ -77,30 +77,30 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai_studio1.png)
 
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. After navigating to Azure AI Studio, click on **Explore the new experience** pop-up on the top.
 
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+   ![](../media/explore_new-exp.jpg)
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
+
+   ![](../media/deploy-1.jpg)
+
+6. In the **Select a model** window, select **gpt-35-turbo-16k (1)** and click on **Confirm (2)**.
+
+   ![](../media/new4.png)
+
+7. Within the **Deploy model** pop-up interface, enter the following details:
     
-   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
-
-6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
-      
-       >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
-       
-    - **Model version**: Auto-update to default (2)
+    - **Deployment name**: text-turbo (1) 
+    - **Model version**: 0613(Default) (2)
     - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (7)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
   
-      ![](../media/x991.png)
-
-7. This will deploy a model that you will be playing around with as you proceed.
+      ![](../media/new2.png)
+      
+8. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
