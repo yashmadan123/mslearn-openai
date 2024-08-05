@@ -96,7 +96,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-      ![](../media/new2.png)
+      ![](../media/new8.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
    
