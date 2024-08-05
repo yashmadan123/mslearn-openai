@@ -39,7 +39,7 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
 1. In the **Select a model** window, select **gpt-35-turbo (1)** and click on **Confirm (2)**.
 
-   ![](../media/new4.png)
+   ![](../media/mew5.png)
 
 1. Within the **Deploy model** pop-up interface, enter the following details:
     
@@ -50,7 +50,7 @@ As you have already deployed OpenAI services in the previous exercise, you're re
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-      ![](../media/new2.png)
+      ![](../media/new5.png)
 
 1. This will deploy a model that you will be playing around with as you proceed.
 
