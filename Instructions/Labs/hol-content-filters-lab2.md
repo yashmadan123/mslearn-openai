@@ -29,20 +29,30 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
    ![](../media/gotoresources.png)
 
-1. In the **Deployments (1)** page, click on **+ Create new deployment (2)**.
+1. After navigating to Azure AI Studio, click on **Explore the new experience** pop-up on the top.
 
-   ![](../media/deploymentsturbo.png "Deploy model configurations")
+   ![](../media/explore_new-exp.jpg)
 
-6. Within the **Deploy model** pop-up interface, enter the following details and then click on **Advanced options** followed by scaling down the **Tokens per Minute Rate Limit (thousands)**:
-    - **Select a model (1)**: gpt-35-turbo
-    - **Model version**: *Use the default version*
-    - **Deployment name (2)**: 35turbo
-    - Select **Advanced options (3)**
-    - **Tokens per Minute Rate Limit (thousands) (4)**: 10K
+1. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 
-7. Click on the **Create (5)** button to deploy a model which you will be playing around with as you proceed.
+   ![](../media/deploy-1.jpg)
 
-    ![](../media/advancedoptions.png "Deploy model configurations")
+1. In the **Select a model** window, select **gpt-35-turbo-16k (1)** and click on **Confirm (2)**.
+
+   ![](../media/new4.png)
+
+1. Within the **Deploy model** pop-up interface, enter the following details:
+    
+    - **Deployment name**: 35turbo (1) 
+    - **Model version**: 1106 (2)
+    - **Deployment type**: Standard (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
+  
+      ![](../media/new2.png)
+
+1. This will deploy a model that you will be playing around with as you proceed.
 
     > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
 
