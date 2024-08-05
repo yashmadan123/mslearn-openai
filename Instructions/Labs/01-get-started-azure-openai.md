@@ -78,7 +78,6 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 6. Search for **GPT-35-TURBO**, click on **Confirm**
 
       ![](../media/pg-09.jpg)
-
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: my-gpt-model (1)
