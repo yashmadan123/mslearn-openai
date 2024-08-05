@@ -117,7 +117,6 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected and then in the **Examples** list, select **Generate a quiz**.
 
-     ![](../media/openai-4.png)
 
    >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
@@ -125,7 +124,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-     ![](../media/openai-5.png)
+     ![](../media/completions_playground.jpg)
 
      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary 
         from the original one. A generative AI model can produce new language each time it's called.
@@ -144,13 +143,11 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-    ![](../media/openai-8.png)
-
 2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **Examples > Using examples** box, click on **+ Add**. enter the following message and response in the designated boxes:
+3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-    ![](../media/openai-10.png)
+    ![](../media/last-2.jpg)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -160,14 +157,14 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
         designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
         perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-         ![](../media/openai-15.png)
+         ![](../media/exples-ai.jpg)
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own 
            responses.
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
-     ![](../media/openai-11.png)
+     ![](../media/save_changes.jpg)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
@@ -181,6 +178,8 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
+    ![](../media/view_code.jpg)
+
 ### Task 5: Explore prompts and parameters
 
 You can use the prompt and parameters to maximize the likelihood of generating the response you need.
@@ -191,6 +190,8 @@ You can use the prompt and parameters to maximize the likelihood of generating t
     
     - **Max response**: 500
 
+      ![](../media/temp.jpg)
+      
 2. Submit the following message in chat session
 
       ```
@@ -208,6 +209,9 @@ You can use the prompt and parameters to maximize the likelihood of generating t
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
+
+    ![](../media/last-3.jpg)
+   
 4. Observe the following about the prompt and parameters you used:
 
     - The prompt specifically states that the desired output should be three multiple choice questions.
@@ -221,7 +225,7 @@ In addition to generating natural language responses, you can use GPT models to 
 
 1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-      ![](../media/openai-13.png)
+      ![](../media/last-2.jpg)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
@@ -234,6 +238,8 @@ In addition to generating natural language responses, you can use GPT models to 
       ```
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
+
+    ![](../media/task-6-last.jpg)
 
 ## Summary
 
