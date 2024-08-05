@@ -75,33 +75,31 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
       ![](../media/gotoresources.png)
 
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. After navigating to Azure AI Studio, click on **Explore the new experience** pop-up on the top.
 
-      ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+   ![](../media/explore_new-exp.jpg)
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 
-      ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
+   ![](../media/deploy-1.jpg)
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo (1)
-      
-      > **Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-      
-    - **Model version**: Auto-update to default (2)
+6. In the **Select a model** window, select **gpt-35-turbo (1)** and click on **Confirm (2)**.
+
+   ![](../media/new4.png)
+
+7. Within the **Deploy model** pop-up interface, enter the following details:
+    
+    - **Deployment name**: text-turbo (1) 
+    - **Model version**: 1106 (2)
     - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
   
-         ![](../media/x11.png)
+      ![](../media/new2.png)
 
-         >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
-
-8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
-
+8. This will deploy a model that you will be playing around with as you proceed.
+   
 <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
