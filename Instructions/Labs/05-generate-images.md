@@ -74,7 +74,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-> **NOTE:** if you get Message saying already cloned , please move the next step
+> **NOTE:** if you get Message saying already cloned , please move the next step.
 
 5. Navigate to the folder for the language of your preference  by running the appropriate command.
 
