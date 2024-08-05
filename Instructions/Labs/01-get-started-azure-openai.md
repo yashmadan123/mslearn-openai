@@ -157,7 +157,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
          ![](../media/exples-ai.jpg)
    
-         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+      > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
@@ -205,7 +205,6 @@ You can use the prompt and parameters to maximize the likelihood of generating t
       ```
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
-
 
    ![](../media/last-3.jpg)
    
