@@ -85,7 +85,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 6. In the **Select a model** window, select **gpt-35-turbo (1)** and click on **Confirm (2)**.
 
-   ![](../media/new4.png)
+   ![](../media/mew5.png)
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     
