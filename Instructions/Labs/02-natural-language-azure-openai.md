@@ -71,7 +71,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
     - **Enable dynamic quota**: Enabled (6)
     - Click on **Create** (7)
   
-         ![](../media/deploy-gpt35.jpg)
+         ![](../media/deploy-16.jpg)
       
 7. This will deploy a model that you will be playing around with as you proceed.
 
