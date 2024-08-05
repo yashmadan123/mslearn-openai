@@ -46,29 +46,33 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai_studio1.png)
 
-1. From the left navigation pane, under **Management** select **Deployments (1)**, click on **+ Create new deployment (2)**.
-    
-   ![](../media/openai-17.png)
+1. In the prompt select **Explore the new experience** 
 
+      ![](../media/explore_new-exp.jpg "Create a new deployment")
+
+1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+
+      ![](../media/deploy-1.jpg "Create a new deployment")
+
+1. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+
+      ![](../media/gpt-35-16k.jpg)
+
+   
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
-
     - **Select a Model**: gpt-35-turbo-16k (2)
       
-       >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
-       
-    - **Model version**: Auto-update to default (3)
-    
+        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+     
+    - **Model version**: Auto-update to default (3)<br>
     - **Deployment type**: Standard (4)
-        
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    
     - **Enable dynamic quota**: Enabled (6)
-    
     - Click on **Create** (7)
   
-      ![](../media/x991-1.png)
-
+         ![](../media/deploy-gpt35.jpg)
+      
 7. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
