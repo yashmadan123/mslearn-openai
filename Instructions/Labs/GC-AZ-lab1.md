@@ -133,7 +133,33 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
      ![](../media/Openai-08.png)
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). Select Bash. If you don't see this option, skip the step.
+
+    ![](../media/Openai-09.png)
+
+1. Within the Getting Started pane, select Mount storage account (1), select your Storage account subscription (2) from the dropdown and click Apply (3).
+
+   ![](../media/Openai-10.png)
+
+1. Within the Mount storage account pane, select I want to create a storage account (1) and click Next (2).
+
+   ![](../media/Openai-11.png)
+
+1. Within the Advanced settings pane, enter the following details:
+
+    - Subscription: Default- Choose the only existing subscription assigned for this lab (1).
+   
+    - Region: (2)
+   
+    - Resource group: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
+   
+    - Storage account: Select storage<inject key="DeploymentID" enableCopy="false"></inject> (4)
+   
+    - File share: Create a new file share named blob<inject key="DeploymentID" enableCopy="false"></inject> (5)
+
+    - Click Create (6)
+
+      ![](../media/Openai-12.png)
 
 3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
