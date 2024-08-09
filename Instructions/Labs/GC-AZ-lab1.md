@@ -22,25 +22,25 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/Openai-01.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/Openai-02.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
 
 1. In the prompt select **Explore the new experience** .
 
-      ![](../media/Openai-03)
+      ![](../media/Openai-03.png)
 
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/Openai-04)
+      ![](../media/Openai-04.png)
 
 1. Search and select **GPT-35-TURBO-16K**, click on **Confirm**
 
-      ![](../media/Openai-05)
+      ![](../media/Openai-05.png)
 
    
 1. Within the **Deploy model** pop-up interface, enter the following details:
@@ -53,7 +53,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-         ![](../media/Openai-06)
+         ![](../media/Openai-06.png)
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
