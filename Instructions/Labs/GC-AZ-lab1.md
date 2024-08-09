@@ -149,7 +149,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     - Subscription: Default- Choose the only existing subscription assigned for this lab (1).
    
-    - Region: (2)
+    - Region: Select <inject key="Region" enableCopy="false" /> (2)
    
     - Resource group: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
    
