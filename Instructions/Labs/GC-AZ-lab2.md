@@ -100,7 +100,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
    ![](../media/classic-cloudshell-prompt.png)
 
-1. Again repeat command you executed in step number 4 and 5 for the language of your preference.
+1. Repeat the commands you executed in steps 4 and 5 for the language of your preference.
 
    
 #### Task 2.2: Configure your application
