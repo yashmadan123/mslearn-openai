@@ -96,6 +96,22 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
    code .
     ```
 
+1. When prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
+
+   ![](../media/classic-cloudshell-prompt.png)
+
+5. Run the following command :
+
+    ```bash
+   cd azure-openai/Labfiles/04-code-generation
+    ```
+
+
+    ```bash
+   code .
+    ```
+
+
 #### Task 2.2: Configure your application
 
 The application uses a configuration file to store the details needed to connect to your Azure OpenAI service account.
