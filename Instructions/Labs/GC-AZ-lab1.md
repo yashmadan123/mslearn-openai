@@ -178,7 +178,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-   Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+5. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
@@ -186,16 +186,8 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png)
-5. Run the following command :
 
-    ```bash
-   cd azure-openai/Labfiles/04-code-generation
-    ```
-
-
-    ```bash
-   code .
-    ```
+6. Repeat the commands you executed in steps 4  and 5 for the language of your preference."
 
 #### Validation
 
@@ -205,7 +197,6 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 
 ### Task 4: Configure your application
 
