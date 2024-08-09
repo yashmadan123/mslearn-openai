@@ -20,11 +20,11 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/Openai-01.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select1.png)
+   ![](../media/Openai-02.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
@@ -32,30 +32,29 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. In the prompt select **Explore the new experience** .
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
+      ![](../media/Openai-03)
 
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](../media/Openai-04)
 
-1. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+1. Search and select **GPT-35-TURBO-16K**, click on **Confirm**
 
-      ![](../media/gpt-35-16k.jpg)
+      ![](../media/Openai-05)
 
    
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: 35-turbo (1)
-    - **Select a Model**: gpt-35-turbo-16k (2)
+    - **Select a Model**: accept default (2)
       
         >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.<br>
     - **Deployment type**: Standard (3)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
-    - Click on **Create** (6)
+    - Click on **Deploy** (6)
   
-         ![](../media/deploy-16.jpg)
-      
-1. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+         ![](../media/Openai-06)
+
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
