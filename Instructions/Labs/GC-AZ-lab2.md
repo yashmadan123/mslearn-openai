@@ -144,14 +144,6 @@ Now you're ready to explore the code used to call the REST API and generate an i
     - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
     - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
 
-#### Validation
-
-   <validation step="0ee48188-10fe-43f5-b696-a2d993d7d714" />
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Run the app
 
@@ -207,6 +199,17 @@ Now that you've reviewed the code, it's time to run it and generate some images.
 3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
 4. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
+
+#### Validation
+
+   <validation step="0123144f-896f-464d-bfa2-090e62c99e62" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 
 ## Summary
 
