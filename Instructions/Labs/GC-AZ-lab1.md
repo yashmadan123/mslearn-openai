@@ -84,9 +84,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
-
-    ![](../media/Openai-07.png)
-
+    
 4. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
 5. Next, send the prompt `Do the same thing, but this time write it in C#`.
