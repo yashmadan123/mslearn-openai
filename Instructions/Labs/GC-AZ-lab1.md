@@ -338,11 +338,13 @@ Now that your app has been configured, run it to try generating code for each us
     Write four unit tests for the following function.\n---\n
     ```
 
-6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt. Then click on **quit** to exit the prompt.
+6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
+1. Enter **quit** to exit the program.
+
 7. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on line 30 and 59
