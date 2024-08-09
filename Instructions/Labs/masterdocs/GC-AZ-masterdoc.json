@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "Generate code and images with Azure OpenAI services",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/GC-AZ-gettingstarted.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/GC-AZ-lab1.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/GC-AZ-lab2.md",
+        "Order": 3
+      }
+    ]
+  }
+]
