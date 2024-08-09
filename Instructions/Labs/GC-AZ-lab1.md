@@ -282,7 +282,7 @@ Now that your app has been configured, run it to try generating code for each us
     Write four unit tests for the following function.\n---\n
     ```
 
-6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
+6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt. Then click on **quit** to exit the prompt.
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
