@@ -27,7 +27,9 @@ This lab provides robust functionalities for leveraging AI within Azure. Azure O
 
 ### Architecture Diagram
 
-![](../media/blank_diagram_1.JPG "Lab Environment")
+![](media/lab-04-ad.PNG "Architecture Diagram")
+
+![](media/lab-05-ad.PNG "Architecture Diagram")
 
 ### Explanation of Components
 
