@@ -162,6 +162,11 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 5. Run the following command :
 
     ```bash
+   cd azure-openai/Labfiles/04-code-generation
+    ```
+
+
+    ```bash
    code .
     ```
 
