@@ -8,11 +8,11 @@ In this hands-on-lab, you will explore the capabilities of Azure OpenAI Service 
 
 ## Objective 
 
-This exercise aims to improve participants' skills in generating and refining code with Azure OpenAI and creating and modifying images using the DALL-E model to achieve desired outcomes. By completing this lab, you will learn:
+This exercise aims to improve your skills in generating and refining code with Azure OpenAI and creating and modifying images using the DALL-E model to achieve desired outcomes. By completing this lab, you will learn:
 
-1. **Generate and improve code with Azure OpenAI Service**: The goal of this hands-on exercise is to demonstrate how to effectively generate and refine code using Azure OpenAI. Participants will improve their abilities to create and refine code with Azure OpenAI Service tools and approaches.
+1. **Generate and improve code with Azure OpenAI Service**: The goal of this hands-on exercise is to demonstrate how to effectively generate and refine code using Azure OpenAI. You will improve your abilities to create and refine code with Azure OpenAI Service tools and approaches.
 
-2. **Generate images with a DALL-E model**: The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, participants will develop and alter images using the DALL-E model.
+2. **Generate images with a DALL-E model**: The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, you will develop and alter images using the DALL-E model.
 
 ## Prerequisites
 
