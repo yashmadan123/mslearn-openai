@@ -14,7 +14,7 @@ This exercise aims to improve participants' skills in generating and refining co
 
 2. **Generate images with a DALL-E model**: The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, participants will develop and alter images using the DALL-E model.
 
-### Prerequisites
+## Prerequisites
 
 1. **Development Skills**: Basic programming knowledge and experience with APIs and SDKs.
 2. **AI Concepts**: Understanding prompt engineering, code development, and image generation using models such as DALL-E.
