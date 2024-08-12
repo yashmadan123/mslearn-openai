@@ -24,6 +24,10 @@ This exercise aims to improve your skills in generating and refining code with A
 
 In this hands-on lab, you will follow an architecture flow that begins with exploring Azure OpenAI Service models, where you'll use natural language prompts to generate and enhance code. The flow progresses through stages of code generation, bug fixing, and detailed commenting, leveraging AI to simplify and explain complex code. The final stage introduces the DALL-E model, where you'll practice generating original images from natural language prompts, highlighting the creative potential of AI in visual content creation. This flow seamlessly integrates AI-driven coding and creative image generation, providing a comprehensive understanding of Azure OpenAI's capabilities.
 
+## Architecture Diagram
+
+   ![](../media/ARCH10.PNG)
+
 ## Explanation of Components
 
 - **Azure OpenAI**: Integrates your data with massive language models, allowing for personalized and secure interactions.Allows for fine-tuning of AI models with your own datasets, resulting in specialized and relevant outputs for your business needs.
