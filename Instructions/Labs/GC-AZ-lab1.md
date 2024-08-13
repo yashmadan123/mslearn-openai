@@ -81,24 +81,29 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old look** and click on **skip** and then navigate to the **Chat** playground in the left 
    pane.
+
    
 1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
-     ![](../media/default1.png)
+
+      ![](../media/default1.png)
+
    
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
-     Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
+    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```    
+
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
 1. Next, send the prompt `Do the same thing, but this time write it in C#`.
    
 1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task 
-   such as reversing the input string.
+     such as reversing the input string.
    
 1. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
+
 
     ```code
     What does the following function do?  
@@ -124,6 +129,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
         return result
     ```
 
+
 1. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
 
 1. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
@@ -137,19 +143,19 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of 
      the portal.
 
-     ![](../media/Openai-08.png)
+   ![](../media/Openai-08.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). Select Bash. If you don't see this option, skip the step.
 
-     ![](../media/Openai-09.png)
+   ![](../media/Openai-09.png)
 
 1. Within the Getting Started pane, select Mount storage account (1), select your Storage account subscription (2) from the dropdown and click Apply (3).
 
-     ![](../media/Openai-10.png)
+   ![](../media/Openai-10.png)
 
 1. Within the Mount storage account pane, select I want to create a storage account (1) and click Next (2).
 
-    ![](../media/Openai-11.png)
+   ![](../media/Openai-11.png)
 
 1. Within the Advanced settings pane, enter the following details:
 
@@ -165,7 +171,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     - Click Create (6)
 
-      ![](../media/Openai-12.png)
+       ![](../media/Openai-12.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -173,6 +179,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     rm -r azure-openai -f
     git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
+
     > **NOTE:** if you get Message saying already cloned , please move the next step.
 
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
@@ -180,13 +187,15 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```bash
     cd azure-openai/Labfiles/04-code-generation
     ```
-   Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
+
+    Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
 1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
     code .
     ```
+
    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png)
@@ -210,22 +219,22 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. Open the configuration file for your language.
 
-    - **C#**: `appsettings.json`
-    - **Python**: `.env`
+     - **C#**: `appsettings.json`
+     - **Python**: `.env`
 
 1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the 
-   file from the left pane and hit **Save**.
+    file from the left pane and hit **Save**.
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
-    **C#**
+     **C#**
 
-    ```bash
-    cd CSharp
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
-    ```
+     ```bash
+     cd CSharp
+     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+     ```
 
-    **Python**
+     **Python**
 
      ```bash
      cd Python
