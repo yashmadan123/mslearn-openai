@@ -272,7 +272,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     **Python**
      `code-generation.py`
 
-      ```python
+    ```python
     # Format and send the request to the model
     messages =[
         {"role": "system", "content": system_message},
@@ -336,16 +336,19 @@ Now that your app has been configured, run it to try generating code for each us
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
+
 1. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
     ```prompt
     Write four unit tests for the following function.\n---\n
     ```
+
 1. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
+
 1. Enter **quit** to exit the program.
 
 1. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
@@ -358,17 +361,20 @@ Now that your app has been configured, run it to try generating code for each us
     ```
     cd result
     ```
+
 1. Copy the below command in the terminal to see the contents of the app.txt file.
 
    ```
    cat app.txt
    ```
 
-The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
+  - The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
-It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but can't be trusted as correct and need to be verified by the developer.
+  - It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not 
+    checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example 
+    of how useful generative AI models can be to assist with code generation, but can't be trusted as correct and need to be verified by the developer.
 
-If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
+  - If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
 
 ## Summary
 
