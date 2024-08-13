@@ -2,17 +2,17 @@
 ### Overall Estimated Duration: 8 Hours
 ### Overview
 
-This hands-on labs offer a comprehensive introduction to Azure OpenAI Service. You will begin by configuring the service and integrating Azure OpenAI SDKs into your application. Techniques in prompt engineering will refine interactions, and you'll also gain skills in generating and enhancing code. The DALL-E model will be utilized for image generation, and you will explore the use of your own data for retrieval-augmented generation (RAG). Additionally, you will delve into content filtering to manage and regulate generated outputs. Throughout the labs, you'll gain practical experience with real-world AI applications, learn best practices for deploying and scaling these services in a production environment, and understand how to integrate various Azure services to develop resilient, scalable, and secure AI-powered applications.
+This hands-on labs, you'll use Azure OpenAI Service models to simplify and explain complex code, help understand code functionality, and suggest improvements. These models are capable of generating code, fixing bugs, and providing helpful comments using natural language prompts, enhancing the coding experience by allowing developers to describe their intentions in plain language. Additionally, the Azure OpenAI Service includes the DALL-E model, which can generate original images from natural language descriptions, further expanding your creative capabilities.
 
 ## Objective 
 
-This lab is aimed to give learners hands-on experience with Azure OpenAI resources, deploy and explore models using the Completions and Chat playgrounds, and experiment with prompts, parameters, and code generation. By completing this lab
+This lab aims to give learners hands-on experience with Azure OpenAI Service models, allowing them to deploy and explore these models using the Completions and Chat playgrounds. Participants will experiment with natural language prompts, adjust parameters, and engage in code generation, bug fixing, and code explanation. Additionally, learners will explore the DALL-E model for generating images from text descriptions, further enhancing their understanding of Azure OpenAI resources.
 
 Participants will learn:
 
-1. **Generate and improve code with Azure OpenAI Service**: The goal of this hands-on exercise is to demonstrate how to effectively generate and refine code using Azure OpenAI. Participants will improve their abilities to create and refine code with Azure OpenAI Service tools and approaches.
+**Generate and Improve Code with Azure OpenAI Service**: This hands-on exercise aims to teach participants how to effectively generate and enhance code using Azure OpenAI Service tools. Participants will learn to leverage natural language prompts to create, refine, and debug code, improving their coding skills with the help of AI-driven models.
 
-2. **Generate images with a DALL-E model**: The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, participants will develop and alter images using the DALL-E model.
+**Generate Images with the DALL-E Model**: In this activity, participants will learn to create and modify images using the DALL-E model. By crafting and adjusting natural language prompts, they will explore how to generate specific visual outcomes, enhancing their ability to use AI for creative purposes.
 
 ### Prerequisites
 Participants should have:
@@ -27,7 +27,9 @@ This lab provides robust functionalities for leveraging AI within Azure. Azure O
 
 ### Architecture Diagram
 
-![](../media/blank_diagram_1.JPG "Lab Environment")
+![](../media/lab-04-ad.png)
+
+![](../media/lab-05-ad.png)
 
 ### Explanation of Components
 

@@ -1,4 +1,4 @@
-# Lab 05: Generate images with a DALL-E model
+# Lab 02: Generate images with a DALL-E model
 
 ## Lab scenario
 The Azure OpenAI Service includes an image-generation model named DALL-E. You can use this model to submit natural language prompts that describe a desired image, and the model will generate an original image based on the description you provide.
@@ -25,11 +25,11 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
-3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
@@ -37,17 +37,17 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-4. In the **Overiew** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the **Overiew** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio.png)
 
-5. From the left navigation pane, select the **DALL-E Playground**.
+1. From the left navigation pane, select the **DALL-E Playground**.
 
-6. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
+1. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
 
     ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/e1.png)
 
-7. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
+1. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
     ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/e2.png)
 
@@ -63,9 +63,9 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-3. Once the terminal starts, enter the following command to download the application code you are going to work with.
+1. Once the terminal starts, enter the following command to download the application code you are going to work with.
 
     ```bash
    rm -r azure-openai -f
@@ -74,9 +74,9 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-> **NOTE:** if you get Message saying already cloned , please move the next step.
+    > **NOTE:** if you get Message saying already cloned , please move the next step.
 
-5. Navigate to the folder for the language of your preference  by running the appropriate command.
+1. Navigate to the folder for the language of your preference  by running the appropriate command.
 
     **Python**
 
@@ -90,12 +90,19 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
    cd azure-openai/Labfiles/05-image-generation/CSharp
     ```
 
-6. Use the following command to open the built-in code editor and see the code files you will be working with.
+1. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
     ```
 
+1. When prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
+
+   ![](../media/classic-cloudshell-prompt.png)
+
+1. Repeat the commands you executed in steps 4 and 5 for the language of your preference.
+
+   
 #### Task 2.2: Configure your application
 
 The application uses a configuration file to store the details needed to connect to your Azure OpenAI service account.
@@ -137,18 +144,40 @@ Now you're ready to explore the code used to call the REST API and generate an i
     - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
     - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
 
-#### Validation
-
-   <validation step="0ee48188-10fe-43f5-b696-a2d993d7d714" />
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Run the app
 
 Now that you've reviewed the code, it's time to run it and generate some images.
+
+1. If you'r following **C#** Lanaguage kindly open **generate_image.csproj** file replace with following code and save the file before moving to next step.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+   
+     <PropertyGroup>
+       <OutputType>Exe</OutputType>
+       <TargetFramework>net8.0</TargetFramework>
+       <ImplicitUsings>enable</ImplicitUsings>
+       <Nullable>enable</Nullable>
+     </PropertyGroup>
+     <PropertyGroup>
+       <MSBuildWarningsAsMessages>$(MSBuildWarningsAsMessages);CS8600;CS8602</MSBuildWarningsAsMessages>
+     </PropertyGroup>
+   
+     <ItemGroup>
+       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+     </ItemGroup>
+   
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+   </Project>
+   
+   ```
 
 1. In the console prompt pane, enter the appropriate command to run your application:
 
@@ -171,11 +200,24 @@ Now that you've reviewed the code, it's time to run it and generate some images.
 
 4. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
+#### Validation
+
+   <validation step="0123144f-896f-464d-bfa2-090e62c99e62" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Summary
+
+In this lab, you successfully explored the image-generation capabilities of the DALL-E model in Azure OpenAI Service. You learned how to generate images using natural language prompts through the DALL-E playground and by making REST API calls. By configuring and running a simple application in Azure Cloud Shell, you gained practical experience in integrating DALL-E's image-generation features into a real-world scenario. This lab highlighted the potential of AI to create custom images based on detailed prompts, showcasing how AI can transform creative and visual tasks.
+
+## Review
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
 -   understand the concepts of image generation via the DALL-E model.
 -   Implement image-generation into your applications using this model
 
-## Proceed with next lab.
+## You have successfully completed the lab.

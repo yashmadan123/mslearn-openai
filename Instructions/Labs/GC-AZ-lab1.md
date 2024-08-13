@@ -20,49 +20,46 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/Openai-01.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select1.png)
+   ![](../media/Openai-02.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
 
 1. In the prompt select **Explore the new experience** .
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
+      ![](../media/Openai-03.png)
 
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](../media/Openai-04.png)
 
-1. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+1. Search and select **GPT-35-TURBO-16K**, click on **Confirm**
 
-      ![](../media/gpt-35-16k.jpg)
+      ![](../media/Openai-05.png)
 
    
 1. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: 35-turbo (1)
-    - **Select a Model**: gpt-35-turbo-16k (2)
+    - **Deployment name**: 35turbo (1)
+    - **Select a Model**: accept default (2)
       
         >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.<br>
     - **Deployment type**: Standard (3)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
-    - Click on **Create** (6)
-  
-         ![](../media/deploy-16.jpg)
-      
-1. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+    - Click on **Deploy** (6)
+
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
 #### Validation
 
-   <validation step="6b5dfe99-465f-46ee-87f2-cd43ea009266" />
+   <validation step="4a0f2d4d-175a-4dc9-8700-484bc47d1f3f" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -74,7 +71,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
+1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old look** and click on **skip** and then navigate to the **Chat** playground in the left pane.
    
 2. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
@@ -85,7 +82,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
-
+    
 4. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
 5. Next, send the prompt `Do the same thing, but this time write it in C#`.
@@ -130,9 +127,35 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+     ![](../media/Openai-08.png)
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). Select Bash. If you don't see this option, skip the step.
+
+    ![](../media/Openai-09.png)
+
+1. Within the Getting Started pane, select Mount storage account (1), select your Storage account subscription (2) from the dropdown and click Apply (3).
+
+   ![](../media/Openai-10.png)
+
+1. Within the Mount storage account pane, select I want to create a storage account (1) and click Next (2).
+
+   ![](../media/Openai-11.png)
+
+1. Within the Advanced settings pane, enter the following details:
+
+    - Subscription: Default- Choose the only existing subscription assigned for this lab (1).
+   
+    - Region: Select <inject key="Region" enableCopy="false" /> (2)
+   
+    - Resource group: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
+   
+    - Storage account: Select storage<inject key="DeploymentID" enableCopy="false"></inject> (4)
+   
+    - File share: Create a new file share named blob<inject key="DeploymentID" enableCopy="false"></inject> (5)
+
+    - Click Create (6)
+
+      ![](../media/Openai-12.png)
 
 3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -151,7 +174,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-   Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+5. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
@@ -160,15 +183,16 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png)
 
+6. Repeat the commands you executed in steps 4  and 5 for the language of your preference."
+
 #### Validation
 
-   <validation step="2a8f35b8-234c-4548-9951-579dc22af97f" />
+   <validation step="d2e1f993-b207-40be-9554-9ece30e830a9" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 
 ### Task 4: Configure your application
 
@@ -254,7 +278,36 @@ Now that your app has been configured, run it to try generating code for each us
 > **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
-2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
+1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
+1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+      ```
+      <Project Sdk="Microsoft.NET.Sdk">
+   
+     <PropertyGroup>
+       <OutputType>Exe</OutputType>
+       <TargetFramework>net8.0</TargetFramework>
+       <ImplicitUsings>enable</ImplicitUsings>
+       <Nullable>enable</Nullable>
+     </PropertyGroup>
+   
+     <ItemGroup>
+       <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+     </ItemGroup>
+   
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+   </Project>
+   
+   ```  
 3. Run the application.
 
     - **C#**: `dotnet run`
@@ -277,6 +330,8 @@ Now that your app has been configured, run it to try generating code for each us
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
+1. Enter **quit** to exit the program.
+
 7. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on line 30 and 59
@@ -302,9 +357,13 @@ If you would like to see the full response from Azure OpenAI, you can set the `p
 
 ## Summary
 
+By completing this lab, you’ve gained hands-on experience with Azure OpenAI Service models, demonstrating how AI can be a powerful tool in code generation, bug fixing, and code comprehension. You’ve learned to deploy models, utilize the Chat Playground for code-related tasks, and integrate AI into a real-world application through Azure Cloud Shell. Additionally, you've explored the capabilities of the DALL-E model for image generation. These skills will help you leverage AI to enhance your coding workflow, making development more efficient and insightful.
+
+## Review
+
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
 -   Deploy an OpenAI model within the Azure OpenAI studio
 -   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
 
-## Proceed with next lab.
+## You have successfully completed the lab. Click on Next >> to procced with next exercise.
