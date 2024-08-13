@@ -133,21 +133,22 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of 
+   the portal.
 
      ![](../media/Openai-08.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). Select Bash. If you don't see this option, skip the step.
 
-    ![](../media/Openai-09.png)
+     ![](../media/Openai-09.png)
 
 1. Within the Getting Started pane, select Mount storage account (1), select your Storage account subscription (2) from the dropdown and click Apply (3).
 
-   ![](../media/Openai-10.png)
+     ![](../media/Openai-10.png)
 
 1. Within the Mount storage account pane, select I want to create a storage account (1) and click Next (2).
 
-   ![](../media/Openai-11.png)
+    ![](../media/Openai-11.png)
 
 1. Within the Advanced settings pane, enter the following details:
 
