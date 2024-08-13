@@ -59,7 +59,8 @@ The Azure OpenAI service provides a REST API that you can use to submit prompts 
 
 In this exercise, you'll use a simple Python or Microsoft C# app to generate images by calling the REST API. You'll run the code in the cloud shell console interface in the Azure portal.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of 
+   the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
@@ -68,8 +69,8 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 1. Once the terminal starts, enter the following command to download the application code you are going to work with.
 
     ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+    rm -r azure-openai -f
+    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
@@ -81,19 +82,19 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
     **Python**
 
     ```bash
-   cd azure-openai/Labfiles/05-image-generation/Python
+    cd azure-openai/Labfiles/05-image-generation/Python
     ```
 
     **C#**
 
     ```bash
-   cd azure-openai/Labfiles/05-image-generation/CSharp
+    cd azure-openai/Labfiles/05-image-generation/CSharp
     ```
 
 1. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
-   code .
+    code .
     ```
 
 1. When prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
@@ -101,8 +102,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
    ![](../media/classic-cloudshell-prompt.png)
 
 1. Repeat the commands you executed in steps 4 and 5 for the language of your preference.
-
-   
+ 
 #### Task 2.2: Configure your application
 
 The application uses a configuration file to store the details needed to connect to your Azure OpenAI service account.
@@ -116,10 +116,11 @@ The application uses a configuration file to store the details needed to connect
 
     > **Tip**: You can adjust the split at the top of the cloud shell pane to see the Azure portal, and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
 
-3. If you are using **Python**, you'll also need to install the **python-dotenv** package used to read the configuration file. In the console prompt pane, ensure the current folder is **~/azure-openai/Labfiles/05-image-generation/Python**. Then enter this command:
+3. If you are using **Python**, you'll also need to install the **python-dotenv** package used to read the configuration file. In the console prompt pane, ensure the current folder is **~/azure-openai/Labfiles/05- 
+   image-generation/Python**. Then enter this command:
 
     ```bash
-   pip install python-dotenv
+    pip install python-dotenv
     ```
 
 #### Task 2.3: View application code
@@ -143,7 +144,6 @@ Now you're ready to explore the code used to call the REST API and generate an i
         - The resolution (size) of the image to be generated.
     - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
     - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
-
 
 ### Task 3: Run the app
 
