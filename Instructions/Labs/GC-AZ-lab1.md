@@ -79,7 +79,8 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old look** and click on **skip** and then navigate to the **Chat** playground in the left pane.
+1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old look** and click on **skip** and then navigate to the **Chat** playground in the left 
+   pane.
    
 2. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
@@ -88,14 +89,15 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
-   Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
+    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
     
 4. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
 5. Next, send the prompt `Do the same thing, but this time write it in C#`.
    
-6. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
+6. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task 
+   such as reversing the input string.
    
 7. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
 
@@ -214,7 +216,8 @@ For this exercise, you'll complete some key parts of the application to enable u
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the 
+   file from the left pane and hit **Save**.
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -233,7 +236,8 @@ For this exercise, you'll complete some key parts of the application to enable u
      pip install openai==1.13.3
      ```
 
-5. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
+5. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the 
+   model.
 
     **C#**
     `Program.cs`
