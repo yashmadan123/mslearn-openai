@@ -169,8 +169,8 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+    rm -r azure-openai -f
+    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
     > **NOTE:** if you get Message saying already cloned , please move the next step.
@@ -178,7 +178,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 4. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/04-code-generation
+    cd azure-openai/Labfiles/04-code-generation
     ```
 
    Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
@@ -186,13 +186,13 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 5. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
-   code .
+    code .
     ```
    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png)
 
-6. Repeat the commands you executed in steps 4  and 5 for the language of your preference."
+6. Repeat the commands you executed in steps 4  and 5 for the language of your preference.
 
 #### Validation
 
@@ -221,17 +221,17 @@ For this exercise, you'll complete some key parts of the application to enable u
     **C#**
 
     ```bash
-   cd CSharp
-   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+    cd CSharp
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
     **Python**
 
-      ```bash
-    cd Python
-    pip install python-dotenv
-    pip install openai==1.13.3
-    ```
+     ```bash
+     cd Python
+     pip install python-dotenv
+     pip install openai==1.13.3
+     ```
 
 5. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
 
@@ -321,7 +321,6 @@ Now that your app has been configured, run it to try generating code for each us
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
-
 4. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 
     ```prompt
@@ -348,7 +347,7 @@ Now that your app has been configured, run it to try generating code for each us
 8. To check the results paste the following code in the terminal:
 
     ```
-   cd result
+    cd result
     ```
 
 9. Copy the below command in the terminal to see the contents of the app.txt file.
