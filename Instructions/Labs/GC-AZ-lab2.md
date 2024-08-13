@@ -209,8 +209,6 @@ Now that you've reviewed the code, it's time to run it and generate some images.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-
-
 ## Summary
 
 In this lab, you successfully explored the image-generation capabilities of the DALL-E model in Azure OpenAI Service. You learned how to generate images using natural language prompts through the DALL-E playground and by making REST API calls. By configuring and running a simple application in Azure Cloud Shell, you gained practical experience in integrating DALL-E's image-generation features into a real-world scenario. This lab highlighted the potential of AI to create custom images based on detailed prompts, showcasing how AI can transform creative and visual tasks.
@@ -222,3 +220,4 @@ In this lab, you have accomplished the following:
 -   understand the concepts of image generation via the DALL-E model.
 -   Implement image-generation into your applications using this model
 
+## You have successfully completed the lab.
