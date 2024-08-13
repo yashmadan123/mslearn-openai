@@ -22,9 +22,17 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/Openai-01.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/Openai-02.png)
+
+1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+
+        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
@@ -125,21 +133,22 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of 
+   the portal.
 
      ![](../media/Openai-08.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). Select Bash. If you don't see this option, skip the step.
 
-    ![](../media/Openai-09.png)
+     ![](../media/Openai-09.png)
 
 1. Within the Getting Started pane, select Mount storage account (1), select your Storage account subscription (2) from the dropdown and click Apply (3).
 
-   ![](../media/Openai-10.png)
+     ![](../media/Openai-10.png)
 
 1. Within the Mount storage account pane, select I want to create a storage account (1) and click Next (2).
 
-   ![](../media/Openai-11.png)
+    ![](../media/Openai-11.png)
 
 1. Within the Advanced settings pane, enter the following details:
 
@@ -160,8 +169,8 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+    rm -r azure-openai -f
+    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
     > **NOTE:** if you get Message saying already cloned , please move the next step.
@@ -169,7 +178,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 4. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/04-code-generation
+    cd azure-openai/Labfiles/04-code-generation
     ```
 
    Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
@@ -177,13 +186,13 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 5. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
-   code .
+    code .
     ```
    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png)
 
-6. Repeat the commands you executed in steps 4  and 5 for the language of your preference."
+6. Repeat the commands you executed in steps 4  and 5 for the language of your preference.
 
 #### Validation
 
@@ -212,17 +221,17 @@ For this exercise, you'll complete some key parts of the application to enable u
     **C#**
 
     ```bash
-   cd CSharp
-   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+    cd CSharp
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
     **Python**
 
-      ```bash
-    cd Python
-    pip install python-dotenv
-    pip install openai==1.13.3
-    ```
+     ```bash
+     cd Python
+     pip install python-dotenv
+     pip install openai==1.13.3
+     ```
 
 5. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
 
@@ -283,36 +292,34 @@ Now that your app has been configured, run it to try generating code for each us
 
 1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
 
-      ```
-      <Project Sdk="Microsoft.NET.Sdk">
+   ```
+   <Project Sdk="Microsoft.NET.Sdk">
    
-     <PropertyGroup>
-       <OutputType>Exe</OutputType>
-       <TargetFramework>net8.0</TargetFramework>
-       <ImplicitUsings>enable</ImplicitUsings>
-       <Nullable>enable</Nullable>
-     </PropertyGroup>
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
    
-     <ItemGroup>
-       <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-     </ItemGroup>
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
    
-     <ItemGroup>
-       <None Update="appsettings.json">
-         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
        </None>
      </ItemGroup>
    
-   </Project>
-   
+    </Project>
    ```  
 3. Run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
-
 
 4. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 
@@ -340,7 +347,7 @@ Now that your app has been configured, run it to try generating code for each us
 8. To check the results paste the following code in the terminal:
 
     ```
-   cd result
+    cd result
     ```
 
 9. Copy the below command in the terminal to see the contents of the app.txt file.
