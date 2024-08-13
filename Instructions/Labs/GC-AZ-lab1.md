@@ -52,8 +52,6 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
-  
-         ![](../media/Openai-06.png)
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
@@ -283,7 +281,7 @@ Now that your app has been configured, run it to try generating code for each us
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
-1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code 
+1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
 
       ```
       <Project Sdk="Microsoft.NET.Sdk">
