@@ -1,118 +1,118 @@
-# Get Started With OpenAI And Build Natural Language Solution
+# Comience a Usar OpenAI y Cree Una Solución de Lenguaje Natural
 
-### Overall Estimated Duration: 4 Hours
+### Duración Total Estimada: 4 horas
 
-## Overview
+## Descripción general
 
-Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling the development of powerful AI solutions with the security, scalability, and integration of Azure's cloud services. In this lab, you'll learn to provision Azure OpenAI as a resource and use Azure OpenAI Studio to deploy and explore OpenAI models. With Azure OpenAI, developers can create applications like chatbots and language models that excel in understanding natural human language. The service provides access to pre-trained AI models and a suite of APIs and tools for customizing and fine-tuning these models to meet specific application requirements. In this scenario, you'll assume the role of a software developer tasked with implementing an app to provide hiking recommendations using generative AI, demonstrating techniques applicable to any app utilizing Azure OpenAI APIs.
+El Servicio Azure OpenAI incorpora los modelos de IA Generativa desarrollados por OpenAI a la plataforma Azure, permitiendo el desarrollo de potentes soluciones de IA con la seguridad, la escalabilidad y la integración de los servicios en la nube de Azure. En este laboratorio, aprenderá a aprovisionar Azure OpenAI como un recurso y a usar Azure OpenAI Studio para implementar y explorar los modelos de OpenAI. Con Azure OpenAI, los desarrolladores pueden crear aplicaciones como chatbots y modelos de lenguaje que se destacan por comprender el lenguaje humano natural. El servicio brinda acceso a modelos de IA entrenados previamente y a un conjunto de APIs y herramientas para personalizar y ajustar estos modelos para cumplir con los requisitos específicos de la aplicación. En este escenario, asumirá el rol de un desarrollador de software encargado de implementar una aplicación para proporcionar recomendaciones de senderismo mediante IA generativa, demostrando técnicas aplicables a cualquier aplicación que utilice las API de Azure OpenAI.
 
-## Objective
+## Objetivo
 
-By the end of this lab, you will be able to:
+Al final de este laboratorio, será capaz de:
 
-- **Get started with Azure OpenAI Servic**e: This hands-on exercise aims to provision an Azure OpenAI resource and deploying a model. Explore the model's capabilities in the Completions playground, then interact with it using the Chat playground. Fine-tune responses by adjusting prompts and parameters, and leverage code-generation to automate tasks.
-- **Use Azure OpenAI SDKs in your app**: This hands-on exercise aims to provision an Azure OpenAI resource, deploy a model, set up and configure an application in Cloud Shell, and then run the application, demonstrating the full lifecycle from resource creation to application deployment and execution.
+- **Comenzar a usar el Servicio Azure OpenAI**: Este ejercicio práctico tiene como objetivo aprovisionar un recurso de Azure OpenAI e implementar un modelo. Explore las capacidades del modelo en el área de juegos (Playground) Completions y luego interactúe con él mediante el área de juegos (Playground) Chat. Afine las respuestas mediante el ajuste de los prompts y los parámetros, y aproveche la generación de código para automatizar las tareas.
+- **Utilizar los SDKs de Azure OpenAI en su aplicación**: Este ejercicio práctico tiene como objetivo aprovisionar un recurso de Azure OpenAI, implementar un modelo, establecer y configurar una aplicación en Cloud Shell y luego ejecutar la aplicación, demostrando el ciclo de vida completo desde la creación del recurso hasta la implementación y ejecución de la aplicación.
 
-## Pre-requisites
+## Requisitos previos
 
-- Familiarity with Azure OpenAI Service, Azure CLI, and REST APIs
-- Basic understanding of AI and machine learning concepts
+- Familiaridad con el Servicio Azure OpenAI, Azure CLI, y las APIs REST
+- Conocimiento básico de los conceptos de IA y machine learning
 
-## Architecture
+## Arquitectura
 
-The architecture flow for this task begins with provisioning an Azure OpenAI resource within your Azure subscription and deploying a pre-trained model using Azure OpenAI Studio. Next, you'll explore the model's capabilities in the Completions playground and test its conversational abilities in the Chat playground, experimenting with different prompts and parameters to customize responses. You'll also investigate the model's code-generation capabilities. In the application development phase, you'll set up your application environment in Azure Cloud Shell, configure the application to integrate with the deployed OpenAI model, and finally, run the application to provide hiking recommendations using generative AI.
+El flujo de arquitectura para esta tarea comienza con el aprovisionamiento de un recurso de Azure OpenAI dentro de su suscripción de Azure y la implementación de un modelo entrenado previamente mediante Azure OpenAI Studio. A continuación, explorará las capacidades del modelo en el área de juegos (Playground) Completions y probará sus capacidades de conversación en el área de juegos (Playground) Chat, experimentando con diferentes prompts y parámetros para personalizar las respuestas. También investigará las capacidades de generación de código del modelo. En la fase de desarrollo de la aplicación, configurará su entorno de aplicación en Azure Cloud Shell, configurará la aplicación para integrarla con el modelo OpenAI implementado y, por último, ejecutará la aplicación para proporcionar recomendaciones de senderismo mediante IA generativa.
 
-## Architecture Diagram
+## Diagrama de Arquitectura
 
- ![Access Your VM and Lab Guide](../media/arch20.png)
+ ![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/arch20.png)
 
-## Explanation of Components
+## Explicación de los Componentes
 
-1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models and these models integrates with your data, enabling customized and secure interactions.
-1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
-1. **Azure CloudShell**: Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
+1. **Azure OpenAI**: El Servicio Azure OpenAI proporciona acceso REST API a los potentes modelos de lenguaje de OpenAI y estos modelos se integran con sus datos, permitiendo interacciones personalizadas y seguras.
+1. **Modelos de Azure OpenAI**: Ofrece modelos de lenguaje grande personalizables y pre-entrenados para diversas aplicaciones de IA. Estos modelos permiten crear potentes soluciones impulsadas por IA mediante la generación de contenido personalizado y contextualmente relevante basado en prompts bien diseñados.
+1. **Azure CloudShell**: Azure CloudShell ofrece una experiencia shell integrada basada en navegador para administrar los recursos de Azure. Proporciona un entorno listo para usar con herramientas preinstaladas y acceso tanto a Bash como a PowerShell.
 
-## Getting Started with the Lab
+## Comenzando con el Laboratorio
  
-## Accessing Your Lab Environment
+## Accediendo a Su Ambiente de Laboratorio
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Una vez que esté listo para comenzar, su máquina virtual y la guía de laboratorio estarán al alcance de su mano dentro de su navegador web.
  
-![Access Your VM and Lab Guide](../media/labguide-1.png)
+![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/labguide-1.png)
 
-### Virtual Machine & Lab Guide
+### Máquina Virtual & Guía de Laboratorio
  
-Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+Su máquina virtual es su caballo de batalla durante todo el taller. La guía de laboratorio es su hoja de ruta hacia el éxito.
  
-## Exploring Your Lab Resources
+## Explorando Los Recursos de Su Laboratorio
  
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+Para obtener una mejor comprensión de sus recursos de laboratorio y credenciales, navegue a la pestaña **Ambiente**.
  
-![Explore Lab Resources](../media/env-1.png)
+![Explore los Recursos de Laboratorio](../media/env-1.png)
  
-## Utilizing the Split Window Feature
+## Utilizando la Función de Ventana Dividida
  
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
+Para mayor comodidad, puede abrir la guía de laboratorio en una ventana separada seleccionando el botón **Ventana Dividida** de la esquina superior derecha.
  
-![Use the Split Window Feature](../media/spl.png)
+![Utilice la Función de Ventana Dividida](../media/spl.png)
  
-## Managing Your Virtual Machine
+## Administrando Su Máquina Virtual
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Siéntase libre de iniciar, detener o reiniciar su máquina virtual cuando lo necesite desde la pestaña **Recursos**. ¡Su experiencia está en sus manos!
  
-![Manage Your Virtual Machine](../media/res.png)
+![Administre Su Máquina Virtual](../media/res.png)
 
-## **Lab Duration Extension**
+## **Extendiendo la Duración del Laboratorio**
 
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
+1. Para extender la duración del laboratorio, haga clic en el ícono **Reloj de arena** en la esquina superior derecha del entorno del laboratorio.
 
-    ![Manage Your Virtual Machine](../media/gext.png)
+    ![Administre Su Máquina Virtual](../media/gext.png)
 
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
+    >**Nota:** Verá el ícono **Reloj de arena** cuando queden 10 minutos en el laboratorio.
 
-2. Click **OK** to extend your lab duration.
+2. Haga clic en **Aceptar** para extender la duración de su laboratorio.
  
-   ![Manage Your Virtual Machine](../media/gext2.png)
+   ![Administre Su Máquina Virtual](../media/gext2.png)
 
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed. 
+3. Si no ha extendido la duración antes de que el laboratorio esté por terminar, aparecerá una ventana emergente que le dará la opción de extenderla. Haga clic en **Aceptar** para continuar.
 
-## Let's Get Started with Azure Portal
+## Comenzando con el Portal de Azure
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. En su máquina virtual, haga clic en el icono de Azure Portal como se muestra a continuación:
  
-   ![Launch Azure Portal](../media/sc900-image(1).png)
+   ![Inicie el Portal de Azure](../media/sc900-image(1).png)
  
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+2. Verá la pestaña **Iniciar sesión en Microsoft Azure**. Aquí, ingrese sus credenciales:
  
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Correo electrónico/Nombre de usuario:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](../media/sc900-image-1.png)
+       ![Ingrese Su Nombre de usuario](../media/sc900-image-1.png)
  
-3. Next, provide your password:
+3. A continuación, proporcione su contraseña:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Contraseña:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Enter Your Password](../media/sc900-image-2.png)
+       ![Ingrese Su Contraseña](../media/sc900-image-2.png)
  
-4. If prompted to stay signed in, you can click "No."
+4. Si se le solicita que permanezca conectado, puede hacer clic en "No".
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+5. Si aparece una ventana emergente de **Bienvenido a Microsoft Azure**, simplemente haga clic en **Cancelar** para omitir la visita guiada.
  
-6. Click "Next" from the bottom right corner to embark on your Lab journey!
+6. ¡Haga clic en "Siguiente" en la esquina inferior derecha para comenzar su recorrido de laboratorio.
  
-     ![Start Your Azure Journey](../media/sc900-image(3).png)
+     ![Comience Su Viaje En Azure](../media/sc900-image(3).png)
  
-This lab will equip you with the skills to deploy and customize Azure OpenAI models, enabling you to create advanced AI applications like chatbots and recommendation systems.
+Este laboratorio le brindará las habilidades para implementar y personalizar los modelos de Azure OpenAI, permitiéndole crear aplicaciones de IA avanzadas como chatbots y sistemas de recomendación.
 
-## Support Contact
+## Contacto de Soporte
 
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+El equipo de soporte de CloudLabs está disponible las 24 horas del día, los 7 días de la semana, los 365 días del año, por correo electrónico y chat en vivo para garantizar una asistencia perfecta en cualquier momento. Ofrecemos canales de soporte dedicados y diseñados específicamente para estudiantes e instructores, garantizando que todas sus necesidades se aborden de manera rápida y eficiente.
 
-Learner Support Contacts:
+Contactos de Soporte para Estudiantes:
 
-- Email Support: labs-support@spektrasystems.com
-- Live Chat Support: https://cloudlabs.ai/labs-support
+- Soporte por Correo Electrónico: labs-support@spektrasystems.com
+- Soporte por Chat en Vivo: https://cloudlabs.ai/labs-support
 
-Now, click on Next from the lower right corner to move on to the next page.
+Ahora, haga clic en Siguiente en la esquina inferior derecha para pasar a la página siguiente.
 
-## Happy Learning!!
+## ¡¡Feliz aprendizaje!!

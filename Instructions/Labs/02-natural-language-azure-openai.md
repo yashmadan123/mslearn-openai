@@ -1,200 +1,200 @@
-# Lab 02: Use Azure OpenAI SDKs in your app
+# Laboratorio 02: Utilizar los SDKs de Azure OpenAI en su aplicación
 
-### Estimated Duration: 40 minutes
+### Duración Estimada: 40 minutos
 
-## Lab scenario
-With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application.
+## Escenario de laboratorio
+Con el Servicio Azure OpenAI, los desarrolladores pueden crear chatbots, modelos de lenguaje y otras aplicaciones que se destacan en la comprensión del lenguaje humano natural. Azure OpenAI proporciona acceso a modelos de IA pre-entrenados, así como a un conjunto de APIs y herramientas para personalizar y ajustar estos modelos para cumplir con los requisitos específicos de su aplicación. En este ejercicio, aprenderá a implementar un modelo en Azure OpenAI y a usarlo en su propia aplicación.
 
-In the scenario for this exercise, you will perform the role of a software developer who has been tasked to implement an app that can use generative AI to help provide hiking recommendations. The techniques used in the exercise can be applied to any app that wants to use Azure OpenAI APIs.
+En el escenario de este ejercicio, desempeñará el papel de un desarrollador de software al que se le ha encargado implementar una aplicación que pueda usar IA generativa para ayudar a proporcionar recomendaciones de senderismo. Las técnicas utilizadas en el ejercicio se pueden aplicar a cualquier aplicación que desee usar las APIs de Azure OpenAI.
 
-## Lab objectives
-In this lab, you will complete the following tasks:
+## Objetivos del laboratorio
+En este laboratorio, completará las siguientes tareas:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Set up an application in Cloud Shell
-- Task 4: Configure your application
-- Task 5: Run your application
+- Tarea 1: Aprovisionar un recurso Azure OpenAI
+- Tarea 2: Implementar un modelo
+- Tarea 3: Configurar una aplicación en Cloud Shell
+- Tarea 4: Configurar su aplicación
+- Tarea 5: Ejecutar su aplicación
 
-### Task 1: Provision an Azure OpenAI resource
+### Tarea 1: Aprovisionar un recurso de Azure OpenAI
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azure OpenAI en su suscripción de Azure.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
+2. En la hoja **Servicios de IA de Azure | Azure OpenAI**, haga clic en **+ Crear**.
 
    ![](../media/openai_create1.png)
 
-3. Create an **Azure OpenAI** resource with the following settings 
+3. Cree un recurso **Azure OpenAI** con la siguiente configuración:
 
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
-    - **Name**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
+    - **Suscripción**: Predeterminada - Suscripción preasignada (1).
+    - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
+    - **Región**: Seleccione <inject key="Region" enableCopy="false" /> (3)
+    - **Nombre**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (4)
+    - **Plan de tarifa**: Standard S0 (5)
+    -  Haga clic en **Siguiente** (6)
   
         ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
-4. Click on **Next** twice and subsequently click on **Create** 
+4. Haga clic en **Siguiente** dos veces y haga clic en **Crear**.
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+4. Espere a que se complete la implementación. Luego, vaya al recurso de Azure OpenAI implementado en el Portal de Azure.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
-      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+6. Para capturar los valores de las Claves y Punto de conexión, en la hoja **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
+      - Seleccione **Claves y puntos de conexión (1)** debajo de **Administración de recursos**.
+      - Haga clic en **Mostrar claves (2)**.
+      - Copie la **Clave 1 (3)** y asegúrese de pegarla en un editor de texto como el Bloc de notas para referencia futura.
+      - Finalmente, copie la URL del **Punto de conexión (4)** de la API haciendo clic en copiar al portapapeles. Péguelo en un editor de texto como el Bloc de notas para usarlo más adelante.
 
         ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-#### Validation
+#### Validación
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
+> - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
+> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
+> - Si necesita ayuda, comuníquese con nosotros a labs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
    <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
 
-### Task 2: Deploy a model
+### Tarea 2: Implementar un modelo
 
-To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
+Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a través de **Azure OpenAI Studio**. Una vez implementado, haremos referencia a ese modelo en nuestra aplicación.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+3. En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure OpenAI Studio** para navegar a **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
 
-4. After navigating to Azure AI Studio, click on **Explore the new experience** pop-up on the top.
+4. Después de navegar a Azure AI Studio, haga clic en la ventana emergente **Explorar la nueva experiencia** en la parte superior.
 
    ![](../media/explore_new-exp.jpg)
 
-5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
+5. Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo** y seleccione **Implementación del modelo base (2)**. 
 
    ![](../media/deploy-2.jpg)
 
-6. In the **Select a model** window, select **gpt-35-turbo-16k (1)** and click on **Confirm (2)**.
+6. En la ventana **Seleccionar un modelo**, seleccione **gpt-35-turbo-16k (1)** y haga clic en **Confirmar (2)**.
 
    ![](../media/new4.png)
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
+7. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
-    - **Deployment name**: text-turbo (1) 
-    - **Model version**: 0613(Default) (2)
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+    - **Nombre de implementación**: text-turbo (1) 
+    - **Versión de modelo**: 0613(Default) (2)
+    - **Tipo de implementación**: Standard (3)
+    - **Tokens por límite de velocidad por minuto (miles)**: 10K (4)
+    - **Habilitar cuota dinámica**: Habilitado (5)
+    - Haga clic en **Implementar** (6)
   
       ![](../media/new2.png)
 
-8. This will deploy a model that you will be playing around with as you proceed.
+8. Esto implementará un modelo con el que podrá experimentar a medida que avanza.
 
-   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+   > **Nota**: Puede ignorar la notificación "No se pudo obtener información de la cuota de implementaciones"
    
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+   > **Nota**: Cada modelo de Azure OpenAI está optimizado para un equilibrio diferente de capacidades y rendimiento. En este ejercicio, utilizaremos la serie de modelos **3.5 Turbo** de la familia de modelos **GPT-3**, que tiene una gran capacidad de comprensión del lenguaje. Este ejercicio solo utiliza un modelo único; sin embargo, la implementación y el uso de otros modelos que implemente funcionarán de la misma manera.
 
-#### Validation
+#### Validación
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
+> - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
+> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
+> - Si necesita ayuda, comuníquese con nosotros a labs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
    <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
 
-### Task 3: Set up an application in Cloud Shell
+### Tarea 3: Configurar una aplicación en Cloud Shell
 
-To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
+Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicación de línea de comandos breve que se ejecuta en Cloud Shell en Azure. Abra una nueva pestaña del navegador para trabajar con Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. En el [portal de Azure](https://portal.azure.com?azure-portal=true), seleccione el botón **[>_]** (*Cloud Shell*) en la parte superior de la página a la derecha del cuadro de búsqueda. Se abrirá un panel de Cloud Shell en la parte inferior del portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![Captura de pantalla de cómo iniciar Cloud Shell haciendo clic en el ícono a la derecha del cuadro de búsqueda superior.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+2. La primera vez que abra Cloud Shell, es posible que se le solicite que elija el tipo de shell que desea usar (*Bash* o *PowerShell*). Seleccione **Bash**. Si no ve esta opción, omita el paso.
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+3. En el panel Comenzar, seleccione **Montar cuenta de almacenamiento**, seleccione su **Suscripción de la cuenta de almacenamiento** en el menú desplegable y haga clic en **Aplicar**.
 
    ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+4. En el panel **Montar cuenta de almacenamiento**, seleccione **Quiero crear una cuenta de almacenamiento** y haga clic en **Siguiente**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Advanced settings** pane, enter the following details:
+5. En el panel **Configuración avanzada**, ingrese los siguientes detalles:
 
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select **Use existing** (3)
+    - **Suscripción**: Predeterminada - Elija la única suscripción existente asignada para este laboratorio (1).
+    - **Región**: <inject key="Region" enableCopy="false" /> (2)
+    - **Grupo de recursos**: Seleccione **Usar existente** (3)
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new** (4)
+    - **Cuenta de almacenamiento**: Seleccione **Crear nueva** (4)
       - storage<inject key="DeploymentID" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create** (6)
+    - **Recurso compartido de archivos**: Cree un nuevo recurso compartido de archivos llamado **none** (5)
+    - Haga clic en **Crear** (6)
 
-        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+        ![](../media/cloudshell-advanced-settings.png "Crear almacenamiento - configuración avanzada")
 
-6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+6. Tenga en cuenta que puede cambiar el tamaño del Cloud Shell arrastrando la barra separadora en la parte superior de la página o usando los íconos **&#8212;**, **&#9723;** y **X** en la parte superior derecha de la página para minimizar, maximizar y cerrar el panel. Para obtener más información sobre el uso de Azure Cloud Shell, consulte la [documentación de Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+7. Una vez que se inicie la terminal, ingrese el siguiente comando para descargar la aplicación de muestra y guárdela en una carpeta llamada `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
   
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+8. Los archivos se descargan en una carpeta llamada **azure-openai**. Navegue hasta los archivos de laboratorio para este ejercicio con el siguiente comando.
 
     ```bash
    cd azure-openai/Labfiles/02-azure-openai-api
     ```
 
-    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
+    Se han proporcionado aplicaciones para C# y Python, así como un archivo de texto de ejemplo que utilizará para probar el resumen. Ambas aplicaciones cuentan con la misma funcionalidad.
 
-9. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
+9. Abra el editor de código integrado y observe el archivo de texto que resumirá con su modelo ubicado en `text-files/sample-text.txt`. Use el siguiente comando para abrir los archivos de laboratorio en el editor de código.
 
     ```bash
     code .
     ```
-    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and perform step 8 and 9 again.
+    > **NOTA:** Si se le solicita que **Cambie a la versión clásica de Cloud Shell** después de ejecutar el comando **code .**, haga clic en **Confirmar** y vuelva a realizar los pasos 8 y 9.
 
    ![](../media/classic-cloudshell-prompt.png) 
    
-#### Validation
+#### Validación
 
 <validation step="2e8dadd1-f827-4597-8d99-c814ec85fbab" />
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
+> - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
+> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
+> - Si necesita ayuda, comuníquese con nosotros a labs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
-### Task 4: Configure your application
+### Tarea 4: Configurar su aplicación
 
-For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
+Para este ejercicio, completará algunas partes clave de la aplicación para habilitar el uso de su recurso de Azure OpenAI.
 
-1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
+1. En el editor de código, expanda la carpeta **CSharp** or **Python**, según su lenguaje de preferencia.
 
-2. Open the configuration file for your language
+2. Abra el archivo de configuración de su lenguaje:
 
     - C#: `appsettings.json`
     
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+3. Actualice los valores de configuración para incluir el **punto de conexión** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `text-turbo`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**
 
-4. Navigate to the folder for your preferred language and install the necessary packages
+4. Navegue hasta la carpeta de su lenguaje preferido e instale los paquetes necesarios.
 
     **C#** : 
 
@@ -211,7 +211,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     pip install openai==1.13.3
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+5. Navegue hasta la carpeta de su lenguaje preferido, seleccione el archivo de código y agregue las bibliotecas necesarias.
 
     **C#**: Program.cs
 
@@ -227,7 +227,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     from openai import AzureOpenAI
     ```
 
-6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+6. En el código de la aplicación para su lenguaje, reemplace el comentario ***Initialize the Azure OpenAI client...*** con el siguiente código para inicializar el cliente y definir nuestro mensaje del sistema.
 
     **C#**: Program.cs
 
@@ -257,9 +257,9 @@ For this exercise, you'll complete some key parts of the application to enable u
         """
     ```
 
-      >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+      >**Nota**: Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
     
-7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
+7. Reemplace el comentario ***Add code to build request...*** con el código necesario para generar la solicitud; especificando los distintos parámetros para su modelo, como `prompt` y `temperatura`.
 
     **C#**: Program.cs
 
@@ -306,7 +306,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     print("Response: " + generated_text + "\n")
     ```
 
-8. Before saving the file , please ensure your code looks similar to the code provided below.
+8. Antes de guardar el archivo, asegúrese de que su código se parezca al código que se proporciona a continuación.
 
     **C#**: Program.cs
       
@@ -445,39 +445,39 @@ For this exercise, you'll complete some key parts of the application to enable u
           main()
       ```
     
-9. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+9. Para guardar los cambios realizados en el archivo, haga clic derecho en el archivo desde el panel izquierdo en la ventana de código y presione **Guardar**
 
-   >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+   >**Nota**: Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
 
-### Task 5: Test your application
+### Tarea 5: Ejecutar su aplicación
 
-Now that your app has been configured, run it to send your request to your model and observe the response.
+Ahora que su aplicación ha sido configurada, ejecútela para enviar su solicitud a su modelo y observe la respuesta.
 
-1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+1. En el panel de terminal interactivo, asegúrese de que el contexto de la carpeta sea la carpeta de su lenguaje preferido. Luego, ingrese el siguiente comando para ejecutar la aplicación.
 
     - **C#**: `dotnet run`
     
     - **Python**: `python test-openai-model.py`
 
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+    > **Sugerencia**: Puede utilizar el icono **Maximizar tamaño del panel** (**^**) en la barra de herramientas de la terminal para ver más texto de la consola.
 
-2. When prompted, enter the text `What hike should I do near Rainier?`.
+2. Cuando se le solicite, ingrese el texto `What hike should I do near Rainier?`.
 
-3. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
+3. Observe el resultado, teniendo en cuenta que la respuesta sigue las pautas proporcionadas en el mensaje del sistema que agregó al arreglo *messages*.
 
-4. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
+4. Proporcione el prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` y observe la salida.
 
-5. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
+5. En el archivo de código de su lenguaje preferido, cambie el valor del parámetro *temperature* en su solicitud a **1.0** y guarde el archivo.
 
-6. Run the application again using the prompts above, and observe the output.
+6. Vuelva a ejecutar la aplicación siguiendo los prompts anteriores y observe el resultado.
 
-Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
+Aumentar la temperatura suele provocar que la respuesta varíe, incluso cuando se proporciona el mismo texto, debido al aumento de la aleatoriedad. Puede ejecutarla varias veces para ver cómo puede cambiar el resultado. Intente usar diferentes valores para la temperatura con la misma entrada.
 
-## Review
+## Revisión
 
-In this lab, you have accomplished the following:
-- Provision an Azure OpenAI resource
-- Deploy an OpenAI model within the Azure OpenAI studio
-- Integrate Azure OpenAI models into your applications
+En este laboratorio, logró lo siguiente:
+- Aprovisionar un recurso de Azure OpenAI
+- Implementar un modelo de OpenAI dentro de Azure OpenAI Studio
+- Integrar modelos de Azure OpenAI en sus aplicaciones
 
-### You have successfully completed the lab.
+### Ha completado con éxito el laboratorio
