@@ -22,7 +22,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/Openai-01.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/Openai-02.png)
 
