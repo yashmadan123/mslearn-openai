@@ -82,24 +82,23 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old look** and click on **skip** and then navigate to the **Chat** playground in the left 
    pane.
    
-2. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
+1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
-   ![](../media/default1.png)
+     ![](../media/default1.png)
    
-3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
-    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
-    ```
-    
-4. The model will likely respond with a function, with some explanation of what the function does and how to call it.
+     Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
+    ```    
+1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
-5. Next, send the prompt `Do the same thing, but this time write it in C#`.
+1. Next, send the prompt `Do the same thing, but this time write it in C#`.
    
-6. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task 
+1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task 
    such as reversing the input string.
    
-7. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
+1. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
 
     ```code
     What does the following function do?  
@@ -125,18 +124,18 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
         return result
     ```
 
-8. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
+1. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
 
-9. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
+1. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
 
-10. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
+1. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
     
 ### Task 3: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of 
-   the portal.
+     the portal.
 
      ![](../media/Openai-08.png)
 
@@ -168,24 +167,22 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
       ![](../media/Openai-12.png)
 
-3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
     rm -r azure-openai -f
     git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
-
     > **NOTE:** if you get Message saying already cloned , please move the next step.
 
-4. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
     cd azure-openai/Labfiles/04-code-generation
     ```
-
    Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-5. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
     code .
@@ -194,7 +191,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png)
 
-6. Repeat the commands you executed in steps 4  and 5 for the language of your preference.
+1. Repeat the commands you executed in steps 4  and 5 for the language of your preference.
 
 #### Validation
 
@@ -211,15 +208,15 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. In the code editor, expand the language folder for your preferred language.
 
-2. Open the configuration file for your language.
+1. Open the configuration file for your language.
 
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the 
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the 
    file from the left pane and hit **Save**.
 
-4. Navigate to the folder for your preferred language and install the necessary packages.
+1. Navigate to the folder for your preferred language and install the necessary packages.
 
     **C#**
 
@@ -236,7 +233,7 @@ For this exercise, you'll complete some key parts of the application to enable u
      pip install openai==1.13.3
      ```
 
-5. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the 
+1. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the 
    model.
 
     **C#**
@@ -282,7 +279,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     )
     ```
 
-6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
+1. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
 ### Task 5: Run your application
 
@@ -320,41 +317,39 @@ Now that your app has been configured, run it to try generating code for each us
    
     </Project>
    ```  
-3. Run the application.
+1. Run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
-4. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
+1. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
-5. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
+1. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
     ```prompt
     Write four unit tests for the following function.\n---\n
     ```
-
-6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
+1. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
 1. Enter **quit** to exit the program.
 
-7. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
+1. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
 
-8. To check the results paste the following code in the terminal:
+1. To check the results paste the following code in the terminal:
 
     ```
     cd result
     ```
-
-9. Copy the below command in the terminal to see the contents of the app.txt file.
+1. Copy the below command in the terminal to see the contents of the app.txt file.
 
    ```
    cat app.txt
