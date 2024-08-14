@@ -67,7 +67,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 #### Validation
 
-   <validation step="4a0f2d4d-175a-4dc9-8700-484bc47d1f3f" />
+<validation step="4a0f2d4d-175a-4dc9-8700-484bc47d1f3f" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
