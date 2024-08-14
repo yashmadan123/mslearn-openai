@@ -65,16 +65,6 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
-#### Validation
-
-<validation step="4a0f2d4d-175a-4dc9-8700-484bc47d1f3f" />
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 ### Task 2: Generate code in chat playground
 
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
@@ -360,17 +350,20 @@ run in any order.
    cat app.txt
    ```
 
-  - The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run 
-    it without the fixes, it will not work correctly.
+  - The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
-  - It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate 
-    representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not 
-    removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to 
-    realize. This is a great example of how useful generative AI models can be to assist with code generation, but can't be trusted as 
-    correct and need to be verified by the developer.
+  - It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but can't be trusted as correct and need to be verified by the developer.
 
-  - If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the 
-    app.
+  - If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
+
+#### Validation
+
+<validation step="4a0f2d4d-175a-4dc9-8700-484bc47d1f3f" />
+   
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Summary
 
