@@ -79,8 +79,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old 
-   look** and click on **skip** and then navigate to the **Chat** playground in the left pane.
+1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old look** and click on **skip** and then navigate to the **Chat** playground in the left pane.
    
 1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
@@ -88,11 +87,9 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
-    ```code
-    Write a function in python that takes a character and string as input, and returns how many times that character appears in the 
-    string
-    ```    
-
+   ```code
+   Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
+   ```    
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
 1. Next, send the prompt `Do the same thing, but this time write it in C#`.
@@ -101,7 +98,6 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
    for a different language of your choice, or a function to complete a different task such as reversing the input string.
    
 1. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
-
 
     ```code
     What does the following function do?  
@@ -140,67 +136,59 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page 
    to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-      ![](../media/Openai-08.png)
+   ![](../media/Openai-08.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). 
    Select Bash. If you don't see this option, skip the step.
 
-      ![](../media/Openai-09.png)
+   ![](../media/Openai-09.png)
 
 1. Within the Getting Started pane, select Mount storage account (1), select your Storage account subscription (2) from the dropdown 
    and click Apply (3).
 
-      ![](../media/Openai-10.png)
+   ![](../media/Openai-10.png)
 
-1. Within the Mount storage account pane, select I want to create a storage account (1) and click Next (2).
+1. Within the Mount storage account pane, select I want to create a **storage account** **(1)** and click **Next** **(2)**.
 
-      ![](../media/Openai-11.png)
+   ![](../media/Openai-11.png)
 
 1. Within the Advanced settings pane, enter the following details:
 
     - Subscription: Default- Choose the only existing subscription assigned for this lab (1).
-   
-    - Region: Select <inject key="Region" enableCopy="false" /> (2)
-   
-    - Resource group: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
-   
-    - Storage account: Select storage<inject key="DeploymentID" enableCopy="false"></inject> (4)
-   
-    - File share: Create a new file share named blob<inject key="DeploymentID" enableCopy="false"></inject> (5)
-
+    - Region: Select **<inject key="Region" enableCopy="false" />** **(2)**
+    - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>** **(3)**
+    - Storage account: Select **storage<inject key="DeploymentID" enableCopy="false"></inject>** **(4)**
+    - File share: Create a new file share named **blob<inject key="DeploymentID" enableCopy="false"></inject>** **(5)**
     - Click Create (6)
 
        ![](../media/Openai-12.png)
 
-1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure- 
-   openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
-    ```bash
-    rm -r azure-openai -f
-    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-    ```
+   ```bash
+   rm -r azure-openai -f
+   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+   ```
 
-      > **NOTE:** if you get Message saying already cloned , please move the next step.
+   > **NOTE:** If you get a message saying already cloned, please move to the next step.
 
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
-    ```bash
-    cd azure-openai/Labfiles/04-code-generation
-    ```
+   ```bash
+   cd azure-openai/Labfiles/04-code-generation
+   ```
 
-    Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
+    > **NOTE:** Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open 
-   the lab files in the code editor.
+1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
-    ```bash
-    code .
-    ```
+   ```bash
+   code .
+   ```
+   
+      > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
 
-      > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** 
-       and make sure you are in the correct project path.
-
-   ![](../media/classic-cloudshell-prompt.png)
+      ![](../media/classic-cloudshell-prompt.png)
 
 1. Repeat the commands you executed in steps 4  and 5 for the language of your preference.
 
@@ -224,8 +212,7 @@ For this exercise, you'll complete some key parts of the application to enable u
      - **C#**: `appsettings.json`
      - **Python**: `.env`
 
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the 
-    name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -244,13 +231,12 @@ For this exercise, you'll complete some key parts of the application to enable u
      pip install openai==1.13.3
      ```
 
-1. Open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and 
-   send the request to the model**, add the code to format and send the request to the model.
+1. Open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
 
     **C#**
     `Program.cs`
 
-   ```csharp
+     ```csharp
      // Format and send the request to the model
        var chatCompletionsOptions = new ChatCompletionsOptions()
        {
