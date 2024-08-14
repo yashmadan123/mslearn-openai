@@ -97,8 +97,8 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
    
 1. Next, send the prompt `Do the same thing, but this time write it in C#`.
    
-1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task 
-     such as reversing the input string.
+1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again 
+   for a different language of your choice, or a function to complete a different task such as reversing the input string.
    
 1. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
 
@@ -127,7 +127,6 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
         return result
     ```
 
-
 1. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
 
 1. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
@@ -138,22 +137,24 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of 
-     the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page 
+   to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-   ![](../media/Openai-08.png)
+      ![](../media/Openai-08.png)
 
-1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). Select Bash. If you don't see this option, skip the step.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). 
+   Select Bash. If you don't see this option, skip the step.
 
-   ![](../media/Openai-09.png)
+      ![](../media/Openai-09.png)
 
-1. Within the Getting Started pane, select Mount storage account (1), select your Storage account subscription (2) from the dropdown and click Apply (3).
+1. Within the Getting Started pane, select Mount storage account (1), select your Storage account subscription (2) from the dropdown 
+   and click Apply (3).
 
-   ![](../media/Openai-10.png)
+      ![](../media/Openai-10.png)
 
 1. Within the Mount storage account pane, select I want to create a storage account (1) and click Next (2).
 
-   ![](../media/Openai-11.png)
+      ![](../media/Openai-11.png)
 
 1. Within the Advanced settings pane, enter the following details:
 
@@ -171,14 +172,15 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
        ![](../media/Openai-12.png)
 
-1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure- 
+   openai`.
 
     ```bash
     rm -r azure-openai -f
     git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-    > **NOTE:** if you get Message saying already cloned , please move the next step.
+      > **NOTE:** if you get Message saying already cloned , please move the next step.
 
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
@@ -188,13 +190,15 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open 
+   the lab files in the code editor.
 
     ```bash
     code .
     ```
 
-   > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
+      > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** 
+       and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png)
 
@@ -220,8 +224,8 @@ For this exercise, you'll complete some key parts of the application to enable u
      - **C#**: `appsettings.json`
      - **Python**: `.env`
 
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the 
-    file from the left pane and hit **Save**.
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the 
+    name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -240,8 +244,8 @@ For this exercise, you'll complete some key parts of the application to enable u
      pip install openai==1.13.3
      ```
 
-1. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the 
-   model.
+1. Open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and 
+   send the request to the model**, add the code to format and send the request to the model.
 
     **C#**
     `Program.cs`
@@ -290,11 +294,14 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 ### Task 5: Run your application
 
-Now that your app has been configured, run it to try generating code for each use case. The use case is numbered in the app, and can be run in any order.
+Now that your app has been configured, run it to try generating code for each use case. The use case is numbered in the app, and can be 
+run in any order.
 
-> **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
+> **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, 
+  wait for a minute then try again.
 
-1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
+1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will 
+   be used for the tasks in the app.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
@@ -329,7 +336,8 @@ Now that your app has been configured, run it to try generating code for each us
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
-1. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
+1. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for 
+   each of these tasks.
 
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
@@ -366,13 +374,17 @@ Now that your app has been configured, run it to try generating code for each us
    cat app.txt
    ```
 
-  - The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
+  - The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run 
+    it without the fixes, it will not work correctly.
 
-  - It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not 
-    checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example 
-    of how useful generative AI models can be to assist with code generation, but can't be trusted as correct and need to be verified by the developer.
+  - It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate 
+    representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not 
+    removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to 
+    realize. This is a great example of how useful generative AI models can be to assist with code generation, but can't be trusted as 
+    correct and need to be verified by the developer.
 
-  - If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
+  - If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the 
+    app.
 
 ## Summary
 
