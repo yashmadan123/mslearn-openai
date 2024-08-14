@@ -200,8 +200,6 @@ Now that you've reviewed the code, it's time to run it and generate some images.
 
 4. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
-#### Validation
-
    <validation step="0123144f-896f-464d-bfa2-090e62c99e62" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
