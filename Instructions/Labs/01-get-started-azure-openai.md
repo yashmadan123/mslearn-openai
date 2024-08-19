@@ -96,8 +96,6 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
    
       > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-## Validation
-
    <validation step="0afa9e73-8b9e-4edf-b61b-fa953a5d5b23" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
