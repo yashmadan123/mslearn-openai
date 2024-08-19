@@ -98,7 +98,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 ## Validation
 
-   <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
+   <validation step="0afa9e73-8b9e-4edf-b61b-fa953a5d5b23" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
