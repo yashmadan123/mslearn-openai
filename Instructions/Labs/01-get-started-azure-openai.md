@@ -117,15 +117,15 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-   ![](../media/completions_playground.jpg)
+    ![](../media/completions_playground.jpg)
 
     >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
 5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](../media/view_code.jpg)
+    ![](../media/view_code.jpg)
 
-      ![](../media/openai-7.png)
+    ![](../media/openai-7.png)
     
 6. Close the **Sample Code**.
 
@@ -139,7 +139,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-      ![](../media/last-2.jpg)
+    ![](../media/last-2.jpg)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -181,7 +181,7 @@ You can use the prompt and parameters to maximize the likelihood of generating t
     
     - **Max response**: 500
 
-         ![](../media/temp.jpg)
+       ![](../media/temp.jpg)
       
 2. Submit the following message in chat session
 
@@ -215,11 +215,11 @@ In addition to generating natural language responses, you can use GPT models to 
 
 1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-      ![](../media/last-2.jpg)
+   ![](../media/last-2.jpg)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
-      ![](../media/openai-14.png)
+   ![](../media/openai-14.png)
 
 3. Submit the following user message:
 
@@ -229,7 +229,7 @@ In addition to generating natural language responses, you can use GPT models to 
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](../media/task-6-last.jpg)
+    ![](../media/task-6-last.jpg)
 
 ## Summary
 
