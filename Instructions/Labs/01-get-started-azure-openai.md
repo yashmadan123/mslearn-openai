@@ -82,13 +82,13 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
       
         >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
      
-    - **Model version**: Auto-update to default (3)<br>
+    - **Model version**: Auto-update to default(0301) (3)<br>
     - **Deployment type**: Standard (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
     - **Enable dynamic quota**: Enabled (6)
     - Click on **Create** (7)
   
-         ![](../media/deploy-16-K.jpg)
+         ![](../media/new_turbo.jpg)
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
@@ -109,25 +109,27 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
 
-2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected and then in the **Examples** list, select **Generate a quiz**.
+2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
+
+   ![](../media/generate_new.jpg)
 
    >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
-3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
+4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
 
-4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
+5. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-    ![](../media/completions_playground.jpg)
+    ![](../media/generated.jpg)
 
     >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
     ![](../media/view_code.jpg)
 
     ![](../media/openai-7.png)
     
-6. Close the **Sample Code**.
+7. Close the **Sample Code**.
 
 ### Task 4: Use the Chat playground
 
