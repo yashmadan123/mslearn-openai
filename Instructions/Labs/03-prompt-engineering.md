@@ -580,14 +580,43 @@ Applications for both C# and Python have been provided, and both apps feature th
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
 1. In the folder of your preferred language, open `system.txt` in Visual Studio Code. For each of the interations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
-2. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+
+2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
+3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+   ```
+   <Project Sdk="Microsoft.NET.Sdk">
+   
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
+   
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
+   
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+    </Project> 
+   ```  
+4. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python prompt-engineering.py`
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-3. For the first iteration, enter the following prompts:
+5. For the first iteration, enter the following prompts:
 
     **System message**
 
@@ -603,8 +632,8 @@ Now that your app has been configured, run it to send your request to your model
     ```
      ![](../media/x233.png)
 
-4. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
-5. Next, enter the following prompts which specify a format for the response:
+6. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
+7. Next, enter the following prompts which specify a format for the response:
 
     **System message**
 
@@ -619,8 +648,8 @@ Now that your app has been configured, run it to send your request to your model
        - It specializes in elephants 
        - Call for donations to be given at our website
     ```
-6. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
-7. Next, enter the following prompts that additionally specify the content:
+8. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
+9. Next, enter the following prompts that additionally specify the content:
 
     **System message**
 
@@ -638,8 +667,8 @@ Now that your app has been configured, run it to send your request to your model
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
 
-8. Observe the output, and see how the email has changed based on your clear instructions.
-9. Next, enter the following prompts where we add details about tone to the system message:
+10. Observe the output, and see how the email has changed based on your clear instructions.
+11. Next, enter the following prompts where we add details about tone to the system message:
 
     **System message**
 
@@ -657,10 +686,10 @@ Now that your app has been configured, run it to send your request to your model
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
 
-10. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
-11. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
-12. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
-13. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+12. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
+13. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
+14. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
+15. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
 
     **C#**: Program.cs
 
@@ -680,8 +709,8 @@ Now that your app has been configured, run it to send your request to your model
     user_message = grounding_text + user_message
     ```
 
-14. Save the file and rerun your app.
-15. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
+16. Save the file and rerun your app.
+17. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
 
     **System message**
 
@@ -696,11 +725,16 @@ Now that your app has been configured, run it to send your request to your model
     ```
 
    
+
 ## Summary
+
+By completing this lab, you’ve gained hands-on experience with Azure OpenAI Service models, demonstrating how AI can be a powerful tool in code generation, bug fixing, and code comprehension. You’ve learned to deploy models, utilize the Chat Playground for code-related tasks, and integrate AI into a real-world application through Azure Cloud Shell. Additionally, you've explored the capabilities of the DALL-E model for image generation. These skills will help you leverage AI to enhance your coding workflow, making development more efficient and insightful.
+
+## Review
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
 -   Deploy an OpenAI model within the Azure OpenAI studio
--   Apply prompt engineering in your applications
+-   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
 
 ### You have successfully completed the lab.
