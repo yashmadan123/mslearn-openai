@@ -55,7 +55,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 #### Validation
 
-<validation step="26d62b19-ac79-4900-8ee7-3cccec7288f9" />
+<validation step="92fd5d61-ee1f-44aa-b7cc-4545c53b5b92" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -110,7 +110,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
 #### Validation
 
-<validation step="7e110ef6-8a1d-4bbd-b1e4-20c09d85fd56" />
+<validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -273,7 +273,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 #### Validation
 
-<validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
+<validation step="b83818f3-0527-485b-85c5-57c7f0149fe1" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
