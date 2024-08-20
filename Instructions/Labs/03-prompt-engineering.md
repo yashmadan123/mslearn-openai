@@ -33,9 +33,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 3. Create an **Azure OpenAI** resource with the following settings 
 
     - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
     - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
-    - **Name**: OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject> (4)
+    - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
   
@@ -45,7 +45,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
@@ -71,7 +71,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
@@ -237,9 +237,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
+      - openai-<inject key="Deployment-ID" enableCopy="false"></inject>
     - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="DeploymentID" enableCopy="false"></inject>
+      - storage<inject key="Deployment-ID" enableCopy="false"></inject>
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
