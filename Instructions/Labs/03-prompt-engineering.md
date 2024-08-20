@@ -79,30 +79,31 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai_studio1.png)
    
-2. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. In the prompt select **Explore the new experience** .
 
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+      ![](../media/explore_new-exp.jpg "Create a new deployment")
 
-3. In the **Deployments** page, click on **+ Create new deployment**.
+5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-   ![](../media/openai-lab01_t2_s3.png "Create a new deployment")
+      ![](../media/deploy-1.jpg "Create a new deployment")
 
-4. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
+6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+
+      ![](../media/gpt-35-16k.jpg)
    
-      > **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
+7. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Deployment name**: text-turbo (1)
+    - **Select a Model**: gpt-35-turbo-16k (2)
       
-    - **Model version**: Auto-update to default (2)
-    - - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
-  
-      ![](../media/x991.png)
+        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.<br>
+    - **Deployment type**: Standard (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Create** (6)
 
-5. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+     ![](../media/deploy-16.jpg)
+
+8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
