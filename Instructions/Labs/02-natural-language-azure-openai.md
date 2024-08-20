@@ -317,18 +317,48 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
 
-1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
+2. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+   ```
+   <Project Sdk="Microsoft.NET.Sdk">
+   
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
+   
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
+   
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+    </Project> 
+
+   ```
+   
+3. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python test-openai-model.py`
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-2. When prompted, enter the text `What hike should I do near Rainier?`.
-3. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
-4. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
-5. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
-6. Run the application again using the prompts above, and observe the output.
+4. When prompted, enter the text `What hike should I do near Rainier?`.
+5. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
+6. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
+7. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
+8. Run the application again using the prompts above, and observe the output.
 
 Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
 
