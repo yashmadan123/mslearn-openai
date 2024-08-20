@@ -54,7 +54,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 #### Validation
 
-<validation step="a89125fa-fad8-4a69-8048-14fc0efa9e7b" />
+<validation step="d1fdf614-83d8-4c1a-b9c7-c9adf003d03f" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -197,7 +197,7 @@ Now you're ready to explore the code used to call the REST API and generate an i
    
 #### Validation
 
-<validation step="f11f8446-e574-4959-ac0d-7c42d2c48345" />
+<validation step="46dc5a95-0801-4085-b021-c775e7b1b06b" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
