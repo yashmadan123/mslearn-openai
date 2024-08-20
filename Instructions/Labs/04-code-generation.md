@@ -53,7 +53,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
    
 #### Validation
 
-<validation step="61935caf-9a97-4d19-b393-273fb942feef" />
+<validation step="b2bea034-1f21-46f4-9d53-c1def354425e" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -107,7 +107,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 #### Validation
 
-<validation step="0fa0071a-87c2-4194-9374-639c1b9700ac" />
+<validation step="f0a7d271-5b5c-40c2-80a0-9e7889b96f1f" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -217,7 +217,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    
 #### Validation
 
-<validation step="487047fe-1679-4902-9b43-ef466a2b8280" />
+<validation step="8cfc3b23-a18d-413a-a749-b7a1e70de45a" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -310,41 +310,69 @@ Now that your app has been configured, run it to try generating code for each us
 > **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
+   
 2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-3. Run the application.
+
+3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+```
+   <Project Sdk="Microsoft.NET.Sdk">
+   
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
+   
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
+   
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+    </Project>
+   ```  
+4. Run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
 
-4. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
+5. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
-5. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
+6. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
     ```prompt
     Write four unit tests for the following function.\n---\n
     ```
 
-6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
+7. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
-7. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
+8. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
 
-8. To check the results paste the following code in the terminal:
+9. To check the results paste the following code in the terminal:
 
     ```
    cd result
     ```
 
-9. Copy the below command in the terminal to see the contents of the app.txt file.
+10. Copy the below command in the terminal to see the contents of the app.txt file.
 
    ```
    cat app.txt
