@@ -208,7 +208,36 @@ Now you're ready to explore the code used to call the REST API and generate an i
 
 Now that you've reviewed the code, it's time to run it and generate some images.
 
-1. In the console prompt pane, enter the appropriate command to run your application:
+1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
+2. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+```
+   <Project Sdk="Microsoft.NET.Sdk">
+   
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
+   
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
+   
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+    </Project>
+   ```
+
+3. In the console prompt pane, enter the appropriate command to run your application:
 
     **Python**
 
