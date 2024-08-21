@@ -32,9 +32,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 3. Create an **Azure OpenAI** resource with the following settings:
    
     - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="Deployment-ID	" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab06-<inject key="Deployment-ID	" enableCopy="false"></inject>
+    - **Name**: OpenAI-Lab06-<inject key="Deployment-ID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
       ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
@@ -156,8 +156,8 @@ Next, add your data in the chat playground to see how it responds with your data
 4. Create a **Storage Account** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="Deployment-ID	" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="Deployment-ID	" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
+    - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
   
@@ -194,8 +194,8 @@ Next, add your data in the chat playground to see how it responds with your data
 12. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="Deployment-ID	" enableCopy="false"></inject>
-    - **Service name**: cognitive-search-<inject key="Deployment-ID	" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
+    - **Service name**: cognitive-search-<inject key="Deployment-ID" enableCopy="false"></inject>
     - **Location**:Select <inject key="Region" enableCopy="false" />
     - **Pricing tier**: Basic
 
