@@ -217,7 +217,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 16. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
-   ![](../media/image4.2.png "Add your data in setup pane")
+   ![](../media/chat_playground.jpg "Add your data in setup pane")
    
 17. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
@@ -234,9 +234,15 @@ Next, add your data in the chat playground to see how it responds with your data
 19. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
    ![](../media/datamanagement.png "Add data")
+
+20. On the **Data connection** page select the **API key** , Click on the **Next**
+
+    ![](../media/API_key.jpg "Add data")
    
-20. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
-   
+22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
+
+    ![](../media/review.jpg "Add data")
+    
 #### Validation
 
 <validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
