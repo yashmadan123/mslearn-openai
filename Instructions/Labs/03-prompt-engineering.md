@@ -4,7 +4,7 @@
 
 When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
-In scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
+In scenario for this lab, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -55,7 +55,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 #### Validation
 
-   <validation step="26d62b19-ac79-4900-8ee7-3cccec7288f9" />
+   <validation step="500ab73f-41d7-4883-ab2c-110281939c65" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -109,7 +109,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 #### Validation
 
-   <validation step="7e110ef6-8a1d-4bbd-b1e4-20c09d85fd56" />
+   <validation step="5b357640-1ad5-4345-a277-affb04231f21" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -273,7 +273,12 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png)
 
-   <validation step="32649cba-2942-41b8-8af9-48119c7c9640" />
+   <validation step="8d41eaac-eee1-47ac-8bf3-ea2e2e5b3343" />
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 5: Configure your application
 
@@ -687,11 +692,8 @@ Now that your app has been configured, run it to send your request to your model
     ```
 
    
-## Review
+## Summary
 
-In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
--   Apply prompt engineering in your applications
+In this lab, you have performed tasks to work with Azure OpenAI services. You provisioned an Azure OpenAI resource, deployed an OpenAI model within the Azure OpenAI studio, and applied prompt engineering in your applications to enhance AI interactions.
 
 ### You have successfully completed the lab.
