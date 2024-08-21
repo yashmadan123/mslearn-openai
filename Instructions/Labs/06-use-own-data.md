@@ -32,9 +32,9 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 3. Create an **Azure OpenAI** resource with the following settings:
    
     - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="Deployment-ID	" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Name**: OpenAI-Lab06-<inject key="Deployment-ID	" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
       ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
@@ -43,7 +43,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
@@ -70,7 +70,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="Deployment-ID	" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
@@ -156,8 +156,8 @@ Next, add your data in the chat playground to see how it responds with your data
 4. Create a **Storage Account** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="Deployment-ID	" enableCopy="false"></inject>
+    - **Storage account name**: storage<inject key="Deployment-ID	" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
   
@@ -194,8 +194,8 @@ Next, add your data in the chat playground to see how it responds with your data
 12. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Service name**: cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Resource group**: openai-<inject key="Deployment-ID	" enableCopy="false"></inject>
+    - **Service name**: cognitive-search-<inject key="Deployment-ID	" enableCopy="false"></inject>
     - **Location**:Select <inject key="Region" enableCopy="false" />
     - **Pricing tier**: Basic
 
@@ -203,7 +203,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 13. Wait until your search resource has been deployed.
 
-14. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
+14. Navigate to the **cognitive-search-<inject key="Deployment-ID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
    ![](../media/x689.png)
 
@@ -286,9 +286,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: 
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
+      - openai-<inject key="Deployment-ID" enableCopy="false"></inject> (3)
     - **Storage account name**:
-      - str<inject key="DeploymentID" enableCopy="false"></inject> (4)
+      - str<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
