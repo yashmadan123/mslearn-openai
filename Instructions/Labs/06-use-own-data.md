@@ -55,7 +55,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 #### Validation
 
-<validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
+<validation step="cafb7718-6bf1-4fe9-88b8-d1ed6d7c4c58" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -108,7 +108,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 #### Validation
 
-<validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
+<validation step="863492e4-6930-40bf-ab9f-e1ffb7e21a95" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -236,7 +236,7 @@ Next, add your data in the chat playground to see how it responds with your data
    
 #### Validation
 
-<validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
+<validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
