@@ -582,12 +582,13 @@ Now that your app has been configured, run it to send your request to your model
     
         </Project>
     ``` 
-    
+
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+    
     - **C#**: `dotnet run`
     - **Python**: `python prompt-engineering.py`
 
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+        > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 1. For the first iteration, enter the following prompts:
 
