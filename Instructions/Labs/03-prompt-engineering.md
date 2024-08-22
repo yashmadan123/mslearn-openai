@@ -595,7 +595,7 @@ Now that your app has been configured, run it to send your request to your model
    
     </Project>
    ```  
-   
+
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
@@ -605,111 +605,111 @@ Now that your app has been configured, run it to send your request to your model
 
 1. For the first iteration, enter the following prompts:
 
-    **System message**
+    - **System message**
 
-    ```prompt
-    You are an AI assistant
-    ```
-     ![](../media/x232.png)
+        ```prompt
+        You are an AI assistant
+        ```
+        ![](../media/x232.png)
 
-    **User message:**
+    - **User message:**
 
-    ```prompt
-    Write an intro for a new wildlife Rescue
-    ```
-     ![](../media/x233.png)
+        ```prompt
+        Write an intro for a new wildlife Rescue
+        ```
+        ![](../media/x233.png)
 
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 1. Next, enter the following prompts which specify a format for the response:
 
-    **System message**
+    - **System message**
 
-    ```prompt
-    You are an AI assistant helping to write emails
-    ```
-    **User message:**
+        ```prompt
+        You are an AI assistant helping to write emails
+        ```
+    - **User message:**
 
-    ```prompt
-    Write a promotional email for a new wildlife rescue, including the following: 
-       - Rescue name is Contoso 
-       - It specializes in elephants 
-       - Call for donations to be given at our website
-    ```
+        ```prompt
+        Write a promotional email for a new wildlife rescue, including the following: 
+        - Rescue name is Contoso 
+        - It specializes in elephants 
+        - Call for donations to be given at our website
+        ```
 1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
 1. Next, enter the following prompts that additionally specify the content:
 
-    **System message**
+    - **System message**
 
-    ```prompt
-    You are an AI assistant helping to write emails
-    ```
+        ```prompt
+        You are an AI assistant helping to write emails
+        ```
 
-    **User message:**
+    - **User message:**
 
-    ```prompt
-    Write a promotional email for a new wildlife rescue, including the following: 
-    - Rescue name is Contoso 
-    - It specializes in elephants, as well as zebras and giraffes 
-    - Call for donations to be given at our website 
-    \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
-    ```
+        ```prompt
+        Write a promotional email for a new wildlife rescue, including the following: 
+        - Rescue name is Contoso 
+        - It specializes in elephants, as well as zebras and giraffes 
+        - Call for donations to be given at our website 
+        \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
+        ```
 
 1. Observe the output, and see how the email has changed based on your clear instructions.
 1. Next, enter the following prompts where we add details about tone to the system message:
 
-    **System message**
+    - **System message**
 
-    ```prompt
-    You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.
-    ```
+        ```prompt
+        You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.
+        ```
 
-    **User message:**
+    - **User message:**
 
-    ```prompt
-    Write a promotional email for a new wildlife rescue, including the following: 
-    - Rescue name is Contoso 
-    - It specializes in elephants, as well as zebras and giraffes 
-    - Call for donations to be given at our website 
-    \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
-    ```
+        ```prompt
+        Write a promotional email for a new wildlife rescue, including the following: 
+        - Rescue name is Contoso 
+        - It specializes in elephants, as well as zebras and giraffes 
+        - Call for donations to be given at our website 
+        \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
+        ```
 
 1. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 1. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
 1. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
 1. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
 
-    **C#**: Program.cs
+    - **C#**: Program.cs
 
-    ```csharp
-    // Format and send the request to the model
-    Console.WriteLine("\nAdding grounding context from grounding.txt");
-    string groundingText = System.IO.File.ReadAllText("grounding.txt");
-    userMessage = groundingText + userMessage;
-    ```
+        ```csharp
+        // Format and send the request to the model
+        Console.WriteLine("\nAdding grounding context from grounding.txt");
+        string groundingText = System.IO.File.ReadAllText("grounding.txt");
+        userMessage = groundingText + userMessage;
+        ```
 
-    **Python**: prompt-engineering.py
+    - **Python**: prompt-engineering.py
 
-    ```python
-    # Format and send the request to the model
-    print("\nAdding grounding context from grounding.txt")
-    grounding_text = open(file="grounding.txt", encoding="utf8").read().strip()
-    user_message = grounding_text + user_message
-    ```
+        ```python
+        # Format and send the request to the model
+        print("\nAdding grounding context from grounding.txt")
+        grounding_text = open(file="grounding.txt", encoding="utf8").read().strip()
+        user_message = grounding_text + user_message
+        ```
 
 1. Save the file and rerun your app.
 1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
 
-    **System message**
+    - **System message**
 
-    ```prompt
-    You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
-    ```
+        ```prompt
+        You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
+        ```
 
-    **User message:**
+    - **User message:**
 
-    ```prompt
-    What animal is the favorite of children at Contoso?
-    ```
+        ```prompt
+        What animal is the favorite of children at Contoso?
+        ```
 
    
 ## Summary
