@@ -197,7 +197,7 @@ Before using your app, examine how prompt engineering improves the model respons
    Entertainment
     ```
 
-1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+1. **Save** those changes to the assistant setup, click **Continue**, and send the same prompt about California drought, provided here again for convenience.
 
     ```code
    Severe drought likely in California
