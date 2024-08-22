@@ -609,19 +609,19 @@ Now that your app has been configured, run it to send your request to your model
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 1. Next, enter the following prompts which specify a format for the response:
 
-    **System message**
+    - **System message**
 
-    ```prompt
-    You are an AI assistant helping to write emails
-    ```
-    **User message:**
+        ```prompt
+        You are an AI assistant helping to write emails
+        ```
+    - **User message:**
 
-    ```prompt
-    Write a promotional email for a new wildlife rescue, including the following: 
-       - Rescue name is Contoso 
-       - It specializes in elephants 
-       - Call for donations to be given at our website
-    ```
+        ```prompt
+        Write a promotional email for a new wildlife rescue, including the following: 
+        - Rescue name is Contoso 
+        - It specializes in elephants 
+        - Call for donations to be given at our website
+        ```
 1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
 1. Next, enter the following prompts that additionally specify the content:
 
