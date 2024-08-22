@@ -563,7 +563,7 @@ Applications for both C# and Python have been provided, and both apps feature th
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
 1. In the folder of your preferred language, open `system.txt` in Visual Studio Code. For each of the interations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
-1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+2. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
     
     ```
     <Project Sdk="Microsoft.NET.Sdk">
@@ -589,14 +589,12 @@ Now that your app has been configured, run it to send your request to your model
     
     </Project>
     ``` 
-
-1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+3. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python prompt-engineering.py`
         > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
-
-1. For the first iteration, enter the following prompts:
+4. For the first iteration, enter the following prompts:
     * **System message**
 
         ```prompt
@@ -609,8 +607,8 @@ Now that your app has been configured, run it to send your request to your model
         Write an intro for a new wildlife Rescue
         ```
         ![](../media/x233.png)
-1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
-1. Next, enter the following prompts which specify a format for the response:
+5. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
+6. Next, enter the following prompts which specify a format for the response:
     * **System message**
 
         ```prompt
@@ -624,8 +622,8 @@ Now that your app has been configured, run it to send your request to your model
         - It specializes in elephants 
         - Call for donations to be given at our website
         ```
-1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
-1. Next, enter the following prompts that additionally specify the content:
+7. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
+8. Next, enter the following prompts that additionally specify the content:
     * **System message**
 
         ```prompt
@@ -640,8 +638,8 @@ Now that your app has been configured, run it to send your request to your model
         - Call for donations to be given at our website 
         \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
         ```
-1. Observe the output, and see how the email has changed based on your clear instructions.
-1. Next, enter the following prompts where we add details about tone to the system message:
+9. Observe the output, and see how the email has changed based on your clear instructions.
+10. Next, enter the following prompts where we add details about tone to the system message:
     * **System message**
 
         ```prompt
@@ -656,10 +654,10 @@ Now that your app has been configured, run it to send your request to your model
         - Call for donations to be given at our website 
         \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
         ```
-1. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
-1. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
-1. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
-1. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+11. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
+12. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
+13. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
+14. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
     * **C#**: Program.cs
 
         ```csharp
@@ -676,8 +674,8 @@ Now that your app has been configured, run it to send your request to your model
         grounding_text = open(file="grounding.txt", encoding="utf8").read().strip()
         user_message = grounding_text + user_message
         ```
-1. Save the file and rerun your app.
-1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
+15. Save the file and rerun your app.
+16. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
     * **System message**
 
         ```prompt
