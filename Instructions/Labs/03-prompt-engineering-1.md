@@ -293,100 +293,100 @@ Applications for both C# and Python have been provided, and both apps feature th
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
 
-    **C#**
+    * **C#**
 
-    ```bash
-    cd CSharp
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
-    ```
+        ```bash
+        cd CSharp
+        dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+        ```
 
-    **Python**
+    * **Python**
    
-    ```bash
-    cd Python
-    pip install python-dotenv
-    pip install openai==1.13.3
-    ```
+        ```bash
+        cd Python
+        pip install python-dotenv
+        pip install openai==1.13.3
+        ```
 
 6. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
-    **C#**: Program.cs
+    * **C#**: Program.cs
 
-    ```csharp
-    // Add Azure OpenAI package
-    using Azure.AI.OpenAI;
-    ```
+        ```csharp
+        // Add Azure OpenAI package
+        using Azure.AI.OpenAI;
+        ```
 
-    **Python**: prompt-engineering.py
+    * **Python**: prompt-engineering.py
 
-    ```python
-    # Add Azure OpenAI package
-    from openai import AsyncAzureOpenAI
-    ```
+        ```python
+        # Add Azure OpenAI package
+        from openai import AsyncAzureOpenAI
+        ```
 
 7. Open up the application code for your language and add the necessary code for configuring the client.
-    **C#**: Program.cs
+    * **C#**: Program.cs
 
-    ```csharp
-    // Initialize the Azure OpenAI client
-    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-    ```
+        ```csharp
+        // Initialize the Azure OpenAI client
+        OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+        ```
 
-    **Python**: prompt-engineering.py
+    * **Python**: prompt-engineering.py
 
-    ```python
-    # Configure the Azure OpenAI client
-    client = AsyncAzureOpenAI(
-        azure_endpoint = azure_oai_endpoint, 
-        api_key=azure_oai_key,  
-        api_version="2024-02-15-preview"
-        )
-    ```
+        ```python
+        # Configure the Azure OpenAI client
+        client = AsyncAzureOpenAI(
+            azure_endpoint = azure_oai_endpoint, 
+            api_key=azure_oai_key,  
+            api_version="2024-02-15-preview"
+            )
+        ```
 
 8. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
     
-    **C#**: Program.cs
+    - **C#**: Program.cs
 
-    ```csharp
-        // Format and send the request to the model
-        var chatCompletionsOptions = new ChatCompletionsOptions()
-        {
-            Messages =
+        ```csharp
+            // Format and send the request to the model
+            var chatCompletionsOptions = new ChatCompletionsOptions()
             {
-                new ChatRequestSystemMessage(systemMessage),
-                new ChatRequestUserMessage(userMessage)
-            },
-            Temperature = 0.7f,
-            MaxTokens = 800,
-            DeploymentName = oaiDeploymentName
-        };
-            
-        // Get response from Azure OpenAI
-        Response<ChatCompletions> response = await client.GetChatCompletionsAsyn(chatCompletionsOptions);
-    ```
-    **Python**: prompt-engineering.py
+                Messages =
+                {
+                    new ChatRequestSystemMessage(systemMessage),
+                    new ChatRequestUserMessage(userMessage)
+                },
+                Temperature = 0.7f,
+                MaxTokens = 800,
+                DeploymentName = oaiDeploymentName
+            };
+                
+            // Get response from Azure OpenAI
+            Response<ChatCompletions> response = await client.GetChatCompletionsAsyn(chatCompletionsOptions);
+        ```
+    * **Python**: prompt-engineering.py
 
-    ```python
-        # Format and send the request to the model
-        messages =[
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": user_message},
-        ]
-            
-        print("\nSending request to Azure OpenAI model...\n")
+        ```python
+            # Format and send the request to the model
+            messages =[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message},
+            ]
+                
+            print("\nSending request to Azure OpenAI model...\n")
 
-        # Call the Azure OpenAI model
-        response = await client.chat.completions.create(
-            model=model,
-            messages=messages,
-            temperature=0.7,
-            max_tokens=800
-        )
-    ```
+            # Call the Azure OpenAI model
+            response = await client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=0.7,
+                max_tokens=800
+            )
+        ```
 
 9. The  modified code should look like as shown below:
 
-    **C#**
+    * **C#**
       
       ```csharp
         // Implicit using statements are included
@@ -479,8 +479,9 @@ Applications for both C# and Python have been provided, and both apps feature th
             // Write response to console
             Console.WriteLine($"\nResponse:\n{completion}\n\n");
         }
-    ```
-        
+        ```
+
+
     * **Python**
    
         ```python
@@ -563,6 +564,7 @@ Now that your app has been configured, run it to send your request to your model
 
 1. In the folder of your preferred language, open `system.txt` in Visual Studio Code. For each of the interations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+    
     ```
     <Project Sdk="Microsoft.NET.Sdk">
     
