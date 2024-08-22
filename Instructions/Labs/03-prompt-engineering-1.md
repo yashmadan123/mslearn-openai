@@ -296,279 +296,270 @@ Applications for both C# and Python have been provided, and both apps feature th
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
 
-    **C#**
+    - **C#**
 
-    ```bash
+        ```bash
         cd CSharp
         dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
-    ```
+        ```
 
-    **Python**
+    - **Python**
    
-    ```bash
-    cd Python
-    pip install python-dotenv
-    pip install openai==1.13.3
-    ```
+        ```bash
+        cd Python
+        pip install python-dotenv
+        pip install openai==1.13.3
+        ```
 
 6. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
-    **C#**: Program.cs
+    - **C#**: Program.cs
 
-    ```csharp
-   // Add Azure OpenAI package
-   using Azure.AI.OpenAI;
-    ```
+        ```csharp
+        // Add Azure OpenAI package
+        using Azure.AI.OpenAI;
+        ```
 
-    **Python**: prompt-engineering.py
+    - **Python**: prompt-engineering.py
 
-    ```python
-    # Add Azure OpenAI package
-    from openai import AsyncAzureOpenAI
-    ```
+        ```python
+        # Add Azure OpenAI package
+        from openai import AsyncAzureOpenAI
+        ```
 
 7. Open up the application code for your language and add the necessary code for configuring the client.
 
-    **C#**: Program.cs
+    - **C#**: Program.cs
 
-    ```csharp
-   // Initialize the Azure OpenAI client
-   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-    ```
+        ```csharp
+        // Initialize the Azure OpenAI client
+        OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+        ```
 
-    **Python**: prompt-engineering.py
+    - **Python**: prompt-engineering.py
 
-   ```python
-    # Configure the Azure OpenAI client
-    client = AsyncAzureOpenAI(
-        azure_endpoint = azure_oai_endpoint, 
-        api_key=azure_oai_key,  
-        api_version="2024-02-15-preview"
-        )
-    ```
+        ```python
+        # Configure the Azure OpenAI client
+        client = AsyncAzureOpenAI(
+            azure_endpoint = azure_oai_endpoint, 
+            api_key=azure_oai_key,  
+            api_version="2024-02-15-preview"
+            )
+        ```
 
 8. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
-    **C#**: Program.cs
+    - **C#**: Program.cs
 
-    ```csharp
-           // Format and send the request to the model
-         var chatCompletionsOptions = new ChatCompletionsOptions()
-         {
-             Messages =
-             {
-                 new ChatRequestSystemMessage(systemMessage),
-                 new ChatRequestUserMessage(userMessage)
-             },
-             Temperature = 0.7f,
-             MaxTokens = 800,
-             DeploymentName = oaiDeploymentName
-         };
-         
-         // Get response from Azure OpenAI
-         Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-    ```
+        ```csharp
+            // Format and send the request to the model
+            var chatCompletionsOptions = new ChatCompletionsOptions()
+            {
+                Messages =
+                {
+                    new ChatRequestSystemMessage(systemMessage),
+                    new ChatRequestUserMessage(userMessage)
+                },
+                Temperature = 0.7f,
+                MaxTokens = 800,
+                DeploymentName = oaiDeploymentName
+            };
+            
+            // Get response from Azure OpenAI
+            Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+        ```
 
-    **Python**: prompt-engineering.py
+    - **Python**: prompt-engineering.py
 
-   ```python
-    # Format and send the request to the model
-    messages =[
-        {"role": "system", "content": system_message},
-        {"role": "user", "content": user_message},
-    ]
-    
-    print("\nSending request to Azure OpenAI model...\n")
+        ```python
+            # Format and send the request to the model
+            messages =[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message},
+            ]
+            
+            print("\nSending request to Azure OpenAI model...\n")
 
-    # Call the Azure OpenAI model
-    response = await client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=0.7,
-        max_tokens=800
-    )
-    ```
+            # Call the Azure OpenAI model
+            response = await client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=0.7,
+                max_tokens=800
+            )
+        ```
 
 9. The  modified code should look like as shown below:
 
-    **C#**
+    - **C#**
       
       ```csharp
         // Implicit using statements are included
-         using System.Text;
-         using System.Text.Json;
-         using Microsoft.Extensions.Configuration;
-         using Microsoft.Extensions.Configuration.Json;
-         using Azure;
-         
-         // Add Azure OpenAI package
-         // Add Azure OpenAI package
-         using Azure.AI.OpenAI;
-         
-         // Build a config object and retrieve user settings.
-         IConfiguration config = new ConfigurationBuilder()
-             .AddJsonFile("appsettings.json")
-             .Build();
-         string? oaiEndpoint = config["AzureOAIEndpoint"];
-         string? oaiKey = config["AzureOAIKey"];
-         string? oaiDeploymentName = config["AzureOAIDeploymentName"];
-         
-         bool printFullResponse = false;
-         
-         do {
-             // Pause for system message update
-             Console.WriteLine("-----------\nPausing the app to allow you to change the system prompt.\nPress any key to continue...");
-             Console.ReadKey();
-             
-             Console.WriteLine("\nUsing system message from system.txt");
-             string systemMessage = System.IO.File.ReadAllText("system.txt"); 
-             systemMessage = systemMessage.Trim();
-         
-             Console.WriteLine("\nEnter user message or type 'quit' to exit:");
-             string userMessage = Console.ReadLine() ?? "";
-             userMessage = userMessage.Trim();
-             
-             if (systemMessage.ToLower() == "quit" || userMessage.ToLower() == "quit")
-             {
-                 break;
-             }
-             else if (string.IsNullOrEmpty(systemMessage) || string.IsNullOrEmpty(userMessage))
-             {
-                 Console.WriteLine("Please enter a system and user message.");
-                 continue;
-             }
-             else
-             {
-                 await GetResponseFromOpenAI(systemMessage, userMessage);
-             }
-         } while (true);
-         
-         async Task GetResponseFromOpenAI(string systemMessage, string userMessage)  
-         {   
-             Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
-         
-             if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
-             {
-                 Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
-                 return;
-             }
-             
-             // Configure the Azure OpenAI client
-             // Initialize the Azure OpenAI client
-             OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-         
-             // Format and send the request to the model
-             // Format and send the request to the model
-             var chatCompletionsOptions = new ChatCompletionsOptions()
-             {
-                 Messages =
-                 {
-                     new ChatRequestSystemMessage(systemMessage),
-                     new ChatRequestUserMessage(userMessage)
-                 },
-                 Temperature = 0.7f,
-                 MaxTokens = 800,
-                 DeploymentName = oaiDeploymentName
-             };
-         
-         // Get response from Azure OpenAI
-         Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-             
-             ChatCompletions completions = response.Value;
-             string completion = completions.Choices[0].Message.Content;
-             
-             // Write response full response to console, if requested
-             if (printFullResponse)
-             {
-                 Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
-             }
-         
-             // Write response to console
-             Console.WriteLine($"\nResponse:\n{completion}\n\n");
-         }  
-            
-      ```
+        using System.Text;
+        using System.Text.Json;
+        using Microsoft.Extensions.Configuration;
+        using Microsoft.Extensions.Configuration.Json;
+        using Azure;
+
+        // Add Azure OpenAI package
+        using Azure.AI.OpenAI;
+
+        // Build a config object and retrieve user settings.
+        IConfiguration config = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json")
+            .Build();
+        string? oaiEndpoint = config["AzureOAIEndpoint"];
+        string? oaiKey = config["AzureOAIKey"];
+        string? oaiDeploymentName = config["AzureOAIDeploymentName"];
+
+        bool printFullResponse = false;
+
+        do
+        {
+            // Pause for system message update
+            Console.WriteLine("-----------\nPausing the app to allow you to change the system prompt.\nPress any key to continue...");
+            Console.ReadKey();
+
+            Console.WriteLine("\nUsing system message from system.txt");
+            string systemMessage = System.IO.File.ReadAllText("system.txt");
+            systemMessage = systemMessage.Trim();
+
+            Console.WriteLine("\nEnter user message or type 'quit' to exit:");
+            string userMessage = Console.ReadLine() ?? "";
+            userMessage = userMessage.Trim();
+
+            if (systemMessage.ToLower() == "quit" || userMessage.ToLower() == "quit")
+            {
+                break;
+            }
+            else if (string.IsNullOrEmpty(systemMessage) || string.IsNullOrEmpty(userMessage))
+            {
+                Console.WriteLine("Please enter a system and user message.");
+                continue;
+            }
+            else
+            {
+                await GetResponseFromOpenAI(systemMessage, userMessage);
+            }
+        } while (true);
+
+        async Task GetResponseFromOpenAI(string systemMessage, string userMessage)
+        {
+            Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
+
+            if (string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName))
+            {
+                Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+                return;
+            }
+
+            // Configure the Azure OpenAI client
+            OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+
+            // Format and send the request to the model
+            var chatCompletionsOptions = new ChatCompletionsOptions()
+            {
+                Messages =
+                {
+                    new ChatRequestSystemMessage(systemMessage),
+                    new ChatRequestUserMessage(userMessage)
+                },
+                Temperature = 0.7f,
+                MaxTokens = 800,
+                DeploymentName = oaiDeploymentName
+            };
+
+            // Get response from Azure OpenAI
+            Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+
+            ChatCompletions completions = response.Value;
+            string completion = completions.Choices[0].Message.Content;
+
+            // Write response full response to console, if requested
+            if (printFullResponse)
+            {
+                Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
+            }
+
+            // Write response to console
+            Console.WriteLine($"\nResponse:\n{completion}\n\n");
+        }
+        ```
    
-     **Python**
+     - **Python**
    
-      ```python
-    import os
-   import asyncio
-   from dotenv import load_dotenv
-   
-   # Add Azure OpenAI package
-   # Add Azure OpenAI package
-   from openai import AsyncAzureOpenAI
-   
-   # Set to True to print the full response from OpenAI for each call
-   printFullResponse = False
-   
-   async def main(): 
-           
-       try: 
-       
-           # Get configuration settings 
-           load_dotenv()
-           azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
-           azure_oai_key = os.getenv("AZURE_OAI_KEY")
-           azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
-           
-           # Configure the Azure OpenAI client
-           # Configure the Azure OpenAI client
-           client = AsyncAzureOpenAI(
-               azure_endpoint = azure_oai_endpoint, 
-               api_key=azure_oai_key,  
-               api_version="2024-02-15-preview"
-               )
-   
-           while True:
-               # Pause the app to allow the user to enter the system prompt
-               print("------------------\nPausing the app to allow you to change the system prompt.\nPress anything then enter to continue...")
-               input()
-   
-               # Read in system message and prompt for user message
-               system_text = open(file="system.txt", encoding="utf8").read().strip()
-               user_text = input("Enter user message: ")
-               if user_text.lower() == 'quit' or system_text.lower() == 'quit':
-                   print('Exiting program...')
-                   break
-               
-               await call_openai_model(system_message = system_text, 
-                                       user_message = user_text, 
-                                       model=azure_oai_deployment, 
-                                       client=client
-                                       )
-   
-       except Exception as ex:
-           print(ex)
-   
-   async def call_openai_model(system_message, user_message, model, client):
-       # Format and send the request to the model
-       # Format and send the request to the model
-       messages =[
-           {"role": "system", "content": system_message},
-           {"role": "user", "content": user_message},
-       ]
-   
-       print("\nSending request to Azure OpenAI model...\n")
-   
-       # Call the Azure OpenAI model
-       response = await client.chat.completions.create(
-           model=model,
-           messages=messages,
-           temperature=0.7,
-           max_tokens=800
-       )
-   
-   
-       if printFullResponse:
-           print(response)
-   
-       print("Response:\n" + response.choices[0].message.content + "\n")
-   
-   if __name__ == '__main__': 
-       asyncio.run(main())
-      ```
+        ```python
+                import os
+        import asyncio
+        from dotenv import load_dotenv
+        from openai import AsyncAzureOpenAI
+
+        # Set to True to print the full response from OpenAI for each call
+        printFullResponse = False
+
+        async def main():
+            try:
+                # Get configuration settings
+                load_dotenv()
+                azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+                azure_oai_key = os.getenv("AZURE_OAI_KEY")
+                azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
+
+                # Configure the Azure OpenAI client
+                client = AsyncAzureOpenAI(
+                    azure_endpoint=azure_oai_endpoint,
+                    api_key=azure_oai_key,
+                    api_version="2024-02-15-preview"
+                )
+
+                while True:
+                    # Pause the app to allow the user to enter the system prompt
+                    print("------------------\nPausing the app to allow you to change the system prompt.\nPress anything then enter to continue...")
+                    input()
+
+                    # Read in system message and prompt for user message
+                    system_text = open(file="system.txt", encoding="utf8").read().strip()
+                    user_text = input("Enter user message: ")
+                    if user_text.lower() == 'quit' or system_text.lower() == 'quit':
+                        print('Exiting program...')
+                        break
+
+                    await call_openai_model(
+                        system_message=system_text,
+                        user_message=user_text,
+                        model=azure_oai_deployment,
+                        client=client
+                    )
+
+            except Exception as ex:
+                print(ex)
+
+        async def call_openai_model(system_message, user_message, model, client):
+            # Format and send the request to the model
+            messages = [
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message},
+            ]
+
+            print("\nSending request to Azure OpenAI model...\n")
+
+            # Call the Azure OpenAI model
+            response = await client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=0.7,
+                max_tokens=800
+            )
+
+            if printFullResponse:
+                print(response)
+
+            print("Response:\n" + response.choices[0].message.content + "\n")
+
+        if __name__ == '__main__':
+            asyncio.run(main())
+
+        ```
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
