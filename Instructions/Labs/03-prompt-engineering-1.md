@@ -300,6 +300,7 @@ Applications for both C# and Python have been provided, and both apps feature th
         cd CSharp
         dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
         ```
+        
     - **Python**
    
         ```bash
