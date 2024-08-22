@@ -287,7 +287,6 @@ Applications for both C# and Python have been provided, and both apps feature th
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
 
 2. Open the configuration file for your language.
-
     - C#: `appsettings.json`
     - Python: `.env`
     
