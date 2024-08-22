@@ -564,7 +564,6 @@ Now that your app has been configured, run it to send your request to your model
 
 1. In the folder of your preferred language, open `system.txt` in Visual Studio Code. For each of the interations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
-
     ```
     <Project Sdk="Microsoft.NET.Sdk">
     
@@ -587,25 +586,24 @@ Now that your app has been configured, run it to send your request to your model
         </None>
         </ItemGroup>
     
-        </Project>
+    </Project>
     ``` 
 
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
-
-   - **C#**: `dotnet run`
+    - **C#**: `dotnet run`
    - **Python**: `python prompt-engineering.py`
         > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 1. For the first iteration, enter the following prompts:
 
-    **System message**
+    * **System message**
 
-    ```prompt
-    You are an AI assistant
-    ```
-    ![](../media/x232.png)
+        ```prompt
+        You are an AI assistant
+        ```
+        ![](../media/x232.png)
 
-    **User message:**
+    * **User message:**
 
     ```prompt
     Write an intro for a new wildlife Rescue
