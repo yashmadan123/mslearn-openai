@@ -116,7 +116,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
 
-1. Click "Next" from the bottom right corner to embark on your Lab journey!
+1. Click **"Next"** from the bottom right corner to embark on your Lab journey!
 
    ![Launch Azure Portal](../media/sc900-image(3).png)
 
