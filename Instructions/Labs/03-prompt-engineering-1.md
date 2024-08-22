@@ -296,14 +296,12 @@ Applications for both C# and Python have been provided, and both apps feature th
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
-
     - **C#**
 
         ```bash
         cd CSharp
         dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
         ```
-
     - **Python**
    
         ```bash
@@ -313,14 +311,12 @@ Applications for both C# and Python have been provided, and both apps feature th
         ```
 
 6. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
-
     - **C#**: Program.cs
 
         ```csharp
         // Add Azure OpenAI package
         using Azure.AI.OpenAI;
         ```
-
     - **Python**: prompt-engineering.py
 
         ```python
@@ -329,14 +325,12 @@ Applications for both C# and Python have been provided, and both apps feature th
         ```
 
 7. Open up the application code for your language and add the necessary code for configuring the client.
-
     - **C#**: Program.cs
 
         ```csharp
         // Initialize the Azure OpenAI client
         OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
         ```
-
     - **Python**: prompt-engineering.py
 
         ```python
@@ -349,7 +343,6 @@ Applications for both C# and Python have been provided, and both apps feature th
         ```
 
 8. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
-
     - **C#**: Program.cs
 
         ```csharp
@@ -369,7 +362,6 @@ Applications for both C# and Python have been provided, and both apps feature th
             // Get response from Azure OpenAI
             Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
         ```
-
     - **Python**: prompt-engineering.py
 
         ```python
@@ -391,7 +383,6 @@ Applications for both C# and Python have been provided, and both apps feature th
         ```
 
 9. The  modified code should look like as shown below:
-
     - **C#**
       
       ```csharp
@@ -486,7 +477,6 @@ Applications for both C# and Python have been provided, and both apps feature th
             Console.WriteLine($"\nResponse:\n{completion}\n\n");
         }
         ```
-   
      - **Python**
    
         ```python
