@@ -291,7 +291,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save(Ctrl+S)**.
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
     - **C#**
