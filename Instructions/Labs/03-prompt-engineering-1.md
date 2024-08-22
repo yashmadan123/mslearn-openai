@@ -272,12 +272,14 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png)
 
-   <validation step="8d41eaac-eee1-47ac-8bf3-ea2e2e5b3343" />
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="8d41eaac-eee1-47ac-8bf3-ea2e2e5b3343" />
+
+   
 
 ### Task 5: Configure your application
 
@@ -297,8 +299,8 @@ Applications for both C# and Python have been provided, and both apps feature th
     **C#**
 
     ```bash
-   cd CSharp
-   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+        cd CSharp
+        dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
     **Python**
