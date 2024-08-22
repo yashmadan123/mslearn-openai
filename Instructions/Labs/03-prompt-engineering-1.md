@@ -381,6 +381,7 @@ Applications for both C# and Python have been provided, and both apps feature th
         ```
 
 9. The  modified code should look like as shown below:
+
     - **C#**
       
       ```csharp
@@ -475,6 +476,7 @@ Applications for both C# and Python have been provided, and both apps feature th
             Console.WriteLine($"\nResponse:\n{completion}\n\n");
         }
         ```
+        
      - **Python**
    
         ```python
