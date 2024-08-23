@@ -482,7 +482,7 @@ Applications for both C# and Python have been provided, and both apps feature th
         ```
 
 
-    * **Python**
+    - **Python**
    
         ```python
             import os
@@ -589,7 +589,7 @@ Now that your app has been configured, run it to send your request to your model
     
         </Project>
    ```
-   
+
 3. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
