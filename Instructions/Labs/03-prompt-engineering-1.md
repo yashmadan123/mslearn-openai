@@ -59,7 +59,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="500ab73f-41d7-4883-ab2c-110281939c65" />
+<validation step="500ab73f-41d7-4883-ab2c-110281939c65" />
 
 
 ### Task 2: Deploy a model
@@ -112,7 +112,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="5b357640-1ad5-4345-a277-affb04231f21" />
+<validation step="5b357640-1ad5-4345-a277-affb04231f21" />
 
 
 ### Task 3: Apply prompt engineering in chat playground
@@ -275,7 +275,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="8d41eaac-eee1-47ac-8bf3-ea2e2e5b3343" />
+<validation step="8d41eaac-eee1-47ac-8bf3-ea2e2e5b3343" />
 
    
 
