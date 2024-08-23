@@ -308,7 +308,7 @@ Applications for both C# and Python have been provided, and both apps feature th
         pip install openai==1.13.3
         ```
 
-6. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     * **C#**: Program.cs
 
@@ -324,7 +324,7 @@ Applications for both C# and Python have been provided, and both apps feature th
         from openai import AsyncAzureOpenAI
         ```
 
-7. Open up the application code for your language and add the necessary code for configuring the client.
+6. Open up the application code for your language and add the necessary code for configuring the client.
     * **C#**: Program.cs
 
         ```csharp
@@ -343,7 +343,7 @@ Applications for both C# and Python have been provided, and both apps feature th
             )
         ```
 
-8. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
     
     - **C#**: Program.cs
 
@@ -384,7 +384,7 @@ Applications for both C# and Python have been provided, and both apps feature th
             )
         ```
 
-9. The  modified code should look like as shown below:
+8. The  modified code should look like as shown below:
 
     * **C#**
       
