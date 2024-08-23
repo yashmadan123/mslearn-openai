@@ -481,8 +481,7 @@ Applications for both C# and Python have been provided, and both apps feature th
         }
         ```
 
-
-    - **Python**
+      **Python**
    
         ```python
             import os
