@@ -480,8 +480,8 @@ Applications for both C# and Python have been provided, and both apps feature th
             Console.WriteLine($"\nResponse:\n{completion}\n\n");
         }
         ```
-
-      **Python**
+      
+    * **Python**
    
         ```python
             import os
