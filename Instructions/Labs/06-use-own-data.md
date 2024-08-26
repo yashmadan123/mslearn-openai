@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -65,7 +65,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ### Task 2: Deploy a model
 
-To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and use our data to ground its responses.
+In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -145,7 +145,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
 ### Task 4: Connect your data in the chat playground
 
-Next, add your data in the chat playground to see how it responds with your data as grounding
+In this task, you will observe how the base model responds to queries without any grounding data before connecting Azure OpenAI to your data.
 
 1. Copy the URL (https://aka.ms/own-data-brochures) and paste it in the browser. Extract the PDFs in the `.zip` that get downloaded.
    
@@ -254,7 +254,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 ### Task 5: Chat with a model grounded in your data
 
-Now that you've added your data, ask the same questions as you did previously, and see how the response differs.
+In this task, you will ask the same questions as before after adding your data, and observe how the responses differ.
 
    ```
    I'd like to take a trip to New York. Where should I stay?
@@ -272,7 +272,7 @@ Try asking it about other cities included in the grounding data, which are Dubai
 
 ### Task 6: Set up an application in Cloud Shell
 
-To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
+In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate integration with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
@@ -333,7 +333,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 ### Task 7: Configure your application
 
-For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
+In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
 1. In the code editor, expand the language folder for your preferred language.
 
@@ -410,7 +410,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 ## Task 8: Run your application
 
-Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
+In this task, you will run your configured app to send a request to your model and observe the response, noting that the only difference between options is the prompt content while all other parameters (such as token count and temperature) remain consistent.
 
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
