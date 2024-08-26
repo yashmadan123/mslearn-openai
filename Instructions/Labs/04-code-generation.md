@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -61,7 +61,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ### Task 2: Deploy a model
 
-To use the Azure OpenAI API for code generation, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and reference that model in our app.
+In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -115,7 +115,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 ### Task 3: Generate code in chat playground
 
-Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
+In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
    
@@ -159,7 +159,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
     
 ### Task 4: Set up an application in Cloud Shell
 
-To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
+In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
@@ -228,7 +228,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 ### Task 5: Configure your application
 
-For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
+In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
 1. In the code editor, expand the language folder for your preferred language.
 
@@ -305,7 +305,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 ### Task 6: Run your application
 
-Now that your app has been configured, run it to try generating code for each use case. The use case is numbered in the app, and can be run in any order.
+In this task, you will run your configured app to generate code for each use case, which is numbered in the app and can be executed in any order.
 
 > **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
 
