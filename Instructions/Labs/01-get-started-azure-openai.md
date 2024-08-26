@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+In this task you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -52,7 +52,8 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ### Task 2: Deploy a model
 
-Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
+In this Task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -105,7 +106,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 ### Task 3: Explore a model in the Completions playground
 
-*Playgrounds* are useful interfaces in Azure OpenAI Studio that you can use to experiment with your deployed models without needing to develop your own client application.
+In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
 2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected and then in the **Examples** list, select **Generate a quiz**.
@@ -124,7 +125,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 ### Task 4: Use the Chat playground
 
-The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models. It uses the *ChatCompletions* API rather than the older *Completions* API.
+In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
@@ -148,7 +149,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 ### Task 5: Explore prompts and parameters
 
-You can use the prompt and parameters to maximize the likelihood of generating the response you need.
+In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
 1. In the **Configuration** pane select **Parameter** , set the following parameter values:
     - **Temperature**: 0
@@ -178,7 +179,7 @@ You can use the prompt and parameters to maximize the likelihood of generating t
 
 ### Task 6: Explore code-generation
 
-In addition to generating natural language responses, you can use GPT models to generate code.
+In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
 1. In the **Setup** pane, select the **Empty Example** template to reset the system message.
 2. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes**.
