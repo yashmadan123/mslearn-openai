@@ -728,10 +728,6 @@ In this task, you will run your configured app to send a request to your model a
 
 ## Summary
 
-By completing this lab, you’ve gained hands-on experience with Azure OpenAI Service models, demonstrating how AI can be a powerful tool in code generation, bug fixing, and code comprehension. You’ve learned to deploy models, utilize the Chat Playground for code-related tasks, and integrate AI into a real-world application through Azure Cloud Shell. Additionally, you've explored the capabilities of the DALL-E model for image generation. These skills will help you leverage AI to enhance your coding workflow, making development more efficient and insightful.
-
-## Review
-
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
 -   Deploy an OpenAI model within the Azure OpenAI studio
