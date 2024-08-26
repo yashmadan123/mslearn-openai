@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -51,7 +51,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ### Task 2: Deploy a model
 
-Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. Once deployed, you will use the model to generate natural language content.
+In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -104,7 +104,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
 ### Task 3: Generate natural language output
 
-Let's see how the model behaves in a conversational interaction.
+In this task, you will observe how the model behaves in a conversational interaction.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
 2. In the **Setup** section at the top, select the **Default** system message template and click on **Continue**.
@@ -134,7 +134,7 @@ Let's see how the model behaves in a conversational interaction.
 
 ### Task 4: Explore content filters
 
-Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
+In this task, you will apply content filters to prompts and completions to prevent the generation of potentially harmful or offensive language.
 
 1. In Azure OpenAI Studio, view the **Content filters** page from the left navigation menu.
 2. Select **Create customized content filter** and review the default settings for a content filter.
