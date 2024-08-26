@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1:  Provision an Azure OpenAI resource
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -73,7 +73,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ### Task 2: Explore image generation in the DALL-E playground
 
-You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with image generation.
+In this task, you will use the DALL-E playground in **Azure OpenAI Studio** to experiment with image generation.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
