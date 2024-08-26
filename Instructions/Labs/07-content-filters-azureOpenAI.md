@@ -78,7 +78,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       ![](../media/gpt-35-16k.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: text-turbo (1)
+    - **Deployment name**: 35turbo (1)
     - **Model version**: 0613 Default (2)
     - **Deployment type**: Standard (3)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
