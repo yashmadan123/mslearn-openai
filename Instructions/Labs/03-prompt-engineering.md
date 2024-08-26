@@ -716,4 +716,8 @@ In this task, you will run your configured app to send a request to your model a
 
 In this lab, you have performed tasks to work with Azure OpenAI services. You provisioned an Azure OpenAI resource, deployed an OpenAI model within the Azure OpenAI studio, and applied prompt engineering in your applications to enhance AI interactions.
 
+- Provision an Azure OpenAI resource
+- Deploy an Azure OpenAI model within the Azure OpenAI studio
+- Prompt Engineering, Application Setup, Configuration, and Execution in Cloud Shell
+
 ### You have successfully completed the lab.
