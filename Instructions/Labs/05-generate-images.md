@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1:  Provision an Azure OpenAI resource
 
-Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
+In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -64,7 +64,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ### Task 2: Explore image generation in the DALL-E playground
 
-You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with image generation.
+In this task, you will use the DALL-E playground in Azure OpenAI Studio to experiment with image generation.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -94,7 +94,7 @@ The Azure OpenAI service provides a REST API that you can use to submit prompts 
 
 #### Task 3.1: Prepare the app environment
 
-In this exercise, you'll use a simple Python or Microsoft C# app to generate images by calling the REST API. You'll run the code in the cloud shell console interface in the Azure portal.
+In this task, you will use a simple Python or C# app to generate images by calling the REST API and run the code in the Cloud Shell console interface within the Azure portal.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal. 
 
@@ -156,7 +156,7 @@ In this exercise, you'll use a simple Python or Microsoft C# app to generate ima
 
 #### Task 3.2: Configure your application
 
-The application uses a configuration file to store the details needed to connect to your Azure OpenAI service account.
+In this task, you will use a configuration file in the application to store the details needed to connect to your Azure OpenAI service account.
 
 1. In the code editor, select the configuration file for your app - depending on your language preference.
 
@@ -175,7 +175,7 @@ The application uses a configuration file to store the details needed to connect
 
 #### Task 3.3: View application code
 
-Now you're ready to explore the code used to call the REST API and generate an image.
+In this task, you will explore the code used to call the REST API and generate an image.
 
 1. In the code editor pane, select the main code file for your application:
 
@@ -206,7 +206,7 @@ Now you're ready to explore the code used to call the REST API and generate an i
 
 ### Task 4: Run the app
 
-Now that you've reviewed the code, it's time to run it and generate some images.
+In this task, you will run the reviewed code to generate some images.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
