@@ -87,18 +87,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-35-turbo-16k (1)
-      
-       >**Note** : if the 16k model isn't available, choose **gpt-35-turbo**
-       
+    - **Deployment name**: text-turbo (1)
     - **Model version**: Auto-update to default (2)
     - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo (4)
+      
+       >**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
+ 
     - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
     - **Enable dynamic quota**: Enabled (7)
     - Click on **Deploy** (7)
   
-      ![](../media/x991.png)
+      ![](../media/intial-deploy.jpg)
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -170,7 +169,8 @@ Open the built-in code editor, and observe the text file that you'll be summariz
 ```bash
 code .
 ```
- > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+ 
+ > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png) 
    
