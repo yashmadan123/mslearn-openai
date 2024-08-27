@@ -87,8 +87,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
 
-      ![](../media/gpt-35-16k.jpg)
- 7. Within the **Deploy model** pop-up interface, enter the following details:
+7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: 35turbo (1)
     - **Select a Model**: gpt-35-turbo-16k (2)
     - **Deployment type**: Standard (3)
@@ -96,11 +95,10 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
 
-> **Note**: if the 16k model isn't available, choose **gpt-35-turbo**
+       ![](../media/deploy-16.jpg)  
 
-   ![](../media/deploy-16.jpg)  
+   > **Note**: if the **GPT-35-TURBO-16K** model isn't available, choose **gpt-35-turbo**
 
-7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
