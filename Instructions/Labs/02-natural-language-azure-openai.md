@@ -96,7 +96,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Deployment name**: text-turbo (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
     - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (7)
+    - Click on **Deploy** (7)
   
       ![](../media/x991.png)
 
