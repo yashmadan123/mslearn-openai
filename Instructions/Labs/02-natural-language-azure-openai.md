@@ -90,14 +90,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Deployment name**: text-turbo (1)
     - **Model version**: Auto-update to default (2)
     - **Deployment type**: Standard (3)
-      
-       >**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
- 
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Deploy** (7)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
   
       ![](../media/intial-deploy.jpg)
+
+>**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
