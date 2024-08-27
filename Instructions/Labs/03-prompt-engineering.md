@@ -284,11 +284,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
-
-   ![](../media/classic-cloudshell-prompt.png)
-
-
 ### Task 5: Configure your application
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
