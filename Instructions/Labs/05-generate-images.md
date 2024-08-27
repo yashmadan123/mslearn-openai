@@ -153,7 +153,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
     ```bash
    code .
     ```
-> **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from steps 8 and 9 to and make sure you are in the correct project path.
+> **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png)
 
