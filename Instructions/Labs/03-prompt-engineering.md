@@ -101,7 +101,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
      ![](../media/deploy-16.jpg)
 
-8. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+>**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
+
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
