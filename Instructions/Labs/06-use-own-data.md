@@ -92,19 +92,18 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    ![](../media/pg-09.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: text-turbo (1)
-    - **Select a Model**: gpt-35-turbo (2)
-      
-        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-     
-    - **Model version**: Auto-update to default(0301) (3)<br>
-    - **Deployment type**: Standard (4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Deploy** (7)
   
-         ![](../media/new_turbo.jpg)
+    - **Deployment name**: text-turbo (1)
+    - **Model version**: Auto-update to default (2)
+    - **Deployment type**: Standard (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
+  
+         ![](../media/intial-deploy.jpg)
 
+     >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
+     
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
@@ -327,7 +326,7 @@ In this task, you will use a short command-line application running in Cloud She
    code .
     ```
 
- > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+  > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png) 
 
