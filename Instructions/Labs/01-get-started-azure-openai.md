@@ -86,7 +86,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Deployment type**: Standard (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
     - **Enable dynamic quota**: Enabled (6)
-    - Click on **Create** (7)
+    - Click on **Deploy** (7)
   
          ![](../media/new_turbo.jpg)
 
