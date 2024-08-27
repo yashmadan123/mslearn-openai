@@ -214,7 +214,7 @@ In this task, you will run the reviewed code to generate some images.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
-2. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+2. If your using as **C#** language kindly open **generate_image.csproj** file replace with following code and save the file.
 
 ```
    <Project Sdk="Microsoft.NET.Sdk">
