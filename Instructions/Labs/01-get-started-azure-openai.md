@@ -78,17 +78,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: my-gpt-model (1)
-    - **Select a Model**: gpt-35-turbo (2)
-      
-        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-     
-    - **Model version**: Auto-update to default(0301) (3)<br>
-    - **Deployment type**: Standard (4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Deploy** (7)
+    - **Model version**: Auto-update to default(0301) (2)<br>
+    - **Deployment type**: Standard (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
   
          ![](../media/new_turbo.jpg)
+
+>**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
