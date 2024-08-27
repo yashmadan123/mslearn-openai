@@ -201,13 +201,13 @@ In this task, you will use a short command-line application running in Cloud She
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-    Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+9. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
     ```
 
-   > **Note**: If you get a popup on **Switch to Classic Cloud Shell** while running **code .** command click on **Confirm** and make sure you are in the correct project path.
+> **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png)
 
