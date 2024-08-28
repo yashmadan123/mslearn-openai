@@ -1,10 +1,10 @@
-# Getting Started with Your Develop Generative AI solutions with Azure OpenAI Service
+# Getting Started with Your Develop Generative AI Solutions with Azure OpenAI Service
 
 ## Overall Estimated Duration: 60 minutes
 
 ## Overview
 
-This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, and experiment with the Completions and Chat playgrounds and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
+This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, experiment with the Completions and Chat playgrounds and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
 
 ## Objective
 
@@ -18,7 +18,7 @@ By the end of this lab, you will be able to:
 
 - **Explore and Refine Model Outputs**: Test and refine model responses by interacting with the AI models through practical exercises, understanding how different prompts and parameters affect outputs.
 
-## Prerequisites
+## Pre-Requisites
 
 Participants should have: Basic knowledge and understanding of the following
 
@@ -79,7 +79,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
    ![Inline Validation](./media/inline-validation.png)
 
@@ -111,10 +111,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
  
-6. Click "Next" from the bottom right corner to embark on your Lab journey!
- 
-     ![Start Your Azure Journey](./media/sc900-image(3).png)
-
 ## Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
@@ -126,5 +122,7 @@ Learner Support Contacts:
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on Next from the lower right corner to move on to the next page.
+
+![Start Your Azure Journey](./media/sc900-image(3).png)
 
 ### Happy Learning!!
