@@ -1,11 +1,13 @@
 # Getting Started with Your Develop Generative AI solutions with Azure OpenAI Service
 
-## Overall Estimated Duration: 1 hour
+## Overall Estimated Duration: 60 minutes
 
 ## Overview
+
 This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, and experiment with the Completions and Chat playgrounds and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
 
 ## Objective
+
 By the end of this lab, you will be able to:
 
 - **Provision and Configure Azure OpenAI Resources**: Set up and manage an Azure OpenAI resource, selecting appropriate settings such as region and pricing tier.
@@ -15,7 +17,6 @@ By the end of this lab, you will be able to:
 - **Utilize AI Model Features**: Experiment with various features of AI models, including generating text and code using the Completions and Chat playgrounds.
 
 - **Explore and Refine Model Outputs**: Test and refine model responses by interacting with the AI models through practical exercises, understanding how different prompts and parameters affect outputs.
-
 
 ## Prerequisites
 
@@ -29,6 +30,7 @@ Participants should have: Basic knowledge and understanding of the following
 This architecture allows users to leverage Azure's cloud infrastructure to deploy and interact with advanced AI models. Through the Azure Portal, users manage their resources, while Azure AI Studio provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Studio enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
 
 ## Architecture Diagram:
+
 ![](./media/lab-01-ad.png)
 
 ## Explanation of Components
