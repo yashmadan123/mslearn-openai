@@ -10,15 +10,15 @@ The purpose of this lab is to enable you to effectively integrate Azure OpenAI S
 
 By the end of this lab, you will have:
 
-- **Azure OpenAI Integration**: This hands-on lab will guide you in gaining proficiency in integrating Azure OpenAI Service into your applications to leverage AI-driven functionalities.
+- **Azure OpenAI Integration**: Gain proficiency in integrating Azure OpenAI Service into your applications to leverage AI-driven functionalities.
 
-- **Create and Configure Azure OpenAI Resources**: This hands-on lab will guide you in setting up and configuring an Azure OpenAI resource to facilitate the deployment of language models.
+- **Create and Configure Azure OpenAI Resources**: Gain experience in setting up and configuring an Azure OpenAI resource to facilitate the deployment of language models.
 
-- **Deploy and Interact with Language Models**: This hands-on lab will guide you in deploying a language model and using a command-line application in Azure Cloud Shell to interact with it, understanding its role in processing natural language.
+- **Deploy and Interact with Language Models**: Successfully deploy a language model and use a command-line application in Azure Cloud Shell to interact with it, understanding its role in processing natural language.
 
-- **Manage Conversation History**: This hands-on lab will guide you in learning how to manage conversation history to ensure that AI responses remain contextually relevant and meaningful.
+- **Manage Conversation History**: Learn how to manage conversation history to ensure that AI responses remain contextually relevant and meaningful.
 
-- **Develop Practical AI-Powered Applications**: This hands-on lab will guide you in acquiring experience in building AI-powered applications, effectively applying Azure OpenAI capabilities in real-world scenarios.
+- **Develop Practical AI-Powered Applications**: Acquire hands-on experience in building AI-powered applications, applying Azure OpenAI capabilities effectively in real-world scenarios.
 
 ## Pre-Requisites
 
@@ -26,7 +26,7 @@ You should have a basic understanding of **Azure services**, including **Azure O
 
 ## Architecture
 
-This diagram illustrates the workflow for establishing and operating an AI application within Azure. The process begins with the creation of a Resource Group, which acts as the central container for all associated Azure resources. Within this Resource Group, an OpenAI resource is provisioned to facilitate the deployment of AI models. Subsequently, a new AI model is deployed to the OpenAI resource. The workflow then involves setting up a Cloud Shell app, which is configured according to specific requirements. Finally, the app is executed, concluding the setup and deployment process. This structured approach ensures a seamless transition from initial resource creation to the successful execution of the AI application.
+In this lab, the workflow begins by provisioning an Azure OpenAI resource in the Azure portal. Next, you will deploy a model and set up a sample application using Cloud Shell. The application will be integrated with the Azure OpenAI model to handle text-based tasks. You’ll then test the application by sending prompts and reviewing the responses. Finally, enhancements will be made to the application to manage conversation history for a more interactive experience.
 
 ## Architecture Diagram
 
