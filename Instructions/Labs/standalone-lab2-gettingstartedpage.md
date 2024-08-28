@@ -1,7 +1,37 @@
-# Getting Started with Your Develop Generative AI solutions with Azure OpenAI service Workshop
- 
-Welcome to your Develop Generative AI solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
- 
+# Develop Generative AI solutions with Azure OpenAI Service Workshop
+
+## Overall Estimated Duration: 1 Hour
+
+## Overview
+
+The purpose of this lab is to enable you to effectively integrate Azure OpenAI Service into your applications, focusing on AI-driven functionalities. Through this lab, you will create and configure an Azure OpenAI resource, deploy and interact with a language model, and build a command-line application in Azure Cloud Shell. Additionally, you will learn to manage conversation history to enhance the contextual relevance of AI responses. This lab offers a professional, hands-on approach to understanding and applying Azure OpenAI capabilities in real-world scenarios.
+
+## Objective
+
+By the end of this lab, you will have:
+
+- **Azure OpenAI Integration**: This hands-on lab will guide you in gaining proficiency in integrating Azure OpenAI Service into your applications to leverage AI-driven functionalities.
+
+- **Create and Configure Azure OpenAI Resources**: This hands-on lab will guide you in setting up and configuring an Azure OpenAI resource to facilitate the deployment of language models.
+
+- **Deploy and Interact with Language Models**: This hands-on lab will guide you in deploying a language model and using a command-line application in Azure Cloud Shell to interact with it, understanding its role in processing natural language.
+
+- **Manage Conversation History**: This hands-on lab will guide you in learning how to manage conversation history to ensure that AI responses remain contextually relevant and meaningful.
+
+- **Develop Practical AI-Powered Applications**: This hands-on lab will guide you in acquiring experience in building AI-powered applications, effectively applying Azure OpenAI capabilities in real-world scenarios.
+
+## Pre-Requisites
+
+You should have a basic understanding of **Azure services**, including **Azure OpenAI** and **Azure Cloud Shell**. Familiarity with **command-line interfaces** and a foundational knowledge of programming concepts are also required.
+
+## Architecture
+
+This diagram outlines the process for setting up and running an AI application. It begins with the creation of a Resource Group, which serves as the container for all related Azure resources. Within this Resource Group, an OpenAI resource is established to support AI model deployment. Following this, a new AI model is deployed to the OpenAI resource. The next step involves setting up a CloudsHell app, which is then configured to meet specific requirements. Finally, the configured app is executed, completing the process. This structured workflow progresses from initial resource creation through model deployment and app configuration, leading to the successful execution of the AI application.
+
+## Architecture Diagram
+
+![](../media/28-08-2024.png "Architecture Diagram")
+
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
