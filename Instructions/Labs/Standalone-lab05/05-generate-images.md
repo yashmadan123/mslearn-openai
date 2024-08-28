@@ -24,11 +24,11 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](./media/openai8.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create.png)
+   ![](./media/openai_create.png)
 
 3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
    
@@ -38,7 +38,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
     - **Name**: OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
 
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+   ![](./media/openai-lab01_01.png "Create Azure OpenAI resource")
 
    >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
 
@@ -50,7 +50,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+   ![](./media/openai-endpoint-new.png "Keys and Endpoints")
 
 #### Validation
 
@@ -68,25 +68,25 @@ In this task, you will use the DALL-E playground in Azure OpenAI Studio to exper
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](./media/openai8.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](./media/OpenAI_select.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
 4. In the prompt select **Explore the new experience** .
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
+      ![](./media/explore_new-exp.jpg "Create a new deployment")
    
 5. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
    
-    ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/image_gen.jpg)
+    ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](./media/image_gen.jpg)
 
 6. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
-    ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/new_1.jpg)
+    ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](./media/new_1.jpg)
 
 ### Task 3: Use the REST API to generate images
 
@@ -98,19 +98,19 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal. 
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](./media/cloudshell-launch-portal.png#lightbox)
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
 3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
-   ![](../media/cloudshell_image1.png "Create storage advanced settings")
+   ![](./media/cloudshell_image1.png "Create storage advanced settings")
 
     > **Note**: If you already have a cloud shell set up in your Azure subscription, you may need to use the **Reset user settings** option in the ⚙️ menu to ensure the latest versions of Python and the .NET Framework are installed.
 
 4. Select i want to create a storage account and click on apply.
 
-   ![](../media/cloudshell_image2.png "Create storage advanced settings")
+   ![](./media/cloudshell_image2.png "Create storage advanced settings")
 
 5. Within the **Create storage account** pane, enter the following details and then click on **Create**:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
@@ -121,7 +121,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
       - storage<inject key="Deployment-ID" enableCopy="false"></inject>
     - **File share**: Create a new file share named **none**
 
-   ![](../media/cloudshell_image3.png "Create storage advanced settings")
+   ![](./media/cloudshell_image3.png "Create storage advanced settings")
 
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -153,9 +153,9 @@ In this task, you will use a simple Python or C# app to generate images by calli
     ```bash
    code .
     ```
-> **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
-   ![](../media/classic-cloudshell-prompt.png)
+   ![](./media/classic-cloudshell-prompt.png)
 
    
 #### Task 3.2: Configure your application
@@ -216,30 +216,30 @@ In this task, you will run the reviewed code to generate some images.
 
 2. If your using as **C#** language kindly open **generate_image.csproj** file replace with following code and save the file.
 
-```
-   <Project Sdk="Microsoft.NET.Sdk">
-   
-   <PropertyGroup>
-   <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
-   <ImplicitUsings>enable</ImplicitUsings>
-   <Nullable>enable</Nullable>
-   </PropertyGroup>
-   
-    <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-    </ItemGroup>
-   
-    <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-       </None>
-     </ItemGroup>
-   
-    </Project>
    ```
+      <Project Sdk="Microsoft.NET.Sdk">
+      
+      <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net8.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+      </PropertyGroup>
+      
+       <ItemGroup>
+       <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+       </ItemGroup>
+      
+       <ItemGroup>
+         <None Update="appsettings.json">
+           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          </None>
+        </ItemGroup>
+      
+       </Project>
+      ```
 
 3. In the console prompt pane, enter the appropriate command to run your application:
 
@@ -260,7 +260,7 @@ In this task, you will run the reviewed code to generate some images.
 
 3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
-   ![](../media/link.jpg "Keys and Endpoints")
+   ![](./media/link.jpg "Keys and Endpoints")
    
 5. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
