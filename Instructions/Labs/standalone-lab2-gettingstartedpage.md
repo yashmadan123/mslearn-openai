@@ -22,11 +22,15 @@ By the end of this lab, you will have:
 
 ## Pre-Requisites
 
-You should have a basic understanding of **Azure services**, including **Azure OpenAI** and **Azure Cloud Shell**. Familiarity with **command-line interfaces** and a foundational knowledge of programming concepts are also required.
+You should have basic knowledge and understanding of the following:
+
+- **Azure Portal**: The web interface for managing and provisioning Azure resources.
+- **Azure services, including Azure OpenAI and Azure Cloud Shell**: Core Azure offerings for AI capabilities and command-line management.
+- **Command-line interfaces**: Tools like PowerShell or Bash for executing commands and managing systems.
 
 ## Architecture
 
-In this lab, the workflow begins by provisioning an Azure OpenAI resource in the Azure portal. Next, you will deploy a model and set up a sample application using Cloud Shell. The application will be integrated with the Azure OpenAI model to handle text-based tasks. You’ll then test the application by sending prompts and reviewing the responses. Finally, enhancements will be made to the application to manage conversation history for a more interactive experience.
+This architecture allows users to leverage advanced AI capabilities by starting with provisioning an Azure OpenAI resource in the Azure portal. You will then deploy a model and set up a sample application using Cloud Shell. The application will be integrated with the Azure OpenAI model for text-based tasks. You'll test the application by sending prompts and reviewing responses. Finally, you'll enhance the application to manage conversation history for a more interactive experience.
 
 ## Architecture Diagram
 
@@ -38,13 +42,7 @@ In this lab, the workflow begins by provisioning an Azure OpenAI resource in the
 
 - **OpenAI Resource**: An OpenAI resource in Azure supports the deployment and management of OpenAI models. It provides the necessary infrastructure and APIs for utilizing advanced AI capabilities, such as natural language processing and generation.
 
-- **AI Model Deployment**: AI Model Deployment involves configuring and setting up a machine learning model within the OpenAI resource. This process ensures that the model is operational and ready to perform tasks like text generation or analysis.
-
 - **Cloud Shell App**: A Cloud Shell app is an interactive, browser-based command-line tool provided by Azure. It enables you to manage and configure Azure resources directly from the portal, offering a convenient environment for executing scripts and commands.
-
-- **App Configuration**: App Configuration entails setting up the parameters, environment variables, and other settings necessary for the Cloud Shell app to function correctly. Proper configuration ensures that the app operates with the required settings to interact with Azure resources effectively.
-
-- **App Execution**: App Execution is the process of running the configured Cloud Shell app to perform its designated functions. This step initiates the app’s operations, allowing it to interact with the deployed AI model and complete tasks as intended.
 
 ## Getting Started with the Lab
 
