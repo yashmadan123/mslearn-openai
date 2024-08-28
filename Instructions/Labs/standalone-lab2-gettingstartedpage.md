@@ -1,6 +1,6 @@
-# Build natural language solutions with Azure OpenAI Service
+# Develop Generative AI solutions with Azure OpenAI Service Workshop
 
-## Overall Estimated Duration: 1 Hour
+## Overall Estimated Duration: 60 minutes
 
 ## Overview
 
