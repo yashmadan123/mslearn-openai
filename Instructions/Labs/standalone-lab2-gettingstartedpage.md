@@ -8,7 +8,7 @@ The purpose of this lab is to enable you to effectively integrate Azure OpenAI S
 
 ## Objective
 
-By the end of this lab, you will have:
+Understand how to deploy OpenAI models in Azure, configure them, and secure them with API keys. Gain skills in Command-line interfaces. By the end of this lab, you will be able to:
 
 - **Azure OpenAI Integration**: Gain proficiency in integrating Azure OpenAI Service into your applications to leverage AI-driven functionalities.
 
