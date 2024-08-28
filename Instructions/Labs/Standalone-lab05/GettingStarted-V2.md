@@ -4,17 +4,17 @@
 
 ## Overview
 
-In this hands-on-lab, you will explore the capabilities of Azure OpenAI Service models  you will gain an understanding of how these models can explain and simplify complex code, making it easier to comprehend and improve. The lab will also introduce you to the DALL-E model, where you will practice generating original images by submitting natural language prompts, focusing on the creative potential of AI in visual content creation.
+In this hands-on lab, you will explore the capabilities of Azure OpenAI Service models  you will gain an understanding of how these models can explain and simplify complex code, making it easier to comprehend and improve. The lab will also introduce you to the DALL-E model, where you will practice generating original images by submitting natural language prompts, focusing on the creative potential of AI in visual content creation.
 
 ## Objective 
 
 - **Generate images with a DALL-E model**: The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, you will develop and alter images using the DALL-E model.
 
-## Prerequisites
+## Pre-Requisites
 
-1. **Development Skills**: Basic programming knowledge and experience with APIs and SDKs.
-2. **AI Concepts**: Understanding prompt engineering, code development, and image generation using models such as DALL-E.
-3. **Content Management**: Understanding data integration for RAG and content filtering techniques.
+- **Development Skills**: Basic programming knowledge and experience with APIs and SDKs.
+- **AI Concepts**: Understanding prompt engineering, code development, and image generation using models such as DALL-E.
+- **Content Management**: Understanding data integration for RAG and content filtering techniques.
 
 ## Architecture
 
@@ -95,10 +95,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
  
-6. Click "Next" from the bottom right corner to embark on your Lab journey!
- 
-     ![Start Your Azure Journey](./media/sc900-image(3).png)
-
 ## Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
@@ -110,6 +106,8 @@ Learner Support Contacts:
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on Next from the lower right corner to move on to the next page.
+
+![Start Your Azure Journey](./media/sc900-image(3).png)
 
 ### Happy Learning!!
 
