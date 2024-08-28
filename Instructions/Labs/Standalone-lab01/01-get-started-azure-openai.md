@@ -66,7 +66,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 4. In the prompt select **Explore the new experience** 
 
-   ![](../media/explore_new-exp.jpg "Create a new deployment")
+   ![](./media/explore_new-exp.jpg "Create a new deployment")
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
