@@ -619,8 +619,9 @@ In this task, you will provide a history of the conversation in your prompt to e
 ## Summary
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
--   Integrate Azure OpenAI models into your applications
+
+- Provisioned an Azure OpenAI resource
+- Deployed an OpenAI model within the Azure OpenAI studio
+- Integrated Azure OpenAI models into your applications
 
 ### You have successfully completed the lab.
