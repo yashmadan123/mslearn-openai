@@ -1,18 +1,17 @@
 [
   {
-    "Name": "Lab 01: Develop AI solutions with Azure OpenAI Studio",
+    "Name": "Lab 01: Generate images with a DALL-E model",
     "Language": "English",
     "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/guidedlab/Instructions/Labs/Standalone-lab01/GettingStarted-V2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/guidedlab/Instructions/Labs/00-GettingStarted-V2.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/guidedlab/Instructions/Labs/Standalone-lab01/01-get-started-azure-openai.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/guidedlab/Instructions/Labs/05-generate-images.md",
         "Order": 2
       }
     ]
   }
 ]
-
