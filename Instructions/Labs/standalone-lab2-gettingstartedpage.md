@@ -46,6 +46,10 @@ In this lab, the workflow begins by provisioning an Azure OpenAI resource in the
 
 - **App Execution**: App Execution is the process of running the configured Cloud Shell app to perform its designated functions. This step initiates the app’s operations, allowing it to interact with the deployed AI model and complete tasks as intended.
 
+## Getting Started with the Lab
+
+Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises of the lab guide.
+
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
