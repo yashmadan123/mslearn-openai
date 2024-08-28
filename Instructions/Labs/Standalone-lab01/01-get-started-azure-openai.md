@@ -177,10 +177,10 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
 1. In the **Configuration** pane select **Parameter** , set the following parameter values:
-    
-    - **Temperature**: 0
-    
+      
     - **Max response**: 500
+  
+    - - **Temperature**: 0
 
        ![](./media/NO-8.png)
       
