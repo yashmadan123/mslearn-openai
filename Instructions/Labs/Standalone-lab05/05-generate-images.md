@@ -39,7 +39,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](./media/openai-lab01_01.png "Create Azure OpenAI resource")
 
-   >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** regions.
+   >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** region.
 
 4. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
