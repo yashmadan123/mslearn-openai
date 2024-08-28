@@ -63,7 +63,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](./media/openai_studio.png)
    
-4. In the prompt select **Explore the new experience** 
+4. In the prompt select **Explore the new experience**.
 
    ![](./media/explore_new-exp.jpg "Create a new deployment")
 
@@ -71,7 +71,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](./media/deploy-1.jpg "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+6. On the **Select a Model** pane, search for **gpt-35-turbo** and select it from the results. Then, click **Confirm** to proceed.
 
    ![](./media/pg-09.jpg)
    
@@ -85,7 +85,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
          ![](./media/gpt-intial.jpg)
 
->**Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+   >**Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
@@ -102,7 +102,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 ### Task 3: Explore a model in the Completions playground
 
-In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
+In this task, you'll Explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
 
@@ -110,9 +110,9 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
       ![](./media/NO-1.png)
 
-      >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
+      >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
-3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
+3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
@@ -154,7 +154,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
       > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
       ![](./media/NO-6.png)
    
@@ -184,7 +184,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
        ![](./media/NO-8.png)
       
-2. Submit the following message in chat session
+2. Submit the following message in a chat session
 
       ```
       Write three multiple choice questions based on the following text.
@@ -212,7 +212,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 ### Task 6: Explore code-generation
 
-In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
+In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
 1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` 
    and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
@@ -236,9 +236,8 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 ## Summary
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an Azure OpenAI model within the Azure OpenAI studio
--   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
+- Provisioned an Azure OpenAI resource
+- Deployed an Azure OpenAI model within the Azure OpenAI studio
+- Used the chat playground to utilise the functionalities of prompts, parameters, and code generation
 
-##   You have successfully completed the lab.
-
+## You have successfully completed the lab.
