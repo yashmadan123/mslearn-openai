@@ -257,6 +257,14 @@ In this task, you will run the reviewed code to generate some images.
 
 2. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
 
+   >**Note**: If you encounter an issue after enter prompts kindly follow the below steps:
+
+   - Navigate back to **Azure OpenAI Studio**. From the top menu bar, turn on the toggle for **Switch to the old version**. click on **Skip** when feedback window prompted.
+  
+   - In **Deployment**, ensure that **Dalle 3** is selected.
+  
+   - Navigate back to CloudShell and reperform step no 3. 
+    
 3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
    ![](./media/link.jpg "Keys and Endpoints")
