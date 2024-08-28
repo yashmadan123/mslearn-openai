@@ -1,5 +1,5 @@
-# Getting Started with Your Develop Generative AI solutions with Azure OpenAI service Workshop
- 
+# Getting Started with Your Develop Generative AI solutions with Azure OpenAI Service
+
 ## Overall Estimated Duration: 1 hour
 
 ## Overview
