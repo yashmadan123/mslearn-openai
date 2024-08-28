@@ -178,11 +178,11 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 1. In the **Configuration** pane select **Parameter** , set the following parameter values:
       
-    - **Max response**: 500
-  
-    - **Temperature**: 0
-
-       ![](./media/NO-8.png)
+      - **Max response**: 500
+     
+      - **Temperature**: 0
+   
+          ![](./media/NO-8.png)
       
 2. Submit the following message in a chat session
 
