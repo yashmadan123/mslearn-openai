@@ -1,4 +1,4 @@
-# Lab 02: Use Azure OpenAI SDKs in your app
+# Lab 01: Use Azure OpenAI SDKs in your app
 
 ## Lab scenario
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application.
@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -47,8 +47,8 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
@@ -85,7 +85,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/deploy-1.jpg "Create a new deployment")
 
-
 6. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
     - **Model version**: Auto-update to default (2)
@@ -96,7 +95,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
       ![](../media/intial-deploy.jpg)
 
->**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
+      >**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -169,7 +168,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       code .
       ```
  
- > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+ > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png) 
    
@@ -367,7 +366,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
 1. Run the app again and provide the prompt `Where is a good hike near Boise?`.
 2. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
-3. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have the past conversation messages for reference.
+3. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have past conversation messages for reference.
 4. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
 
     **C#**: Program.cs
@@ -387,7 +386,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     messages_array = [{"role": "system", "content": system_message}]
     ```
 
-5. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in python with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
+5. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in Python with the following code then save the file. The code is mostly the same, but now the messages array stores the conversation history.
 
     **C#**: Program.cs
 
@@ -612,7 +611,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
 9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
 10. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
-11. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow up questions referencing previous answers, and each time the history provides context for the model to answer.
+11. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow-up questions referencing previous answers, and each time the history provides context for the model to answer.
 
     > **Tip**: The token count is only set to 1200, so if the conversation continues too long the application will run out of available tokens, resulting in an incomplete prompt. In production uses, limiting the length of the history to the most recent inputs and responses will help control the number of required tokens.
 
