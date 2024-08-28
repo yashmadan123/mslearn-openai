@@ -18,9 +18,11 @@ The purpose of the lab is to enable you to effectively integrate Azure OpenAI Se
 
 ## Architecture
 
-In this hands-on lab, you will follow an architecture flow that begins with exploring Azure OpenAI Service models, where you'll use natural language prompts to generate and enhance code. The flow progresses through stages of code generation, bug fixing, and detailed commenting, leveraging AI to simplify and explain complex code. The final stage introduces the DALL-E model, where you'll practice generating original images from natural language prompts, highlighting the creative potential of AI in visual content creation. This flow seamlessly integrates AI-driven coding and creative image generation, providing a comprehensive understanding of Azure OpenAI's capabilities.
+This architecture allows users to leverage advanced AI capabilities by starting with provisioning Azure OpenAI Service models, where you'll use natural language prompts to generate and enhance code. The flow progresses through stages of code generation, bug fixing, and detailed commenting, leveraging AI to simplify and explain complex code. The final stage introduces the DALL-E model, where you'll practice generating original images from natural language prompts, highlighting the creative potential of AI in visual content creation. This flow seamlessly integrates AI-driven coding and creative image generation, providing a comprehensive understanding of Azure OpenAI's capabilities.
 
 ## Architecture Diagram
+
+![Access Your VM and Lab Guide](./media/28-08-2024(3).png)
 
 ## Explanation of Components
 
@@ -63,7 +65,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
    ![Inline Validation](./media/inline-validation.png)
 
@@ -110,7 +112,3 @@ Now, click on Next from the lower right corner to move on to the next page.
 ![Start Your Azure Journey](./media/sc900-image(3).png)
 
 ### Happy Learning!!
-
-
-
-
