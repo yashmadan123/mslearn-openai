@@ -1,6 +1,7 @@
 # Lab 01: Generate images with a DALL-E model
 
-## Lab scenario
+## Estimated time: 60 minutes
+
 The Azure OpenAI Service includes an image-generation model named DALL-E. You can use this model to submit natural language prompts that describe a desired image, and the model will generate an original image based on the description you provide.
 
 In this exercise, you'll use a DALL-E version 3 model to generate images based on natural language prompts.
@@ -9,18 +10,16 @@ In this exercise, you'll use a DALL-E version 3 model to generate images based o
 In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
-- Task 2: Explore image-generation in the DALL-E playground
+- Task 2: Explore image generation in the DALL-E playground
 - Task 3: Use the REST API to generate images
 - Task 3.1: Prepare the app environment
 - Task 3.2: Configure your application
 - Task 3.3: View application code
 - Task 4: Run the app
 
-## Estimated time: 60 minutes
-
 ### Task 1:  Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -42,7 +41,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
 
-4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+4. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
 5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -50,7 +49,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-   ![](./media/openai-endpoint-new.png "Keys and Endpoints")
+         ![](./media/openai-endpoint-new.png "Keys and Endpoints")
 
 #### Validation
 
@@ -94,7 +93,7 @@ The Azure OpenAI service provides a REST API that you can use to submit prompts 
 
 #### Task 3.1: Prepare the app environment
 
-In this task, you will use a simple Python or C# app to generate images by calling the REST API and run the code in the Cloud Shell console interface within the Azure portal.
+In this task, you will use a simple Python or C# app to generate images by calling the REST API and running the code in the Cloud Shell console interface within the Azure portal.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal. 
 
@@ -102,26 +101,26 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
+3. If you're prompted as Getting Started click on the mount storage account, select the subscription and click on Apply.
 
    ![](./media/cloudshell_image1.png "Create storage advanced settings")
 
     > **Note**: If you already have a cloud shell set up in your Azure subscription, you may need to use the **Reset user settings** option in the ⚙️ menu to ensure the latest versions of Python and the .NET Framework are installed.
 
-4. Select i want to create a storage account and click on apply.
+4. Select **I want to create a storage account** and click on **Next**.
 
    ![](./media/cloudshell_image2.png "Create storage advanced settings")
 
 5. Within the **Create storage account** pane, enter the following details and then click on **Create**:
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
-    - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
+
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab
     - **Resource group**: Select **Use existing**.
       - openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.
-      - storage<inject key="Deployment-ID" enableCopy="false"></inject>
+    - **Region**: Select <inject key="Region" enableCopy="false" />
+    - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
     - **File share**: Create a new file share named **none**
 
-   ![](./media/cloudshell_image3.png "Create storage advanced settings")
+       ![](./media/cloudshell_image3.png "Create storage advanced settings")
 
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -153,7 +152,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
     ```bash
    code .
     ```
-   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to make sure you are in the correct project path.
 
    ![](./media/classic-cloudshell-prompt.png)
 
@@ -188,7 +187,7 @@ In this task, you will explore the code used to call the REST API and generate a
 
 2. Review the code that the file contains, noting the following key features:
 
-   >**Note** : right-click on the file from the left pane, and hit **Save**
+   >**Note**: right-click on the file from the left pane, and hit **Save**
    
     - The code makes https requests to the endpoint for your service, including the key for your service in the header. Both of these values are obtained from the configuration file.
     - The process consists of <u>two</u> REST requests: One to initiate the image-generation request, and another to retrieve the results.
@@ -267,9 +266,9 @@ In this task, you will run the reviewed code to generate some images.
 ## Summary
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   understand the concepts of image generation via the DALL-E model.
--   Implement image-generation into your applications using this model
+
+- Provisioned an Azure OpenAI resource
+- Understood the concepts of image generation via the DALL-E model
+- Implemented image generation into your applications using this model
 
 ### You have successfully completed the lab.
-
