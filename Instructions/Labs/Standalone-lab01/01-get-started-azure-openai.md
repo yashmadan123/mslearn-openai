@@ -109,25 +109,26 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
 
-   ![](./media/generate_new.jpg)
+    ![](./media/NO-1.png)
 
    >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
-4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
+3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
 
-5. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
+4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-    ![](./media/generated.jpg)
+    ![](./media/NO-2.png)
 
-    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each 
+    time it's called.
 
-6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-    ![](./media/view_code.jpg)
+    ![](./media/NO-3.png)
 
     ![](./media/openai-7.png)
     
-7. Close the **Sample Code**.
+6. Close the **Sample Code**.
 
 ### Task 4: Use the Chat playground
 
@@ -139,7 +140,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-    ![](./media/last-2.jpg)
+    ![](./media/NO-4.png)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -149,27 +150,27 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
         designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
         perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-         ![](./media/exples-ai.jpg)
+         ![](./media/NO-5.png)
    
       > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
-      ![](./media/save_changes.jpg)
+      ![](./media/NO-6.png)
    
-7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+6. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-      ![](./media/openai-12.png)
+      ![](./media/NO-7.png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-8. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
+7. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
-9. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+9. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-      ![](./media/view_code.jpg)
+      ![](./media/NO-3.png)
 
 ### Task 5: Explore prompts and parameters
 
@@ -181,7 +182,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     
     - **Max response**: 500
 
-       ![](./media/temp.jpg)
+       ![](./media/NO-8.png)
       
 2. Submit the following message in chat session
 
@@ -213,9 +214,10 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` 
+   and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-   ![](./media/last-2.jpg)
+   ![](./media/NO-4.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
