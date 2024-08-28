@@ -26,7 +26,7 @@ You should have basic knowledge and understanding of the following:
 
 - **Azure Portal**: The web interface for managing and provisioning Azure resources.
 - **Azure services, including Azure OpenAI and Azure Cloud Shell**: Core Azure offerings for AI capabilities and command-line management.
-- **Command-line interfaces**: Tools like PowerShell or Bash for executing commands and managing systems.
+- **Command-line interfaces**: Tools like Bash for executing commands.
 
 ## Architecture
 
