@@ -21,11 +21,11 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](./media/openai8.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create1.png)
+   ![](./media/openai_create1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
    
@@ -35,7 +35,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
     - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
-      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+      ![](./media/openai-lab01_01.png "Create Azure OpenAI resource")
 
 4. Click on **Next** thrice and click on **Create**.
 
@@ -54,15 +54,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](./media/openai8.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](./media/OpenAI_select.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio.png)
+   ![](./media/openai_studio.png)
    
 4. In the prompt select **Explore the new experience** 
 
@@ -70,11 +70,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](./media/deploy-1.jpg "Create a new deployment")
 
 6. Search for **GPT-35-TURBO**, click on **Confirm**
 
-   ![](../media/pg-09.jpg)
+   ![](./media/pg-09.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: my-gpt-model (1)
@@ -84,7 +84,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-         ![](../media/gpt-intial.jpg)
+         ![](./media/gpt-intial.jpg)
 
 >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
@@ -109,7 +109,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
 
-   ![](../media/generate_new.jpg)
+   ![](./media/generate_new.jpg)
 
    >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
@@ -117,15 +117,15 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 5. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-    ![](../media/generated.jpg)
+    ![](./media/generated.jpg)
 
     >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
 6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-    ![](../media/view_code.jpg)
+    ![](./media/view_code.jpg)
 
-    ![](../media/openai-7.png)
+    ![](./media/openai-7.png)
     
 7. Close the **Sample Code**.
 
@@ -139,7 +139,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-    ![](../media/last-2.jpg)
+    ![](./media/last-2.jpg)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -149,17 +149,17 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
         designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
         perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-         ![](../media/exples-ai.jpg)
+         ![](./media/exples-ai.jpg)
    
       > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
-      ![](../media/save_changes.jpg)
+      ![](./media/save_changes.jpg)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-      ![](../media/openai-12.png)
+      ![](./media/openai-12.png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
@@ -169,7 +169,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-      ![](../media/view_code.jpg)
+      ![](./media/view_code.jpg)
 
 ### Task 5: Explore prompts and parameters
 
@@ -181,7 +181,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     
     - **Max response**: 500
 
-       ![](../media/temp.jpg)
+       ![](./media/temp.jpg)
       
 2. Submit the following message in chat session
 
@@ -200,7 +200,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-      ![](../media/last-3.jpg)
+      ![](./media/last-3.jpg)
    
 4. Observe the following about the prompt and parameters you used:
 
@@ -215,11 +215,11 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-   ![](../media/last-2.jpg)
+   ![](./media/last-2.jpg)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
-   ![](../media/openai-14.png)
+   ![](./media/openai-14.png)
 
 3. Submit the following user message:
 
@@ -229,7 +229,7 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-    ![](../media/task-6-last.jpg)
+    ![](./media/task-6-last.jpg)
 
 ## Summary
 
