@@ -25,6 +25,7 @@ Azure AI Studio
 
 
 ## Architecture Diagram:
+![](./media/lab-01-ad.png)
 
 
 
