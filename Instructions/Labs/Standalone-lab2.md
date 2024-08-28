@@ -85,7 +85,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/deploy-1.jpg "Create a new deployment")
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
+1. On the **Select a Model** pane, search for **gpt-35-turbo-16k (1)** and select it from the results. Then, click **Confirm (3)** to proceed.
+
+   ![](../media/28-08-2024(1).png "Create a new deployment")
+
+7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name (1)**: text-turbo
     - **Model version (2)**: Auto-update to default
     - **Deployment type (3)**: Standard
@@ -93,13 +97,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota (5)**: Enabled
     - Click on **Deploy (6)**
   
-      ![](../media/intial-deploy.jpg)
+      ![](../media/28-08-2024(2).png)
 
       >**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
 
-7. This will deploy a model that you will be playing around with as you proceed.
+8. This will deploy a model that you will be playing around with as you proceed.
 
-   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+   > **Note**: You can ignore the "Failed to fetch deployments quota information" notification.
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
@@ -141,7 +145,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     - **File share (5)**: Create a new file share named **none**
     - Click on **Create (6)**
 
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+       ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
@@ -166,9 +170,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       code .
       ```
  
- > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to make sure you are on the correct project path.
+    > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to make sure you are on the correct project path.
 
-   ![](../media/classic-cloudshell-prompt.png) 
+      ![](../media/classic-cloudshell-prompt.png) 
    
 #### Validation
 
