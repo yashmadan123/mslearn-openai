@@ -144,7 +144,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
-
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
 7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
@@ -168,7 +167,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       code .
       ```
  
- > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to make sure you are in the correct project path.
+ > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to make sure you are on the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png) 
    
