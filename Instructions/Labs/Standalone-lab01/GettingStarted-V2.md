@@ -1,6 +1,6 @@
 # Getting Started with Your Develop Generative AI solutions with Azure OpenAI service Workshop
  
-## Overall Estimated Duration: 40 mins
+## Overall Estimated Duration: 1 hour
 
 ## Overview
 This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, and experiment with the Completions and Chat playgrounds and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
@@ -18,23 +18,16 @@ By the end of this lab, you will be able to:
 
 
 ## Prerequisites
+
 Participants should have: Basic knowledge and understanding of the following
 
 - **Azure Portal**: For managing and provisioning Azure resources.
 - **Azure AI Studio**: For deploying models and experimenting with their capabilities, including features such as the Completions and Chat playgrounds.
 
-
-
 ## Architecture
 
 
 This architecture allows users to leverage Azure's cloud infrastructure to deploy and interact with advanced AI models. Through the Azure Portal, users manage their resources, while Azure AI Studio provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Studio enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
-
-- **Azure Portal** : The Azure Portal is a unified web-based console that provides a comprehensive interface for managing Azure resources. It allows users to build, manage, and monitor everything from simple web apps 
-   to complex cloud applications.
-- **Azure AI Studio** : Azure AI Studio is a development environment for building, training, and deploying AI models. It provides tools and services to streamline the AI development lifecycle, including data 
-  preparation, model training, evaluation, and deployment.
-
 
 ## Architecture Diagram:
 ![](./media/lab-01-ad.png)
@@ -141,9 +134,9 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 
 Learner Support Contacts:
 
-Email Support: labs-support@spektrasystems.com
+- Email Support: labs-support@spektrasystems.com
 
-Live Chat Support: https://cloudlabs.ai/labs-support
+- Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on Next from the lower right corner to move on to the next page.
 
