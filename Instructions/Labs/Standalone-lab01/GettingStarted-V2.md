@@ -16,7 +16,12 @@ Azure Portal
 Azure AI Studio
 
 
+## Architecture
 
+- **Azure Portal** : The Azure Portal is a unified web-based console that provides a comprehensive interface for managing Azure resources. It allows users to build, manage, and monitor everything from simple web apps 
+   to complex cloud applications.
+- **Azure AI Studio** : Azure AI Studio is a development environment for building, training, and deploying AI models. It provides tools and services to streamline the AI development lifecycle, including data 
+  preparation, model training, evaluation, and deployment.
 
 
 
