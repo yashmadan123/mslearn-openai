@@ -1,9 +1,7 @@
 # Getting Started with Your Develop Generative AI solutions with Azure OpenAI service Workshop
  
-Welcome to your Develop Generative AI solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
 
-
-
+This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, and experiment with the Completions and Chat playgrounds and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
 
 
 
