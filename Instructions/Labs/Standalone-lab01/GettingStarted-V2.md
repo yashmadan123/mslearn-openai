@@ -24,6 +24,7 @@ Azure AI Studio
   preparation, model training, evaluation, and deployment.
 
 
+## Architecture Diagram:
 
 
 
