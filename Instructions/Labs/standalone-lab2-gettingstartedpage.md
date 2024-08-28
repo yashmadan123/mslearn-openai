@@ -26,11 +26,25 @@ You should have a basic understanding of **Azure services**, including **Azure O
 
 ## Architecture
 
-This diagram outlines the process for setting up and running an AI application. It begins with the creation of a Resource Group, which serves as the container for all related Azure resources. Within this Resource Group, an OpenAI resource is established to support AI model deployment. Following this, a new AI model is deployed to the OpenAI resource. The next step involves setting up a CloudsHell app, which is then configured to meet specific requirements. Finally, the configured app is executed, completing the process. This structured workflow progresses from initial resource creation through model deployment and app configuration, leading to the successful execution of the AI application.
+This diagram illustrates the workflow for establishing and operating an AI application within Azure. The process begins with the creation of a Resource Group, which acts as the central container for all associated Azure resources. Within this Resource Group, an OpenAI resource is provisioned to facilitate the deployment of AI models. Subsequently, a new AI model is deployed to the OpenAI resource. The workflow then involves setting up a Cloud Shell app, which is configured according to specific requirements. Finally, the app is executed, concluding the setup and deployment process. This structured approach ensures a seamless transition from initial resource creation to the successful execution of the AI application.
 
 ## Architecture Diagram
 
 ![](../media/28-08-2024.png "Architecture Diagram")
+
+## Explanation of Components
+
+- **Resource Group**: A Resource Group is a container in Azure used to manage and organize related Azure resources. It facilitates access control, monitoring, and billing by grouping resources together and streamlining their management.
+
+- **OpenAI Resource**: An OpenAI resource in Azure supports the deployment and management of OpenAI models. It provides the necessary infrastructure and APIs for utilizing advanced AI capabilities, such as natural language processing and generation.
+
+- **AI Model Deployment**: AI Model Deployment involves configuring and setting up a machine learning model within the OpenAI resource. This process ensures that the model is operational and ready to perform tasks like text generation or analysis.
+
+- **Cloud Shell App**: A Cloud Shell app is an interactive, browser-based command-line tool provided by Azure. It enables you to manage and configure Azure resources directly from the portal, offering a convenient environment for executing scripts and commands.
+
+- **App Configuration**: App Configuration entails setting up the parameters, environment variables, and other settings necessary for the Cloud Shell app to function correctly. Proper configuration ensures that the app operates with the required settings to interact with Azure resources effectively.
+
+- **App Execution**: App Execution is the process of running the configured Cloud Shell app to perform its designated functions. This step initiates the app’s operations, allowing it to interact with the deployed AI model and complete tasks as intended.
 
 ## Accessing Your Lab Environment
  
@@ -107,9 +121,17 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 4. If prompted to stay signed in, you can click "No."
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+
+## Support Contact
  
-6. Click "Next" from the bottom right corner to embark on your Lab journey!
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+
+Learner Support Contacts:
+- Email Support: labs-support@spektrasystems.com
+- Live Chat Support: https://cloudlabs.ai/labs-support
+
+Now, click on **Next** from the lower right corner to move on to the next page.
  
-     ![Start Your Azure Journey](../media/sc900-image(3).png)
- 
-Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
+   ![Start Your Azure Journey](../media/sc900-image(3).png)
+
+### Happy Learning!!
