@@ -259,13 +259,17 @@ In this task, you will run the reviewed code to generate some images.
 
    >**Note**: If you encounter an issue after entering prompts kindly follow the below steps:
 
-   - Navigate back to **Azure OpenAI Studio**. From the top menu bar, turn on the toggle for **Switch to the old version**. click on **Skip** when feedback window prompted.
-  
+   - Navigate back to **Azure OpenAI Studio**. From the top menu bar, turn on the toggle for **Switch to the old version**. click on **Skip** when **Feedback** window prompted.
+
+      ![](./media/iss1.png)
+
    - In **Deployment**, ensure that **Dalle 3** is selected.
-  
+
+      ![](./media/iss2.png)
+
    - Navigate back to CloudShell and reperform step no 3. 
     
-3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
+2. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
    ![](./media/link.jpg "Keys and Endpoints")
    
