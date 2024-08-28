@@ -9,7 +9,7 @@
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/guidedlab/Instructions/Labs/05-generate-images.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/guidedlab/Instructions/Labs/Standalone-lab05/05-generate-images.md",
         "Order": 2
       }
     ]
