@@ -1,6 +1,7 @@
 # Lab 01: Get started with Azure OpenAI Service
 
-## Lab scenario
+## Estimated time: 60 minutes
+
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Studio to deploy and explore OpenAI models.
 
 ## Lab objectives
@@ -13,11 +14,9 @@ In this lab, you will complete the following tasks:
 - Task 5: Explore prompts and parameters 
 - Task 6: Explore code-generation
 
-## Estimated time: 60 minutes
-
 ### Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -60,7 +59,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](./media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](./media/openai_studio.png)
    
@@ -68,7 +67,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](./media/explore_new-exp.jpg "Create a new deployment")
 
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+5. In the **Deployments (1)** page, click on **+ Deploy model**, Choose **Deploy base Model (2)**.
 
       ![](./media/deploy-1.jpg "Create a new deployment")
 
@@ -86,11 +85,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
          ![](./media/gpt-intial.jpg)
 
->**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+>**Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
-      > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
+      > **Note**: You can ignore any error related to the assignment of roles to view the quota limits. 
    
       > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
