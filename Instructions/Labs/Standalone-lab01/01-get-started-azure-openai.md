@@ -140,9 +140,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-    ![](./media/NO-4.png)
+      ![](./media/NO-4.png)
 
-4.  Enter the following message and response in the designated boxes:
+4. Enter the following message and response in the designated boxes:
 
      - **User**: `What are different types of artificial intelligence?`
     
