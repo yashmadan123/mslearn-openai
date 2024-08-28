@@ -1,10 +1,10 @@
 # Getting Started with Your Generate images with a DALL-E model
 
-### Overall Estimated Duration: 60 minutes
+## Overall Estimated Duration: 60 minutes
 
 ## Overview
 
-In this hands-on lab, you will explore the capabilities of Azure OpenAI Service models  you will gain an understanding of how these models can explain and simplify complex code, making it easier to comprehend and improve. The lab will also introduce you to the DALL-E model, where you will practice generating original images by submitting natural language prompts, focusing on the creative potential of AI in visual content creation.
+The purpose of the lab is to enable you to effectively integrate Azure OpenAI Service models, Through this lab, you will explore the capabilities of Azure OpenAI Service models  will gain an understanding of how these models can explain and simplify complex code, making it easier to comprehend and improve. The lab will also introduce you to the DALL-E model, where you will practice generating original images by submitting natural language prompts, focusing on the creative potential of AI in visual content creation.
 
 ## Objective 
 
