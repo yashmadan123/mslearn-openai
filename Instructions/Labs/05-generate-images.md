@@ -216,30 +216,30 @@ In this task, you will run the reviewed code to generate some images.
 
 2. If your using as **C#** language kindly open **generate_image.csproj** file replace with following code and save the file.
 
-```
-   <Project Sdk="Microsoft.NET.Sdk">
-   
-   <PropertyGroup>
-   <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
-   <ImplicitUsings>enable</ImplicitUsings>
-   <Nullable>enable</Nullable>
-   </PropertyGroup>
-   
-    <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-    </ItemGroup>
-   
-    <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-       </None>
-     </ItemGroup>
-   
-    </Project>
    ```
+      <Project Sdk="Microsoft.NET.Sdk">
+      
+      <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net8.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+      </PropertyGroup>
+      
+       <ItemGroup>
+       <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+       </ItemGroup>
+      
+       <ItemGroup>
+         <None Update="appsettings.json">
+           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          </None>
+        </ItemGroup>
+      
+       </Project>
+      ```
 
 3. In the console prompt pane, enter the appropriate command to run your application:
 
@@ -257,6 +257,22 @@ In this task, you will run the reviewed code to generate some images.
     ```
 
 2. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
+
+    >**Note**: If you encounter an issue after entering prompts kindly follow the below steps:
+
+     - Navigate back to **Azure OpenAI Studio**. From the top menu bar, turn on the toggle for **Switch to the old version**. click on **Skip** when **Feedback** window prompted.
+
+        ![](./media/iss1.png)
+
+     - In **Deployment**, ensure that **Dalle 3** is selected.
+
+        ![](./media/iss2.png)
+
+     - Enter a description of an image you'd like to generate in the **Prompt** box (for example, *An elephant on a skateboard*), and then select **Generate** to view the resulting image.
+
+       >**Note**: if you encounter error **The API deployment for this resource does not exist**, kindly wait 2 mins and try again to generate. 
+
+     - Navigate back to CloudShell and reperform step no 3. 
 
 3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
