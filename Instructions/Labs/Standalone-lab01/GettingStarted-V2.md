@@ -10,18 +10,7 @@ This lab introduces you to Azure OpenAI Service, a powerful platform that integr
 
 Understand how to deploy Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
 
-- **Provisioning Azure OpenAI Resources**: Gain experience on creating and configuring an Azure OpenAI resource within the Azure portal, including selecting the appropriate region and pricing tier.
-
-- **Model Deployment**: Successfully deployed an AI model (e.g., GPT-35-Turbo) within your Azure OpenAI resource, enabling the integration of advanced language capabilities into your applications.
-
-- **Exploring AI Models in the Completions Playground**: Learned how to interact with the deployed AI model using the Completions playground, including testing and refining model responses with different prompts and viewing code snippets that represent API calls.
-
-- **Using the Chat Playground**: Gain experience on how to use the Chat playground to simulate and evaluate the conversational capabilities of the AI model, including setting up system messages, defining few-shot examples, and testing model responses within a chat interface.
-
-- **Experimenting with Prompts**: Fine-tune the AI model's behavior by experimenting with various prompts and adjusting key parameters, such as response length and temperature, to achieve the desired output.
-
-- **Exploring Code Generation**: Leveraged the AI model's capabilities to generate code snippets based on specific programming prompts, enhancing productivity in coding tasks.
-
+- **Get started with Azure OpenAI Service** - Gain experience in provisioning and configuring an Azure OpenAI resource, deploying an AI model (e.g., GPT-35-Turbo), exploring model interactions in the Completions and Chat playgrounds, experimenting with prompts and parameters for fine-tuning, and leveraging the model's capabilities for code generation.
 
 ## Pre-Requisites
 
