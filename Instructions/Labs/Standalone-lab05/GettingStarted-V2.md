@@ -8,7 +8,7 @@ The purpose of the lab is to enable you to effectively integrate Azure OpenAI Se
 
 ## Objective 
 
-In this lab, you'll gain knowledge of generating and refining code with Azure OpenAI and creating and modifying images using the DALL-E model to achieve desired outcomes. By the end of this lab, you will be able to:
+Understand to generate and refining code with Azure OpenAI and creating and modifying images using the DALL-E model to achieve desired outcomes. By the end of this lab, you will be able to:
 
 - **Generate images with a DALL-E model**: The goal of this hands-on activity is to produce and alter images using the DALL-E model. To attain the intended visual results, you will develop and alter images using the DALL-E model.
 
