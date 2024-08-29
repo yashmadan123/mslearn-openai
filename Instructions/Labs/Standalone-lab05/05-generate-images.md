@@ -43,7 +43,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 4. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
-5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+5. To capture the Keys and Endpoints values, on **OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
