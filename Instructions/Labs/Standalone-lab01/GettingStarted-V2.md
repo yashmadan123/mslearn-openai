@@ -8,7 +8,7 @@ This lab introduces you to Azure OpenAI Service, a powerful platform that integr
 
 ## Objective
 
-In this lab you will gain a comprehensive understanding of Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
+Understand how to deploy Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
 
 - **Provisioning Azure OpenAI Resources**: Gain experience on creating and configuring an Azure OpenAI resource within the Azure portal, including selecting the appropriate region and pricing tier.
 
