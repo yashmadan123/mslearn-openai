@@ -74,18 +74,20 @@ In this task, you will use the DALL-E playground in Azure OpenAI Studio to exper
    ![](./media/OpenAI_select.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+   
+     ![](./media/azure1.png)
 
 4. In the prompt select **Explore the new experience** .
 
-      ![](./media/explore_new-exp.jpg "Create a new deployment")
+      ![](./media/azure2.png)
    
 5. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
    
-    ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](./media/image_gen.jpg)
+     ![](./media/azure3.png)
 
 6. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
-    ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](./media/new_1.jpg)
+    ![](./media/azure4.png)
 
 ### Task 3: Use the REST API to generate images
 
@@ -103,7 +105,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
     ![](./media/azure5.png)
    
-3. If you're prompted as Getting Started click on the **mount storage account**, select the **Subscription** and click on **Apply**.
+3. If you're prompted as Getting Started click on the **Mount storage account**, select the **Subscription** and click on **Apply**.
 
      ![](./media/azure6.png)
 
