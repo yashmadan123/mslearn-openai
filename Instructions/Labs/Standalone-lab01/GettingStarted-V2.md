@@ -35,15 +35,13 @@ This architecture allows users to leverage Azure's cloud infrastructure to deplo
 
 ## Explanation of Components
 
-**Azure Portal**: Central interface for provisioning and managing Azure OpenAI resources, including model deployment settings and resource configuration.
+- **Azure Portal**: Central interface for provisioning and managing Azure OpenAI resources, including model deployment settings and resource configuration.
 
-**Azure OpenAI Service**: Hosts and manages OpenAI models like GPT-35-Turbo, providing scalable access for tasks such as text completion and code generation.
+- **Azure OpenAI Service**: Hosts and manages OpenAI models like GPT-35-Turbo, providing scalable access for tasks such as text completion and code generation.
 
-**Azure AI Studio**: Interactive environment for deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
+- **Azure AI Studio**: Interactive environment for deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
 
-**Model Deployment**: Configures models with settings like deployment names and rate limits to ensure they meet application needs.
-
-**Prompt and Parameter Exploration**: Involves crafting prompts and adjusting parameters (e.g., response length, randomness) to refine model outputs.
+- **Prompt**: Involves crafting prompts and adjusting parameters (e.g., response length, randomness) to refine model outputs.
 
 ## Getting Started with the Lab
 
