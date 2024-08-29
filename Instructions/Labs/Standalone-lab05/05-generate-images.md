@@ -255,7 +255,7 @@ In this task, you will run the reviewed code to generate some images.
    dotnet run
     ```
 
-2. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
+4. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
 
    >**Note**: If you encounter an issue after entering prompts kindly follow the below steps:
 
@@ -267,13 +267,17 @@ In this task, you will run the reviewed code to generate some images.
 
       ![](./media/iss2.png)
 
+   - Enter a description of an image you'd like to generate in the **Prompt** box (for example, *An elephant on a skateboard*), and then select **Generate** to view the resulting image.
+
+      >**Note**: if you encounter error **The API deployment for this resource does not exist**, kindly wait 2 mins and try again to generate. 
+
    - Navigate back to CloudShell and reperform step no 3. 
     
-2. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
+5. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
-   ![](./media/link.jpg "Keys and Endpoints")
+    ![](./media/link.jpg "Keys and Endpoints")
    
-5. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
+6. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
 ## Summary
 
