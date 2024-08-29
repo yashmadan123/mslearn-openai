@@ -8,7 +8,7 @@ This lab introduces you to Azure OpenAI Service, a powerful platform that integr
 
 ## Objective
 
-This exercise provides a comprehensive introduction to using Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
+In this lab you will gain a comprehensive understanding of Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
 
 - **Provisioning Azure OpenAI Resources**: Gain experience on creating and configuring an Azure OpenAI resource within the Azure portal, including selecting the appropriate region and pricing tier.
 
@@ -45,8 +45,6 @@ This architecture allows users to leverage Azure's cloud infrastructure to deplo
 - **Azure OpenAI Service**: Hosts and manages OpenAI models like GPT-35-Turbo, providing scalable access for tasks such as text completion and code generation.
 
 - **Azure AI Studio**: Interactive environment for deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
-
-- **Prompt**: Involves crafting prompts and adjusting parameters (e.g., response length, randomness) to refine model outputs.
 
 ## Getting Started with the Lab
 
