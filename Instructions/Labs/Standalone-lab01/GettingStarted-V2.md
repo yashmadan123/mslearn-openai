@@ -8,15 +8,20 @@ This lab introduces you to Azure OpenAI Service, a powerful platform that integr
 
 ## Objective
 
-By the end of this lab, you will be able to:
+This exercise provides a comprehensive introduction to using Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
 
-- **Provision and Configure Azure OpenAI Resources**: Set up and manage an Azure OpenAI resource, selecting appropriate settings such as region and pricing tier.
+- **Provisioning Azure OpenAI Resources**: Gain experience on creating and configuring an Azure OpenAI resource within the Azure portal, including selecting the appropriate region and pricing tier.
 
-- **Deploy AI Models**: Deploy specific AI models within Azure OpenAI, including configuring deployment parameters to suit different application needs.
+- **Model Deployment**: Successfully deployed an AI model (e.g., GPT-35-Turbo) within your Azure OpenAI resource, enabling the integration of advanced language capabilities into your applications.
 
-- **Utilize AI Model Features**: Experiment with various features of AI models, including generating text and code using the Completions and Chat playgrounds.
+- **Exploring AI Models in the Completions Playground**: Learned how to interact with the deployed AI model using the Completions playground, including testing and refining model responses with different prompts and viewing code snippets that represent API calls.
 
-- **Explore and Refine Model Outputs**: Test and refine model responses by interacting with the AI models through practical exercises, understanding how different prompts and parameters affect outputs.
+- **Using the Chat Playground**: Gain experience on how to use the Chat playground to simulate and evaluate the conversational capabilities of the AI model, including setting up system messages, defining few-shot examples, and testing model responses within a chat interface.
+
+- **Experimenting with Prompts**: Fine-tune the AI model's behavior by experimenting with various prompts and adjusting key parameters, such as response length and temperature, to achieve the desired output.
+
+- **Exploring Code Generation**: Leveraged the AI model's capabilities to generate code snippets based on specific programming prompts, enhancing productivity in coding tasks.
+
 
 ## Pre-Requisites
 
