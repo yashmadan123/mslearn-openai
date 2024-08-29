@@ -101,15 +101,17 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. If you're prompted as Getting Started click on the mount storage account, select the subscription and click on Apply.
+    ![](./media/azure5.png)
+   
+3. If you're prompted as Getting Started click on the **mount storage account**, select the **Subscription** and click on **Apply**.
 
-   ![](./media/cloudshell_image1.png "Create storage advanced settings")
+     ![](./media/azure6.png)
 
-    > **Note**: If you already have a cloud shell set up in your Azure subscription, you may need to use the **Reset user settings** option in the ⚙️ menu to ensure the latest versions of Python and the .NET Framework are installed.
+   > **Note**: If you already have a cloud shell set up in your Azure subscription, you may need to use the **Reset user settings** option in the ⚙️ menu to ensure the latest versions of Python and the .NET Framework are installed.
 
 4. Select **I want to create a storage account** and click on **Next**.
 
-   ![](./media/cloudshell_image2.png "Create storage advanced settings")
+    ![](./media/azure7.png)
 
 5. Within the **Create storage account** pane, enter the following details and then click on **Create**:
 
@@ -120,7 +122,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
     - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
     - **File share**: Create a new file share named **none**
 
-       ![](./media/cloudshell_image3.png "Create storage advanced settings")
+       ![](./media/azure8.png)
 
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -167,6 +169,14 @@ In this task, you will use a configuration file in the application to store the 
     - Python: `.env`
     
 2. Update the configuration values to include the **Endpoint** and **Key1** for your Azure OpenAI service. Then save the file by right-clicking the file from the left pane.
+
+    - C#: `appsettings.json`
+
+      ![](./media/azure12.png)
+    
+    - Python: `.env`
+
+      ![](./media/azure10.png)
 
     > **Tip**: You can adjust the split at the top of the cloud shell pane to see the Azure portal, and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
 
@@ -276,6 +286,8 @@ In this task, you will run the reviewed code to generate some images.
 5. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
     ![](./media/link.jpg "Keys and Endpoints")
+
+    ![](./media/azure11.png)
    
 6. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
