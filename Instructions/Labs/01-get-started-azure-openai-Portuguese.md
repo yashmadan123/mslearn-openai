@@ -33,7 +33,7 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
     - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Região**: Selecione <inject key="Region" enableCopy="false" />
     - **Nome**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Camada de preço**: Standard S0
+    - **Tipo de preço**: Standard S0
   
       ![](../media/30-08-2024(3).png)
 
