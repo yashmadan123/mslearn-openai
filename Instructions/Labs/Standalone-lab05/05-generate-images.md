@@ -53,7 +53,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 #### Validation
 
-<validation step="d1fdf614-83d8-4c1a-b9c7-c9adf003d03f" />
+<validation step="4e14b514-53e0-4a57-91fb-ac798163b70e" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -212,7 +212,7 @@ In this task, you will explore the code used to call the REST API and generate a
    
 #### Validation
 
-<validation step="46dc5a95-0801-4085-b021-c775e7b1b06b" />
+<validation step="2f607989-5d51-4b8c-b32d-ad55411f18a5" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
