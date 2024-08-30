@@ -144,7 +144,7 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos um aplicativo de
     - **Compartilhamento de arquivo (5)**: Crie um novo compartilhamento de arquivo chamado **none**
     - Clique em **Criar (6)**
 
-        ![](../media/cloudshell-advanced-settings.png "Criar configurações avançadas de armazenamento")
+        ![](../media/30-08-2024(20).png)
 
 6. Note que você pode redimensionar o cloud shell arrastando a barra separadora na parte superior da página, ou usando os ícones **&#8212;**, **&#9723;**, e **X** no canto superior direito da página para minimizar, maximizar e fechar o painel. Para mais informações sobre como usar o Azure Cloud Shell, consulte a [documentação do Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
