@@ -19,13 +19,13 @@ Neste laboratório, você completará as seguintes tarefas:
 
 Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azure OpenAI na sua assinatura do Azure.
 
-1. No **portal do Azure**, pesquise por **OpenAI** e selecione **Azure OpenAI**.
+1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/30-08-2024(1).png)
 
-2. Na tela **Serviços de IA do Azure | Azure OpenAI**, clique em **+ Criar**.
+2. Na tela **Serviços de IA do Azure | OpenAI**, clique em **+ Criar**.
 
-   ![](../media/openai_create1.png)
+   ![](../media/30-08-2024(2).png)
 
 3. Crie um recurso **Azure OpenAI** com as seguintes configurações:
    
@@ -35,7 +35,7 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
     - **Nome**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Camada de preço**: Standard S0
   
-      ![](../media/openai-lab01_01.png "Criar recurso Azure OpenAI")
+      ![](../media/30-08-2024(3).png)
 
 4. Clique em **Avançar** três vezes e clique em **Criar**.
 
@@ -54,40 +54,40 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
 
 O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**, que você pode usar para implantar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure OpenAI Studio para implantar um modelo.
 
-1. No **portal do Azure**, pesquise por **OpenAI** e selecione **Azure OpenAI**.
+1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/30-08-2024(1).png)
 
-2. Na tela **Serviços de IA do Azure | Azure OpenAI**, selecione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. Na tela **Serviços de IA do Azure | OpenAI**, selecione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](../media/30-08-2024(4).png)
 
 3. No painel de recursos do Azure OpenAI, clique em **Ir para Azure OpenAI Studio** para navegar até o **Azure AI Studio**.
 
-   ![](../media/openai_studio.png)
+   ![](../media/30-08-2024(5).png)
 
 4. Após navegar para o Azure AI Studio, clique em **Explore a nova experiência** na parte superior.
 
-   ![](../media/explore_new-exp.jpg)
+   ![](../media/30-08-2024(6).png)
 
-5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implantar modelo**, selecione **Implantar Modelo Base (2)**.  
+5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implementar o modelo**, selecione **Implementar modelo base (2)**.  
 
-   ![](../media/deploy-2.jpg)
+   ![](../media/30-08-2024(7).png)
 
 6. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo (1)** e clique em **Confirmar (2)**.
 
-   ![](../media/mew5.png)
+   ![](../media/30-08-2024(8).png)
 
 7. Na interface de **Implantar modelo**, insira os seguintes detalhes:
     
-    - **Nome da implantação**: my-gpt-model (1) 
-    - **Versão do modelo**: 0613 (2)
-    - **Tipo de implantação**: Padrão (3)
-    - **Limite de Taxa de Tokens por Minuto (milhares)**: 10K (4)
-    - **Habilitar cota dinâmica**: Habilitado (5)
-    - Clique em **Implantar** (6)
+    - **Nome da implantação (1)**: my-gpt-model
+    - **Versão do modelo (2)**: 0613
+    - **Tipo de implantação (3)**: Standard
+    - **Limite de Taxa de Tokens por Minuto (milhares) (4)**: 10K
+    - **Habilitar cota dinâmica (5)**: Habilitado
+    - Clique em **Implementar (6)**
   
-      ![](../media/new3.png)
+      ![](../media/30-08-2024(9).png)
 
 8. Isso implantará um modelo que você explorará nas próximas etapas.
 
@@ -199,7 +199,7 @@ Além de gerar respostas em linguagem natural, você pode usar modelos GPT para 
     ```
     Escreva uma função Python chamada Multiply que multiplique dois parâmetros numéricos.
     ```
-
+    
 5. Revise a resposta, que deve incluir um código Python de exemplo que atenda ao requisito no prompt.
 
 ## Resumo
