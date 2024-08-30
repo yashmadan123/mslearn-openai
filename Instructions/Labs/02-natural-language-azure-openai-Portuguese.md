@@ -44,7 +44,7 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
 5. Aguarde a conclusão da implantação. Em seguida, vá para o recurso Azure OpenAI implantado no portal do Azure.
 
 6. Para capturar os valores de Chaves e Endpoints, na lâmina **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
-      - Selecione **Chaves e Endpoint (1)** sob **Gerenciamento de Recursos**.
+      - Selecione **Chaves e Ponto de extremidade (1)** sob **Gerenciamento de Recursos**.
       - Clique em **Mostrar Chaves (2)**.
       - Copie a **Chave 1 (3)** e certifique-se de colá-la em um editor de texto como o Bloco de Notas para referência futura.
       - Finalmente, copie a URL da API do **Endpoint (4)** clicando em copiar para a área de transferência. Cole-a em um editor de texto como o Bloco de Notas para uso posterior.
@@ -91,8 +91,8 @@ Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para us
 7. Na interface pop-up **Implementar modelo**, insira os seguintes detalhes:
     
     - **Nome da implantação**: text-turbo (1) 
-    - **Versão do modelo**: 0613(Padrão) (2)
-    - **Tipo de implantação**: Padrão (3)
+    - **Versão do modelo**: 0613 (Predefinição) (2)
+    - **Tipo de implantação**: Standard (3)
     - **Limite de Taxa de Tokens por Minuto (milhares)**: 10K (4)
     - **Habilitar cota dinâmica**: Habilitado (5)
     - Clique em **Implementar** (6)
