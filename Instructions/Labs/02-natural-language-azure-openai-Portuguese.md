@@ -1,4 +1,4 @@
-# Laboratório 02: Use SDKs do Azure OpenAI em seu aplicativo
+# Laboratório 02: Use SDKs do Azure OpenAI em seu Aplicativo
 
 ### Duração Estimada: 40 minutos
 
