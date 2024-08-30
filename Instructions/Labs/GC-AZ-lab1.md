@@ -157,7 +157,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
       - File share: Create a new file share named **blob<inject key="DeploymentID" enableCopy="false"></inject>** **(5)**
       - Click **Create (6)**
 
-           ![](../media/Openai-12.png)
+        ![](../media/Openai-12.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -166,7 +166,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
       git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
       ```
 
-      > **NOTE:** If you get a message saying already cloned, please move to the next step.
+      >**NOTE:** If you get a message saying already cloned, please move to the next step.
 
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
@@ -192,7 +192,6 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
       <validation step="d2e1f993-b207-40be-9554-9ece30e830a9" />
    
-
 ### Task 4: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
