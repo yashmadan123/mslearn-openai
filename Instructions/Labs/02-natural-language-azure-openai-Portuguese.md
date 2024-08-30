@@ -170,7 +170,7 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos um aplicativo de
     ```
     > **NOTA:** Se você for solicitado a **Mudar para o Cloud Shell Clássico** após executar o comando **code .**, clique em **Confirmar** e execute os passos 8 e 9 novamente.
 
-   ![](../media/classic-cloudshell-prompt.png) 
+   ![](../media/30-08-2024(21).png)
    
 #### Validação
 
