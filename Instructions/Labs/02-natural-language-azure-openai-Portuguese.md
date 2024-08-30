@@ -480,4 +480,4 @@ Neste laboratório, você realizou o seguinte:
 - Implantou um modelo OpenAI dentro do estúdio Azure OpenAI
 - Integrou modelos Azure OpenAI em seus aplicativos
 
-### Você completou o laboratório com sucesso.
+### Você completou com sucesso o laboratório.
