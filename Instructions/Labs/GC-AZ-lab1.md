@@ -209,20 +209,20 @@ For this exercise, you'll complete some key parts of the application to enable u
 
    - Navigate to the folder for your preferred language and install the necessary packages.
 
-     **C#**
+        **C#**
+   
+        ```bash
+        cd CSharp
+        dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+        ```
 
-     ```bash
-     cd CSharp
-     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
-     ```
-
-     **Python**
-
-     ```bash
-     cd Python
-     pip install python-dotenv
-     pip install openai==1.13.3
-     ```
+        **Python**
+   
+        ```bash
+        cd Python
+        pip install python-dotenv
+        pip install openai==1.13.3
+        ```
 
 1. Open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
 
