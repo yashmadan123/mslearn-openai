@@ -20,13 +20,13 @@ Neste laboratório, você completará as seguintes tarefas:
 
 Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso Azure OpenAI em sua assinatura do Azure.
 
-1. No **portal do Azure**, pesquise por **OpenAI** e selecione **Azure OpenAI**.
+1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/30-08-2024(1).png)
 
-2. Na lâmina **Azure AI Services | Azure OpenAI**, clique em **+ Criar**.
+2. Na tela **Serviços de IA do Azure | OpenAI**, clique em **+ Criar**.
 
-   ![](../media/openai_create1.png)
+   ![](../media/30-08-2024(2).png)
 
 3. Crie um recurso **Azure OpenAI** com as seguintes configurações 
 
@@ -64,9 +64,9 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
 
 Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para usar através do **Azure OpenAI Studio**. Uma vez implantado, faremos referência a esse modelo em nosso aplicativo.
 
-1. No **portal do Azure**, pesquise por **OpenAI** e selecione **Azure OpenAI**.
+1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/30-08-2024(1).png)
 
 2. Na lâmina **Azure AI Services | Azure OpenAI**, selecione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
@@ -78,24 +78,24 @@ Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para us
 
 4. Após navegar para o Azure AI Studio, clique no pop-up **Explore a nova experiência** no topo.
 
-   ![](../media/explore_new-exp.jpg)
+   ![](../media/30-08-2024(6).png)
 
-5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implantar modelo** , selecione **Implantar modelo base (2)**.  
+5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implementar o modelo** , selecione **Implementar modelo base (2)**.  
 
-   ![](../media/deploy-2.jpg)
+   ![](../media/30-08-2024(7).png)
 
 6. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo-16k (1)** e clique em **Confirmar (2)**.
 
    ![](../media/new4.png)
 
-7. Na interface pop-up **Implantar modelo**, insira os seguintes detalhes:
+7. Na interface pop-up **Implementar modelo**, insira os seguintes detalhes:
     
     - **Nome da implantação**: text-turbo (1) 
     - **Versão do modelo**: 0613(Padrão) (2)
     - **Tipo de implantação**: Padrão (3)
     - **Limite de Taxa de Tokens por Minuto (milhares)**: 10K (4)
     - **Habilitar cota dinâmica**: Habilitado (5)
-    - Clique em **Implantar** (6)
+    - Clique em **Implementar** (6)
   
       ![](../media/new2.png)
 
