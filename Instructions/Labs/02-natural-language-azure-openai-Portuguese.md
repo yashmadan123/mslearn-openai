@@ -119,28 +119,30 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos um aplicativo de
 
 1. No [portal do Azure](https://portal.azure.com?azure-portal=true), selecione o botão **[>_]** (*Cloud Shell*) na parte superior da página à direita da caixa de pesquisa. Um painel do Cloud Shell será aberto na parte inferior do portal.
 
-    ![Captura de tela do início do Cloud Shell clicando no ícone à direita da caixa de pesquisa superior.](../media/cloudshell-launch-portal.png#lightbox)
+    ![](../media/30-08-2024(16).png)
 
 2. Na primeira vez que você abrir o Cloud Shell, você pode ser solicitado a escolher o tipo de shell que deseja usar (*Bash* ou *PowerShell*). Selecione **Bash**. Se você não vir esta opção, pule o passo.
 
-3. Dentro do painel Começando, selecione **Montar conta de armazenamento**, selecione sua **Assinatura de conta de armazenamento** no menu suspenso e clique em **Aplicar**.
+   ![](../media/30-08-2024(17).png)
 
-   ![](../media/cloudshell-getting-started.png)
+3. Dentro do painel Começando, selecione **Montar conta de armazenamento (1)**, selecione sua **Assinatura de conta de armazenamento (2)** no menu suspenso e clique em **Aplicar (3)**.
 
-4. Dentro do painel **Montar conta de armazenamento**, selecione **Eu quero criar uma conta de armazenamento** e clique em **Próximo**.
+   ![](../media/30-08-2024(18).png)
 
-   ![](../media/cloudshell-mount-strg-account.png)
+4. Dentro do painel **Montar conta de armazenamento**, selecione **Eu quero criar uma conta de armazenamento (1)** e clique em **Avancar (2)**.
+
+   ![](../media/30-08-2024(19).png)
 
 5. Dentro do painel **Configurações avançadas**, insira os seguintes detalhes:
 
-    - **Assinatura**: Default- Escolha a única assinatura existente atribuída para este laboratório (1).
-    - **Região**: <inject key="Region" enableCopy="false" /> (2)
-    - **Grupo de recursos**: Selecione **Usar existente** (3)
+    - **Assinatura (1)**: Default- Escolha a única assinatura existente atribuída para este laboratório.
+    - **Grupo de recursos (2)**: Selecione **Usar existente**
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Conta de armazenamento**: Selecione **Criar nova** (4)
+    - **Região (3)**: <inject key="Region" enableCopy="false" />
+    - **Conta de armazenamento (4)**: Selecione **Criar nova**
       - storage<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Compartilhamento de arquivo**: Crie um novo compartilhamento de arquivo chamado **none** (5)
-    - Clique em **Criar** (6)
+    - **Compartilhamento de arquivo (5)**: Crie um novo compartilhamento de arquivo chamado **none**
+    - Clique em **Criar (6)**
 
         ![](../media/cloudshell-advanced-settings.png "Criar configurações avançadas de armazenamento")
 
