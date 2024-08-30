@@ -15,7 +15,7 @@ Neste laboratório, você completará as seguintes tarefas:
 - Tarefa 5: Explorar prompts e parâmetros
 - Tarefa 6: Explorar a geração de código
 
-### Tarefa 1: Provisionar um recurso Azure OpenAI
+## Tarefa 1: Provisionar um recurso Azure OpenAI
 
 Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azure OpenAI na sua assinatura do Azure.
 
@@ -50,7 +50,7 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
 
    <validation step="4b6b5a36-2650-4f80-a408-879c57cf61a2" />
 
-### Tarefa 2: Implantar um modelo
+## Tarefa 2: Implantar um modelo
 
 O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**, que você pode usar para implantar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure OpenAI Studio para implantar um modelo.
 
@@ -104,7 +104,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 > - Caso contrário, leia atentamente a mensagem de erro e tente novamente seguindo as instruções do guia do laboratório.
 > - Se precisar de assistência, entre em contato conosco pelo labs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudar você.
 
-### Tarefa 3: Explorar um modelo no playground de Completações
+## Tarefa 3: Explorar um modelo no playground de Completações
 
 Os *Playgrounds* são interfaces úteis no Azure OpenAI Studio que você pode usar para experimentar seus modelos implantados sem precisar desenvolver seu próprio aplicativo cliente.
 
@@ -124,57 +124,86 @@ Os *Playgrounds* são interfaces úteis no Azure OpenAI Studio que você pode us
 
 5. Use o botão **Ver Código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completações* para o seu serviço Azure OpenAI.
 
-### Tarefa 4: Usar o playground de Chat
+## Tarefa 4: Use o playground de chat
 
-O *Playground de Chat* fornece uma interface de chatbot para modelos GPT 3.5 e superiores. Ele usa a API *ChatCompletações* em vez da API *Completações* mais antiga.
+O playground de chat fornece uma interface de chatbot para os modelos GPT 3.5 e superiores. Ele usa a API ChatCompletions em vez da API Completions mais antiga.
 
-1. Na seção **Playground**, selecione a página **Chat** e certifique-se de que o modelo **my-gpt-model** esteja selecionado no painel de configuração.
+1. Na seção Playground, selecione a página de Chat e certifique-se de que o modelo my-gpt-model está selecionado no painel de configuração.
 
-2. Na seção **Configuração**, na caixa **Mensagem do sistema**, substitua o texto atual pela seguinte declaração: `O sistema é um professor de IA que ajuda as pessoas a aprenderem sobre IA`.
+2. Na seção Configuração, na caixa de mensagem do Sistema, substitua o texto atual pela seguinte declaração: O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA.
 
-3. Abaixo da caixa **Mensagem do sistema**, clique em **+ Adicionar** e insira a seguinte mensagem e resposta nas caixas designadas:
+3. Abaixo da caixa de mensagem do Sistema, clique em + Adicionar e insira a seguinte mensagem e resposta nas caixas designadas:
 
-    - **Usuário**: `Quais são os diferentes tipos de inteligência artificial?`
-    
-    - **Assistente**: `Existem três principais tipos de inteligência artificial: IA Estreita ou Fraca (como assistentes virtuais como Siri ou Alexa, software de reconhecimento de imagem e filtros de spam), IA Geral ou Forte (IA projetada para ser tão inteligente quanto um ser humano. Esse tipo de IA não existe atualmente e é puramente teórico), e Superinteligência Artificial (IA que é mais inteligente do que qualquer ser humano e pode realizar tarefas que estão além da compreensão humana. Esse tipo de IA também é puramente teórico e ainda não foi desenvolvido).`
+   Usuário: Quais são os diferentes tipos de inteligência artificial?
 
-4. Clique em **Enviar** para iniciar a conversa.
+   Assistente: Existem três tipos principais de inteligência artificial: IA Estreita ou Fraca (como assistentes virtuais como Siri ou Alexa, software de reconhecimento de imagem e filtros de spam), IA Geral ou Forte (IA projetada para ser tão inteligente quanto um ser humano. Este tipo de IA ainda não existe e é puramente teórica), e Superinteligência Artificial (IA que é mais inteligente do que qualquer ser humano e pode realizar tarefas que estão além da compreensão humana. Este tipo de IA também é puramente teórico e ainda não foi desenvolvido).
 
-5. Continue a conversa adicionando e respondendo às mensagens do usuário no painel de configuração.
+   Nota: Exemplos de poucos tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
 
-6. Experimente com a personalização das respostas do assistente ajustando as mensagens do sistema ou alterando as mensagens do usuário e do assistente.
+4. Clique em Aplicar alterações e depois clique em Continuar na aba pop-up Atualizar mensagem do sistema para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
 
-### Tarefa 5: Explorar prompts e parâmetros
+5. Na caixa de consulta na parte inferior da página, insira o texto O que é inteligência artificial?
 
-Os *prompts* são as entradas fornecidas ao modelo, definindo o contexto ou a tarefa que a IA deve realizar. Parâmetros configuram o modelo para otimizar a saída desejada.
+6. Use o botão Enviar para submeter a mensagem e ver a resposta.
 
-1. No playground de Chat, ajuste o prompt fornecido na caixa **Mensagem do Sistema** para `Você é um guia turístico em uma cidade antiga, especializado em história medieval`.
+   Nota: Você pode receber uma resposta informando que o deploy da API ainda não está pronto. Se isso acontecer, aguarde alguns minutos e tente novamente.
 
-2. Digite a seguinte mensagem de usuário na caixa de mensagem e envie-a:
+7. Revise a resposta e então envie a seguinte mensagem para continuar a conversa: Como isso está relacionado ao aprendizado de máquina?
 
-   `Quais são os marcos mais famosos da cidade e sua importância histórica?`
+8. Revise a resposta, observando que o contexto da interação anterior é retido (para que o modelo entenda que "isso" se refere à inteligência artificial).
 
-3. Observe a resposta do assistente, que agora deve se alinhar com o novo contexto.
+9. Use o botão Ver Código para visualizar o código para a interação. O prompt consiste na mensagem do sistema, nos exemplos de mensagens de usuário e assistente, e na sequência de mensagens de usuário e assistente na sessão de chat até agora.
 
-### Tarefa 6: Explorar a geração de código
+## Tarefa 5: Explore prompts e parâmetros
 
-1. No **Playground**, selecione **Completações** e, na lista **Exemplos**, selecione **Gerar código Python**.
+Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gerar a resposta que você precisa.
 
-2. No painel de entrada, o prompt fornecerá um texto para gerar código Python.
+1. No painel de Configuração, selecione Parâmetro, defina os seguintes valores de parâmetro:
 
-3. Clique em **Gerar** para produzir o código.
+   - Temperatura: 0
+   - Máx resposta (Número máximo de tokens): 500
 
-4. Use o botão **Ver Código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida.
+2. Submeta a seguinte mensagem na sessão de chat:
 
-### Resumo
+   Escreva três perguntas de múltipla escolha com base no seguinte texto.
 
-Neste laboratório, você:
+   A maioria das soluções de visão computacional é baseada em modelos de aprendizado de máquina que podem ser aplicados a entradas visuais de câmeras, vídeos ou imagens.*
+
+   - Classificação de imagem envolve treinar um modelo de aprendizado de máquina para classificar imagens com base em seu conteúdo. Por exemplo, em uma solução de monitoramento de tráfego, você pode usar um modelo de classificação de imagem para classificar imagens com base no tipo de veículo que elas contêm, como táxis, ônibus, ciclistas e assim por diante.*
+
+   - Detecção de objetos são modelos de aprendizado de máquina treinados para classificar objetos individuais dentro de uma imagem e identificar sua localização com uma caixa delimitadora. Por exemplo, uma solução de monitoramento de tráfego pode usar detecção de objetos para identificar a localização de diferentes classes de veículos.*
+
+   - Segmentação semântica é uma técnica avançada de aprendizado de máquina na qual pixels individuais na imagem são classificados de acordo com o objeto ao qual pertencem. Por exemplo, uma solução de monitoramento de tráfego pode sobrepor imagens de tráfego com camadas de "máscara" para destacar diferentes veículos usando cores específicas.
+
+3. Revise os resultados, que devem consistir em perguntas de múltipla escolha que um professor poderia usar para testar os alunos sobre os tópicos de visão computacional no prompt. A resposta total deve ser menor do que o comprimento máximo especificado como parâmetro.
+
+   Observe o seguinte sobre o prompt e os parâmetros que você usou:
+
+   - O prompt especifica que a saída desejada deve ser três perguntas de múltipla escolha.
+   - Os parâmetros incluem Temperatura, que controla o grau de aleatoriedade na geração da resposta. O valor de 0 usado na sua submissão minimiza a aleatoriedade, resultando em respostas estáveis e previsíveis.
+
+## Tarefa 6: Explore a geração de código
+
+Além de gerar respostas em linguagem natural, você pode usar modelos GPT para gerar código.
+
+1. No painel de Configuração, selecione o template Exemplo Vazio e então clique em Continuar na aba pop-up Atualizar mensagem do sistema para redefinir a mensagem do sistema.
+
+2. Digite a mensagem do sistema: Você é um desenvolvedor Python. e clique em Aplicar alterações e então clique em Continuar na aba pop-up Atualizar mensagem do sistema.
+
+3. Na seção de Chat, selecione Limpar chat e então clique em Limpar na aba Limpar chat para limpar o histórico de chat e iniciar uma nova sessão.
+
+4. Submeta a seguinte mensagem do usuário:
+
+   Escreva uma função Python chamada Multiply que multiplique dois parâmetros numéricos.
+
+5. Revise a resposta, que deve incluir um código Python de exemplo que atenda ao requisito no prompt.
+
+## Resumo
+
+Neste laboratório, você realizou o seguinte:
 
 - Provisionou um recurso Azure OpenAI
-- Implantou um modelo no Azure OpenAI Studio
-- Explorou os playgrounds de Completações e Chat
-- Ajustou prompts e parâmetros para personalizar a saída do modelo
-- Experimentou a geração de código
+- Implantou um modelo Azure OpenAI no Azure OpenAI studio
+- Usou o playground de chat para utilizar as funcionalidades de prompts, parâmetros e geração de código
 
-Agora você tem uma compreensão básica de como usar o Azure OpenAI Studio para experimentar os modelos OpenAI e começar a integrá-los em suas próprias soluções.
-
+Você completou com sucesso o laboratório.
