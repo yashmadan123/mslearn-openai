@@ -35,7 +35,7 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
     - **Nome**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Camada de preço**: Standard S0
   
-   ![](../media/openai-lab01_01.png "Criar recurso Azure OpenAI")
+      ![](../media/openai-lab01_01.png "Criar recurso Azure OpenAI")
 
 4. Clique em **Avançar** três vezes e clique em **Criar**.
 
@@ -128,27 +128,27 @@ Os *Playgrounds* são interfaces úteis no Azure OpenAI Studio que você pode us
 
 O playground de chat fornece uma interface de chatbot para os modelos GPT 3.5 e superiores. Ele usa a API ChatCompletions em vez da API Completions mais antiga.
 
-1. Na seção Playground, selecione a página de Chat e certifique-se de que o modelo my-gpt-model está selecionado no painel de configuração.
+1. Na seção **Playground**, selecione a página de **Chat** e certifique-se de que o modelo **my-gpt-model** está selecionado no painel de configuração.
 
-2. Na seção Configuração, na caixa de mensagem do Sistema, substitua o texto atual pela seguinte declaração: O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA.
+2. Na seção Configuração, na caixa de mensagem do Sistema, substitua o texto atual pela seguinte declaração: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA`.
 
 3. Abaixo da caixa de mensagem do Sistema, clique em + Adicionar e insira a seguinte mensagem e resposta nas caixas designadas:
 
-   Usuário: Quais são os diferentes tipos de inteligência artificial?
+   Usuário: `Quais são os diferentes tipos de inteligência artificial?`
 
-   Assistente: Existem três tipos principais de inteligência artificial: IA Estreita ou Fraca (como assistentes virtuais como Siri ou Alexa, software de reconhecimento de imagem e filtros de spam), IA Geral ou Forte (IA projetada para ser tão inteligente quanto um ser humano. Este tipo de IA ainda não existe e é puramente teórica), e Superinteligência Artificial (IA que é mais inteligente do que qualquer ser humano e pode realizar tarefas que estão além da compreensão humana. Este tipo de IA também é puramente teórico e ainda não foi desenvolvido).
+   Assistente: `Existem três tipos principais de inteligência artificial: IA Estreita ou Fraca (como assistentes virtuais como Siri ou Alexa, software de reconhecimento de imagem e filtros de spam), IA Geral ou Forte (IA projetada para ser tão inteligente quanto um ser humano. Este tipo de IA ainda não existe e é puramente teórica), e Superinteligência Artificial (IA que é mais inteligente do que qualquer ser humano e pode realizar tarefas que estão além da compreensão humana. Este tipo de IA também é puramente teórico e ainda não foi desenvolvido)`.
 
-   Nota: Exemplos de poucos tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
+   >**Nota:** Exemplos de poucos tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
 
 4. Clique em Aplicar alterações e depois clique em Continuar na aba pop-up Atualizar mensagem do sistema para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
 
-5. Na caixa de consulta na parte inferior da página, insira o texto O que é inteligência artificial?
+5. Na caixa de consulta na parte inferior da página, insira o texto `O que é inteligência artificial?`
 
 6. Use o botão Enviar para submeter a mensagem e ver a resposta.
 
-   Nota: Você pode receber uma resposta informando que o deploy da API ainda não está pronto. Se isso acontecer, aguarde alguns minutos e tente novamente.
+   >**Nota:** Você pode receber uma resposta informando que o deploy da API ainda não está pronto. Se isso acontecer, aguarde alguns minutos e tente novamente.
 
-7. Revise a resposta e então envie a seguinte mensagem para continuar a conversa: Como isso está relacionado ao aprendizado de máquina?
+7. Revise a resposta e então envie a seguinte mensagem para continuar a conversa: `Como isso está relacionado ao aprendizado de máquina?`
 
 8. Revise a resposta, observando que o contexto da interação anterior é retido (para que o modelo entenda que "isso" se refere à inteligência artificial).
 
@@ -160,8 +160,8 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
 1. No painel de Configuração, selecione Parâmetro, defina os seguintes valores de parâmetro:
 
-   - Temperatura: 0
-   - Máx resposta (Número máximo de tokens): 500
+   - **Temperatura:** 0
+   - **Máx resposta (Número máximo de tokens):** 500
 
 2. Submeta a seguinte mensagem na sessão de chat:
 
