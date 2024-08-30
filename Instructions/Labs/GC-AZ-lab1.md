@@ -190,9 +190,9 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. Repeat the commands you executed in steps 4  and 5 for the language of your preference.
 
-      > **Congratulations** on completing the task! Now, it's time to validate it. 
+> **Congratulations** on completing the task! Now, it's time to validate it. 
 
-      <validation step="d2e1f993-b207-40be-9554-9ece30e830a9" />
+<validation step="d2e1f993-b207-40be-9554-9ece30e830a9" />
    
 ### Task 4: Configure your application
 
