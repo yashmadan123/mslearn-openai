@@ -61,6 +61,8 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
 
+       ![](../media/azure13.png)
+      
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
