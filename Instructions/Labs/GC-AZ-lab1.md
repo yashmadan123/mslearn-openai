@@ -318,15 +318,15 @@ run in any order.
 1. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for 
    each of these tasks.
 
-     ```prompt
-     Add comments to the following function. Return only the commented code.\n---\n
-     ```
+      ```prompt
+      Add comments to the following function. Return only the commented code.\n---\n
+      ```
 
 1. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
-     ```prompt
-     Write four unit tests for the following function.\n---\n
-     ```
+      ```prompt
+      Write four unit tests for the following function.\n---\n
+      ```
 
 1. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
