@@ -1,4 +1,4 @@
-# Lab 01: Generate images with a DALL-E model
+# Hands-On Lab Generate images with a DALL-E model
 
 ## Estimated time: 60 minutes
 
