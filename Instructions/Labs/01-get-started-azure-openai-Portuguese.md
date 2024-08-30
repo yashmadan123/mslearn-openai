@@ -83,7 +83,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
     - **Nome da implantação (1)**: my-gpt-model
     - **Versão do modelo (2)**: 0613
     - **Tipo de implantação (3)**: Standard
-    - **Limite de Taxa de Tokens por Minuto (milhares) (4)**: 10K
+    - **Limite de Velocidade de Tokens por Minuto (milhares) (4)**: 10K
     - Clique em **Implementar (5)**
   
       ![](../media/30-08-2024(9).png)
