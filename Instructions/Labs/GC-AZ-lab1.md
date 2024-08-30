@@ -150,14 +150,14 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. Within the Advanced settings pane, enter the following details:
 
-    - Subscription: Default- Choose the only existing subscription assigned for this lab (1).
-    - Region: Select **<inject key="Region" enableCopy="false" />** **(2)**
-    - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>** **(3)**
-    - Storage account: Select **storage<inject key="DeploymentID" enableCopy="false"></inject>** **(4)**
-    - File share: Create a new file share named **blob<inject key="DeploymentID" enableCopy="false"></inject>** **(5)**
-    - Click Create (6)
+      - Subscription: Default- Choose the only existing subscription assigned for this lab (1).
+      - Region: Select **<inject key="Region" enableCopy="false" />** **(2)**
+      - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>** **(3)**
+      - Storage account: Select **storage<inject key="DeploymentID" enableCopy="false"></inject>** **(4)**
+      - File share: Create a new file share named **blob<inject key="DeploymentID" enableCopy="false"></inject>** **(5)**
+      - Click **Create (6)**
 
-         ![](../media/Openai-12.png)
+           ![](../media/Openai-12.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -170,17 +170,17 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
-   ```bash
-   cd azure-openai/Labfiles/04-code-generation
-   ```
+      ```bash
+      cd azure-openai/Labfiles/04-code-generation
+      ```
 
      > **NOTE:** Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
 1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
-   ```bash
-   code .
-   ```
+      ```bash
+      code .
+      ```
    
       > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
 
@@ -348,9 +348,9 @@ run in any order.
 
 1. Copy the below command in the terminal to see the contents of the app.txt file.
 
-   ```
-   cat app.txt
-   ```
+      ```
+      cat app.txt
+      ```
 
   - The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
