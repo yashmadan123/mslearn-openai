@@ -30,26 +30,26 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
 
 3. Crie um recurso **Azure OpenAI** com as seguintes configurações 
 
-    - **Assinatura**: Default - Assinatura pré-atribuída (1).
-    - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Região**: Selecione <inject key="Region" enableCopy="false" /> (3)
-    - **Nome**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **Nível de preços**: Standard S0 (5)
-    - Clique em **Próximo** (6)
+    - **Assinatura (1)**: Default - Assinatura pré-atribuída.
+    - **Grupo de recursos (2)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Região (3)**: Selecione <inject key="Region" enableCopy="false" />
+    - **Nome (4)**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Tipo de preços (5)**: Standard S0
+    - Clique em **Próxima (6)**
   
-        ![](../media/azopenai123.png "Criar recurso Azure OpenAI")
+       ![](../media/30-08-2024(10).png)
 
-4. Clique em **Próximo** duas vezes e subsequentemente clique em **Criar** 
+4. Clique em **Próxima** duas vezes e subsequentemente clique em **Criar** 
 
 5. Aguarde a conclusão da implantação. Em seguida, vá para o recurso Azure OpenAI implantado no portal do Azure.
 
 6. Para capturar os valores de Chaves e Endpoints, na lâmina **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Selecione **Chaves e Ponto de extremidade (1)** sob **Gerenciamento de Recursos**.
       - Clique em **Mostrar Chaves (2)**.
-      - Copie a **Chave 1 (3)** e certifique-se de colá-la em um editor de texto como o Bloco de Notas para referência futura.
-      - Finalmente, copie a URL da API do **Endpoint (4)** clicando em copiar para a área de transferência. Cole-a em um editor de texto como o Bloco de Notas para uso posterior.
+      - Copie a **CHAVE 1 (3)** e certifique-se de colá-la em um editor de texto como o Bloco de Notas para referência futura.
+      - Finalmente, copie a URL da API do **Ponto de extremidade (4)** clicando em copiar para a área de transferência. Cole-a em um editor de texto como o Bloco de Notas para uso posterior.
 
-        ![](../media/openai-endpoint-new.png "Chaves e Endpoints")
+        ![](../media/30-08-2024(11).png)
 
 #### Validação
 
@@ -68,36 +68,35 @@ Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para us
 
    ![](../media/30-08-2024(1).png)
 
-2. Na lâmina **Azure AI Services | Azure OpenAI**, selecione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. Na lâmina **Azure AI Services | OpenAI**, selecione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](../media/30-08-2024(12).png)
 
 3. No painel de recursos do Azure OpenAI, clique em **Ir para o Azure OpenAI Studio** e ele navegará para o **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/30-08-2024(13).png)
 
 4. Após navegar para o Azure AI Studio, clique no pop-up **Explore a nova experiência** no topo.
 
    ![](../media/30-08-2024(6).png)
 
-5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implementar o modelo** , selecione **Implementar modelo base (2)**.  
+5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implementar o modelo (2)** , selecione **Implementar modelo base (3)**.
 
    ![](../media/30-08-2024(7).png)
 
-6. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo-16k (1)** e clique em **Confirmar (2)**.
+6. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo-16k (1)** e clique em **Confirmar (3)**.
 
-   ![](../media/new4.png)
+   ![](../media/30-08-2024(14).png)
 
 7. Na interface pop-up **Implementar modelo**, insira os seguintes detalhes:
     
-    - **Nome da implantação**: text-turbo (1) 
-    - **Versão do modelo**: 0613 (Predefinição) (2)
-    - **Tipo de implantação**: Standard (3)
-    - **Limite de Taxa de Tokens por Minuto (milhares)**: 10K (4)
-    - **Habilitar cota dinâmica**: Habilitado (5)
-    - Clique em **Implementar** (6)
+    - **Nome da implantação (1)**: text-turbo
+    - **Versão do modelo (2)**: 0613 (Predefinição)
+    - **Tipo de implantação (3)**: Standard
+    - **Limite de Taxa de Tokens por Minuto (milhares) (4)**: 10K
+    - Clique em **Implementar (5)**
   
-      ![](../media/new2.png)
+      ![](../media/30-08-2024(15).png)
 
 8. Isso implantará um modelo com o qual você brincará à medida que avançar.
 
