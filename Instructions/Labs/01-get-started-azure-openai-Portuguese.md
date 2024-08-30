@@ -39,7 +39,7 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
 
 4. Clique em **Avançar** três vezes e clique em **Criar**.
 
-5. Aguarde a conclusão da implantação. Depois, vá para o recurso Azure OpenAI implantado no portal do Azure.
+5. Aguarde a conclusão da implementação. Depois, vá para o recurso Azure OpenAI implementado através do portal de Azure.
 
 #### Validação
 
@@ -50,9 +50,9 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
 
    <validation step="4b6b5a36-2650-4f80-a408-879c57cf61a2" />
 
-## Tarefa 2: Implantar um modelo
+## Tarefa 2: Implementar um modelo
 
-O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**, que você pode usar para implantar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure OpenAI Studio para implantar um modelo.
+O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**, que você pode usar para Implementar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure OpenAI Studio para Implementar um modelo.
 
 1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
 
@@ -78,17 +78,17 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
    ![](../media/30-08-2024(8).png)
 
-7. Na interface de **Implantar modelo**, insira os seguintes detalhes:
+7. Na interface de **Implementar modelo**, insira os seguintes detalhes:
     
-    - **Nome da implantação (1)**: my-gpt-model
+    - **Nome da Implementação (1)**: my-gpt-model
     - **Versão do modelo (2)**: 0613
-    - **Tipo de implantação (3)**: Standard
+    - **Tipo de Implementação (3)**: Standard
     - **Limite de Velocidade de Tokens por Minuto (milhares) (4)**: 10K
     - Clique em **Implementar (5)**
   
       ![](../media/30-08-2024(9).png)
 
-8. Isso implantará um modelo que você explorará nas próximas etapas.
+8. Isso irá implementar um modelo que você explorará nas próximas etapas.
 
    > **Nota**: Você pode ignorar qualquer erro relacionado à atribuição de papéis para visualizar os limites de cota.
 
@@ -105,11 +105,11 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
 ## Tarefa 3: Explorar um modelo no playground de Completações
 
-Os *Playgrounds* são interfaces úteis no Azure OpenAI Studio que você pode usar para experimentar seus modelos implantados sem precisar desenvolver seu próprio aplicativo cliente.
+Os *Playgrounds* são interfaces úteis no Azure OpenAI Studio que você pode usar para experimentar seus modelos implementados sem precisar desenvolver a sua aplicação cliente.
 
 1. No Azure OpenAI Studio, no painel esquerdo, em **Playground**, selecione **Completações**.
 
-2. Na página **Completações**, certifique-se de que sua implantação **my-gpt-model** esteja selecionada e, na lista **Exemplos**, selecione **Gerar um questionário**.
+2. Na página **Completações**, certifique-se de que sua implementação **my-gpt-model** esteja selecionada e, na lista **Exemplos**, selecione **Gerar um questionário**.
 
    O texto resumido consiste em um *prompt* que fornece algum texto para dizer ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
 
@@ -205,7 +205,7 @@ Além de gerar respostas em linguagem natural, você pode usar modelos GPT para 
 
 Neste laboratório, você completou o seguinte:
 - Provisionou um recurso Azure OpenAI
-- Implantou um modelo Azure OpenAI dentro do estúdio Azure OpenAI
+- Implementou um modelo Azure OpenAI dentro do estúdio Azure OpenAI
 - Usou o playground de chat para utilizar as funcionalidades de prompts, parâmetros e geração de código
 
 ### Você completou com sucesso o laboratório.

@@ -1,20 +1,20 @@
-# Laboratório 02: Use SDKs do Azure OpenAI em seu Aplicativo
+# Laboratório 02: Use SDKs do Azure OpenAI na sua Aplicação
 
 ### Duração Estimada: 40 minutos
 
 ## Cenário do laboratório
-Com o Serviço Azure OpenAI, os desenvolvedores podem criar chatbots, modelos de linguagem e outras aplicações que se destacam na compreensão da linguagem humana natural. O Azure OpenAI fornece acesso a modelos de IA pré-treinados, bem como um conjunto de APIs e ferramentas para personalizar e ajustar esses modelos para atender aos requisitos específicos da sua aplicação. Neste exercício, você aprenderá como implantar um modelo no Azure OpenAI e usá-lo em seu próprio aplicativo.
+Com o Serviço Azure OpenAI, os desenvolvedores podem criar chatbots, modelos de linguagem e outras aplicações que se destacam na compreensão da linguagem humana natural. O Azure OpenAI fornece acesso a modelos de IA pré-treinados, bem como um conjunto de APIs e ferramentas para personalizar e ajustar esses modelos para atender aos requisitos específicos da sua aplicação. Neste exercício, você aprenderá como implementar um modelo no Azure OpenAI e usá-lo na sua aplicação.
 
-No cenário deste exercício, você desempenhará o papel de um desenvolvedor de software que foi encarregado de implementar um aplicativo que pode usar IA generativa para ajudar a fornecer recomendações de caminhadas. As técnicas usadas no exercício podem ser aplicadas a qualquer aplicativo que queira usar as APIs do Azure OpenAI.
+No cenário deste exercício, você desempenhará o papel de um desenvolvedor de software que foi encarregado de implementar uma aplicação que pode usar IA generativa para ajudar a fornecer recomendações de caminhadas. As técnicas usadas no exercício podem ser aplicadas a qualquer aplicação que queira usar as APIs do Azure OpenAI.
 
 ## Objetivos do laboratório
 Neste laboratório, você completará as seguintes tarefas:
 
 - Tarefa 1: Provisionar um recurso Azure OpenAI
-- Tarefa 2: Implantar um modelo
-- Tarefa 3: Configurar um aplicativo no Cloud Shell
-- Tarefa 4: Configurar seu aplicativo
-- Tarefa 5: Executar seu aplicativo
+- Tarefa 2: Implementar um modelo
+- Tarefa 3: Configurar uma aplicação no Cloud Shell
+- Tarefa 4: Configurar a sua aplicação
+- Tarefa 5: Executar a sua aplicação
 
 ## Tarefa 1: Provisionar um recurso Azure OpenAI
 
@@ -34,14 +34,14 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
     - **Grupo de recursos (2)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Região (3)**: Selecione <inject key="Region" enableCopy="false" />
     - **Nome (4)**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Tipo de preços (5)**: Standard S0
+    - **Tipo de preço (5)**: Standard S0
     - Clique em **Próxima (6)**
   
        ![](../media/30-08-2024(10).png)
 
 4. Clique em **Próxima** duas vezes e subsequentemente clique em **Criar** 
 
-5. Aguarde a conclusão da implantação. Em seguida, vá para o recurso Azure OpenAI implantado no portal do Azure.
+5. Aguarde a conclusão da implementação. Em seguida, vá para o recurso Azure OpenAI implementado no portal do Azure.
 
 6. Para capturar os valores de Chaves e Endpoints, na lâmina **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Selecione **Chaves e Ponto de extremidade (1)** sob **Gerenciamento de Recursos**.
@@ -60,7 +60,7 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
 
    <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
 
-## Tarefa 2: Implantar um modelo
+## Tarefa 2: Implementar um modelo
 
 Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para usar através do **Azure OpenAI Studio**. Uma vez implantado, faremos referência a esse modelo em nosso aplicativo.
 
@@ -113,9 +113,9 @@ Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para us
 
    <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
 
-## Tarefa 3: Configurar um aplicativo no Cloud Shell
+## Tarefa 3: Configurar uma aplicação no Cloud Shell
 
-Para mostrar como integrar com um modelo Azure OpenAI, usaremos um aplicativo de linha de comando curto que é executado no Cloud Shell no Azure. Abra uma nova guia do navegador para trabalhar com o Cloud Shell.
+Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação de linha de comandos que é executada no Cloud Shell no Azure. Abra uma nova guia do navegador para trabalhar com o Cloud Shell.
 
 1. No [portal do Azure](https://portal.azure.com?azure-portal=true), selecione o botão **[>_]** (*Cloud Shell*) na parte superior da página à direita da caixa de pesquisa. Um painel do Cloud Shell será aberto na parte inferior do portal.
 
@@ -139,16 +139,16 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos um aplicativo de
     - **Grupo de recursos (2)**: Selecione **Usar existente**
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Região (3)**: <inject key="Region" enableCopy="false" />
-    - **Conta de armazenamento (4)**: Selecione **Criar nova**
+    - **Nome da Conta de armazenamento (4)**: Selecione **Criar nova**
       - storage<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Compartilhamento de arquivo (5)**: Crie um novo compartilhamento de arquivo chamado **none**
+    - **Comp. de arquivo (5)**: Crie um novo compartilhamento de arquivo chamado **none**
     - Clique em **Criar (6)**
 
         ![](../media/30-08-2024(20).png)
 
 6. Note que você pode redimensionar o cloud shell arrastando a barra separadora na parte superior da página, ou usando os ícones **&#8212;**, **&#9723;**, e **X** no canto superior direito da página para minimizar, maximizar e fechar o painel. Para mais informações sobre como usar o Azure Cloud Shell, consulte a [documentação do Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-7. Uma vez que o terminal inicie, insira o seguinte comando para baixar o aplicativo de amostra e salvá-lo em uma pasta chamada `azure-openai`.
+7. Uma vez que o terminal inicie, insira o seguinte comando para baixar a aplicação de demonstração e salvá-la em uma pasta chamada `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
@@ -161,14 +161,14 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos um aplicativo de
    cd azure-openai/Labfiles/02-azure-openai-api
     ```
 
-    Aplicativos para C# e Python foram fornecidos, bem como um arquivo de texto de amostra que você usará para testar a sumarização. Ambos os aplicativos apresentam a mesma funcionalidade.
+    Aplicações para C# e Python foram fornecidos, bem como um arquivo de texto de amostra que você pode usar para testar a sumarização. Ambas as aplicações apresentam a mesma funcionalidade.
 
 9. Abra o editor de código integrado e observe o arquivo de texto que você estará resumindo com seu modelo localizado em `text-files/sample-text.txt`. Use o seguinte comando para abrir os arquivos do laboratório no editor de código.
 
     ```bash
     code .
     ```
-    > **NOTA:** Se você for solicitado a **Mudar para o Cloud Shell Clássico** após executar o comando **code .**, clique em **Confirmar** e execute os passos 8 e 9 novamente.
+    > **Nota:** Se você for solicitado a **Alternar para o Cloud Shell Clássico** após executar o comando **code .**, clique em **Confirmar** e execute os passos 8 e 9 novamente.
 
    ![](../media/30-08-2024(21).png)
    
@@ -181,7 +181,7 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos um aplicativo de
 > - Caso contrário, leia atentamente a mensagem de erro e tente novamente o passo, seguindo as instruções no guia do laboratório.
 > - Se precisar de alguma assistência, por favor, entre em contato conosco em labs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
 
-## Tarefa 4: Configurar seu aplicativo
+## Tarefa 4: Configurar a sua aplicação
 
 Para este exercício, você completará algumas partes-chave do aplicativo para permitir o uso do seu recurso Azure OpenAI.
 
@@ -450,35 +450,35 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
 
    >**Nota:** Certifique-se de indentar o código eliminando quaisquer espaços em branco extras após colá-lo no editor de código.
 
-## Tarefa 5: Testar seu aplicativo
+## Tarefa 5: Executar a sua aplicação
 
-Agora que seu aplicativo foi configurado, execute-o para enviar sua solicitação ao seu modelo e observe a resposta.
+Agora que a sua aplicação foi configurada, execute-a para enviar sua solicitação ao seu modelo e observe a resposta.
 
-1. No painel de terminal interativo, certifique-se de que o contexto da pasta seja a pasta da sua linguagem preferida. Em seguida, digite o seguinte comando para executar o aplicativo.
+1. No painel do terminal interativo, certifique-se de que o contexto da pasta seja a pasta da sua linguagem preferida. Em seguida, digite o seguinte comando para executar a aplicação.
 
     - **C#**: `dotnet run`
     
     - **Python**: `python test-openai-model.py`
 
-    > **Dica**: Você pode usar o ícone **Maximizar tamanho do painel** (**^**) na barra de ferramentas do terminal para ver mais do texto do console.
+    > **Dica**: Você pode usar o ícone **Maximizar tamanho do painel** (**^**) na barra de ferramentas do terminal para ver mais texto no console.
 
 2. Quando solicitado, digite o texto `Que trilha devo fazer perto de Rainier?`.
 
-3. Observe a saída, notando que a resposta segue as diretrizes fornecidas na mensagem do sistema que você adicionou ao array *messages*.
+3. Observe o resultado, notando que a resposta segue as diretrizes fornecidas na mensagem do sistema que você adicionou ao array *messages*.
 
-4. Forneça o prompt `Onde devo fazer trilha perto de Boise? Estou procurando algo de dificuldade fácil, entre 2 a 3 milhas, com ganho de elevação moderado.` e observe a saída.
+4. Forneça o prompt `Onde devo fazer trilha perto de Boise? Estou procurando algo de dificuldade fácil, entre 2 a 3 milhas, com ganho de elevação moderado.` e observe o resultado.
 
 5. No arquivo de código da sua linguagem preferida, altere o valor do parâmetro *temperature* na sua solicitação para **1.0** e salve o arquivo.
 
-6. Execute o aplicativo novamente usando os prompts acima e observe a saída.
+6. Execute o aplicativo novamente usando os prompts acima e observe o resultado.
 
-Aumentar a temperatura geralmente faz com que a resposta varie, mesmo quando fornecido o mesmo texto, devido ao aumento da aleatoriedade. Você pode executá-lo várias vezes para ver como a saída pode mudar. Tente usar valores diferentes para sua temperatura com a mesma entrada.
+Aumentar a temperatura geralmente faz com que a resposta varie, mesmo quando fornecido o mesmo texto, devido ao aumento da aleatoriedade. Você pode executá-lo várias vezes para ver como o resultado pode mudar. Tente usar valores diferentes para sua temperatura com a mesma entrada.
 
 ## Revisão
 
 Neste laboratório, você realizou o seguinte:
 - Provisionou um recurso Azure OpenAI
-- Implantou um modelo OpenAI dentro do estúdio Azure OpenAI
-- Integrou modelos Azure OpenAI em seus aplicativos
+- Implementou um modelo OpenAI dentro do estúdio Azure OpenAI
+- Integrou modelos Azure OpenAI em suas aplicações
 
 ### Você completou com sucesso o laboratório.
