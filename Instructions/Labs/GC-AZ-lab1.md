@@ -176,7 +176,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
       cd azure-openai/Labfiles/04-code-generation
       ```
 
-     > **NOTE:** Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
+      >**NOTE:** Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
 1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
