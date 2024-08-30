@@ -310,8 +310,8 @@ run in any order.
       ```  
 1. Run the application.
 
-     - **C#**: `dotnet run`
-     - **Python**: `python code-generation.py`
+      - **C#**: `dotnet run`
+      - **Python**: `python code-generation.py`
 
 1. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for 
    each of these tasks.
