@@ -284,66 +284,66 @@ run in any order.
 
 1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
 
-   ```
-   <Project Sdk="Microsoft.NET.Sdk">
-   
-   <PropertyGroup>
-   <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
-   <ImplicitUsings>enable</ImplicitUsings>
-   <Nullable>enable</Nullable>
-   </PropertyGroup>
-   
-    <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-    </ItemGroup>
-   
-    <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-       </None>
-     </ItemGroup>
-   
-    </Project>
-   ```  
+      ```
+      <Project Sdk="Microsoft.NET.Sdk">
+      
+      <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net8.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+      </PropertyGroup>
+      
+       <ItemGroup>
+       <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+       </ItemGroup>
+      
+       <ItemGroup>
+         <None Update="appsettings.json">
+           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          </None>
+        </ItemGroup>
+      
+       </Project>
+      ```  
 1. Run the application.
 
-    - **C#**: `dotnet run`
-    - **Python**: `python code-generation.py`
+     - **C#**: `dotnet run`
+     - **Python**: `python code-generation.py`
 
 1. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for 
    each of these tasks.
 
-    ```prompt
-    Add comments to the following function. Return only the commented code.\n---\n
-    ```
+     ```prompt
+     Add comments to the following function. Return only the commented code.\n---\n
+     ```
 
 1. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
-    ```prompt
-    Write four unit tests for the following function.\n---\n
-    ```
+     ```prompt
+     Write four unit tests for the following function.\n---\n
+     ```
 
 1. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
-    ```prompt
-    Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
-    ```
+      ```prompt
+      Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
+      ```
 
 1. Enter **quit** to exit the program.
 
 1. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
-    - **C#**: Fixes are made on line 30 and 59
-    - **Python**: Fixes are made on line 18 and 31
+      - **C#**: Fixes are made on line 30 and 59
+      - **Python**: Fixes are made on line 18 and 31
 
 1. To check the results paste the following code in the terminal:
 
-    ```
-    cd result
-    ```
+      ```
+      cd result
+      ```
 
 1. Copy the below command in the terminal to see the contents of the app.txt file.
 
@@ -351,11 +351,11 @@ run in any order.
       cat app.txt
       ```
 
-  - The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
+   - The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
-  - It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but can't be trusted as correct and need to be verified by the developer.
+   - It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but can't be trusted as correct and need to be verified by the developer.
 
-  - If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
+   - If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
 
 ## Summary
 
