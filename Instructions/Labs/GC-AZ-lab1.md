@@ -84,9 +84,9 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
-   ```code
-   Write a function in python that takes a character and string as input, and returns how many times that character appears in the         string
-   ```    
+      ```code
+      Write a function in python that takes a character and string as input, and returns how many times that character appears in the         string
+      ```    
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
 1. Next, send the prompt `Do the same thing, but this time write it in C#`.
@@ -96,29 +96,29 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
    
 1. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
 
-   ```code
-    What does the following function do?  
-    ---  
-    def multiply(a, b):  
-    result = 0  
-    negative = False  
-    if a < 0 and b > 0:  
-        a = -a  
-        negative = True  
-    elif a > 0 and b < 0:  
-        b = -b  
-        negative = True  
-    elif a < 0 and b < 0:  
-        a = -a  
-        b = -b  
-    while b > 0:  
-        result += a  
-        b -= 1      
-    if negative:  
-        return -result  
-    else:  
-        return result
-   ```   
+      ```code
+       What does the following function do?  
+       ---  
+       def multiply(a, b):  
+       result = 0  
+       negative = False  
+       if a < 0 and b > 0:  
+           a = -a  
+           negative = True  
+       elif a > 0 and b < 0:  
+           b = -b  
+           negative = True  
+       elif a < 0 and b < 0:  
+           a = -a  
+           b = -b  
+       while b > 0:  
+           result += a  
+           b -= 1      
+       if negative:  
+           return -result  
+       else:  
+           return result
+      ```   
 
 1. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
 
