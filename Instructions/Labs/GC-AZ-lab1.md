@@ -80,12 +80,12 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
    
 1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
-   ![](../media/default1.png)
+      ![](../media/default1.png)
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
    ```code
-   Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
+   Write a function in python that takes a character and string as input, and returns how many times that character appears in the         string
    ```    
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
@@ -96,7 +96,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
    
 1. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
 
-    ```code
+   ```code
     What does the following function do?  
     ---  
     def multiply(a, b):  
@@ -118,7 +118,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
         return -result  
     else:  
         return result
-    ```
+   ```   
 
 1. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
 
@@ -133,21 +133,20 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page 
    to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-   ![](../media/Openai-08.png)
+      ![](../media/Openai-08.png)
 
-1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). 
-   Select Bash. If you don't see this option, skip the step.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell).Select Bash. If you don't see this option, skip the step.
 
-   ![](../media/Openai-09.png)
+      ![](../media/Openai-09.png)
 
 1. Within the Getting Started pane, select Mount storage account (1), select your Storage account subscription (2) from the dropdown 
    and click Apply (3).
 
-   ![](../media/Openai-10.png)
+      ![](../media/Openai-10.png)
 
 1. Within the Mount storage account pane, select I want to create a **storage account** **(1)** and click **Next** **(2)**.
 
-   ![](../media/Openai-11.png)
+      ![](../media/Openai-11.png)
 
 1. Within the Advanced settings pane, enter the following details:
 
@@ -158,7 +157,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - File share: Create a new file share named **blob<inject key="DeploymentID" enableCopy="false"></inject>** **(5)**
     - Click Create (6)
 
-       ![](../media/Openai-12.png)
+         ![](../media/Openai-12.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -167,7 +166,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
    ```
 
-   > **NOTE:** If you get a message saying already cloned, please move to the next step.
+      > **NOTE:** If you get a message saying already cloned, please move to the next step.
 
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
@@ -175,7 +174,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    cd azure-openai/Labfiles/04-code-generation
    ```
 
-    > **NOTE:** Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
+     > **NOTE:** Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
 1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
@@ -189,12 +188,10 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. Repeat the commands you executed in steps 4  and 5 for the language of your preference.
 
-   <validation step="d2e1f993-b207-40be-9554-9ece30e830a9" />
+      > **Congratulations** on completing the task! Now, it's time to validate it. 
+
+      <validation step="d2e1f993-b207-40be-9554-9ece30e830a9" />
    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Configure your application
 
