@@ -207,7 +207,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
-1. Navigate to the folder for your preferred language and install the necessary packages.
+   - Navigate to the folder for your preferred language and install the necessary packages.
 
      **C#**
 
