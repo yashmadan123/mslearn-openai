@@ -1,4 +1,4 @@
-# Lab 01: Use Azure OpenAI SDKs in your app
+# Hands-On Lab: Use Azure OpenAI SDKs in your app
 
 ## Estimated time: 60 minutes
 
