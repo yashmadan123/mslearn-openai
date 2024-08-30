@@ -226,50 +226,50 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. Open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
 
-     - Open the code file for your preferred language.
+      - Open the code file for your preferred language.
 
-       **C#**
-       `Program.cs`
+        **C#**
+        `Program.cs`
    
-        ```csharp
-        // Format and send the request to the model
-          var chatCompletionsOptions = new ChatCompletionsOptions()
-          {
-              Messages =
-              {
-                  new ChatRequestSystemMessage(systemPrompt),
-                  new ChatRequestUserMessage(userPrompt)
-              },
-              Temperature = 0.7f,
-              MaxTokens = 1000,
-              DeploymentName = oaiDeploymentName
-          };
-      
-          // Get response from Azure OpenAI
-          Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-      
-          ChatCompletions completions = response.Value;
-          string completion = completions.Choices[0].Message.Content;
-       ```
+           ```csharp
+           // Format and send the request to the model
+             var chatCompletionsOptions = new ChatCompletionsOptions()
+             {
+                 Messages =
+                 {
+                     new ChatRequestSystemMessage(systemPrompt),
+                     new ChatRequestUserMessage(userPrompt)
+                 },
+                 Temperature = 0.7f,
+                 MaxTokens = 1000,
+                 DeploymentName = oaiDeploymentName
+             };
+         
+             // Get response from Azure OpenAI
+             Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+         
+             ChatCompletions completions = response.Value;
+             string completion = completions.Choices[0].Message.Content;
+          ```
 
-       **Python**
+        **Python**
         `code-generation.py`
    
-       ```python
-       # Format and send the request to the model
-       messages =[
-           {"role": "system", "content": system_message},
-           {"role": "user", "content": user_message},
-       ]
-       
-       # Call the Azure OpenAI model
-       response = client.chat.completions.create(
-           model=model,
-           messages=messages,
-           temperature=0.7,
-           max_tokens=1000
-       )
-       ```
+          ```python
+          # Format and send the request to the model
+          messages =[
+              {"role": "system", "content": system_message},
+              {"role": "user", "content": user_message},
+          ]
+          
+          # Call the Azure OpenAI model
+          response = client.chat.completions.create(
+              model=model,
+              messages=messages,
+              temperature=0.7,
+              max_tokens=1000
+          )
+          ```
 
 1. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
