@@ -74,7 +74,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
    ![](../media/30-08-2024(7).png)
 
-6. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo (1)** e clique em **Confirmar (2)**.
+6. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo (1)** e clique em **Confirmar (3)**.
 
    ![](../media/30-08-2024(8).png)
 
@@ -84,8 +84,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
     - **Versão do modelo (2)**: 0613
     - **Tipo de implantação (3)**: Standard
     - **Limite de Taxa de Tokens por Minuto (milhares) (4)**: 10K
-    - **Habilitar cota dinâmica (5)**: Habilitado
-    - Clique em **Implementar (6)**
+    - Clique em **Implementar (5)**
   
       ![](../media/30-08-2024(9).png)
 
