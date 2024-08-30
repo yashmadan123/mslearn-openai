@@ -1,4 +1,4 @@
-# Develop Generative AI solutions with Azure OpenAI Service Workshop
+# Integrate Azure OpenAI into your App
 
 ## Overall Estimated Duration: 60 minutes
 
