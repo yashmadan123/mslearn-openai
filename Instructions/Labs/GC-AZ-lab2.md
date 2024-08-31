@@ -210,7 +210,7 @@ Now that you've reviewed the code, it's time to run it and generate some images.
    
          >**Note**: if you encounter error **The API deployment for this resource does not exist**, kindly wait 2 mins and try again to generate. 
    
-      - Navigate back to CloudShell and reperform step no 3. 
+      - Navigate back to CloudShell and reperform step no 2. 
 
 3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
