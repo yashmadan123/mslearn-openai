@@ -188,7 +188,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
       ![](../media/classic-cloudshell-prompt.png)
 
-1. Repeat the commands you executed in steps 4  and 5 for the language of your preference.
+1. Repeat the commands you executed in steps 7 and 8 for the language of your preference.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. 
 
