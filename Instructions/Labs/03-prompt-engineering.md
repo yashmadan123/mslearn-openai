@@ -439,18 +439,18 @@ Applications for both C# and Python have been provided, and both apps feature th
      **Python**
 
        ```python
-    import os
+        import os
        import asyncio
        from dotenv import load_dotenv
    
-   # Add Azure OpenAI package
-   # Add Azure OpenAI package
-   from openai import AsyncAzureOpenAI
+       # Add Azure OpenAI package
+       # Add Azure OpenAI package
+       from openai import AsyncAzureOpenAI
    
-   # Set to True to print the full response from OpenAI for each call
-   printFullResponse = False
+       # Set to True to print the full response from OpenAI for each call
+       printFullResponse = False
    
-   async def main(): 
+       async def main(): 
            
        try: 
        
@@ -489,7 +489,7 @@ Applications for both C# and Python have been provided, and both apps feature th
        except Exception as ex:
            print(ex)
    
-   async def call_openai_model(system_message, user_message, model, client):
+       async def call_openai_model(system_message, user_message, model, client):
        # Format and send the request to the model
        # Format and send the request to the model
        messages =[
@@ -513,7 +513,7 @@ Applications for both C# and Python have been provided, and both apps feature th
    
        print("Response:\n" + response.choices[0].message.content + "\n")
    
-   if __name__ == '__main__': 
+       if __name__ == '__main__': 
        asyncio.run(main())
     ```
 
