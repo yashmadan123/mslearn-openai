@@ -558,6 +558,36 @@ Applications for both C# and Python have been provided, and both apps feature th
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
 1. In the folder of your preferred language, open `system.txt` in Visual Studio Code. For each of the interations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
+
+1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
+3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+   ```
+   <Project Sdk="Microsoft.NET.Sdk">
+   
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
+   
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
+   
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+    </Project> 
+   ```  
+
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
