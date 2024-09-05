@@ -53,7 +53,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 #### Validation
 
-<validation step="b6d08e8e-f2a3-4066-a698-2a324f4493dd" />
+<validation step="7c4e3561-5bcf-4427-a50e-bdb11b1f5113" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -108,7 +108,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 #### Validation
 
-<validation step="69a18560-a442-467a-be09-b5663806dd0a" />
+<validation step="64adeae3-05e0-4fbd-84bb-176e70a4b3ce" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -175,7 +175,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    
 #### Validation
 
-<validation step="4eb72f2c-5f15-42b7-9637-abdaf9e30be5" />
+<validation step="a9ae28f4-8e25-42f3-b7bd-5372ab99091f" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
