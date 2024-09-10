@@ -45,7 +45,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+6. Under Resource Management, capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
