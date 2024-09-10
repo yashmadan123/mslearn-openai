@@ -153,8 +153,8 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 1. Within the Advanced settings pane, enter the following details:
 
       - Subscription: Default- Choose the only existing subscription assigned for this lab (1).
-      - Region: Select **<inject key="Region" enableCopy="false" />** **(2)**
-      - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>** **(3)**
+      - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>** **(2)**
+      - Region: Select  **<inject key="Region" enableCopy="false" />** **(3)**
       - Storage account: Select **storage<inject key="DeploymentID" enableCopy="false"></inject>** **(4)**
       - File share: Create a new file share named **blob<inject key="DeploymentID" enableCopy="false"></inject>** **(5)**
       - Click **Create (6)**
@@ -190,10 +190,14 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. Repeat the commands you executed in steps 7 and 8 for the language of your preference.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. 
 
 <validation step="d2e1f993-b207-40be-9554-9ece30e830a9" />
-   
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ### Task 4: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
