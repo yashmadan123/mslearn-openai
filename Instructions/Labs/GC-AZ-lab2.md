@@ -43,7 +43,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 1. From the left navigation pane, select the **DALL-E Playground** and ensure Delpoyment is **Dalle3**.
 
-    ![](../media/codedalle.png)
+    ![](../media/codedalle1.png)
 
 1. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
 
