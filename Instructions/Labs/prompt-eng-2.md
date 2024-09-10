@@ -1,4 +1,4 @@
-# Lab 02: Utilize prompt engineering in your app
+# Lab 01: Utilize prompt engineering in your app
 
 ## Lab scenario
 
