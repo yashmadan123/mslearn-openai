@@ -90,6 +90,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/new4.png)
 
+>**Note**: If GPT-3.5-turbo-16k is unavailable, deploy GPT-3.5-turbo instead.
+
 7. Within the **Deploy model** pop-up interface, enter the following details:
     
     - **Deployment name**: text-turbo (1) 
