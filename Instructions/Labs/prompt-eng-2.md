@@ -496,7 +496,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
      **Python**
    
       ```python
-    import os
+   import os
    import asyncio
    from dotenv import load_dotenv
    
