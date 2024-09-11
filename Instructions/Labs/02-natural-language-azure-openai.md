@@ -58,7 +58,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
 > - Si necesita ayuda, comuníquese con nosotros a labs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
-   <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
+   <validation step="8d0ea9cb-8ab4-4fa7-81a6-3642e4534d68" />
 
 ### Tarea 2: Implementar un modelo
 
@@ -112,7 +112,7 @@ Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a
 > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
 > - Si necesita ayuda, comuníquese con nosotros a labs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
-   <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
+   <validation step="d1610911-47ae-44ef-a286-4f4961a4b36d" />
 
 ### Tarea 3: Configurar una aplicación en Cloud Shell
 
@@ -173,7 +173,7 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
    
 #### Validación
 
-<validation step="2e8dadd1-f827-4597-8d99-c814ec85fbab" />
+   <validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
 
 > ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
 > - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
