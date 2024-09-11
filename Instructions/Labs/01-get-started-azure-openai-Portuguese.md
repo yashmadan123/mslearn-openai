@@ -48,7 +48,7 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
 > - Caso contrário, leia atentamente a mensagem de erro e tente novamente seguindo as instruções do guia do laboratório.
 > - Se precisar de assistência, entre em contato conosco pelo labs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudar você.
 
-   <validation step="4b6b5a36-2650-4f80-a408-879c57cf61a2" />
+   <validation step="1fa0e87b-eb46-463d-b63b-edf6e2282e16" />
 
 ## Tarefa 2: Implementar um modelo
 
@@ -96,7 +96,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
 #### Validação
 
-<validation step="d9a504d6-e0be-4fa9-a4ed-6ead18a10e03" />
+   <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
 
 > **Parabéns** por completar a tarefa! Agora é hora de validá-la. Aqui estão os passos:
 > - Clique no botão Validar para a tarefa correspondente. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa. 
