@@ -624,7 +624,7 @@ In this task, you will run your configured app to send a request to your model a
     ```prompt
     You are an AI assistant
     ```
-     ![](../media/x232.png)
+     ![](../media/system-1.png)
 
     **User message:**
 
