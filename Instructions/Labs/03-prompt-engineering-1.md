@@ -600,7 +600,7 @@ Now that your app has been configured, run it to send your request to your model
         ```prompt
         You are an AI assistant
         ```
-        ![](../media/x232.png)
+        ![](../media/system-1.png)
     * **User message:**
 
         ```prompt
