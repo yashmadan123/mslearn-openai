@@ -153,7 +153,7 @@ Now you're ready to explore the code used to call the REST API and generate an i
 
 Now that you've reviewed the code, it's time to run it and generate some images.
 
-1. If you'r following **C#** Lanaguage kindly open **generate_image.csproj** file replace with following code and save the file before moving to next step.
+1. If you're following **C#** Lanaguage kindly open **generate_image.csproj** file replace with following code and save the file before moving to next step.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
