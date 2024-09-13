@@ -55,7 +55,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 #### Validation
 
-<validation step="92fd5d61-ee1f-44aa-b7cc-4545c53b5b92" />
+<validation step="500ab73f-41d7-4883-ab2c-110281939c65" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -99,7 +99,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
 
-     ![](../media/intial-deploy.jpg)
+     ![](../media/updateimage.png)
 
  >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
@@ -109,7 +109,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 #### Validation
 
-<validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
+<validation step="5b357640-1ad5-4345-a277-affb04231f21" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -157,7 +157,7 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
-11. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
+11. In the **Setup** section near the system message, select the **Example** from the dropdown of **Add section** button. Add the following example.
 
  **User:**
 
@@ -235,28 +235,27 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 5. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="Deployment-ID" enableCopy="false"></inject>
+    - **Resource group**: Select **Use existing**.(2)
+      - openai-<inject key="Deployment-ID" enableCopy="false"></inject>  
+    - **Region**: <inject key="Region" enableCopy="false" />(3)
+    - **Storage account**: Create a new Stroage account named storage<inject key="Deployment-ID" enableCopy="false"></inject>.(4)
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create** (6)
 
     ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
    
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+7. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-7. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+8. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+9. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+10. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/03-prompt-engineering
@@ -264,7 +263,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
-10. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
+11. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
 
     ```
     code .     
@@ -277,7 +276,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    
 #### Validation
 
-<validation step="b83818f3-0527-485b-85c5-57c7f0149fe1" />
+<validation step="8d41eaac-eee1-47ac-8bf3-ea2e2e5b3343" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -335,7 +334,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     **C#**: Program.cs
 
     ```csharp
-   // Initialize the Azure OpenAI client
+   // Configure the Azure OpenAI client
    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
 
