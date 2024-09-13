@@ -87,7 +87,7 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
       ```code
-      Write a function in python that takes a character and string as input, and returns how many times that character appears in the         string
+      Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
       ```    
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
