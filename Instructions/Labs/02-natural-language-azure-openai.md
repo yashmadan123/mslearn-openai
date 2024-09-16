@@ -138,8 +138,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **Region**: <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing** (3)
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new** (4)
-      - storage<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Storage account name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
