@@ -48,7 +48,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="1fa0e87b-eb46-463d-b63b-edf6e2282e16" />
+<validation step="1fa0e87b-eb46-463d-b63b-edf6e2282e16" />
 
 ### Task 2: Deploy a model
 
