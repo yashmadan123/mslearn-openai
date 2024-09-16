@@ -81,13 +81,13 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 7. Within the **Deploy model** pop-up interface, enter the following details:
     
     - **Deployment name**: my-gpt-model (1) 
-    - **Model version**: 0613 (2)
+    - **Model version**: 0301(Default) (2)
     - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Tokens per Minute Rate Limit (thousands)**: 12K (4)
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-      ![](../media/new3.png)
+      ![](../media/op1.png)
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
@@ -110,19 +110,17 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
 
-2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected and then in the **Examples** list, select **Generate a quiz**.
-
-    The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
+2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected.Provide any prompt in the prompt section.
 
 3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response.
 
-    The response consists of a quiz based on the example in the prompt.
-
+    ![](../media/op2.png)
+   
     >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce a new language each time it's called.
 
-5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
 ### Task 4: Use the Chat playground
 
@@ -132,15 +130,17 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **System message** box, click on **+ Add**, and enter the following message and response in the designated boxes:
+3. Below the **System message** box, click on **+ Add Section** dropdown and choose **Examples** from the dropdown, and enter the following message and response in the designated boxes:
 
     - **User**: `What are different types of artificial intelligence?`
     
     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-    > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+    > **Note**: Few-short examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
   
 4. Click on **Apply changes** and then click on **Continue** in the **Update system message** pop-up tab to start a new session and set the behavioural context of the chat system.
+
+    ![](../media/op3.png)
 
 5. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`
 
@@ -158,9 +158,11 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
 You can use the prompt and parameters to maximize the likelihood of generating the response you need.
 
-1. In the **Configuration** pane select **Parameter** , set the following parameter values:
+1. In the **Setup** pane select **Parameter** tab , set the following parameter values:
     - **Temperature**: 0
     - **Max response (Max number of tokens)**: 500
+
+      ![](../media/op4.png)
 
 2. Submit the following message in the chat session 
 
@@ -188,7 +190,7 @@ You can use the prompt and parameters to maximize the likelihood of generating t
 
 In addition to generating natural language responses, you can use GPT models to generate code.
 
-1. In the **Setup** pane, select the **Empty Example** template and then click on **Continue** in the **Update system message** pop up tab to reset the system message.
+1. In the **Setup** pane, select the **Reset** in the **System Message** tab and then click on **Continue** in the **Update system message** pop up tab to reset the system message.
 
 2. Enter the system message: `You are a Python developer.` and click on **Apply changes** and then click on **Continue** in the **Update system message** pop-up tab.
 
