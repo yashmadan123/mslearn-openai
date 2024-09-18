@@ -43,33 +43,26 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/openai_studio1.png)
 
-6. In the prompt select **Explore the new experience** 
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
-
-7. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+6. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/deploy-1.jpg "Create a new deployment")
    
-8. Search for **GPT-4**, click on **Confirm**
+7. Search for **GPT-4**, click on **Confirm**
 
       ![](../media/gpt-4.jpg)
   
 
-9. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-4 (1)
-      
-      > **Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-      
+8. Within the **Deploy model** pop-up interface, enter the following details:
+   
+    - **Deployment name**: text-turbo-1 (4)
     - **Model version**: 1106-Preview (2)
     - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo-1 (4)
     - Click on **Advanced Settings** (5)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
     - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
-      
-      ![](../media/demoss.png)
+    - Click on **Deploy** (8)
+
 
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
@@ -93,9 +86,9 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
      - **Setup** - used to set the context for the model's responses.
     - **Chat session** - used to submit chat messages and view responses.
-    - **Configuration** - used to configure settings for the model deployment.
+    - **Deployment** - used to configure settings for the model deployment.
 
-3. In the **Configuration** section, ensure that your model deployment `text-turbo-1` is selected.
+3. In the **Deployment** section, ensure that your model deployment `text-turbo-1` is selected.
 4. In the **Setup** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
 5. In the **Chat session**, submit the following queries, and review the responses:
 
