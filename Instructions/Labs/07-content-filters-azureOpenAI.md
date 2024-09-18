@@ -30,20 +30,17 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
    ![](../media/openai_studio.png)
 
-4. In the prompt select **Explore the new experience**.
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+4. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/deploy-1.jpg "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+5. Search for **GPT-35-TURBO**, click on **Confirm**
 
       ![](../media/pg-09.jpg)
 
    
-7. Within the **Deploy model** pop-up interface, enter the following details:
+6. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: 35turbo (1)
     - **Select a Model**: gpt-35-turbo (2)
       
