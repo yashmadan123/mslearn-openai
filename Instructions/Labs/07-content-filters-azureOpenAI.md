@@ -68,7 +68,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 Let's see how the model behaves in a conversational interaction.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
-1. In the **Setup** section at the top, select the **Default** system message template and click on **Continue**.
+1. In the **Setup** section at the top, select the **Default** system message template.
 1. In the **Chat session** section, enter the following prompt.
 
     ```code
@@ -98,7 +98,7 @@ Let's see how the model behaves in a conversational interaction.
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
 1. In Azure OpenAI Studio, view the **Content filters** page from the left navigation menu.
-1. Select **Create customized content filter** and review the default settings for a content filter.
+1. Select **Create content filter** and review the default settings for a content filter.
 
     Content filters are based on restrictions for four categories of potentially harmful content:
 
