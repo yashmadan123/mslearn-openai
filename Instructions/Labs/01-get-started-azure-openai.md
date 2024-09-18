@@ -21,11 +21,11 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Open AI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/openai-1.png)
+    ![](../media/openai-1.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create1.png)
+    ![](../media/openai_create1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings and click on **Next**
    
@@ -57,27 +57,27 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Open AI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/openai-1.png)
+    ![](../media/openai-1.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-      ![](../media/OpenAI_select.png)
+    ![](../media/OpenAI_select.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-      ![](../media/openai_studio.png)
+    ![](../media/openai_studio.png)
    
 4. In the prompt select **Explore the new experience** 
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
+    ![](../media/explore_new-exp.jpg "Create a new deployment")
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+    ![](../media/deploy-1.jpg "Create a new deployment")
 
 6. Search for **GPT-35-TURBO**, click on **Confirm**
 
-      ![](../media/pg-09.jpg)
+    ![](../media/pg-09.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: my-gpt-model (1)
@@ -91,7 +91,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
     - **Enable dynamic quota**: Enabled (6)
     - Click on **Create** (7)
   
-         ![](../media/deploy-16-K.jpg)
+        ![](../media/deploy-16-K.jpg)
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
