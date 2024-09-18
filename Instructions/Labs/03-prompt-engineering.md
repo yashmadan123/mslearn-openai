@@ -323,7 +323,7 @@ Applications for both C# and Python have been provided, and both apps feature th
      ```
 8. The  modified code should look like as shown below:
 
-      **C#**
+      - **C#**
       
       ```csharp
      // Implicit using statements are included
@@ -420,7 +420,7 @@ Applications for both C# and Python have been provided, and both apps feature th
         }         
       ```
    
-      **Python**
+      - **Python**
    
        ```
        import os
