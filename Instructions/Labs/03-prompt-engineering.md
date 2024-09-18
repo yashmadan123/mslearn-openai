@@ -61,9 +61,9 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
 
-1. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
+2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
 
-1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
     ```code
         1. Create a list of animals
         
@@ -73,11 +73,11 @@ Before using your app, examine how prompt engineering improves the model respons
     ```
      >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again 
 
-1. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
+4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
-1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
+5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
 
-1. Format the instructions as python comments. Send the following prompt to the model.
+6. Format the instructions as python comments. Send the following prompt to the model.
 
     ```code
    
@@ -89,11 +89,11 @@ Before using your app, examine how prompt engineering improves the model respons
    
     ```
 
-1. The model should correctly respond with complete python code doing what the comments requested.
+7. The model should correctly respond with complete python code doing what the comments requested.
 
-1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
+8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
 
-1. Send the following prompt to the model.
+9. Send the following prompt to the model.
 
    ```code
     Severe drought likely in California
@@ -104,9 +104,9 @@ Before using your app, examine how prompt engineering improves the model respons
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-1. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
+10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 
-1. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
+11. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
 
     **User:**
 
@@ -128,7 +128,7 @@ Before using your app, examine how prompt engineering improves the model respons
     Sports
     ```
 
-1. Add another example with the following text.
+12. Add another example with the following text.
 
     **User:**
 
@@ -148,7 +148,7 @@ Before using your app, examine how prompt engineering improves the model respons
     Entertainment
     ```
 
-1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+13. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
 
     ```code
     Severe drought likely in California
@@ -159,7 +159,7 @@ Before using your app, examine how prompt engineering improves the model respons
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-1. This time the model should respond with an appropriate classification, even without instructions.
+14. This time the model should respond with an appropriate classification, even without instructions.
 
 ### Task 3: Set up an application in Cloud Shell
 
@@ -169,11 +169,11 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-3. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-4. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-5. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
     rm -r azure-openai -f
@@ -181,7 +181,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```
     > **Note:** if you get Message saying already cloned , please move the next step.
 
-7. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
     cd azure-openai/Labfiles/03-prompt-engineering
@@ -236,7 +236,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     pip install openai==1.13.3
     ```
 
-6. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -254,7 +254,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     # Add Azure OpenAI package
     from openai import AsyncAzureOpenAI
     ```
-8. Open up the application code for your language and add the necessary code for configuring the client.
+6. Open up the application code for your language and add the necessary code for configuring the client.
 
     **C#**: Program.cs
 
@@ -277,7 +277,7 @@ Applications for both C# and Python have been provided, and both apps feature th
         api_version="2024-02-15-preview"
         )
     ```
-10. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
      **C#**: Program.cs
 
@@ -321,7 +321,7 @@ Applications for both C# and Python have been provided, and both apps feature th
          max_tokens=800
      )
      ```
-11. The  modified code should look like as shown below:
+8. The  modified code should look like as shown below:
 
      **C#**
       
@@ -501,7 +501,7 @@ Applications for both C# and Python have been provided, and both apps feature th
        asyncio.run(main())
        ```
 
-13. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
+9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
 ### Task 5: Run your application
 
@@ -509,9 +509,9 @@ Now that your app has been configured, run it to send your request to your model
 
 1. In the folder of your preferred language, open `system.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
-1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
-1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -538,13 +538,13 @@ Now that your app has been configured, run it to send your request to your model
     </Project> 
    ```  
 
-1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+4. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python prompt-engineering.py`
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-1. For the first iteration, enter the following prompts:
+5. For the first iteration, enter the following prompts:
 
     **System message**
 
@@ -559,9 +559,9 @@ Now that your app has been configured, run it to send your request to your model
     ```
      ![](../media/x233.png)
 
-1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
+6. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 
-1. Next, enter the following prompts which specify a format for the response:
+7. Next, enter the following prompts which specify a format for the response:
 
     **System message**
     ```prompt
@@ -577,9 +577,9 @@ Now that your app has been configured, run it to send your request to your model
        - Call for donations to be given at our website
     ```
 
-1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
+8. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
 
-1. Next, enter the following prompts that additionally specify the content:
+9. Next, enter the following prompts that additionally specify the content:
 
     **System message**
     ```prompt
@@ -596,9 +596,9 @@ Now that your app has been configured, run it to send your request to your model
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
 
-1. Observe the output, and see how the email has changed based on your clear instructions.
+10. Observe the output, and see how the email has changed based on your clear instructions.
 
-1. Next, enter the following prompts where we add details about tone to the system message:
+11. Next, enter the following prompts where we add details about tone to the system message:
 
     **System message**
 
@@ -616,13 +616,13 @@ Now that your app has been configured, run it to send your request to your model
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
 
-1. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
+12. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
-1. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
+13. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
 
-1. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
+14. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
 
-1. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+15. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
 
     **C#**: Program.cs
 
@@ -642,9 +642,9 @@ Now that your app has been configured, run it to send your request to your model
     user_message = grounding_text + user_message
     ```
 
-1. Save the file and rerun your app.
+16. Save the file and rerun your app.
 
-1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
+17. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
 
     **System message**
     ```prompt
