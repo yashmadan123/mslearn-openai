@@ -296,6 +296,9 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
+9. Update the CSharp.csproj file with the updated framework at **Target Framework** section, update the value as **<TargetFramework>net8.0</TargetFramework>** and **Save** the file.
+
+
 ### Task 4: Test your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
