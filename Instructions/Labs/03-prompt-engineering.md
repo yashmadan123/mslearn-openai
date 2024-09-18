@@ -354,24 +354,23 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     **C#**: Program.cs
 
-    ```csharp
-  // Format and send the request to the model
-var chatCompletionsOptions = new ChatCompletionsOptions()
-{
-    Messages =
-    {
-        new ChatRequestSystemMessage(systemMessage),
-        new ChatRequestUserMessage(userMessage)
-    },
-    Temperature = 0.7f,
-    MaxTokens = 800,
-    DeploymentName = oaiDeploymentName
-};
-
-// Get response from Azure OpenAI
-Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-
-    ```
+    ```csharp 
+   // Format and send the request to the model
+   var chatCompletionsOptions = new ChatCompletionsOptions()
+   {
+       Messages =
+       {
+           new ChatRequestSystemMessage(systemMessage),
+           new ChatRequestUserMessage(userMessage)
+       },
+       Temperature = 0.7f,
+       MaxTokens = 800,
+       DeploymentName = oaiDeploymentName
+   };
+   
+   // Get response from Azure OpenAI
+   Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+   ```
 
     **Python**: prompt-engineering.py
 
