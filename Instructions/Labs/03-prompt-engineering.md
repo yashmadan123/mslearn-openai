@@ -116,7 +116,7 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 
-1. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
+1. In the **Setup** section near the system message, select the **Add section** button and select example to add the following as example.
 
     **User:**
 
@@ -159,7 +159,7 @@ Before using your app, examine how prompt engineering improves the model respons
     Entertainment
      ```
 
-1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+1. Save those changes to the assistant setup Apply Changes, click Continue, and send the same prompt about California drought, provided here again for convenience.
 
     ```code
     Severe drought likely in California
