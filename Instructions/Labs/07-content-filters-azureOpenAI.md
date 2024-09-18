@@ -41,7 +41,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
    
 6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: 35turbo (1)
+    - **Deployment name**: 35turbo1 (1)
     - **Model version**: Auto-update to default (3)<br>
     - **Deployment type**: Standard (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
