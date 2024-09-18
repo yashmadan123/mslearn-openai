@@ -36,12 +36,14 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
       
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+
         ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
 4. In the **Overview** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+
     ![](../media/openai_studio1.png)
    
-5. In **Welcome to Azure OpenAI Service** page, Choose **Deployments (1)**, Select the existing deployment **text-turbo (2)** (i.e gpt 35 turbo-16K ).
+6. In **Welcome to Azure OpenAI Service** page, Choose **Deployments (1)**, Select the existing deployment **text-turbo (2)** (i.e gpt 35 turbo-16K ).
    
     ![](../media/text-turbo(1).png "Create a new deployment")
 
@@ -73,10 +75,10 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
-1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on 
-   **Continue**.
+1. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
 
 1. Format the instructions as python comments. Send the following prompt to the model.
+
     ```code
    
     # 1. Create a list of animals
@@ -92,20 +94,22 @@ Before using your app, examine how prompt engineering improves the model respons
 1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
 
 1. Send the following prompt to the model.
-    ```code
+
+   ```code
     Severe drought likely in California
     Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
    
     In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
    
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-    
     ```
 
 1. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 
 1. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
+
     **User:**
+
     ```code
    
     New York Baseballers Wins Big Against Chicago
@@ -117,13 +121,17 @@ Before using your app, examine how prompt engineering improves the model respons
     The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
     
     ```
+
     **Assistant:**
-     ```code
+
+    ```code
     Sports
-     ```
+    ```
 
 1. Add another example with the following text.
+
     **User:**
+
     ```code
     Joyous moments at the Oscars
     The Oscars this past week where quite something!
@@ -133,12 +141,15 @@ Before using your app, examine how prompt engineering improves the model respons
    
     From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
     ```
+
     **Assistant:**
-     ```code
+
+    ```code
     Entertainment
-     ```
+    ```
 
 1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+
     ```code
     Severe drought likely in California
     Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
@@ -155,29 +166,35 @@ Before using your app, examine how prompt engineering improves the model respons
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+3. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+4. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
-     ```bash
+5. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+
+    ```bash
     rm -r azure-openai -f
     git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-     ```
+    ```
     > **Note:** if you get Message saying already cloned , please move the next step.
 
-5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+7. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+
     ```bash
-   cd azure-openai/Labfiles/03-prompt-engineering
+    cd azure-openai/Labfiles/03-prompt-engineering
     ```
     Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
-    Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
+
+   Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
+
     ```bash
-   code .
+    code .
     ```
    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+   
    ![](../media/classic-cloudshell-prompt.png)
 
 #### Validation
@@ -195,6 +212,7 @@ Applications for both C# and Python have been provided, and both apps feature th
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
 
 2. Open the configuration file for your language.
+    
     - C#: `appsettings.json`
     - Python: `.env`
     
@@ -202,11 +220,14 @@ Applications for both C# and Python have been provided, and both apps feature th
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
+
     **C#**
+
     ```bash
-   cd CSharp
-   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+    cd CSharp
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
+
     **Python**
    
     ```bash
@@ -215,28 +236,39 @@ Applications for both C# and Python have been provided, and both apps feature th
     pip install openai==1.13.3
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+6. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+
     **C#**: Program.cs
-   At line number 9
+
+    At line number 9
+
     ```csharp
-   // Add Azure OpenAI package
-   using Azure.AI.OpenAI;
+    // Add Azure OpenAI package
+    using Azure.AI.OpenAI;
     ```
+
     **Python**: prompt-engineering.py
-   At line number 6
+
+    At line number 6
     ```python
     # Add Azure OpenAI package
     from openai import AsyncAzureOpenAI
     ```
-6. Open up the application code for your language and add the necessary code for configuring the client.
+8. Open up the application code for your language and add the necessary code for configuring the client.
+
     **C#**: Program.cs
-   At line number 61
+
+    At line number 61
+
     ```csharp
-   // Initialize the Azure OpenAI client
-   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+    // Initialize the Azure OpenAI client
+    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
+
     **Python**: prompt-engineering.py
-   At line number 23
+
+    At line number 23
+
     ```python
     # Configure the Azure OpenAI client
     client = AsyncAzureOpenAI(
@@ -245,11 +277,14 @@ Applications for both C# and Python have been provided, and both apps feature th
         api_version="2024-02-15-preview"
         )
     ```
-7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
-    **C#**: Program.cs
-   At line number 65
-    ```csharp
-    // Format and send the request to the model
+10. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+
+     **C#**: Program.cs
+
+     At line number 65
+
+     ```csharp
+     // Format and send the request to the model
          var chatCompletionsOptions = new ChatCompletionsOptions()
          {
              Messages =
@@ -264,30 +299,34 @@ Applications for both C# and Python have been provided, and both apps feature th
          
          // Get response from Azure OpenAI
          Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-    ```
-    **Python**: prompt-engineering.py
-   At line number 53
-   ```python
-    # Format and send the request to the model
-    messages =[
-        {"role": "system", "content": system_message},
-        {"role": "user", "content": user_message},
-    ]
+     ```
+
+     **Python**: prompt-engineering.py
+
+     At line number 53
+   
+     ```python
+     # Format and send the request to the model
+     messages =[
+         {"role": "system", "content": system_message},
+         {"role": "user", "content": user_message},
+     ]
     
-    print("\nSending request to Azure OpenAI model...\n")
-    # Call the Azure OpenAI model
-    response = await client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=0.7,
-        max_tokens=800
-    )
-    ```
-8. The  modified code should look like as shown below:
-    **C#**
+     print("\nSending request to Azure OpenAI model...\n")
+     # Call the Azure OpenAI model
+     response = await client.chat.completions.create(
+         model=model,
+         messages=messages,
+         temperature=0.7,
+         max_tokens=800
+     )
+     ```
+11. The  modified code should look like as shown below:
+
+     **C#**
       
-      ```csharp
-    // Implicit using statements are included
+     ```csharp
+     // Implicit using statements are included
         using System.Text;
         using System.Text.Json;
         using Microsoft.Extensions.Configuration;
@@ -379,9 +418,9 @@ Applications for both C# and Python have been provided, and both apps feature th
             // Write response to console
             Console.WriteLine($"\nResponse:\n{completion}\n\n");
         }         
-      ```
+       ```
    
-     **Python**
+      **Python**
    
        ```
        import os
@@ -462,17 +501,18 @@ Applications for both C# and Python have been provided, and both apps feature th
        asyncio.run(main())
        ```
 
-10. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
+13. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
 ### Task 5: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
-1.In the folder of your preferred language, open `system.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
+1. In the folder of your preferred language, open `system.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
 1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
    ```
    <Project Sdk="Microsoft.NET.Sdk">
    
@@ -497,16 +537,22 @@ Now that your app has been configured, run it to send your request to your model
    
     </Project> 
    ```  
+
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+
     - **C#**: `dotnet run`
     - **Python**: `python prompt-engineering.py`
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+
 1. For the first iteration, enter the following prompts:
+
     **System message**
+
     ```prompt
     You are an AI assistant
     ```
      ![](../media/system-1.png)
+
     **User message:**
     ```prompt
     Write an intro for a new wildlife Rescue
@@ -516,11 +562,14 @@ Now that your app has been configured, run it to send your request to your model
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 
 1. Next, enter the following prompts which specify a format for the response:
+
     **System message**
     ```prompt
     You are an AI assistant helping to write emails
     ```
+
     **User message:**
+
     ```prompt
     Write a promotional email for a new wildlife rescue, including the following: 
        - Rescue name is Contoso 
@@ -531,11 +580,14 @@ Now that your app has been configured, run it to send your request to your model
 1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
 
 1. Next, enter the following prompts that additionally specify the content:
+
     **System message**
     ```prompt
     You are an AI assistant helping to write emails
     ```
+
     **User message:**
+
     ```prompt
     Write a promotional email for a new wildlife rescue, including the following: 
     - Rescue name is Contoso 
@@ -547,11 +599,15 @@ Now that your app has been configured, run it to send your request to your model
 1. Observe the output, and see how the email has changed based on your clear instructions.
 
 1. Next, enter the following prompts where we add details about tone to the system message:
+
     **System message**
+
     ```prompt
     You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.
     ```
+
     **User message:**
+
     ```prompt
     Write a promotional email for a new wildlife rescue, including the following: 
     - Rescue name is Contoso 
@@ -567,14 +623,18 @@ Now that your app has been configured, run it to send your request to your model
 1. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
 
 1. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+
     **C#**: Program.cs
+
     ```csharp
     // Format and send the request to the model
     Console.WriteLine("\nAdding grounding context from grounding.txt");
     string groundingText = System.IO.File.ReadAllText("grounding.txt");
     userMessage = groundingText + userMessage;
     ```
+
     **Python**: prompt-engineering.py
+
     ```python
     # Format and send the request to the model
     print("\nAdding grounding context from grounding.txt")
@@ -585,11 +645,14 @@ Now that your app has been configured, run it to send your request to your model
 1. Save the file and rerun your app.
 
 1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
+
     **System message**
     ```prompt
     You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
     ```
+
     **User message:**
+
     ```prompt
     What animal is the favorite of children at Contoso?
     ```
