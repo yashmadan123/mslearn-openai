@@ -69,15 +69,15 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
-    ```code
-    1. Create a list of animals
+   ```code
+   1. Create a list of animals
         
-    2. Create a list of whimsical names for those animals
+   2. Create a list of whimsical names for those animals
         
-    3. Combine them randomly into a list of 25 animal and name pairs
-    ```
+   3. Combine them randomly into a list of 25 animal and name pairs
+   ```
 
-    >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again 
+   >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again 
 
 1. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
