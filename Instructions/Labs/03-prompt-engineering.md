@@ -418,7 +418,7 @@ Applications for both C# and Python have been provided, and both apps feature th
             // Write response to console
             Console.WriteLine($"\nResponse:\n{completion}\n\n");
         }         
-       ```
+     ```
    
     **Python**
    
