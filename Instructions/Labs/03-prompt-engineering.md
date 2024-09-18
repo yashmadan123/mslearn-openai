@@ -65,7 +65,7 @@ Before using your app, examine how prompt engineering improves the model respons
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
 
-1. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
+1. In the **Setup** section at the left, navigate to **Give the model instructions and context** box. enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
