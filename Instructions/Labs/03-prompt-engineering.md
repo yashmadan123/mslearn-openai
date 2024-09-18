@@ -234,6 +234,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+
 ### Task 4: Configure your application
 
 Applications for both C# and Python have been provided, and both apps feature the same functionality. First, you'll complete some key parts of the application to enable using your Azure OpenAI resource with asynchronous API calls.
@@ -528,9 +529,11 @@ Applications for both C# and Python have been provided, and both apps feature th
    
        if __name__ == '__main__': 
        asyncio.run(main())
-    ```
+  ```
+```
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
+
 
 ### Task 5: Run your application
 
@@ -542,7 +545,7 @@ Now that your app has been configured, run it to send your request to your model
 
 3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
 
-   ```
+  ```
    <Project Sdk="Microsoft.NET.Sdk">
    
    <PropertyGroup>
@@ -565,7 +568,7 @@ Now that your app has been configured, run it to send your request to your model
      </ItemGroup>
    
     </Project> 
-   ```  
+  ```  
 
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
