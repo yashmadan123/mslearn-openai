@@ -355,21 +355,21 @@ In this task, you will complete key parts of the provided C# or Python applicati
     **C#**: Program.cs
 
     ```csharp
-     // Format and send the request to the model
-   var chatCompletionsOptions = new ChatCompletionsOptions()
-   {
-       Messages =
-       {
-           new ChatRequestSystemMessage(systemMessage),
-           new ChatRequestUserMessage(userMessage)
-       },
-       Temperature = 0.7f,
-       MaxTokens = 800,
-       DeploymentName = oaiDeploymentName
-   };
-   
-   // Get response from Azure OpenAI
-   Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+  // Format and send the request to the model
+var chatCompletionsOptions = new ChatCompletionsOptions()
+{
+    Messages =
+    {
+        new ChatRequestSystemMessage(systemMessage),
+        new ChatRequestUserMessage(userMessage)
+    },
+    Temperature = 0.7f,
+    MaxTokens = 800,
+    DeploymentName = oaiDeploymentName
+};
+
+// Get response from Azure OpenAI
+Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
 
     ```
 
@@ -495,7 +495,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
    
      **Python**
    
-      ```python
+   ```python
    import os
    import asyncio
    from dotenv import load_dotenv
@@ -573,7 +573,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
    if __name__ == '__main__': 
        asyncio.run(main())
 
-     ```
+   ```
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
