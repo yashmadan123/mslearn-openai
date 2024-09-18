@@ -323,9 +323,9 @@ Applications for both C# and Python have been provided, and both apps feature th
      ```
 8. The  modified code should look like as shown below:
 
-     **C#**
+      **C#**
       
-     ```csharp
+      ```csharp
      // Implicit using statements are included
         using System.Text;
         using System.Text.Json;
@@ -418,11 +418,11 @@ Applications for both C# and Python have been provided, and both apps feature th
             // Write response to console
             Console.WriteLine($"\nResponse:\n{completion}\n\n");
         }         
-     ```
+      ```
    
-    **Python**
+      **Python**
    
-       ```code
+       
        import os
        import asyncio
        from dotenv import load_dotenv
@@ -499,7 +499,7 @@ Applications for both C# and Python have been provided, and both apps feature th
    
        if __name__ == '__main__': 
        asyncio.run(main())
-       ```
+       
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
