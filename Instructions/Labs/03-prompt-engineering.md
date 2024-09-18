@@ -159,23 +159,23 @@ In this task, you will examine how prompt engineering improves model responses i
 10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 11. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
 
- **User:**
+   **User:**
+   
+   ```code
+   New York Baseballers Wins Big Against Chicago
+   
+   New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
+   
+   Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
+   
+   The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
+   ```
 
- ```code
-New York Baseballers Wins Big Against Chicago
-
-New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
-
-Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
-
-The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
- ```
-
- **Assistant:**
-
- ```code
-Sports
- ```
+    **Assistant:**
+   
+    ```code
+   Sports
+    ```
 
 12. Add another example with the following text.
 
