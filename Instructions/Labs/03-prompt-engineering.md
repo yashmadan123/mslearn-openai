@@ -422,7 +422,7 @@ Applications for both C# and Python have been provided, and both apps feature th
    
       **Python**
    
-       
+       ```
        import os
        import asyncio
        from dotenv import load_dotenv
@@ -499,7 +499,7 @@ Applications for both C# and Python have been provided, and both apps feature th
    
        if __name__ == '__main__': 
        asyncio.run(main())
-       
+       ```
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
