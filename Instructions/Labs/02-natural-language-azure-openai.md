@@ -57,10 +57,6 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
-    - **Select a Model**: gpt-35-turbo-16k (2)
-      
-        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-     
     - **Model version**: Auto-update to default (3)<br>
     - **Deployment type**: Standard (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
