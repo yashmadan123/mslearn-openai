@@ -19,6 +19,8 @@ By the end of this lab, you will be able to:
   
 ## Pre-requisites
 
+Participants should have:
+
 - Familiarity with Azure OpenAI Service.
 - Prompt Engineering Basics
 
@@ -28,9 +30,11 @@ In this hands-on lab, you'll delve into prompt engineering by first grasping the
 
 ## Architecture Diagram
 
-   ![](./Lab-Scenario-Preview/media/lab-03-ad.PNG)
+![](./Lab-Scenario-Preview/media/lab-03-ad.PNG)
 
 ## Explanation of Components
+
+The architecture for this lab involves the following key components:
 
 1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models and these models integrates with your data, enabling customized and secure interactions.
 1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
@@ -113,6 +117,8 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 1. If **Action required** pop-up window appears, click on **Ask later**.
 
    ![Ask Later](../media/ask-later-01.png)
+
+   >**NOTE:** Do not enable MFA, select **Ask Later**.
     
 1. If prompted to stay signed in, you can click "No."
  
