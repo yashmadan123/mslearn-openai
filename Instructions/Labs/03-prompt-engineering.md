@@ -212,6 +212,19 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
    ![](../media/classic-cloudshell-prompt.png)
 
+6. If you're not navigated to code editor re-run the following command:
+
+7. The files are downloaded to a folder named **03-prompt-engineering** make sure you are in correct directory or navigate to the lab files for this exercise using the following command.
+
+    ```bash
+     cd azure-openai/Labfiles/02-azure-openai-api
+    ```
+8. Open the built-in code editor
+
+   ```bash
+   code .
+   ```
+
 #### Validation
 
    <validation step="eb8dcedf-f127-44f8-afe2-0ae019c6b7c5" />
