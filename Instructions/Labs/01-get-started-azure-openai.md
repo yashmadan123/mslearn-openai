@@ -89,7 +89,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
     - **Deployment type**: Standard (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
     - **Enable dynamic quota**: Enabled (6)
-    - Click on **Create** (7)
+    - Click on **Deploy** (7)
   
         ![](../media/deploy-16-K.jpg)
 
