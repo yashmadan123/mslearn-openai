@@ -243,7 +243,7 @@ For this exercise, you'll complete some key parts of the application to enable u
          """
      ```
 
-       >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+   >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
 7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
