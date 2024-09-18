@@ -86,13 +86,11 @@ Before using your app, examine how prompt engineering improves the model respons
 1. Format the instructions as python comments. Send the following prompt to the model.
 
    ```code
-   
    # 1. Create a list of animals
    
    # 2. Create a list of whimsical names for those animals
    
    # 3. Combine them randomly into a list of 25 animal and name pairs
-   
    ```
 
 1. The model should correctly respond with complete python code doing what the comments requested.
