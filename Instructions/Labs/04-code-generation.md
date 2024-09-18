@@ -41,7 +41,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    
 6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: 35-turbo (1)
+    - **Deployment name**: 35turbo (1)
     - **Deployment type**: Standard (3)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
