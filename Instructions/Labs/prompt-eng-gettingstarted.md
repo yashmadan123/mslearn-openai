@@ -48,7 +48,7 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
 
    ![](../media/labguide-1.png)
 
-## Virtual Machine & Lab Guide
+### Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
@@ -124,10 +124,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
-1. Click "Next" from the bottom right corner to embark on your Lab journey!
-
-   ![Launch Azure Portal](../media/sc900-image(3).png)
-
 This hands-on-lab will help you to master prompt engineering by crafting effective prompts with Azure OpenAI Playground to shape AI responses. You'll apply these techniques to enhance advertising emails and categorize articles, learning to optimize AI outputs for various use cases.
 
 ## Support Contact
@@ -139,6 +135,8 @@ Learner Support Contacts:
 - Email Support: labs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on Next from the lower right corner to move on to the next page.
+Now, click on **Next** from the lower right corner to move on to the next page.
 
-## Happy Learning!!
+![Launch Azure Portal](../media/sc900-image(3).png)
+
+### Happy Learning!!
