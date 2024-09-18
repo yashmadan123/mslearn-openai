@@ -46,7 +46,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
     - **Deployment type**: Standard (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
     - **Enable dynamic quota**: Enabled (6)
-    - Click on **Create** (7)
+    - Click on **Deploy** (7)
   
          ![](../media/deploy-16-K.jpg)
 
