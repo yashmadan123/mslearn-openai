@@ -522,7 +522,7 @@ Applications for both C# and Python have been provided, and both apps feature th
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
-1.In the folder of your preferred language, open `system.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
+1. In the folder of your preferred language, open `system.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
 2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
@@ -593,6 +593,7 @@ Now that your app has been configured, run it to send your request to your model
        - Call for donations to be given at our website
     ```
 1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
+
 1. Next, enter the following prompts that additionally specify the content:
 
     **System message**
@@ -612,6 +613,7 @@ Now that your app has been configured, run it to send your request to your model
     ```
 
 1. Observe the output, and see how the email has changed based on your clear instructions.
+
 1. Next, enter the following prompts where we add details about tone to the system message:
 
     **System message**
