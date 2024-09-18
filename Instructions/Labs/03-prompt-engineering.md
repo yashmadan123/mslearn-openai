@@ -422,7 +422,7 @@ Applications for both C# and Python have been provided, and both apps feature th
    
     **Python**
    
-       ```python
+       ```code
        import os
        import asyncio
        from dotenv import load_dotenv
