@@ -38,6 +38,8 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 4. Click on **Next** thrice and click on **Create** on **Review + submit** tab.
 
+   ![](./media/Openai02.png)
+
 5. Wait for deployment to complete.
 
 <validation step="8aae5f66-b7a9-4963-bf1f-8db101bab3db" />
@@ -93,11 +95,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 10. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: completion-instruct (1)
-    - **Model version**: Auto-update to default (3)<br>
-    - **Deployment type**: Standard (4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Deploy** (7)
+    - **Model version**: Auto-update to default (2)<br>
+    - **Deployment type**: Standard (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
 
       > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
    
