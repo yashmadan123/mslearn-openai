@@ -176,12 +176,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
 1. In the **Chat Configuration** pane select **Parameter** , set the following parameter values:
-    
     - **Temperature**: 0
-    
     - **Max response**: 500
-
-       ![](../media/temp.jpg)
+         ![](../media/temp.jpg)
       
 2. Submit the following message in chat session
 
@@ -214,11 +211,9 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
 1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
-
    ![](../media/last-2.jpg)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
-
    ![](../media/openai-14.png)
 
 3. Submit the following user message:
@@ -228,8 +223,7 @@ In this task, you'll explore code-generation by testing the AI model’s ability
       ```
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
-
-    ![](../media/task-6-last.jpg)
+   ![](../media/task-6-last.jpg)
 
 ## Summary
 
