@@ -215,7 +215,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```
 
     **Python**
-     `test-openai-model.py`
+     `code-generation.py`
 
       ```python
     # Format and send the request to the model
@@ -246,7 +246,7 @@ Now that your app has been configured, run it to try generating code for each us
 3. Run the application.
 
     - **C#**: `dotnet run`
-    - **Python**: `python test-openai-model.py`
+    - **Python**: `python code-generation.py`
 
 
 4. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
