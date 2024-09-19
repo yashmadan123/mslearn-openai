@@ -120,7 +120,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Storage account name**: storage1<inject key="DeploymentID	" enableCopy="false"></inject>
+    - **Storage account name**: storage<inject key="DeploymentID	" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
     - **Redundancy**: Locally-redundant storage (LRS)
 
