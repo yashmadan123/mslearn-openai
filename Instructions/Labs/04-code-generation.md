@@ -243,6 +243,33 @@ Now that your app has been configured, run it to try generating code for each us
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
 2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+       
+        <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        </PropertyGroup>
+        
+        <ItemGroup>
+            <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+            <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+            <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+        </ItemGroup>
+        
+        <ItemGroup>
+            <None Update="appsettings.json">
+                <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            </None>
+        </ItemGroup>
+       
+    </Project>  
+    ```  
+
 3. Run the application.
 
     - **C#**: `dotnet run`
