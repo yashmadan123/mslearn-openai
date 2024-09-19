@@ -110,10 +110,10 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 9. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
-   ```
-   rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-   ```
+    ```
+    rm -r azure-openai -f
+    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+    ```
 
 10. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
