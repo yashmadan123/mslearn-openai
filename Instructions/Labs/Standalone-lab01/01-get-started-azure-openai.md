@@ -74,6 +74,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     ![](./media/pg-09.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
+
     - **Deployment name**: my-gpt-model (1)
     - **Model version**: Auto-update to default(0301) (2)<br>
     - **Deployment type**: Standard (3)
@@ -85,13 +86,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       >**Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
-8. This will deploy a model which you will be playing around with as you proceed.
+9. This will deploy a model which you will be playing around with as you proceed.
 
-9. Deploy **gpt-35-turbo-instruct** Model, follow the step 5 again and make sure to select the **gpt-35-turbo-instruct** this time to create the model for completion 
-   playground.
+10. Deploy **gpt-35-turbo-instruct** Model, follow the step 5 again and make sure to select the **gpt-35-turbo-instruct** this time to create the model for completion playground.
 
-10. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: completion-instruct (1)
+11. Within the **Deploy model** pop-up interface, enter the following details:
+
+     - **Deployment name**: completion-instruct (1)
     - **Model version**: Auto-update to default (2)<br>
     - **Deployment type**: Standard (3)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
@@ -128,8 +129,7 @@ In this task, you'll Explore a model in the Completions playground that involves
 
    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt 
-   contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
    ![](./media/NO-3.png)
 
@@ -143,8 +143,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn 
-   about AI`.
+2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
@@ -156,9 +155,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
     
      - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-         ![](./media/NO-5.png)
+       ![](./media/NO-5.png)
    
-         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+       > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
