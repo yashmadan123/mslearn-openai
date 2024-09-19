@@ -247,16 +247,12 @@ Applications for both C# and Python have been provided, and both apps feature th
 
     **C#**: Program.cs
 
-    At line number 9
-
     ```csharp
     // Add Azure OpenAI package
     using Azure.AI.OpenAI;
     ```
 
     **Python**: prompt-engineering.py
-
-    At line number 6
 
     ```python
     # Add Azure OpenAI package
@@ -267,16 +263,12 @@ Applications for both C# and Python have been provided, and both apps feature th
 
     **C#**: Program.cs
 
-    At line number 61
-
     ```csharp
     // Initialize the Azure OpenAI client
     OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
 
     **Python**: prompt-engineering.py
-
-    At line number 23
 
     ```python
     # Configure the Azure OpenAI client
@@ -290,8 +282,6 @@ Applications for both C# and Python have been provided, and both apps feature th
 7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
     **C#**: Program.cs
-
-    At line number 65
 
     ```csharp
     // Add code to send request...
@@ -313,8 +303,6 @@ Applications for both C# and Python have been provided, and both apps feature th
 
     **Python**: prompt-engineering.py
 
-    At line number 53
-   
     ```python
     # Format and send the request to the model
     messages = [
