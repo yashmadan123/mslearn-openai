@@ -30,30 +30,23 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 
    ![](../media/openai_studio.png)
 
-4. In the prompt select **Explore the new experience**.
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+4. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/deploy-1.jpg "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+5. Search for **GPT-35-TURBO**, click on **Confirm**
 
       ![](../media/pg-09.jpg)
 
    
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: 35turbo (1)
-    - **Select a Model**: gpt-35-turbo (2)
-      
-        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-     
+6. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Deployment name**: 35turbo1 (1)
     - **Model version**: Auto-update to default (3)<br>
     - **Deployment type**: Standard (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
     - **Enable dynamic quota**: Enabled (6)
-    - Click on **Create** (7)
+    - Click on **Deploy** (7)
   
          ![](../media/deploy-16-K.jpg)
 
@@ -75,7 +68,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 Let's see how the model behaves in a conversational interaction.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
-1. In the **Setup** section at the top, select the **Default** system message template and click on **Continue**.
+1. In the **Setup** section at the top, select the **Default** system message template.
 1. In the **Chat session** section, enter the following prompt.
 
     ```code
@@ -105,7 +98,7 @@ Let's see how the model behaves in a conversational interaction.
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
 1. In Azure OpenAI Studio, view the **Content filters** page from the left navigation menu.
-1. Select **Create customized content filter** and review the default settings for a content filter.
+1. Select **Create content filter** and review the default settings for a content filter.
 
     Content filters are based on restrictions for four categories of potentially harmful content:
 

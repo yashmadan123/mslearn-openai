@@ -46,9 +46,6 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/openai_studio1.png)
 
-1. In the prompt select **Explore the new experience** 
-
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
 
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
@@ -60,15 +57,11 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
    
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
-    - **Select a Model**: gpt-35-turbo-16k (2)
-      
-        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-     
     - **Model version**: Auto-update to default (3)<br>
     - **Deployment type**: Standard (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
     - **Enable dynamic quota**: Enabled (6)
-    - Click on **Create** (7)
+    - Click on **Deploy** (7)
   
          ![](../media/deploy-16.jpg)
       
@@ -154,11 +147,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. If you're not navigated to code editor re-run the following command:
 
-   ```bash
-   code .
-   ```
-
-1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-openai** make sure you are in correct directory or navigate to the lab files for this exercise using the following command.
 
     ```bash
      cd azure-openai/Labfiles/02-azure-openai-api
@@ -254,7 +243,7 @@ For this exercise, you'll complete some key parts of the application to enable u
          """
      ```
 
-       >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+   >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
 7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
@@ -306,6 +295,9 @@ For this exercise, you'll complete some key parts of the application to enable u
 8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+
+9. Update the CSharp.csproj file with the updated framework at **Target Framework** section, update the value as **<TargetFramework>net8.0</TargetFramework>** and **Save** the file.
+
 
 ### Task 4: Test your application
 

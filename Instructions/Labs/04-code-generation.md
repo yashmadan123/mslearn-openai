@@ -30,33 +30,24 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/openai_studio1.png)
 
-1. In the prompt select **Explore the new experience** .
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
-
-1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+4. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/deploy-1.jpg "Create a new deployment")
 
-1. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+5. Search for **GPT-35-TURBO-16K**, click on **Confirm**
 
       ![](../media/gpt-35-16k.jpg)
 
    
-1. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: 35-turbo (1)
-    - **Select a Model**: gpt-35-turbo-16k (2)
-      
-        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.<br>
+6. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Deployment name**: 35turbo (1)
     - **Deployment type**: Standard (3)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
-    - Click on **Create** (6)
+    - Click on **Deploy** (6)
   
          ![](../media/deploy-16.jpg)
-      
-1. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
-   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
@@ -76,23 +67,19 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
    
-2. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
-
-   ![](../media/default1.png)
-   
-3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+2. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
 
-4. The model will likely respond with a function, with some explanation of what the function does and how to call it.
+3. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
-5. Next, send the prompt `Do the same thing, but this time write it in C#`.
+4. Next, send the prompt `Do the same thing, but this time write it in C#`.
    
-6. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
+5. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
    
-7. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
+6. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
 
     ```code
     What does the following function do?  
@@ -118,11 +105,11 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
         return result
     ```
 
-8. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
+7. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
 
-9. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
+8. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
 
-10. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
+9. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
     
 ### Task 3: Set up an application in Cloud Shell
 
