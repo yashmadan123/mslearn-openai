@@ -58,11 +58,9 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 Before using your app, examine how prompt engineering improves the model response in the playground. In this first example, imagine you are trying to write a Python app of animals with fun names.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-
-1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
-
+   
 2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
-
+   
 3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
     ```code
         1. Create a list of animals
@@ -73,11 +71,11 @@ Before using your app, examine how prompt engineering improves the model respons
     ```
      >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again 
 
-4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
+6. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
+7. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
 
-6. Format the instructions as python comments. Send the following prompt to the model.
+8. Format the instructions as python comments. Send the following prompt to the model.
 
     ```code
     # 1. Create a list of animals
@@ -87,11 +85,11 @@ Before using your app, examine how prompt engineering improves the model respons
     # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
 
-7. The model should correctly respond with complete python code doing what the comments requested.
+9. The model should correctly respond with complete python code doing what the comments requested.
 
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
+10. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
 
-9. Send the following prompt to the model.
+11. Send the following prompt to the model.
 
    ```code
     Severe drought likely in California
@@ -102,7 +100,7 @@ Before using your app, examine how prompt engineering improves the model respons
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
+11. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 
 1. In the **Setup** section near the system message, select the **Add section** button and select example to add the following as example.
 
