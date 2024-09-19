@@ -180,7 +180,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
     ![](../media/keys-cognitive.png)
 
-18. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+18. Navigate back to the **Chat playground** in **Azure OpenAI Studio**, select *Add your data* in the setup pane and click on **+ Add a data source**.
 
     ![](../media/image4.2.png "Add your data in setup pane")
    
