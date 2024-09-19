@@ -98,7 +98,7 @@ Before using your app, examine how prompt engineering improves the model respons
     In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
    
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-    ```
+ ```
 
 11. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 
