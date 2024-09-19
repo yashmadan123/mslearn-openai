@@ -294,7 +294,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     At line number 65
 
     ```csharp
-    // Format and send the request to the model
+    // Add code to send request...
     var chatCompletionsOptions = new ChatCompletionsOptions()
     {
         Messages =
