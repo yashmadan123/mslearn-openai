@@ -112,7 +112,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
    ![](../media/1.png)
 
-2. Select storage<inject key="DeploymentID	" enableCopy="false"></inject>. If the storage account was not created earlier follow the next steps to create it or you can go to step 7. On **Storage Account** page, click on **Create**.
+2. On **Storage Account** page, click on **Create**.
 
    ![](../media/2.png)
 
