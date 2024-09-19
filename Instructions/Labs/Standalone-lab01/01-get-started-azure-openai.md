@@ -221,7 +221,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-     ![](./media/NO-4.png)
+      ![](./media/NO-4.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
