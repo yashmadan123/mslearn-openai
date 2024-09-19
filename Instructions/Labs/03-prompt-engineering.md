@@ -21,12 +21,15 @@ In this lab, you will complete the following tasks:
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
     ![](../media/openai8.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+
     ![](../media/OpenAI_select.png)
 
 3. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+
     - Select **Keys and Endpoint (1)** under **Resource Management**.
     - Click on **Show Keys (2)**.
     - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
