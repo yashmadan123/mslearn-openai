@@ -105,7 +105,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
    
-      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT- 
+        35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in 
+        Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 <validation step="29d502af-cb10-4d86-80b8-e1d97420284f" />
    
