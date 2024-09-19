@@ -100,6 +100,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
+      
+      ![](./media/deploymodel02.png)
 
       > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
    
