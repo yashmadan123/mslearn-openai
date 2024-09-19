@@ -42,7 +42,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
    
 6. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: 35turbo1 (1)
-    - **Model version**: Auto-update to default (3)<br>
+    - **Model version**: 0613<br>
     - **Deployment type**: Standard (4)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
     - **Enable dynamic quota**: Enabled (6)
@@ -98,7 +98,7 @@ Let's see how the model behaves in a conversational interaction.
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
 1. In Azure OpenAI Studio, view the **Content filters** page from the left navigation menu.
-1. Select **Create content filter** and review the default settings for a content filter.
+2. Select **Create content filter** and review the default settings for a content filter.
 
     Content filters are based on restrictions for four categories of potentially harmful content:
 
@@ -109,7 +109,7 @@ Content filters are applied to prompts and completions to prevent potentially ha
 
     Filters are applied for each of these categories to prompts and completions, with a severity setting of **safe**, **low**, **medium**, and **high** used to determine what specific kinds of language are intercepted and prevented by the filter.
 
-1. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot however make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
+3. Observe that the default settings (which are applied when no custom content filter is present) allow **low** severity language for each category. You can create a more restrictive custom filter by applying filters to one or more **low** severity levels. You cannot however make the filters less restrictive (by allowing **medium** or **high** severity language) unless you have applied for and received permission to do so in your subscription. Permission to do so is based on the requirements of your specific generative AI scenario.
 
     > **Tip**: For more details about the categories and severity levels used in content filters, see [Content filtering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) in the Azure OpenAI service documentation.
 
