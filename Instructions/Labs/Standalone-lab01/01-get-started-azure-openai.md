@@ -148,7 +148,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-     ![](./media/NO-4.png)
+       ![](./media/NO-4.png)
 
 4. Enter the following message and response in the designated boxes:
 
@@ -162,13 +162,13 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
-    ![](./media/NO-6.png)
+      ![](./media/NO-6.png)
    
 6. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-    ![](./media/NO-7.png)
+      ![](./media/NO-7.png)
    
-    > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+      > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
 7. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
@@ -176,7 +176,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 9. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-    ![](./media/NO-3.png)
+      ![](./media/NO-3.png)
 
 ### Task 5: Explore prompts and parameters
 
