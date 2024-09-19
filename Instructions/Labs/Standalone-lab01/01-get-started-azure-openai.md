@@ -27,7 +27,6 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
    ![](./media/openai_create1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
-   
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
@@ -75,7 +74,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     ![](./media/pg-09.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
-    
     - **Deployment name**: my-gpt-model (1)
     - **Model version**: Auto-update to default(0301) (2)<br>
     - **Deployment type**: Standard (3)
@@ -93,7 +91,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    playground.
 
 10. Within the **Deploy model** pop-up interface, enter the following details:
-    
     - **Deployment name**: completion-instruct (1)
     - **Model version**: Auto-update to default (2)<br>
     - **Deployment type**: Standard (3)
@@ -105,9 +102,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
    
-      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT- 
-        35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in 
-        Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 <validation step="29d502af-cb10-4d86-80b8-e1d97420284f" />
    
@@ -159,9 +154,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
      - **User**: `What are different types of artificial intelligence?`
     
-     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI 
-        designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
-        perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
+     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
          ![](./media/NO-5.png)
    
@@ -169,11 +162,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
-     ![](./media/NO-6.png)
+   ![](./media/NO-6.png)
    
 6. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-     ![](./media/NO-7.png)
+   ![](./media/NO-7.png)
    
    > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
@@ -214,7 +207,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-    ![](./media/last-3.jpg)
+   ![](./media/last-3.jpg)
    
 4. Observe the following about the prompt and parameters you used:
 
@@ -230,7 +223,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter 
    the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-    ![](./media/NO-4.png)
+   ![](./media/NO-4.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
@@ -244,7 +237,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-![](./media/task-6-last.jpg)
+   ![](./media/task-6-last.jpg)
 
 ## Summary
 
