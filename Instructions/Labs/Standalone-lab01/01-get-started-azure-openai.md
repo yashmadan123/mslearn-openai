@@ -27,6 +27,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
    ![](./media/openai_create1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
+    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Region**: Select <inject key="Region" enableCopy="false" />
@@ -131,9 +132,9 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-   ![](./media/NO-3.png)
+    ![](./media/NO-3.png)
 
-   ![](./media/openai-7.png)
+    ![](./media/openai-7.png)
     
 7. Close the **Sample Code**.
 
