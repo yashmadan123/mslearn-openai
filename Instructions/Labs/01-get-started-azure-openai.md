@@ -43,7 +43,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 5. Wait for deployment to complete.
 
-   <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
+    <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
