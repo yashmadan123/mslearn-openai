@@ -286,7 +286,32 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-9. Update the CSharp.csproj file with the updated framework at **Target Framework** section, update the value as **<TargetFramework>net8.0</TargetFramework>** and **Save** the file.
+9. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+       
+        <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        </PropertyGroup>
+        
+        <ItemGroup>
+            <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+            <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+            <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+        </ItemGroup>
+        
+        <ItemGroup>
+            <None Update="appsettings.json">
+                <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            </None>
+        </ItemGroup>
+       
+    </Project>  
+    ```  
 
 
 ### Task 4: Test your application
