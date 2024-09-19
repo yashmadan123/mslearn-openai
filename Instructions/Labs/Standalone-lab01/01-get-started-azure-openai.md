@@ -207,13 +207,13 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-    ![](./media/last-3.jpg)
+      ![](./media/last-3.jpg)
    
 4. Observe the following about the prompt and parameters you used:
 
-     - The prompt specifically states that the desired output should be three multiple choice questions.
+      - The prompt specifically states that the desired output should be three multiple choice questions.
        
-     - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
+      - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
 ### Task 6: Explore code-generation
 
