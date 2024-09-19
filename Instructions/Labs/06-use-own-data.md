@@ -55,13 +55,13 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 8. Within the **Deploy model** pop-up interface, enter the following details:
    
-    - **Deployment name**: text-turbo-1 (4)
-    - **Model version**: 1106-Preview (2)
-    - **Deployment type**: Standard (3)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Deploy** (8)
+    - **Deployment name**: text-turbo-1 
+    - **Model version**: 1106-Preview 
+    - **Deployment type**: Standard 
+    - Click on **Advanced Settings** 
+    - **Tokens per Minute Rate Limit (thousands)**: 10K 
+    - **Enable dynamic quota**: Enabled 
+    - Click on **Deploy** 
     
     >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
