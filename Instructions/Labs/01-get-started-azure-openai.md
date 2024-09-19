@@ -178,6 +178,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 1. In the **Chat Configuration** pane select **Parameter** , set the following parameter values:
     - **Temperature**: 0
     - **Max response**: 500
+    
          ![](../media/temp.jpg)
       
 2. Submit the following message in chat session
