@@ -68,7 +68,7 @@ Now you're ready to deploy a model to use through the **Azure OpenAI Studio**. O
 Let's see how the model behaves in a conversational interaction.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
-1. In the **Setup** section at the top, select the **Default** system message template.
+1. In the **Setup** section at the top, please select **35turbo1** from the **Deployment** options and then choose the **Default** system message template.
 1. In the **Chat session** section, enter the following prompt.
 
     ```code
