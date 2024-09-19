@@ -499,8 +499,8 @@ In most real-world applications, the ability to reference previous parts of the 
     **Python**: test-openai-model.py
 
    ```python
-    import os
-    from dotenv import load_dotenv
+   import os
+   from dotenv import load_dotenv
    
    # Add Azure OpenAI package
    from openai import AzureOpenAI
