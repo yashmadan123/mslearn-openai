@@ -254,7 +254,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     using Azure.AI.OpenAI;
     ```
 
-    **Python**: test-openai-model.py
+    **Python**: prompt-engineering.py
 
     At line number 6
 
@@ -274,7 +274,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
 
-    **Python**: test-openai-model.py
+    **Python**: prompt-engineering.py
 
     At line number 23
 
@@ -311,7 +311,7 @@ Applications for both C# and Python have been provided, and both apps feature th
     Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
     ```
 
-    **Python**: test-openai-model.py
+    **Python**: prompt-engineering.py
 
     At line number 53
    
@@ -552,7 +552,7 @@ Now that your app has been configured, run it to send your request to your model
 4. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
-    - **Python**: `python test-openai-model.py`
+    - **Python**: `python prompt-engineering.py`
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 5. For the first iteration, enter the following prompts:
@@ -644,7 +644,7 @@ Now that your app has been configured, run it to send your request to your model
     userMessage = groundingText + userMessage;
     ```
 
-    **Python**: test-openai-model.py
+    **Python**: prompt-engineering.py
 
     ```python
     # Format and send the request to the model
