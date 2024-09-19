@@ -122,7 +122,7 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 2. In the **Completions (1)** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
 
-      ![](./media/NO-1.png)
+      ![](./media/completions01.png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
