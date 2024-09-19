@@ -69,20 +69,18 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 #### Validation
 
-   <validation step="2c0e26fa-3a9d-45b9-91b5-2b0464f375c0" />
+    <validation step="2c0e26fa-3a9d-45b9-91b5-2b0464f375c0" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-
 ### Task 2: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
-1. Navigate back to the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at 
-   the bottom of the portal.
+1. Navigate back to the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![](../media/openai-18.png)
 
@@ -96,18 +94,13 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
-   
 1. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **Region**: <inject key="Region" enableCopy="false" /> (2)
-
     - **Resource group**: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>** (3)
-
     - **Storage account**: Select **storage<inject key="DeploymentID" enableCopy="false"></inject>** (4)
-    
     - **File share**: Create a new file share named **none** (5)
-    
     - Click **Create** (6)
 
         ![](../media/openai-21.png)
@@ -156,7 +149,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    
  #### Validation
  
-   <validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
+    <validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
