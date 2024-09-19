@@ -132,35 +132,35 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/image4.5.png "allow blob access")
 
-1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
+4. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
-1. On the deployment blade, click **Go to resource**.
+5. On the deployment blade, click **Go to resource**.
 
     ![](../media/3.png "upload files")
 
-1. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
+6. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
 
-1. On **Storage Account | Containers** blade, click on **+ Container (2)**
+7. On **Storage Account | Containers** blade, click on **+ Container (2)**
 
      ![](../media/storage-container.png "upload files")
 
-1. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
+8. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
 
       ![](../media/image4.6.png "create container")
 
-1. Select the **openaidatasource** container, and select **Upload**.
+9. Select the **openaidatasource** container, and select **Upload**.
 
-1. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+10. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
       ![](../media/image4.7.png "upload files")
 
-1. In the **Azure portal**, search for **AI search** and select **AI search**.
+11. In the **Azure portal**, search for **AI search** and select **AI search**.
 
-2.  On **Azure AI services | AI search** blade, click on **+ Create**.
+12.  On **Azure AI services | AI search** blade, click on **+ Create**.
 
      ![](../media/5.png "upload files")
 
-3. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
+13. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: **openai-<inject key="DeploymentID	" enableCopy="false"></inject>**
@@ -170,21 +170,21 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/lab06-1.png "Create cognitive search resource")
 
-1. Wait until your search resource has been deployed. Select **Go to resources**.
+14. Wait until your search resource has been deployed. Select **Go to resources**.
 
-1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
+15. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
-   ![](../media/x689.png)
+    ![](../media/x689.png)
 
-1. From the left navigation pane, under **Settings**, click on **Keys** and copy the primary admin key or secondary admin key and paste it in a notepad file for later use.
+16. From the left navigation pane, under **Settings**, click on **Keys** and copy the primary admin key or secondary admin key and paste it in a notepad file for later use.
 
-   ![](../media/keys-cognitive.png)
+    ![](../media/keys-cognitive.png)
 
-1. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+17. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
-   ![](../media/image4.2.png "Add your data in setup pane")
+    ![](../media/image4.2.png "Add your data in setup pane")
    
-1. In the **Add data**, enter the following values for your data source and then click on **Next**.
+18. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
     - **Select data source (1)**: Azure Blob Storage (preview)
     - **Select Azure Blob storage resouce (2)**: *Choose the storage resource you created*
@@ -193,19 +193,19 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Enter the index name (5)**: margiestravel
     - **Indexer schedule (6)**: Once
 
-1. Click on **Next (7)** to proceed with "**Data Management**".
+19. Click on **Next (7)** to proceed with "**Data Management**".
 
     ![](../media/image4.8.png "Add data configurations")
    
-1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+20. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
-   ![](../media/datamanagement.png "Add data")
+    ![](../media/datamanagement.png "Add data")
 
-1. On the **Data Connection** page select the **API key** , and then select **Next**.
+21. On the **Data Connection** page select the **API key** , and then select **Next**.
 
-   ![](../media/API_key_1.png "Add data")
+    ![](../media/API_key_1.png "Add data")
    
-1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Setup** pane.
+22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Setup** pane.
 
 #### Validation
 
