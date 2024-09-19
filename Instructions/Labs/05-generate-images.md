@@ -23,7 +23,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 1. Navigate to the website **https://oai.azure.com/dalle-playground**, select the **DALL-E Playground** from the left which is older version UI of the OpenAI Studio.
 
- > **NOTE:** Curruntly DALL E is only available to the olde rversion of OpenAI Studio.
+    > **NOTE:** Curruntly DALL E is only available to the older version of OpenAI Studio. Click on the toggle for **Switch to the old look** and then select **Skip**. 
 
 2. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
 
