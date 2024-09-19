@@ -247,7 +247,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-    ![](./media/task-6-last.jpg)
+     ![](./media/task-6-last.jpg)
 
 ## Summary
 
