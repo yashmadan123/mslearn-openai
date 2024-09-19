@@ -1,4 +1,4 @@
-# Hands-On Lab Get started with Azure OpenAI Service
+![image](https://github.com/user-attachments/assets/17686f51-94f2-47d7-99c5-252fa42530e7)# Hands-On Lab Get started with Azure OpenAI Service
 
 ## Estimated time: 60 minutes
 
@@ -130,7 +130,7 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](./media/NO-2.png)
+      ![](./media/compl01.png)
 
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language 
       each time it's called.
