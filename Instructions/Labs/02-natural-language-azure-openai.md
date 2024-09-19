@@ -22,15 +22,15 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 1. Navigate back to the **Azure Portal**.
 
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Open AI (1)**, and then select **Azure OpenAI (2)** under services.
+2. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Open AI (1)**, and then select **Azure OpenAI (2)** under services.
 
    ![](../media/openai-1.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+3. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
     ![](../media/OpenAI_select.png)
 
-1. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+4. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       
@@ -42,20 +42,20 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
     ![](../media/openai-16.png)
 
-1. From the left menu click on **Overview**, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+5. From the left menu click on **Overview**, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
 
 
-1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+6. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/deploy-1.jpg "Create a new deployment")
 
-1. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+7. Search for **GPT-35-TURBO-16K**, click on **Confirm**
 
       ![](../media/gpt-35-16k.jpg)
    
-1. Within the **Deploy model** pop-up interface, enter the following details:
+8. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
     - **Model version**: Auto-update to default (3)<br>
     - **Deployment type**: Standard (4)
@@ -65,7 +65,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
   
          ![](../media/deploy-16.jpg)
       
-7. This will deploy a model that you will be playing around with as you proceed.
+9. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
