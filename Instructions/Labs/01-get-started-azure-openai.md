@@ -117,15 +117,15 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 5. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-    ![](../media/generated.jpg)
+   ![](../media/generated.jpg)
 
-    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+   >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
 6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-    ![](../media/view_code.jpg)
+   ![](../media/view_code.jpg)
 
-    ![](../media/openai-7.png)
+   ![](../media/openai-7.png)
     
 7. Close the **Sample Code**.
 
@@ -139,14 +139,13 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-    ![](../media/last-2.jpg)
+   ![](../media/last-2.jpg)
 
 4.  Enter the following message and response in the designated boxes:
 
      - **User**: `What are different types of artificial intelligence?`
     
-     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI 
-        designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
+     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
         perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
          ![](../media/exples-ai.jpg)
