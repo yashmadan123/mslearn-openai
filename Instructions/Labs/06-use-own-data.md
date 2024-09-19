@@ -108,15 +108,15 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. Copy the URL (https://aka.ms/own-data-brochures) and paste it in the browser. Extract the PDFs in the `.zip` that get downloaded.
    
-1. In the **Azure portal**, search for **Storage Account** and select **Storage Account**.
+2. In the **Azure portal**, search for **Storage Account** and select **Storage Account**.
 
-   ![](../media/1.png)
+      ![](../media/1.png)
 
-2. On **Storage Account** page, click on **Create**.
+3. On **Storage Account** page, click on **Create**.
 
-   ![](../media/2.png)
+      ![](../media/2.png)
 
-3. Create a **Storage Account** resource with the following settings:
+4. Create a **Storage Account** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
@@ -132,35 +132,35 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/image4.5.png "allow blob access")
 
-4. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
+5. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
-5. On the deployment blade, click **Go to resource**.
+6. On the deployment blade, click **Go to resource**.
 
-    ![](../media/3.png "upload files")
+      ![](../media/3.png "upload files")
 
-6. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
+7. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
 
-7. On **Storage Account | Containers** blade, click on **+ Container (2)**
+8. On **Storage Account | Containers** blade, click on **+ Container (2)**
 
      ![](../media/storage-container.png "upload files")
 
-8. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
+9. Create a container with the name "**openaidatasource**" and enable Anonymous access level for container.
 
       ![](../media/image4.6.png "create container")
 
-9. Select the **openaidatasource** container, and select **Upload**.
+10. Select the **openaidatasource** container, and select **Upload**.
 
-10. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+11. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
       ![](../media/image4.7.png "upload files")
 
-11. In the **Azure portal**, search for **AI search** and select **AI search**.
+12. In the **Azure portal**, search for **AI search** and select **AI search**.
 
-12.  On **Azure AI services | AI search** blade, click on **+ Create**.
+13.  On **Azure AI services | AI search** blade, click on **+ Create**.
 
      ![](../media/5.png "upload files")
 
-13. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
+14. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: **openai-<inject key="DeploymentID	" enableCopy="false"></inject>**
@@ -170,21 +170,21 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/lab06-1.png "Create cognitive search resource")
 
-14. Wait until your search resource has been deployed. Select **Go to resources**.
+15. Wait until your search resource has been deployed. Select **Go to resources**.
 
-15. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
+16. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
     ![](../media/x689.png)
 
-16. From the left navigation pane, under **Settings**, click on **Keys** and copy the primary admin key or secondary admin key and paste it in a notepad file for later use.
+17. From the left navigation pane, under **Settings**, click on **Keys** and copy the primary admin key or secondary admin key and paste it in a notepad file for later use.
 
     ![](../media/keys-cognitive.png)
 
-17. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+18. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
     ![](../media/image4.2.png "Add your data in setup pane")
    
-18. In the **Add data**, enter the following values for your data source and then click on **Next**.
+19. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
     - **Select data source (1)**: Azure Blob Storage (preview)
     - **Select Azure Blob storage resouce (2)**: *Choose the storage resource you created*
@@ -193,19 +193,19 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Enter the index name (5)**: margiestravel
     - **Indexer schedule (6)**: Once
 
-19. Click on **Next (7)** to proceed with "**Data Management**".
+20. Click on **Next (7)** to proceed with "**Data Management**".
 
     ![](../media/image4.8.png "Add data configurations")
    
-20. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+21. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
     ![](../media/datamanagement.png "Add data")
 
-21. On the **Data Connection** page select the **API key** , and then select **Next**.
+22. On the **Data Connection** page select the **API key** , and then select **Next**.
 
     ![](../media/API_key_1.png "Add data")
    
-22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Setup** pane.
+23. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Setup** pane.
 
 #### Validation
 
