@@ -518,7 +518,7 @@ Applications for both C# and Python have been provided, and both apps feature th
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
 
-1. In the folder of your preferred language, open `system.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
+1. In the folder of your preferred language, open `sample-text.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
 2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
