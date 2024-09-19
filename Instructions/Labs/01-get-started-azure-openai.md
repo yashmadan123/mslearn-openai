@@ -165,7 +165,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 9. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
 10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
-
+            
       ![](../media/view_code.jpg)
 
 ### Task 5: Explore prompts and parameters
