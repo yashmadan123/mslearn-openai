@@ -111,28 +111,28 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
-    ```bash
-    rm -r azure-openai -f
-    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-    ```
+       ```bash
+       rm -r azure-openai -f
+       git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+       ```
 
 9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
-    ```bash
-     cd azure-openai/Labfiles/02-azure-openai-api
-    ```
+       ```bash
+        cd azure-openai/Labfiles/02-azure-openai-api
+       ```
 
    - Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
    
 10. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
    
-   ```bash
-   code .
-   ```
+      ```bash
+      code .
+      ```
 
-   > **Note:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
+     > **Note:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**.
 
-   ![](../media/classic-cloudshell-prompt.png) 
+     ![](../media/classic-cloudshell-prompt.png) 
 
 11. If you're not navigated to code editor re-run the following command:
 
