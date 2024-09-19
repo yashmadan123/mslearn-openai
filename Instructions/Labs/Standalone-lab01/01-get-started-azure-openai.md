@@ -102,9 +102,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       
       ![](./media/deploymodel02.png)
 
-> **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
+      > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
    
-> **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 <validation step="29d502af-cb10-4d86-80b8-e1d97420284f" />
    
@@ -118,23 +118,23 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 2. In the **Completions (1)** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
 
-   ![](./media/completions01.png)
+    ![](./media/completions01.png)
 
-   >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
+    >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
 3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-   ![](./media/compl01.png)
+    ![](./media/compl01.png)
 
-   >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
 5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-    ![](./media/NO-3.png)
+     ![](./media/NO-3.png)
 
-    ![](./media/openai-7.png)
+     ![](./media/openai-7.png)
     
 7. Close the **Sample Code**.
 
@@ -148,7 +148,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-    ![](./media/NO-4.png)
+     ![](./media/NO-4.png)
 
 4. Enter the following message and response in the designated boxes:
 
@@ -156,19 +156,19 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
     
      - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-       ![](./media/NO-5.png)
+        ![](./media/NO-5.png)
    
-       > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+        > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
-   ![](./media/NO-6.png)
+    ![](./media/NO-6.png)
    
 6. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-   ![](./media/NO-7.png)
+    ![](./media/NO-7.png)
    
-   > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+    > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
 7. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
@@ -176,7 +176,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 9. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-   ![](./media/NO-3.png)
+    ![](./media/NO-3.png)
 
 ### Task 5: Explore prompts and parameters
 
@@ -207,7 +207,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-   ![](./media/last-3.jpg)
+    ![](./media/last-3.jpg)
    
 4. Observe the following about the prompt and parameters you used:
 
