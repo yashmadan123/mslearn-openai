@@ -1,4 +1,4 @@
-# Hands-On Lab Get started with Azure OpenAI Service
+![image](https://github.com/user-attachments/assets/17686f51-94f2-47d7-99c5-252fa42530e7)# Hands-On Lab Get started with Azure OpenAI Service
 
 ## Estimated time: 60 minutes
 
@@ -36,9 +36,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
       ![](./media/openai-lab01_01.png "Create Azure OpenAI resource")
 
-4. Click on **Next** thrice and click on **Create**.
+4. Click on **Next** thrice and click on **Create** on **Review + submit** tab.
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+   ![](./media/Openai02.png)
+
+5. Wait for deployment to complete.
 
 <validation step="8aae5f66-b7a9-4963-bf1f-8db101bab3db" />
 
@@ -89,7 +91,19 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
-      > **Note**: You can ignore any error related to the assignment of roles to view the quota limits. 
+9. Deploy **gpt-35-turbo-instruct** Model, follow the step 5 again and make sure to select the **gpt-35-turbo-instruct** this time to create the model for completion playground.
+
+10. Within the **Deploy model** pop-up interface, enter the following details:
+    - **Deployment name**: completion-instruct (1)
+    - **Model version**: Auto-update to default (2)<br>
+    - **Deployment type**: Standard (3)
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Deploy** (6)
+      
+      ![](./media/deploymodel02.png)
+
+      > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
    
       > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
@@ -106,9 +120,9 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
 
-2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
+2. In the **Completions (1)** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
 
-      ![](./media/NO-1.png)
+      ![](./media/completions01.png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
@@ -116,7 +130,7 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](./media/NO-2.png)
+      ![](./media/compl01.png)
 
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language 
       each time it's called.
