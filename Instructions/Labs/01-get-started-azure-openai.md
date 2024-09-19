@@ -86,7 +86,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
          ![](../media/gpt-intial.jpg)
 
->**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+      >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
@@ -109,9 +109,9 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
 
-   ![](../media/generate_new.jpg)
+      ![](../media/generate_new.jpg)
 
-   >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
+      >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
 4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
 
@@ -123,9 +123,9 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-   ![](../media/view_code.jpg)
+      ![](../media/view_code.jpg)
 
-   ![](../media/openai-7.png)
+      ![](../media/openai-7.png)
     
 7. Close the **Sample Code**.
 
@@ -139,18 +139,15 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-   ![](../media/last-2.jpg)
+      ![](../media/last-2.jpg)
 
 4.  Enter the following message and response in the designated boxes:
-
-     - **User**: `What are different types of artificial intelligence?`
-    
-     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
-        perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
+      - **User**: `What are different types of artificial intelligence?`
+      - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
          ![](../media/exples-ai.jpg)
    
-      > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
@@ -175,8 +172,8 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
 1. In the **Chat Configuration** pane select **Parameter** , set the following parameter values:
-    - **Temperature**: 0
-    - **Max response**: 500
+      - **Temperature**: 0
+      - **Max response**: 500
 
          ![](../media/temp.jpg)
       
@@ -212,11 +209,11 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-   ![](../media/last-2.jpg)
+      ![](../media/last-2.jpg)
 
 3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
    
-   ![](../media/openai-14.png)
+      ![](../media/openai-14.png)
 
 4. Submit the following user message:
 
@@ -226,7 +223,7 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 5. Review the response, which should include sample Python code that meets the requirement in the prompt.
    
-   ![](../media/task-6-last.jpg)
+      ![](../media/task-6-last.jpg)
 
 ## Summary
 
