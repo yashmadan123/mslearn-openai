@@ -87,24 +87,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       >**Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
-9. This will deploy a model which you will be playing around with as you proceed.
+8. This will deploy a model which you will be playing around with as you proceed.
 
-10. Deploy **gpt-35-turbo-instruct** Model, follow the step 5 again and make sure to select the **gpt-35-turbo-instruct** this time to create the model for completion playground.
-
-11. Within the **Deploy model** pop-up interface, enter the following details:
-
-     - **Deployment name**: completion-instruct (1)
-    - **Model version**: Auto-update to default (2)<br>
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
-      
-      ![](./media/deploymodel02.png)
-
-      > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
+    > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
    
-      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+    > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
 <validation step="29d502af-cb10-4d86-80b8-e1d97420284f" />
    
