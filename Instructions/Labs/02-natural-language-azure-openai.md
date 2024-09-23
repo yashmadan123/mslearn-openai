@@ -138,7 +138,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **Region**: <inject key="Region" enableCopy="false" /> (2)
     - **Resource group**: Select **Use existing** (3)
       - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
+    - **Storage account name**: storage<inject key="DeploymentID" enableCopy="false"></inject> (4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
@@ -452,7 +452,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
 
-1. If your using **C#** language kindly open **CSharp.csproj** file and replace it with the following code and save the file.
+1. If you are using **C#** language kindly open **CSharp.csproj** file and replace it with the following code and save the file.
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
