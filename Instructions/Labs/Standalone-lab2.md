@@ -43,13 +43,13 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 5. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, navigate to the **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade.
+6. To capture the Keys and Endpoints values, navigate to the **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** blade.
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+        ![](../media/openai1.png "Keys and Endpoints")
 
 #### Validation
 
@@ -68,19 +68,19 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**.
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**.
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
    ![](../media/openai_studio1.png)
 
-4. In the prompt select **Explore the new experience** .
+1. In the prompt select **Explore the new experience(1)** .
 
       ![](../media/explore_new-exp.jpg "Create a new deployment")
 
-5. Select **Deployments (1)** under Shared resources, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+1. Select **Deployments (1)** under Shared resources, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/deploy-1.jpg "Create a new deployment")
 
@@ -138,13 +138,13 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     - **Subscription (1)**: Default- Choose the only existing subscription assigned for this lab
     - **Resource group (2)**: Select **Use existing**
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region (3)**: <inject key="Region" enableCopy="false" />
-    - **Storage account name (4)**: Enter storage<inject key="DeploymentID" enableCopy="false"></inject>
+      - **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
+    - **Region (3)**: **<inject key="Region" enableCopy="false" />**
+    - **Storage account name (4)**: Enter **storage<inject key="DeploymentID" enableCopy="false"></inject>**
     - **File share (5)**: Create a new file share named **none**
     - Click on **Create (6)**
 
-       ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+       ![](../media/openai2.png "Create storage advanced settings")
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
