@@ -37,7 +37,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - **Pricing tier (5)**: Standard S0
     -  Click on **Next (6)**
   
-       ![](../media/azopenai123.png "Create Azure OpenAI resource")
+       ![](../media/openai3.png "Create Azure OpenAI resource")
 
 4. Click on **Next** again and subsequently click on **Create**. 
 
@@ -49,7 +49,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/openai1.png "Keys and Endpoints")
+        ![](../media/openai4.png "Keys and Endpoints")
 
 #### Validation
 
