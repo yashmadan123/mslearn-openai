@@ -33,7 +33,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - **Subscription (1)**: Default - Pre-assigned subscription
     - **Resource group (2)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Region (3)**: Select <inject key="Region" enableCopy="false" />
-    - **Name (4)**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Name (4)**: OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Pricing tier (5)**: Standard S0
     -  Click on **Next (6)**
   
@@ -43,7 +43,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 5. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, navigate to the **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** blade.
+6. To capture the Keys and Endpoints values, navigate to the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>** blade.
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
