@@ -534,8 +534,9 @@ In this task, you will provide a history of the conversation in your prompt to e
     **Python**: test-openai-model.py
 
    ```python
-    import os
-    from dotenv import load_dotenv
+   # Import modules
+   import os
+   from dotenv import load_dotenv
    
    # Add Azure OpenAI package
    from openai import AzureOpenAI
