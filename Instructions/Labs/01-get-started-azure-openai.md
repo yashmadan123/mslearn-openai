@@ -37,7 +37,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
   
       ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
-4. Click on **Next** thrice and click on **Create**.
+4. Click on **Next** by keeping others default and click on **Create**.
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
