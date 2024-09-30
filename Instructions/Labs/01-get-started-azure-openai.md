@@ -81,7 +81,7 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure OpenAI Studio**, 
 7. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
     - **Nombre de implementación**: my-gpt-model (1) 
-    - **Versión de modelo**: 0613 (2)
+    - **Versión de modelo**: 0301(default) (2)
     - **Tipo de implementación**: Standard (3)
     - **Tokens por límite de velocidad por minuto (miles)**: 10K (4)
     - **Habilitar cuota dinámica**: Habilitado (5)
