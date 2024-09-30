@@ -110,7 +110,7 @@ A equipe de suporte da CloudLabs está disponível 24/7, 365 dias por ano, via e
 
 Contatos de Suporte para Alunos:
 
-- Suporte por E-mail: labs-support@spektrasystems.com
+- Suporte por E-mail: cloudlabs-support@spektrasystems.com
 - Suporte por Chat ao Vivo: https://cloudlabs.ai/labs-support
 
 Agora, clique em Próximo no canto inferior direito para passar para a próxima página.
