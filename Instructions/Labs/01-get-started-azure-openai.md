@@ -21,11 +21,11 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
 1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/openai_1.png)
 
 2. En la hoja **Servicios de IA de Azure | Azure OpenAI**, haga clic en **+ Crear**.
 
-   ![](../media/openai_create1.png)
+   ![](../media/create.png)
 
 3. Cree un recurso **Azure OpenAI** con la siguiente configuración:
    
@@ -56,19 +56,15 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure OpenAI Studio**, 
 
 1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/openai_1.png)
 
 2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](../media/openai_2_1.png)
 
 3. En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure OpenAI Studio** para navegar a **Azure AI Studio**.
 
-   ![](../media/openai_studio.png)
-
-4. Después de navegar a Azure AI Studio, haga clic en la ventana emergente **Explorar la nueva experiencia** en la parte superior.
-
-   ![](../media/explore_new-exp.jpg)
+   ![](../media/openai_3.png)
 
 5. Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo** y seleccione **Implementación del modelo base (2)**.
 
@@ -83,6 +79,7 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure OpenAI Studio**, 
     - **Nombre de implementación**: my-gpt-model (1) 
     - **Versión de modelo**: 0301(default) (2)
     - **Tipo de implementación**: Standard (3)
+    - **Ubicación**: **East US**
     - **Tokens por límite de velocidad por minuto (miles)**: 10K (4)
     - **Habilitar cuota dinámica**: Habilitado (5)
     - Haga clic en **Implementar** (6)
@@ -113,17 +110,26 @@ Los *Playgrounds* (Patios de juego) son interfaces útiles en Azure OpenAI Studi
 
 2. En la página **Finalizaciones**, asegúrese de que su implementación **my-gpt-model** esté seleccionada y, luego, en la lista **Ejemplos**, seleccione **Generar un cuestionario**.
 
+    ![](../media/gene-01.png)
+
     El ejemplo de texto resumido consta de un *prompt* que proporciona un texto para indicar al modelo qué tipo de respuesta se requiere e incluye información contextual.
 
-3. En la parte inferior de la página, observe la cantidad de *tokens* detectados en el texto. Los tokens son las unidades básicas de un prompt - esencialmente palabras o partes de palabras en el texto.
+4. En la parte inferior de la página, observe la cantidad de *tokens* detectados en el texto. Los tokens son las unidades básicas de un prompt - esencialmente palabras o partes de palabras en el texto.
 
-4. Use el botón **Generar** para enviar el prompt al modelo y obtener una respuesta.
+5. Use el botón **Generar** para enviar el prompt al modelo y obtener una respuesta.
+
+   ![](../media/generate_aquiz.png)
 
     La respuesta consta de un cuestionario basado en el ejemplo del prompt.
 
     >**Nota**: Puede usar el botón **Regenerar** para volver a enviar el prompt (se han realizado nuevos cambios) y tenga en cuenta que la respuesta puede variar con respecto a la original. Un modelo de IA generativa puede producir un nuevo lenguaje cada vez que es llamado.
 
-5. Use el botón **Ver código** para ver el código que usaría una aplicación cliente para enviar el prompt. Puede seleccionar su lenguaje de programación preferido. El aviso contiene el texto que envió al modelo. La solicitud se envía a la API *Completions* para su servicio Azure OpenAI.
+7. Use el botón **Ver código** para ver el código que usaría una aplicación cliente para enviar el prompt. Puede seleccionar su lenguaje de programación preferido. El aviso contiene el texto que envió al modelo. La solicitud se envía a la API *Completions* para su servicio Azure OpenAI.
+
+   ![](../media/view_code_1.png)
+
+   ![](../media/viewed_code.png)
+   
 
 ### Tarea 4: Utilizar el Área de juegos Chat
 
@@ -133,27 +139,33 @@ El patio de juegos de *Chat* proporciona una interfaz de chatbot para los modelo
 
 2. En la sección **Configuración**, en el cuadro **Mensaje del sistema**, reemplace el texto actual con la siguiente oración: `The system is an AI teacher that helps people learn about AI`.
 
-3. Debajo del cuadro **Mensaje del sistema**, haga clic en **+ Agregar** e ingrese el siguiente mensaje y respuesta en los cuadros designados:
+3. Debajo del cuadro Mensaje del sistema, haga clic en + Agregar sección, seleccione ejemplos e ingrese el siguiente mensaje y respuesta en los cuadros designados:
+
+   ![](../media/example.png)
 
     - **Usuario**: `What are different types of artificial intelligence?`
     
     - **Asistente**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
+        ![](../media/apply_changes.png)
+  
     > **Nota**: Se utilizan algunos ejemplos para proporcionar al modelo ejemplos de los tipos de respuestas que se esperan. El modelo intentará reflejar el tono y el estilo de los ejemplos en sus propias respuestas.
   
-4. Haga clic en **Aplicar cambios** y luego en **Continuar** en la pestaña emergente **Actualizar mensaje de sistema** para iniciar una nueva sesión y establecer el contexto de comportamiento del sistema de chat.
+5. Haga clic en **Aplicar cambios** y luego en **Continuar** en la pestaña emergente **Actualizar mensaje de sistema** para iniciar una nueva sesión y establecer el contexto de comportamiento del sistema de chat.
 
-5. En el cuadro de consulta en la parte inferior de la página, ingrese el texto `What is artificial intelligence?`
+6. En el cuadro de consulta en la parte inferior de la página, ingrese el texto `What is artificial intelligence?`
 
-6. Use el botón **Enviar** para enviar el mensaje y ver la respuesta.
+    ![](../media/chat_prompt.png)
+
+8. Use el botón **Enviar** para enviar el mensaje y ver la respuesta.
 
     > **Nota**: Es posible que reciba una respuesta que indique que la implementación de la API aún no está lista. Si es así, espere unos minutos e intente nuevamente.
 
-7. Revise la respuesta y luego envíe el siguiente mensaje para continuar la conversación: `How is it related to machine learning?`
+9. Revise la respuesta y luego envíe el siguiente mensaje para continuar la conversación: `How is it related to machine learning?`
 
-8. Revise la respuesta y observe que se conserva el contexto de la interacción anterior (para que el modelo comprenda que "it" se refiere a la inteligencia artificial).
+10. Revise la respuesta y observe que se conserva el contexto de la interacción anterior (para que el modelo comprenda que "it" se refiere a la inteligencia artificial).
 
-9. Use el botón **Ver código** para ver el código de la interacción. El mensaje consta del mensaje del *sistema*, los pocos ejemplos de mensajes del *usuario* y del *asistente*, y la secuencia de mensajes del *usuario* y del *asistente* en la sesión de chat hasta el momento.
+11. Use el botón **Ver código** para ver el código de la interacción. El mensaje consta del mensaje del *sistema*, los pocos ejemplos de mensajes del *usuario* y del *asistente*, y la secuencia de mensajes del *usuario* y del *asistente* en la sesión de chat hasta el momento.
 
 ### Tarea 5: Explorar prompts y parámetros 
 
@@ -163,7 +175,9 @@ Puede utilizar el mensaje y los parámetros para maximizar la probabilidad de ge
     - **Temperatura**: 0
     - **Longitud máxima (tokens)**: 500
 
-2. Envíe el siguiente mensaje en la sesión de chat
+     ![](../media/param.png)
+   
+3. Envíe el siguiente mensaje en la sesión de chat
 
     ```
     Write three multiple choice questions based on the following text.
@@ -177,7 +191,9 @@ Puede utilizar el mensaje y los parámetros para maximizar la probabilidad de ge
     - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
     ```
 
-3. Revise los resultados, los cuales deben consistir de preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión artificial en el prompt. La respuesta total debe ser menor que la longitud máxima que especificó como parámetro.
+    ![](../media/last-3.jpg)
+
+4. Revise los resultados, los cuales deben consistir de preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión artificial en el prompt. La respuesta total debe ser menor que la longitud máxima que especificó como parámetro.
 
     Observe lo siguiente sobre el prompt y los parámetros que utilizó:
 
@@ -195,6 +211,8 @@ Además de generar respuestas en lenguaje natural, puede utilizar modelos GPT pa
 
 3. En el panel **Sesión de chat**, seleccione **Borrar chat** y luego haga clic en **Borrar** en la pestaña Borrar chat para borrar el historial de chat e iniciar una nueva sesión.
 
+   ![](../media/clear_chat.png)
+
 2. Envíe el siguiente mensaje de usuario:
 
     ```
@@ -202,6 +220,8 @@ Además de generar respuestas en lenguaje natural, puede utilizar modelos GPT pa
     ```
 
 5. Revise la respuesta, que debe incluir un código de Python de ejemplo que cumple con el requisito en el prompt.
+
+   ![](../media/task-6-last.jpg)
 
 ## Resumen
 
