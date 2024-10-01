@@ -22,17 +22,17 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
 1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/openai_1.png)
 
 2. En la hoja **Servicios de IA de Azure | Azure OpenAI**, haga clic en **+ Crear**.
 
-   ![](../media/openai_create1.png)
+   ![](../media/create.png)
 
 3. Cree un recurso **Azure OpenAI** con la siguiente configuración:
 
     - **Suscripción**: Predeterminada - Suscripción preasignada (1).
     - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Región**: Seleccione <inject key="Region" enableCopy="false" /> (3)
+    - **Región**: **UKsouth**(3)
     - **Nombre**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (4)
     - **Plan de tarifa**: Standard S0 (5)
     -  Haga clic en **Siguiente** (6)
@@ -66,15 +66,15 @@ Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a
 
 1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/openai_1.png)
 
 2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](../media/openai_2_1.png)
 
 3. En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure OpenAI Studio** para navegar a **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/openai_3.png)
 
 4. Después de navegar a Azure AI Studio, haga clic en la ventana emergente **Explorar la nueva experiencia** en la parte superior.
 
