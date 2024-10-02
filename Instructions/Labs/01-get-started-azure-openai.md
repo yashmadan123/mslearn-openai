@@ -31,11 +31,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select **East US**
+    - **Region**: Select **Francecentral**
     - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
       ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+
+>**Note** : **Please deploy Openai resource in Francecentral Region**.
 
 4. Click on **Next** by keeping others default and click on **Create**.
 
