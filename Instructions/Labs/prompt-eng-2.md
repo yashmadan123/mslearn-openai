@@ -103,6 +103,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
      ![](../media/updateimage.png)
 
+ >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once its deployed.
+
  >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
  > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
