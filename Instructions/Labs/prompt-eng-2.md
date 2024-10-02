@@ -24,11 +24,11 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/search_openai.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create1.png)
+   ![](../media/create.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -71,15 +71,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/search_openai.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](../media/openai_new.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/openai_goto.png)
    
 4. In the prompt select **Explore the new experience** .
 
