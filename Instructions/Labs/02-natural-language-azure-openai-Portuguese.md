@@ -22,11 +22,11 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
 
 1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
 
-   ![](../media/30-08-2024(1).png)
+   ![](../media/openai_1.png)
 
 2. Na tela **Serviços de IA do Azure | OpenAI**, clique em **+ Criar**.
 
-   ![](../media/30-08-2024(2).png)
+   ![](../media/create.png)
 
 3. Crie um recurso **Azure OpenAI** com as seguintes configurações 
 
@@ -66,20 +66,20 @@ Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para us
 
 1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
 
-   ![](../media/30-08-2024(1).png)
+   ![](../media/openai_1.png)
 
 2. Na lâmina **Azure AI Services | OpenAI**, selecione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/30-08-2024(12).png)
+   ![](../media/open.png)
 
 3. No painel de recursos do Azure OpenAI, clique em **Ir para o Azure OpenAI Studio** e ele navegará para o **Azure AI Studio**.
 
-   ![](../media/30-08-2024(13).png)
+   ![](../media/go_to.png)
 
-4. Após navegar para o Azure AI Studio, clique no pop-up **Explore a nova experiência** no topo.
-
-   ![](../media/30-08-2024(6).png)
-
+>**Observação**: antes de implantar um modelo, verifique se você está no OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>. Caso contrário, selecione-o no menu suspenso no canto superior direito.
+  
+   ![](../media/swap_model.png)
+   
 5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implementar o modelo (2)** , selecione **Implementar modelo base (3)**.
 
    ![](../media/30-08-2024(7).png)
