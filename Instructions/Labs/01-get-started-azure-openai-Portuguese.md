@@ -21,17 +21,17 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
 
 1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
 
-   ![](../media/30-08-2024(1).png)
+   ![](../media/openai_1.png)
 
 2. Na tela **Serviços de IA do Azure | OpenAI**, clique em **+ Criar**.
 
-   ![](../media/30-08-2024(2).png)
+   ![](../media/create.png)
 
 3. Crie um recurso **Azure OpenAI** com as seguintes configurações:
    
     - **Assinatura**: Padrão - Assinatura pré-atribuída.
     - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Região**: Selecione <inject key="Region" enableCopy="false" />
+    - **Região**: **FranceCentral**
     - **Nome**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Tipo de preço**: Standard S0
   
@@ -56,19 +56,15 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
 1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
 
-   ![](../media/30-08-2024(1).png)
+   ![](../media/openai_1.png)
 
 2. Na tela **Serviços de IA do Azure | OpenAI**, selecione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/30-08-2024(4).png)
+   ![](../media/open.png)
 
 3. No painel de recursos do Azure OpenAI, clique em **Ir para Azure OpenAI Studio** para navegar até o **Azure AI Studio**.
 
-   ![](../media/30-08-2024(5).png)
-
-4. Após navegar para o Azure AI Studio, clique em **Explore a nova experiência** na parte superior.
-
-   ![](../media/30-08-2024(6).png)
+   ![](../media/go_to.png)
 
 5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implementar o modelo (2)**, selecione **Implementar modelo base (3)**.  
 
@@ -81,12 +77,12 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 7. Na interface de **Implementar modelo**, insira os seguintes detalhes:
     
     - **Nome da Implementação (1)**: my-gpt-model
-    - **Versão do modelo (2)**: 0613
+    - **Versão do modelo (2)**: 0301(Default)
     - **Tipo de Implementação (3)**: Standard
     - **Limite de Velocidade de Tokens por Minuto (milhares) (4)**: 10K
     - Clique em **Implementar (5)**
   
-      ![](../media/30-08-2024(9).png)
+      ![](../media/gpt-intial.jpg)
 
 8. Isso irá implementar um modelo que você explorará nas próximas etapas.
 
@@ -111,17 +107,23 @@ Os *Playgrounds* são interfaces úteis no Azure OpenAI Studio que você pode us
 
 2. Na página **Completações**, certifique-se de que sua implementação **my-gpt-model** esteja selecionada e, na lista **Exemplos**, selecione **Gerar um questionário**.
 
+    ![](../media/generate_01.png)
+   
    O texto resumido consiste em um *prompt* que fornece algum texto para dizer ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
 
-3. Na parte inferior da página, observe o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt - essencialmente palavras ou partes de palavras no texto.
+4. Na parte inferior da página, observe o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt - essencialmente palavras ou partes de palavras no texto.
 
-4. Use o botão **Gerar** para enviar o prompt ao modelo e obter uma resposta.
+5. Use o botão **Gerar** para enviar o prompt ao modelo e obter uma resposta.
 
    A resposta consiste em um questionário baseado no exemplo no prompt.
 
    >**Nota**: Você pode usar o botão **Regenerar** para reenviar o prompt (novas alterações foram feitas) e observe que a resposta pode variar da original. Um modelo de IA generativa pode produzir uma nova linguagem cada vez que é chamado.
 
-5. Use o botão **Ver Código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completações* para o seu serviço Azure OpenAI.
+6. Use o botão **Ver Código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completações* para o seu serviço Azure OpenAI.
+
+   ![](../media/view_code.png)
+   
+   ![](../media/viewed_code.png)
 
 ## Tarefa 4: Use o playground de Chat
 
@@ -131,27 +133,37 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
 2. Na seção **Setup**, na caixa **System message**, substitua o texto atual pela seguinte declaração: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA`.
 
-3. Abaixo da caixa **System message**, clique em **+ Adicionar** e insira a seguinte mensagem e resposta nas caixas designadas:
+3. Abaixo da caixa **Mensagem do sistema**, clique em **+Adicionar seção** selecione **exemplo** e insira a seguinte mensagem e resposta nas caixas designadas:
+
+   ![](../media/examples_1.png)
 
     - **Usuário**: `Quais são os diferentes tipos de inteligência artificial?`
     
     - **Assistente**: `Existem três principais tipos de inteligência artificial: IA Estreita ou Fraca (como assistentes virtuais como Siri ou Alexa, software de reconhecimento de imagem e filtros de spam), IA Geral ou Forte (IA projetada para ser tão inteligente quanto um ser humano. Este tipo de IA não existe atualmente e é puramente teórico), e Superinteligência Artificial (IA que é mais inteligente do que qualquer ser humano e pode realizar tarefas que estão além da compreensão humana. Este tipo de IA também é puramente teórico e ainda não foi desenvolvido).`
 
+    ![](../media/exampled.png)
+
     > **Nota**: Exemplos de poucos-tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
   
-4. Clique em **Aplicar alterações** e, em seguida, clique em **Continuar** na aba pop-up **Atualizar mensagem do sistema** para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
+5. Clique em **Aplicar alterações** e, em seguida, clique em **Continuar** na aba pop-up **Atualizar mensagem do sistema** para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
 
-5. Na caixa de consulta na parte inferior da página, insira o texto `O que é inteligência artificial?`
+   ![](../media/apply_changes.png)
 
-6. Use o botão **Enviar** para submeter a mensagem e visualizar a resposta.
+7. Na caixa de consulta na parte inferior da página, insira o texto `O que é inteligência artificial?`
+
+8. Use o botão **Enviar** para submeter a mensagem e visualizar a resposta.
+
+     ![](../media/AI_chat.png)
 
     > **Nota**: Você pode receber uma resposta informando que a implantação da API ainda não está pronta. Caso isso aconteça, aguarde alguns minutos e tente novamente.
 
-7. Revise a resposta e, em seguida, envie a seguinte mensagem para continuar a conversa: `Como isso se relaciona com o aprendizado de máquina?`
+9. Revise a resposta e, em seguida, envie a seguinte mensagem para continuar a conversa: `Como isso se relaciona com o aprendizado de máquina?`
 
-8. Revise a resposta, observando que o contexto da interação anterior é mantido (portanto, o modelo entende que "isso" se refere à inteligência artificial).
+10. Revise a resposta, observando que o contexto da interação anterior é mantido (portanto, o modelo entende que "isso" se refere à inteligência artificial).
 
-9. Use o botão **Ver Código** para visualizar o código da interação. O prompt consiste na mensagem *system*, os exemplos de poucos-tiros de mensagens *user* e *assistant*, e a sequência de mensagens *user* e *assistant* na sessão de chat até o momento.
+11. Use o botão **Ver Código** para visualizar o código da interação. O prompt consiste na mensagem *system*, os exemplos de poucos-tiros de mensagens *user* e *assistant*, e a sequência de mensagens *user* e *assistant* na sessão de chat até o momento.
+
+    ![](../media/view_code.png)
 
 ## Tarefa 5: Explore prompts e parâmetros
 
@@ -160,6 +172,8 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 1. No painel **Configuração**, selecione **Parâmetro**, defina os seguintes valores de parâmetro:
     - **Temperatura**: 0
     - **Máximo de resposta (Número máximo de tokens)**: 500
+
+      ![](../media/param.png)
 
 2. Envie a seguinte mensagem na sessão de chat 
 
@@ -183,15 +197,21 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
     
     - Os parâmetros incluem *Temperatura*, que controla o grau em que a geração de resposta inclui um elemento de aleatoriedade. O valor de **0** usado na sua submissão minimiza a aleatoriedade, resultando em respostas estáveis e previsíveis.
 
+     ![](../media/last-3.jpg)
+
 ## Tarefa 6: Explore a geração de código
 
 Além de gerar respostas em linguagem natural, você pode usar modelos GPT para gerar código.
 
 1. No painel **Setup**, selecione o template **Exemplo Vazio** e clique em **Continuar** na aba pop-up **Atualizar mensagem do sistema** para redefinir a mensagem do sistema.
+  
+   ![](../media/examples_1.png)
 
 2. Insira a mensagem do sistema: `Você é um desenvolvedor Python.` e clique em **Aplicar alterações** e, em seguida, clique em **Continuar** na aba pop-up **Atualizar mensagem do sistema**.
 
 3. No painel **Sessão de Chat**, selecione **Limpar chat** e, em seguida, clique em **Limpar** na aba de limpeza de chat para limpar o histórico de chat e iniciar uma nova sessão.
+
+   ![](../media/borrar_chat.png)
 
 4. Envie a seguinte mensagem do usuário:
 
@@ -200,6 +220,8 @@ Além de gerar respostas em linguagem natural, você pode usar modelos GPT para 
     ```
     
 5. Revise a resposta, que deve incluir um código Python de exemplo que atenda ao requisito no prompt.
+
+     ![](../media/task-6-last.jpg)
 
 ## Resumo
 
