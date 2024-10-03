@@ -201,10 +201,8 @@ In this task, you'll explore prompts and parameters by experimenting with differ
       ![](../media/last-3.jpg)
    
 4. Observe the following about the prompt and parameters you used:
-
-      - The prompt specifically states that the desired output should be three multiple choice questions.
-       
-      - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
+       - The prompt specifically states that the desired output should be three multiple choice questions.
+       - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
 ### Task 6: Explore code-generation
 
