@@ -83,7 +83,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-         ![](../media/gpt-intial.jpg)
+         ![](../media/my-gpt-model.png)
 
       >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
@@ -118,6 +118,16 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
       ![](../media/generated.jpg)
 
+>**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
+
+1. From the right top corner toggle bar to swicth to old experience.
+    
+    ![](../media/openai_toggle.png)
+
+2. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
+    
+    ![](../media/generate_a_quiz.png)
+   
       >**Note**: You can click on generate again , if the response is incomplete .
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
