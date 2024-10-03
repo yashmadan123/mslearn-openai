@@ -109,23 +109,23 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
 
-   ![](../media/generate_new.jpg)
+      ![](../media/generate_new.jpg)
 
-   >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
+      >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
 4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
 
 5. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-    ![](../media/generated.jpg)
+      ![](../media/generated.jpg)
 
-    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
 6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-    ![](../media/view_code.jpg)
+      ![](../media/view_code.jpg)
 
-    ![](../media/openai-7.png)
+      ![](../media/openai-7.png)
     
 7. Close the **Sample Code**.
 
@@ -139,7 +139,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-    ![](../media/last-2.jpg)
+      ![](../media/last-2.jpg)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -154,7 +154,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
-     ![](../media/save_changes.jpg)
+      ![](../media/save_changes.jpg)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
