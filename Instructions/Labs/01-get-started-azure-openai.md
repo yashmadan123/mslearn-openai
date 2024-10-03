@@ -43,12 +43,14 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-<validation step="1fa0e87b-eb46-463d-b63b-edf6e2282e16" />
+
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="1fa0e87b-eb46-463d-b63b-edf6e2282e16" />
 
 ### Task 2: Deploy a model
 
@@ -94,12 +96,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
       > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-   <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
 
 ### Task 3: Explore a model in the Completions playground
 
