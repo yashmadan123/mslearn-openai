@@ -306,7 +306,7 @@ In this task, you will complete key parts of the application to enable it to use
     print("Response: " + generated_text + "\n")
     ```
 
-8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **CTRL + S**
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
