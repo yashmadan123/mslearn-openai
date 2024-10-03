@@ -54,19 +54,19 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/tel-11.png)
+      ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
 
-   ![](../media/tel-1.png)
+      ![](../media/tel-1.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/new01.png)
+      ![](../media/new01.png)
    
 4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
-   ![](../media/new02.png "Create a new deployment")
+      ![](../media/new02.png "Create a new deployment")
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
@@ -74,7 +74,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 6. Search for **GPT-35-TURBO**, click on **Confirm**
 
-   ![](../media/pg-09.jpg)
+      ![](../media/pg-09.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: my-gpt-model (1)
