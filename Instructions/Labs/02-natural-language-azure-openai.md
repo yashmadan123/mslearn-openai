@@ -73,7 +73,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/update08.png)
 
 4. In the prompt select **Explore the new experience** .
 
