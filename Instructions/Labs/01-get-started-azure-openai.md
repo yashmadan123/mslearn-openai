@@ -184,22 +184,22 @@ In this task, you'll explore prompts and parameters by experimenting with differ
       
 2. Submit the following message in chat session
 
-   ```
-   Write three multiple choice questions based on the following text.
+    ```
+    Write three multiple choice questions based on the following text.
 
-   Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
+    Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
 
-   - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
+     - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
 
-   - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
+    - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
 
-   - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
+    - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
       
-   ```
+    ```
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-   ![](../media/last-3.jpg)
+    ![](../media/last-3.jpg)
    
 4. Observe the following about the prompt and parameters you used:
 
@@ -213,11 +213,11 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-     ![](../media/last-2.jpg)
+    ![](../media/last-2.jpg)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
-     ![](../media/openai-14.png)
+    ![](../media/openai-14.png)
 
 3. Submit the following user message:
 
@@ -227,7 +227,7 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-     ![](../media/task-6-last.jpg)
+    ![](../media/task-6-last.jpg)
 
 ## Summary
 
