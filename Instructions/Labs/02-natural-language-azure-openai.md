@@ -83,8 +83,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/deploy-1.jpg "Create a new deployment")
 
+6. Search for **gpt-35-turbo-16k** and click on **Confirm**
 
-6. Within the **Deploy model** pop-up interface, enter the following details:
+      ![](../media/new04.jpg)
+
+7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
     - **Model version**: Auto-update to default (2)
     - **Deployment type**: Standard (3)
