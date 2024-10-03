@@ -84,15 +84,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-         ![](../media/gpt-intial.jpg)
+      ![](../media/gpt-intial.jpg)
 
->**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+      >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
-      > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
+   > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
    
-      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+   > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
    <validation step="0afa9e73-8b9e-4edf-b61b-fa953a5d5b23" />
    
@@ -117,15 +117,15 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 5. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-    ![](../media/generated.jpg)
+   ![](../media/generated.jpg)
 
-    >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+   >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
 6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-    ![](../media/view_code.jpg)
+   ![](../media/view_code.jpg)
 
-    ![](../media/openai-7.png)
+   ![](../media/openai-7.png)
     
 7. Close the **Sample Code**.
 
@@ -139,29 +139,28 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-    ![](../media/last-2.jpg)
+   ![](../media/last-2.jpg)
 
-4.  Enter the following message and response in the designated boxes:
+4. Enter the following message and response in the designated boxes:
 
-     - **User**: `What are different types of artificial intelligence?`
+    - **User**: `What are different types of artificial intelligence?`
     
-     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI 
-        designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
-        perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
+    - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
+perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-         ![](../media/exples-ai.jpg)
+      ![](../media/exples-ai.jpg)
    
       > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
-      ![](../media/save_changes.jpg)
+   ![](../media/save_changes.jpg)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-      ![](../media/openai-12.png)
+   ![](../media/openai-12.png)
    
-      > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+   > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
 8. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
@@ -169,7 +168,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-      ![](../media/view_code.jpg)
+    ![](../media/view_code.jpg)
 
 ### Task 5: Explore prompts and parameters
 
@@ -181,33 +180,32 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     
     - **Max response**: 500
 
-       ![](../media/temp.jpg)
+      ![](../media/temp.jpg)
       
 2. Submit the following message in chat session
 
-      ```
-      Write three multiple choice questions based on the following text.
+   ```
+   Write three multiple choice questions based on the following text.
 
-      Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
+   Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
 
-      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
+   - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
 
-      - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
+   - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
 
-      - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
+   - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
       
-      ```
+   ```
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-      ![](../media/last-3.jpg)
+   ![](../media/last-3.jpg)
    
 4. Observe the following about the prompt and parameters you used:
 
     - The prompt specifically states that the desired output should be three multiple choice questions.
        
-    - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in 
-         stable, predictable responses.
+    - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
 ### Task 6: Explore code-generation
 
@@ -223,13 +221,13 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 3. Submit the following user message:
 
-      ```
-      Write a Python function named Multiply that multiplies two numeric parameters.
-      ```
+   ```
+   Write a Python function named Multiply that multiplies two numeric parameters.
+   ```
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-    ![](../media/task-6-last.jpg)
+   ![](../media/task-6-last.jpg)
 
 ## Summary
 
