@@ -97,7 +97,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
       ![](../media/intial-deploy.jpg)
 
->**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
+      >**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -142,7 +142,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+         ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
@@ -168,11 +168,10 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       code .
       ```
  
- > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+    > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png) 
    
-#### Validation
 
 <validation step="4eb72f2c-5f15-42b7-9637-abdaf9e30be5" />
 
