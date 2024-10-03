@@ -28,14 +28,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
    ![](../media/tel-10.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
-   
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select **East US**
-    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+      - **Subscription**: Default - Pre-assigned subscription.
+      - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+      - **Region**: Select **East US**
+      - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
+      - **Pricing tier**: Standard S0
   
-      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+           ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
 4. Click on **Next** thrice and click on **Create**.
 
@@ -77,16 +76,16 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       ![](../media/pg-09.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: my-gpt-model (1)
-    - **Model version**: Auto-update to default(0301) (2)<br>
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+      - **Deployment name**: my-gpt-model (1)
+      - **Model version**: Auto-update to default(0301) (2)<br>
+      - **Deployment type**: Standard (3)
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Enable dynamic quota**: Enabled (5)
+      - Click on **Deploy** (6)
   
-        ![](../media/gpt-intial.jpg)
+           ![](../media/gpt-intial.jpg)
 
-   >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+           >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
