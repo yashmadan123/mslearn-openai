@@ -49,7 +49,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+        ![](../media/keys.png "Keys and Endpoints")
 
 #### Validation
 
