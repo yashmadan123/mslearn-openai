@@ -45,7 +45,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Deploy a model
 
@@ -69,7 +69,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](../media/ui1.png "Create a new deployment")
 
 6. Search for **GPT-35-TURBO**, click on **Confirm**
 
@@ -77,13 +77,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
-      - **Model version**: Auto-update to default(0301) (2)<br>
-      - **Deployment type**: Standard (3)
-      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-      - **Enable dynamic quota**: Enabled (5)
-      - Click on **Deploy** (6)
+      - **Deployment type**: Standard(2)
+      - Choose **collapse** from the deployment details (3)
+      - **Model version**: 0613(Default)(4)
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
+      - **Enable dynamic quota**: Enabled (6)
+      - Click on **Deploy** (7)
   
-           ![](../media/gpt-intial.jpg)
+           ![](../media/my-gpt-model-1.png)
 
            >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
@@ -98,7 +99,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Explore a model in the Completions playground
 
@@ -151,9 +152,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
    
       > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
-
-      ![](../media/save_changes.jpg)
+5. Save the changes by clicking on **Save** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
@@ -213,8 +212,6 @@ In this task, you'll explore code-generation by testing the AI model’s ability
       ![](../media/last-2.jpg)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
-
-      ![](../media/openai-14.png)
 
 3. Submit the following user message:
 
