@@ -162,11 +162,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
          ![](../media/exples-ai.jpg)
    
-         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+> **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+5. Save the changes by clicking on **Save** 
 
-      ![](../media/save_changes.jpg)
+   ![](../media/save.png)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
