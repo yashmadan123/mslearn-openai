@@ -133,7 +133,7 @@ In this task, you will examine how prompt engineering improves model responses i
     >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
 
 4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
+5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Save** and subsequently click on **Continue**.
 6. Format the instructions as python comments. Send the following prompt to the model.
 
     ```code
@@ -143,7 +143,7 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 7. The model should correctly respond with complete python code doing what the comments requested.
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
+8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and **save** your changes and subsequently click on **Continue**. This will create a new chat session.
 9. Send the following prompt to the model.
 
     ```code
@@ -159,56 +159,56 @@ In this task, you will examine how prompt engineering improves model responses i
 10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 11. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
 
- **User:**
+       **User:**
 
- ```code
-New York Baseballers Wins Big Against Chicago
+       ```code
+      New York Baseballers Wins Big Against Chicago
 
-New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
+      New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
 
-Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
+      Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
 
-The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
- ```
+      The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
+       ```
 
- **Assistant:**
+       **Assistant:**
 
- ```code
-Sports
- ```
+       ```code
+       Sports
+      ```
 
 12. Add another example with the following text.
 
- **User:**
+       **User:**
 
- ```code
-Joyous moments at the Oscars
+       ```code
+      Joyous moments at the Oscars
 
-The Oscars this past week where quite something!
+      The Oscars this past week where quite something!
 
-Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
-These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
+      Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
+      These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
 
-From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
- ```
+      From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
+       ```
 
- **Assistant:**
+       **Assistant:**
 
- ```code
-Entertainment
- ```
+       ```code
+      Entertainment
+       ```
 
 13. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
 
- ```code
-Severe drought likely in California
+      ```code
+      Severe drought likely in California
 
-Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+      Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
 
-In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+      In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
 
-Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
- ```
+      Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+       ```
 
 14. This time the model should respond with an appropriate classification, even without instructions.
 
