@@ -50,14 +50,14 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-           ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+           ![](../media/ui3.png "Keys and Endpoints")
 
 <validation step="b6d08e8e-f2a3-4066-a698-2a324f4493dd" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Deploy a model
 
@@ -81,23 +81,24 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](../media/ui1.png "Create a new deployment")
 
 6. Search for **gpt-35-turbo-16k** and click on **Confirm**
 
       ![](../media/new04.png)
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: text-turbo (1)
-    - **Model version**: Auto-update to default (2)
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+7. Within the Deploy model pop-up interface, enter the following details:
+      - Deployment name: 35turbo (1)
+      - Deployment type: Standard(2)
+      - Choose collapse from the deployment details (3)
+      - Model version: 0613(Default)(4)
+      - Tokens per Minute Rate Limit (thousands): 10K (5)
+      - Enable dynamic quota: Enabled (6)
+      - Click on Deploy (7)
   
-      ![](../media/intial-deploy.jpg)
+           ![](../media/ui2.png)
 
-      >**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
+           >**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -110,7 +111,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 3: Set up an application in Cloud Shell
@@ -119,19 +120,18 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+      ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+      > **Note**: The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
-
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
    ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Advanced settings** pane, enter the following details:
+1. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
@@ -144,17 +144,16 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
          ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
+         > **Note**: that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
-
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
   
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/02-azure-openai-api
@@ -168,9 +167,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       code .
       ```
  
-    > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
-   ![](../media/classic-cloudshell-prompt.png) 
+      ![](../media/classic-cloudshell-prompt.png) 
    
 
 <validation step="4eb72f2c-5f15-42b7-9637-abdaf9e30be5" />
@@ -178,7 +177,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 4: Configure your application
