@@ -21,11 +21,11 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create1.png)
+   ![](../media/tel-10.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -36,7 +36,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
   
-   ![](../media/azopenai123.png "Create Azure OpenAI resource")
+         ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
 4. Click on **Next** again and subsequently click on **Create** 
 
@@ -48,17 +48,14 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
-
-   
-#### Validation
+           ![](../media/ui3.png "Keys and Endpoints")
 
 <validation step="b2bea034-1f21-46f4-9d53-c1def354425e" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 2: Deploy a model
@@ -67,35 +64,38 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select1.png)
+   ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/update08.png)
    
-4. In the prompt select **Explore the new experience** .
+4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
+      ![](../media/new03.png "Create a new deployment")
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](../media/ui1.png "Create a new deployment")
 
 6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: 35turbo (1)
-    - **Select a Model**: gpt-35-turbo-16k (2)
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+      ![](../media/new04.png)
 
-       ![](../media/deploy-35turbo.jpg)  
+7. Within the Deploy model pop-up interface, enter the following details:
+      - Deployment name: 35turbo (1)
+      - Deployment type: Standard(2)
+      - Choose collapse from the deployment details (3)
+      - Model version: 0613(Default)(4)
+      - Tokens per Minute Rate Limit (thousands): 10K (5)
+      - Enable dynamic quota: Enabled (6)
+      - Click on Deploy (7)
+  
+           ![](../media/ui2.png) 
 
    > **Note**: if the **GPT-35-TURBO-16K** model isn't available, choose **gpt-35-turbo**
 
@@ -103,14 +103,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
-#### Validation
-
 <validation step="f0a7d271-5b5c-40c2-80a0-9e7889b96f1f" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 3: Generate code in chat playground
@@ -119,20 +117,15 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
    
-2. In the **Setup** section at the top, select the **Default** system message template and click on continue.
-
-   ![](../media/default1.png)
-   
-3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
-
-4. The model will likely respond with a function, with some explanation of what the function does and how to call it.
-5. Next, send the prompt `Do the same thing, but this time write it in C#`.
-6. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
-7. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
+1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
+1. Next, send the prompt `Do the same thing, but this time write it in C#`.
+1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
+1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
 
     ```code
     What does the following function do?  
@@ -166,11 +159,11 @@ In this task, you will use a short command-line application running in Cloud She
 
 3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
-   ![](../media/cloudshell_image1.png "Create storage advanced settings")
+   ![](../media/cloudshell-getting-started.png "Create storage advanced settings")
 
 4. Select I want to create a storage account and click on **Next**.
 
-   ![](../media/cloudshell_image2.png "Create storage advanced settings")
+   ![](../media/cloudshell-mount-strg-account.png)
 
 5. Within the **Create storage account** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
@@ -182,7 +175,7 @@ In this task, you will use a short command-line application running in Cloud She
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
-    ![](../media/lab04-1.png "Create storage advanced settings")
+       ![](../media/lab04-1.png "Create storage advanced settings")
 
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -199,28 +192,24 @@ In this task, you will use a short command-line application running in Cloud She
    cd azure-openai/Labfiles/04-code-generation
     ```
 
-    Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
+   > **Note**: Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
 9. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
-    ```bash
-   code .
-    ```
+       ```bash
+      code .
+       ```
 
-> **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
-   ![](../media/classic-cloudshell-prompt.png)
-
-
-   
-#### Validation
+      ![](../media/classic-cloudshell-prompt.png)
 
 <validation step="8cfc3b23-a18d-413a-a749-b7a1e70de45a" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 
