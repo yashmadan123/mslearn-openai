@@ -34,7 +34,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
     - **Subscription**: Default - Pre-assigned subscription (1).
     - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
+    - **Region**: Select **France Central** (3)
     - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
@@ -122,7 +122,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
+2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Save** and subsequently click on **Continue**.
 3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
