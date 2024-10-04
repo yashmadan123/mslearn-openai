@@ -124,7 +124,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
 
-1. From the right top corner toggle bar to swicth to old experience.
+1. From the right top corner toggle bar to switch to old experience.
     
     ![](../media/openai_toggle.png)
 
