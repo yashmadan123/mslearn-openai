@@ -192,7 +192,7 @@ In this task, you will complete key parts of the application to enable it to use
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **CTRL + S**
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
 4. Navigate to the folder for your preferred language and install the necessary packages
 
@@ -306,7 +306,7 @@ In this task, you will complete key parts of the application to enable it to use
     print("Response: " + generated_text + "\n")
     ```
 
-8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **CTRL + S**
+8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
