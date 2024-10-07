@@ -117,7 +117,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
       - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
       - **Resource group**: Select **Use existing**.
       - openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Storage account Name**: storage-<inject key="Deployment-ID" enableCopy="false"></inject>
+      - **Storage account Name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
       - **File share**: Create a new file share named **none**
 
            ![](../media/lab04-1.png "Create storage advanced settings")
