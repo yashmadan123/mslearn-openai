@@ -88,7 +88,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
 
 7. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: 35turbo (1)
+      - Deployment name: text-turbo(1)
       - Deployment type: Standard(2)
       - Choose collapse from the deployment details (3)
       - Model version: 0613(Default)(4)
