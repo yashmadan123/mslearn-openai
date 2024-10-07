@@ -6,161 +6,214 @@ The Azure OpenAI Service models can generate code for you using natural language
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Deploy a model
-- Task 2: Generate code in chat playground
-- Task 3: Set up an application in Cloud Shell
-- Task 4: Configure your application
-- Task 5: Run your application
+- Task 1: Provision an Azure OpenAI resource
+- Task 2: Deploy a model
+- Task 3: Generate code in chat playground
+- Task 4: Set up an application in Cloud Shell
+- Task 5: Configure your application
+- Task 6: Run your application
 
 ## Estimated time: 60 minutes
 
-### Task 1: Deploy a model
+### Task 1: Provision an Azure OpenAI resource
 
-To use the Azure OpenAI API for code generation, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and reference that model in our app.
+In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/OpenAI_select1.png)
+   ![](../media/tel-10.png)
+
+3. Create an **Azure OpenAI** resource with the following settings 
+
+    - **Subscription**: Default - Pre-assigned subscription (1).
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
+    - **Region**: Select **France Central** (3)
+    - **Name**: OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
+    - **Pricing tier**: Standard S0 (5)
+    -  Click on **Next** (6)
+  
+         ![](../media/azopenai123.png "Create Azure OpenAI resource")
+
+4. Click on **Next** again and subsequently click on **Create** 
+
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+
+6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+      - Select **Keys and Endpoint (1)** under **Resource Management**.
+      - Click on **Show Keys (2)**.
+      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
+      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+
+           ![](../media/ui3.png "Keys and Endpoints")
+
+<validation step="6b5dfe99-465f-46ee-87f2-cd43ea009266" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
+### Task 2: Deploy a model
+
+In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+
+1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+
+   ![](../media/tel-11.png)
+
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject>**
+
+   ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
-
-
-4. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
-
-      ![](../media/deploy-1.jpg "Create a new deployment")
-
-5. Search for **GPT-35-TURBO-16K**, click on **Confirm**
-
-      ![](../media/gpt-35-16k.jpg)
-
+   ![](../media/update08.png)
    
-6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: 35turbo (1)
-    - **Model version**: Auto-update to default (2)
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
+
+      ![](../media/new03.png "Create a new deployment")
+
+5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+
+      ![](../media/ui1.png "Create a new deployment")
+
+6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+
+      ![](../media/new04.png)
+
+7. Within the Deploy model pop-up interface, enter the following details:
+      - Deployment name: 35turbo (1)
+      - Deployment type: Standard(2)
+      - Choose collapse from the deployment details (3)
+      - Model version: 0613(Default)(4)
+      - Tokens per Minute Rate Limit (thousands): 10K (5)
+      - Enable dynamic quota: Enabled (6)
+      - Click on Deploy (7)
   
-         ![](../media/deploy-16at.png)
+           ![](../media/ui2.png) 
 
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
+   > **Note**: if the **GPT-35-TURBO-16K** model isn't available, choose **gpt-35-turbo**
 
-#### Validation
+   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
-   <validation step="6b5dfe99-465f-46ee-87f2-cd43ea009266" />
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **35 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
+
+<validation step="2a8f35b8-234c-4548-9951-579dc22af97f" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-### Task 2: Generate code in chat playground
+### Task 3: Generate code in chat playground
 
-Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
+In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
    
-2. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
-
-3. The model will likely respond with a function, with some explanation of what the function does and how to call it.
-   
-4. Next, send the prompt `Do the same thing, but this time write it in C#`.
-   
-5. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
-   
-6. Next, let's explore using AI to understand code. Submit the following prompt as the user message.
+1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
+1. Next, send the prompt `Do the same thing, but this time write it in C#`.
+1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
+1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
 
     ```code
     What does the following function do?  
     ---  
-    def multiply(a, b):  
-    result = 0  
-    negative = False  
-    if a < 0 and b > 0:  
-        a = -a  
-        negative = True  
-    elif a > 0 and b < 0:  
-        b = -b  
-        negative = True  
-    elif a < 0 and b < 0:  
-        a = -a  
-        b = -b  
-    while b > 0:  
-        result += a  
-        b -= 1      
-    if negative:  
-        return -result  
-    else:  
-        return result
+    def random_func(n)
+      start = [0, 1]
+      (n - 2).times do
+        start << start[-1] + start[-2]
+      end
+      start.shuffle.each do |num|
+        puts num
+      end
+    end
     ```
 
-7. Observe the output, which explains what the function does, which is to multiply two numbers together by using a loop.
+8. Observe the output, which explains what the function does in natural language.
 
-8. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
+9. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
 
-9. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
+10. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
     
-### Task 3: Set up an application in Cloud Shell
+### Task 4: Set up an application in Cloud Shell
 
-To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
+In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
+
+   ![](../media/cloudshell-getting-started.png "Create storage advanced settings")
+
+4. Select I want to create a storage account and click on **Next**.
+
+   ![](../media/cloudshell-mount-strg-account.png)
+
+5. Within the **Create storage account** pane, enter the following details:
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+    - **CloudShell region**: East US (2)
+    - **Resource group**: Select **openai-<inject key="Deployment-ID" enableCopy="false"></inject>**(3)
+    - **Storage account name**: **storage<inject key="Deployment-ID" enableCopy="false"></inject>**(4)
+    - **File share**: Create a new file share named **none** (5)
+    - Click **Create** (6)
+
+       ![](../media/lab04-1.png "Create storage advanced settings")
+
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+
+7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-    > **NOTE:** if you get Message saying already cloned , please move the next step.
-
-4. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/04-code-generation
     ```
 
-   Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
+   > **Note**: Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-   Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+9. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
-    ```bash
-   code .
-    ```
-   > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and make sure you are in the correct project path.
+      ```bash
+     code .
+      ```
 
-   ![](../media/classic-cloudshell-prompt.png)
+      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
-#### Validation
+      ![](../media/classic-cloudshell-prompt.png)
 
-   <validation step="2a8f35b8-234c-4548-9951-579dc22af97f" />
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+<validation step="8cfc3b23-a18d-413a-a749-b7a1e70de45a" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-### Task 4: Configure your application
 
-For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
+### Task 5: Configure your application
+
+In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
 1. In the code editor, expand the language folder for your preferred language.
 
@@ -188,7 +241,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     pip install openai==1.13.3
     ```
 
-5. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
+5. Add the necessary code for configuring the client.
 
     **C#**
     `Program.cs`
@@ -235,79 +288,80 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
-### Task 5: Run your application
+### Task 6: Run your application
 
-Now that your app has been configured, run it to try generating code for each use case. The use case is numbered in the app, and can be run in any order.
+In this task, you will run your configured app to generate code for each use case, which is numbered in the app and can be executed in any order.
 
 > **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
 
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
+   
 2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
 3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
 
-    ```
-    <Project Sdk="Microsoft.NET.Sdk">
-       
-        <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        </PropertyGroup>
-        
-        <ItemGroup>
-            <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-            <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-            <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-        </ItemGroup>
-        
-        <ItemGroup>
-            <None Update="appsettings.json">
-                <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-            </None>
-        </ItemGroup>
-       
-    </Project>  
-    ```  
-
-3. Run the application.
+```
+   <Project Sdk="Microsoft.NET.Sdk">
+   
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
+   
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
+   
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+    </Project>
+   ```  
+4. Run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
 
-4. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
+5. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
-5. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
+6. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
     ```prompt
     Write four unit tests for the following function.\n---\n
     ```
 
-6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
+7. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
-7. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
+8. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
 
-8. To check the results paste the following code in the terminal:
+9. To check the results paste the following code in the terminal:
 
     ```
    cd result
     ```
 
-9. Copy the below command in the terminal to see the contents of the app.txt file.
+10. Copy the below command in the terminal to see the contents of the app.txt file.
 
-   ```
-   cat app.txt
-   ```
+      ```
+     cat app.txt
+     ```
 
 The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
@@ -322,4 +376,4 @@ In this lab, you have accomplished the following:
 -   Deploy an OpenAI model within the Azure OpenAI studio
 -   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
 
-## Proceed with next lab.
+### You have successfully completed the lab.
