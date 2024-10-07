@@ -51,9 +51,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-          ![](../media/openai-endpoint-new.png "Keys and Endpoints")
-
-#### Validation
+          ![](../media/ui3.png "Keys and Endpoints")
 
 <validation step="92fd5d61-ee1f-44aa-b7cc-4545c53b5b92" />
 
@@ -85,29 +83,26 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](../media/ui1.png "Create a new deployment")
 
 6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
-   
-7. Within the **Deploy model** pop-up interface, enter the following details:
 
-8. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: text-turbo (1)
-    - **Model version**: Auto-update to default (2)
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+7. Within the Deploy model pop-up interface, enter the following details:
+      - Deployment name: 35turbo (1)
+      - Deployment type: Standard(2)
+      - Choose collapse from the deployment details (3)
+      - Model version: 0613(Default)(4)
+      - Tokens per Minute Rate Limit (thousands): 10K (5)
+      - Enable dynamic quota: Enabled (6)
+      - Click on Deploy (7)
+  
+           ![](../media/ui2.png)
 
-         ![](../media/intial-deploy.jpg)
-
- >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
+           >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
  > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
-   
-#### Validation
 
 <validation step="e3805450-2e13-40c4-80fa-58a0cd695e6e" />
 
