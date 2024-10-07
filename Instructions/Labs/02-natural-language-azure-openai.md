@@ -75,7 +75,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update08.png)
 
-4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
+4. In the prompt select the **OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
       ![](../media/new03.png "Create a new deployment")
 
@@ -135,12 +135,10 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Resource group**: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**(3)
+    - **Storage account**: **storage<inject key="DeploymentID" enableCopy="false"></inject>**(4)
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create** (6)
 
          ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
@@ -169,16 +167,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
  
       > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
-      ![](../media/classic-cloudshell-prompt.png) 
-   
-
-<validation step="4eb72f2c-5f15-42b7-9637-abdaf9e30be5" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+      ![](../media/classic-cloudshell-prompt.png)
 
 ### Task 4: Configure your application
 
