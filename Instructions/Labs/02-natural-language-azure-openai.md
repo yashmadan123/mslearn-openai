@@ -88,7 +88,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       ![](../media/new04.png)
 
 7. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: 35turbo (1)
+      - Deployment name: text-turbo(1)
       - Deployment type: Standard(2)
       - Choose collapse from the deployment details (3)
       - Model version: 0613(Default)(4)
@@ -96,7 +96,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Enable dynamic quota: Enabled (6)
       - Click on Deploy (7)
   
-           ![](../media/ui2.png)
+           ![](../media/ui4.png)
 
            >**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
 
