@@ -79,12 +79,31 @@ In this task, you will use the DALL-E playground in Azure OpenAI Studio to exper
 4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
       ![](../media/new03.png "Create a new deployment")
+
+5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+
+      ![](../media/ui1.png "Create a new deployment")
+
+6. Search for **dall-e-2**, click on **Confirm**. 
+
+     ![](../media/ui5.png "Create a new deployment")
    
-5. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
+7. Within the Deploy model pop-up interface, enter the following details:
+      - Deployment name: dall-e(1)
+      - Deployment type: Standard(2)
+      - Choose collapse from the deployment details (3)
+      - Model version: 2.0(Default)(4)
+      - Capacity Units: 1(5)
+      - Enable dynamic quota: Enabled (6)
+      - Click on Deploy (7)
+  
+           ![](../media/ui6.png)
+              
+8. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
    
       ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/image_gen.jpg)
 
-6. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
+9. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
       ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/new_1.jpg)
 
