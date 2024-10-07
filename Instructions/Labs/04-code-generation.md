@@ -31,7 +31,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
     - **Subscription**: Default - Pre-assigned subscription (1).
     - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
+    - **Region**: Select **France Central** (3)
     - **Name**: OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
@@ -101,7 +101,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
+   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **35 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
 
 <validation step="f0a7d271-5b5c-40c2-80a0-9e7889b96f1f" />
 
