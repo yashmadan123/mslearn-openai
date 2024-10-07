@@ -127,7 +127,7 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
     >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
 
-4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
+4. The model will probably provide a satisfactory response to the prompt, presented as a numbered list. While this is a decent answer, it doesn't meet our specific needs.
 5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Save** and subsequently click on **Continue**.
 6. Format the instructions as python comments. Send the following prompt to the model.
 
