@@ -268,7 +268,7 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
+      ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
@@ -276,11 +276,11 @@ In this task, you will use a short command-line application running in Cloud She
 
 3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-   ![](../media/cloudshell-getting-started.png)
+      ![](../media/cloudshell-getting-started.png)
 
 4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
 
-   ![](../media/cloudshell-mount-strg-account.png)
+      ![](../media/cloudshell-mount-strg-account.png)
 
 5. Within the **Advanced settings** pane, enter the following details:
 
