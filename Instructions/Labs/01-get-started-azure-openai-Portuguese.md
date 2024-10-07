@@ -76,13 +76,16 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
 7. Na interface de **Implementar modelo**, insira os seguintes detalhes:
     
-    - **Nome da Implementação (1)**: my-gpt-model
-    - **Versão do modelo (2)**: 0301(Default)
-    - **Tipo de Implementação (3)**: Standard
-    - **Limite de Velocidade de Tokens por Minuto (milhares) (4)**: 10K
-    - Clique em **Implementar (5)**
-  
-      ![](../media/gpt-intial.jpg)
+    - Within the Deploy model pop-up interface, enter the following details:
+    - Deployment name: my-gpt-model (1)
+    - Deployment type: Standard(2)
+    - Choose collapse from the deployment details (3)
+    - Model version: 0613(Default)(4)
+    - Tokens per Minute Rate Limit (thousands): 10K (5)
+    - Enable dynamic quota: Enabled (6)
+    - Click on Deploy (7)
+      
+      ![](../media/my-gpt-model-1.png)
 
 8. Isso irá implementar um modelo que você explorará nas próximas etapas.
 
