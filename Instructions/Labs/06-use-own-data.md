@@ -34,7 +34,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
+    - **Region**: Select **France Central**.
     - **Name**: OpenAI-Lab06-<inject key="Deployment-ID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
 
@@ -209,7 +209,7 @@ In this task, you will observe how the base model responds to queries without an
 
    ![](../media/x690.png)
 
-16. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+16. In **Azure OpenAI Studio**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
    ![](../media/chat_playground.jpg "Add your data in setup pane")
    
