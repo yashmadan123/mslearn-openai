@@ -151,7 +151,7 @@ El patio de juegos de *Chat* proporciona una interfaz de chatbot para los modelo
   
     > **Nota**: Se utilizan algunos ejemplos para proporcionar al modelo ejemplos de los tipos de respuestas que se esperan. El modelo intentará reflejar el tono y el estilo de los ejemplos en sus propias respuestas.
   
-5. Haga clic en **Aplicar cambios** y luego en **Continuar** en la pestaña emergente **Actualizar mensaje de sistema** para iniciar una nueva sesión y establecer el contexto de comportamiento del sistema de chat.
+5. Haga clic en **Guardar** y luego en **Continuar** en la pestaña emergente **Actualizar mensaje del sistema** para iniciar una nueva sesión y configurar el contexto de comportamiento del sistema de chat.
 
 6. En el cuadro de consulta en la parte inferior de la página, ingrese el texto `What is artificial intelligence?`
 
