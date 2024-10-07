@@ -148,9 +148,7 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
     > **Nota**: Exemplos de poucos-tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
   
-5. Clique em **Aplicar alterações** e, em seguida, clique em **Continuar** na aba pop-up **Atualizar mensagem do sistema** para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
-
-   ![](../media/apply_changes.png)
+5. Clique em **salvar** e, em seguida, clique em **Continuar** na guia pop-up **Atualizar mensagem do sistema** para iniciar uma nova sessão e definir o contexto comportamental para o sistema de chat.
 
 7. Na caixa de consulta na parte inferior da página, insira o texto `O que é inteligência artificial?`
 
