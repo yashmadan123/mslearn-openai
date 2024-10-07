@@ -236,8 +236,6 @@ In this task, you will observe how the base model responds to queries without an
 22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
 
     ![](../media/review.jpg "Add data")
-    
-#### Validation
 
 <validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
 
