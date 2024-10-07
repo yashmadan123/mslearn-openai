@@ -203,15 +203,15 @@ In this task, you will observe how the base model responds to queries without an
 
 14. Navigate to the **cognitive-search-<inject key="Deployment-ID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
-   ![](../media/x689.png)
+       ![](../media/x689.png)
 
 15. From the left navigation pane,click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
 
-   ![](../media/x690.png)
+      ![](../media/x690.png)
 
 16. In **Azure OpenAI Studio**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
-   ![](../media/chat_playground.jpg "Add your data in setup pane")
+      ![](../media/chat_playground.jpg "Add your data in setup pane")
    
 17. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
@@ -220,22 +220,22 @@ In this task, you will observe how the base model responds to queries without an
     - **Select Azure AI Search resource**: *Choose the search resource you created*
     - **Enter the index name**: margiestravel
     - **Indexer schedule**: Once
+   
+       ![](../media/image4.8.png "Add data configurations")
 
 18. Click on next to proceed with "Data Management"
-
-    ![](../media/image4.8.png "Add data configurations")
    
 19. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
-   ![](../media/datamanagement.png "Add data")
+      ![](../media/datamanagement.png "Add data")
 
 20. On the **Data connection** page select the **API key** , Click on the **Next**
 
-    ![](../media/API_key.jpg "Add data")
+       ![](../media/API_key.jpg "Add data")
    
 22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
 
-    ![](../media/review.jpg "Add data")
+       ![](../media/review.jpg "Add data")
 
 <validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
 
@@ -273,7 +273,7 @@ In this task, you will use a short command-line application running in Cloud She
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
 
-   ![](../media/cloudshell-bash.png)
+      ![](../media/cloudshell-bash.png)
 
 3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
@@ -287,10 +287,8 @@ In this task, you will use a short command-line application running in Cloud She
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: 
-      - openai-<inject key="Deployment-ID" enableCopy="false"></inject> (3)
-    - **Storage account name**:
-      - str<inject key="Deployment-ID" enableCopy="false"></inject> (4)
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (3)
+    - **Storage account name**: str<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
@@ -319,9 +317,9 @@ In this task, you will use a short command-line application running in Cloud She
    code .
     ```
 
-  > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
-   ![](../media/classic-cloudshell-prompt.png) 
+      ![](../media/classic-cloudshell-prompt.png) 
 
 ### Task 7: Configure your application
 
@@ -363,7 +361,7 @@ In this task, you will complete key parts of the application to enable it to use
     - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
     - The name of the search index (which should be `margiestravel`).
 
-      ![](../media/x676.png)
+         ![](../media/x676.png)
 
 6. Open the code file for your preferred language, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
 
