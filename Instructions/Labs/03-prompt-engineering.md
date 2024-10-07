@@ -58,7 +58,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 2: Deploy a model
@@ -109,7 +109,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 3: Apply prompt engineering in chat playground
@@ -270,15 +270,12 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/classic-cloudshell-prompt.png) 
 
-   
-#### Validation
-
 <validation step="b83818f3-0527-485b-85c5-57c7f0149fe1" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 5: Configure your application
 
@@ -719,7 +716,6 @@ In this task, you will run your configured app to send a request to your model a
     ```prompt
     What animal is the favorite of children at Contoso?
     ```
-
    
 
 ## Summary
