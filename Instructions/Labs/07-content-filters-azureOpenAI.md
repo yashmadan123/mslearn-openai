@@ -21,32 +21,30 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create.png)
+   ![](../media/tel-10.png)
 
 3. Create an **Azure OpenAI** resource with the following settings and click **Next** twice and click on **Create**
    
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+      - **Subscription**: Default - Pre-assigned subscription
+      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
+      - **Region**: Select <inject key="Region" enableCopy="false" />
+      - **Name**: OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>
+      - **Pricing tier**: Standard S0
 
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+           ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-#### Validation
 
 <validation step="50622248-632f-4437-97cf-9c3f82092308" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 2: Deploy a model
@@ -55,50 +53,49 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio.png)
+   ![](../media/update08.png)
 
-4. In the prompt select **Explore the new experience** .
+4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
+      ![](../media/new03.png "Create a new deployment")
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](../media/ui1.png "Create a new deployment")
 
 6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
    
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: 35turbo (1)
-    - **Model version**: 0613 Default (2)
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+     ![](../media/new04.png)
 
-     ![](../media/deploy-35turbo.jpg)
+7. Within the Deploy model pop-up interface, enter the following details:
+      - Deployment name: 35turbo (1)
+      - Deployment type: Standard(2)
+      - Choose collapse from the deployment details (3)
+      - Model version: 0613(Default)(4)
+      - Tokens per Minute Rate Limit (thousands): 10K (5)
+      - Enable dynamic quota: Enabled (6)
+      - Click on Deploy (7)
+  
+           ![](../media/ui2.png)
 
->**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
-
-7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+           >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for natural language generation and chat scenarios.
-
-#### Validation
 
 <validation step="a75cfc42-9bee-4829-858b-0612e685f83f" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 3: Generate natural language output
