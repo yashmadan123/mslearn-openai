@@ -272,7 +272,6 @@ In this task, you will use a short command-line application running in Cloud She
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-
       ![](../media/cloudshell-bash.png)
 
 3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
