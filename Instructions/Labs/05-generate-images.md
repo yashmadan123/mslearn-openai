@@ -38,7 +38,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - **Name**: OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>
       - **Pricing tier**: Standard S0
 
-           ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+           ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
            >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
 
