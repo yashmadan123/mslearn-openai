@@ -183,9 +183,9 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 2. Submit the following message in chat session
 
       ```
-       Write three multiple choice questions based on the following text.
+     Write three multiple choice questions based on the following text.
 
-       Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
+     Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
 
      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
 
