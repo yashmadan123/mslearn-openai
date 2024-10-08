@@ -53,13 +53,6 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
           ![](../media/ui3.png "Keys and Endpoints")
 
-<validation step="c2fef447-da3e-445d-b962-36f0d8c80d5a" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 
 ### Task 2: Deploy a model
 
@@ -104,7 +97,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
-<validation step="eb8dcedf-f127-44f8-afe2-0ae019c6b7c5" />
+<validation step="c2fef447-da3e-445d-b962-36f0d8c80d5a" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -266,7 +259,14 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
       > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 9 and 10** to and make sure you are in the correct project path.
 
-      ![](../media/classic-cloudshell-prompt.png) 
+      ![](../media/classic-cloudshell-prompt.png)
+
+    <validation step="eb8dcedf-f127-44f8-afe2-0ae019c6b7c5" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 5: Configure your application
 
