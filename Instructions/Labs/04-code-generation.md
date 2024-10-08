@@ -50,13 +50,6 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
            ![](../media/ui3.png "Keys and Endpoints")
 
-<validation step="6b5dfe99-465f-46ee-87f2-cd43ea009266" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 
 ### Task 2: Deploy a model
 
@@ -102,8 +95,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **35 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
-
-<validation step="2a8f35b8-234c-4548-9951-579dc22af97f" />
+   
+<validation step="6b5dfe99-465f-46ee-87f2-cd43ea009266" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -202,7 +195,7 @@ In this task, you will use a short command-line application running in Cloud She
 
       ![](../media/classic-cloudshell-prompt.png)
 
-<validation step="8cfc3b23-a18d-413a-a749-b7a1e70de45a" />
+<validation step="2a8f35b8-234c-4548-9951-579dc22af97f" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
