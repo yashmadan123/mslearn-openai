@@ -79,11 +79,17 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 7. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
     
     - Na interface pop-up do modelo de implantação, insira os seguintes detalhes:
+    
     - Nome da implantação: **my-gpt-model (1)**
+    
     - Versão do modelo: **0301 (padrão) (2)**
+    
     - Tipo de implantação: **Standard (3)**
+    
     - Limite de Taxa de Tokens por Minuto: **10K (4)**
+    
     - Habilitar cota dinâmica: **Habilitado (5)**
+    
     - Clique em **Implantar (6)**
       
       ![](../media/8-10-24(19).png)

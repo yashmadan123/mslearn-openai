@@ -176,12 +176,12 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
    
 #### Validação
 
-   <validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
-
 > **Parabéns** por completar a tarefa! Agora, é hora de validá-la. Aqui estão os passos:
 > - Clique no botão Validar para a tarefa correspondente. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa. 
 > - Caso contrário, leia atentamente a mensagem de erro e tente novamente o passo, seguindo as instruções no guia do laboratório.
 > - Se precisar de alguma assistência, por favor, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
+
+   <validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
 
 ## Tarefa 4: Configurar a sua aplicação
 
