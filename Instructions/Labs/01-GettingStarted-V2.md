@@ -1,24 +1,24 @@
 # Develop Generative with Azure OpenAI - Use Azure OpenAI SDKs in your app - 02
-### Overall Estimated Duration: 90 minutes
+### Overall Estimated Duration: 60 minutes
 ## Overview
 
-
+In this lab, you will explore the integration of Azure OpenAI Service with an application by provisioning an OpenAI resource and deploying the GPT-35-Turbo model. You will begin by creating an Azure OpenAI resource in the Azure portal and deploying the model to enable advanced language capabilities. Following that, you will set up an application in Cloud Shell and configure it to interact with the deployed model. You will then test the application by sending prompts and reviewing responses to verify functionality. Lastly, you will implement conversation history tracking, allowing the application to maintain context across interactions. This hands-on experience will provide practical skills in deploying and integrating AI models into applications, leveraging the security and scalability of Azure.
 
 ## Objective
 
-Understand how to provision and deploy AI models using Azure OpenAI Service, and explore their capabilities for natural language processing and code generation. Gain skills in interacting with the Azure OpenAI Studio, configuring prompts and parameters, and leveraging the model's responses for various applications. By the end of this lab, you will be able to:
+Understand how to provision, deploy, and integrate Azure OpenAI models into an application, while maintaining conversation history. By the end of this lab, you will be able to:
 
-**Provision an Azure OpenAI Resource**: Create and configure an Azure OpenAI resource in the Azure portal, selecting the appropriate settings for deployment.
+**Provision an Azure OpenAI Resource**: Set up an Azure OpenAI resource in the Azure portal to enable AI functionalities.
 
-**Deploy a Model**: Successfully deploy the GPT-35-Turbo model within Azure OpenAI Studio, ensuring it is ready for interaction and application.
+**Deploy a Model**: Deploy a GPT-35-Turbo model within Azure OpenAI Studio, preparing it for interaction with your application.
 
-**Explore the Completions Playground**: Use the Completions playground to test the model’s responses by submitting various prompts and analyzing the output.
+**Set Up an Application in Cloud Shell**: Use Cloud Shell to create and configure an application that integrates with the Azure OpenAI model.
 
-**Utilize the Chat Playground**: Interact with the model in the Chat playground, configuring system messages and examples to enhance conversational capabilities.
+**Configure Your Application**: Update your application with the necessary configurations to enable communication with the deployed OpenAI model.
 
-**Experiment with Prompts and Parameters**: Adjust prompts and parameters to refine the AI model’s output, understanding the impact of settings like temperature and response length.
+**Test Your Application**: Test your application's functionality by sending requests and reviewing responses from the OpenAI model.
 
-**Explore Code Generation**: Test the model’s ability to generate code snippets based on programming requests, showcasing its functionality in software development scenarios.
+**Maintain Conversation History**: Implement functionality to retain conversation history, ensuring your application can handle context-aware interactions.
 
 ## Prerequisites
 Participants should have:
@@ -33,7 +33,7 @@ Participants should have:
 
 ## Architecture
 
-In this lab, the architecture centers around the Azure OpenAI Service, where you will provision an OpenAI resource and deploy the GPT-35-Turbo model. Azure OpenAI Studio serves as the primary interface for interacting with the model through the Completions and Chat playgrounds, enabling users to experiment with prompts and refine outputs. This architecture enhances application functionality by integrating advanced language processing and code generation capabilities, while also allowing for effective monitoring and management of model performance within the Azure environment.
+In this lab, the architecture centers around the Azure OpenAI Service, where you will provision an OpenAI resource and deploy the GPT-35-Turbo model. The architecture includes the Azure OpenAI Studio, which serves as the primary interface for interacting with the model, enabling users to utilize the Completions and Chat playgrounds for experimentation with prompts and response refinement. Additionally, a Cloud Shell application is integrated into the architecture, allowing for configuration and testing of the application while maintaining conversation history. This architecture enhances application functionality by leveraging advanced language processing and code generation capabilities, while also facilitating effective monitoring and management of model performance within the Azure environment.
 
 ## Architecture Diagram
 
@@ -140,7 +140,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
      ![Start Your Azure Journey](../media/sc900-image(3).png)
  
-In this hands-on lab, you'll provision the Azure OpenAI Service and deploy the GPT-35-Turbo model, utilizing Azure OpenAI Studio to experiment with prompts and parameters for advanced natural language processing and code generation.
+In this hands-on lab, you'll provision the Azure OpenAI Service and deploy the GPT-35-Turbo model, using Azure OpenAI Studio to configure your application and test its capabilities for natural language processing and code generation.
 
 ### Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
