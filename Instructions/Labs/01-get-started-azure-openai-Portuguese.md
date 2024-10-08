@@ -37,7 +37,7 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
   
       ![](../media/8-10-24(12).png)
 
-4. Clique em **Avançar** três vezes e clique em **Criar**.
+4. Clique em **Próxima** três vezes e clique em **Criar**.
 
    ![](../media/8-10-24(13).png)
 
