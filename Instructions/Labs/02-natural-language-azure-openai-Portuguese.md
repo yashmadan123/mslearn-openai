@@ -20,13 +20,13 @@ Neste laboratório, você completará as seguintes tarefas:
 
 Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso Azure OpenAI em sua assinatura do Azure.
 
-1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
+1. No **portal do Azure**, pesquise por **Azure OpenAI (1)** e selecione **OpenAI (2)**.
 
-   ![](../media/openai_1.png)
+   ![](../media/8-10-24(10).png)
 
-2. Na tela **Serviços de IA do Azure | OpenAI**, clique em **+ Criar**.
+2. Na tela **Azure AI services | OpenAI**, clique em **+ Criar**.
 
-   ![](../media/create.png)
+   ![](../media/8-10-24(11).png)
 
 3. Crie um recurso **Azure OpenAI** com as seguintes configurações 
 
@@ -37,26 +37,30 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
     - **Tipo de preço (5)**: Standard S0
     - Clique em **Próxima (6)**
   
-       ![](../media/30-08-2024(10).png)
+       ![](../media/8-10-24(36).png)
 
-4. Clique em **Próxima** duas vezes e subsequentemente clique em **Criar** 
+4. Clique em **Próxima** duas vezes e subsequentemente clique em **Criar**.
+
+    ![](../media/8-10-24(13).png)
 
 5. Aguarde a conclusão da implementação. Em seguida, vá para o recurso Azure OpenAI implementado no portal do Azure.
 
+    ![](../media/8-10-24(14).png)
+
 6. Para capturar os valores de Chaves e Endpoints, na lâmina **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Selecione **Chaves e Ponto de extremidade (1)** sob **Gerenciamento de Recursos**.
-      - Clique em **Mostrar Chaves (2)**.
+      - Clique em **Mostrar as Chaves (2)**.
       - Copie a **CHAVE 1 (3)** e certifique-se de colá-la em um editor de texto como o Bloco de Notas para referência futura.
       - Finalmente, copie a URL da API do **Ponto de extremidade (4)** clicando em copiar para a área de transferência. Cole-a em um editor de texto como o Bloco de Notas para uso posterior.
 
-        ![](../media/30-08-2024(11).png)
+        ![](../media/8-10-24(38).png)
 
 #### Validação
 
 > **Parabéns** por completar a tarefa! Agora, é hora de validá-la. Aqui estão os passos:
 > - Clique no botão Validar para a tarefa correspondente. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa. 
 > - Caso contrário, leia atentamente a mensagem de erro e tente novamente o passo, seguindo as instruções no guia do laboratório.
-> - Se precisar de alguma assistência, por favor, entre em contato conosco em labs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
+> - Se precisar de alguma assistência, por favor, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
 
    <validation step="8d0ea9cb-8ab4-4fa7-81a6-3642e4534d68" />
 
@@ -64,39 +68,36 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
 
 Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para usar através do **Azure OpenAI Studio**. Uma vez implantado, faremos referência a esse modelo em nosso aplicativo.
 
-1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
+1. No **portal do Azure**, pesquise por **Azure OpenAI (1)** e selecione **OpenAI (2)**.
 
-   ![](../media/openai_1.png)
+   ![](../media/8-10-24(10).png)
 
 2. Na lâmina **Azure AI Services | OpenAI**, selecione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/open.png)
+   ![](../media/8-10-24(39).png)
 
-3. No painel de recursos do Azure OpenAI, clique em **Ir para o Azure OpenAI Studio** e ele navegará para o **Azure AI Studio**.
+3. No painel de recursos do Azure OpenAI, clique em **Go to Azure OpenAI Studio** e ele navegará para o **Azure AI Studio**.
 
-   ![](../media/go_to.png)
-
->**Observação**: antes de implantar um modelo, verifique se você está no OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>. Caso contrário, selecione-o no menu suspenso no canto superior direito.
-  
-   ![](../media/swap_model.png)
+   ![](../media/8-10-24(40).png)
    
-5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implementar o modelo (2)** , selecione **Implementar modelo base (3)**.
+5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
-   ![](../media/30-08-2024(7).png)
+   ![](../media/8-10-24(41).png)
 
 6. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo-16k (1)** e clique em **Confirmar (3)**.
 
-   ![](../media/30-08-2024(14).png)
+   ![](../media/8-10-24(42).png)
 
-7. Na interface pop-up **Implementar modelo**, insira os seguintes detalhes:
+7. Na interface pop-up **Implantar o modelo**, insira os seguintes detalhes:
     
     - **Nome da implantação (1)**: text-turbo
     - **Versão do modelo (2)**: 0613 (Predefinição)
     - **Tipo de implantação (3)**: Standard
     - **Limite de Velocidade de Tokens por Minuto (milhares) (4)**: 10K
-    - Clique em **Implementar (5)**
+    - Habilitar cota dinâmica: **Habilitado (5)**
+    - Clique em **Implantar (6)**
   
-      ![](../media/30-08-2024(15).png)
+      ![](../media/8-10-24(43).png)
 
 8. Isso implantará um modelo com o qual você brincará à medida que avançar.
 
@@ -109,7 +110,7 @@ Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para us
 > **Parabéns** por completar a tarefa! Agora, é hora de validá-la. Aqui estão os passos:
 > - Clique no botão Validar para a tarefa correspondente. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa. 
 > - Caso contrário, leia atentamente a mensagem de erro e tente novamente o passo, seguindo as instruções no guia do laboratório.
-> - Se precisar de alguma assistência, por favor, entre em contato conosco em labs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
+> - Se precisar de alguma assistência, por favor, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
 
    <validation step="d1610911-47ae-44ef-a286-4f4961a4b36d" />
 
@@ -119,19 +120,19 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
 
 1. No [portal do Azure](https://portal.azure.com?azure-portal=true), selecione o botão **[>_]** (*Cloud Shell*) na parte superior da página à direita da caixa de pesquisa. Um painel do Cloud Shell será aberto na parte inferior do portal.
 
-    ![](../media/30-08-2024(16).png)
+    ![](../media/8-10-24(44).png)
 
 2. Na primeira vez que você abrir o Cloud Shell, você pode ser solicitado a escolher o tipo de shell que deseja usar (*Bash* ou *PowerShell*). Selecione **Bash**. Se você não vir esta opção, pule o passo.
 
-   ![](../media/30-08-2024(17).png)
+   ![](../media/8-10-24(45).png)
 
-3. Dentro do painel Começando, selecione **Montar conta de armazenamento (1)**, selecione sua **Assinatura de conta de armazenamento (2)** no menu suspenso e clique em **Aplicar (3)**.
+3. Dentro do painel Começando, selecione **Montar conta de armazenamento (1)**, selecione sua **Assinatura da conta de armazenamento (2)** no menu suspenso e clique em **Aplicar (3)**.
 
-   ![](../media/30-08-2024(18).png)
+   ![](../media/8-10-24(46).png)
 
 4. Dentro do painel **Montar conta de armazenamento**, selecione **Eu quero criar uma conta de armazenamento (1)** e clique em **Avancar (2)**.
 
-   ![](../media/30-08-2024(19).png)
+   ![](../media/8-10-24(47).png)
 
 5. Dentro do painel **Configurações avançadas**, insira os seguintes detalhes:
 
@@ -141,10 +142,10 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
     - **Região (3)**: <inject key="Region" enableCopy="false" />
     - **Nome da Conta de armazenamento (4)**: Selecione **Criar nova**
       - storage<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Comp. de arquivo (5)**: Crie um novo compartilhamento de arquivo chamado **none**
+    - **Comp. de arquivos (5)**: Crie um novo compartilhamento de arquivo chamado **none**
     - Clique em **Criar (6)**
 
-        ![](../media/30-08-2024(20).png)
+        ![](../media/8-10-24(48).png)
 
 6. Note que você pode redimensionar o cloud shell arrastando a barra separadora na parte superior da página, ou usando os ícones **&#8212;**, **&#9723;**, e **X** no canto superior direito da página para minimizar, maximizar e fechar o painel. Para mais informações sobre como usar o Azure Cloud Shell, consulte a [documentação do Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
@@ -168,9 +169,10 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
     ```bash
     code .
     ```
+
     > **Nota:** Se você for solicitado a **Alternar para o Cloud Shell Clássico** após executar o comando **code .**, clique em **Confirmar** e execute os passos 8 e 9 novamente.
 
-   ![](../media/30-08-2024(21).png)
+    ![](../media/8-10-24(49).png)
    
 #### Validação
 
@@ -179,7 +181,7 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
 > **Parabéns** por completar a tarefa! Agora, é hora de validá-la. Aqui estão os passos:
 > - Clique no botão Validar para a tarefa correspondente. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa. 
 > - Caso contrário, leia atentamente a mensagem de erro e tente novamente o passo, seguindo as instruções no guia do laboratório.
-> - Se precisar de alguma assistência, por favor, entre em contato conosco em labs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
+> - Se precisar de alguma assistência, por favor, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
 
 ## Tarefa 4: Configurar a sua aplicação
 
@@ -193,7 +195,7 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
     
     - Python: `.env`
     
-3. Atualize os valores de configuração para incluir o **endpoint** e a **chave** do recurso Azure OpenAI que você criou, bem como o nome do modelo que você implantou, `text-turbo`. Em seguida, salve o arquivo clicando com o botão direito no arquivo no painel esquerdo e clicando em **Salvar**
+3. Atualize os valores de configuração para incluir o **Ponto de extremidade** e a **chave** do recurso Azure OpenAI que você criou, bem como o nome do modelo que você implantou, `text-turbo`. Em seguida, salve o arquivo clicando com o botão direito no arquivo no painel esquerdo e clicando em **Salvar**
 
 4. Navegue até a pasta da sua linguagem preferida e instale os pacotes necessários
 
@@ -217,14 +219,14 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
     **C#**: Program.cs
 
     ```csharp
-    // Adicionar pacote Azure OpenAI
+    // Add Azure OpenAI package
     using Azure.AI.OpenAI;
     ```
 
     **Python**: test-openai-model.py
 
     ```python
-    # Adicionar pacote Azure OpenAI
+    # Add Azure OpenAI package
     from openai import AzureOpenAI
     ```
 
@@ -233,28 +235,28 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
     **C#**: Program.cs
 
     ```csharp
-    // Inicializar o cliente Azure OpenAI
+    // Initialize the Azure OpenAI client
     OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     
-    // Mensagem do sistema para fornecer contexto ao modelo
-    string systemMessage = "Eu sou um entusiasta de caminhadas chamado Forest que ajuda as pessoas a descobrir trilhas em sua área. Se nenhuma área for especificada, usarei como padrão perto do Parque Nacional Rainier. Então, fornecerei três sugestões de trilhas próximas que variam em comprimento. Também compartilharei um fato interessante sobre a natureza local nas trilhas ao fazer uma recomendação.";
+    // System message to provide context to the model
+    string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
     ```
 
     **Python**: test-openai-model.py
 
     ```python
-    # Inicializar o cliente Azure OpenAI
+    # Initialize the Azure OpenAI client
     client = AzureOpenAI(
             azure_endpoint = azure_oai_endpoint, 
             api_key=azure_oai_key,  
             api_version="2024-02-15-preview"
             )
     
-    # Criar uma mensagem do sistema
-    system_message = """Eu sou um entusiasta de caminhadas chamado Forest que ajuda as pessoas a descobrir trilhas em sua área. 
-        Se nenhuma área for especificada, usarei como padrão perto do Parque Nacional Rainier. 
-        Então, fornecerei três sugestões de trilhas próximas que variam em comprimento. 
-        Também compartilharei um fato interessante sobre a natureza local nas trilhas ao fazer uma recomendação.
+    # Create a system message
+    system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
+        If no area is specified, I will default to near Rainier National Park. 
+        I will then provide three suggestions for nearby hikes that vary in length. 
+        I will also share an interesting fact about the local nature on the hikes when making a recommendation.
         """
     ```
 
@@ -265,8 +267,8 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
     **C#**: Program.cs
 
     ```csharp
-    // Adicionar código para enviar solicitação...
-    // Construir objeto de opções de conclusão
+    // Add code to send request...
+    // Build completion options object
     ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
     {
         Messages =
@@ -279,19 +281,19 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
         DeploymentName = oaiDeploymentName
     };
 
-    // Enviar solicitação ao modelo Azure OpenAI
+    // Send request to Azure OpenAI model
     ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
 
-    // Imprimir a resposta
+    // Print the response
     string completion = response.Choices[0].Message.Content;
-    Console.WriteLine("Resposta: " + completion + "\n");
+    Console.WriteLine("Response: " + completion + "\n");
     ```
 
     **Python**: test-openai-model.py
 
     ```python
-    # Adicionar código para enviar solicitação...
-    # Enviar solicitação ao modelo Azure OpenAI
+    # Add code to send request...
+    # Send request to Azure OpenAI model
     response = client.chat.completions.create(
         model=azure_oai_deployment,
         temperature=0.7,
@@ -303,26 +305,26 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
     )
     generated_text = response.choices[0].message.content
 
-    # Imprimir a resposta
-    print("Resposta: " + generated_text + "\n")
+    # Print the response
+    print("Response: " + generated_text + "\n")
     ```
 
 8. Antes de salvar o arquivo, certifique-se de que seu código se pareça com o código fornecido abaixo.
 
     **C#**: Program.cs
-
+      
       ```CSharp
-      // Declarações using implícitas são incluídas
+      // Implicit using statements are included
       using System.Text;
       using System.Text.Json;
       using Microsoft.Extensions.Configuration;
       using Microsoft.Extensions.Configuration.Json;
       using Azure;
       
-      // Adicionar pacote Azure OpenAI
+      // Add Azure OpenAI package
       using Azure.AI.OpenAI;
       
-      // Construir um objeto de configuração e recuperar configurações do usuário.
+      // Build a config object and retrieve user settings.
       IConfiguration config = new ConfigurationBuilder()
           .AddJsonFile("appsettings.json")
           .Build();
@@ -332,31 +334,31 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
       
       if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
       {
-          Console.WriteLine("Por favor, verifique seu arquivo appsettings.json para valores ausentes ou incorretos.");
+          Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
           return;
       }
       
-      // Inicializar o cliente Azure OpenAI...
+      // Initialize the Azure OpenAI client...
       OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
       
-      // Mensagem do sistema para fornecer contexto ao modelo
-      string systemMessage = "Eu sou um entusiasta de caminhadas chamado Forest que ajuda as pessoas a descobrir trilhas em sua área. Se nenhuma área for especificada, usarei como padrão perto do Parque Nacional Rainier. Então, fornecerei três sugestões de trilhas próximas que variam em comprimento. Também compartilharei um fato interessante sobre a natureza local nas trilhas ao fazer uma recomendação.";
+      // System message to provide context to the model
+      string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
       
       do {
-          Console.WriteLine("Digite seu texto de prompt (ou digite 'quit' para sair): ");
+          Console.WriteLine("Enter your prompt text (or type 'quit' to exit): ");
           string? inputText = Console.ReadLine();
           if (inputText == "quit") break;
       
-          // Gerar resumo do Azure OpenAI
+          // Generate summary from Azure OpenAI
           if (inputText == null) {
-              Console.WriteLine("Por favor, digite um prompt.");
+              Console.WriteLine("Please enter a prompt.");
               continue;
           }
           
-          Console.WriteLine("\nEnviando solicitação de resumo para o endpoint Azure OpenAI...\n\n");
+          Console.WriteLine("\nSending request for summary to Azure OpenAI endpoint...\n\n");
       
-          // Adicionar código para enviar solicitação...
-          // Construir objeto de opções de conclusão
+          // Add code to send request...
+          // Build completion options object
           ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
           {
               Messages =
@@ -369,12 +371,12 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
               DeploymentName = oaiDeploymentName
           };
       
-          // Enviar solicitação ao modelo Azure OpenAI
+          // Send request to Azure OpenAI model
           ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
       
-          // Imprimir a resposta
+          // Print the response
           string completion = response.Choices[0].Message.Content;
-          Console.WriteLine("Resposta: " + completion + "\n");
+          Console.WriteLine("Response: " + completion + "\n");
       
       } while (true);
       ```
@@ -385,46 +387,46 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
       import os
       from dotenv import load_dotenv
       
-      # Adicionar pacote Azure OpenAI
+      # Add Azure OpenAI package
       from openai import AzureOpenAI
       
       def main(): 
               
           try: 
           
-              # Obter configurações 
+              # Get configuration settings 
               load_dotenv()
               azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
               azure_oai_key = os.getenv("AZURE_OAI_KEY")
               azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
               
-              # Inicializar o cliente Azure OpenAI...
+              # Initialize the Azure OpenAI client...
               client = AzureOpenAI(
                       azure_endpoint = azure_oai_endpoint, 
                       api_key=azure_oai_key,  
                       api_version="2024-02-15-preview"
                       )
               
-              # Criar uma mensagem do sistema
-              system_message = """Eu sou um entusiasta de caminhadas chamado Forest que ajuda as pessoas a descobrir trilhas em sua área. 
-                  Se nenhuma área for especificada, usarei como padrão perto do Parque Nacional Rainier. 
-                  Então, fornecerei três sugestões de trilhas próximas que variam em comprimento. 
-                  Também compartilharei um fato interessante sobre a natureza local nas trilhas ao fazer uma recomendação.
+              # Create a system message
+              system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
+                  If no area is specified, I will default to near Rainier National Park. 
+                  I will then provide three suggestions for nearby hikes that vary in length. 
+                  I will also share an interesting fact about the local nature on the hikes when making a recommendation.
                   """
                     
               while True:
-                  # Obter texto de entrada
-                  input_text = input("Digite o prompt (ou digite 'quit' para sair): ")
+                  # Get input text
+                  input_text = input("Enter the prompt (or type 'quit' to exit): ")
                   if input_text.lower() == "quit":
                       break
                   if len(input_text) == 0:
-                      print("Por favor, digite um prompt.")
+                      print("Please enter a prompt.")
                       continue
       
-                  print("\nEnviando solicitação de resumo para o endpoint Azure OpenAI...\n\n")
+                  print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
                                     
-                  # Adicionar código para enviar solicitação...
-                  # Enviar solicitação ao modelo Azure OpenAI
+                  # Add code to send request...
+                  # Send request to Azure OpenAI model
                   response = client.chat.completions.create(
                       model=azure_oai_deployment,
                       temperature=0.7,
@@ -436,8 +438,8 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
                   )
                   generated_text = response.choices[0].message.content
       
-                  # Imprimir a resposta
-                  print("Resposta: " + generated_text + "\n")
+                  # Print the response
+                  print("Response: " + generated_text + "\n")
                         
           except Exception as ex:
               print(ex)
@@ -446,7 +448,7 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
           main()
       ```
 
-9. Para salvar as alterações feitas no arquivo, clique com o botão direito no arquivo no painel esquerdo na janela de código e clique em **Salvar**
+9. Para salvar as alterações feitas no arquivo, clique com o botão direito no arquivo no painel esquerdo na janela de código e clique em **Salvar**.
 
    >**Nota:** Certifique-se de indentar o código eliminando quaisquer espaços em branco extras após colá-lo no editor de código.
 
@@ -460,13 +462,13 @@ Agora que a sua aplicação foi configurada, execute-a para enviar sua solicita�
     
     - **Python**: `python test-openai-model.py`
 
-    > **Dica**: Você pode usar o ícone **Maximizar tamanho do painel** (**^**) na barra de ferramentas do terminal para ver mais texto no console.
+      > **Dica**: Você pode usar o ícone **Maximizar tamanho do painel** (**^**) na barra de ferramentas do terminal para ver mais texto no console.
 
-2. Quando solicitado, digite o texto `Que trilha devo fazer perto de Rainier?`.
+2. Quando solicitado, digite o texto `What hike should I do near Rainier?`.
 
 3. Observe o resultado, notando que a resposta segue as diretrizes fornecidas na mensagem do sistema que você adicionou ao array *messages*.
 
-4. Forneça o prompt `Onde devo fazer trilha perto de Boise? Estou procurando algo de dificuldade fácil, entre 2 a 3 milhas, com ganho de elevação moderado.` e observe o resultado.
+4. Forneça o prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` e observe o resultado.
 
 5. No arquivo de código da sua linguagem preferida, altere o valor do parâmetro *temperature* na sua solicitação para **1.0** e salve o arquivo.
 
