@@ -52,14 +52,6 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
         ![](../media/ui3.png "Keys and Endpoints")
 
-<validation step="2260bf34-007f-488b-99e5-6138f7cece20" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 ### Task 2: Deploy a model
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
@@ -104,6 +96,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
+
+   <validation step="2260bf34-007f-488b-99e5-6138f7cece20" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Observe normal chat behavior without adding your own data
 
