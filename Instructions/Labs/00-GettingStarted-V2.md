@@ -10,7 +10,7 @@ Azure OpenAI Service brings the generative AI models developed by OpenAI to the 
 
 By the end of this lab, you will be able to:
 
-- **Get started with Azure OpenAI Servic**e: This hands-on exercise aims to provision an Azure OpenAI resource and deploying a model. Explore the model's capabilities in the Completions playground, then interact with it using the Chat playground. Fine-tune responses by adjusting prompts and parameters, and leverage code-generation to automate tasks.
+- **Get started with Azure OpenAI Service**: This hands-on exercise aims to provision an Azure OpenAI resource and deploying a model. Explore the model's capabilities in the Completions playground, then interact with it using the Chat playground. Fine-tune responses by adjusting prompts and parameters, and leverage code-generation to automate tasks.
 - **Use Azure OpenAI SDKs in your app**: This hands-on exercise aims to provision an Azure OpenAI resource, deploy a model, set up and configure an application in Cloud Shell, and then run the application, demonstrating the full lifecycle from resource creation to application deployment and execution.
 
 ## Pre-requisites
