@@ -38,7 +38,7 @@ O fluxo de arquitetura para esta tarefa começa com o provisionamento de um recu
 
 Uma vez pronto para começar, sua máquina virtual e o guia do laboratório estarão ao seu alcance diretamente no seu navegador web.
 
-![Acesse sua VM e Guia do Laboratório](../media/labguide-1.png)
+![Acesse sua VM e Guia do Laboratório](../media/8-10-24(1).png)
 
 ### Máquina Virtual & Guia do Laboratório
 
@@ -48,59 +48,47 @@ Sua máquina virtual é seu principal recurso durante o workshop. O guia do labo
 
 Para entender melhor seus recursos e credenciais de laboratório, navegue até a tab **Ambiente**.
 
-![Explore os Recursos do Laboratório](../media/env-1.png)
+![Acesse sua VM e Guia do Laboratório](../media/8-10-24(2).png)
 
 ### Utilizando o Recurso de Janela Dividida
 
 Para conveniência, você pode abrir o tab do laboratório em uma janela separada selecionando o botão **Janela Dividida** no canto superior direito.
 
-![Use o Recurso de Janela Dividida](../media/spl.png)
+![Acesse sua VM e Guia do Laboratório](../media/8-10-24(3).png)
 
 ### Gerenciando Sua Máquina Virtual
 
 Sinta-se à vontade para iniciar, parar ou reiniciar sua máquina virtual conforme necessário na tab **Recursos**. Sua experiência está nas suas mãos!
 
-![Gerencie sua Máquina Virtual](../media/res.png)
-
-## Extensão da Duração do Laboratório
-
-1. Para estender a duração do laboratório, clique no ícone **Ampulheta** no canto superior direito do ambiente do laboratório.
-
-    ![Gerencie sua Máquina Virtual](../media/gext.png)
-
-    > **Nota:** Você verá o ícone **Ampulheta** quando restarem 10 minutos no laboratório.
-
-2. Clique em **OK** para estender a duração do seu laboratório.
-
-   ![Gerencie sua Máquina Virtual](../media/gext2.png)
-
-3. Se você não tiver estendido a duração antes do final do laboratório, uma janela pop-up aparecerá, dando-lhe a opção de estender. Clique em **OK** para prosseguir.
+![Acesse sua VM e Guia do Laboratório](../media/8-10-24(4).png)
 
 ## Vamos Começar com o Portal do Azure
 
 1. Na sua máquina virtual, clique no ícone do Portal do Azure conforme mostrado abaixo:
 
-   ![Iniciar o Portal do Azure](../media/sc900-image(1).png)
+   ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(5).png)
 
 2. Você verá a tab **Entrar no Microsoft Azure**. Aqui, insira suas credenciais:
 
    - **Email/Usuário:** <inject key="AzureAdUserEmail"></inject>
 
-       ![Digite seu Nome de Usuário](../media/sc900-image-1.png)
+       ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(6).png)
 
 3. Em seguida, forneça sua senha/password:
 
    - **Senha:** <inject key="AzureAdUserPassword"></inject>
 
-       ![Digite sua Senha](../media/sc900-image-2.png)
+       ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(7).png)
 
-4. Se for solicitado para permanecer conectado, você pode clicar em "Não."
+4. Se for solicitado para permanecer conectado, você pode clicar em **Não**.
+
+    ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(8).png)
 
 5. Se uma janela pop-up **Bem-vindo ao Microsoft Azure** aparecer, simplesmente clique em **Cancelar** para pular o tour.
 
-6. Clique em "Próximo" no canto inferior direito para começar sua jornada no laboratório!
+6. Clique em **Próximo** no canto inferior direito para começar sua jornada no laboratório!
 
-    ![Comece sua Jornada no Azure](../media/sc900-image(3).png)
+    ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(9).png)
 
 Este laboratório o capacitará com as capacidades para implementar e personalizar modelos Azure OpenAI, permitindo-lhe criar aplicações avançadas de IA, como chatbots e sistemas de recomendação.
 
