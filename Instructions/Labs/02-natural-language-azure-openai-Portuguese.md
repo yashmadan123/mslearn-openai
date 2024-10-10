@@ -456,6 +456,38 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
 
 Agora que a sua aplicação foi configurada, execute-a para enviar sua solicitação ao seu modelo e observe a resposta.
 
+1. No editor de código, expanda a pasta `sample-code` e observe brevemente a função e a aplicação para a sua linguagem. Esses ficheiros serão
+ ser utilizado para as tarefas na aplicação.
+
+1. No terminal bash do Cloud Shell, navegue até à pasta do seu idioma preferido.
+
+1. Se estiver a utilizar a linguagem **C#**, abra o ficheiro **CSharp.csproj** e substitua pelo código seguinte e guarde o ficheiro.
+
+   ```
+   <Project Sdk="Microsoft.NET.Sdk">
+         
+   <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net8.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+   </PropertyGroup>
+         
+   <ItemGroup>
+      <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+   </ItemGroup>
+         
+   <ItemGroup>
+      <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+   </ItemGroup>
+         
+   </Project>
+   ```  
+
 1. No painel do terminal interativo, certifique-se de que o contexto da pasta seja a pasta da sua linguagem preferida. Em seguida, digite o seguinte comando para executar a aplicação.
 
     - **C#**: `dotnet run`
