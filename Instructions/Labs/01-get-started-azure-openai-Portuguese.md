@@ -92,6 +92,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
     
     - Clique em **Implantar (6)**
       
+
       ![](../media/8-10-24(19).png)
 
 8. Isso irá implementar um modelo que você explorará nas próximas etapas.
