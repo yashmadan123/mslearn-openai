@@ -167,10 +167,8 @@ In this task, you will use a short command-line application running in Cloud She
 5. Within the **Create storage account** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: East US (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="Deployment-ID" enableCopy="false"></inject>
+    - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(3)
+    - **Storage Account Name**: Select storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
@@ -301,7 +299,7 @@ In this task, you will run your configured app to generate code for each use cas
 
 3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
 
-```
+    ```
    <Project Sdk="Microsoft.NET.Sdk">
    
    <PropertyGroup>
@@ -324,7 +322,7 @@ In this task, you will run your configured app to generate code for each use cas
      </ItemGroup>
    
     </Project>
-   ```  
+    ```  
 4. Run the application.
 
     - **C#**: `dotnet run`
@@ -360,9 +358,9 @@ In this task, you will run your configured app to generate code for each use cas
 
 10. Copy the below command in the terminal to see the contents of the app.txt file.
 
-   ```
+    ```
    cat app.txt
-   ```
+    ```
 
 The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
