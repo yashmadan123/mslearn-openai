@@ -456,12 +456,11 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
 
 Agora que a sua aplicação foi configurada, execute-a para enviar sua solicitação ao seu modelo e observe a resposta.
 
-1. No editor de código, expanda a pasta `sample-code` e observe brevemente a função e a aplicação para a sua linguagem. Esses ficheiros serão
- ser utilizado para as tarefas na aplicação.
+1. No editor de código, expanda a pasta `sample-code` e observe brevemente a função e a aplicação para a sua linguagem. Esses arquivos serão ser utilizados para as tarefas na aplicação.
 
 1. No terminal bash do Cloud Shell, navegue até à pasta do seu idioma preferido.
 
-1. Se estiver a utilizar a linguagem **C#**, abra o ficheiro **CSharp.csproj** e substitua pelo código seguinte e guarde o ficheiro.
+1. Se estiver a utilizar a linguagem **C#**, abra o ficheiro **CSharp.csproj** e substitua pelo código seguinte e salve o arquivo.
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
