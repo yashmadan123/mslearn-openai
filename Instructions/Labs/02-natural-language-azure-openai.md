@@ -23,11 +23,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create1.png)
+   ![](../media/tel-10.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -52,8 +52,6 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-   #### Validation
-
    <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -67,27 +65,23 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/update08.png)
 
-4. After navigating to Azure AI Studio, click on **Explore the new experience** pop-up on the top.
+4. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-   ![](../media/explore_new-exp.jpg)
+      ![](../media/ui1.png "Create a new deployment")
 
-5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
+5. Search for **gpt-35-turbo-16k** and click on **Confirm**
 
-   ![](../media/deploy-1.jpg)
-
-6. In the **Select a model** window, select **gpt-35-turbo-16k (1)** and click on **Confirm (2)**.
-
-   ![](../media/new4.png)
+      ![](../media/new04.png)
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     
@@ -98,15 +92,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-      ![](../media/new2.png)
+      ![](../media/i2.png)
       
 8. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
-
-   #### Validation
 
    <validation step="4799e712-2f03-4a88-9456-fca39aea25d0" />
    
@@ -115,8 +107,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-
-### Task 3: Set up an application in Cloud Shell
+## Task 3: Set up an application in Cloud Shell
 
 In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
 
