@@ -89,13 +89,16 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
-      ![](../media/default1.png)
+    ![](../media/msi-image8.png)
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
       ```code
       Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
-      ```    
+      ```
+
+      ![](../media/msi-image9.png)
+        
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
 1. Next, send the prompt `Do the same thing, but this time write it in C#`.
