@@ -15,17 +15,17 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 60 minutes
 
-### Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/search_openai.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/create_01.png)
+   ![](../media/tel-10.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
    
@@ -52,43 +52,42 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 <validation step="4b6b5a36-2650-4f80-a408-879c57cf61a2" />
 
-### Task 2: Deploy a model
+## Task 2: Deploy a model
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/search_openai.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
 
-   ![](../media/openai_demo.png)
+   ![](../media/tel-1.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/openai-lab.png)
+   ![](../media/new01.png)
 
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](../media/ui1.png "Create a new deployment")
 
 6. Search for **GPT-35-TURBO**, click on **Confirm**
 
    ![](../media/pg-09.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: my-gpt-model (1)
-    - **Deployment type**: Standard(2)
-    - Choose **collapse** from the deployment details (3)
-    - **Model version**: 0613(Default)(4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Deploy** (7)
+      - **Deployment name**: my-gpt-model (1)
+      - **Model version**: 0301(Default)(2)
+      - **Deployment type**: Standard(3)
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Enable dynamic quota**: Enabled (5)
+      - Click on **Deploy** (6)
   
-         ![](../media/my-gpt-model-1.png)
+         ![](../media/i1.png)
 
-      >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+         >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
@@ -105,7 +104,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    <validation step="d9a504d6-e0be-4fa9-a4ed-6ead18a10e03" />
 
 
-### Task 3: Explore a model in the Completions playground
+## Task 3: Explore a model in the Completions playground
 
 In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
@@ -113,7 +112,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt.
 
-      ![](../media/generate_01.png)
+      ![](../media/generate_new.jpg)
 
       >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
@@ -144,7 +143,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
     
 7. Close the **Sample Code**.
 
-### Task 4: Use the Chat playground
+## Task 4: Use the Chat playground
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
@@ -183,7 +182,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
             
       ![](../media/view_code.jpg)
 
-### Task 5: Explore prompts and parameters
+## Task 5: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
@@ -216,10 +215,9 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
     - The prompt specifically states that the desired output should be three multiple choice questions.
        
-    - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in 
-         stable, predictable responses.
+    - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-### Task 6: Explore code-generation
+## Task 6: Explore code-generation
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
