@@ -38,7 +38,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
   
-   ![](../media/azopenai123.png "Create Azure OpenAI resource")
+         ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
 4. Click on **Next** again and subsequently click on **Create** 
 
@@ -50,14 +50,14 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
+           ![](../media/ui3.png "Keys and Endpoints")
 
    <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Deploy a model
 
@@ -105,7 +105,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
 ## Task 3: Set up an application in Cloud Shell
 
