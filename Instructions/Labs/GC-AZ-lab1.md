@@ -20,11 +20,11 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/Openai-01.png)
+   ![](../media/msi-image2.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/Openai-02.png)
+   ![](../media/msi-image3.png)
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -38,9 +38,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/openai_studio1.png)
 
-1. In the prompt select **Explore the new experience** .
-
-      ![](../media/Openai-03.png)
+1. In the prompt select **Close** on **Discover an even better Azure AI Studio experience**. 
 
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
@@ -50,22 +48,25 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
       ![](../media/Openai-05.png)
 
-
 1. Within the **Deploy model** pop-up interface, enter the following details:
+
     - **Deployment name**: 35turbo
+    - **Deployment type**: Standard
     -  Select **Customize**
 
+       ![](../media/msi-image5.png)
+       
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: 35turbo (1)
-    - **Select a Model**: accept default (2)
+    - **Deployment type**: Standard (3)
+    - **Model Version**: accept default (2)
       
         >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.<br>
-    - **Deployment type**: Standard (3)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
 
-       ![](../media/azure13.png)
+       ![](../media/msi-image6.png)
       
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
