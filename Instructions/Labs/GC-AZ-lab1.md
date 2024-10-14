@@ -284,7 +284,8 @@ For this exercise, you'll complete some key parts of the application to enable u
               max_tokens=1000
           )
           ```
-
+          >**Note**: Please make sure the indentation is correct and matches the code above before moving to the next task.
+          
 1. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
 ### Task 5: Run your application
