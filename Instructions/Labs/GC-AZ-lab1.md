@@ -58,8 +58,8 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
        
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: 35turbo (1)
-    - **Deployment type**: Standard (3)
-    - **Model Version**: accept default (2)
+    - **Deployment type**: Standard (2)
+    - **Model Version**: accept default (3)
       
         >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.<br>
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
@@ -85,11 +85,11 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old look** and click on **skip** and then navigate to the **Chat** playground in the left pane.
 
-    ![](../media/msi-image7.png)
+      ![](../media/msi-image7.png)
 
 1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
-    ![](../media/msi-image8.png)
+      ![](../media/msi-image8.png)
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
