@@ -34,12 +34,12 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
     - **Subscription**: Default - Pre-assigned subscription (1).
     - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
+    - **Region**: Select **France Central** (3)
     - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
   
-   ![](../media/azopenai123.png "Create Azure OpenAI resource")
+         ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
 4. Click on **Next** again and subsequently click on **Create** 
 
@@ -58,7 +58,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ## Task 2: Deploy a model
@@ -189,7 +189,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-    13. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+13. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
 
     ```code
     Severe drought likely in California
@@ -225,16 +225,13 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 5. Within the **Advanced settings** pane, enter the following details:
 
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
-
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+      - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+      - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
+      - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(3)
+      - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
+      - **File share**: Create a new file share named **none** (5)
+      - Click **Create Storage** (6)
+           ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
    
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -264,9 +261,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 >**Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 9 and 10** to and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png) 
-
-   
-#### Validation
 
 <validation step="b83818f3-0527-485b-85c5-57c7f0149fe1" />
 
