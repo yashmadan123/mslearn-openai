@@ -129,10 +129,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - storage<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject>(3)
+    - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create Storage** (6)
 
@@ -167,7 +165,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/classic-cloudshell-prompt.png) 
 
- #### Validation
  
    <validation step="2e8dadd1-f827-4597-8d99-c814ec85fbab" />
 
@@ -176,7 +173,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 4: Configure your application
+## Task 4: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
