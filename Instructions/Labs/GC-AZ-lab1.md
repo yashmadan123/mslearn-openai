@@ -20,11 +20,11 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/Openai-01.png)
+   ![](../media/msi-image2.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/Openai-02.png)
+   ![](../media/msi-image3.png)
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -36,11 +36,9 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/msi-image4.png)
 
-1. In the prompt select **Explore the new experience** .
-
-      ![](../media/Openai-03.png)
+1. In the prompt select **Close** on **Discover an even better Azure AI Studio experience**. 
 
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
@@ -50,18 +48,25 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
       ![](../media/Openai-05.png)
 
-   
+1. Within the **Deploy model** pop-up interface, enter the following details:
+
+    - **Deployment name**: 35turbo
+    - **Deployment type**: Standard
+    -  Select **Customize**
+
+       ![](../media/msi-image5.png)
+       
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: 35turbo (1)
-    - **Select a Model**: accept default (2)
+    - **Deployment type**: Standard (3)
+    - **Model Version**: accept default (2)
       
         >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.<br>
-    - **Deployment type**: Standard (3)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
 
-       ![](../media/azure13.png)
+       ![](../media/msi-image6.png)
       
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
@@ -72,23 +77,28 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Generate code in chat playground
 
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old look** and click on **skip** and then navigate to the **Chat** playground in the left pane.
-   
+
+    ![](../media/msi-image7.png)
+
 1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
 
-      ![](../media/default1.png)
+    ![](../media/msi-image8.png)
 
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
       ```code
       Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
-      ```    
+      ```
+
+      ![](../media/msi-image9.png)
+        
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
 1. Next, send the prompt `Do the same thing, but this time write it in C#`.
@@ -196,7 +206,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 > **Congratulations** on completing the task! Now, it's time to validate it.
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Configure your application
 

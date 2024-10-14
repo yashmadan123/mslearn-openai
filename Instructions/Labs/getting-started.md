@@ -82,7 +82,7 @@ In this hands-on lab, you will follow an architecture flow that begins with expl
    
 1. Use **Next** button from lower right corner to move on to the next page.
 
-   ![](../media/next1.png "Resource groups")
+    ![](../media/msi-image1.png)
 
 In this hands-on-lab, you will learn how Azure OpenAI models can generate and refine code and use the DALL-E model to create images from text prompts, showcasing AI's versatility in coding and creativity.
 

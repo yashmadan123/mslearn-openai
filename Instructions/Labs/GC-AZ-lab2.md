@@ -23,11 +23,11 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/Openai-01.png)
+    ![](../media/msi-image2.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/Openai-02.png)
+    ![](../media/msi-image3.png)
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -39,7 +39,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 1. In the **Overiew** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure OpenAI Studio**.
 
-   ![](../media/openai_studio.png)
+    ![](../media/msi-image4.png)
 
 1. From the left navigation pane, select the **DALL-E Playground** and ensure Delpoyment is **Dalle3**.
 
@@ -225,7 +225,7 @@ Now that you've reviewed the code, it's time to run it and generate some images.
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Summary
 
