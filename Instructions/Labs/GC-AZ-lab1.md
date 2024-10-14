@@ -36,7 +36,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/msi-image4.png)
 
 1. In the prompt select **Close** on **Discover an even better Azure AI Studio experience**. 
 
