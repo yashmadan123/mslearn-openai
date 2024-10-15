@@ -8,7 +8,7 @@ Azure OpenAI Service brings the generative AI models developed by OpenAI to the 
 
 ## Objective
 
-By the end of this lab, you will be able to:
+In this lab, you will learn how to use OpenAI to create natural language solutions. You’ll start by setting up the OpenAI environment in Azure and explore the basic features of OpenAI models for language processing. By the end of the lab, you’ll build and deploy a simple application that can process and respond to user input, while also learning how to enhance the model’s performance and output quality.
 
 - **Get started with Azure OpenAI Servic**e: This hands-on exercise aims to provision an Azure OpenAI resource and deploying a model. Explore the model's capabilities in the Completions playground, then interact with it using the Chat playground. Fine-tune responses by adjusting prompts and parameters, and leverage code-generation to automate tasks.
 - **Use Azure OpenAI SDKs in your app**: This hands-on exercise aims to provision an Azure OpenAI resource, deploy a model, set up and configure an application in Cloud Shell, and then run the application, demonstrating the full lifecycle from resource creation to application deployment and execution.
@@ -42,7 +42,7 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
  
 ![Access Your VM and Lab Guide](../media/labguide-1.png)
 
-### Virtual Machine & Lab Guide
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
@@ -83,12 +83,14 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
        ![Enter Your Password](../media/sc900-image-2.png)
 
 5. If you see the pop-up Action Required, click Ask Later.
- 
+
+   ![](../media/up1.png)
+    
    > **NOTE**: Do not enable MFA, select Ask Later.
  
-6. If prompted to stay signed in, you can click "No."
+7. If prompted to stay signed in, you can click "No."
  
-7. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+8. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
  
  
 This lab will equip you with the skills to deploy and customize Azure OpenAI models, enabling you to create advanced AI applications like chatbots and recommendation systems.
@@ -102,7 +104,7 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on Next from the lower right corner to move on to the next page.
+Now, click on **Next** from the lower right corner to move on to the next page.
 
 ![Start Your Azure Journey](../media/sc900-image(3).png)
 
