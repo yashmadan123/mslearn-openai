@@ -33,6 +33,8 @@ The architecture flow for this task begins with provisioning an Azure OpenAI res
 1. **Azure CloudShell**: Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
 
 ## Getting Started with the Lab
+
+Welcome to the "Get Started With OpenAI and Build Natural Language Solutions" lab. In this lab, you will learn how to use OpenAI models to create natural language solutions. You'll explore the basics and work on building and deploying applications that understand and process language. Let’s get started with the lab and explore the possibilities of AI.
  
 ## Accessing Your Lab Environment
  
@@ -62,20 +64,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 ![Manage Your Virtual Machine](../media/res.png)
 
-## **Lab Duration Extension**
-
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
-
-   ![Manage Your Virtual Machine](../media/gext.png)
-
-   >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
-
-2. Click **OK** to extend your lab duration.
- 
-   ![Manage Your Virtual Machine](../media/gext2.png)
-
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed. 
-
 ## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
@@ -93,14 +81,15 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
        ![Enter Your Password](../media/sc900-image-2.png)
+
+5. If you see the pop-up Action Required, click Ask Later.
  
-5. If prompted to stay signed in, you can click "No."
+   > **NOTE**: Do not enable MFA, select Ask Later.
  
-6. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+6. If prompted to stay signed in, you can click "No."
  
-7. Click "Next" from the bottom right corner to embark on your Lab journey!
+7. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
  
-     ![Start Your Azure Journey](../media/sc900-image(3).png)
  
 This lab will equip you with the skills to deploy and customize Azure OpenAI models, enabling you to create advanced AI applications like chatbots and recommendation systems.
 
@@ -114,5 +103,7 @@ Learner Support Contacts:
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on Next from the lower right corner to move on to the next page.
+
+![Start Your Azure Journey](../media/sc900-image(3).png)
 
 ## Happy Learning!!
