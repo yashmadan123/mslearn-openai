@@ -492,7 +492,7 @@ Now that your app has been configured, run it to send your request to your model
 
 Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
 
-## Review
+## Summary
 
 In this lab, you have accomplished the following:
 - Provision an Azure OpenAI resource
