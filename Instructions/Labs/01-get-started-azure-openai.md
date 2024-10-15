@@ -21,11 +21,11 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/search_openai.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/create_01.png)
+   ![](../media/tel-10.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
    
@@ -58,15 +58,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/search_openai.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
 
-   ![](../media/openai_demo.png)
+   ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/openai-lab.png)
+   ![](../media/update08.png)
 
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
@@ -78,15 +78,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    ![](../media/pg-09.jpg)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: my-gpt-model (1)
-    - **Deployment type**: Standard(2)
-    - Choose **collapse** from the deployment details (3)
-    - **Model version**: 0613(Default)(4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Deploy** (7)
+      - **Deployment name**: my-gpt-model (1)
+      - **Model version**: 0301(Default)(2)
+      - **Deployment type**: Standard(3)
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Enable dynamic quota**: Enabled (5)
+      - Click on **Deploy** (6)
   
-         ![](../media/my-gpt-model-1.png)
+           ![](../media/i1.png)
 
       >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
