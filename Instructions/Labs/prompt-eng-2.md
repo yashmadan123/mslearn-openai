@@ -200,7 +200,7 @@ The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were una
 Sports
  ```
 
-   ![](../media/promptsc1.png)
+   ![](../media/promptsc10.png)
 
 
 12. Add another example with the following text.
