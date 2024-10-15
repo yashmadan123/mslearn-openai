@@ -45,7 +45,11 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 4. Click on **Next** again and subsequently click on **Create** 
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+   ![](../media/promptsc1.png)
+
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal by clicking on **Go to resource** button .
+
+   ![](../media/promptsc2.png)
 
 6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -81,16 +85,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/openai_goto.png)
    
-4. In the prompt select **Explore the new experience** .
+4. In the prompt click on **Close** to proceed.
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
+   ![](../media/promptsc3.png)
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+   ![](../media/promptsc4.png)
 
-6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
-   
+6. Search for **GPT-35-TURBO-16K**(1), click on **Confirm**(2)
+
+   ![](../media/promptsc5.png)
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
