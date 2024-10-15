@@ -75,7 +75,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 6. Search for **GPT-35-TURBO**, click on **Confirm**
 
-   ![](../media/pg-09.jpg)
+   ![](../media/ui4.png)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
@@ -87,7 +87,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
            ![](../media/i1.png)
 
-      >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+           >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
 8. This will deploy a model which you will be playing around with as you proceed.
 
