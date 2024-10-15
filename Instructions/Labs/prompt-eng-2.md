@@ -107,7 +107,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 >**Note**: Please click on customize button to expand the other options.
 
-![](../media/updateimage.png)
+   ![](../media/promptsc11.png)
 
  >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once its deployed.
 
@@ -132,7 +132,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under Playgrounds section in the left pane.
+
+   ![](../media/promptsc6.png)
+
 2. In the **Setup** section at the top, enter `You are a helpful AI assistant`(1) as the system message and click on **Save button**(2) and subsequently click on **Continue**.
+
+   ![](../media/promptsc7.png)
+
 3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
@@ -143,7 +149,13 @@ In this task, you will examine how prompt engineering improves model responses i
     >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
 
 4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
+
+   ![](../media/promptsc8.png)
+
 5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`(1). Click **Save button**(2) and subsequently click on **Continue**.
+
+   ![](../media/promptsc9.png)
+
 6. Format the instructions as python comments. Send the following prompt to the model.
 
     ```code
@@ -169,6 +181,7 @@ In this task, you will examine how prompt engineering improves model responses i
 10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 11. In the **Setup** section near the system message, select the **Example** from the dropdown of **Add section** button. Add the following example.
 
+
  **User:**
 
  ```code
@@ -186,6 +199,9 @@ The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were una
  ```code
 Sports
  ```
+
+   ![](../media/promptsc1.png)
+
 
 12. Add another example with the following text.
 
