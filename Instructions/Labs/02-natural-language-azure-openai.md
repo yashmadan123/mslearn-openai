@@ -372,6 +372,7 @@ For this exercise, you'll complete some key parts of the application to enable u
    **Python**: test-openai-model.py
 
       ```Python
+      # import modules
       import os
       from dotenv import load_dotenv
       
