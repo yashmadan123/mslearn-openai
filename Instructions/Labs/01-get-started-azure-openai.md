@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 60 minutes
 
-### Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
@@ -52,7 +52,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 <validation step="1fa0e87b-eb46-463d-b63b-edf6e2282e16" />
 
-### Task 2: Deploy a model
+## Task 2: Deploy a model
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
@@ -103,7 +103,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
 
-### Task 3: Explore a model in the Completions playground
+## Task 3: Explore a model in the Completions playground
 
 In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
@@ -142,7 +142,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
     
 7. Close the **Sample Code**.
 
-### Task 4: Use the Chat playground
+## Task 4: Use the Chat playground
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
@@ -181,7 +181,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
             
       ![](../media/view_code.jpg)
 
-### Task 5: Explore prompts and parameters
+## Task 5: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
@@ -217,7 +217,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in 
          stable, predictable responses.
 
-### Task 6: Explore code-generation
+## Task 6: Explore code-generation
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
