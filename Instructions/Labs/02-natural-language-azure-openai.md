@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 - Task 4: Configure your application
 - Task 5: Run your application
 
-### Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
@@ -59,7 +59,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    <validation step="8d0ea9cb-8ab4-4fa7-81a6-3642e4534d68" />
 
-### Task 2: Deploy a model
+## Task 2: Deploy a model
 
 To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
 
@@ -107,7 +107,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    <validation step="d1610911-47ae-44ef-a286-4f4961a4b36d" />
 
-### Task 3: Set up an application in Cloud Shell
+## Task 3: Set up an application in Cloud Shell
 
 To show how to integrate with an Azure OpenAI model, we'll use a short command-line application that runs in Cloud Shell on Azure. Open up a new browser tab to work with Cloud Shell.
 
@@ -171,7 +171,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 <validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
 
-### Task 4: Configure your application
+## Task 4: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
@@ -440,7 +440,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-### Task 5: Test your application
+## Task 5: Test your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
 
