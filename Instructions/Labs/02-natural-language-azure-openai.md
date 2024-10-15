@@ -22,11 +22,11 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/search_openai.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
 
-   ![](../media/create_01.png)
+   ![](../media/tel-10.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -65,35 +65,33 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-    ![](../media/search_openai.png)
+    ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/openai_demo.png)
+   ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai-lab.png)
+   ![](../media/update08.png)
 
 5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 
-   ![](../media/deploy-2.jpg)
+   ![](../media/ui1.png)
 
 6. In the **Select a model** window, select **gpt-35-turbo-16k (1)** and click on **Confirm (2)**.
 
    ![](../media/new4.png)
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    
-    - **Deployment name**: text-turbo(1)
-    - **Deployment type**: Standard (2)
-    - Choose **collapse** from the deployment details (3)
-    - **Model version**: 0613(Default)(4)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-    - **Enable dynamic quota**: Enabled (6)
-    - Click on **Deploy** (7)
-
-      ![](../media/gpt-35-16k-1.png)
+7. Within the Deploy model pop-up interface, enter the following details:
+      - Deployment name: text-turbo(1)
+      - Model version: 0613(Default)(2)
+      - Deployment type: Standard(3)
+      - Tokens per Minute Rate Limit (thousands): 10K (4)
+      - Enable dynamic quota: Enabled (5)
+      - Click on Deploy (6)
+  
+           ![](../media/i2.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
 
