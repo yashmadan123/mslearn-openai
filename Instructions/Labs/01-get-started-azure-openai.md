@@ -43,8 +43,6 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
@@ -121,26 +119,26 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
       ![](../media/generated.jpg)
 
->**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
+      >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
 
-1. From the right top corner toggle bar to switch to old experience.
+6. From the right top corner toggle bar to switch to old experience.
     
     ![](../media/openai_toggle.png)
 
-2. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
+7. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
     
     ![](../media/generate_a_quiz.png)
    
       >**Note**: You can click on generate again , if the response is incomplete .
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+8. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
       ![](../media/view_code.jpg)
 
       ![](../media/openai-7.png)
     
-7. Close the **Sample Code**.
+9. Close the **Sample Code**.
 
 ## Task 4: Use the Chat playground
 
@@ -161,7 +159,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
          ![](../media/exples-ai.jpg)
    
-> **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 5. Save the changes by clicking on **Save** 
 
