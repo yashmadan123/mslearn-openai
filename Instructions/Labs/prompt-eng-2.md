@@ -34,18 +34,22 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
     - **Subscription**: Default - Pre-assigned subscription (1).
     - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
-    - **Region**: Select **Francecentral** (3)
+    - **Region**: Select **France Central** (3)
     - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **Pricing tier**: Standard S0 (5)
     -  Click on **Next** (6)
   
    ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
->**Note**: **Please deploy Openai resource in Francecentral Region**
+>**Note**: **Please deploy Openai resource in France Central Region**
 
 4. Click on **Next** again and subsequently click on **Create** 
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+   ![](../media/promptsc1.png)
+
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal by clicking on **Go to resource** button .
+
+   ![](../media/promptsc2.png)
 
 6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -81,27 +85,29 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/openai_goto.png)
    
-4. In the prompt select **Explore the new experience** .
+4. In the prompt click on **Close** to proceed.
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
+   ![](../media/promptsc3.png)
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+   ![](../media/promptsc4.png)
 
-6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
-   
+6. Search for **GPT-35-TURBO-16K**(1), click on **Confirm**(2)
+
+   ![](../media/promptsc5.png)
+
 7. Within the **Deploy model** pop-up interface, enter the following details:
-
-8. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo (1)
-    - **Model version**: Auto-update to default (2)
-    - **Deployment type**: Standard (3)
+    - **Deployment type**: Standard (2)
+    - **Model version**: Keep it to default (3)
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
 
-     ![](../media/updateimage.png)
+>**Note**: click on customize and collapse button to expand the other options.
+
+   ![](../media/promptsc11.png)
 
  >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once its deployed.
 
@@ -109,7 +115,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
  > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+ > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
    
 #### Validation
 
@@ -125,8 +131,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Apply changes** and subsequently click on **Continue**.
+1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under Playgrounds section in the left pane.
+
+   ![](../media/promptsc6.png)
+
+2. In the **Setup** section at the top, enter `You are a helpful AI assistant`(1) as the system message and click on **Save button**(2) and subsequently click on **Continue**.
+
+   ![](../media/promptsc7.png)
+
 3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
@@ -137,7 +149,13 @@ In this task, you will examine how prompt engineering improves model responses i
     >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
 
 4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
+
+   ![](../media/promptsc8.png)
+
+5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`(1). Click **Save button**(2) and subsequently click on **Continue**.
+
+   ![](../media/promptsc9.png)
+
 6. Format the instructions as python comments. Send the following prompt to the model.
 
     ```code
@@ -147,7 +165,7 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 7. The model should correctly respond with complete python code doing what the comments requested.
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and apply your changes and subsequently click on **Continue**. This will create a new chat session.
+8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and click on save button and subsequently click on **Continue**. This will create a new chat session.
 9. Send the following prompt to the model.
 
     ```code
@@ -162,6 +180,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 11. In the **Setup** section near the system message, select the **Example** from the dropdown of **Add section** button. Add the following example.
+
 
  **User:**
 
@@ -180,6 +199,9 @@ The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were una
  ```code
 Sports
  ```
+
+   ![](../media/promptsc10.png)
+
 
 12. Add another example with the following text.
 
