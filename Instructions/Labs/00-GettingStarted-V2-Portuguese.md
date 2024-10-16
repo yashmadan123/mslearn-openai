@@ -34,6 +34,8 @@ O fluxo de arquitetura para esta tarefa começa com o provisionamento de um recu
 
 ## Começando com o Laboratório
 
+Bem-vindo ao laboratório "Introdução ao OpenAI e criação de soluções de linguagem natural". Neste laboratório, você aprenderá como usar modelos OpenAI para criar soluções de linguagem natural. Você explorará os conceitos básicos e trabalhará na construção e implantação de aplicativos que entendem e processam linguagem. Vamos começar com o laboratório e explorar as possibilidades da IA.
+
 ### Acessando a seu Ambiente de Laboratório
 
 Uma vez pronto para começar, sua máquina virtual e o guia do laboratório estarão ao seu alcance diretamente no seu navegador web.
@@ -86,9 +88,6 @@ Sinta-se à vontade para iniciar, parar ou reiniciar sua máquina virtual confor
 
 5. Se uma janela pop-up **Bem-vindo ao Microsoft Azure** aparecer, simplesmente clique em **Cancelar** para pular o tour.
 
-6. Clique em **Próximo** no canto inferior direito para começar sua jornada no laboratório!
-
-    ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(9).png)
 
 Este laboratório o capacitará com as capacidades para implementar e personalizar modelos Azure OpenAI, permitindo-lhe criar aplicações avançadas de IA, como chatbots e sistemas de recomendação.
 
@@ -101,6 +100,8 @@ Contatos de Suporte para Alunos:
 - Suporte por E-mail: cloudlabs-support@spektrasystems.com
 - Suporte por Chat ao Vivo: https://cloudlabs.ai/labs-support
 
-Agora, clique em Próximo no canto inferior direito para passar para a próxima página.
+Agora, clique em **Próximo** no canto inferior direito para passar para a próxima página.
+
+![Acesse sua VM e Guia do Laboratório](../media/8-10-24(9).png)
 
 ## Votos de bom treinamento!
