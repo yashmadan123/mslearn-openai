@@ -384,6 +384,7 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
    **Python**: test-openai-model.py
 
       ```Python
+      # import modules
       import os
       from dotenv import load_dotenv
       
