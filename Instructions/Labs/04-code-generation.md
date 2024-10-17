@@ -34,9 +34,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
     - **Region**: Select **France Central** (3)
     - **Name**: OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
+    -  Click on **Next** 
   
-         ![](../media/azopenai123.png "Create Azure OpenAI resource")
+         ![](../media/open-ai9.png "Create Azure OpenAI resource")
 
 4. Click on **Next** again and subsequently click on **Create** 
 
@@ -189,8 +189,8 @@ In this task, you will use a short command-line application running in Cloud She
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: East US (2)
     - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(3)
-    - **Storage Account Name**: Select storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
-    - **File share**: Create a new file share named **none** (5)
+    - **Storage Account Name**: Enter storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
+    - **File share**: Enter **none** (5)
     - Click **Create** (6)
 
        ![](../media/lab04-1.png "Create storage advanced settings")
