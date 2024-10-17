@@ -93,12 +93,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       ![](../media/new04.png)
 
 1. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: 35turbo(1)
-      - Model version: 0613(Default)(2)
-      - Deployment type: Standard(3)
-      - Tokens per Minute Rate Limit (thousands): 10K (4)
-      - Enable dynamic quota: Enabled (5)
-      - Click on Deploy (6)
+      - Deployment name: **35turbo (1)**
+      - Model version: **0613(Default) (2)**
+      - Deployment type: **Standard (3)**
+      - Tokens per Minute Rate Limit (thousands): **10K (4)**
+      - Enable dynamic quota: **Enabled (5)**
+      - Click on Deploy **(6)**
   
            ![](../media/i3.png)
 
@@ -177,11 +177,11 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-1. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
+1. If you're prompted as Getting Started click on **Mount storage account (1)** select the available subscription **(2)** and click on **Apply (3)**.
 
    ![](../media/cloudshell-getting-started.png "Create storage advanced settings")
 
-1. Select I want to create a storage account and click on **Next**.
+1. Select **I want to create a storage account (2)** and click on **Next (2)**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
