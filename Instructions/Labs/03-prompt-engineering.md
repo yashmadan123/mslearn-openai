@@ -77,6 +77,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update08.png)
 
+   >**Note :** If the pop-up **Discover an even better Azure AI Studio experience** appears, click **Close** to dismiss it.
+
 4. Click on **Deployments (1)** under **Shared 
    Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
 
@@ -93,6 +95,10 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Click on Deploy (6)
   
            ![](../media/i2.png)
+
+           >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
+
+           ![](../media/imagecustomize.png)
 
            >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
