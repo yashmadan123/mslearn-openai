@@ -193,7 +193,7 @@ In this task, you will use a short command-line application running in Cloud She
     - **File share**: Enter **none** (5)
     - Click **Create** (6)
 
-       ![](../media/lab04-1.png "Create storage advanced settings")
+       ![](../media/lab04-storage.png "Create storage advanced settings")
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
