@@ -36,8 +36,6 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
   
          ![](../media/open-ai9.png "Create Azure OpenAI resource")
 
-
-
 1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
    <validation step="917cb723-2d65-4411-90f9-0150a7636494" />
@@ -67,9 +65,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png "Create a new deployment")
 
-   > **Note**: Click on the **Expand** button, if you dont see the left side navigation pane.
+      > **Note**: Click on the **Expand** button, if you dont see the left side navigation pane.
 
-   ![](../media/code2.png "Keys and Endpoints")           
+      ![](../media/code2.png "Keys and Endpoints")           
 
 1. Search for **GPT-35-TURBO**, click on **Confirm**
 
@@ -159,8 +157,6 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
    
             > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-
-
 1. Save the changes by clicking on **Save (1)** and subsequently click on **Continue (2)** to start a new session and set the behavioral context of the chat system.
 
       ![](../media/open-ai3.png)   
@@ -191,21 +187,21 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     
     - **Max response**: 500 **(3)**
 
-       ![](../media/open-ai5.png)
+        ![](../media/open-ai5.png)
       
 1. Submit the following message in chat session
 
-    ```
-     Write three multiple choice questions based on the following text.
+     ```
+      Write three multiple choice questions based on the following text.
 
-     Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
+      Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
 
-     - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
+      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
 
-     - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
+      - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
 
-     - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
-    ```
+      - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
+     ```
 
 1. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
