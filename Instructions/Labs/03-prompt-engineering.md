@@ -248,7 +248,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(3)
     - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create** (6)
 
         ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
    
