@@ -28,13 +28,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
    ![](../media/tel-10.png)
 
 1. Create an **Azure OpenAI** resource with the following settings then click on **Next** thrice and then click on **Create**.
-      - **Subscription**: Default - Pre-assigned subscription. **(1)**
-      - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
-      - **Region**: Select **France Central (3)**
-      - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(4)**
-      - **Pricing tier**: Standard S0 **(5)**
+    - **Subscription**: Default - Pre-assigned subscription. **(1)**
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
+    - **Region**: Select **France Central (3)**
+    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(4)**
+    - **Pricing tier**: Standard S0 **(5)**
   
-           ![](../media/open-ai9.png "Create Azure OpenAI resource")
+         ![](../media/open-ai9.png "Create Azure OpenAI resource")
 
 
 
@@ -157,7 +157,9 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
             ![](../media/exples-ai.jpg)
    
-      > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+            > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+
+
 
 1. Save the changes by clicking on **Save (1)** and subsequently click on **Continue (2)** to start a new session and set the behavioral context of the chat system.
 
@@ -175,9 +177,9 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 1. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-   ![](../media/view_code.jpg)
+    ![](../media/view_code.jpg)
 
-   ![](../media/open-ai4.png)       
+    ![](../media/open-ai4.png)       
 
 ### Task 5: Explore prompts and parameters
 
