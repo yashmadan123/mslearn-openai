@@ -154,7 +154,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
       end
     end
     ```
-
+    
 1. Observe the output, which explains what the function does in natural language.
 
    ![](../media/code7.png)
@@ -177,15 +177,15 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
 
-4. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
+1. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
    ![](../media/cloudshell-getting-started.png "Create storage advanced settings")
 
-5. Select I want to create a storage account and click on **Next**.
+1. Select I want to create a storage account and click on **Next**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-6. Within the **Create storage account** pane, enter the following details:
+1. Within the **Create storage account** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **CloudShell region**: East US (2)
     - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(3)
@@ -195,16 +195,16 @@ In this task, you will use a short command-line application running in Cloud She
 
        ![](../media/lab04-1.png "Create storage advanced settings")
 
-7. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/04-code-generation
@@ -212,7 +212,7 @@ In this task, you will use a short command-line application running in Cloud She
 
    > **Note**: Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-10. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
@@ -350,7 +350,6 @@ In this task, you will run your configured app to generate code for each use cas
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
-
 
 5. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 
