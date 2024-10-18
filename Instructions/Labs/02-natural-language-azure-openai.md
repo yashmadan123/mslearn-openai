@@ -1,4 +1,4 @@
-# Lab 02: Use Azure OpenAI SDKs in your app
+# Lab 01: Use Azure OpenAI SDKs in your app
 
 ## Lab scenario
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application.
@@ -140,8 +140,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject>(3)
+    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject>(2)
+    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (3)
     - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
