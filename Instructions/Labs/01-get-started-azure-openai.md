@@ -187,7 +187,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     
     - **Max response**: 500 **(3)**
 
-        ![](../media/open-ai5.png)
+         ![](../media/open-ai5.png)
       
 1. Submit the following message in chat session
 
