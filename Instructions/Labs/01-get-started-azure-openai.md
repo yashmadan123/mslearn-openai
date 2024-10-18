@@ -189,7 +189,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
          ![](../media/open-ai5.png)
       
-1. Submit the following message in chat session
+2. Submit the following message in chat session
 
       ```
      Write three multiple choice questions based on the following text.
@@ -206,11 +206,11 @@ In this task, you'll explore prompts and parameters by experimenting with differ
         might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
       ```
 
-1. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
+3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
       ![](../media/last-3.jpg)
    
-1. Observe the following about the prompt and parameters you used:
+4. Observe the following about the prompt and parameters you used:
        - The prompt specifically states that the desired output should be three multiple choice questions.
        - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
