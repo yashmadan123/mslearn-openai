@@ -1,4 +1,4 @@
-# Lab 03: Utilize prompt engineering in your app
+# Lab 01: Utilize prompt engineering in your app
 
 ## Lab scenario
 
@@ -233,19 +233,19 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/cloudshell-bash.png)
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+3. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
    ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+4. Within the **Mount storage account** pane, select **I want to create a storage account **(1)** and click **Next (2)**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
 5. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(3)
+    - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(2)
+    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (3)
     - **Storage account name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
@@ -353,7 +353,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
         api_version="2024-02-15-preview"
         )
     ```
-   >**Note :** Ensure that the indentation is correct when copying and pasting any Python code. This applies to all Python scripts.
+   >**Note :** Ensure that the indentation is correct when copying and pasting any Python code. This applies to all Python code.
 
 7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
