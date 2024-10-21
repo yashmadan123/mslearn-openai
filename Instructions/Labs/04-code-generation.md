@@ -50,7 +50,6 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
            ![](../media/ui3.png "Keys and Endpoints")
 
-
 ### Task 2: Deploy a model
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
@@ -203,7 +202,6 @@ In this task, you will use a short command-line application running in Cloud She
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-
 ### Task 5: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
@@ -294,29 +292,29 @@ In this task, you will run your configured app to generate code for each use cas
 3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
 
    ```
-      <Project Sdk="Microsoft.NET.Sdk">
+   <Project Sdk="Microsoft.NET.Sdk">
       
-      <PropertyGroup>
-      <OutputType>Exe</OutputType>
-      <TargetFramework>net8.0</TargetFramework>
-      <ImplicitUsings>enable</ImplicitUsings>
-      <Nullable>enable</Nullable>
-      </PropertyGroup>
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
       
-       <ItemGroup>
-       <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-       </ItemGroup>
+   <ItemGroup>
+   <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+   <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+   <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+   </ItemGroup>
       
-       <ItemGroup>
-         <None Update="appsettings.json">
-           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-          </None>
-        </ItemGroup>
+   <ItemGroup>
+   <None Update="appsettings.json">
+   <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+   </None>
+   </ItemGroup>
       
-       </Project>
-       ```  
+   </Project>
+   ```  
 4. Run the application.
 
     - **C#**: `dotnet run`
