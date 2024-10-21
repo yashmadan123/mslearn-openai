@@ -143,30 +143,30 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 4.  Enter the following message and response in the designated boxes:
 
-       - **User**: `What are different types of artificial intelligence?`
+    - **User**: `What are different types of artificial intelligence?`
     
-       - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
+    - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
 perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-            ![](../media/exples-ai.jpg)
-   
-      > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+   ![](../media/exples-ai.jpg)
 
-5. Save the changes by clicking on **Save** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+   >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+
+6. Save the changes by clicking on **Save** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-      ![](../media/openai-12.png)
-   
-      > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+   ![](../media/openai-12.png)
 
-8. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
+   > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-9. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+9. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
-10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+10. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-       ![](../media/view_code.jpg)
+11. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+
+    ![](../media/view_code.jpg)
 
 ### Task 5: Explore prompts and parameters
 
