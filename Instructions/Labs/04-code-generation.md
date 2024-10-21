@@ -293,7 +293,7 @@ In this task, you will run your configured app to generate code for each use cas
 
 3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
 
-```
+   ```
    <Project Sdk="Microsoft.NET.Sdk">
    
    <PropertyGroup>
@@ -316,7 +316,7 @@ In this task, you will run your configured app to generate code for each use cas
      </ItemGroup>
    
     </Project>
-   ```  
+    ```  
 4. Run the application.
 
     - **C#**: `dotnet run`
