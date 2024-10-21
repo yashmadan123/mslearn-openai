@@ -88,7 +88,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-      ![](./media/gpt-initial.png)
+      ![](./media/gpt-initial-1.png)
 
       >**Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
