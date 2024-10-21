@@ -233,7 +233,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
       ![](./media/task-6-last.jpg)
 
-## Summary
+## Review
 
 In this lab, you have accomplished the following:
 - Provisioned an Azure OpenAI resource
