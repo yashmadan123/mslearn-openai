@@ -20,11 +20,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](./media/openai8.png)
+   ![](./media/search_openai.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](./media/openai_create1.png)
+   ![](./media/create_openai.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
     
@@ -53,42 +53,46 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-    ![](./media/openai8.png)
+    ![](./media/search_openai.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-    ![](./media/OpenAI_select.png)
+    ![](./media/select_created_openai.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
     ![](./media/openai_studio.png)
    
-4. In the prompt select **Explore the new experience**.
+4. In the prompt select **Close**.
 
-    ![](./media/explore_new-exp.jpg "Create a new deployment")
+    ![](./media/discover_page_close.png "Create a new deployment")
 
 5. In the **Deployments (1)** page, click on **+ Deploy model**, Choose **Deploy base Model (2)**.
 
-    ![](./media/deploy-1.jpg "Create a new deployment")
+    ![](./media/deploy_base_model.png "Create a new deployment")
 
 6. On the **Select a Model** pane, search for **gpt-35-turbo** and select it from the results. Then, click **Confirm** to proceed.
 
     ![](./media/pg-09.jpg)
-   
-7. Within the **Deploy model** pop-up interface, enter the following details:
+
+7. Within the **Deploy model** pop-up interface, click on **Customize**.
+
+    ![](./media/customize_model.png)
+
+8. Within the **Deploy model** pop-up interface, enter the following details:
 
     - **Deployment name**: my-gpt-model (1)
-    - **Model version**: Auto-update to default(0301) (2)<br>
-    - **Deployment type**: Standard (3)
+    - **Deployment type**: Standard (2)
+    - **Model version**: 0301(default) (3)<br>    
     - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
   
-      ![](./media/gpt-intial.jpg)
+      ![](./media/gpt-initial.png)
 
       >**Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
-8. This will deploy a model which you will be playing around with as you proceed.
+9. This will deploy a model which you will be playing around with as you proceed.
 
     > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
    
@@ -136,9 +140,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
+3. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
       ![](./media/NO-4.png)
 
@@ -152,7 +156,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
+5. Save the changes by clicking on **Save** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
       ![](./media/NO-6.png)
    
@@ -211,9 +215,9 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup** pane, select the **Example (2)** template under **Add section (1)** and click on **Save (3)**. To reset the system message, if prompted click on **Continue**. Under **Give the model instructions and context (4)** box, provide the following text: `You are a Python developer.` and save the changes by clicking on **Save**, when prompted click on **Continue**.
 
-      ![](./media/NO-4.png)
+      ![](./media/example_add.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
