@@ -23,7 +23,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI Services | Azure OpenAI (1)** blade, click on **Create (2)**.
 
    ![](../media/tel-10.png)
 
@@ -55,11 +55,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab07-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, select 
+   **Overview (1)** from the left-hand menu, then click on **Go to Azure OpenAI Studio (2)**. This will navigate you to **Azure AI Studio**.
 
    ![](../media/update08.png)
 
