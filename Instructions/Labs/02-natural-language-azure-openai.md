@@ -360,7 +360,8 @@ In this task, you will run your configured app to send a request to your model a
 7. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
 8. Run the application again using the prompts above, and observe the output.
 
-Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
+   >**Note :** Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values 
+    for your temperature with the same input.
 
 ### Task 6: Maintain conversation history
 
