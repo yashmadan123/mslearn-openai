@@ -21,11 +21,11 @@ In this lab, you will complete the following tasks:
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
    ![](../media/search.png)
 
-2. On **Azure OpenAI services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure OpenAI services | Azure OpenAI (1)** blade, click on **Create (2)**.
 
    ![](../media/openai_create.png)
 
@@ -51,7 +51,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
       ![](../media/keys_endpoints-1.png "Keys and Endpoints")
 
-      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
