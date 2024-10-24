@@ -49,12 +49,12 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-        ![](../media/keys_endpoints-1.png "Keys and Endpoints")
+      ![](../media/keys_endpoints-1.png "Keys and Endpoints")
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
+      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
 
@@ -99,7 +99,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:      
 - If you receive a success message, you can proceed to the next task.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
      
 <validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
@@ -120,7 +120,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
       ![](../media/context-1.png)
    
->**Note:** On the **Update system message?** pop-up, select **Continue**.
+      >**Note:** On the **Update system message?** pop-up, select **Continue**.
 
 6. In the **Chat session**, submit the following queries, and review the responses:
 
@@ -243,7 +243,7 @@ Next, add your data in the chat playground to see how it responds with your data
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:      
 - If you receive a success message, you can proceed to the next task.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
   
 <validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
 
@@ -322,7 +322,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    code .
     ```
     
-   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 7 and 8** to and make sure you are in the correct project path.
+   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
       ![](../media/classic-cloudshell-prompt.png)
    
@@ -402,6 +402,7 @@ For this exercise, you'll complete some key parts of the application to enable u
             }]
         )
     ```
+      >**Note**: Ensure that the indentation is correct after pasting the code into the editor; it should align with the previous line.
 
 7. Review the rest of the code, noting the use of the *extensions* in the request body that is used to provide information about the data source settings.
 
@@ -430,4 +431,4 @@ In this lab, you have accomplished the following:
 -   Deployed an OpenAI model within the Azure OpenAI studio
 -   Used the power of OpenAI models to generate responses limited to a custom ingested data.
 
-### You have successfully completed the lab.
+### You have successfully finished the lab. Click **Next** to continue to the next lab.
