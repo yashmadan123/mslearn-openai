@@ -23,7 +23,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/search.png)
 
 2. On **Azure OpenAI services | Azure OpenAI** blade, click on **Create**.
 
@@ -49,15 +49,14 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-        ![](../media/keysendpoint.png "Keys and Endpoints")
+        ![](../media/keys_endpoints-1.png "Keys and Endpoints")
 
-    <validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-       
-      - If you receive a success message, you can proceed to the next task.
-      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="8b72507c-7e1f-49a4-b1a7-68ce5f2e3aee" />
 
 ### Task 2: Deploy a model
 
@@ -65,23 +64,21 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-      ![](../media/openai8.png)
+      ![](../media/search.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-      ![](../media/azureaiservices.png)
+      ![](../media/openai.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-      ![](../media/gotoresources.png)
+      ![](../media/go-to-1.png)
 
-4. After navigating to Azure AI Studio, click on **Explore the new experience** pop-up on the top.
-
-   ![](../media/explore_new-exp.jpg)
+4. After navigating to Azure AI Studio, click on **Close** pop-up on the top.
 
 5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 
-   ![](../media/deploy-1.jpg)
+   ![](../media/deployments.png)
 
 6. In the **Select a model** window, select **gpt-35-turbo (1)** and click on **Confirm (2)**.
 
@@ -89,24 +86,23 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     
-    - **Deployment name**: text-turbo (1) 
-    - **Model version**: 1106 (2)
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+    - **Deployment name**: text-turbo (1)
+    - **Deployment type**: Standard (2)
+    - **Model version**: 0301(Default) (3)
+    - Click on customize to reduce **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - Click on **Deploy** (5)
   
-      ![](../media/new8.png)
+      ![](../media/text-turbo-01.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
-   
-<validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-      
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:      
 - If you receive a success message, you can proceed to the next task.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+     
+<validation step="b04e38bd-81d8-4651-882b-bb5b0139fee8" />
+
 
 ### Task 3: Observe normal chat behavior without adding your own data
 
@@ -114,17 +110,19 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
 1. In the **Playground** section, select the **Chat** page. The **Chat** playground page consists of three main sections:
 
-     - **Setup** - used to set the context for the model's responses.
+    - **Setup** - used to set the context for the model's responses.
     - **Chat session** - used to submit chat messages and view responses.
     - **Configuration** - used to configure settings for the model deployment.
 
-3. In the **Configuration** section, ensure that your model deployment `text-turbo` is selected.
+3. In the **Configuration** section, ensure that your model deployment **`text-turbo`(1)** is selected.
 
-4. In the **Setup** area, select the **Default** system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
+4. In the **Setup** area, select the Default system message to set the context for the chat session. The default system message is **`You are an AI assistant that helps people find information`(2)**.
 
-      >**Note:** On the **Update system message?** pop-up, select **Continue**.
+      ![](../media/context-1.png)
+   
+>**Note:** On the **Update system message?** pop-up, select **Continue**.
 
-5. In the **Chat session**, submit the following queries, and review the responses:
+6. In the **Chat session**, submit the following queries, and review the responses:
 
       ```
       I'd like to take a trip to New York. Where should I stay?
@@ -191,9 +189,9 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. In the **Azure portal**, search for **AI search** and select **AI search**.
 
-2.  On **Azure AI services | AI search** blade, click on **Create**.
+2.  On **Azure AI services | AI search (1)** blade, click on **Create (2)**.
 
-      ![](../media/5.png "upload files")
+      ![](../media/ai_search_create.png "upload files")
 
 3. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
 
@@ -215,9 +213,9 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/keys-cognitive.png)
 
-1. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+1. Navigate to the **Chat (1)** playground followed by select **Add your data(2)** in the setup pane and click on **+ Add a data source (3)**.
 
-      ![](../media/image4.2.png "Add your data in setup pane")
+      ![](../media/add_data.png "Add your data in setup pane")
    
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
@@ -227,24 +225,28 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Select Azure AI Search resource (4)**: *Choose the search resource you created*
     - **Enter the index name (5)**: margiestravel
     - **Indexer schedule (6)**: Once
-
-1. Click on **Next (7)** to proceed with "**Data Management**".
-
-      ![](../media/image4.8.png "Add data configurations")
+    - Click on **Next (7)**
+    ![](../media/data_source-1.png "Add data configurations")
    
-1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+1. On the **Data management** page select the **1024(default)** search type from the drop-down, and then select **Next**.
 
-      ![](../media/datamanagement.png "Add data")
-   
-1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
-   
-<validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
+      ![](../media/data_management-1.png "Add data")
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-      
+1. On the **Data Connection** page, select **API key** and then click **Next**.
+   
+      ![](../media/api_key.png "Add data")
+   
+1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Assistant setup** pane.
+   
+      ![](../media/save&close.png "Add data")
+   
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:      
 - If you receive a success message, you can proceed to the next task.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+  
+<validation step="f6630936-2440-4068-8b5e-3d93f1443da0" />
+
 
 ### Task 5: Chat with a model grounded in your data
 
@@ -272,13 +274,18 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-   ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
+      ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-3. If you're prompted to create storage for your Cloud Shell, ensure your subscription is specified and then select **Show advanced settings**.
+3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-   ![](../media/openai-labs_createstoragepane.png "Create storage advanced settings")
+      ![](../media/cloudshell-getting-started.png)
+
+4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+
+      ![](../media/cloudshell-mount-strg-account.png)
+
 
 4. Within the **Advanced settings** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
@@ -290,7 +297,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     - **File share**: Create a new file share named **none** (5)
     - Click **Create storage** (6)
 
-      ![](../media/storageaccreate1.png "Create storage advanced settings")
+      ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
 5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -314,7 +321,11 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```bash
    code .
     ```
+    
+   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 7 and 8** to and make sure you are in the correct project path.
 
+      ![](../media/classic-cloudshell-prompt.png)
+   
 ### Task 7: Configure your application
 
 For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
@@ -406,7 +417,9 @@ Now that your app has been configured, run it to send your request to your model
     - **C#**: `dotnet run`
     - **Python**: `python ownData.py`
 
-        > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+     ![](../media/python-output-1.png)
+
+   > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 2. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
