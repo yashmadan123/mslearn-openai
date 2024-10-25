@@ -5,27 +5,27 @@
       "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
       "Files": [
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/00-GettingStarted.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ey-hack-comb/Instructions/Labs/00-GettingStarted.md",
           "Order": 1
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/01-get-started-azure-openai.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ey-hack-comb/Instructions/Labs/01-get-started-azure-openai.md",
           "Order": 2
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/02-natural-language-azure-openai.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ey-hack-comb/Instructions/Labs/02-natural-language-azure-openai.md",
           "Order": 3
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/03-prompt-engineering.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ey-hack-comb/Instructions/Labs/03-prompt-engineering.md",
           "Order": 4
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/04-code-generation.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ey-hack-comb/Instructions/Labs/04-code-generation.md",
           "Order": 5
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/07-gl-content-filters-azureOpenAI.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ey-hack-comb/Instructions/Labs/07-gl-content-filters-azureOpenAI.md",
           "Order": 8
         }
       ]
