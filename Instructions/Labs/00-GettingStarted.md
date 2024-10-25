@@ -1,5 +1,5 @@
 # Develop Generative AI solutions with Azure OpenAI Service
-### Overall Estimated Duration: 8 Hours
+### Overall Estimated Duration: 4 Hours
 ### Overview
 
 This hands-on labs offer a comprehensive introduction to Azure OpenAI Service. You will begin by configuring the service and integrating Azure OpenAI SDKs into your application. Techniques in prompt engineering will refine interactions, and you'll also gain skills in generating and enhancing code. The DALL-E model will be utilized for image generation, and you will explore the use of your own data for retrieval-augmented generation (RAG). Additionally, you will delve into content filtering to manage and regulate generated outputs. Throughout the labs, you'll gain practical experience with real-world AI applications, learn best practices for deploying and scaling these services in a production environment, and understand how to integrate various Azure services to develop resilient, scalable, and secure AI-powered applications.
