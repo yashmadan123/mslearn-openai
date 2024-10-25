@@ -44,12 +44,14 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
 6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+   
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
       ![](../media/keys_endpoints-1.png "Keys and Endpoints")
+
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
    - If you receive a success message, you can proceed to the next task.
@@ -226,8 +228,10 @@ Next, add your data in the chat playground to see how it responds with your data
     - **Enter the index name (5)**: margiestravel
     - **Indexer schedule (6)**: Once
     - Click on **Next (7)**
+
       
      ![](../media/data_source-1.png "Add data configurations")
+   
    
 1. On the **Data management** page select the **1024(default)** search type from the drop-down, and then select **Next**.
 
