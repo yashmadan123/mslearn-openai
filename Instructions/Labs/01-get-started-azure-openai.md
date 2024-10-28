@@ -77,14 +77,13 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure OpenAI Studio**, 
 7. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
     - **Nombre de implementación**: my-gpt-model (1) 
-    - **Versión de modelo**: 0301(default) (2)
-    - **Tipo de implementación**: Standard (3)
-    - **Ubicación**: **East US**
+    - **Tipo de implementación**: Standard (2)
+    - **Versión de modelo**: 0301(default) (3)
     - **Tokens por límite de velocidad por minuto (miles)**: 10K (4)
     - **Habilitar cuota dinámica**: Habilitado (5)
     - Haga clic en **Implementar** (6)
   
-      ![](../media/new3.png)
+      ![](../media/new3-1.png)
 
 8. Esto implementará un modelo con el que podrá experimentar a medida que avanza.
 
