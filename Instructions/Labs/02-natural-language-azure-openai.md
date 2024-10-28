@@ -84,13 +84,13 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
 7. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
-      - Model version: 0613(Default)(2)
-      - Deployment type: Standard(3)
+      - Deployment type: Standard(2)
+      - Model version: 0613(Default)(3)
       - Tokens per Minute Rate Limit (thousands): 10K (4)
       - Enable dynamic quota: Enabled (5)
       - Click on Deploy (6)
   
-           ![](../media/i2.png)
+           ![](../media/i2-1.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
 
