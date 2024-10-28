@@ -133,7 +133,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 8. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](../media/view_code.jpg)
+      ![](../media/view_code1.png)
 
       ![](../media/openai-7.png)
     
@@ -176,7 +176,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
             
-      ![](../media/view_code.jpg)
+      ![](../media/view_code1.png)
 
 ## Task 5: Explore prompts and parameters
 
