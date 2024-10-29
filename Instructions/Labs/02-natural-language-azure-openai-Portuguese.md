@@ -91,13 +91,13 @@ Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para us
 7. Na interface pop-up **Implantar o modelo**, insira os seguintes detalhes:
     
     - **Nome da implantação (1)**: text-turbo
-    - **Versão do modelo (2)**: 0613 (Predefinição)
-    - **Tipo de implantação (3)**: Standard
+    - **Tipo de implantação (2)**: Standard
+    - **Versão do modelo (3)**: 0613 (Predefinição)
     - **Limite de Velocidade de Tokens por Minuto (milhares) (4)**: 10K
     - Habilitar cota dinâmica: **Habilitado (5)**
     - Clique em **Implantar (6)**
   
-      ![](../media/8-10-24(43).png)
+      ![](../media/8-10-24(43)-1.png)
 
 8. Isso implantará um modelo com o qual você brincará à medida que avançar.
 
