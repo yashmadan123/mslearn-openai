@@ -91,13 +91,13 @@ Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a
 7. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
     - **Nombre de implementación**: text-turbo (1) 
-    - **Versión de modelo**: 0613(Default) (2)
-    - **Tipo de implementación**: Standard (3)
+    - **Tipo de implementación**: Standard (2)
+    - **Versión de modelo**: 0613(Default) (3)
     - **Tokens por límite de velocidad por minuto (miles)**: 10K (4)
     - **Habilitar cuota dinámica**: Habilitado (5)
     - Haga clic en **Implementar** (6)
   
-      ![](../media/new2.png)
+      ![](../media/new2-1.png)
 
 8. Esto implementará un modelo con el que podrá experimentar a medida que avanza.
 
