@@ -76,13 +76,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
-      - **Model version**: 0301(Default)(2)
-      - **Deployment type**: Standard(3)
+      - **Deployment type**: Standard(2)
+      - **Model version**: 0301(Default)(3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](../media/i1.png)
+           ![](../media/i1-1.png)
 
            >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
@@ -133,7 +133,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 8. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](../media/view_code.jpg)
+      ![](../media/view_code1.png)
 
       ![](../media/openai-7.png)
     
@@ -176,7 +176,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
             
-      ![](../media/view_code.jpg)
+      ![](../media/view_code1.png)
 
 ## Task 5: Explore prompts and parameters
 
