@@ -125,7 +125,7 @@ In this task, you will complete key parts of the application to enable it to use
     pip install openai==1.13.3
     ```
 
-5. Add the necessary code for configuring the client.
+5. In the application code for your language, replace the comment **Format and send the request to the model..** with the following code to configuring the client.
 
     **C#**
     `Program.cs`
