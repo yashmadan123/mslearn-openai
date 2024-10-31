@@ -40,12 +40,12 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-   <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
-
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
 
 ### Task 2: Deploy a model
 
@@ -94,12 +94,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
       > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-   <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
 
 ### Task 3: Explore a model in the Completions playground
 
@@ -109,25 +110,23 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz of 5 questions For each question, provide me the answer options and the correct answer (3)** in the prompt.
 
-      ![](../media/generate_new.jpg)
+      ![](../media/lab1-g1.png)
 
       >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
-4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
+3. Use the **Generate(4)** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-5. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
+      ![](../media/lab1-g2.png)
 
-      ![](../media/generated.jpg)
+      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
 
-      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
-
-6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+4. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
       ![](../media/view_code.jpg)
 
       ![](../media/openai-7.png)
     
-7. Close the **Sample Code**.
+5. Close the **Sample Code**.
 
 ### Task 4: Use the Chat playground
 
@@ -139,7 +138,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-      ![](../media/last-2.jpg)
+      ![](../media/lab1-g3.png)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -148,7 +147,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
 perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-   ![](../media/exples-ai.jpg)
+   ![](../media/lab1-g4.png)
 
    >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
@@ -166,7 +165,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 11. Use the **View Code** button to view the code for the interaction. The prompt consists of the *model instruction* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-    ![](../media/view_code.jpg)
+    ![](../media/lab1-g5.png)
 
 ### Task 5: Explore prompts and parameters
 
@@ -178,7 +177,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     
    - **Max response**: 500
 
-   ![](../media/temp.jpg)
+   ![](../media/lab1-g6.png)
       
 2. Submit the following message in chat session
 
@@ -208,7 +207,7 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 1. In the **Setup** pane, select the **reset(1)** symbol to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Save** when prompted click on **Continue**.
 
-   ![](../media/last-2.jpg)
+   ![](../media/lab1-g7.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
