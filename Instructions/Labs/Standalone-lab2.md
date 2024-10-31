@@ -317,9 +317,7 @@ In this task, you will complete key parts of the application to enable it to use
     ```
     >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
-
-   >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**.
 
 ### Task 5: Test your application
 
