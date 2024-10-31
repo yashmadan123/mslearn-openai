@@ -171,7 +171,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Configuration** pane select **Parameter** , set the following parameter values:
+1. In the **Setup** pane select **Parameters** , set the following parameter values:
     
    - **Temperature**: 0
     
