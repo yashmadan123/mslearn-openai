@@ -20,11 +20,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On the Azure AI Services page, select **Azure OpenAI (1)** from the menu on the left, then click **Create (2)**.
 
    ![](../media/openai_create1.png)
 
@@ -39,7 +39,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
        ![](../media/openai3.png "Create Azure OpenAI resource")
 
-4. Click on **Next** again and subsequently click on **Create**. 
+4. Click on **Next** twice and subsequently click on **Create**. 
 
 5. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
@@ -64,21 +64,21 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
    ![](../media/openai8.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**.
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>**.
 
    ![](../media/OpenAI_select.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio1.png)
+   ![](../media/go-to-studio.png)
 
-1. In the prompt select **Explore the new experience(1)** .
+1. In the prompt titled **Discover an even better Azure AI Studio experience**, click **Close**.
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
+      ![](../media/pop-upclose.png)
 
 1. Select **Deployments (1)** under Shared resources, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
@@ -96,7 +96,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota (5)**: Enabled
     - Click on **Deploy (6)**
   
-      ![](../media/28-08-2024(2).png)
+      ![](../media/i2.png)
+
+      >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
+
+      ![](../media/imagecustomize.png)
 
       >**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
 
@@ -123,6 +127,10 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+
+    >**Note :** If you don't see the Cloud Shell icon, click on the **ellipsis** button and select **Cloud Shell**.
+
+    ![](../media/open1.png)
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
@@ -307,6 +315,7 @@ In this task, you will complete key parts of the application to enable it to use
     # Print the response
     print("Response: " + generated_text + "\n")
     ```
+    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
@@ -441,6 +450,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     # Print generated text
     print("Summary: " + generated_text + "\n")
     ```
+    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 6. The final code should look like as shown below:
 
