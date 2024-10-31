@@ -176,7 +176,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-8. Use the **Apply changes** button at the top of the **Configuration** section to save your changes.
+8. Use the **Save** button to save your changes.
 
 9. In the **Chat session** section, resubmit the following prompt:
 
