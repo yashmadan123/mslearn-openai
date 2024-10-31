@@ -194,7 +194,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-10. Change the system message back to the default template, which should be `You are an AI assistant that helps people find information.` with no examples. Then apply the changes.
+10. Set the system message or model instructions to `You are an AI assistant that helps people find information.` with no examples. Save the changes by clicking on **Save** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
 11. In the **Chat session** section, submit the following prompt:
 
