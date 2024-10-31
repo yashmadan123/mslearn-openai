@@ -9,103 +9,14 @@ In scenario for this exercise, you will perform the role of a software developer
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Apply prompt engineering in chat playground
-- Task 4: Set up an application in Cloud Shell
-- Task 5: Configure your application
-- Task 6: Run your application
+- Task 1: Apply prompt engineering in chat playground
+- Task 2: Set up an application in Cloud Shell
+- Task 3: Configure your application
+- Task 4: Run your application
 
 ## Estimated time: 60 minutes
 
-### Task 1: Provision an Azure OpenAI resource
-
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/tel-11.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
-
-   ![](../media/tel-10.png)
-
-3. Create an **Azure OpenAI** resource with the following settings 
-
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
-    - **Region**: Select **<inject key="Region" enableCopy="false"/>** (3)
-    - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
-  
-         ![](../media/azopenai123.png "Create Azure OpenAI resource")
-
-4. Click on **Next** again and subsequently click on **Create** 
-
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
-
-          ![](../media/ui3.png "Keys and Endpoints")
-
-
-### Task 2: Deploy a model
-
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/tel-11.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
-
-   ![](../media/update07.png)
-
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
-
-   ![](../media/update08.png)
-   
-4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
-
-      ![](../media/new03.png)
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
-
-      ![](../media/ui1.png "Create a new deployment")
-
-6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
-
-7. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: text-turbo(1)
-      - Deployment type: Standard(2)
-      - Choose collapse from the deployment details (3)
-      - Model version: 0613(Default)(4)
-      - Tokens per Minute Rate Limit (thousands): 10K (5)
-      - Enable dynamic quota: Enabled (6)
-      - Click on Deploy (7)
-  
-           ![](../media/ui4.png)
-
-           >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
-
- > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
-   
-> **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
-
-<validation step="c2fef447-da3e-445d-b962-36f0d8c80d5a" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
-### Task 3: Apply prompt engineering in chat playground
+### Task 1: Apply prompt engineering in chat playground
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
@@ -217,7 +128,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     The model should correctly respond with python code doing what the comments requested.
 
-### Task 4: Set up an application in Cloud Shell
+### Task 2: Set up an application in Cloud Shell
 
 In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
 
@@ -285,7 +196,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 5: Configure your application
+### Task 3: Configure your application
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
 
@@ -576,7 +487,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
-### Task 6: Run your application
+### Task 4: Run your application
 
 In this task, you will run your configured app to send a request to your model and observe the response. You'll notice that the only difference between the options is the content of the prompt, while all other parameters (such as token count and temperature) remain consistent across requests.
 
