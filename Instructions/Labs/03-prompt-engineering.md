@@ -109,96 +109,113 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Save** and subsequently click on **Continue**.
-3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and and that the **text-turbo** model is selected in the Deployment pane.
 
-    ```code
-   1. Create a list of animals
-   2. Create a list of whimsical names for those animals
-   3. Combine them randomly into a list of 25 animal and name pairs
-    ```
-    >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
+1. Review the default **System message**, which should be *You are an AI assistant that helps people find information.*
 
-4. The model will probably provide a satisfactory response to the prompt, presented as a numbered list. While this is a decent answer, it doesn't meet our specific needs.
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Save** and subsequently click on **Continue**.
-6. Format the instructions as python comments. Send the following prompt to the model.
+1. In the **Chat session**, submit the following query:
 
-    ```code
-   # 1. Create a list of animals
-   # 2. Create a list of whimsical names for those animals
-   # 3. Combine them randomly into a list of 25 animal and name pairs
+    ```prompt
+    What kind of article is this?
+    ---
+    Severe drought likely in California
+    
+    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+    
+    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+    
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-7. The model should correctly respond with complete python code doing what the comments requested.
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and **save** your changes and subsequently click on **Continue**. This will create a new chat session.
-9. Send the following prompt to the model.
+    The response provides a description of the article. However, suppose you want a more specific format for article categorization.
 
-    ```code
-   Severe drought likely in California
+1. In the **Setup** section change the system message to `You are a news aggregator that categorizes news articles.`
 
-   Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
-   
-   In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
-   
-   Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+6. Under the new system message, select the **Add section** button, and choose **Examples**. Then add the following example.
+
+    **User:**
+    
+    ```prompt
+    What kind of article is this?
+    ---
+    New York Baseballers Wins Big Against Chicago
+    
+    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
+    
+    Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
+    
+    The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
     ```
-
-10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
-11. In the **Setup** section near the system message, select the **Add an example** button. Add the following example.
-
-       **User:**
-
-       ```code
-      New York Baseballers Wins Big Against Chicago
-
-      New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
-
-      Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
-
-      The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
-       ```
-
-       **Assistant:**
-
-       ```code
-       Sports
+    
+    **Assistant:**
+    
+    ```prompt
+    Sports
       ```
 
-12. Add another example with the following text.
+7. Add another example with the following text.
 
-       **User:**
+    **User:**
+    
+    ```prompt
+    Categorize this article:
+    ---
+    Joyous moments at the Oscars
+    
+    The Oscars this past week where quite something!
+    
+    Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
+    These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
+    
+    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
+    ```
+    
+    **Assistant:**
+    
+    ```prompt
+    Entertainment
+    ```
 
-       ```code
-      Joyous moments at the Oscars
+8. Use the **Apply changes** button at the top of the **Configuration** section to save your changes.
 
-      The Oscars this past week where quite something!
+9. In the **Chat session** section, resubmit the following prompt:
 
-      Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
-      These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
+    ```prompt
+    What kind of article is this?
+    ---
+    Severe drought likely in California
+    
+    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+    
+    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+    
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+    ```
 
-      From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
-       ```
+    The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-       **Assistant:**
+10. Change the system message back to the default template, which should be `You are an AI assistant that helps people find information.` with no examples. Then apply the changes.
 
-       ```code
-      Entertainment
-       ```
+11. In the **Chat session** section, submit the following prompt:
 
-13. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+    ```prompt
+    # 1. Create a list of animals
+    # 2. Create a list of whimsical names for those animals
+    # 3. Combine them randomly into a list of 25 animal and name pairs
+    ```
 
-      ```code
-      Severe drought likely in California
+    The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you actually wanted was for the model to write a Python program that performs the tasks you described?
 
-      Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+12. Change the system message to `You are a coding assistant helping write python code.` and apply the changes.
+13. Resubmit the following prompt to the model:
 
-      In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+    ```
+    # 1. Create a list of animals
+    # 2. Create a list of whimsical names for those animals
+    # 3. Combine them randomly into a list of 25 animal and name pairs
+    ```
 
-      Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-       ```
-
-14. This time the model should respond with an appropriate classification, even without instructions.
+    The model should correctly respond with python code doing what the comments requested.
 
 ### Task 4: Set up an application in Cloud Shell
 
