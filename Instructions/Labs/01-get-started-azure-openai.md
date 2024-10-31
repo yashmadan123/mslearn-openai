@@ -107,7 +107,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
 
-2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
+2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz of 5 questions For each question, provide me the answer options and the correct answer (3)** in the prompt.
 
       ![](../media/generate_new.jpg)
 
@@ -133,9 +133,9 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
+1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the Deployment pane.
 
-2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
@@ -164,7 +164,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 10. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-11. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+11. Use the **View Code** button to view the code for the interaction. The prompt consists of the *model instruction* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
     ![](../media/view_code.jpg)
 
@@ -206,7 +206,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup** pane, select the **reset(1)** symbol to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Save** when prompted click on **Continue**.
 
    ![](../media/last-2.jpg)
 
