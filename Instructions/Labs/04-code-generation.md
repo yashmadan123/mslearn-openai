@@ -6,104 +6,14 @@ The Azure OpenAI Service models can generate code for you using natural language
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Generate code in chat playground
-- Task 4: Set up an application in Cloud Shell
-- Task 5: Configure your application
-- Task 6: Run your application
+- Task 1: Generate code in chat playground
+- Task 2: Set up an application in Cloud Shell
+- Task 3: Configure your application
+- Task 4: Run your application
 
 ## Estimated time: 60 minutes
 
-### Task 1: Provision an Azure OpenAI resource
-
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/tel-11.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
-
-   ![](../media/tel-10.png)
-
-3. Create an **Azure OpenAI** resource with the following settings 
-
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
-    - **Region**: Select **<inject key="Region" enableCopy="false"/>** (3)
-    - **Name**: OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
-  
-         ![](../media/azopenai123.png "Create Azure OpenAI resource")
-
-4. Click on **Next** again and subsequently click on **Create** 
-
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
-
-           ![](../media/ui3.png "Keys and Endpoints")
-
-### Task 2: Deploy a model
-
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
-
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
-
-   ![](../media/tel-11.png)
-
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject>**
-
-   ![](../media/update07.png)
-
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
-
-   ![](../media/update08.png)
-   
-4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
-
-      ![](../media/new03.png "Create a new deployment")
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
-
-      ![](../media/ui1.png "Create a new deployment")
-
-6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
-
-      ![](../media/new04.png)
-
-7. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: 35turbo (1)
-      - Deployment type: Standard(2)
-      - Choose collapse from the deployment details (3)
-      - Model version: 0613(Default)(4)
-      - Tokens per Minute Rate Limit (thousands): 10K (5)
-      - Enable dynamic quota: Enabled (6)
-      - Click on Deploy (7)
-  
-           ![](../media/ui2.png) 
-
-   > **Note**: if the **GPT-35-TURBO-16K** model isn't available, choose **gpt-35-turbo**
-
-   > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
-
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **35 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
-   
-<validation step="6b5dfe99-465f-46ee-87f2-cd43ea009266" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
-### Task 3: Generate code in chat playground
+### Task 1: Generate code in chat playground
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
@@ -147,29 +57,12 @@ In this task, you will use a short command-line application running in Cloud She
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
+   > **Note**: If a **Cloud Shell timed out** pop-up 
+   appears, click **Reconnect**.
 
-   ![](../media/cloudshell-getting-started.png "Create storage advanced settings")
-
-4. Select I want to create a storage account and click on **Next**.
-
-   ![](../media/cloudshell-mount-strg-account.png)
-
-5. Within the **Create storage account** pane, enter the following details:
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: East US (2)
-    - **Resource group**: Select **openai-<inject key="Deployment-ID" enableCopy="false"></inject>**(3)
-    - **Storage account name**: **storage<inject key="Deployment-ID" enableCopy="false"></inject>**(4)
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create** (6)
-
-       ![](../media/lab04-1.png "Create storage advanced settings")
-
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
-
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
@@ -213,7 +106,7 @@ In this task, you will complete key parts of the application to enable it to use
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -276,6 +169,7 @@ In this task, you will complete key parts of the application to enable it to use
         max_tokens=1000
     )
     ```
+    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
