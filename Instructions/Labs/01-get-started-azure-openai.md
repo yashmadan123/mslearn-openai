@@ -136,7 +136,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
+3. Below the **+ Add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
       ![](../media/lab1-g3.png)
 
