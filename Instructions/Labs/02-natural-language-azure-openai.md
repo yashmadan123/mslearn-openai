@@ -8,7 +8,7 @@ In the scenario for this exercise, you will perform the role of a software devel
 ## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Provision an Azure OpenAI resource
+- Task 1: Retrieve the keys and Endpoint of Azure OpenAI resource
 - Task 2: Deploy a model
 - Task 3: Set up an application in Cloud Shell
 - Task 4: Configure your application
@@ -17,34 +17,14 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 60 minutes
 
-### Task 1: Provision an Azure OpenAI resource
+### Task 1: Retrieve the keys and Endpoint of Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task , you'll retrieve the keys and Endpoint of Azure OpenAI resource
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the Azure portal, search for **OpenAI** and select Azure OpenAI.
 
-   ![](../media/tel-11.png)
+1. Select the existing Azure OpenAI resource and follow the below steps to copy the keys and Endpoint of the OpenAI resource.
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
-
-   ![](../media/tel-10.png)
-
-3. Create an **Azure OpenAI** resource with the following settings 
-
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Region**: Select **<inject key="Region" enableCopy="false"/>** (3)
-    - **Name**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
-  
-         ![](../media/azopenai123.png "Create Azure OpenAI resource")
-
-4. Click on **Next** again and subsequently click on **Create** 
-
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
-
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
@@ -60,7 +40,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/update07.png)
 
@@ -68,7 +48,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update08.png)
 
-4. In the prompt select the **OpenAI-Lab02-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
+4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
       ![](../media/new03.png "Create a new deployment")
 
@@ -99,13 +79,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
-<validation step="2c0e26fa-3a9d-45b9-91b5-2b0464f375c0" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="2c0e26fa-3a9d-45b9-91b5-2b0464f375c0" />
 
 ### Task 3: Set up an application in Cloud Shell
 
@@ -165,18 +144,21 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/classic-cloudshell-prompt.png)
 
-   <validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+   <validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
+
 ### Task 4: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
+
+  >**Note**: Re-run commands from steps 8 and 9 from previous task and ensure you are in the correct project path.
 
 2. Open the configuration file for your language
 
@@ -608,7 +590,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 ## Summary
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
+-   Retrive the keys and endpoint of Azure OpenAI resource.
 -   Deploy an OpenAI model within the Azure OpenAI studio
 -   Integrate Azure OpenAI models into your applications
 
