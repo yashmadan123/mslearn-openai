@@ -17,12 +17,6 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 60 minutes
 
-### Task 1:  Provision an Azure OpenAI resource
-
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
-
-
-
 ### Task 1: Explore image generation in the DALL-E playground
 
 In this task, you will use the DALL-E playground in Azure OpenAI Studio to experiment with image generation.
