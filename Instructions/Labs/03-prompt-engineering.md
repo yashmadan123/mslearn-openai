@@ -162,7 +162,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     
        ```
 
-      >**Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 9 and 10** to and make sure you are in the correct project path.
+      >**Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 3 and 4** to and make sure you are in the correct project path.
 
       ![](../media/classic-cloudshell-prompt.png)
 
