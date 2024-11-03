@@ -11,7 +11,7 @@ In this lab, you will complete the following tasks:
 - Task 1: Generate natural language output
 - Task 2: Explore content filters
 
-## Estimated time: 60 minutes
+## Estimated time: 30 minutes
 
 ### Task 1: Generate natural language output
 
@@ -45,7 +45,7 @@ In this task, you will observe how the model behaves in a conversational interac
 
 8. Observe the output, which should hopefully indicate that the request to be racist and derogative is not supported. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
 
-### Task 4: Explore content filters
+### Task 2: Explore content filters
 
 In this task, you will apply content filters to prompts and completions to prevent the generation of potentially harmful or offensive language.
 
