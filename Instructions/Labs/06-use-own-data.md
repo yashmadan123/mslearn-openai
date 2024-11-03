@@ -115,12 +115,13 @@ In this task, you will observe how the base model responds to queries without an
 
 16. In **Azure OpenAI Studio**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
-      ![](../media/chat_playground.jpg "Add your data in setup pane")
+      ![](../media/lab6-g2.png "Add your data in setup pane")
    
 17. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
     - **Select data source**: Azure Blob Storage
     - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
+    - **Select Storage container**: openaidatasource
     - **Select Azure AI Search resource**: *Choose the search resource you created*
     - **Enter the index name**: margiestravel
     - **Indexer schedule**: Once
@@ -131,7 +132,7 @@ In this task, you will observe how the base model responds to queries without an
    
 19. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
-      ![](../media/datamanagement.png "Add data")
+      ![](../media/lab6-g4.png "Add data")
 
 20. On the **Data connection** page select the **API key** , Click on the **Next**
 
