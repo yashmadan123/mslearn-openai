@@ -49,7 +49,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 10. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
     
-### Task 4: Set up an application in Cloud Shell
+### Task 2: Set up an application in Cloud Shell
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
 
@@ -95,7 +95,7 @@ In this task, you will use a short command-line application running in Cloud She
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-### Task 5: Configure your application
+### Task 3: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
@@ -173,7 +173,7 @@ In this task, you will complete key parts of the application to enable it to use
 
 6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
-### Task 6: Run your application
+### Task 4: Run your application
 
 In this task, you will run your configured app to generate code for each use case, which is numbered in the app and can be executed in any order.
 
