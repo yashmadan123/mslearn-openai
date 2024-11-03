@@ -463,6 +463,8 @@ In this task, you will run your configured app to send a request to your model a
 
 1. In the folder of your preferred language, open `system.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
+   >**Note**: Open a duplicate session in a new tab and edit the System message in system.txt for each iteration.
+
 2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
 3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
