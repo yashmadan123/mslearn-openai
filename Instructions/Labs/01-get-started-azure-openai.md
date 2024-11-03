@@ -62,20 +62,16 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
       ![](../media/new01.png)
-   
-4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
-      ![](../media/new02.png "Create a new deployment")
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+4. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/ui1.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+5. Search for **GPT-35-TURBO**, click on **Confirm**
 
       ![](../media/pg-09.jpg)
    
-7. Within the **Deploy model** pop-up interface, enter the following details:
+6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
       - Choose **collapse** from the deployment details (3)
@@ -88,7 +84,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
            >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
-8. This will deploy a model which you will be playing around with as you proceed.
+7. This will deploy a model which you will be playing around with as you proceed.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
    
