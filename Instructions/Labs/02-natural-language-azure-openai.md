@@ -30,7 +30,7 @@ In this task , you'll retrieve the keys and Endpoint of Azure OpenAI resource
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-           ![](../media/ui3.png "Keys and Endpoints")
+           ![](../media/ui3e.png "Keys and Endpoints")
 
 ### Task 2: Deploy a model
 
