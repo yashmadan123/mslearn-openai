@@ -87,13 +87,6 @@ In this task, you will use a short command-line application running in Cloud She
 
       ![](../media/classic-cloudshell-prompt.png)
 
-<validation step="2a8f35b8-234c-4548-9951-579dc22af97f" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 
 ### Task 3: Configure your application
 
