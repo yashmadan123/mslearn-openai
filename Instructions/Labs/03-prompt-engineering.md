@@ -157,10 +157,10 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 5. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
 
-       ```bash
+   ```bash
       code .
     
-       ```
+    ```
 
       >**Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 3 and 4** to and make sure you are in the correct project path.
 
