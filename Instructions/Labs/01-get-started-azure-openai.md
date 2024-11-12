@@ -190,7 +190,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
       - **Temperature**: 0
       - **Max response**: 500
 
-         ![](../media/temp.jpg)
+         ![](../media/image6.png)
       
 2. Submit the following message in chat session
 
