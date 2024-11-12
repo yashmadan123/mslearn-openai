@@ -163,6 +163,10 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 5. Save the changes by clicking on **Save** 
 
    ![](../media/image3.png)
+
+6. On Update system message? pop-up, click on **Continue**.
+
+   ![](../media/image4.png)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
