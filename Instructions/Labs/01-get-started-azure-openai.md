@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
@@ -38,7 +38,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
       >**Note** : **Please deploy Openai resource in Francecentral Region**.
 
-4. Click on **Next** by keeping others default and click on **Create**.
+4. Click on **Next** thrice by keeping others default and click on **Create**.
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -53,7 +53,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
@@ -82,7 +82,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](../media/i1-1.png)
+           ![](../media/image1.png)
 
            >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
@@ -145,11 +145,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-      ![](../media/last-2.jpg)
+      ![](../media/imag8.png)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -160,9 +160,13 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Save** 
+5. Save the changes by clicking on **Apply changes** 
 
-   ![](../media/save.png)
+   ![](../media/image7.png)
+
+6. On Update system message? pop-up, click on **Continue**.
+
+   ![](../media/image4.png)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
@@ -176,7 +180,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
             
-      ![](../media/view_code1.png)
+      ![](../media/image5.png)
 
 ## Task 5: Explore prompts and parameters
 
@@ -186,7 +190,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
       - **Temperature**: 0
       - **Max response**: 500
 
-         ![](../media/temp.jpg)
+         ![](../media/image6.png)
       
 2. Submit the following message in chat session
 
@@ -218,9 +222,9 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup** pane, select the **Example** under **+ Add Section** section to reset the message if prompted click on **Continue**. Enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-      ![](../media/last-2.jpg)
+      ![](../media/imag8.png)
 
 3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
    
