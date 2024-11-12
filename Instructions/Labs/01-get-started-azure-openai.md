@@ -149,7 +149,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-      ![](../media/image2.png)
+      ![](../media/imag8.png)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -160,9 +160,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Save** 
+5. Save the changes by clicking on **Apply changes** 
 
-   ![](../media/image3.png)
+   ![](../media/image7.png)
 
 6. On Update system message? pop-up, click on **Continue**.
 
@@ -222,9 +222,9 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup** pane, select the **Example** under **+ Add Section** section to reset the message if prompted click on **Continue**. Enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-      ![](../media/last-2.jpg)
+      ![](../media/imag8.png)
 
 3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
    
