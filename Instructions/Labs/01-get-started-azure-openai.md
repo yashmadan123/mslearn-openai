@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
@@ -38,7 +38,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
       >**Note** : **Please deploy Openai resource in Francecentral Region**.
 
-4. Click on **Next** by keeping others default and click on **Create**.
+4. Click on **Next** thrice by keeping others default and click on **Create**.
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -53,7 +53,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
