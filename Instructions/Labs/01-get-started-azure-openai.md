@@ -149,7 +149,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-      ![](../media/image2.jpg)
+      ![](../media/image2.png)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -162,7 +162,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 5. Save the changes by clicking on **Save** 
 
-   ![](../media/save.png)
+   ![](../media/image3.png)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
