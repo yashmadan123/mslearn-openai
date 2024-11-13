@@ -160,7 +160,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
-      ![](./media/NO-6.png)
+      ![](./media/image7.png)
    
 6. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
@@ -174,13 +174,13 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 9. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-      ![](./media/NO-3.png)
+      ![](./media/image5.png)
 
 ### Task 5: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Configuration** pane select **Parameter** , set the following parameter values:
+1. In the **Chat Configuration** pane select **Parameter** , set the following parameter values:
       
       - **Max response**: 500
      
@@ -220,7 +220,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 1. In the **Setup** pane, select the **Example** under **+ Add Section** section to reset the message if prompted click on **Continue**. Enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
 
-      ![](./media/NO-4.png)
+      ![](./media/imag8.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
