@@ -118,11 +118,11 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 5. From the right top corner toggle bar to switch to old experience.
     
-    ![](../media/openai_toggle.png)
+    ![](./media/openai_toggle.png)
 
 6. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
     
-    ![](../media/generate_a_quiz.png)
+    ![](./media/generate_a_quiz.png)
    
       >**Note**: You can click on generate again , if the response is incomplete .
 
@@ -146,7 +146,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-      ![](./media/NO-4.png)
+      ![](./media/imag8.png)
 
 4. Enter the following message and response in the designated boxes:
 
