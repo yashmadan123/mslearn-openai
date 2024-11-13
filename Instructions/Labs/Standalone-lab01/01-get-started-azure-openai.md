@@ -105,7 +105,7 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected , Type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt.
 
-      ![](./media/generate_01.jpg)
+      ![](./media/generate_01.png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
