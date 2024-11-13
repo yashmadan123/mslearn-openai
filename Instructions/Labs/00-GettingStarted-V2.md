@@ -1,5 +1,5 @@
-# Getting Started with Your Develop Generative AI solutions with Azure OpenAI service Workshop
- 
+## Getting Started with the Lab
+
 Welcome to your Develop Generative AI solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
@@ -40,7 +40,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    ![Lab Validation](../media/lab-validation.png)
 
-1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
+1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 ## **Lab Duration Extension**
 
@@ -73,16 +73,22 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
        ![Enter Your Password](../media/sc900-image-2.png)
+
+4. If you see the pop-up Action Required, click Ask Later.
  
-4. If prompted to stay signed in, you can click "No."
- 
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
- 
-6. Click "Next" from the bottom right corner to embark on your Lab journey!
+   > **NOTE**: Do not enable MFA, select Ask Later.
+
+5. If you see the pop-up Stay Signed in?, select No.
+
+6. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+7. If a Welcome to **Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
+
+8. Now that you will see the Azure Portal Dashboard, click on Resource groups from the Navigate panel to see the resource groups.
  
      ![Start Your Azure Journey](../media/sc900-image(3).png)
  
-Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way.
+In this hands-on lab, you'll develop generative AI solutions using Azure OpenAI Service, including provisioning resources, deploying models, and building AI-powered applications through practical tasks in Azure OpenAI Studio and Cloud Shell.
 
 ### Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.

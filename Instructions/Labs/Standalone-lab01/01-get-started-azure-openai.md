@@ -28,13 +28,15 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 3. Create an **Azure OpenAI** resource with the following settings:
     
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select **East US**
-    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+    - **Subscription**: Default - Pre-assigned subscription (1).
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
+    - **Region**: Select **Francecentral** (3)
+    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)
+    - **Pricing tier**: Standard S0 (5)
   
       ![](./media/openai-lab01_01.png "Create Azure OpenAI resource")
+      
+      >**Note** : **Please deploy Openai resource in Francecentral Region**.
 
 4. Click on **Next** thrice by keeping others default and click on **Create**.
 
@@ -74,15 +76,16 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 1. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
+      - click on **Customize**.
       - **Model version**: 0301(Default)(3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](./media/image1.png)
-
-           >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-
+        ![](./media/image1.png)
+        
+        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+        
 1. This will deploy a model which you will be playing around with as you proceed.
 
     > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
@@ -142,9 +145,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
+3. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
       ![](./media/imag8.png)
 
@@ -158,7 +161,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
+5. Save the changes by clicking on **Save** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
       ![](./media/image7.png)
    
@@ -219,8 +222,8 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Setup** pane, select the **Example** under **+ Add Section** section to reset the message if prompted click on **Continue**. Enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
+   ![](./media/imag8.png)
 
-      ![](./media/imag8.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
@@ -236,7 +239,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
       ![](./media/task-6-last.jpg)
 
-## Summary
+## Review
 
 In this lab, you have accomplished the following:
 - Provisioned an Azure OpenAI resource

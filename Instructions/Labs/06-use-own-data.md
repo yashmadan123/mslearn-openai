@@ -23,22 +23,22 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure OpenAI services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create.png)
+   ![](../media/tel-10.png)
 
 
 3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
+    - **Region**: Select **France Central**.
     - **Name**: OpenAI-Lab06-<inject key="Deployment-ID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
 
-      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+      ![](../media/azopenai123.png "Create Azure OpenAI resource")
     
 4. Click on **Next** twice and click on **Create**.
 
@@ -50,17 +50,14 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
-
-
-#### Validation
+        ![](../media/ui3.png "Keys and Endpoints")
 
 <validation step="cafb7718-6bf1-4fe9-88b8-d1ed6d7c4c58" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 2: Deploy a model
@@ -69,53 +66,50 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+   ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="Deployment-ID	" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+   ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
 
-   ![](../media/openai_studio.png)
+   ![](../media/update08.png)
 
-4. In the prompt select **Explore the new experience** 
+4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
-   ![](../media/explore_new-exp.jpg "Create a new deployment")
+      ![](../media/new03.png)
 
 5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+      ![](../media/ui1.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+6. Search for **GPT-35-TURBO-16K**, click on **Confirm**
 
-   ![](../media/pg-09.jpg)
+      ![](../media/new04.png)
    
-7. Within the **Deploy model** pop-up interface, enter the following details:
+7. Within the Deploy model pop-up interface, enter the following details:
+      - Deployment name: 35turbo(1)
+      - Model version: 0613(Default)(2)
+      - Deployment type: Standard(3)
+      - Tokens per Minute Rate Limit (thousands): 10K (4)
+      - Enable dynamic quota: Enabled (5)
+      - Click on Deploy (6)
   
-    - **Deployment name**: text-turbo (1)
-    - **Model version**: Auto-update to default (2)
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
-  
-         ![](../media/intial-deploy.jpg)
+           ![](../media/i3.png)
 
-     >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
+           >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
      
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 
 7. Click on the **Create** button to deploy a model which you will be playing around with as you proceed.
-
-#### Validation
 
 <validation step="863492e4-6930-40bf-ab9f-e1ffb7e21a95" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Observe normal chat behavior without adding your own data
 
@@ -208,15 +202,15 @@ In this task, you will observe how the base model responds to queries without an
 
 14. Navigate to the **cognitive-search-<inject key="Deployment-ID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
-   ![](../media/x689.png)
+       ![](../media/x689.png)
 
 15. From the left navigation pane,click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
 
-   ![](../media/x690.png)
+      ![](../media/x690.png)
 
-16. Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+16. In **Azure OpenAI Studio**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
-   ![](../media/chat_playground.jpg "Add your data in setup pane")
+      ![](../media/chat_playground.jpg "Add your data in setup pane")
    
 17. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
@@ -225,31 +219,29 @@ In this task, you will observe how the base model responds to queries without an
     - **Select Azure AI Search resource**: *Choose the search resource you created*
     - **Enter the index name**: margiestravel
     - **Indexer schedule**: Once
+   
+       ![](../media/image4.8.png "Add data configurations")
 
 18. Click on next to proceed with "Data Management"
-
-    ![](../media/image4.8.png "Add data configurations")
    
 19. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
-   ![](../media/datamanagement.png "Add data")
+      ![](../media/datamanagement.png "Add data")
 
 20. On the **Data connection** page select the **API key** , Click on the **Next**
 
-    ![](../media/API_key.jpg "Add data")
+       ![](../media/API_key.jpg "Add data")
    
 22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
 
-    ![](../media/review.jpg "Add data")
-    
-#### Validation
+       ![](../media/review.jpg "Add data")
 
 <validation step="cf9a74ba-2501-47a6-a819-b42218c0a9da" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 5: Chat with a model grounded in your data
 
@@ -275,29 +267,24 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
+      ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-
-   ![](../media/cloudshell-bash.png)
-
 3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
-   ![](../media/cloudshell-getting-started.png)
+      ![](../media/cloudshell-getting-started.png)
 
 4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
 
-   ![](../media/cloudshell-mount-strg-account.png)
+      ![](../media/cloudshell-mount-strg-account.png)
 
 5. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
     - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: 
-      - openai-<inject key="Deployment-ID" enableCopy="false"></inject> (3)
-    - **Storage account name**:
-      - str<inject key="Deployment-ID" enableCopy="false"></inject> (4)
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (3)
+    - **Storage account name**: str<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
@@ -326,9 +313,9 @@ In this task, you will use a short command-line application running in Cloud She
    code .
     ```
 
-  > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
-   ![](../media/classic-cloudshell-prompt.png) 
+      ![](../media/classic-cloudshell-prompt.png) 
 
 ### Task 7: Configure your application
 
@@ -370,7 +357,7 @@ In this task, you will complete key parts of the application to enable it to use
     - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
     - The name of the search index (which should be `margiestravel`).
 
-      ![](../media/x676.png)
+         ![](../media/x676.png)
 
 6. Open the code file for your preferred language, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
 
@@ -411,14 +398,45 @@ In this task, you will complete key parts of the application to enable it to use
 
 In this task, you will run your configured app to send a request to your model and observe the response, noting that the only difference between options is the prompt content while all other parameters (such as token count and temperature) remain consistent.
 
-1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+In this task, you will run the reviewed code to generate some images.
+
+1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+
+2. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+   ```
+      <Project Sdk="Microsoft.NET.Sdk">
+      
+      <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net8.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+      </PropertyGroup>
+      
+       <ItemGroup>
+       <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+       </ItemGroup>
+      
+       <ItemGroup>
+         <None Update="appsettings.json">
+           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          </None>
+        </ItemGroup>
+      
+       </Project>
+      ```
+
+2. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python ownData.py`
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-2. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
+3. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
 ## Summary
 

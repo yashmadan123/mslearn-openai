@@ -24,23 +24,23 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+      ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/openai_create.png)
+      ![](../media/tel-10.png)
 
 3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
    
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+      - **Subscription**: Default - Pre-assigned subscription.
+      - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
+      - **Region**: Select <inject key="Region" enableCopy="false" />
+      - **Name**: OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>
+      - **Pricing tier**: Standard S0
 
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+           ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
-   >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
+           >**Note:** DALL-E 3 models are only available in Azure OpenAI service resources in the **East US** and **Sweden Central** regions.
 
 4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -50,16 +50,14 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-   ![](../media/openai-endpoint-new.png "Keys and Endpoints")
-
-#### Validation
+           ![](../media/ui3.png "Keys and Endpoints")
 
 <validation step="d1fdf614-83d8-4c1a-b9c7-c9adf003d03f" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 2: Explore image generation in the DALL-E playground
@@ -68,25 +66,27 @@ In this task, you will use the DALL-E playground in Azure OpenAI Studio to exper
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/openai8.png)
+      ![](../media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab05-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/OpenAI_select.png)
+      ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
-4. In the prompt select **Explore the new experience** .
+      ![](../media/update08.png)
 
-      ![](../media/explore_new-exp.jpg "Create a new deployment")
-   
+4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
+
+      ![](../media/new03.png "Create a new deployment")
+              
 5. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
    
-    ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/image_gen.jpg)
+      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/image_gen.jpg)
 
 6. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
-    ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/new_1.jpg)
+      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/new_1.jpg)
 
 ### Task 3: Use the REST API to generate images
 
@@ -104,24 +104,22 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 3. If you're prompted as Getting Started click on mount storage account, select the subscription and click on apply.
 
-   ![](../media/cloudshell_image1.png "Create storage advanced settings")
+      ![](../media/cloudshell_image1.png "Create storage advanced settings")
 
-    > **Note**: If you already have a cloud shell set up in your Azure subscription, you may need to use the **Reset user settings** option in the ⚙️ menu to ensure the latest versions of Python and the .NET Framework are installed.
+      > **Note**: If you already have a cloud shell set up in your Azure subscription, you may need to use the **Reset user settings** option in the ⚙️ menu to ensure the latest versions of Python and the .NET Framework are installed.
 
-4. Select i want to create a storage account and click on apply.
+4. Select **I want to create a storage account(1)** and click on **Next(2)**.
 
-   ![](../media/cloudshell_image2.png "Create storage advanced settings")
+      ![](../media/cloudshell-mount-strg-account.png)
 
 5. Within the **Create storage account** pane, enter the following details and then click on **Create**:
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
-    - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
-    - **Resource group**: Select **Use existing**.
-      - openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.
-      - storage<inject key="Deployment-ID" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none**
+      - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
+      - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
+      - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>
+      - **Storage account Name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
+      - **File share**: Create a new file share named **none**
 
-   ![](../media/cloudshell_image3.png "Create storage advanced settings")
+           ![](../media/lab04-1.png "Create storage advanced settings")
 
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -136,13 +134,13 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 8. Navigate to the folder for the language of your preference  by running the appropriate command.
 
-    **Python**
+      **Python**
 
     ```bash
    cd azure-openai/Labfiles/05-image-generation/Python
     ```
 
-    **C#**
+      **C#**
 
     ```bash
    cd azure-openai/Labfiles/05-image-generation/CSharp
@@ -153,7 +151,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
     ```bash
    code .
     ```
-> **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png)
 
@@ -198,15 +196,13 @@ In this task, you will explore the code used to call the REST API and generate a
         - The resolution (size) of the image to be generated.
     - The response header from the initial request includes an **operation-location** value that is used for the subsequent callback to get the results.
     - The code polls the callback URL until the status of the image-generation task is *succeeded*, and then extracts and displays a URL for the generated image.
-   
-#### Validation
 
 <validation step="46dc5a95-0801-4085-b021-c775e7b1b06b" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Run the app
 
