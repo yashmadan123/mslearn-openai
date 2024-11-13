@@ -122,11 +122,11 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 6. From the right top corner toggle bar to switch to old experience.
     
-    ![](./media/openai_toggle.png)
+      ![](./media/openai_toggle.png)
 
 7. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
     
-    ![](./media/generate_a_quiz.png)
+      ![](./media/generate_a_quiz.png)
    
       >**Note**: You can click on generate again , if the response is incomplete .
 
