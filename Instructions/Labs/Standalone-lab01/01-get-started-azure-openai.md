@@ -116,14 +116,15 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](./media/generated.jpg)
-       >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
+      ![](./media/generated(1).jpg)
+   
+      >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
 
-5. From the right top corner toggle bar to switch to old experience.
+6. From the right top corner toggle bar to switch to old experience.
     
     ![](./media/openai_toggle.png)
 
-6. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
+7. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
     
     ![](./media/generate_a_quiz.png)
    
@@ -131,13 +132,13 @@ In this task, you'll Explore a model in the Completions playground that involves
 
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-7. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+8. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
       ![](./media/NO-3.png)
 
       ![](./media/openai-7.png)
     
-8. Close the **Sample Code**.
+9. Close the **Sample Code**.
 
 ## Task 4: Use the Chat playground
 
