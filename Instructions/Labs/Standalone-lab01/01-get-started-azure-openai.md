@@ -14,13 +14,13 @@ In this lab, you will complete the following tasks:
 - Task 5: Explore prompts and parameters 
 - Task 6: Explore code-generation
 
-### Task 1: Provision an Azure OpenAI resource
+## Task 1: Provision an Azure OpenAI resource
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
-   ![](./media/openai8.png)
+   ![](./media/tel-11.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
@@ -47,48 +47,43 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 <validation step="8aae5f66-b7a9-4963-bf1f-8db101bab3db" />
 
-### Task 2: Deploy a model
+## Task 2: Deploy a model
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
     ![](./media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
 
     ![](./media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
 
     ![](./media/openai_studio.png)
-   
-4. In the prompt select **Explore the new experience**.
 
-    ![](./media/explore_new-exp.jpg "Create a new deployment")
-
-5. In the **Deployments (1)** page, click on **+ Deploy model**, Choose **Deploy base Model (2)**.
+1. In the **Deployments (1)** page, click on **+ Deploy model**, Choose **Deploy base Model (2)**.
 
     ![](./media/deploy-1.jpg "Create a new deployment")
 
-6. On the **Select a Model** pane, search for **gpt-35-turbo** and select it from the results. Then, click **Confirm** to proceed.
+1. Search for **GPT-35-TURBO**, click on **Confirm**
 
-    ![](./media/pg-09.jpg)
+   ![](../media/ui4.png)
    
-7. Within the **Deploy model** pop-up interface, enter the following details:
-
-    - **Deployment name**: my-gpt-model (1)
-    - **Model version**: Auto-update to default(0301) (2)<br>
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+1. Within the **Deploy model** pop-up interface, enter the following details:
+      - **Deployment name**: my-gpt-model (1)
+      - **Deployment type**: Standard(2)
+      - **Model version**: 0301(Default)(3)
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Enable dynamic quota**: Enabled (5)
+      - Click on **Deploy** (6)
   
-      ![](./media/gpt-intial.jpg)
+           ![](../media/image1.png)
 
-      >**Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+           >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
-8. This will deploy a model which you will be playing around with as you proceed.
+1. This will deploy a model which you will be playing around with as you proceed.
 
     > **Note**: You can ignore any error related to the assignment of roles to view the quota limits.
    
@@ -102,13 +97,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   <validation step="29d502af-cb10-4d86-80b8-e1d97420284f" />
    
 
-### Task 3: Explore a model in the Completions playground
+## Task 3: Explore a model in the Completions playground
 
 In this task, you'll Explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
 1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
 
-2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
+2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt.
 
       ![](./media/generate_new.jpg)
 
@@ -119,18 +114,29 @@ In this task, you'll Explore a model in the Completions playground that involves
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
       ![](./media/generated.jpg)
+       >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
+
+5. From the right top corner toggle bar to switch to old experience.
+    
+    ![](../media/openai_toggle.png)
+
+6. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
+    
+    ![](../media/generate_a_quiz.png)
+   
+      >**Note**: You can click on generate again , if the response is incomplete .
 
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+7. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
       ![](./media/NO-3.png)
 
       ![](./media/openai-7.png)
     
-7. Close the **Sample Code**.
+8. Close the **Sample Code**.
 
-### Task 4: Use the Chat playground
+## Task 4: Use the Chat playground
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
@@ -180,7 +186,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
      
       - **Temperature**: 0
    
-          ![](./media/NO-8.png)
+          ![](./media/image6.png)
       
 2. Submit the following message in a chat session
 
@@ -211,7 +217,8 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup** pane, select the **Example** under **+ Add Section** section to reset the message if prompted click on **Continue**. Enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+
 
       ![](./media/NO-4.png)
 
