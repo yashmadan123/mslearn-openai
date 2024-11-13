@@ -223,8 +223,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Setup** pane, select the **Example** under **+ Add Section** section to reset the message if prompted click on **Continue**. Enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-     ![](./media/imag8.png)
-
+      ![](./media/imag8.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
