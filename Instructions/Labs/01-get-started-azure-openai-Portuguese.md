@@ -68,21 +68,23 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
    ![](../media/8-10-24(16).png)
 
-5. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
+4. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
    ![](../media/8-10-24(17).png)
 
-6. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo** e clique em **Confirmar**.
+5. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo** e clique em **Confirmar**.
 
    ![](../media/8-10-24(18).png)
 
-7. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
+6. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
     
     - Na interface pop-up do modelo de implantação, insira os seguintes detalhes:
     
     - Nome da implantação: **my-gpt-model (1)**
 
     - Tipo de implantação: **Standard (2)**
+  
+    - Clique em **Recolher**
     
     - Versão do modelo: **0301 (padrão) (3)**
     
@@ -95,11 +97,11 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
       ![](../media/8-10-24(19)-1.png)
 
-8. Isso irá implementar um modelo que você explorará nas próximas etapas.
+7. Isso irá implementar um modelo que você explorará nas próximas etapas.
 
-> **Nota**: Você pode ignorar qualquer erro relacionado à atribuição de papéis para visualizar os limites de cota.
+   > **Observação**: Você pode ignorar qualquer erro relacionado à atribuição de papéis para visualizar os limites de cota.
 
-> **Nota**: O Azure OpenAI inclui vários modelos, cada um otimizado para um equilíbrio diferente entre capacidades e desempenho. Neste exercício, você usará o modelo **GPT-35-Turbo**, que é um bom modelo geral para resumir e gerar linguagem natural e código. Para mais informações sobre os modelos disponíveis no Azure OpenAI, consulte [Modelos](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) na documentação do Azure OpenAI.
+   > **Observação**: O Azure OpenAI inclui vários modelos, cada um otimizado para um equilíbrio diferente entre capacidades e desempenho. Neste exercício, você usará o modelo **GPT-35-Turbo**, que é um bom modelo geral para resumir e gerar linguagem natural e código. Para mais informações sobre os modelos disponíveis no Azure OpenAI, consulte [Modelos](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) na documentação do Azure OpenAI.
 
 #### Validação
 
@@ -114,27 +116,43 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
 Os *Playgrounds* são interfaces úteis no Azure OpenAI Studio que você pode usar para experimentar seus modelos implementados sem precisar desenvolver a sua aplicação cliente.
 
-1. No Azure OpenAI Studio, no painel esquerdo, em **Playgrounds**, selecione **Completações**.
+1. No Azure OpenAI Studio, no painel esquerdo, em **Playgrounds**, selecione **conclusões**.
 
-2. Na página **Completações**, certifique-se de que sua implementação **my-gpt-model** esteja selecionada e, na lista **Exemplos**, selecione **Gerar um questionário (1)**.
-   
-   > **Nota:** O texto resumido consiste em um *prompt* que fornece algum texto para dizer ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
+2. Na página **Conclusões**, certifique-se de que sua implantação **my-gpt-model** esteja selecionada. Digite `Gerar um questionário de 5 perguntas. Para cada pergunta, forneça-me as opções de resposta e a resposta correta` no prompt.
 
-4. Na parte inferior da página, observe o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt - essencialmente palavras ou partes de palavras no texto.
+   > **Observação:** O texto resumido consiste em um *prompt* que fornece algum texto para dizer ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
 
-5. Use o botão **Gerar (2)** para enviar o prompt ao modelo e obter uma resposta.
+3. Na parte inferior da página, observe o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt - essencialmente palavras ou partes de palavras no texto.
+
+4. Use o botão **Generate** para enviar o prompt ao modelo e recuperar uma resposta (talvez seja necessário rolar para baixo). A resposta consiste em um quiz baseado no exemplo no prompt.
+
+   ![](../media/imag1.png)
+
+   >**Observação**: Se você não receber a saída esperada na nova experiência, siga as etapas abaixo:
+
+5. No canto superior direito, alterne a barra para alternar para a experiência antiga.
+
+   ![](../media/imag2.png)
+
+5. Na página **Completações**, certifique-se de que sua implementação **my-gpt-model** esteja selecionada e, na lista **Exemplos**, selecione **Gerar um questionário (1)**.
+
+6. Use o botão **Gerar (2)** para enviar o prompt ao modelo e obter uma resposta.
 
    ![](../media/8-10-24(21).png)
 
    A resposta consiste em um questionário baseado no exemplo no prompt.
 
-   >**Observação**: Você pode usar o botão **Regenerar** para reenviar o prompt (novas alterações foram feitas) e observe que a resposta pode variar da original. Um modelo de IA generativa pode produzir uma nova linguagem cada vez que é chamado.
+   >**Observação**: Você pode clicar em gerar novamente, se a resposta estiver incompleta.
 
-6. Use o botão **Ver Código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completações* para o seu serviço Azure OpenAI.
+   >**Observação**: Você pode usar o botão **Regenerate** para reenviar o prompt (novas alterações foram feitas) e observe que a resposta pode variar da original. Um modelo de IA generativo pode produzir uma nova linguagem cada vez que for chamado.
+
+7. Use o botão **Ver Código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completações* para o seu serviço Azure OpenAI.
 
    ![](../media/8-10-24(22).png)
    
    ![](../media/8-10-24(23).png)
+
+9. Feche o **Código de amostra**.
 
 ## Tarefa 4: Use o playground de Chat
 
@@ -142,11 +160,13 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
 1. Na seção **Playgrounds**, selecione a página **Chat** e certifique-se de que o modelo **my-gpt-model** esteja selecionado no painel de configuração.
 
-2. Na seção **Configurar**, na caixa **Mensagem do sistema**, substitua o texto atual pela seguinte declaração: `The system is an AI teacher that helps people learn about AI`.
+2. Na seção **Configuração**, na caixa **Forneça as instruções e o contexto do modelo**, substitua o texto atual pela seguinte declaração: `The system is an AI teacher that helps people learn about AI`.
 
-3. Abaixo da caixa **Mensagem do sistema**, clique em **+ Adicionar seção** selecione **Exemplos** e insira a seguinte mensagem e resposta nas caixas designadas:
+3. Abaixo da caixa **+ adicionar seção**, clique em **Exemplos**. Insira a seguinte mensagem e resposta nas caixas designadas:
 
-   ![](../media/8-10-24(25).png)
+   ![](../media/imag4.png)
+
+4. Digite a seguinte mensagem e resposta nas caixas designadas:
 
     - **Usuário**: `What are different types of artificial intelligence?`
     
@@ -156,9 +176,9 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
       > **Nota**: Exemplos de poucos-tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
   
-5. Clique em **Save** e, em seguida, clique em **Continuar** na guia pop-up **Atualizar mensagem do sistema** para iniciar uma nova sessão e definir o contexto comportamental para o sistema de chat.
+5. Salve as alterações clicando em **Salvar** e na mensagem pop-up Atualizar sistema?, clique em **Continuar**.
 
-   ![](../media/8-10-24(27).png)
+   ![](../media/imag5.png)
 
 7. Na caixa de consulta na parte inferior da página, insira o texto `What is artificial intelligence?`
 
@@ -185,7 +205,7 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
     - **Resposta máxima: (2)**: 500
     - **Temperatura (3)**: 0
 
-      ![](../media/8-10-24(31).png)
+      ![](../media/imag3.png)
 
 2. Envie a seguinte mensagem na sessão de chat 
 
@@ -203,7 +223,7 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
 3. Revise os resultados, que devem consistir em perguntas de múltipla escolha que um professor poderia usar para testar os alunos sobre os tópicos de visão computacional no prompt. A resposta total deve ser menor do que o comprimento máximo especificado como parâmetro.
 
-    Observe o seguinte sobre o prompt e os parâmetros que você usou:
+4. Observe o seguinte sobre o prompt e os parâmetros que você usou:
 
     - O prompt especifica que a saída desejada deve ser três perguntas de múltipla escolha.
     
@@ -215,9 +235,9 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
 Além de gerar respostas em linguagem natural, você pode usar modelos GPT para gerar código.
 
-1. No painel **Configuração**, selecione o modelo **Exemplo Vazio** na seção **Usando modelos** para redefinir a mensagem do sistema, se solicitado, clique em **Continuar**. Insira a mensagem do sistema: `You are a Python developer.` e salve as alterações clicando em **Aplicar alterações** quando solicitado, clique em **Continuar**.
+1. No painel **Configuração**, selecione o **Exemplo** na seção **+ Adicionar Seção** para redefinir a mensagem, se solicitado, clique em **Continuar**. Insira `You are a Python developer.` para Dar instruções e contexto ao modelo e salvar as alterações clicando em **Aplicar Alterações** quando solicitado, clique em **Continuar**.
   
-   ![](../media/8-10-24(33).png)
+   ![](../media/imag9.png)
 
 3. No painel **Sessão de Chat**, selecione **Limpar chat** e, em seguida, clique em **Limpar** na aba de limpeza de chat para limpar o histórico de chat e iniciar uma nova sessão.
 
