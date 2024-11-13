@@ -83,6 +83,8 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
     - Nome da implantação: **my-gpt-model (1)**
 
     - Tipo de implantação: **Standard (2)**
+  
+    - Clique em **Recolher**
     
     - Versão do modelo: **0301 (padrão) (3)**
     
@@ -114,15 +116,21 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
 Os *Playgrounds* são interfaces úteis no Azure OpenAI Studio que você pode usar para experimentar seus modelos implementados sem precisar desenvolver a sua aplicação cliente.
 
-1. No Azure OpenAI Studio, no painel esquerdo, em **Playgrounds**, selecione **Completações**.
+1. No Azure OpenAI Studio, no painel esquerdo, em **Playgrounds**, selecione **conclusões**.
 
-2. Na página **Completações**, certifique-se de que sua implementação **my-gpt-model** esteja selecionada e, na lista **Exemplos**, selecione **Gerar um questionário (1)**.
-   
+2. Na página **Conclusões**, certifique-se de que sua implantação **my-gpt-model** esteja selecionada. Digite `Gerar um questionário de 5 perguntas. Para cada pergunta, forneça-me as opções de resposta e a resposta correta` no prompt.
+
    > **Nota:** O texto resumido consiste em um *prompt* que fornece algum texto para dizer ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
 
-4. Na parte inferior da página, observe o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt - essencialmente palavras ou partes de palavras no texto.
+3. Na parte inferior da página, observe o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt - essencialmente palavras ou partes de palavras no texto.
 
-5. Use o botão **Gerar (2)** para enviar o prompt ao modelo e obter uma resposta.
+4. Use o botão **Generate** para enviar o prompt ao modelo e recuperar uma resposta (talvez seja necessário rolar para baixo). A resposta consiste em um quiz baseado no exemplo no prompt.
+
+   ![](../media/imag1.png)
+
+5. Na página **Completações**, certifique-se de que sua implementação **my-gpt-model** esteja selecionada e, na lista **Exemplos**, selecione **Gerar um questionário (1)**.
+
+6. Use o botão **Gerar (2)** para enviar o prompt ao modelo e obter uma resposta.
 
    ![](../media/8-10-24(21).png)
 
@@ -130,7 +138,7 @@ Os *Playgrounds* são interfaces úteis no Azure OpenAI Studio que você pode us
 
    >**Observação**: Você pode usar o botão **Regenerar** para reenviar o prompt (novas alterações foram feitas) e observe que a resposta pode variar da original. Um modelo de IA generativa pode produzir uma nova linguagem cada vez que é chamado.
 
-6. Use o botão **Ver Código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completações* para o seu serviço Azure OpenAI.
+7. Use o botão **Ver Código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completações* para o seu serviço Azure OpenAI.
 
    ![](../media/8-10-24(22).png)
    
