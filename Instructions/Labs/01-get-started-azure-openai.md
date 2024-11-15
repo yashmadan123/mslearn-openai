@@ -168,7 +168,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
    ![](../media/image4.png)
    
-7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
 
       ![](../media/openai-12.png)
    
@@ -186,9 +186,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane select **Parameter** , set the following parameter values:
-      - **Temperature**: 0
-      - **Max response**: 500
+1. In the **Chat Configuration** pane select **Parameters (1)** , set the following parameter values:
+      
+      - **Max response**: 500 **(2)**
+      - **Temperature**: 0 **(3)**
+      
 
          ![](../media/image6.png)
       
