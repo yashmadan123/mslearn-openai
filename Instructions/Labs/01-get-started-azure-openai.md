@@ -70,7 +70,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+6. Search for **gpt-35-turbo (1)**, click on **Confirm (2)**
 
    ![](../media/ui4.png)
    
@@ -125,7 +125,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
     
     ![](../media/openai_toggle.png)
 
-6. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
+7. In the old experience, go to the completion page and select **Generate a Quiz (1)** from the examples, then click on **Generate (2)**
     
     ![](../media/generate_a_quiz.png)
    
@@ -135,7 +135,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 7. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](../media/view_code1.png)
+      ![](../media/imag01.png)
 
       ![](../media/openai-7.png)
     
@@ -170,7 +170,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
    ![](../media/image4.png)
    
-7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
 
       ![](../media/openai-12.png)
    
@@ -188,9 +188,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane select **Parameter** , set the following parameter values:
-      - **Temperature**: 0
-      - **Max response**: 500
+1. In the **Chat Configuration** pane select **Parameters (1)** , set the following parameter values:
+      
+      - **Max response**: 500 **(2)**
+      - **Temperature**: 0 **(3)**
+      
 
          ![](../media/image6.png)
       
