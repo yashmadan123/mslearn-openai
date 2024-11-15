@@ -90,7 +90,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
       - Enable dynamic quota: Enabled (5)
       - Click on Deploy (6)
   
-           ![](../media/i2-1.png)
+        ![](../media/imag02.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
 
