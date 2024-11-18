@@ -62,20 +62,20 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
  
-![Explore Lab Resources](../media/env-1.png)
+![Explore Lab Resources](../media/IMG4.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
  
-   ![Use the Split Window Feature](../media/IMGa3.png)
+   ![Use the Split Window Feature](../media/IMG3a.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/res.png)
+![Manage Your Virtual Machine](../media/IMG5.png)
 
 ## Lab Validation
 
