@@ -52,7 +52,7 @@ Once the environment is provisioned, a virtual machine (JumpVM) and lab guide wi
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/labguide-1.png)
+![Access Your VM and Lab Guide](../media/IMGa2.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -67,8 +67,9 @@ To get a better understanding of your lab resources and credentials, navigate to
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
+
  
-![Use the Split Window Feature](../media/spl.png)
+   ![Use the Split Window Feature](../media/IMGa3.png)
  
 ## Managing Your Virtual Machine
  
@@ -80,13 +81,9 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](../media/inline-validation.png)
+   ![Inline Validation](../media/IMG1.png)
 
-1. You can also validate the task by navigating to the **Lab Validation** tab, from the upper right corner in the lab guide section.
-
-   ![Lab Validation](../media/lab-validation.png)
-
-1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
+1. If you need any assistance, please contact us at Cloudlabs-support@spektrasystems.com.
 
 ## **Lab Duration Extension**
 
@@ -129,7 +126,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
 Learner Support Contacts:
-- Email Support: labs-support@spektrasystems.com
+- Email Support: Cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on **Next** from the lower right corner to move on to the next page.
