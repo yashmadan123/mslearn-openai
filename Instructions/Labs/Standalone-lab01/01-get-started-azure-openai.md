@@ -225,13 +225,13 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, select the **Example** under **+ Add Section** section to reset the message if prompted click on **Continue**. Enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1.In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** when prompted click on Continue.
 
-      ![](./media/imag8.png)
+   ![](./media/imag8.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
-      ![](./media/openai-14.png)
+   ![](./media/openai-14.png)
 
 3. Submit the following user message:
 
@@ -241,7 +241,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](./media/task-6-last.jpg)
+   ![](./media/task-6-last.jpg)
 
 ## Review
 
