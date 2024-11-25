@@ -148,13 +148,15 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **Give the model instructions and context** box and click on **Apply changes**, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
+      ![](./media/apply-changes.png)
+   
+4. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
-      ![](./media/imag8.png)
+      ![](./media/add-section.png)
 
-4. Enter the following message and response in the designated boxes:
+5. Enter the following message and response in the designated boxes:
 
       - **User**: `What are different types of artificial intelligence?`
     
@@ -164,21 +166,21 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Save** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
+6. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
       ![](./media/image7.png)
    
-6. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
       ![](./media/NO-7.png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-7. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
+8. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
-8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+9. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-9. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
       ![](./media/image5.png)
 
