@@ -117,8 +117,10 @@ In this task, you'll Explore a model in the Completions playground that involves
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
       ![](./media/generated(1).jpg)
+
+   >**Note** : The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
    
-      >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
+   >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
 
 6. From the right top corner toggle bar to switch to old experience.
     
