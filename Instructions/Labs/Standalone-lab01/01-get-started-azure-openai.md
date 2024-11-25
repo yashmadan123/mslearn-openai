@@ -57,7 +57,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](./media/tel-11.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
     ![](./media/update07.png)
 
