@@ -1,4 +1,4 @@
-# Getting Started with Your Develop Generative AI Solutions with Azure OpenAI Service
+# Get started with Azure OpenAI Service
 
 ## Overall Estimated Duration: 60 minutes
 
