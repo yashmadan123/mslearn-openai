@@ -217,7 +217,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. Navigate to the **Chat (1)** playground followed by select **Add your data(2)** in the setup pane and click on **+ Add a data source (3)**.
 
-      ![](../media/add_data.png "Add your data in setup pane")
+      ![](../media/add_data1.png "Add your data in setup pane")
    
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
