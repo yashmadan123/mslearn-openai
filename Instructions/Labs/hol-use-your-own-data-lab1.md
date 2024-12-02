@@ -356,7 +356,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.55.3
     ```
 
 4. In the code editor from the left navigation pane, in the **CSharp** or **Python** folder, open the configuration file for your preferred language
