@@ -217,7 +217,7 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. Navigate to the **Chat (1)** playground followed by select **Add your data(2)** in the setup pane and click on **+ Add a data source (3)**.
 
-      ![](../media/add_data.png "Add your data in setup pane")
+      ![](../media/add_data1.png "Add your data in setup pane")
    
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
@@ -327,7 +327,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    code .
     ```
     
-   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
+   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 7 and 8** to and make sure you are in the correct project path.
 
       ![](../media/classic-cloudshell-prompt.png)
    
@@ -356,7 +356,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.55.3
     ```
 
 4. In the code editor from the left navigation pane, in the **CSharp** or **Python** folder, open the configuration file for your preferred language
@@ -417,6 +417,34 @@ For this exercise, you'll complete some key parts of the application to enable u
 ## Task 8: Run your application
 
 Now that your app has been configured, run it to send your request to your model and observe the response. You'll notice the only difference between the different options is the content of the prompt, all other parameters (such as token count and temperature) remain the same for each request.
+
+1. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+
+   ```
+   <Project Sdk="Microsoft.NET.Sdk">
+   
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
+   
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
+   
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+    </Project> 
+
+   ```
 
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
