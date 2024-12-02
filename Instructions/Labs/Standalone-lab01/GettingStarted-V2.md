@@ -1,4 +1,4 @@
-# Getting Started with Your Develop Generative AI Solutions with Azure OpenAI Service
+# Get started with Azure OpenAI Service
 
 ## Overall Estimated Duration: 60 minutes
 
@@ -97,7 +97,7 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 
 Learner Support Contacts:
 
-- Email Support: labs-support@spektrasystems.com
+- Email Support: cloudlabs-support@spektrasystems.com
 
 - Live Chat Support: https://cloudlabs.ai/labs-support
 

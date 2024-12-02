@@ -30,13 +30,13 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - **Subscription**: Default - Pre-assigned subscription (1).
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Region**: Select **Francecentral** (3)
+    - **Region**: Select **East US** (3)
     - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)
     - **Pricing tier**: Standard S0 (5)
   
       ![](./media/openai-lab01_01.png "Create Azure OpenAI resource")
       
-      >**Note** : **Please deploy Openai resource in Francecentral Region**.
+      >**Note** : **Please deploy Openai resource in EAST US Region**.
 
 4. Click on **Next** thrice by keeping others default and click on **Create**.
 
@@ -57,7 +57,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](./media/tel-11.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
     ![](./media/update07.png)
 
@@ -117,8 +117,10 @@ In this task, you'll Explore a model in the Completions playground that involves
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
       ![](./media/generated(1).jpg)
+
+   >**Note** : The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
    
-      >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
+   >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
 
 6. From the right top corner toggle bar to switch to old experience.
     
@@ -146,13 +148,15 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **Give the model instructions and context** box and click on **Apply changes**, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
+      ![](./media/apply-changes.png)
+   
+4. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
-      ![](./media/imag8.png)
+      ![](./media/add-section.png)
 
-4. Enter the following message and response in the designated boxes:
+5. Enter the following message and response in the designated boxes:
 
       - **User**: `What are different types of artificial intelligence?`
     
@@ -162,21 +166,21 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Save** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
+6. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
       ![](./media/image7.png)
    
-6. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
       ![](./media/NO-7.png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-7. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
+8. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
-8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+9. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-9. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
       ![](./media/image5.png)
 
@@ -221,7 +225,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, select the **Example** under **+ Add Section** section to reset the message if prompted click on **Continue**. Enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** when prompted click on Continue.
 
       ![](./media/imag8.png)
 
@@ -237,7 +241,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-      ![](./media/task-6-last.jpg)
+     ![](./media/task-6-last.jpg)
 
 ## Review
 
