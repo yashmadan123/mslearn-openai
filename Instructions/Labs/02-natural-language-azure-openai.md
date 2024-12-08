@@ -70,13 +70,13 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navaigate you to **Azure AI Foundry Portal**.
 
-   ![](../media/update08.png)
+   ![](../media/aifndryprtal.png)
 
-5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
+5. Select **Deployments (1)** page from the left side menu, and click on **+ Deploy model** drop-down button and Choose **Deploy base Model (2)**.
 
-   ![](../media/ui1.png)
+      ![](../media/deploymodelss.png "Create a new deployment")
 
 6. In the **Select a model** window, select **gpt-35-turbo-16k (1)** and click on **Confirm (2)**.
 
@@ -85,10 +85,11 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 7. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
       - Deployment type: Standard(2)
-      - Model version: 0613(Default)(3)
-      - Tokens per Minute Rate Limit (thousands): 10K (4)
-      - Enable dynamic quota: Enabled (5)
-      - Click on Deploy (6)
+      - Click on **Customize**
+      - **Model version**: 0613(Default)(3)
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Enable dynamic quota**: Enabled (5)
+      - Click on **Deploy** (6)
   
         ![](../media/imag02.png)
 
@@ -181,7 +182,10 @@ For this exercise, you'll complete some key parts of the application to enable u
     
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the blank space in file text editor and hit **Save**
+
+    > **Note**: You can get the Azure OpenAI endpoint and key values from Azure openai resource's **Key and Endpoint** section under **Resource Management**.
+
 
 4. Navigate to the folder for your preferred language and install the necessary packages
 
@@ -197,7 +201,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.55.3
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
@@ -435,7 +439,7 @@ For this exercise, you'll complete some key parts of the application to enable u
           main()
       ```
     
-9. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+9. To save the changes made to the file, right click on the blank space in file text editor and hit **Save**
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 

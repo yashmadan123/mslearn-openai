@@ -61,14 +61,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navaigate to **Azure AI Foundry Portal**.
 
-   ![](../media/update08.png)
+   ![](../media/aifndryprtal.png)
 
 
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+5. Select **Deployments (1)** page from the left side menu, and click on **+ Deploy model** drop-down button and Choose **Deploy base Model (2)**.
 
-      ![](../media/ui1.png "Create a new deployment")
+      ![](../media/deploymodelss.png "Create a new deployment")
 
 6. Search for **gpt-35-turbo (1)**, click on **Confirm (2)**
 
@@ -105,7 +105,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
+1. In Azure AI Foundry Portal, in the left pane under **Playground**, select **Completions**.
 
 2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected , Type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt.
 
@@ -115,31 +115,21 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
 
+      ![](../media/gnrttoken.png)
+
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](../media/generated.jpg)
+      ![](../media/gnrtdquiz.jpg)
 
-      >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
+      >**Note**: Sometime it can happen the OpenAI wont provide you the exact output, in that case you can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-5. From the right top corner toggle bar to switch to old experience.
-    
-    ![](../media/openai_toggle.png)
-
-7. In the old experience, go to the completion page and select **Generate a Quiz (1)** from the examples, then click on **Generate (2)**
-    
-    ![](../media/generate_a_quiz.png)
-   
-      >**Note**: You can click on generate again , if the response is incomplete .
-      
-      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
-
-7. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
       ![](../media/imag01.png)
 
-      ![](../media/openai-7.png)
+      ![](../media/samplsscode.png)
     
-8. Close the **Sample Code**.
+6. Close the **Sample Code**.
 
 ## Task 4: Use the Chat playground
 
@@ -147,9 +137,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in  **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
+3. Click on **+ Add Section** drop-down menu and select **Examples**. Now enter the following message and response in the designated boxes:
 
       ![](../media/imag8.png)
 
@@ -160,7 +150,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
          ![](../media/exples-ai.jpg)
    
-         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+         > **Note**: Few-shot examples are used to demonstrate the desired tone, style, and type of responses expected from the model. These examples guide the model to generate responses that align with the provided patterns.
 
 5. Save the changes by clicking on **Apply changes** 
 
@@ -170,7 +160,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
    ![](../media/image4.png)
    
-7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
+7. In the query box on the left side at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Click the **Send (2)** button to submit the prompt and view the response.
 
       ![](../media/openai-12.png)
    
@@ -188,7 +178,9 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane select **Parameters (1)** , set the following parameter values:
+1. In the **Setup** pane select **Parameters (1)** , set the following parameter values:
+      
+      > **Note**: You may need to scrolldown to see the parameters option
       
       - **Max response**: 500 **(2)**
       - **Temperature**: 0 **(3)**
@@ -226,9 +218,12 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, select the **Example** under **+ Add Section** section to reset the message if prompted click on **Continue**. Enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup** pane, Click on the **Delete** icon to clear the privously added example and again select the **Example** under **+ Add Section** section and enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+
+      ![](../media/dltprompt.png)
 
       ![](../media/imag8.png)
+      
 
 3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
    
