@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and and that the **text-turbo** model is selected in the Deployment pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and and that the **text-turbo** model is selected in the Deployment pane.
 
 1. Review the default **Give the model instructions and context**, which should be *You are an AI assistant that helps people find information.*
 

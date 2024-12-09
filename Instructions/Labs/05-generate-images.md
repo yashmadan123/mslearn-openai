@@ -21,11 +21,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you will use the DALL-E playground in Azure OpenAI Studio to experiment with image generation.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
       ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>**
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
 
       ![](../media/update07.png)
 
@@ -192,7 +192,7 @@ In this task, you will run the reviewed code to generate some images.
 
     >**Note**: If you encounter an issue after entering prompts kindly follow the below steps:
 
-     - Navigate back to **Azure OpenAI Studio**. From the top menu bar, turn on the toggle for **Switch to the old version**. click on **Skip** when **Feedback** window prompted.
+     - Navigate back to **Azure AI Foundry portal**. From the top menu bar, turn on the toggle for **Switch to the old version**. click on **Skip** when **Feedback** window prompted.
 
         ![](../media/iss1.png)
 
@@ -203,9 +203,11 @@ In this task, you will run the reviewed code to generate some images.
      - Enter a description of an image you'd like to generate in the **Prompt** box (for example, *An elephant on a skateboard*), and then select **Generate** to view the resulting image.
 
        >**Note**: if you encounter error **The API deployment for this resource does not exist**, kindly wait 2 mins and try again to generate. 
+       
+       >**Note**: It might take 10–15 minutes for the old version to come up.
 
      - Navigate back to CloudShell and reperform step no 3. 
-
+    
 3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
    ![](../media/link.jpg "Keys and Endpoints")
