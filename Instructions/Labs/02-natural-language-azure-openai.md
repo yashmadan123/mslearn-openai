@@ -103,7 +103,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 5. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
+    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (3)
     - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
@@ -134,7 +134,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
    
-   Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
+11. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
    
    ```bash
    code .
