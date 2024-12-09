@@ -171,14 +171,18 @@ In this task, you will use a short command-line application running in Cloud She
 
 2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+   ![](../media/classic-cloudshell.png)
+
+4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-4. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/06-use-own-data
@@ -186,15 +190,11 @@ In this task, you will use a short command-line application running in Cloud She
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-5. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+6. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
     ```
-
-      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 3 and 4** to and make sure you are in the correct project path.
-
-      ![](../media/classic-cloudshell-prompt.png) 
 
 ### Task 5: Configure your application
 
