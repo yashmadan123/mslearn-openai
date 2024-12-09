@@ -25,11 +25,11 @@ In this task, you will use the DALL-E playground in Azure OpenAI Studio to exper
 
       ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>**
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
       ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
 
       ![](../media/update08.png)
               
