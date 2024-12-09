@@ -22,7 +22,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and and that the **text-turbo** model is selected in the Deployment pane.
 
-1. Review the default **System message**, which should be *You are an AI assistant that helps people find information.*
+1. Review the default **Give the model instructions and context**, which should be *You are an AI assistant that helps people find information.*
 
 1. In the **Chat session**, submit the following query:
 
@@ -40,7 +40,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     The response provides a description of the article. However, suppose you want a more specific format for article categorization.
 
-1. In the **Setup** section change the system message to `You are a news aggregator that categorizes news articles.`
+1. In the **Setup** section change the **Give the model instructions and context** to `You are a news aggregator that categorizes news articles.`
 
 6. Under the new system message, select the **Add section** button, and choose **Examples**. Then add the following example.
 
@@ -87,7 +87,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-8. Use the **Save** button to save your changes.
+8. Use the **Apply changes** button to save your changes.
 
 9. In the **Chat session** section, resubmit the following prompt:
 
@@ -105,7 +105,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-10. Set the system message or model instructions to `You are an AI assistant that helps people find information.` with no examples. Save the changes by clicking on **Save** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+10. Set the **Give the model instructions and context to** `You are an AI assistant that helps people find information.` with no examples. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
 
 11. In the **Chat session** section, submit the following prompt:
 
@@ -117,7 +117,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
     The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you actually wanted was for the model to write a Python program that performs the tasks you described?
 
-12. Change the system message to `You are a coding assistant helping write python code.` and apply the changes.
+12. Change the **Give the model instructions and context** to `You are a coding assistant helping write python code.` and apply the changes.
 13. Resubmit the following prompt to the model:
 
     ```
@@ -140,14 +140,18 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/cloudshell-bash.png)
 
-3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+   ![](../media/classic-cloudshell.png)
+
+4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-4. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/03-prompt-engineering
@@ -155,16 +159,11 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
-5. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
+6. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
 
    ```bash
       code .
-    
     ```
-
-      >**Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 3 and 4** to and make sure you are in the correct project path.
-
-      ![](../media/classic-cloudshell-prompt.png)
 
 ### Task 3: Configure your application
 
@@ -193,7 +192,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.56.2
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
@@ -212,7 +211,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     from openai import AsyncAzureOpenAI
     ```
 
-6. Open up the application code for your language and add the necessary code for configuring the client.
+6. Open up the application code for your language and Replace the comment ***Configure the Azure OpenAI client*** add the necessary code for configuring the client.
 
     **C#**: Program.cs
 
@@ -231,6 +230,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
         api_version="2024-02-15-preview"
         )
     ```
+    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
@@ -273,6 +273,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
         max_tokens=800
     )
     ```
+    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 8. The  modified code should look like as shown below:
 
@@ -376,84 +377,80 @@ In this task, you will complete key parts of the provided C# or Python applicati
    
      **Python**
    
-      ```python
-           import os
-           import asyncio
-           from dotenv import load_dotenv
-           
-           # Add Azure OpenAI package
-           # Add Azure OpenAI package
-           from openai import AsyncAzureOpenAI
-           
-           # Set to True to print the full response from OpenAI for each call
-           printFullResponse = False
-           
-           async def main(): 
-                   
-               try: 
-               
-                   # Get configuration settings 
-                   load_dotenv()
-                   azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
-                   azure_oai_key = os.getenv("AZURE_OAI_KEY")
-                   azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
-                   
-                   # Configure the Azure OpenAI client
-                   # Configure the Azure OpenAI client
-                   client = AsyncAzureOpenAI(
-                       azure_endpoint = azure_oai_endpoint, 
-                       api_key=azure_oai_key,  
-                       api_version="2024-02-15-preview"
-                       )
-           
-                   while True:
-                       # Pause the app to allow the user to enter the system prompt
-                       print("------------------\nPausing the app to allow you to change the system prompt.\nPress anything then enter to continue...")
-                       input()
-           
-                       # Read in system message and prompt for user message
-                       system_text = open(file="system.txt", encoding="utf8").read().strip()
-                       user_text = input("Enter user message: ")
-                       if user_text.lower() == 'quit' or system_text.lower() == 'quit':
-                           print('Exiting program...')
-                           break
-                       
-                       await call_openai_model(system_message = system_text, 
-                                               user_message = user_text, 
-                                               model=azure_oai_deployment, 
-                                               client=client
-                                               )
-           
-               except Exception as ex:
-                   print(ex)
-           
-           async def call_openai_model(system_message, user_message, model, client):
-               # Format and send the request to the model
-               # Format and send the request to the model
-               messages =[
-                   {"role": "system", "content": system_message},
-                   {"role": "user", "content": user_message},
-               ]
-           
-               print("\nSending request to Azure OpenAI model...\n")
-           
-               # Call the Azure OpenAI model
-               response = await client.chat.completions.create(
-                   model=model,
-                   messages=messages,
-                   temperature=0.7,
-                   max_tokens=800
-               )
-           
-           
-               if printFullResponse:
-                   print(response)
-           
-               print("Response:\n" + response.choices[0].message.content + "\n")
-           
-           if __name__ == '__main__': 
-               asyncio.run(main())
-      ```
+```python
+import os
+import asyncio
+from dotenv import load_dotenv
+from openai import AsyncAzureOpenAI
+
+# Set to True to print the full response from OpenAI for each call
+printFullResponse = False
+
+async def main():
+    try:
+        # Get configuration settings
+        load_dotenv()
+        azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+        azure_oai_key = os.getenv("AZURE_OAI_KEY")
+        azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
+
+        # Configure the Azure OpenAI client
+        client = AsyncAzureOpenAI(
+            azure_endpoint=azure_oai_endpoint,
+            api_key=azure_oai_key,
+            api_version="2024-02-15-preview"
+        )
+
+        while True:
+            # Pause the app to allow the user to enter the system prompt
+            print("------------------\nPausing the app to allow you to change the system prompt.\nPress anything then enter to continue...")
+            input()
+
+            # Read in system message and prompt for user message
+            system_text = open(file="system.txt", encoding="utf8").read().strip()
+            user_text = input("Enter user message: ")
+            if user_text.lower() == 'quit' or system_text.lower() == 'quit':
+                print('Exiting program...')
+                break
+
+            await call_openai_model(
+                system_message=system_text,
+                user_message=user_text,
+                model=azure_oai_deployment,
+                client=client
+            )
+
+    except Exception as ex:
+        print(ex)
+
+async def call_openai_model(system_message, user_message, model, client):
+    # Format and send the request to the model
+    messages = [
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": user_message},
+    ]
+
+    print("\nSending request to Azure OpenAI model...\n")
+
+    # Call the Azure OpenAI model
+    response = await client.chat.completions.create(
+        model=model,
+        messages=messages,
+        temperature=0.7,
+        max_tokens=800
+    )
+
+    if printFullResponse:
+        print(response)
+
+    print("Response:\n" + response.choices[0].message.content + "\n")
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
+```
+
+>**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 

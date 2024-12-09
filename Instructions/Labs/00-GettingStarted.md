@@ -52,16 +52,16 @@ This lab provides robust functionalities for leveraging AI within Azure. Azure O
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
-   ![](../media/getting-started1.png "Lab Environment")
+   ![](../media/getting-started1u.png)
    
-1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided during registration. You can start, stop, and restart virtual machines from the **Resources** tab.
+1. To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your email address provided during registration. You can start, stop, and restart virtual machines from the **Resources** tab.
 
-   ![](../media/envdetails.png "Lab Environment")
+   ![](../media/envdetailsu.png "Lab Environment")
 
 ## Login to Azure Portal
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![](../media/azureportal_icon1.png "Lab Environment")
+   ![](../media/azureportal_icon1u.png)
    
 1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>

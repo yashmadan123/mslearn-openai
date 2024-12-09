@@ -25,11 +25,11 @@ In this task, you will use the DALL-E playground in Azure OpenAI Studio to exper
 
       ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>**
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
       ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
 
       ![](../media/update08.png)
               
@@ -59,7 +59,11 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-3. Once the terminal starts, enter the following command to download the application code you are going to work with.
+3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+   ![](../media/classic-cloudshell.png)
+
+4. Once the terminal starts, enter the following command to download the application code you are going to work with.
 
     ```bash
    rm -r azure-openai -f
@@ -68,7 +72,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-4. Navigate to the folder for the language of your preference  by running the appropriate command.
+5. Navigate to the folder for the language of your preference  by running the appropriate command.
 
       **Python**
 
@@ -82,15 +86,11 @@ In this task, you will use a simple Python or C# app to generate images by calli
    cd azure-openai/Labfiles/05-image-generation/CSharp
     ```
 
-9. Use the following command to open the built-in code editor and see the code files you will be working with.
+6. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
    code .
     ```
-   > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
-
-   ![](../media/classic-cloudshell-prompt.png)
-
    
 #### Task 2.2: Configure your application
 

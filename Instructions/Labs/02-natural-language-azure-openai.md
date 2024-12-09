@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll retrieve the keys and Endpoint of Azure OpenAI resource
 
-1. In the Azure portal, search for **OpenAI** and select Azure OpenAI.
+1. In the Azure portal, search for **Azure OpenAI** and select Azure OpenAI.
 
 1. Select the existing Azure OpenAI resource and follow the below steps to copy the keys and Endpoint of the OpenAI resource.
 
@@ -36,38 +36,34 @@ In this task , you'll retrieve the keys and Endpoint of Azure OpenAI resource
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**
 
    ![](../media/update08.png)
 
-4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
+4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
-      ![](../media/new03.png "Create a new deployment")
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
-
-      ![](../media/ui1.png "Create a new deployment")
+      ![](../media/ui1u.png)
 
 6. Search for **gpt-35-turbo-16k** and click on **Confirm**
 
       ![](../media/new04.png)
 
 7. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: text-turbo(1)
-      - Deployment type: Standard(2)
-      - Choose collapse from the deployment details (3)
-      - Model version: 0613(Default)(4)
-      - Tokens per Minute Rate Limit (thousands): 10K (5)
-      - Enable dynamic quota: Enabled (6)
-      - Click on Deploy (7)
+      - **Deployment name**: text-turbo(1)
+      - **Deployment type**: Standard(2)
+      - Click on **Customize**
+      - **Model version**: 0613(Default)(3)
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Enable dynamic quota**: Enabled (5)
+      - Click on **Deploy** (6)
   
            ![](../media/ui4.png)
 
@@ -107,11 +103,11 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 5. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject>(3)
+    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)
+    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (3)
     - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
     - **File share**: Create a new file share named **none** (5)
-    - Click **Create Storage** (6)
+    - Click **Create** (6)
 
     ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
@@ -119,14 +115,18 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 7. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+8. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+   ![](../media/classic-cloudshell.png)
+
+9. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+10. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
     cd azure-openai/Labfiles/02-azure-openai-api
@@ -140,11 +140,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    code .
    ```
 
-  > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm**. If you receive a popup to Switch to Classic Cloud Shell while running the code . command, click Confirm. Re-run commands from steps 8 and 9 to and make sure you are in the correct project path.
-
-   ![](../media/classic-cloudshell-prompt.png)
-
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -157,8 +152,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
-
-  >**Note**: Re-run commands from steps 8 and 9 from previous task and ensure you are in the correct project path.
 
 2. Open the configuration file for your language
 
@@ -181,7 +174,7 @@ In this task, you will complete key parts of the application to enable it to use
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.56.2
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
@@ -574,6 +567,7 @@ In this task, you will provide a history of the conversation in your prompt to e
    if __name__ == '__main__': 
        main()
    ```
+   **Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 7. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
 8. In the terminal pane, enter the following command to run the application.

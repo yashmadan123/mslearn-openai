@@ -62,14 +62,18 @@ In this task, you will use a short command-line application running in Cloud She
    > **Note**: If a **Cloud Shell timed out** pop-up 
    appears, click **Reconnect**.
 
-3. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+   ![](../media/classic-cloudshell.png)
+
+4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/04-code-generation
@@ -77,16 +81,11 @@ In this task, you will use a short command-line application running in Cloud She
 
    > **Note**: Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-9. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+6. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
       ```bash
      code .
       ```
-
-      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
-
-      ![](../media/classic-cloudshell-prompt.png)
-
 
 ### Task 3: Configure your application
 
@@ -115,7 +114,7 @@ In this task, you will complete key parts of the application to enable it to use
       ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.56.2
     ```
 
 5. In the application code for your language, replace the comment **Format and send the request to the model..** with the following code to configuring the client.
