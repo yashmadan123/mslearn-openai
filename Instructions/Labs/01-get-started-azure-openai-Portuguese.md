@@ -64,13 +64,13 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio**,
 
    ![](../media/8-10-24(15).png)
 
-3. No painel de recursos do Azure OpenAI, clique em **Go to Azure OpenAI Studio** para navegar até o **Azure AI Studio**.
+3. No painel de recursos do Azure OpenAI, clique em **Go to Azure AI Foundry portal** para navegar até o **Azure AI Foundry portal**.
 
-   ![](../media/8-10-24(16).png)
+    ![](../media/portugeseai.png)
 
 4. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
-   ![](../media/8-10-24(17).png)
+   ![](../media/portugesemodel.png)
 
 5. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo** e clique em **Confirmar**.
 
