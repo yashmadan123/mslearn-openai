@@ -66,7 +66,7 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure OpenAI Studio**, 
 
     ![](../media/spanish_foundry.png)
 
-5. Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo** y seleccione **Implementación del modelo base (2)**.
+5. Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**.
 
     ![](../media/spansih_model.png)
 
