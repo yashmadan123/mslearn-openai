@@ -72,9 +72,9 @@ Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a
 
    ![](../media/openai_2_1.png)
 
-3. En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure OpenAI Studio** para navegar a **Azure AI Studio**.
+3. En el panel de recursos de Azure OpenAI, haga clic en **Go to Azure AI Foundry portal** para navegar a **Azure AI Foundry portal.**.
 
-   ![](../media/openai_3.png)
+   ![](../media/spanish_foundry.png)
 
 >**Note**: Antes de implementar un modelo, asegúrese de estar en OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> marcando la esquina superior derecha. Si no es así, haga clic en el menú desplegable y selecciónelo.
 
@@ -82,7 +82,7 @@ Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a
 
 5. Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo** y seleccione **Implementación del modelo base (2)**. 
 
-   ![](../media/deploy-2.jpg)
+   ![](../media/spansih_model.png)
 
 6. En la ventana **Seleccionar un modelo**, seleccione **gpt-35-turbo-16k (1)** y haga clic en **Confirmar (2)**.
 
@@ -208,7 +208,7 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.56.2
     ```
 
 5. Navegue hasta la carpeta de su lenguaje preferido, seleccione el archivo de código y agregue las bibliotecas necesarias.
