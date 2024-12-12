@@ -72,7 +72,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
 
@@ -208,9 +208,9 @@ In this task, you will observe how the base model responds to queries without an
 
       ![](../media/x690.png)
 
-16. In **Azure OpenAI Studio**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+16. In **Azure AI Foundry portal**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
-      ![](../media/chat_playground.jpg "Add your data in setup pane")
+    ![](../media/chat_playground.png)
    
 17. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
@@ -342,7 +342,7 @@ In this task, you will complete key parts of the application to enable it to use
     ```
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.56.2
     ```
 
 4. In the code editor from the left navigation pane, in the **CSharp** or **Python** folder, open the configuration file for your preferred language
@@ -352,7 +352,7 @@ In this task, you will complete key parts of the application to enable it to use
 
 5. Update the configuration values to include:
     - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
-    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure OpenAI Studio that is **text-turbo**).
+    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **text-turbo**).
     - The endpoint for your AI search service (Which you copied in the previous task alternatively it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
     - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
     - The name of the search index (which should be `margiestravel`).
@@ -442,7 +442,7 @@ In this task, you will run the reviewed code to generate some images.
 
 In this lab, you have accomplished the following:
 -   Provisioned an Azure OpenAI resource
--   Deployed an OpenAI model within the Azure OpenAI studio
+-   Deployed an OpenAI model within the Azure AI Foundry portal
 -   Used the power of OpenAI models to generate responses limited to a custom ingested data.
 
 ### You have successfully completed the lab.

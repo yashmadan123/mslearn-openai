@@ -1,7 +1,7 @@
 # Lab 01: Get started with Azure OpenAI Service
 
 ## Lab scenario
-Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Studio to deploy and explore OpenAI models.
+Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure AI Foundry portal to deploy and explore OpenAI models.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -57,13 +57,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/tel-1.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
 
       ![](../media/new01.png)
    
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/ui1.png "Create a new deployment")
+      ![](../media/ui1.png)
 
       > **Note**: Click on the **Expand** button, if you dont see the left side navigation pane.
 
@@ -106,11 +106,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
+1. In Azure AI Foundry portal, in the left pane under **Playground**, select **Completions**.
 
 1. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt and then click on **Generate (4)**
 
-      ![](../media/generate_new.jpg)
+      ![](../media/generate_new.png)
 
       >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
@@ -118,7 +118,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 1. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](../media/generated.jpg)
+      ![](../media/generated.png)
 
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
@@ -136,7 +136,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playground** section, select the **Chat (1)** page, and ensure that the **my-gpt-model (2)** model is selected in the configuration pane.
+1. In the **Playground** section, select the **Chat (1)** page, and ensure that the **my-gpt-model (2)** model is selected in the Deployment pane.
 
       ![](../media/open-ai2.png)
 
@@ -238,7 +238,7 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
--   Deploy an Azure OpenAI model within the Azure OpenAI studio
+-   Deploy an Azure OpenAI model within the Azure AI Foundry portal
 -   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
 
 ##   You have successfully completed the lab.

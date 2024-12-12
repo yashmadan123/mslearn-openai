@@ -74,7 +74,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, select 
-   **Overview (1)** from the left-hand menu, then click on **Go to Azure OpenAI Studio (2)**. This will navigate you to **Azure AI Studio**.
+   **Overview (1)** from the left-hand menu, then click on **Go to Azure AI Foundry portal (2)**. This will navigate you to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
 
@@ -119,7 +119,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
 2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Save** and subsequently click on **Continue**.
 
     ![](../media/openai1.png)
@@ -316,7 +316,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.56.2
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
@@ -735,7 +735,7 @@ In this task, you will run your configured app to send a request to your model a
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
+-   Deploy an OpenAI model within the Azure AI Foundry portal
 -   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
 
 ### You have successfully completed the lab.
