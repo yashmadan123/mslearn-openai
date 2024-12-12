@@ -39,7 +39,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
        ![](../media/openai3.png "Create Azure OpenAI resource")
 
-4. Click on **Next** thrice and subsequently click on **Create**. 
+4. Click on **Next** thrice, adding **Network** and **Tags**, finally clicking on **Create**. 
 
 5. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
@@ -88,7 +88,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/28-08-2024(1).png "Create a new deployment")
 
-7. Within the **Deploy model** pop-up interface, click enter the following details:
+7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name (1)**: text-turbo
     - **Model version (2)**: Auto-update to default
     - **Deployment type (3)**: Standard
