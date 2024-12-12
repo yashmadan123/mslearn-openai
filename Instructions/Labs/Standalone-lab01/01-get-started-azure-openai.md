@@ -61,13 +61,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](./media/update07.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry**.
 
-    ![](./media/update08.png)
+    ![](./media/go-to-foundry.png)
 
 1. In the **Deployments (1)** page, click on **+ Deploy model**, Choose **Deploy base Model (2)**.
 
-    ![](./media/ui1.png "Create a new deployment")
+    ![](./media/foundry-deployments.png "Create a new deployment")
 
 1. Search for **GPT-35-TURBO**, click on **Confirm**
 
@@ -227,7 +227,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** when prompted click on Continue.
 
-      ![](./media/imag8.png)
+      ![](./media/python-developer-system-msg.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
