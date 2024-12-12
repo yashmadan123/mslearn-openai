@@ -66,7 +66,7 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
 
 ## Tarefa 2: Implementar um modelo
 
-Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para usar através do **Azure OpenAI Studio**. Uma vez implantado, faremos referência a esse modelo em nosso aplicativo.
+Para usar a API do Azure OpenAI, você deve primeiro implantar um modelo para usar através do **Azure AI Foundry portal**. Uma vez implantado, faremos referência a esse modelo em nosso aplicativo.
 
 1. No **portal do Azure**, pesquise por **Azure OpenAI (1)** e selecione **OpenAI (2)**.
 
