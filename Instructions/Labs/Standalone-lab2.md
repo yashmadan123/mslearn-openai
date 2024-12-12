@@ -39,7 +39,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
        ![](../media/openai3.png "Create Azure OpenAI resource")
 
-4. Click on **Next** twice and subsequently click on **Create**. 
+4. Click on **Next** thrice and subsequently click on **Create**. 
 
 5. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
@@ -58,7 +58,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Deploy a model
 
@@ -72,9 +72,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/OpenAI_select.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navigate to **Azure AI Studio**.
 
-   ![](../media/go-to-studio.png)
+   ![](../media/imageb.png)
 
 1. In the prompt titled **Discover an even better Azure AI Studio experience**, click **Close**.
 
@@ -88,7 +88,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/28-08-2024(1).png "Create a new deployment")
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
+7. Within the **Deploy model** pop-up interface, click enter the following details:
     - **Deployment name (1)**: text-turbo
     - **Model version (2)**: Auto-update to default
     - **Deployment type (3)**: Standard
@@ -188,7 +188,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 4: Configure your application
@@ -218,7 +218,7 @@ In this task, you will complete key parts of the application to enable it to use
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.56.2
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
