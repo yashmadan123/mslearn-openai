@@ -585,7 +585,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
 In this lab, you have accomplished the following:
 -   Retrive the keys and endpoint of Azure OpenAI resource.
--   Deploy an OpenAI model within the Azure OpenAI studio
+-   Deploy an OpenAI model within the Azure AI Foundry portal
 -   Integrate Azure OpenAI models into your applications
 
 ### You have successfully completed the lab.

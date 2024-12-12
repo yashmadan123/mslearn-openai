@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Explore image generation in the DALL-E playground
 
-In this task, you will use the DALL-E playground in Azure OpenAI Studio to experiment with image generation.
+In this task, you will use the DALL-E playground in Azure AI Foundry portal to experiment with image generation.
 
 1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
@@ -192,7 +192,7 @@ In this task, you will run the reviewed code to generate some images.
 
     >**Note**: If you encounter an issue after entering prompts kindly follow the below steps:
 
-     - Navigate back to **Azure AI Foundry portal**. From the top menu bar, turn on the toggle for **Switch to the old version**. click on **Skip** when **Feedback** window prompted.
+     - Navigate back to **Azure AI Foundry portal**. From the top menu bar, turn on the toggle for **Switch to the old look**. click on **Skip** when **Feedback** window prompted.
 
         ![](../media/iss1.png)
 
