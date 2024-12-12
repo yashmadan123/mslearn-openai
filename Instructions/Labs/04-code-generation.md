@@ -74,7 +74,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update07.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
    
@@ -125,7 +125,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
 
    ![](../media/code5.png)
    
@@ -258,7 +258,7 @@ In this task, you will complete key parts of the application to enable it to use
       ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.56.2
     ```
 
 5. Add the necessary code for configuring the client.
@@ -381,7 +381,7 @@ In this task, you will run your configured app to generate code for each use cas
 10. Copy the below command in the terminal to see the contents of the app.txt file.
 
     ```
-   cat app.txt
+    cat app.txt
     ```
 
 The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
@@ -394,7 +394,7 @@ If you would like to see the full response from Azure OpenAI, you can set the `p
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
+-   Deploy an OpenAI model within the Azure AI Foundry portal
 -   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
 
 ### You have successfully completed the lab.

@@ -72,7 +72,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, select 
-   **Overview (1)** from the left-hand menu, then click on **Go to Azure OpenAI Studio (2)**. This will navigate you to **Azure AI Studio**.
+   **Overview (1)** from the left-hand menu, then click on **Go to Azure AI Foundry portal (2)**. This will navigate you to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
 
@@ -212,7 +212,7 @@ In this task, you will complete key parts of the application to enable it to use
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.56.2
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
@@ -625,7 +625,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
+-   Deploy an OpenAI model within the Azure AI Foundry portal
 -   Integrate Azure OpenAI models into your applications
 
 ### You have successfully completed the lab.

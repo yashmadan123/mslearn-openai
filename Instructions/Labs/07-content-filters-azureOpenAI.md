@@ -60,7 +60,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    ![](../media/update07.png)
 
 3. In the Azure OpenAI resource pane, select 
-   **Overview (1)** from the left-hand menu, then click on **Go to Azure OpenAI Studio (2)**. This will navigate you to **Azure AI Studio**.
+   **Overview (1)** from the left-hand menu, then click on **Go to Azure AI Foundry portal (2)**. This will navigate you to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
 
@@ -105,7 +105,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will observe how the model behaves in a conversational interaction.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
 
 2. In the **Chat session** section, enter the following prompt.
 
@@ -138,7 +138,7 @@ In this task, you will observe how the model behaves in a conversational interac
 
 In this task, you will apply content filters to prompts and completions to prevent the generation of potentially harmful or offensive language.
 
-1. In Azure OpenAI Studio, view the **Content filters** page under **Shared resources** from the left navigation menu.
+1. In Azure AI Foundry portal, view the **Content filters** page under **Shared resources** from the left navigation menu.
 
 2. Select **+ Create content filter** and review the default settings for a content filter.
 
@@ -159,7 +159,7 @@ In this task, you will apply content filters to prompts and completions to preve
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource.
--   Deploy an OpenAI model within the Azure OpenAI studio.
+-   Deploy an OpenAI model within the Azure AI Foundry portal.
 -   Use the power of OpenAI models to generate responses to generate natural language output.
 -   Explore content filters.
 
