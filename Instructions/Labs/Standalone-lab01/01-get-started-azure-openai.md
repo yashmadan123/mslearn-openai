@@ -1,8 +1,8 @@
-# Hands-On Lab Get started with Azure OpenAI Service
+# Hands-On Lab: Get started with Azure OpenAI Service
 
 ## Estimated time: 60 minutes
 
-Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Studio to deploy and explore OpenAI models.
+Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Foundry to deploy and explore OpenAI models.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -104,7 +104,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you'll Explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
+1. In Azure OpenAI Foundry, in the left pane under **Playground**, select **Completions**.
 
 2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected , Type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt.
 
@@ -247,7 +247,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 In this lab, you have accomplished the following:
 - Provisioned an Azure OpenAI resource
-- Deployed an Azure OpenAI model within the Azure OpenAI studio
+- Deployed an Azure OpenAI model within the Azure OpenAI Foundry
 - Used the chat playground to utilise the functionalities of prompts, parameters, and code generation
 
 ## You have successfully completed the lab.
