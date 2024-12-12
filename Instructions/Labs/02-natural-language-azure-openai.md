@@ -60,7 +60,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ## Task 2: Deploy a model
 
-To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
+To use the Azure OpenAI API, you must first deploy a model to use through the **Azure AI Foundry portal**. Once deployed, we will reference that model in our app.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -70,7 +70,7 @@ To use the Azure OpenAI API, you must first deploy a model to use through the **
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navaigate you to **Azure AI Foundry Portal**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navigate you to **Azure AI Foundry Portal**.
 
    ![](../media/update08.png)
 
@@ -499,7 +499,7 @@ Increasing the temperature often causes the response to vary, even when provided
 
 In this lab, you have accomplished the following:
 - Provision an Azure OpenAI resource
-- Deploy an OpenAI model within the Azure OpenAI studio
+- Deploy an OpenAI model within the Azure AI Foundry portal
 - Integrate Azure OpenAI models into your applications
 
 ### You have successfully completed the lab.
