@@ -62,7 +62,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
 ### Tarea 2: Implementar un modelo
 
-Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a través de **Azure OpenAI Studio**. Una vez implementado, haremos referencia a ese modelo en nuestra aplicación.
+Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a través de **Azure AI Foundry portal**. Una vez implementado, haremos referencia a ese modelo en nuestra aplicación.
 
 1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
@@ -477,7 +477,7 @@ Aumentar la temperatura suele provocar que la respuesta varíe, incluso cuando s
 
 En este laboratorio, logró lo siguiente:
 - Aprovisionar un recurso de Azure OpenAI
-- Implementar un modelo de OpenAI dentro de Azure OpenAI Studio
+- Implementar un modelo de OpenAI dentro de Azure AI Foundry portal
 - Integrar modelos de Azure OpenAI en sus aplicaciones
 
 ### Ha completado con éxito el laboratorio
