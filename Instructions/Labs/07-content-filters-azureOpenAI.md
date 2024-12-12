@@ -49,7 +49,7 @@ In this task, you will observe how the model behaves in a conversational interac
 
 In this task, you will apply content filters to prompts and completions to prevent the generation of potentially harmful or offensive language.
 
-1. In Azure OpenAI Studio, view the **Content filters** page from the left navigation menu.
+1. In Azure AI Foundry portal, view the **Content filters** page from the left navigation menu.
 
 2. Select **Create customized content filter** and review the default settings for a content filter.
 

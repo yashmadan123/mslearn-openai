@@ -114,9 +114,9 @@ In this task, you will observe how the base model responds to queries without an
 
       ![](../media/x690.png)
 
-16. In **Azure OpenAI Studio**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+16. In **Azure AI Foundry portal**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
-      ![](../media/lab6-g2.png "Add your data in setup pane")
+    ![](../media/chat_playground.png)
    
 17. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
@@ -209,7 +209,7 @@ In this task, you will complete key parts of the application to enable it to use
 
 3. Update the configuration values to include:
     - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
-    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure OpenAI Studio that is **text-turbo**).
+    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **text-turbo**).
     - The endpoint for your AI search service (Which you copied in the previous task alternatively it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
     - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
     - The name of the search index (which should be `margiestravel`).
