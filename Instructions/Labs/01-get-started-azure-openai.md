@@ -3,7 +3,7 @@
 ### Duración Estimada: 40 minutos
 
 ## Escenario del Laboratorio
-El Servicio Azure OpenAI incorpora los modelos de IA generativa desarrollados por OpenAI a la plataforma Azure, lo que le permite desarrollar potentes soluciones de IA que se benefician de la seguridad, la escalabilidad y la integración de los servicios que ofrece la plataforma de nube de Azure. En este ejercicio, aprenderá cómo comenzar con Azure OpenAI mediante el aprovisionamiento del servicio como un recurso de Azure y el uso de Azure OpenAI Studio para implementar y explorar los modelos de OpenAI.
+El Servicio Azure OpenAI incorpora los modelos de IA generativa desarrollados por OpenAI a la plataforma Azure, lo que le permite desarrollar potentes soluciones de IA que se benefician de la seguridad, la escalabilidad y la integración de los servicios que ofrece la plataforma de nube de Azure. En este ejercicio, aprenderá cómo comenzar con Azure OpenAI mediante el aprovisionamiento del servicio como un recurso de Azure y el uso de Azure AI Foundry portal para implementar y explorar los modelos de OpenAI.
 
 ## Objetivos del laboratorio
 En este laboratorio, completará las siguientes tareas:
@@ -52,7 +52,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
 ### Tarea 2: Implementar un modelo
 
-Azure OpenAI ofrece un portal basado en la web llamado **Azure OpenAI Studio**, que puede usar para implementar, administrar y explorar modelos. Comenzará su exploración de Azure OpenAI usando Azure OpenAI Studio para implementar un modelo.
+Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal**, que puede usar para implementar, administrar y explorar modelos. Comenzará su exploración de Azure OpenAI usando Azure AI Foundry portal para implementar un modelo.
 
 1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
@@ -103,9 +103,9 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure OpenAI Studio**, 
 
 ### Tarea 3: Explorar un modelo en el Área de juegos (Playground) Completions
 
-Los *Playgrounds* (Patios de juego) son interfaces útiles en Azure OpenAI Studio que puede usar para experimentar con sus modelos implementados sin necesidad de desarrollar su propia aplicación cliente.
+Los *Playgrounds* (Patios de juego) son interfaces útiles en Azure AI Foundry portal que puede usar para experimentar con sus modelos implementados sin necesidad de desarrollar su propia aplicación cliente.
 
-1. En Azure OpenAI Studio, en el panel izquierdo, bajo **Patios de juego**, seleccione **Finalizaciones**.
+1. En Azure AI Foundry portal, en el panel izquierdo, bajo **Patios de juego**, seleccione **Finalizaciones**.
 
 2. En la página **Finalizaciones**, asegúrese de que su implementación **my-gpt-model** esté seleccionada y, luego, en la lista **Ejemplos**, seleccione **Generar un cuestionario**.
 
@@ -226,7 +226,7 @@ Además de generar respuestas en lenguaje natural, puede utilizar modelos GPT pa
 
 En este laboratorio, ha logrado lo siguiente:
 -   Aprovisionar un recurso de Azure OpenAI
--   Implementar un modelo de Azure OpenAI dentro de Azure OpenAI Studio
+-   Implementar un modelo de Azure OpenAI dentro de Azure AI Foundry portal
 -   Usar el área de juegos de chat para utilizar las funcionalidades de prompts, parámetros y generación de código
 
 ### Ha completado con éxito el laboratorio
