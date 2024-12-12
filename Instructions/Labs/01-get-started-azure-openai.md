@@ -2,7 +2,7 @@
 
 ### Estimated time: 60 minutes
 
-Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Studio to deploy and explore OpenAI models.
+Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure AI Foundry portal to deploy and explore OpenAI models.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -57,18 +57,19 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navaigate to **Azure AI Foundry Portal**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
 
-   ![](../media/aifndryprtal.png)
+   ![](../media/update08.png)
 
+   >**Note** : With a recent UI update, you may see an option labeled **Go to Azure AI Studio**, which will navigate to the **Azure AI Foundry portal**.
 
-5. Select **Deployments (1)** page from the left side menu, and click on **+ Deploy model** drop-down button and Choose **Deploy base Model (2)**.
+5. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
-      ![](../media/deploymodelss.png "Create a new deployment")
+      ![](../media/ui1.png)
 
 6. Search for **gpt-35-turbo (1)**, click on **Confirm (2)**
 
@@ -107,7 +108,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 1. In Azure AI Foundry Portal, in the left pane under **Playground**, select **Completions**.
 
-2. In the **Completions** page, ensure your **my-gpt-model** deployment is selected , Type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt.
+2. In the **Completions playground** page, ensure your **my-gpt-model** deployment is selected , Copy paste this `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
 
       ![](../media/generate_01.png)
 
@@ -119,7 +120,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](../media/gnrtdquiz.jpg)
+      ![](../media/generated.png)
 
       >**Note**: Sometime it can happen the OpenAI wont provide you the exact output, in that case you can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
@@ -127,7 +128,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
       ![](../media/imag01.png)
 
-      ![](../media/samplsscode.png)
+      ![](../media/openai-7u.png)
     
 6. Close the **Sample Code**.
 
@@ -139,9 +140,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 2. In the **Setup** section, in  **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
+      ![](../media/setup.png)
+
 3. Click on **+ Add Section** drop-down menu and select **Examples**. Now enter the following message and response in the designated boxes:
 
-      ![](../media/imag8.png)
+      ![](../media/imag8u.png)
 
 4.  Enter the following message and response in the designated boxes:
 
@@ -154,7 +157,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 5. Save the changes by clicking on **Apply changes** 
 
-   ![](../media/image7.png)
+   ![](../media/image7u.png)
 
 6. On Update system message? pop-up, click on **Continue**.
 
@@ -218,16 +221,14 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, Click on the **Delete** icon to clear the privously added example and again select the **Example** under **+ Add Section** section and enter `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
-
-      ![](../media/dltprompt.png)
+1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
       ![](../media/imag8.png)
       
 
 3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
    
-      ![](../media/openai-14.png)
+      ![](../media/openai-14u.png)
 
 4. Submit the following user message:
 
@@ -243,7 +244,7 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
--   Deploy an Azure OpenAI model within the Azure OpenAI studio
+-   Deploy an Azure OpenAI model within the Azure AI Foundry portal
 -   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
 
 ##   You have successfully completed the lab.

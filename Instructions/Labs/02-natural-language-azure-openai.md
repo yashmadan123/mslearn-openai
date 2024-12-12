@@ -60,23 +60,25 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ## Task 2: Deploy a model
 
-To use the Azure OpenAI API, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will reference that model in our app.
+To use the Azure OpenAI API, you must first deploy a model to use through the **Azure AI Foundry portal**. Once deployed, we will reference that model in our app.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
     ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navaigate you to **Azure AI Foundry Portal**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navigate you to **Azure AI Foundry Portal**.
 
-   ![](../media/aifndryprtal.png)
+   ![](../media/update08.png)
 
-5. Select **Deployments (1)** page from the left side menu, and click on **+ Deploy model** drop-down button and Choose **Deploy base Model (2)**.
+   >**Note** : With a recent UI update, you may see an option labeled **Go to Azure AI Studio**, which will navigate to the **Azure AI Foundry portal**.
 
-      ![](../media/deploymodelss.png "Create a new deployment")
+5. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+
+      ![](../media/ui1.png)
 
 6. In the **Select a model** window, select **gpt-35-turbo-16k (1)** and click on **Confirm (2)**.
 
@@ -138,14 +140,18 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+7. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+    ![](../media/classic-cloudshell.png)
+
+8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
   
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/02-azure-openai-api
@@ -153,16 +159,11 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
-9. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
+10. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
 
     ```bash
     code .
     ```
-    > **NOTE:** If you're prompted to **Switch to Classic Cloud Shell** after running the **code .** command, click on **Confirm** and perform step 8 and 9 again.
-
-   ![](../media/classic-cloudshell-prompt.png) 
-   
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -201,7 +202,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.55.3
+    pip install openai==1.56.2
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
@@ -498,7 +499,7 @@ Increasing the temperature often causes the response to vary, even when provided
 
 In this lab, you have accomplished the following:
 - Provision an Azure OpenAI resource
-- Deploy an OpenAI model within the Azure OpenAI studio
+- Deploy an OpenAI model within the Azure AI Foundry portal
 - Integrate Azure OpenAI models into your applications
 
 ### You have successfully completed the lab.
