@@ -17,11 +17,11 @@ Understand how to deploy Azure OpenAI Service, enabling you to integrate and exp
 Participants should have: Basic knowledge and understanding of the following
 
 - **Azure Portal**: For managing and provisioning Azure resources.
-- **Azure AI Studio**: For deploying models and experimenting with their capabilities, including features such as the Completions and Chat playgrounds.
+- **Azure AI Foundry**: For deploying models and experimenting with their capabilities, including features such as the Completions and Chat playgrounds.
 
 ## Architecture
 
-This architecture allows users to leverage Azure's cloud infrastructure to deploy and interact with advanced AI models. Through the Azure Portal, users manage their resources, while Azure AI Studio provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Studio enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
+This architecture allows users to leverage Azure's cloud infrastructure to deploy and interact with advanced AI models. Through the Azure Portal, users manage their resources, while Azure AI Foundry provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Foundry enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
 
 ## Architecture Diagram:
 
@@ -33,7 +33,7 @@ This architecture allows users to leverage Azure's cloud infrastructure to deplo
 
 - **Azure OpenAI Service**: Hosts and manages OpenAI models like GPT-35-Turbo, providing scalable access for tasks such as text completion and code generation.
 
-- **Azure AI Studio**: Interactive environment for deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
+- **Azure AI Foundry**: Interactive environment for deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
 
 ## Getting Started with the Lab
 
