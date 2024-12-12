@@ -37,7 +37,7 @@ This architecture allows users to leverage Azure's cloud infrastructure to deplo
 
 ## Getting Started with the Lab
 
-Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises of the lab guide.
+Welcome to your Get started with Azure OpenAI Service Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience.
  
 ## Accessing Your Lab Environment
  
