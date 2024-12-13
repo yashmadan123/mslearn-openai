@@ -62,7 +62,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/IMG4.png)
+   ![Explore Lab Resources](../media/IMG4.png)
  
 ## Utilizing the Split Window Feature
  
@@ -74,7 +74,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/IMG5.png)
+   ![Manage Your Virtual Machine](../media/IMG5.png)
 
 ## Lab Validation
 
@@ -120,7 +120,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
   
-   ![Click on cancel](../media/imagea.png)
+   ![Click on cancel](../media/imageae.png)
  
 
 ## Support Contact
