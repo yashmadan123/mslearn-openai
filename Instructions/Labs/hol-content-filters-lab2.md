@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Deploy a OpenAI model
 
-As you have already deployed OpenAI services in the previous exercise, you're ready to deploy a model to use through the **Azure OpenAI Studio**. Once deployed, you will use the model to generate natural language content.
+As you have already deployed OpenAI services in the previous exercise, you're ready to deploy a model to use through the **Azure AI Foundry portal**. Once deployed, you will use the model to generate natural language content.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -25,15 +25,15 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
    ![](../media/openai.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
-   ![](../media/go-to-1.png)
+   ![](../media/update08.png)
 
 1. After navigating to Azure AI Studio, click on **Close** on the pop-up.
 
 1. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 
-   ![](../media/deployments.png)
+   ![](../media/ui1.png)
 
 1. In the **Select a model** window, select **gpt-35-turbo-16k (1)** and click on **Confirm (2)**.
 
@@ -58,7 +58,7 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
 Let's see how the model behaves in a conversational interaction.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
 
 1. In the **Setup** section at the top, select the **Default** system message template and click on **Continue**.
 
@@ -95,7 +95,7 @@ Let's see how the model behaves in a conversational interaction.
 
 Content filters are applied to prompts and completions to prevent potentially harmful or offensive language being generated.
 
-1. In Azure OpenAI Studio, view the **Content filters** page from the left navigation menu.
+1. In Azure AI Foundry portal, view the **Content filters** page from the left navigation menu.
 1. Select **Create customized content filter** and review the default settings for a content filter.
 
     Content filters are based on restrictions for four categories of potentially harmful content:
@@ -115,7 +115,7 @@ Content filters are applied to prompts and completions to prevent potentially ha
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource.
--   Deploy an OpenAI model within the Azure OpenAI studio.
+-   Deploy an OpenAI model within the Azure AI Foundry portal.
 -   Use the power of OpenAI models to generate responses to generate natural language output.
 -   Explore content filters.
 

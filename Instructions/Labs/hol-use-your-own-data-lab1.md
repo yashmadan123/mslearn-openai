@@ -62,7 +62,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 ### Task 2: Deploy a model
 
-To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and use our data to ground its responses.
+To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure AI Foundry portal**. Once deployed, we will use the model with the playground and use our data to ground its responses.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -72,15 +72,15 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
       ![](../media/openai.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
-      ![](../media/go-to-1.png)
+      ![](../media/update08.png)
 
-4. After navigating to Azure AI Studio, click on **Close** pop-up on the top.
+4. After navigating to Azure AI Foundry portal, click on **Close** pop-up on the top.
 
 5. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 
-   ![](../media/deployments.png)
+   ![](../media/ui1.png)
 
 6. In the **Select a model** window, select **gpt-35-turbo (1)** and click on **Confirm (2)**.
 
@@ -367,7 +367,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 5. Update the configuration values to include:
     - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
     
-    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure OpenAI Studio that is **text-turbo**).
+    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **text-turbo**).
     
     - The endpoint for your AI search service (Which you copied in the previous task alternatively it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
     
@@ -461,7 +461,7 @@ Now that your app has been configured, run it to send your request to your model
 
 In this lab, you have accomplished the following:
 -   Provisioned an Azure OpenAI resource
--   Deployed an OpenAI model within the Azure OpenAI studio
+-   Deployed an OpenAI model within the Azure AI Foundry portal
 -   Used the power of OpenAI models to generate responses limited to a custom ingested data.
 
 ### You have successfully finished the lab. Click **Next** to continue to the next lab.
