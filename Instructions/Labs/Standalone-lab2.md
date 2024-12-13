@@ -49,7 +49,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/openai4.png "Keys and Endpoints")
+        ![](../media/imaged.png "Keys and Endpoints")
 
 #### Validation
 
@@ -72,9 +72,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/OpenAI_select.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navigate to **Azure AI Foundry**.
 
-   ![](../media/imageb.png)
+   ![](../media/imga.png)
 
 1. In the prompt titled **Discover an even better Azure AI Studio experience**, click **Close**.
 
@@ -82,25 +82,25 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Select **Deployments (1)** under Shared resources, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+    ![](../media/imagef.png "Create a new deployment")
 
 1. On the **Select a Model** pane, search for **gpt-35-turbo-16k (1)** and select it from the results. Then, click **Confirm (3)** to proceed.
 
-   ![](../media/28-08-2024(1).png "Create a new deployment")
+    ![](../media/28-08-2024(1).png "Create a new deployment")
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name (1)**: text-turbo
-    - **Model version (2)**: Auto-update to default
     - **Deployment type (3)**: Standard
+    - **Model version (2)**: Auto-update to default
     - **Tokens per Minute Rate Limit (thousands) (4)**: 10K
     - **Enable dynamic quota (5)**: Enabled
     - Click on **Deploy (6)**
   
-      ![](../media/i2.png)
+        ![](../media/imagex.png)
 
       >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
 
-      ![](../media/imagecustomize.png)
+         ![](../media/imageg.png)
 
       >**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
 
