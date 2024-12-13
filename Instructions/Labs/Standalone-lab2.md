@@ -100,7 +100,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
 
-         ![](../media/imageg.png)
+         ![](../media/imageq.png)
 
       >**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
 
