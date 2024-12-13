@@ -74,7 +74,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navigate to **Azure AI Foundry**.
 
-   ![](../media/imagee.png)
+   ![](../media/imga.png)
 
 1. In the prompt titled **Discover an even better Azure AI Studio experience**, click **Close**.
 
